@@ -1,9 +1,36 @@
 "use strict"
+/*  Environment & Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+const ENV = require("./env.json")
 
-const fs = require("fs")
+/*  Server
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 const Express = require("./node_modules/express")
 const Server = Express()
-const env = require("./env.json")
+
+
+/*  Live Reload Server
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+const LiveReload = require("livereload")
+const LRServer = LiveReload.createServer()
+const ConnectLRServer = require("connect-livereload")
+
+LRServer.watch("./client")
+Server.use(ConnectLRServer())
+
+function html(strings, ...variables) {
+  return "dude"
+}
+
+let test2 = "stuff"
+let test = html`<div>${test2}${test2}${test2}${test2}${test2}${test2}</div>`
+
+/*  Body Parser
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+const BodyParser = require("./node_modules/body-parser")
+
+Server.use(BodyParser.urlencoded( {extended: true} ))
+Server.use(BodyParser.json())
 
 
 /*  Routes
@@ -16,7 +43,7 @@ Server.use("/page|/", require("./routes/router-site"))
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 Server.use(
   Express.static(
-    "./assets"
+    "./client"
   , { dotfiles: "ignore"
     , index: false
     }
@@ -27,6 +54,6 @@ Server.use(
 /*  Start Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 Server.listen(
-  env.port
-, () => console.log(`Listening on port ${env.port}.`)
+  ENV.port
+, () => console.log(`Listening on port ${ENV.port}.`)
 )
