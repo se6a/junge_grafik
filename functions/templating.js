@@ -2,9 +2,10 @@ global.splitTemp = (strings, ...variables) => {
   const splitted = []
 
   for (let i = 0; i < strings.length; i++) {
+    strings[i] !== ""
+      ? splitted.push(strings[i]) : null
     variables[i]
-      ? splitted.push(strings[i], variables[i])
-      : splitted.push(strings[i])
+      ? splitted.push(variables[i]) : null
   }
 
   return splitted
