@@ -9,8 +9,11 @@
 INDEX
 *******************************************************************************
 
-  Documentation
-  Required
+  DESCRIPTION
+  ^ Templating
+    Template-Array
+    Split-Template
+  REQUIRED
     templating.js
   Response_
   ^ INITIALIZATION
@@ -33,12 +36,12 @@ INDEX
 
 *******************************************************************************
 
-  Documentation
+  Description
 
 *******************************************************************************
 
 
-  Templating and Compiling
+  Templating
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   Html is compiled from a template-array which can contain many nested 
   template-arrays itself.
@@ -48,49 +51,19 @@ INDEX
     Every template-array contains three items:
     [NAME, TEMPLATE, CSS]
 
-      NAME
-      string
+      NAME as string
         The name of the template
 
       TEMPLATE
-      string
-        Simple template as string.
-      or split-template
-        [STRINGS, VARIABLES]
-        split-templates is a template that is split up
-        in its strings and variables with splitTemp``
-        (look up "javascript tagged template strings")
+        as string
+        or split-template (description further down)
 
-      CSS
-      string
-        Specific styling for the template
+      CSS as string
+        Styles for the template
 
 
-  SPLIT-TEMP
-´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´
-    A template-string like
+  Example for assembled Template:
 
-      `<div>${var1}<strong>${var2}${var3}</strong> ${var4}</div>`
-
-    would be split up into its parts of strings and variables.
-    (Note the empty string created to separate var2 and var3)
-      [ "<div>"
-      , "this is a "
-      , "<strong>"
-      , "temp"
-      , ""
-      , "late"
-      , "</strong> "
-      , "string"
-      , "</div>"
-      ]
-
-    This split-temp will be joined as:
-      "<div>this is a <strong>template</strong> string</div>"
-
-
-  Raw template structure example:
-´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´
     [                                         Template-Array
       "page"                                  | Name
     , [                                       | Template
@@ -113,7 +86,9 @@ INDEX
     , ".page {color=red}"                     | Css
     ]
 
-    Compiled
+
+  Example for joined Template:
+
       <style>
         .page {color=red}
         .section {color=blue}
@@ -126,6 +101,27 @@ INDEX
         </div>
       </div>
 
+
+  Split-Template
+´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´
+    A template-literal like
+
+      `<div>${var1}<strong>${var2}${var3}</strong> ${var4}</div>`
+
+    will be split up into it's parts made from it's strings and variables.
+
+      [ "<div>"
+      , "this is a "
+      , "<strong>"
+      , "temp"
+      , "late"
+      , "</strong> "
+      , "string"
+      , "</div>"
+      ]
+
+    This will be joined as:
+      "<div>this is a <strong>template</strong> string</div>"
 
 */
 
