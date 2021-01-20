@@ -18,29 +18,11 @@ const ConnectLRServer = require("connect-livereload")
 LRServer.watch("./client")
 Server.use(ConnectLRServer())
 
-require("./functions/tools")
-global.splitTemp = (strings, ...variables) => [strings, variables]
 
-
-/*  Require Template
+/*  Global Functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-global.get$element = (name) => get$template(`a_elements/${name}.elem.js`)
-global.get$component = (name) => get$template(`b_components/${name}.comp.js`)
-global.get$section = (name) => get$template(`c_sections/${name}.sect.js`)
-global.get$view = (name) => get$template(`d_views/${name}.view.js`)
-
-
-global.get$template = (path) => {
-    let $temp = ""
-
-    try {
-      $temp = require(`${__dirname}/client/html/${path}`)
-    } catch(error) {
-      $temp = "error 404"
-    }
-
-    return $temp
-}
+require("./functions/tools")
+global.__basedir = __dirname
 
 
 /*  Body Parser
