@@ -17,13 +17,17 @@ ul,
 li,
 h1,
 h2,
+h3,
+h4,
 button {
   margin: 0;
   padding: 0;
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
   font-weight: initial;
 }
 
@@ -61,19 +65,30 @@ input[type="email"] {
   --orange: rgb(244, 132, 86);
   --white: rgb(255, 255, 255);
   --gray: rgb(196, 196, 196);
-  --pageColor: var(--red);
+  --mainColor: var(--red);
 
   --padding: 2.5vmin;
   --boxHeaderHeight: 5vmin;
   --headerHeight: 8vmin;
   --footerHeight: 30vmin;
 
+  --fontSize-S: 1.4vmin;
+  --lineHeight-S: 1.7vmin;
+  --fontSize-M: 1.9vmin;
+  --lineHeight-M: 2.5vmin;
+  --fontSize-L: 5vmin;
+  --lineHeight-L: 6vmin;
+  --fontSize-XL: 9vmin;
+  --lineHeight-XL: 8vmin;
+
   font-size: 1vmin;
 }
 
 body {
-  font-size: 1.4em;
-  line-height: 1.4em;
+  font-size: var(--fontSize-M);
+  line-height: var(--lineHeight-M);
+  border: 1px solid black;
+  font-family: FeixenSans;
 }
 
 /*  Colors
@@ -123,19 +138,27 @@ body {
 /*  Elements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+h1 {
+  font-size: var(--fontSize-XL);
+  height: var(--lineHeight-XL);
+  line-height: 100%;
+  border-bottom: 2px solid black;
+}
+
+h2 {
+  font-size: var(--fontSize-L);
+  height: auto;
+  line-height: 100%;
+  border-bottom: 2px solid black;
+  margin-bottom: var(--padding);
+}
+
 .article {
   height: 100%;
   width: 100%;
   padding: var(--padding);
 }
 
-.article .title h1 {
-  border-bottom: 2px solid black;
-  font-size: 9em;
-  line-height: 1em;
-}
-
-.article,
 .box {
   border: 1px solid black;
   display: flex;
@@ -143,7 +166,7 @@ body {
   overflow: hidden;
 }
 
-.box .title {
+.boxTitle {
   padding: 0 var(--padding);
   border-bottom: 2px solid black;
   height: var(--boxHeaderHeight);
@@ -152,7 +175,7 @@ body {
   justify-content: center;
 }
 
-.box .content {
+.boxContent {
   padding: var(--padding);
 }
 

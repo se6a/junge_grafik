@@ -25,6 +25,8 @@ module.exports = () => {
       grid-template-columns: 1fr;
       grid-auto-flow: column;
       grid-auto-columns: 1fr;
+      font-size: var(--fontSize-S);
+      line-height: var(--lineHeight-S);
     }
 
     .HEADER .title li {

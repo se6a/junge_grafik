@@ -5,10 +5,10 @@ module.exports = () => {
     <footer class="FOOTER">
 
       <div class="Newsletter box">
-        <header class="title">
-          <h2>Newsletter</h2>
+        <header class="boxTitle">
+          <h3>Newsletter</h3>
         </header>
-        <div class="content">
+        <div class="boxContent">
           <form>
             <div class="Agreement formField">
               ${$checkbox('id="footer-newsletter-agree"', "console.log('click the box')")}
@@ -26,10 +26,10 @@ module.exports = () => {
       </div>
 
       <div class="Social box">
-        <header class="title">
-          <h2>Social</h2>
+        <header class="boxTitle">
+          <h3>Social</h3>
         </header>
-        <div class="content">
+        <div class="boxContent">
           <ul>
             <li><a class="link">Instagram</a></li>
             <li><a class="link">Facebook</a></li>
@@ -38,10 +38,10 @@ module.exports = () => {
       </div>
 
       <div class="Network box">
-        <header class="title">
-          <h2>Network</h2>
+        <header class="boxTitle">
+          <h3>Network</h3>
         </header>
-        <div class="content">
+        <div class="boxContent">
           <ul>
             <li><a class="link">SGD</a></li>
             <li><a class="link">SGV</a></li>
@@ -51,10 +51,10 @@ module.exports = () => {
       </div>
 
       <div class="Links box">
-        <header class="title">
-          <h2>Links</h2>
+        <header class="boxTitle">
+          <h3>Links</h3>
         </header>
-        <div class="content">
+        <div class="boxContent">
           <ul>
             <li><a class="link">Imprint</a></li>
             <li><a class="link">Data privacy</a></li>
@@ -73,9 +73,11 @@ module.exports = () => {
       grid-auto-flow: column;
       grid-template-columns: 1fr;
       grid-auto-columns: 1fr;
+      font-size: var(--fontSize-S);
+      line-height: var(--lineHeight-S);
     }
 
-    .FOOTER h2 {
+    .FOOTER h3 {
       font-size: 1.3em;
     }
   `
