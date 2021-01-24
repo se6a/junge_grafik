@@ -9,7 +9,7 @@ module.exports = (data) => {
       </header>
 
       <div class="content">
-        ${data?.content || ""}
+        ${data?.content}
       </div>
 
     </section>
@@ -32,5 +32,5 @@ module.exports = (data) => {
     }
   `
 
-  return ["content", html, css]
+  return ["intro", html, css]
 }

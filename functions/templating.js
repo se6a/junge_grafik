@@ -17,12 +17,12 @@ global.get$view = (name) => get$template(`c_views/${name}.view.js`)
 global.get$page = (name) => get$template(`d_pages/${name}.page.js`)
 
 global.get$template = (path) => {
-    let $temp = ""
+    let $temp
 
     try {
       $temp = require(`${__basedir}/client/html/${path}`)
     } catch(error) {
-      $temp = "error 404"
+      $temp = () => "error 404"
     }
 
     return $temp
