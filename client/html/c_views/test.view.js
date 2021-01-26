@@ -3,7 +3,7 @@ module.exports = (data) => {
 
   const html = splitTemp/*html*/`
     <main class="VIEW Test">
-      ${JSON.stringify(data)}
+      ${data}
 
     </main>
   `
