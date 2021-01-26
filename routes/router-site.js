@@ -2,7 +2,18 @@ const Express = require("express")
 const Router = Express.Router()
 const buildResponse = require("../functions/build-response")
 
-Router.get("/", buildResponse, send)
+
+Router.get(
+  "/"
+, buildResponse
+, send
+)
+
+Router.get(
+  "/test"
+, buildResponse
+, send
+)
 
 function send(req, res) {
   res.send(res.locals.html)

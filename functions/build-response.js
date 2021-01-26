@@ -153,8 +153,6 @@ Response_.init = function(req, res) {
   this.cssList = null
   this.css     = null
   this.html    = null
-
-  this.build(req)
 }
 
 
@@ -162,17 +160,17 @@ Response_.init = function(req, res) {
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
 Response_.init.prototype =
 Response_.prototype = {
-  build(req) {
-    this._assembleRaw(req)
-      ._stringify()
-      ._removeWhitespace()
+  async build(req) {
+    await this._assembleRaw(req)
+    await this._stringify()
+    await this._removeWhitespace()
 
     return this
   }
   
-, _assembleRaw() {
-    this.raw = get$page("main")()
-
+, async _assembleRaw(req) {
+    const pageTemp = get$page("main")
+    this.raw = await pageTemp(req)
     return this
   }
 
@@ -240,9 +238,11 @@ Response_.prototype = {
 
 ******************************************************************************/
 
-function buildResponse(req, res, next) {
+async function buildResponse(req, res, next) {
   const response = Response_(req, res)
+  await response.build(req)
   res.locals = response
+
   next()
 }
 

@@ -43,7 +43,7 @@ Server.use("/page|/", require("./routes/router-site"))
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 Server.use(
   Express.static(
-    "./client"
+    `${__basedir}/client`
   , { dotfiles: "ignore"
     , index: false
     }
