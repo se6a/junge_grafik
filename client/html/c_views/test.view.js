@@ -35,7 +35,7 @@ module.exports = async (req) => {
       <script>
         const symphdata = ${data || "{}"};
         console.group("Response");
-        console.dir(symphdata);
+        console.dir(symphdata.response || null);
         console.groupEnd();
       </script>
 
