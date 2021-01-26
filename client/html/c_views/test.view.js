@@ -31,7 +31,13 @@ module.exports = async (req) => {
       <br>
       <h3>/symphony/api/${path}?auth-token=02701d93&format=json</h3>
       <br>
-      ${data}
+        Siehe console...
+      <script>
+        const symphdata = ${data || "{}"};
+        console.group("Response");
+        console.dir(symphdata);
+        console.groupEnd();
+      </script>
 
     </main>
   `
