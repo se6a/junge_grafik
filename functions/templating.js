@@ -23,6 +23,7 @@ global.get$template = (path) => {
       $temp = require(`${__basedir}/client/html/${path}`)
     } catch(error) {
       $temp = () => "error 404"
+      console.log(error)
     }
 
     return $temp
