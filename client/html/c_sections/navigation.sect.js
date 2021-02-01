@@ -4,7 +4,7 @@ module.exports = () => {
   const html = splitTemp/*html*/`
     <nav class="NAVIGATION">
       <a id="navigation-award" class="button Award" href="/award">Award</a>
-      <a id="navigation-follow" class="button Follow" href="/Follow">Follow</a>
+      <a id="navigation-follow" class="button Follow" href="/follow">Follow</a>
       <a id="navigation-submit" class="button Submit red" href="/submit">Submit!</a>
       <script defer>
         let $Menu = null;
