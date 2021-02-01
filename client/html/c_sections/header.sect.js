@@ -1,10 +1,10 @@
 module.exports = () => {
-  const $navigation = require("./navigation.sect.js")
+  const $navigation = require("./navigation.sect.js");
 
   const html = splitTemp/*html*/`
     <header class="HEADER">
 
-      <div class="title">
+      <div class="logo">
         <ul>
           <li><span>Junge</span><span>Grafik</span></li>
           <li><span>Jeune</span><span>Graphisme</span></li>
@@ -13,9 +13,8 @@ module.exports = () => {
       </div>
 
       ${$navigation()}
-
     </header>
-  `
+  `;
 
   const css = /*css*/`
     .HEADER {
@@ -27,14 +26,20 @@ module.exports = () => {
       grid-auto-columns: 1fr;
       font-size: var(--fontSize-S);
       line-height: var(--lineHeight-S);
+      position: fixed;
+      z-index: 1000;
+      background-color: white;
+      border: 1px solid black;
+      top: 0;
+      left: 0;
     }
 
-    .HEADER .title li {
+    .HEADER .logo li {
       padding: 0 30px;
       border: 1px solid black;
     }
 
-    .HEADER .title ul {
+    .HEADER .logo ul {
       display: grid;
       grid-auto-flow: row;
       grid-template-rows: 1fr;
@@ -42,16 +47,32 @@ module.exports = () => {
       height: 100%;
     }
 
-    .HEADER .title li {
+    .HEADER .logo li {
       display: inline;
     }
 
-    .HEADER .title li span {
+    .HEADER .logo li span {
       width: 8em;
       display: inline-block;
       vertical-align: sub;
     }
-  `
 
-  return ["header", html, css]
-}
+    @media screen and (max-width: 1024px) {
+      .HEADER {
+        grid-template-columns: 40% 60%;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      .HEADER {
+        grid-template-columns: auto var(--headerHeight);
+      }
+
+      .HEADER .NAVIGATION > a {
+        display: none;
+      }
+    }
+  `;
+
+  return ["header.sect", html, css];
+};

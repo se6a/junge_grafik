@@ -1,6 +1,6 @@
-module.exports = () => {
-  const $checkbox = get$snippet("checkbox")
+const $checkbox = get$snippet("input-checkbox");
 
+module.exports = () => {
   const html = splitTemp/*html*/`
     <footer class="FOOTER">
 
@@ -63,7 +63,7 @@ module.exports = () => {
       </div>
 
     </footer>
-  `
+  `;
 
   const css = /*css*/`
     .FOOTER {
@@ -80,7 +80,7 @@ module.exports = () => {
     .FOOTER h3 {
       font-size: 1.3em;
     }
-  `
+  `;
 
-  return ["footer", html, css]
-}
+  return ["footer.sect", html, css];
+};

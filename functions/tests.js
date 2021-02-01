@@ -1,36 +1,34 @@
 function attributes(attr = {}) {
-  let $attributes = ""
+  let $attributes = "";
 
-  if (Object.keys(attr).length > 0) {
+  if (Object.keys(attr).length > 0)
     $attributes = " "
                 + Object.keys(attr)
-                    .map((a) => `${a}="${attr[a]}"`)
-                    .join(" ")
-  }
+                  .map((a) => `${a}="${attr[a]}"`)
+                  .join(" ");
 
-  return $attributes
+  return $attributes;
 }
 
 function el(tag, content = "", attr = {}) {
-  return `<${tag}${attributes(attr)}>${content}</${tag}>`
+  return `<${tag}${attributes(attr)}>${content}</${tag}>`;
 }
 
 function div(content = "", attr = {}) {
-  return el("div", content, attr)
+  return el("div", content, attr);
 }
 
-function ul(items = [], attr = {}, itemFn = null)
-{ if (!itemFn) itemFn = (itm) => li(itm)
+function ul(items = [], attr = {}, itemFn = null) {
+  if (!itemFn) itemFn = (itm) => li(itm);
 
   const $items =  items.reduce(
-                    (list, itm, indx) =>
-                      list += itemFn(itm, indx)
-                  , ""
-                  )
+    (list, itm, indx) => (list += itemFn(itm, indx))
+    , ""
+  );
 
-  return el('ul', $items, attr)
+  return el("ul", $items, attr);
 }
 
 function li(content = "", attr = {}) {
-  return el('li', content, attr)
+  return el("li", content, attr);
 }

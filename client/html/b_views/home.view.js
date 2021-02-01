@@ -1,10 +1,10 @@
-module.exports = (data) => {
-  const $intro = get$section("intro")
+const $intro = get$section("intro");
 
+module.exports = (data) => {
   const _data = {
-    title: "Ciao! Salut! Hoi!"
-  , content: "Junge Grafik zeigt, vernetzt und fördert junge Grafiktalente aus der ganzen Schweiz. Mit einem Award, einer Wanderausstellung und dieser Webplattform werden herausragende Grafikarbeiten ausgezeichnet und einer breiten Öffentlichkeit präsentiert."
-  }
+    title:   "Ciao! Salut! Hoi!",
+    content: "Junge Grafik zeigt, vernetzt und fördert junge Grafiktalente aus der ganzen Schweiz. Mit einem Award, einer Wanderausstellung und dieser Webplattform werden herausragende Grafikarbeiten ausgezeichnet und einer breiten Öffentlichkeit präsentiert."
+  };
 
   const html = splitTemp/*html*/`
     <main class="VIEW Home">
@@ -60,7 +60,7 @@ module.exports = (data) => {
       </section>
 
     </main>
-  `
+  `;
 
   const css = /*css*/`
     :root {
@@ -77,12 +77,12 @@ module.exports = (data) => {
 
     .two > .box {
       height: 100%;
-      padding: var(--padding);
+      padding: var(--spacing-M);
     }
 
     .Details.box {
       display: grid;
-      grid-gap: var(--padding);
+      grid-gap: var(--spacing-M);
       grid-template-columns: 1fr 1fr;
     }
 
@@ -98,10 +98,10 @@ module.exports = (data) => {
 
     .Details > .column > .item::after {
       content: "";
-      height: var(--padding);
+      height: var(--spacing-M);
       display: block;
     }
-  `
+  `;
 
-  return ["home", html, css]
-}
+  return ["home.view", html, css];
+};

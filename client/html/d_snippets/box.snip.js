@@ -1,5 +1,4 @@
 module.exports = (data) => {
-
   const html = splitTemp/*html*/`
     <div class="box">
       <header class="boxTitle">
@@ -9,9 +8,9 @@ module.exports = (data) => {
         ${data?.content}
       </div>
     </div>
-  `
+  `;
 
-  const css = /*css*/``
+  const css = /*css*/``;
 
-  return ["box", html, css]
-}
+  return ["box.snip", html, css];
+};

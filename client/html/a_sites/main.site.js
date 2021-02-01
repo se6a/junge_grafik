@@ -1,13 +1,14 @@
-module.exports = async (req) => {
-  const view = req.route.path === "/"
-                || req.route.path === "index"
-                ? "home"
-                : req.route.path
-  
-  const $header = get$section("header")
-  const $footer = get$section("footer")
-  const $menu   = get$section("menu")
-  const $view   = get$view(view)
+module.exports = async(data) => {
+  // const view = req.locals.view;
+
+  console.log("VIEW", data);
+
+  const $header = get$section("header");
+  const $footer = get$section("footer");
+  const $menu   = get$section("menu");
+  const $view   = get$view(data.viewName);
+
+  console.log("$VIEW", $view);
 
   const html = splitTemp/*html*/`
     <!DOCTYPE html>
@@ -18,20 +19,21 @@ module.exports = async (req) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Junge Grafik</title>
 
-        <link rel="stylesheet" href="css/global.css">
-        <script defer type="text/javascript" src="js/main.js"></script>
+        <link rel="stylesheet" href="/css/global.css">
+        <script defer type="text/javascript" src="/js/main.js"></script>
 
-        <inject-css>
+        <inject-css />
       </head>
 
       <body>
         ${$header()}
-        ${await $view(req)}
+        ${$menu()}
+        ${await $view(data?.view)}
         ${$footer()}
       </body>
 
     </html>
-  `
+  `;
 
   const css = /*css*/`
     .VIEW, .MENU {
@@ -47,7 +49,7 @@ module.exports = async (req) => {
       display: flex;
       flex-direction: column;
     }
-  `
+  `;
 
-  return ["site", html, css] 
-}
+  return ["site", html, css];
+};

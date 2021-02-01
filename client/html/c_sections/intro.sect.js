@@ -13,7 +13,7 @@ module.exports = (data) => {
       </div>
 
     </section>
-  `
+  `;
 
   const css = /*css*/`
     section.Intro {
@@ -22,15 +22,15 @@ module.exports = (data) => {
       flex-grow: 1;
       justify-content: space-between;
       border: 1px solid black;
-      padding: calc(var(--padding) * 2) var(--padding);
-      min-height: calc(100vh - 78px);
+      padding: calc(var(--spacing-M) + var(--headerHeight)) var(--spacing-M);
+      min-height: 100vh;
     }
 
     section.Intro .content {
       font-size: var(--fontSize-L);
       line-height: var(--lineHeight-L);
     }
-  `
+  `;
 
-  return ["intro", html, css]
-}
+  return ["intro.sect", html, css];
+};

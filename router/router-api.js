@@ -1,20 +1,19 @@
-const Express = require("express")
-const Router = Express.Router()
+const Express = require("express");
+const Router = Express.Router();
 
 Router.get("/api/media/image-large.jpg", (req, res) => {
-  console.log("1")
-  res.send("got it")
-})
+  console.log("1");
+  res.send("got it");
+});
 
 Router.get("/media/image-large.jpg", (req, res) => {
-  console.log("2")
-  res.send("got it")
-})
-
+  console.log("2");
+  res.send("got it");
+});
 
 // Router.get("/", (req, res) => {
 //   console.log("3")
 //   res.send("got it")
 // })
 
-module.exports = Router
+module.exports = Router;
