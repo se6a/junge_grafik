@@ -166,24 +166,12 @@ body {
 
 h1 {
   font-size: var(--fontSize-XL);
-  height: var(--lineHeight-XL);
-  line-height: 100%;
-  margin: var(--headerHeight) 0 var(--spacing-XL);
+  margin-bottom: var(--spacing-L);
 }
 
 h2 {
   font-size: var(--fontSize-L);
-  height: auto;
-  line-height: 100%;
   margin-bottom: var(--spacing-M);
-}
-
-h1::after, h2::after {
-  content: "";
-  display: block;
-  background-color: black;
-  height: 0;
-  border: 1px solid black;
 }
 
 .icon.medium {

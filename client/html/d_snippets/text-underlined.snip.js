@@ -1,0 +1,33 @@
+module.exports = (text) => {
+  const html = splitTemp/*html*/`
+    <div class="textUnderlined outerBox">
+      <div class="textUnderlined innerBox">
+        <span class="text">${text}</span>
+      </div>
+      <span class="line"></span>
+    </div>
+  `;
+
+  const css = /*css*/`
+    .textUnderlined.outerBox {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .textUnderlined.innerBox {
+      font-size: 1em;
+      padding-top: 0.5em;
+      line-height: 0;
+    }
+    
+    .textUnderlined .text {
+      vertical-align: super;
+    }
+    
+    .textUnderlined .line {
+      border: 1px solid black;
+    }
+  `;
+
+  return ["text-underlined.snip", html, css];
+};

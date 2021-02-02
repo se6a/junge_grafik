@@ -15,9 +15,7 @@ module.exports = () => {
       </a>-->
 
       <a class="logo" href="/home">
-        <span>${$underlined("<span class=\"first\">Junge</span><span class=\"second\">Grafik</span>")}</span>
-        <span>${$underlined("<span class=\"first\">Jeune</span><span class=\"second\">Graphisme</span>")}</span>
-        <span>${$underlined("<span class=\"first\">Giovane</span><span class=\"second\">Grafica</span>")}</span>
+        <span>${$underlined("Junge Grafik")}<span>
       </a>
 
       ${$navigation()}
@@ -32,8 +30,8 @@ module.exports = () => {
       grid-template-columns: 1fr;
       grid-auto-flow: column;
       grid-auto-columns: 1fr;
-      font-size: var(--fontSize-M);
-      line-height: var(--lineHeight-M);
+      font-size: var(--fontSize-S);
+      line-height: var(--lineHeight-S);
       position: fixed;
       z-index: 1000;
       background-color: white;
@@ -42,32 +40,27 @@ module.exports = () => {
       left: 0;
     }
 
-    .HEADER .logo {
-      display: flex;
-      flex-direction: column;
-      justify-content: stretch;
+    .HEADER .logo li {
+      padding: 0 30px;
       border: 1px solid black;
     }
 
-    .HEADER .logo > span {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      flex-grow: 1;
+    .HEADER .logo ul {
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-rows: 1fr;
+      grid-auto-rows: 1fr;
+      height: 100%;
     }
 
-    .HEADER .logo .first {
-      padding-left: var(--spacing-M);
-      width: calc(2 * var(--spacing-XL));
+    .HEADER .logo li {
+      display: inline;
+    }
+
+    .HEADER .logo li span {
+      width: 8em;
       display: inline-block;
-    }
-
-    .HEADER .logo .innerBox {
-      margin-bottom: -1px;
-    }
-
-    .HEADER .logo > span:last-child .line {
-      border: none;
+      vertical-align: sub;
     }
 
     @media screen and (max-width: 1024px) {

@@ -1,4 +1,5 @@
 const $intro = get$section("intro");
+const $underlined = get$snippet("text-underlined");
 
 module.exports = (data) => {
   const _data = {
@@ -13,7 +14,7 @@ module.exports = (data) => {
 
       <section class="two">
         <div class="Description box">
-          <h2>Award</h2>
+          <h2>${$underlined("Award")}</h2>
           Deine Grafikarbeit ist mehr als nur ein Schulprojekt? Dann lass sie uns sehen. Eingereicht werden können herausragende Arbeiten, die im Rahmen einer Ausbildung entstanden sind. 
         </div>
         <div class="Details box">

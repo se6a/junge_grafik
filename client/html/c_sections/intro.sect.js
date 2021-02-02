@@ -1,10 +1,12 @@
+const $underlined = get$snippet("text-underlined");
+
 module.exports = (data) => {
   const html = splitTemp/*html*/`
     <section class="Intro">
 
       <header class="title">
         <h1>
-          ${data?.title}
+          ${$underlined(data?.title)}
         </h1>
       </header>
 
