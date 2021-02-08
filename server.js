@@ -74,6 +74,7 @@ async function start() {
   staticFiles();
   await cacheViews();
   loadRouter();
+
   Server.listen(
     ENV.port,
     () => console.log(`Listening on port ${ENV.port}.`)
