@@ -48,16 +48,12 @@ module.exports = (data) => {
       }
 
       function upload(formdata) {
-        const url = "https://api.jungegrafik.ch/symphony/api/entries/einreichungen/";
+        const url = "https://api.jungegrafik.ch/symphony/api/entries/einreichungen?auth-token=02701d93";
         const req = new Request(
                       url,
                       {
                         method: "POST",
                         body: formdata,
-                        headers: {
-                          "Referrer-Policy": "no-referrer",
-                          'Access-Control-Allow-Origin': '*'
-                        },
                         mode: "no-cors"
                       }
                     );
