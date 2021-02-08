@@ -2,14 +2,14 @@ module.exports = (data = {}) => {
   const required = data.required ? "--required" : "";
 
   const html = splitTemp/*html*/`
-    <div class="formField checkbox">
-      <input class="input checkbox" ${data.attr}${onchange(data.callback)}type="checkbox">
+    <div class="formField Checkbox">
+      <input class="input Checkbox" ${data.attr}${onchange(data.callback)}type="checkbox">
       <span class="checkmark"></span>
     </div>
   `;
 
   const css = /*css*/`
-    .input.checkbox {
+    .input.Checkbox {
       background-color: var(--white);
       width: var(--circle-S);
       height: var(--circle-S);
@@ -19,7 +19,7 @@ module.exports = (data = {}) => {
       border-radius: 50%;
     }
 
-    .input.checkbox::after {
+    .input.Checkbox::after {
       content: "";
       width: 0.3em;
       height: 0.5em;
@@ -31,7 +31,7 @@ module.exports = (data = {}) => {
       display: none;
     }
 
-    .input.checkbox:checked::after {
+    .input.Checkbox:checked::after {
       display: block;
     }
   `;

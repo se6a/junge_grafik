@@ -3,34 +3,47 @@ const $dropDownIcon = get$snippet("icon-dropdown");
 module.exports = (data) => {
   const required = data?.required ? "--required" : "";
   const html = splitTemp/*html*/`
-    <div class="formField select ${required}">
+    <div class="formField Select ${required}" onclick="selectOption(this, event)">
       <label class="label">
         ${data?.label}
       </label>
       <div class="inputBox">
-        <input class="input select" type="text" placeholder="select one" value="" readonly="readonly">
+        <input
+          class="input Select"
+          type="text"
+          placeholder="Select one"
+          value=""
+          name="${data?.label}"
+          readonly="readonly"
+        >
         ${$dropDownIcon()}
       </div>
-      <ul class="select options" role="listbox">
-        <li class="option" role="option">Option 1</li>
-        <li class="option" role="option">Option 2</li>
-        <li class="option" role="option">Option 3</li>
-        <li class="option" role="option">Option 4</li>
+      <ul class="Select options" role="listbox">
+        <li class="option" role="option" data-value="Option 1">Option 1</li>
+        <li class="option" role="option" data-value="Option 2">Option 2</li>
+        <li class="option" role="option" data-value="Option 3">Option 3</li>
+        <li class="option" role="option" data-value="Option 4">Option 4</li>
       </ul>
     </div>
   `;
 
   const css = /*css*/`
-    .formField.select {
+    .formField.Select {
       position: relative;
     }
 
-    .input.select,
-    .select.options {
+    .formField.Select .icon.Dropdown {
+      position: absolute;
+      align-self: center;
+      right: var(--spacing-S);
+    }
+
+    .input.Select,
+    .Select.options {
       cursor: pointer;
     }
 
-    .select.options {
+    .Select.options {
       background-color: white;
       display: none;
       flex-direction: column;
@@ -43,17 +56,18 @@ module.exports = (data) => {
       display: none;
     }
 
-    .select > .option {
+    .Select > .option {
       width: 100%;
       padding: var(--spacing-S);
       height: var(--spacing-L);
     }
 
-    .select > .option:hover {
+    .Select > .option:hover,
+    .Select .option.--selected {
       background-color: var(--gray);
     }
 
-    .select:hover .options {
+    .Select:hover .options {
       display: flex;
     }
   `;

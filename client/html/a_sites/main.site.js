@@ -1,14 +1,8 @@
-module.exports = async(data) => {
-  // const view = req.locals.view;
-
-  console.log("VIEW", data);
-
+module.exports = async (data) => {
   const $header = get$section("header");
   const $footer = get$section("footer");
   const $menu   = get$section("menu");
   const $view   = get$view(data.viewName);
-
-  console.log("$VIEW", $view);
 
   const html = splitTemp/*html*/`
     <!DOCTYPE html>
@@ -48,6 +42,10 @@ module.exports = async(data) => {
       background-color: var(--mainColor);
       display: flex;
       flex-direction: column;
+    }
+
+    .VIEW > section {
+      padding-top: calc(var(--headerHeight) * 2);
     }
   `;
 

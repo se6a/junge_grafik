@@ -1,4 +1,5 @@
 const $checkbox = get$snippet("input-checkbox");
+const $iconNext = get$snippet("icon-next");
 
 module.exports = () => {
   const html = splitTemp/*html*/`
@@ -19,7 +20,9 @@ module.exports = () => {
             <div class="Email formField">
               <label for="footer-newsletter-email" style="display: none">E-mail</label>
               <input id="footer-newsletter-email" type="email" placeholder="Your email">
-              <button id="footer-newsletter-submit" class="button circle"></button>
+              <button id="footer-newsletter-submit" class="button">
+                ${$iconNext()}
+              </button>
             </div>
           </form>
         </div>

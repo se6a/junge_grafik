@@ -24,6 +24,7 @@
   ^ Access
     ^ Globals
       splitTemp
+      $attr
       get$snippet
       get$section
       get$view
@@ -214,6 +215,27 @@ global.splitTemp = (strings, ...variables) => {
   }
 
   return splitted;
+};
+
+global.$attr = (data) => {
+  const attr = [];
+
+  if (data.class)
+    attr.push(`class="${data.class}"`);
+
+  if (data.style)
+    attr.push(`style="${data.style}"`);
+
+  if (data.attr) {
+    if (Array.isArray(data.attr))
+      data.attr = data.attr.join(" ");
+    attr.push(data.attr);
+  }
+
+  if (attr.length > 0)
+    attr.unshift("");
+
+  return attr.join(" ");
 };
 
 global.get$site = (name) => _get$template(`a_sites/${name}.site.js`);

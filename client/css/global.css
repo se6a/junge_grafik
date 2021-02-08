@@ -98,7 +98,7 @@ select:focus {
   --lineHeight-XL: 8vmin;
 
   --circle-S: 2vmin;
-  --circle-M: 2.7vmin;
+  --circle-M: 3.2vmin;
   --circle-L: 4vmin;
 
   font-size: 1vmin;
@@ -177,8 +177,6 @@ h2 {
 .icon.medium {
   width: var(--circle-M);
   height: var(--circle-M);
-  border-radius: 100%;
-  border: 2px solid black;
   display: block;
 }
 

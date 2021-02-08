@@ -2,16 +2,16 @@ const $iconMedium = get$snippet("icon-circle-m");
 
 module.exports = () => {
   const html = splitTemp/*html*/`
-    ${$iconMedium({ class: "Dropdown" })}
+    ${$iconMedium({ class: "Plus" })}
   `;
 
   const css = /*css*/`
 
-    .icon.Dropdown::after {
-      content: "\u2193";
+    .icon.Plus::after {
+      content: "+";
       display: block;
     }
   `;
 
-  return ["icon-dropdown.snip", html, css];
+  return ["icon-plus.snip", html, css];
 };

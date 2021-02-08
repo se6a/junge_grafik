@@ -1,9 +1,9 @@
-module.exports = (tooltip) => {
-  console.log("TOOLTIP");
+const $iconMedium = get$snippet("icon-circle-m");
 
+module.exports = (tooltip) => {
   const html = splitTemp/*html*/`
-    <div class="tooltip">
-      <i class="icon"></i>
+    <div class="Tooltip">
+      ${$iconMedium("Tooltip")}
       <p class="content">
         ${tooltip}
       </p>
@@ -11,14 +11,15 @@ module.exports = (tooltip) => {
   `;
 
   const css = /*css*/`
-    .tooltip {
+    .Tooltip {
       width: 100%;
       font-size: var(--fontSize-S);
     }
 
-    .tooltip > .content {
+    .Tooltip > .content {
       display: none;
       width: 100%;
+      min-height: var(--spacing-L);
       background-color: var(--gray);
       border: 2px solid black;
       position: absolute;
@@ -28,31 +29,23 @@ module.exports = (tooltip) => {
       z-Index: 1000;
     }
 
-    .tooltip > .icon {
-      display: flex;
-      border: 2px solid black;
+    .Tooltip > .icon {
       margin-left: 10px;
-      border-radius: 100%;
-      height: var(--circle-M);
-      width: var(--circle-M);
-      text-align: center;
       cursor: pointer;
-      position: relative;
     }
 
-    .tooltip:hover .icon {
+    .Tooltip .icon::after {
+      content: "?";
+    }
+
+    .Tooltip:hover .icon {
       background-color: white;
     }
 
-    .tooltip:hover .content {
+    .Tooltip:hover .content {
       display: inline-block;
-    }
-
-    .tooltip .icon::after {
-      content: "?";
-      margin: auto;
     }
   `;
 
-  return ["icon-info.snip", html, css];
+  return ["icon-tooltip.snip", html, css];
 };
