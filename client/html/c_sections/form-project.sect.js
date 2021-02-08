@@ -54,8 +54,7 @@ module.exports = (data) => {
                       url,
                       {
                         method: "POST",
-                        body: formdata,
-                        mode: "no-cors"
+                        body: formdata
                       }
                     );
 
