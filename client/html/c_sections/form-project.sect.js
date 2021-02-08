@@ -42,13 +42,14 @@ module.exports = (data) => {
         const formdata = new FormData();
         formdata.append("field[projekttitel]", "Hello there");
         formdata.append("action[einreichung]", "submit");
+        formdata.append("auth-token", "02701d93");
 
         console.log([...formdata]);
         upload(formdata);
       }
 
       function upload(formdata) {
-        const url = "https://api.jungegrafik.ch/symphony/api/entries/einreichungen?auth-token=02701d93";
+        const url = "https://api.jungegrafik.ch/symphony/api/entries/einreichungen";
         const req = new Request(
                       url,
                       {
