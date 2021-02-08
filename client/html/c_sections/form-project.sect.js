@@ -47,6 +47,7 @@ module.exports = (data) => {
         console.log([...formdata]);
         upload(formdata);
       }
+      /**/
 
       function upload(formdata) {
         const url = "https://api.jungegrafik.ch/symphony/api/entries/einreichungen";
