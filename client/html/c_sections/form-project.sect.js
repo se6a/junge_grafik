@@ -40,7 +40,7 @@ module.exports = (data) => {
       async function submitProjectData(e, $form) {
         e.preventDefault();
         const formdata = new FormData();
-        formdata.append("field[projekttitel]", "Hello there");
+        formdata.append("fields[projekttitel]", "Hello there");
         formdata.append("action[einreichung]", "submit");
         formdata.append("auth-token", "02701d93");
 
@@ -54,11 +54,10 @@ module.exports = (data) => {
                       url,
                       {
                         method: "POST",
-                        body: formdata
+                        body: formdata,
+                        mode: "no-cors"
                       }
                     );
-
-        console.log("");
 
         fetch(req)
         .then((res) => console.log(res));
