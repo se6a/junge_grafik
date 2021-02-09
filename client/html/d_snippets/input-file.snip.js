@@ -3,7 +3,7 @@ const $iconPlus = get$snippet("icon-plus");
 module.exports = (data) => {
   const html = splitTemp/*html*/`
     <div class="formField Upload" oninput="selectFiles(this, event)">
-      <label class="label">${data?.label}</label>
+      <label class="label">${data?.label.de}</label>
       <div class="inputBox input Upload">
 
         <label for="ProjectFileUpload" class="upload">

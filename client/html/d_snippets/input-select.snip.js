@@ -1,29 +1,42 @@
 const $dropDownIcon = get$snippet("icon-dropdown");
 
+function $selectOptions(options = []) {
+  return options.reduce(
+    (list, _option) => list + /*html*/`
+      <li class="option" role="option" data-value="${_option.name}">
+        ${_option.de}
+      </li>
+      `,
+      ""
+    );
+}
+
 module.exports = (data) => {
   const required = data?.required ? "--required" : "";
+
   const html = splitTemp/*html*/`
     <div class="formField Select ${required}" onclick="selectOption(this, event)">
+
       <label class="label">
-        ${data?.label}
+        ${data?.label.de}
       </label>
+
       <div class="inputBox">
         <input
           class="input Select"
           type="text"
           placeholder="Select one"
           value=""
-          name="${data?.label}"
+          name="${data?.name}"
           readonly="readonly"
         >
         ${$dropDownIcon()}
       </div>
+
       <ul class="Select options" role="listbox">
-        <li class="option" role="option" data-value="Option 1">Option 1</li>
-        <li class="option" role="option" data-value="Option 2">Option 2</li>
-        <li class="option" role="option" data-value="Option 3">Option 3</li>
-        <li class="option" role="option" data-value="Option 4">Option 4</li>
+        ${$selectOptions(data?.options)}
       </ul>
+
     </div>
   `;
 

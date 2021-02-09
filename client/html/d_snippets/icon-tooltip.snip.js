@@ -5,7 +5,7 @@ module.exports = (tooltip) => {
     <div class="Tooltip">
       ${$iconMedium("Tooltip")}
       <p class="content">
-        ${tooltip}
+        ${tooltip.de}
       </p>
     </div>
   `;

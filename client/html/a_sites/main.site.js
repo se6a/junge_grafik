@@ -9,7 +9,7 @@ module.exports = async (data) => {
     <html>
 
       <head>
-        <meta char="utf8">
+        <meta char="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Junge Grafik</title>
 
@@ -44,8 +44,12 @@ module.exports = async (data) => {
       flex-direction: column;
     }
 
-    .VIEW > section {
-      padding-top: calc(var(--headerHeight) * 2);
+    .VIEW section:first-child {
+      padding-top: calc(var(--spacing-M) + var(--headerHeight));
+    }
+
+    .VIEW section {
+      padding: calc(var(--spacing-M));
     }
   `;
 

@@ -24,7 +24,6 @@ module.exports = (data) => {
       flex-grow: 1;
       justify-content: space-between;
       border: 1px solid black;
-      padding: calc(var(--spacing-M) + var(--headerHeight)) var(--spacing-M);
       min-height: 100vh;
     }
 

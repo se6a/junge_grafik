@@ -1,10 +1,10 @@
 const $iconTooltip = get$snippet("icon-tooltip");
 
 module.exports = (data) => {
-  const id       = data?.id || Math.round(Math.random() * 10000);
+  const id    = data?.id || Math.round(Math.random() * 10000);
   const required = data?.required ? "--required" : "";
 
-  const $toolTip = data.tooltip ? $iconTooltip(data.tooltip) : "";
+  const $toolTip = data?.tooltip ? $iconTooltip(data.tooltip) : "";
 
   const html = splitTemp/*html*/`
     <div class="formField Text ${required}">
@@ -15,12 +15,12 @@ module.exports = (data) => {
       </label>
 
       <div class="inputBox">
-        <textarea
+        <input
           id="${id}"
           class="input Text"
+          type="text"
           name="fields[${data?.name}]"
-        >
-        </textarea>
+        />
       </div>
 
     </div>

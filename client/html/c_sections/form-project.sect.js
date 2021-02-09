@@ -1,10 +1,81 @@
-const $inpuText       = get$snippet("input-text");
+const $inputText      = get$snippet("input-text");
+const $inputTextShort = get$snippet("input-text-short");
 const $inputCheckbox  = get$snippet("input-checkbox");
 const $inputSelection = get$snippet("input-select");
 const $inputFile      = get$snippet("input-file");
 
+const Form = {
+  create(name) {
+    const formDef = require(`${__basedir}/data/${name}`);
+    const $html = [];
+
+    formDef.forEach((_group) => {
+      $html.push(this._run_rc(_group));
+    });
+
+    return ["formcontent", $html];
+  },
+
+  _run_rc(definition) {
+      try {
+        if (Array.isArray(definition))
+          return this._addGroup(definition);
+        else
+          return this._addField(definition);
+      }
+      catch (error) {
+        console.log("ERROR", error);
+        return "ERROR";
+      }
+  },
+
+  _addField(field) {
+    let $field = "";
+
+    switch (field.type) {
+      case "text-short":
+      case "text-year":
+        $field = $inputTextShort(field);
+        break;
+      case "text":
+        $field = $inputText(field);
+        break;
+      case "select-1":
+        $field = $inputSelection(field);
+        break;
+      case "file":
+        $field = $inputFile(field);
+        break;
+    };
+
+    return ["fieldbox", ["<div class='fieldBox'>", $field, "</div>"]];
+  },
+
+  _addGroup(group) {
+    const $group = [""];
+
+    group.forEach((_member) => {
+      $group.push(this._run_rc(_member), "");
+    });
+
+    return ["fieldset", ["<fieldset class='group'>", ...$group, "</fieldset>"]];
+  }
+};
+
 module.exports = (data) => {
   const html = splitTemp/*html*/`
+    <form id="ProjectForm" action="javascript:" onsubmit="submitProjectData(event, this)">
+      ${Form.create("new-project")}
+
+      <fieldset class="group ProjectWebsite" style="width: 50%">
+        ${$inputCheckbox()}
+      </fieldset>
+
+      <fieldset class="group">
+        <input type="submit" />
+      </fieldset>
+    </form>
+
     <script>
       const projectFiles = {};
 
@@ -39,37 +110,10 @@ module.exports = (data) => {
 
       async function submitProjectData(e, $form) {
         e.preventDefault();
-        const formdata = new FormData();
-        formdata.append("fields[projekttitel]", "Hello there");
-        formdata.append("action[einreichung]", "submit");
-        formdata.append("auth-token", "02701d93");
-
-        console.log([...formdata]);
-        upload(formdata);
-      }
-
-      function upload(formdata) {
-        const url = "https://api.jungegrafik.ch/symphony/api/entries/einreichungen";
-        const req = new Request(
-                      url,
-                      {
-                        method: "POST",
-                        body: formdata,
-                        mode: "no-cors"
-                      }
-                    );
-
-        fetch(req)
-        .then((res) => console.log(res));
-      }
-
-      async function submitProjectData1(e, $form) {
-        e.preventDefault();
         const formdata = new FormData($form);
         console.log([...formdata]);
 
         await formAppendFiles(formdata);
-        formdata.append("action", "einreichung");
 
         console.log([...formdata]);
       }
@@ -97,58 +141,7 @@ module.exports = (data) => {
           $option.classList.add("--selected");
         }
       }
-
     </script> 
-
-    <form id="ProjectForm" action="javascript:" onsubmit="submitProjectData(event, this)">
-      <!-- Titel und Jahr -->
-      <fieldset class="group">
-        ${$inpuText({ name: "projekttitel", label: "Projekttitel", tooltip: "Informationen zu diesem Input. Informationen zu diesem Input." })}
-        ${$inpuText({ label: "Entstehungsjahr", attr: "pattern='20[0,1,2]\\d'" })}
-      </fieldset>
-      <!-- Tags -->
-      <fieldset class="group">
-        ${$inputSelection({ label: "Tag #1", required: true })}
-        ${$inputSelection({ label: "Tag #2" })}
-        ${$inputSelection({ label: "Tag #3" })}
-      </fieldset>
-      <!-- Beschreibung -->
-      <fieldset class="group Description">
-        ${$inpuText({ label: "Projektbeschrieb", type: "textarea" })}
-      </fieldset>
-      <!-- Ausbildung -->
-      <fieldset class="group Education">
-        ${$inpuText({ label: "Ausbildungsniveau" })}
-        ${$inpuText({ label: "Ausbildungsjahr" })}
-      </fieldset>
-      <fieldset class="group Institution">
-        ${$inpuText({ label: "Name Ausbildungsinstitution/Büro" })}
-      </fieldset>
-      <!-- Gestalter -->
-      <fieldset class="group Designer">
-        ${$inpuText({ label: "Weitere Gestalter bei Gruppenarbeiten" })}
-      </fieldset>
-      <!-- Dozenten -->
-      <fieldset class="group Teacher">
-        ${$inpuText({ label: "Dozenten" })}
-      </fieldset>
-      <!-- Websites -->
-      <fieldset class="group Website">
-        ${$inpuText({ label: "Link Projekt-Website" })}
-      </fieldset>
-      <!-- Uploads -->
-      <fieldset class="group Upload">
-        ${$inputFile({ label: "Upload Reprografien" })}
-      </fieldset>
-      <!-- bestätigung -->
-      <fieldset class="group ProjectWebsite" style="width: 50%">
-        ${$inputCheckbox()}
-      </fieldset>
-      <!-- senden -->
-      <fieldset class="group">
-        <input type="submit" />
-      </fieldset>
-    </form>
   `;
 
   const css = /*css*/`

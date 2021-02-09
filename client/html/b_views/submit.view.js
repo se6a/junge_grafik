@@ -1,4 +1,5 @@
 const $intro = get$section("intro");
+const $underlined = get$snippet("text-underlined");
 const $projectForm = get$section("form-project");
 
 module.exports = (data) => {
@@ -6,7 +7,7 @@ module.exports = (data) => {
     <main id="Submit" class="VIEW Submit">
       <section>
         <header>
-          <h1>Neues Projekt</h1>
+          <h1>${$underlined("Neues Projekt")}</h1>
         </header>
 
         ${$projectForm()}
