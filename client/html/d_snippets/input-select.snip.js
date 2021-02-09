@@ -3,7 +3,7 @@ const $dropDownIcon = get$snippet("icon-dropdown");
 function $selectOptions(options = []) {
   return options.reduce(
     (list, _option) => list + /*html*/`
-      <li class="option" role="option" data-value="${_option.name}">
+      <li class="option" role="option" data-id="${_option.id}">
         ${_option.de}
       </li>
       `,

@@ -1,11 +1,11 @@
 module.exports = [
 
-  /*  General
+  /*  Allgemeines
   ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
     [
       // Projekttitel
       {
-        name: "title",
+        name: "projekttitel",
         label: {
           de: "Projekttitel"
         },
@@ -14,11 +14,16 @@ module.exports = [
       },
       // Enstehungsjahr
       {
-        name: "year",
+        name: "entstehungsjahr",
         label: {
           de: "Entstehungsjahr"
         },
-        input: "text-year",
+        type: "select-1",
+        options: [
+          { id: "1", de: "2021" },
+          { id: "2", de: "2020" },
+          { id: "2", de: "2019" }
+        ],
         required: true
       }
     ],
@@ -34,8 +39,8 @@ module.exports = [
         },
         type: "select-1",
         options: [
-          { name: "book", de: "Buch" },
-          { name: "poster", de: "Plakat" }
+          { id: "1", de: "Buch" },
+          { id: "2", de: "Plakat" }
         ],
         required: true,
         tooltip: {
@@ -50,8 +55,8 @@ module.exports = [
         },
         type:   "select-1",
         options: [
-          { name: "book", de: "Buch" },
-          { name: "poster", de: "Plakat" }
+          { id: "1", de: "Buch" },
+          { id: "2", de: "Plakat" }
         ]
       },
       // Tag #3
@@ -62,17 +67,17 @@ module.exports = [
         },
         type: "select-1",
         options: [
-          { name: "book", de: "Buch" },
-          { name: "poster", de: "Plakat" }
+          { id: "1", de: "Buch" },
+          { id: "2", de: "Plakat" }
         ]
       }
     ],
 
-  /*  Description
+  /*  Projektbeschreibung
   ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
     [
       {
-        name: "description",
+        name: "projektbeschreibung",
         label: {
           de: "Projektbeschreibung"
         },
@@ -85,11 +90,11 @@ module.exports = [
       }
     ],
 
-  /*  Education
+  /*  Ausbildung
   ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
     [
       {
-        name: "education-niveau",
+        name: "ausbildungsniveau",
         type: "text-short",
         label: {
           de: "Ausbildungsniveau"
@@ -97,7 +102,7 @@ module.exports = [
         required: true
       },
       {
-        name: "education-year",
+        name: "ausbildungsjahr",
         type: "text-short",
         label: {
           de: "Ausbildungsjahr"
@@ -105,7 +110,7 @@ module.exports = [
         required: true
       },
       {
-        name: "education-institution",
+        name: "ausbildungsinstitution-buero",
         type: "text-short",
         label: {
           de: "Name Ausbildungsinstitution/Büro"
@@ -114,10 +119,10 @@ module.exports = [
       }
     ],
 
-  /*  Designer
+  /*  Weitere Gestalter
   ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
     {
-      name: "co-designer",
+      name: "weitere-gestalter",
       type: "text-short",
       label: {
         de: "Weitere Gestalter"
@@ -127,7 +132,7 @@ module.exports = [
   /*  Dozenten
   ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
     {
-      name: "teacher",
+      name: "dozenten",
       type: "textShort",
       label: {
         de: "Dozenten"
@@ -137,7 +142,7 @@ module.exports = [
   /*  Projektwebseite
   ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
     {
-      name: "website",
+      name: "link-projektwebsite",
       type: "text-short",
       label: {
         de: "Link Projektwebseite"
@@ -147,7 +152,7 @@ module.exports = [
   /*  File Upload
   ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
     {
-      name: "files",
+      name: "reprografien",
       type: "file",
       label: {
         de: "Upload Reprografien"

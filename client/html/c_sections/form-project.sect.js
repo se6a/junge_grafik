@@ -6,7 +6,7 @@ const $inputFile      = get$snippet("input-file");
 
 const Form = {
   create(name) {
-    const formDef = require(`${__basedir}/data/${name}`);
+    const formDef = require(`${__basedir}/client/data/${name}.data`);
     const $html = [];
 
     formDef.forEach((_group) => {
@@ -131,9 +131,8 @@ module.exports = (data) => {
           const $lastOption = $field.querySelector("li.option.--selected");
           const $option     = e.target;
 
-          $input.value      = $option.dataset.value;
+          $input.value      = $option.innerHTML;
 
-          console.log("last", $lastOption);
           if ($lastOption) {
             $lastOption.classList.remove("--selected");
           }
