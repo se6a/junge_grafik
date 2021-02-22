@@ -1,25 +1,24 @@
-const $iconTooltip = get$snippet("icon-tooltip");
+const Tooltip = getSnippet("tooltip");
 
-module.exports = (data) => {
-  const id    = data?.id || Math.round(Math.random() * 10000);
-  const required = data?.required ? "--required" : "";
-
-  const $toolTip = data?.tooltip ? $iconTooltip(data.tooltip) : "";
+module.exports = (field) => {
+  const required = field?.required ? "--required" : "";
 
   const html = splitTemp/*html*/`
     <div class="formField Text ${required}">
 
-      <label class="label" for="${id}">
-        ${data.label.de}
-        ${$toolTip}
-      </label>
+      <header class="header">
+        <label class="label">
+          ${field?.label.de}
+        </label>
+        ${Tooltip(field)}
+      </header>
 
       <div class="inputBox">
         <input
-          id="${id}"
           class="input Text"
           type="text"
-          name="fields[${data?.name}]"
+          name="fields[${field?.name}]"
+          ${required ? "required" : ""}
         />
       </div>
 

@@ -1,8 +1,8 @@
 module.exports = async (data) => {
-  const $header = get$section("header");
-  const $footer = get$section("footer");
-  const $menu   = get$section("menu");
-  const $view   = get$view(data.viewName);
+  const Header = getSection("header");
+  const Footer = getSection("footer");
+  const Menu   = getSection("menu");
+  const View   = getView(data.viewName);
 
   const html = splitTemp/*html*/`
     <!DOCTYPE html>
@@ -20,10 +20,11 @@ module.exports = async (data) => {
       </head>
 
       <body>
-        ${$header()}
-        ${$menu()}
-        ${await $view(data?.view)}
-        ${$footer()}
+        ${Header()}
+        ${Menu()}
+        ${await View(data?.view)}
+        ${Footer()}
+        <span class="BottomLine line"></span>
       </body>
 
     </html>
@@ -44,12 +45,28 @@ module.exports = async (data) => {
       flex-direction: column;
     }
 
-    .VIEW section:first-child {
-      padding-top: calc(var(--spacing-M) + var(--headerHeight));
+    .viewSegment.splitpage > * {
+      padding: var(--spacing-M);
+      border: 1px solid currentColor;
     }
 
-    .VIEW section {
-      padding: calc(var(--spacing-M));
+    .viewSegment.fullpage {
+      padding: var(--spacing-L) var(--spacing-M);
+      border: 1px solid currentColor;
+    }
+
+    .viewSegment.splitpage {
+      background-color: white;
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: 1fr;
+      grid-auto-columns: 1fr;
+    }
+
+    .BottomLine {
+      width: 100%;
+      position: fixed;
+      bottom: 0;
     }
   `;
 

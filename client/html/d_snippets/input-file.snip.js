@@ -1,16 +1,34 @@
-const $iconPlus = get$snippet("icon-plus");
+const IconPlus = getSnippet("icon-plus");
+const Tooltip = getSnippet("tooltip");
 
-module.exports = (data) => {
+module.exports = (field) => {
+  const required = field?.required ? "--required" : "";
+
   const html = splitTemp/*html*/`
-    <div class="formField Upload" oninput="selectFiles(this, event)">
-      <label class="label">${data?.label.de}</label>
+    <div
+      class="formField Upload ${required}"
+      oninput="selectFiles(this, event)"
+    >
+
+      <header class="header">
+        <label class="label">
+          ${field?.label.de}
+        </label>
+        ${Tooltip(field)}
+      </header>
+
       <div class="inputBox input Upload">
 
         <label for="ProjectFileUpload" class="upload">
-          ${$iconPlus()}
-          <input id="ProjectFileUpload" type="file" name="file" multiple/>
+          ${IconPlus()}
+          <input
+            id="ProjectFileUpload"
+            type="file"
+            name="file"
+            multiple
+            ${required ? "required" : ""}
+          />
         </label>
-
 
       </div>
     </div>

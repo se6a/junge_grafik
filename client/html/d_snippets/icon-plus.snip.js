@@ -1,17 +1,9 @@
-const $iconMedium = get$snippet("icon-circle-m");
+const IconLarge = getSnippet("icon-circle-l");
 
 module.exports = () => {
   const html = splitTemp/*html*/`
-    ${$iconMedium({ class: "Plus" })}
+    ${IconLarge({ symbol: "+", classes: "Plus" })}
   `;
 
-  const css = /*css*/`
-
-    .icon.Plus::after {
-      content: "+";
-      display: block;
-    }
-  `;
-
-  return ["icon-plus.snip", html, css];
+  return ["icon-plus.snip", html];
 };

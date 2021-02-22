@@ -1,22 +1,26 @@
 module.exports = () => {
   const html = splitTemp/*html*/`
-    <i class="icon medium Next"></i>
+    <i class="icon medium Next">
+      <span class="symbol">
+        \u2192
+      </span>
+    </i>
   `;
 
   const css = /*css*/`
     .icon.Next {
-      position: absolute;
       display: flex;
       right: var(--spacing-S);
       top: 0;
       bottom: 0;
       margin: auto;
-      height: var(--circle-M);
-      width: var(--circle-M);
+      height: var(--circle-L);
+      width: var(--circle-L);
+      border: 2px solid currentColor;
+      border-radius: 100%;
     }
 
-    .icon.Next::after {
-      content: "\u2192";
+    .icon.Next .symbol {
       display: block;
       margin: auto;
     }

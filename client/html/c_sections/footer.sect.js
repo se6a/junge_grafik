@@ -1,5 +1,5 @@
-const $checkbox = get$snippet("input-checkbox");
-const $iconNext = get$snippet("icon-next");
+const Checkbox = getSnippet("input-checkbox");
+const IconNext = getSnippet("icon-next");
 
 module.exports = () => {
   const html = splitTemp/*html*/`
@@ -9,21 +9,33 @@ module.exports = () => {
         <header class="boxTitle">
           <h3>Newsletter</h3>
         </header>
+
         <div class="boxContent">
-          <form>
-            <div class="Agreement formField">
-              ${$checkbox('id="footer-newsletter-agree"', "console.log('click the box')")}
-              <label for="footer-newsletter-agree">
-                I agree to <a class="link">all the stuff</a>.
-              </label>
+          <form id="Newsletter">
+
+            <div class="formField Checkbox">
+              ${Checkbox({
+                label: /*html*/`
+                  <label for="footer-newsletter-agree">
+                    I accept <a class="link">all the stuff</a>.
+                  </label>`,
+                required: true
+              })}
             </div>
-            <div class="Email formField">
-              <label for="footer-newsletter-email" style="display: none">E-mail</label>
-              <input id="footer-newsletter-email" type="email" placeholder="Your email">
-              <button id="footer-newsletter-submit" class="button">
-                ${$iconNext()}
-              </button>
-            </div>
+
+            <fieldset class="group">
+              <div class="formField Email">
+                <label for="footer-newsletter-email" style="display: none">E-mail</label>
+                <input id="footer-newsletter-email" class="input Email" type="email" placeholder="Your email">
+              </div>
+
+              <div class="formField Submit">
+                <button id="footer-newsletter-submit" class="button" type="button">
+                  ${IconNext()}
+                </button>
+              </div>
+            </fieldset>
+
           </form>
         </div>
       </div>
@@ -82,6 +94,31 @@ module.exports = () => {
 
     .FOOTER h3 {
       font-size: 1.3em;
+    }
+
+    .FOOTER form > .formField.Checkbox,
+    .FOOTER form > .group {
+      margin-bottom: var(--spacing-S);
+    }
+
+    .FOOTER .group {
+      display: flex;
+      column-gap: unset;
+    }
+
+    .FOOTER .formField {
+      width: auto;
+    }
+
+    .FOOTER .Newsletter .input.Email {
+      font-size: inherit;
+      height: var(--circle-L);
+    }
+
+    .FOOTER .Newsletter .button {
+      width: auto;
+      padding: 0 0 0 var(--spacing-S);
+      border: 0;
     }
   `;
 

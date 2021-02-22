@@ -1,10 +1,10 @@
-const $intro = get$section("intro");
-const $underlined = get$snippet("text-underlined");
+const HeaderView = getSection("header-view");
+const Underlined = getSnippet("text-underlined");
 
 module.exports = ({ data }) => {
   const html = splitTemp/*html*/`
     <main class="VIEW Award">
-      <h1>${$underlined("super")}</h1>
+      <h1>${Underlined("super")}</h1>
     </main>
   `;
 

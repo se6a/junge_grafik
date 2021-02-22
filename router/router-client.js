@@ -1,5 +1,9 @@
-const Express = require("express");
 const Router = Express.Router();
+const BodyParser = require("body-parser");
+
+Router.use(BodyParser.urlencoded({ extended: true }));
+Router.use(BodyParser.json());
+
 const buildResponse = require("../functions/templating");
 
 /*  Routes
@@ -39,7 +43,5 @@ function init() {
   buildRoutes();
   return Router;
 }
-
-module.exports = init;
 
 module.exports = init();

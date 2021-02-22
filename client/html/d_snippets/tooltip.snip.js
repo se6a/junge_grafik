@@ -1,9 +1,13 @@
-const $iconMedium = get$snippet("icon-circle-m");
+const IconMedium = getSnippet("icon-circle-m");
 
-module.exports = (tooltip) => {
+function returnEmpty() {
+  return "";
+}
+
+function returnTooltip(tooltip) {
   const html = splitTemp/*html*/`
     <div class="Tooltip">
-      ${$iconMedium("Tooltip")}
+      ${IconMedium({ symbol: "?", classes: "Tooltip" })}
       <p class="content">
         ${tooltip.de}
       </p>
@@ -34,10 +38,6 @@ module.exports = (tooltip) => {
       cursor: pointer;
     }
 
-    .Tooltip .icon::after {
-      content: "?";
-    }
-
     .Tooltip:hover .icon {
       background-color: white;
     }
@@ -47,5 +47,7 @@ module.exports = (tooltip) => {
     }
   `;
 
-  return ["icon-tooltip.snip", html, css];
-};
+  return ["tooltip.snip", html, css];
+}
+
+module.exports = ({ tooltip }) => tooltip ? returnTooltip(tooltip) : returnEmpty();

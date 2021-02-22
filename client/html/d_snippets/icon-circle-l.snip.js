@@ -1,16 +1,16 @@
 module.exports = ({ classes, symbol }) => {
   const html = splitTemp/*html*/`
-    <i class="icon circle medium ${classes}">
-      <snap class="symbol">
+    <i class="icon circle large ${classes}">
+      <span class="symbol">
         ${symbol}
-      </snap>
+      </span>
     </i>
   `;
 
   const css = /*css*/`
-    .icon.circle.medium {
-      width: var(--circle-M);
-      height: var(--circle-M);
+    .icon.circle.large {
+      width: var(--circle-L);
+      height: var(--circle-L);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -19,5 +19,5 @@ module.exports = ({ classes, symbol }) => {
     }
   `;
 
-  return ["icon-circle-m.snip", html, css];
+  return ["icon-circle-l.snip", html, css];
 };

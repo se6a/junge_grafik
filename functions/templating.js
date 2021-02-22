@@ -146,7 +146,7 @@ function _assembleRaw(req) {
     view:     {}
   };
 
-  const $site = get$site("main");
+  const $site = getSite("main");
   const raw = $site(data);
 
   return raw;
@@ -183,7 +183,7 @@ function _injectCss(html, css) {
   return html.replace("<inject-css />", `<style>${css}</style>`);
 }
 
-function _get$template(path) {
+function _getTemplate(path) {
   let $temp;
 
   try {
@@ -238,10 +238,11 @@ global.$attr = (data) => {
   return attr.join(" ");
 };
 
-global.get$site = (name) => _get$template(`a_sites/${name}.site.js`);
-global.get$view = (name) => _get$template(`b_views/${name}.view.js`);
-global.get$section = (name) => _get$template(`c_sections/${name}.sect.js`);
-global.get$snippet = (name) => _get$template(`d_snippets/${name}.snip.js`);
+global.getSite = (name) => _getTemplate(`a_sites/${name}.site.js`);
+global.getView = (name) => _getTemplate(`b_views/${name}.view.js`);
+global.getSection = (name) => _getTemplate(`c_sections/${name}.sect.js`);
+global.getSnippet = (name) => _getTemplate(`d_snippets/${name}.snip.js`);
+global.getJs = (name) => require(`${__basedir}/functions/${name}.js`);
 
 /*  Modules
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/

@@ -23,10 +23,6 @@ module.exports = (text) => {
     .textUnderlined .text {
       vertical-align: super;
     }
-    
-    .textUnderlined .line {
-      border: 1px solid black;
-    }
   `;
 
   return ["text-underlined.snip", html, css];

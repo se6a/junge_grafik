@@ -1,6 +1,7 @@
-const $dropDownIcon = get$snippet("icon-dropdown");
+const DropDownIcon = getSnippet("icon-dropdown");
+const Tooltip = getSnippet("tooltip");
 
-function $selectOptions(options = []) {
+function SelectOptions(options = []) {
   return options.reduce(
     (list, _option) => list + /*html*/`
       <li class="option" role="option" data-id="${_option.id}">
@@ -11,15 +12,17 @@ function $selectOptions(options = []) {
     );
 }
 
-module.exports = (data) => {
-  const required = data?.required ? "--required" : "";
+module.exports = (field) => {
+  const required = field?.required ? "--required" : "";
 
   const html = splitTemp/*html*/`
     <div class="formField Select ${required}" onclick="selectOption(this, event)">
-
-      <label class="label">
-        ${data?.label.de}
-      </label>
+      <div class="header">
+        <label class="label">
+          ${field?.label.de}
+        </label>
+        ${Tooltip(field)}
+      </div>
 
       <div class="inputBox">
         <input
@@ -27,14 +30,15 @@ module.exports = (data) => {
           type="text"
           placeholder="Select one"
           value=""
-          name="${data?.name}"
+          name="fields[${field?.name}]"
           readonly="readonly"
-        >
-        ${$dropDownIcon()}
+          ${required ? "required=required" : ""}
+        />
+        ${DropDownIcon()}
       </div>
 
       <ul class="Select options" role="listbox">
-        ${$selectOptions(data?.options)}
+        ${SelectOptions(field?.options)}
       </ul>
 
     </div>

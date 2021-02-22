@@ -1,17 +1,11 @@
-const $iconMedium = get$snippet("icon-circle-m");
+const Icon = getSnippet("icon-circle-l");
 
 module.exports = () => {
   const html = splitTemp/*html*/`
-    ${$iconMedium({ class: "Dropdown" })}
+    ${Icon({ symbol: "\u2193", classes: "Dropdown" })}
   `;
 
-  const css = /*css*/`
-
-    .icon.Dropdown::after {
-      content: "\u2193";
-      display: block;
-    }
-  `;
+  const css = /*css*/``;
 
   return ["icon-dropdown.snip", html, css];
 };

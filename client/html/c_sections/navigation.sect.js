@@ -1,4 +1,4 @@
-const $menuIcon = get$snippet("icon-menu");
+const MenuIcon = getSnippet("icon-menu");
 
 module.exports = () => {
   const html = splitTemp/*html*/`
@@ -6,6 +6,7 @@ module.exports = () => {
       <a id="navigation-award" class="button Award" href="/award">Award</a>
       <a id="navigation-follow" class="button Follow" href="/follow">Follow</a>
       <a id="navigation-submit" class="button Submit red" href="/submit">Submit!</a>
+
       <script defer>
         let $Menu = null;
         function toggleMenu() {
@@ -14,11 +15,11 @@ module.exports = () => {
             $Menu = document.querySelector(".MENU");
           $Menu.classList.toggle("--show");
         }
-
       </script>
+
       <button id="navigation-menu" class="button Menu" onclick="toggleMenu()">
         <label class="label">Menu</label>
-        ${$menuIcon()}
+        ${MenuIcon()}
       </button>
     </nav>
   `;
@@ -32,9 +33,11 @@ module.exports = () => {
       grid-auto-columns: 1fr;
     }
 
+    .NAVIGATION > .button {
+      border: 1px solid currentColor;
+    }
+
     @media screen and (max-width: 1024px) {
-
-
     }
 
     @media screen and (max-width: 500px) {

@@ -1,4 +1,4 @@
-const $underlined = get$snippet("text-underlined");
+const Underlined = getSnippet("text-underlined");
 
 module.exports = () => {
   const $navigation = require("./navigation.sect.js");
@@ -6,21 +6,20 @@ module.exports = () => {
   const html = splitTemp/*html*/`
     <header class="HEADER">
 
-      <!--<a class="logo" href="/home">
-        <ul>
-          <li><span>Junge</span><span>Grafik</span></li>
-          <li><span>Jeune</span><span>Graphisme</span></li>
-          <li><span>Giovane</span><span>Grafica</span></li>
-        </ul>
-      </a>-->
-
       <a class="logo" href="/home">
-        <span>${$underlined("<span class=\"first\">Junge</span><span class=\"second\">Grafik</span>")}</span>
-        <span>${$underlined("<span class=\"first\">Jeune</span><span class=\"second\">Graphisme</span>")}</span>
-        <span>${$underlined("<span class=\"first\">Giovane</span><span class=\"second\">Grafica</span>")}</span>
+        <span>
+          ${Underlined("<span class=\"first\">Junge</span><span class=\"second\">Grafik</span>")}
+        </span>
+        <span>
+          ${Underlined("<span class=\"first\">Jeune</span><span class=\"second\">Graphisme</span>")}
+        </span>
+        <span>
+          ${Underlined("<span class=\"first\">Giovane</span><span class=\"second\">Grafica</span>")}
+        </span>
       </a>
 
       ${$navigation()}
+
     </header>
   `;
 

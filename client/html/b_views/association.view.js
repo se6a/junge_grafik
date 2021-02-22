@@ -1,10 +1,10 @@
-const $intro = get$section("intro");
+const HeaderView = getSection("header-view");
 
 module.exports = ({ data }) => {
   const html = splitTemp/*html*/`
     <main class="VIEW Association">
       ${
-        $intro({
+        HeaderView({
           title:   "Association",
           content: ""
         })

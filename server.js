@@ -8,11 +8,11 @@ const fs = require("fs");
 
 /*  Environment & Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-const ENV = require("./.env.json");
+global.ENV = require("./.env.json");
 
 /*  Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-const Express = require("./node_modules/express");
+global.Express = require("./node_modules/express");
 global.Server = Express();
 
 /*  Live Reload Server
@@ -36,15 +36,6 @@ async function cacheViews() {
     (_view) => _view.replace(".view.js", ""));
 }
 
-/*  Body Parser
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-function loadBodyParser() {
-  const BodyParser = require("./node_modules/body-parser");
-
-  Server.use(BodyParser.urlencoded({ extended: true }));
-  Server.use(BodyParser.json());
-}
-
 /*  Static Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 function staticFiles() {
@@ -62,15 +53,13 @@ function staticFiles() {
 /*  Router
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 async function loadRouter() {
-  Server.use("/api", require("./router/router-api"));
+  Server.use("/api/", require("./router/router-api"));
   Server.use("/", await require("./router/router-client"));
 }
 
 /*  Start Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
 async function start() {
-  loadBodyParser();
   staticFiles();
   await cacheViews();
   loadRouter();

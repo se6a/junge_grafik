@@ -1,5 +1,5 @@
-const $intro = get$section("intro");
-const $underlined = get$snippet("text-underlined");
+const HeaderView = getSection("header-view");
+const Underlined = getSnippet("text-underlined");
 
 module.exports = (data) => {
   const _data = {
@@ -10,11 +10,11 @@ module.exports = (data) => {
   const html = splitTemp/*html*/`
     <main class="VIEW Home">
 
-      ${$intro(_data)}
+      ${HeaderView(_data)}
 
-      <section class="two">
+      <article class="viewSegment splitpage">
         <div class="Description box">
-          <h2>${$underlined("Award")}</h2>
+          <h2>${Underlined("Award")}</h2>
           Deine Grafikarbeit ist mehr als nur ein Schulprojekt? Dann lass sie uns sehen. Eingereicht werden können herausragende Arbeiten, die im Rahmen einer Ausbildung entstanden sind. 
         </div>
         <div class="Details box">
@@ -58,7 +58,7 @@ module.exports = (data) => {
             </div>
           </div>
         </div>
-      </section>
+      </article>
 
     </main>
   `;
@@ -66,19 +66,6 @@ module.exports = (data) => {
   const css = /*css*/`
     :root {
       --mainColor: var(--orange)
-    }
-
-    .two {
-      background-color: white;
-      display: grid;
-      grid-auto-flow: column;
-      grid-template-columns: 1fr;
-      grid-auto-columns: 1fr;
-    }
-
-    .two > .box {
-      height: 100%;
-      padding: var(--spacing-M);
     }
 
     .Details.box {
