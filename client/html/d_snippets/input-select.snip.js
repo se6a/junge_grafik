@@ -12,34 +12,65 @@ function SelectOptions(options = []) {
     );
 }
 
-module.exports = (field) => {
-  const required = field?.required ? "--required" : "";
+module.exports = ({ name, label, required, zindex, options, tooltip, placeholder }) => {
+  zindex = zindex ? `style="z-index: ${zindex}"` : "";
+  required = required ? "--required" : "";
+  placeholder = placeholder?.de
+                  ? placeholder.de
+                  : "select one";
 
   const html = splitTemp/*html*/`
-    <div class="formField Select ${required}" onclick="selectOption(this, event)">
+    <div class="formField Select ${required}" ${zindex}>
       <div class="header">
         <label class="label">
-          ${field?.label.de}
+          ${label?.de}
         </label>
-        ${Tooltip(field)}
+        ${Tooltip(tooltip)}
       </div>
 
-      <div class="inputBox">
-        <input
-          class="input Select"
-          type="text"
-          placeholder="Select one"
-          value=""
-          name="fields[${field?.name}]"
-          readonly="readonly"
-          ${required ? "required=required" : ""}
-        />
-        ${DropDownIcon()}
-      </div>
+      <div class="inputBox outer">
+        <div
+          class="inputBox inner"
+          onclick="selectOption(this, event)"
+          onmouseleave="blurField(event)"
+          tabindex="0"
+          data-placeholder="${placeholder}"
+        >
 
-      <ul class="Select options" role="listbox">
-        ${SelectOptions(field?.options)}
-      </ul>
+          <input
+            class="Select hiddenInput"
+            type="text"
+            value=""
+            name="fields[${name}]"
+            readonly="readonly"
+            tabindex="-1"
+            ${required ? "required=required" : ""}
+          />
+
+          <span class="input Select">
+            <span class="placeholder">${placeholder}</span>
+          </span>
+
+          ${DropDownIcon()}
+
+          <ul
+            class="Select options"
+            role="listbox"
+          >
+            ${SelectOptions(options)}
+            ${
+              required
+                ? ""
+                : /* html */`
+                  <li class="option" role="option" data-id="">
+                    Keines
+                  </li>   
+                `
+            }
+          </ul>
+
+        </div>
+      </div>
 
     </div>
   `;
@@ -47,34 +78,40 @@ module.exports = (field) => {
   const css = /*css*/`
     .formField.Select {
       position: relative;
+      z-index: 100;
+      width: 100%;
+    }
+
+    .formField.Select * {
+      cursor: pointer;
+    }
+
+    .formField.Select .inputBox.outer {
+      height: var(--spacing-L);
+    }
+
+    .formField.Select .inputBox.inner {
+      position: absolute;
+      width: 100%;
+      background-color: white;
+      min-height: 100%;
+      display: block;
     }
 
     .formField.Select .icon.Dropdown {
       position: absolute;
-      align-self: center;
       right: var(--spacing-S);
-    }
-
-    .input.Select,
-    .Select.options {
-      cursor: pointer;
+      top: var(--spacing-S);
+      pointer-events: none;
     }
 
     .Select.options {
-      background-color: white;
       display: none;
-      flex-direction: column;
-      width: 100%;
-      height: inherit;
-      position: absolute;
-      border: 2px solid black;
+      border: var(--borderFull) solid currentColor;
       border-top: 0;
-      z-index: 100;
-      display: none;
     }
 
     .Select > .option {
-      width: 100%;
       padding: var(--spacing-S);
       height: var(--spacing-L);
     }
@@ -84,8 +121,19 @@ module.exports = (field) => {
       background-color: var(--gray);
     }
 
-    .Select:hover .options {
-      display: flex;
+    .Select.input {
+      outline: none;
+      pointer-events: none;
+    }
+
+    .Select .inputBox.inner:focus-within {
+      outline: calc(var(--borderFocus) - var(--borderFull))
+               solid
+               currentColor;
+    }
+
+    .inputBox.inner:focus-within .options {
+      display: block;
     }
   `;
 

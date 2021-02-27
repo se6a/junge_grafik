@@ -14,7 +14,7 @@ module.exports = ({ classes, symbol }) => {
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 2px solid currentColor;
+      border: var(--borderFull) solid currentColor;
       border-radius: 100%;
     }
   `;

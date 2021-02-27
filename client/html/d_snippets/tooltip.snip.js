@@ -1,15 +1,19 @@
 const IconMedium = getSnippet("icon-circle-m");
 
-function returnEmpty() {
-  return "";
-}
+module.exports = (tooltip) => {
+  if (! tooltip) return "";
 
-function returnTooltip(tooltip) {
   const html = splitTemp/*html*/`
-    <div class="Tooltip">
-      ${IconMedium({ symbol: "?", classes: "Tooltip" })}
+    <div class="Tooltip"
+      onclick="toggleTooltip(this)"
+    >
+      ${IconMedium({
+        symbol: "?",
+        classes: "Tooltip",
+        attributes: "tabindex='-1' onmouseleave='blurField(event)'"
+      })}
       <p class="content">
-        ${tooltip.de}
+        ${tooltip?.de}
       </p>
     </div>
   `;
@@ -21,11 +25,12 @@ function returnTooltip(tooltip) {
     }
 
     .Tooltip > .content {
-      display: none;
+      display: inline-block;
+      visibility: hidden;
       width: 100%;
       min-height: var(--spacing-L);
       background-color: var(--gray);
-      border: 2px solid black;
+      border: var(--borderFull) solid currentColor;
       position: absolute;
       padding: var(--spacing-S);
       margin-top: var(--spacing-XS);
@@ -42,12 +47,10 @@ function returnTooltip(tooltip) {
       background-color: white;
     }
 
-    .Tooltip:hover .content {
-      display: inline-block;
+    .Tooltip:focus {
+      outline: none;
     }
   `;
 
   return ["tooltip.snip", html, css];
-}
-
-module.exports = ({ tooltip }) => tooltip ? returnTooltip(tooltip) : returnEmpty();
+};

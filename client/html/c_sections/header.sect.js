@@ -36,7 +36,7 @@ module.exports = () => {
       position: fixed;
       z-index: 1000;
       background-color: white;
-      border: 1px solid black;
+      border: var(--borderHalf) solid currentColor;
       top: 0;
       left: 0;
     }
@@ -45,7 +45,7 @@ module.exports = () => {
       display: flex;
       flex-direction: column;
       justify-content: stretch;
-      border: 1px solid black;
+      border: var(--borderHalf) solid currentColor;
     }
 
     .HEADER .logo > span {

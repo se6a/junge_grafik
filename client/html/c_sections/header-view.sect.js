@@ -25,7 +25,7 @@ module.exports = ({ title, content }) => {
       flex-direction: column;
       flex-grow: 1;
       justify-content: space-between;
-      border: 1px solid black;
+      border: var(--borderHalf) solid currentColor;
       min-height: 100vh;
     }
 

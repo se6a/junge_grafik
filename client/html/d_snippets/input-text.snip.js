@@ -1,22 +1,22 @@
 const Tooltip = getSnippet("tooltip");
 
-module.exports = (field) => {
-  const required = field?.required ? "--required" : "";
+module.exports = ({ name, label, required, tooltip }) => {
+  required = required ? "--required" : "";
 
   const html = splitTemp/*html*/`
     <div class="formField Text ${required}">
 
       <header class="header">
         <label class="label">
-          ${field.label.de}
+          ${label?.de}
         </label>
-        ${Tooltip(field)}
+        ${Tooltip(tooltip)}
       </header>
 
       <div class="inputBox">
         <textarea
           class="input Text"
-          name="fields[${field?.name}]"
+          name="fields[${name}]"
           ${required ? "required" : ""}
         >
         </textarea>
@@ -26,8 +26,12 @@ module.exports = (field) => {
   `;
 
   const css = /*css*/`
+    .formField.Text {
+      grid-column: 1/3;
+    }
+
     .formField textarea {
-      min-height: calc(5 * var(--spacing-M));
+      min-height: calc(7 * var(--spacing-M));
       resize: vertical;
     }
   `;

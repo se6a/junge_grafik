@@ -4,19 +4,22 @@ const e         = getJs("event-handler");
 
 module.exports = (field) => {
   const required = field?.required ? "--required" : "";
+  const zindex = field?.zindex ? `style="z-index: ${field.zindex}"` : "";
 
   const html = splitTemp/*html*/`
-    <div class="formField Checkbox ${required}">
-      <input
-        class="input"
-        ${e.onchecked(field?.callback)}
-        type="hidden"
-        name="${field?.name}"
-        value=false
-        ${required ? "required" : ""}
-      >
-
+    <div
+      class="formField Checkbox ${required}"
+      ${zindex}
+    >
       <div class="inputBox" onclick="setCheckbox(this, event)">
+        <input
+          class="hiddenInput"
+          name="${field?.name}"
+          type="checkbox"
+          value="false"
+          ${e.onchecked(field?.callback)}
+          ${required ? "required" : ""}
+        >
         <span class="checkmark">
           <svg viewBox="0 0 10 10" preserveAspectRatio=""  overflow="visible" xmlns="http://www.w3.org/2000/svg">
             <path d="M 0 8 L 2 10 L 8 2" vector-effect="non-scaling-stroke"/>
@@ -36,6 +39,10 @@ module.exports = (field) => {
   `;
 
   const css = /*css*/`
+    .Checkbox .hiddenInput {
+      bottom: 0;
+    }
+
     .Checkbox.formField {
       display: flex;
       align-items: center;
@@ -68,7 +75,7 @@ module.exports = (field) => {
     .Checkbox .checkmark path {
       stroke-width: 2px;
       fill: none;
-      stroke: black;
+      stroke: currentColor;
     }
 
     .Checkbox.--checked .checkmark {

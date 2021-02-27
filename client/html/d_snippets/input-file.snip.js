@@ -1,20 +1,19 @@
 const IconPlus = getSnippet("icon-plus");
 const Tooltip = getSnippet("tooltip");
 
-module.exports = (field) => {
-  const required = field?.required ? "--required" : "";
+module.exports = ({ label, required, tooltip }) => {
+  required = required ? "--required" : "";
 
   const html = splitTemp/*html*/`
     <div
       class="formField Upload ${required}"
-      oninput="selectFiles(this, event)"
     >
 
       <header class="header">
         <label class="label">
-          ${field?.label.de}
+          ${label?.de}
         </label>
-        ${Tooltip(field)}
+        ${Tooltip(tooltip)}
       </header>
 
       <div class="inputBox input Upload">
@@ -22,6 +21,7 @@ module.exports = (field) => {
         <label for="ProjectFileUpload" class="upload">
           ${IconPlus()}
           <input
+            class="hiddenInput"
             id="ProjectFileUpload"
             type="file"
             name="file"
@@ -35,7 +35,9 @@ module.exports = (field) => {
   `;
 
   const css = /*css*/`
-
+    .formField.Upload {
+      grid-column: 1/3;
+    }
 
     .inputBox.Upload {
       min-height: var(--spacing-L);
@@ -51,11 +53,34 @@ module.exports = (field) => {
 
     .inputBox > .fileItem {
       font-size: var(--fontSize-M);
-      padding: 0 var(--spacing-S);
-      display: block;
-      border: 2px solid currentColor;
-      border-radius: var(--circle-M);
-      height: var(--circle-M);
+      padding-left: var(--spacing-S);
+      display: flex;
+      border: var(--borderFull) solid currentColor;
+      border-radius: var(--circle-L);
+      height: var(--circle-L);
+    }
+
+    .fileItem > .button {
+      height: 100%;
+      width: var(--circle-L);
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .fileItem > .button .line {
+      transform: rotate(45deg);
+      width: 40%;
+      position: absolute;
+    }
+
+    .fileItem > .button .line:first-child {
+      transform: rotate(-45deg);
+    }
+
+    .fileItem > .button:hover .line {
+      width: 50%;
     }
 
     .inputBox > .fileItem > p {
@@ -63,15 +88,11 @@ module.exports = (field) => {
       display: inline;
     }
 
-    .Upload input[type="file"] {
-      display: none;
-    }
-
     label.upload .icon {
       cursor: pointer;
     }
     label.upload:hover .icon {
-      color: var(--gray);
+      border-width: var(--borderHover);
     }
   `;
 

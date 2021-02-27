@@ -15,6 +15,8 @@ module.exports = async (data) => {
 
         <link rel="stylesheet" href="/css/global.css">
         <script defer type="text/javascript" src="/js/main.js"></script>
+        <script defer type="text/javascript" src="/js/inputfields.js"></script>
+        <script defer type="text/javascript" src="/js/submit-project.js"></script>
 
         <inject-css />
       </head>
@@ -40,19 +42,19 @@ module.exports = async (data) => {
     }
 
     .VIEW {
-      background-color: var(--mainColor);
+      background-color: var(--colorTheme);
       display: flex;
       flex-direction: column;
     }
 
     .viewSegment.splitpage > * {
       padding: var(--spacing-M);
-      border: 1px solid currentColor;
+      border: var(--borderHalf) solid currentColor;
     }
 
     .viewSegment.fullpage {
       padding: var(--spacing-L) var(--spacing-M);
-      border: 1px solid currentColor;
+      border: var(--borderHalf) solid currentColor;
     }
 
     .viewSegment.splitpage {

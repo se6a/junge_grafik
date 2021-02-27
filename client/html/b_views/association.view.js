@@ -14,7 +14,8 @@ module.exports = ({ data }) => {
 
   const css = splitTemp/*css*/`
     :root {
-      --mainColor: var(--yellow);
+      --colorTheme: var(--yellowLight);
+      --colorHilight: var(--yelow);
     }
   `;
 

@@ -1,3 +1,61 @@
+/*  Variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+:root {
+  --violet: rgb(90, 72, 155);
+  --violetLight: rgb(172, 163, 205);
+  --red: rgb(220, 31, 90);
+  --redLight: rgb(237, 143, 172);
+  --green: rgb(0, 154, 102);
+  --greenLight: rgb(127, 205, 184);
+  --blue: rgb(90, 130, 235);
+  --blueLight: rgb(159, 193, 247);
+  --yellow: rgb(255, 205, 0);
+  --yellowLight: rgb(255, 231, 127);
+  --white: rgb(255, 255, 255);
+  --gray: rgb(200, 200, 200);
+
+  --colorKey: var(--violet);
+  --colorTheme: var(--redLight);
+  --colorHilight: var(--red);
+
+  --spacing-XS: .5vmin;
+  --spacing-S: 1vmin;
+  --spacing-M: 2.5vmin;
+  --spacing-L: 5vmin;
+  --spacing-XL: 8vmin;
+
+  --boxHeaderHeight: 5vmin;
+  --headerHeight: 8vmin;
+  --footerHeight: 30vmin;
+
+  --fontSize-S: 1.4vmin;
+  --lineHeight-S: 1.7vmin;
+  --fontSize-M: 1.9vmin;
+  --lineHeight-M: 2.5vmin;
+  --fontSize-L: 5vmin;
+  --lineHeight-L: 6vmin;
+  --fontSize-XL: 9vmin;
+  --lineHeight-XL: 8vmin;
+
+  --circle-S: 1.7vmin;
+  --circle-M: 2.5vmin;
+  --circle-L: 3.2vmin;
+
+  --borderFull: 2px;
+  --borderHalf: 1px;
+  --borderHover: 3px;
+  --borderFocus: 4px;
+
+  font-size: 1vmin;
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --headerHeight: 12vmin;
+  }
+}
+
 /*  Font
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 @font-face {
@@ -69,89 +127,35 @@ textarea {
   background-color: white;
 }
 
+input:hover,
+textarea:hover,
+select:hover,
+.Select .inputBox.inner:hover {
+  outline: calc(var(--borderHover) - var(--borderFull))
+           solid
+           currentColor;
+}
+
+*:focus {
+  outline: var(--borderFocus) solid currentColor;
+}
+
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 3px solid black;
-}
-
-/*  Variables
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-:root {
-  --red: rgb(241, 87, 86);
-  --yellow: rgb(254, 252, 100);
-  --green: rgb(125, 213, 155);
-  --orange: rgb(244, 132, 86);
-  --white: rgb(255, 255, 255);
-  --gray: rgb(196, 196, 196);
-  --mainColor: var(--red);
-
-  --spacing-XS: .5vmin;
-  --spacing-S: 1vmin;
-  --spacing-M: 2.5vmin;
-  --spacing-L: 5vmin;
-  --spacing-XL: 8vmin;
-
-  --boxHeaderHeight: 5vmin;
-  --headerHeight: 8vmin;
-  --footerHeight: 30vmin;
-
-  --fontSize-S: 1.4vmin;
-  --lineHeight-S: 1.7vmin;
-  --fontSize-M: 1.9vmin;
-  --lineHeight-M: 2.5vmin;
-  --fontSize-L: 5vmin;
-  --lineHeight-L: 6vmin;
-  --fontSize-XL: 9vmin;
-  --lineHeight-XL: 8vmin;
-
-  --circle-S: 1.7vmin;
-  --circle-M: 2.5vmin;
-  --circle-L: 3.2vmin;
-
-  font-size: 1vmin;
-}
-
-@media screen and (max-width: 500px) {
-  :root {
-    --headerHeight: 12vmin;
-  }
+  outline: calc(var(--borderFocus) - var(--borderFull))
+           solid
+           currentColor;
 }
 
 body {
   font-size: var(--fontSize-M);
   line-height: var(--lineHeight-M);
-  border: 1px solid black;
+  color: var(--colorKey);
+  border: var(--borderHalf) solid currentColor;
   font-family: FeixenSans;
   font-style: normal;
-}
-
-/*  Colors
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-.red {
-  background-color: var(--red);
-}
-
-.yellow {
-  background-color: var(--yellow);
-}
-
-.orange {
-  background-color: var(--orange);
-}
-
-.green {
-  background-color: var(--green);
-}
-
-.gray {
-  background-color: var(--gray);
-}
-
-.pageColor {
-  background-color: var(--pageColor);
+  overflow-x: hidden;
 }
 
 /*  Layout
@@ -197,7 +201,7 @@ h2 {
 }
 
 .box {
-  border: 1px solid black;
+  border: var(--borderHalf) solid currentColor;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -205,7 +209,7 @@ h2 {
 
 .boxTitle {
   padding: 0 var(--spacing-M);
-  border-bottom: 2px solid black;
+  border-bottom: var(--borderFull) solid currentColor;
   height: var(--boxHeaderHeight);
   display: flex;
   flex-direction: column;
@@ -240,12 +244,24 @@ h2 {
   width: 2em;
   height: 2em;
   display: block;
-  border: 2px solid black;
+  border: var(--borderFull) solid currentColor;
   border-radius: 50%;
 }
 
 .button:hover {
   background-color: var(--gray);
+}
+
+.button.unstyled {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+
+.button.unstyled:hover {
+  background-color: transparent;
 }
 
 a.link {
@@ -256,16 +272,11 @@ a.link:hover {
   text-decoration: underline;
 }
 
-input[type="email"] {
-  background-color: var(--white);
-  border: 2px solid currentColor;
-  height: 2em;
-}
-
 span.line {
   background-color: currentColor;
   height: 0;
-  border: 1px solid currentColor;
+  border: var(--borderHalf) solid currentColor;
+  display: block;
 }
 
 /*  Form
@@ -274,12 +285,22 @@ form {
   width: 100%;
 }
 
-form > .group {
+.formContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.formFieldGroup {
   display: grid;
   grid-auto-columns: 1fr;
   grid-template-columns: 1fr;
   grid-auto-flow: column;
   column-gap: var(--spacing-M);
+}
+
+.formSegment:not(:last-child),
+.formFieldGroup:not(:last-child) {
+  margin-bottom: var(--spacing-L);
 }
 
 .formField {
@@ -304,7 +325,7 @@ form > .group {
 .formField .input {
   width: 100%;
   background-color: white;
-  border: 2px solid currentColor;
+  border: var(--borderFull) solid currentColor;
   padding: var(--spacing-S);
 }
 
@@ -322,14 +343,34 @@ form > .group {
   padding-left: var(--spacing-XS);
 }
 
+.input[type="email"] {
+  background-color: var(--white);
+  border: var(--borderFull) solid currentColor;
+  height: 2em;
+}
+
 .input.--warn {
   background-color: var(--yellow);
 }
 
-.Tooltip > p.content {
+.hiddenInput {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  background-color: transparent;
+  border: none;
+}
+
+.input > .placeholder {
+  color: silver;
+}
+
+/* .Tooltip > p.content {
   width: calc(100vw - 17px - 4px);
   border-left: none;
   border-right: none;
   min-height: var(--spacing-XL);
   left: calc( -1 * var(--spacing-M));
-} 
+}  */

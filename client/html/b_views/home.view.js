@@ -65,7 +65,8 @@ module.exports = (data) => {
 
   const css = /*css*/`
     :root {
-      --mainColor: var(--orange)
+      --colorTheme: var(--redLight);
+      --colorHilight: var(--red);
     }
 
     .Details.box {

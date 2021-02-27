@@ -8,7 +8,7 @@ module.exports = (classes = "") => {
 const css = /*css*/`
   .svg.circle.medium {
     --center: calc(var(--circle-M) / 2);
-    --radius: calc(var(--circle-M) / 2 - 1px);
+    --radius: calc(var(--circle-M) / 2 - var(--borderHalf));
     background: yellow;
     display: flex;
     min-width: var(--circle-M);
@@ -20,8 +20,8 @@ const css = /*css*/`
     cy: var(--center);
     r: var(--radius);
     fill: none;
-    stroke: black;
-    stroke-width: 2px;
+    stroke: currentColor;
+    stroke-width: var(--borderFull);
   }
 `;
 

@@ -1,23 +1,23 @@
 const Tooltip = getSnippet("tooltip");
 
-module.exports = (field) => {
-  const required = field?.required ? "--required" : "";
+module.exports = ({ name, label, required, tooltip }) => {
+  required = required ? "--required" : "";
 
   const html = splitTemp/*html*/`
-    <div class="formField Text ${required}">
+    <div class="formField TextShort ${required}">
 
       <header class="header">
         <label class="label">
-          ${field?.label.de}
+          ${label?.de}
         </label>
-        ${Tooltip(field)}
+        ${Tooltip(tooltip)}
       </header>
 
       <div class="inputBox">
         <input
           class="input Text"
           type="text"
-          name="fields[${field?.name}]"
+          name="fields[${name}]"
           ${required ? "required" : ""}
         />
       </div>
@@ -32,5 +32,5 @@ module.exports = (field) => {
     }
   `;
 
-  return ["input-text.snip", html, css];
+  return ["input-text-short.snip", html, css];
 };

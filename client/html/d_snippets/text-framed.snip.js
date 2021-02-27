@@ -10,7 +10,7 @@ module.exports = (data) => {
       font-size: var(--fontSize-M);
       padding: 0 var(--spacing-S);
       display: block;
-      border: 2px solid black;
+      border: var(--borderFull) solid currentColor;
       border-radius: var(--circle-M);
       height: var(--circle-M);
     }

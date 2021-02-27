@@ -1,5 +1,6 @@
-const Checkbox = getSnippet("input-checkbox");
-const IconNext = getSnippet("icon-next");
+const Checkbox   = getSnippet("input-checkbox");
+const EmailInput = getSnippet("input-email");
+const IconNext   = getSnippet("icon-next");
 
 module.exports = () => {
   const html = splitTemp/*html*/`
@@ -11,10 +12,11 @@ module.exports = () => {
         </header>
 
         <div class="boxContent">
-          <form id="Newsletter">
+          <form id="Newsletter" action="javascript:" onsubmit="console.log('hello newsletter')">
 
             <div class="formField Checkbox">
               ${Checkbox({
+                name: "terms",
                 label: /*html*/`
                   <label for="footer-newsletter-agree">
                     I accept <a class="link">all the stuff</a>.
@@ -24,13 +26,13 @@ module.exports = () => {
             </div>
 
             <fieldset class="group">
-              <div class="formField Email">
-                <label for="footer-newsletter-email" style="display: none">E-mail</label>
-                <input id="footer-newsletter-email" class="input Email" type="email" placeholder="Your email">
-              </div>
+              ${EmailInput({
+                label: { de: "Email" },
+                required: true
+              })}
 
               <div class="formField Submit">
-                <button id="footer-newsletter-submit" class="button" type="button">
+                <button id="footer-newsletter-submit" class="button" onclick="console.log('clicked')">
                   ${IconNext()}
                 </button>
               </div>
@@ -96,9 +98,13 @@ module.exports = () => {
       font-size: 1.3em;
     }
 
-    .FOOTER form > .formField.Checkbox,
-    .FOOTER form > .group {
+    .FOOTER > .Newsletter .formField.Checkbox,
+    .FOOTER > .Newsletter .group {
       margin-bottom: var(--spacing-S);
+    }
+
+    .FOOTER > .Newsletter .formField.Email .header {
+      display: none;
     }
 
     .FOOTER .group {
@@ -117,7 +123,8 @@ module.exports = () => {
 
     .FOOTER .Newsletter .button {
       width: auto;
-      padding: 0 0 0 var(--spacing-S);
+      padding: 0;
+      margin: 0 0 0 var(--spacing-S);
       border: 0;
     }
   `;

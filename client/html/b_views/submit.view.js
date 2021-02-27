@@ -14,8 +14,8 @@ module.exports = (data) => {
       })}
 
       <article class="viewSegment fullpage Language">
-        <form id="project-registration-lang" onsubmit="selectLanguage(event)">
-          <fieldset class="group">
+        <form id="ProjectRegistrationLang" onsubmit="selectLanguage(event)">
+          <fieldset class="formFieldGroup">
             <div class="formField Language">
               ${Select({
                 options: [
@@ -31,7 +31,7 @@ module.exports = (data) => {
               })}
             </div>
           </fieldset>
-          <fieldset class="group">
+          <fieldset class="formFieldGroup">
             <div class="formField ConfirmLang">
               ${RoundedButton({
                 label: "Next \u2192",
@@ -64,14 +64,19 @@ module.exports = (data) => {
             $ViewSubmit.dataset.lang = "de";
           }
 
-          console.log($selectLang.value);
+          console.log($langInput.value);
         }
     </script>
   `;
 
   const css = /*css*/`
+    :root {
+      --colorTheme: var(--redLight);
+      --colorHilight: var(--red);
+    }
+
     .VIEW.Submit > section {
-      border: 1px solid black;
+      border: var(--borderHalf) solid currentColor;
     }
 
     .viewSegment.Language {

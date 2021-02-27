@@ -1,6 +1,6 @@
-module.exports = ({ classes, symbol }) => {
+module.exports = ({ classes, symbol, attributes = "" }) => {
   const html = splitTemp/*html*/`
-    <i class="icon circle medium ${classes}">
+    <i class="icon circle medium ${classes}" ${attributes}>
       <snap class="symbol">
         ${symbol}
       </snap>
@@ -14,7 +14,7 @@ module.exports = ({ classes, symbol }) => {
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 2px solid currentColor;
+      border: var(--borderFull) solid currentColor;
       border-radius: 100%;
     }
   `;

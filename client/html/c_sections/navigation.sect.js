@@ -34,7 +34,7 @@ module.exports = () => {
     }
 
     .NAVIGATION > .button {
-      border: 1px solid currentColor;
+      border: var(--borderHalf) solid currentColor;
     }
 
     @media screen and (max-width: 1024px) {
