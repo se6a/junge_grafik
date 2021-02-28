@@ -5,19 +5,9 @@ module.exports = () => {
     <nav class="NAVIGATION">
       <a id="navigation-award" class="button Award" href="/award">Award</a>
       <a id="navigation-follow" class="button Follow" href="/follow">Follow</a>
-      <a id="navigation-submit" class="button Submit red" href="/submit">Submit!</a>
+      <a id="navigation-submit" class="button Submit" href="/submit">Submit!</a>
 
-      <script defer>
-        let $Menu = null;
-        function toggleMenu() {
-          console.log("hello");
-          if (! $Menu)
-            $Menu = document.querySelector(".MENU");
-          $Menu.classList.toggle("--show");
-        }
-      </script>
-
-      <button id="navigation-menu" class="button Menu" onclick="toggleMenu()">
+      <button id="navigation-menu" class="button Menu" onclick="toggleMenu(this)">
         <label class="label">Menu</label>
         ${MenuIcon()}
       </button>
@@ -31,10 +21,19 @@ module.exports = () => {
       grid-auto-flow: column;
       grid-template-columns: 1fr;
       grid-auto-columns: 1fr;
+      font-family: FeixenSansEdgy;
     }
 
     .NAVIGATION > .button {
       border: var(--borderHalf) solid currentColor;
+    }
+
+    .NAVIGATION > .button.Submit {
+      background-color: var(--redLight);
+    }
+
+    .NAVIGATION > .button.Submit:hover {
+      background-color: var(--gray);
     }
 
     @media screen and (max-width: 1024px) {

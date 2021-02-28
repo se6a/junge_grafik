@@ -6,7 +6,7 @@ const InputFile      = getSnippet("input-file");
 
 module.exports = {
   create(name) {
-    const formDef = require(`${__basedir}/client/data/${name}.data`);
+    const formDef = getData(name);
     const $html = [];
 
     formDef.forEach((_group, index) => {

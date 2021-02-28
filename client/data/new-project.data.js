@@ -132,7 +132,7 @@ module.exports = [
         de: "Projektbeschreibung"
       },
       type: "text",
-      maxChars: "1000",
+      maxchars: "100",
       required: true,
       tooltip: {
         de: "beschreibe dein text mit maximal 1000 Zeichen."

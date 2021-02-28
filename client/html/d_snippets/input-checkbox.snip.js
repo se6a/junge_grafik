@@ -83,7 +83,7 @@ module.exports = (field) => {
     }
 
     .Checkbox.--checked .icon {
-      background-color: var(--green);
+      background-color: var(--greenLight);
     }
   `;
 

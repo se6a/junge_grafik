@@ -20,8 +20,9 @@ module.exports = (tooltip) => {
 
   const css = /*css*/`
     .Tooltip {
-      width: 100%;
       font-size: var(--fontSize-S);
+      margin-left: 10px;
+      cursor: pointer;
     }
 
     .Tooltip > .content {
@@ -38,13 +39,9 @@ module.exports = (tooltip) => {
       z-Index: 1000;
     }
 
-    .Tooltip > .icon {
-      margin-left: 10px;
-      cursor: pointer;
-    }
-
-    .Tooltip:hover .icon {
+    .Tooltip:hover .icon.circle {
       background-color: white;
+      border-width: var(--borderHover);
     }
 
     .Tooltip:focus {

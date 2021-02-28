@@ -36,20 +36,18 @@ module.exports = ({ name, label, required, zindex, options, tooltip, placeholder
           tabindex="0"
           data-placeholder="${placeholder}"
         >
+          <span class="input Select">
+            <span class="placeholder">${placeholder}</span>
+          </span>
 
           <input
             class="Select hiddenInput"
             type="text"
             value=""
             name="fields[${name}]"
-            readonly="readonly"
             tabindex="-1"
-            ${required ? "required=required" : ""}
+            ${required ? 'required="required"' : ""}
           />
-
-          <span class="input Select">
-            <span class="placeholder">${placeholder}</span>
-          </span>
 
           ${DropDownIcon()}
 
@@ -57,7 +55,6 @@ module.exports = ({ name, label, required, zindex, options, tooltip, placeholder
             class="Select options"
             role="listbox"
           >
-            ${SelectOptions(options)}
             ${
               required
                 ? ""
@@ -67,6 +64,7 @@ module.exports = ({ name, label, required, zindex, options, tooltip, placeholder
                   </li>   
                 `
             }
+            ${SelectOptions(options)}
           </ul>
 
         </div>
@@ -82,7 +80,8 @@ module.exports = ({ name, label, required, zindex, options, tooltip, placeholder
       width: 100%;
     }
 
-    .formField.Select * {
+    .Select.input,
+    .Select.options {
       cursor: pointer;
     }
 
@@ -109,6 +108,8 @@ module.exports = ({ name, label, required, zindex, options, tooltip, placeholder
       display: none;
       border: var(--borderFull) solid currentColor;
       border-top: 0;
+      max-height: 40vh;
+      overflow-y: auto;
     }
 
     .Select > .option {
@@ -121,7 +122,7 @@ module.exports = ({ name, label, required, zindex, options, tooltip, placeholder
       background-color: var(--gray);
     }
 
-    .Select.input {
+    input.Select {
       outline: none;
       pointer-events: none;
     }

@@ -47,17 +47,17 @@ module.exports = async (data) => {
       flex-direction: column;
     }
 
-    .viewSegment.splitpage > * {
+    .mainSection.splitpage > * {
       padding: var(--spacing-M);
       border: var(--borderHalf) solid currentColor;
     }
 
-    .viewSegment.fullpage {
+    .mainSection.fullpage {
       padding: var(--spacing-L) var(--spacing-M);
       border: var(--borderHalf) solid currentColor;
     }
 
-    .viewSegment.splitpage {
+    .mainSection.splitpage {
       background-color: white;
       display: grid;
       grid-auto-flow: column;

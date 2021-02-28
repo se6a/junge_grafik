@@ -13,7 +13,7 @@ module.exports = (data) => {
         Grafik-arbeit einreichen. Let’s go.`
       })}
 
-      <article class="viewSegment fullpage Language">
+      <article class="mainSection fullpage Language">
         <form id="ProjectRegistrationLang" onsubmit="selectLanguage(event)">
           <fieldset class="formFieldGroup">
             <div class="formField Language">
@@ -42,31 +42,10 @@ module.exports = (data) => {
         </form>
       </article>
 
-      <article class="viewSegment fullpage Form" data-lang="">
+      <article class="mainSection fullpage Form" data-lang="">
         ${ProjectForm()}
       </article>
     </main>
-
-    <script>
-        function selectLanguage(e) {
-          e.preventDefault();
-          const $langForm = e.target;
-          const $langInput = $langForm.querySelector('input[name="fields[language]"');
-          const lang = $langInput.value;
-
-          if (! lang) {
-            $langInput.classList.add("--warn");
-          }
-          
-          else {
-            $langInput.classList.remove("--warn");
-            const $ViewSubmit = document.querySelector(".VIEW.Submit");
-            $ViewSubmit.dataset.lang = "de";
-          }
-
-          console.log($langInput.value);
-        }
-    </script>
   `;
 
   const css = /*css*/`
@@ -79,15 +58,15 @@ module.exports = (data) => {
       border: var(--borderHalf) solid currentColor;
     }
 
-    .viewSegment.Language {
+    .mainSection.Language {
       display: none;
     }
 
-    .VIEW.Submit[data-lang=""] .viewSegment.Language {
+    .VIEW.Submit[data-lang=""] .mainSection.Language {
       display: flex;
     }
 
-    .VIEW.Submit[data-lang=""] .viewSegment.Form {
+    .VIEW.Submit[data-lang=""] .mainSection.Form {
       display: none;
     }
   `;

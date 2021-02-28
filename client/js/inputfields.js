@@ -63,9 +63,39 @@ function openTooltip($tipContent) {
     () => closeTooltip($tipContent),
     { once: true }
   );
+
+  document.querySelector("main").addEventListener(
+    "click",
+    () => closeTooltip($tipContent),
+    { once: true, capture: true }
+  );
 }
 
 function closeTooltip($tipContent) {
   $tipContent.style.visibility = "hidden";
   $tipContent.style.left = "";
+}
+
+function toggleMenu() {
+  document.querySelector(".MENU").classList.toggle("--show");
+}
+
+function selectLanguage(e) {
+  e.preventDefault();
+  const $langForm = e.target;
+  const $langInput = $langForm.querySelector('input[name="fields[language]"');
+  const lang = $langInput.value;
+
+  if (! lang) {
+    $langInput.classList.add("--warn");
+  }
+
+  else {
+    const $ViewSubmit = document.querySelector(".VIEW.Submit");
+
+    $ViewSubmit.dataset.lang = "de";
+    $langInput.classList.remove("--warn");
+  }
+
+  console.log($langInput.value);
 }

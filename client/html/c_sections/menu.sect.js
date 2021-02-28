@@ -9,15 +9,21 @@ module.exports = () => {
     </section>
   `;
 
-  const css = splitTemp/*css*/`
+  const css = /*css*/`
     .MENU {
-      background-color: var(--gray);
+      background-color: white;
       height: 100vh;
       width: 100%;
       position: fixed;
+      top: -1px;
       display: none;
       z-index: 900;
       padding-top: var(--headerHeight);
+    }
+
+    .MENU.box {
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .MENU.--show {
@@ -35,7 +41,7 @@ module.exports = () => {
     }
 
     .MENU a:hover {
-      background-color: white;
+      background-color: var(--gray);
     }
   `;
 

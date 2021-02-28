@@ -64,9 +64,9 @@
   Example for assembled Template:
 
     [                                         Template-Array
-      "page"                                  | Name
+      "view"                                  | Name
     , [                                       | Template
-        "<div class='page'>"                  |   String
+        "<div class='view'>"                  |   String
       , [                                     |   Nested Template-Array
           "section"                           |   | Name
         , [                                   |   | Template
@@ -82,18 +82,18 @@
         ]                                     |
       , "</div>"                              |   String
       ]                                       |
-    , ".page { color: red; }"                 | Css
+    , ".view { color: red; }"                 | Css
     ]
 
   Example for joined Template:
 
       <style>
-        .page { color: red; }
+        .view { color: red; }
         .section { color: blue; }
         p { color: green; }
       </style>
 
-      <div class="page">
+      <div class="view">
         <div class="section">
           <p>Hello there!</p>
         </div>
@@ -157,21 +157,21 @@ function _flatten_rc(raw, css = {}) {
   const _temp = raw[1];
   const _css  = raw[2] || "";
 
-  let joined = "";
+  let flatHtml = "";
   css[_name] = _css;
 
   if (Array.isArray(_temp))
     for (let i = 0; i < _temp.length; i++) {
       const _tempPart = _temp[i];
       if (Array.isArray(_tempPart))
-        joined += _flatten_rc(_tempPart, css)[0];
+        flatHtml += _flatten_rc(_tempPart, css)[0];
       else
-        joined += _tempPart;
+        flatHtml += _tempPart;
     }
   else
-    joined += _temp;
+    flatHtml = _temp;
 
-  return [joined, css];
+  return [flatHtml, css];
 }
 
 function _stringifyCss(cssList) {
@@ -238,11 +238,27 @@ global.$attr = (data) => {
   return attr.join(" ");
 };
 
+global.buildSections = (sections) => {
+  const built = [];
+
+  sections.forEach(
+    (_section) => {
+      const sectTemp = getSection(_section.type);
+      built.push("", sectTemp(_section));
+    }
+  );
+
+  const builtDone = ["buildSections.fn", [...built, ""]];
+
+  return builtDone;
+};
+
 global.getSite = (name) => _getTemplate(`a_sites/${name}.site.js`);
 global.getView = (name) => _getTemplate(`b_views/${name}.view.js`);
 global.getSection = (name) => _getTemplate(`c_sections/${name}.sect.js`);
 global.getSnippet = (name) => _getTemplate(`d_snippets/${name}.snip.js`);
 global.getJs = (name) => require(`${__basedir}/functions/${name}.js`);
+global.getData = (name) => require(`${__basedir}/client/data/${name}.data`);
 
 /*  Modules
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/

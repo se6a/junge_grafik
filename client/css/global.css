@@ -200,24 +200,28 @@ h2 {
   padding: var(--spacing-M);
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
 .box {
   border: var(--borderHalf) solid currentColor;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  padding: var(--spacing-M);
 }
 
-.boxTitle {
+.box.Title {
   padding: 0 var(--spacing-M);
-  border-bottom: var(--borderFull) solid currentColor;
   height: var(--boxHeaderHeight);
-  display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
-.boxContent {
-  padding: var(--spacing-M);
+.box.Content {
+  flex-grow: 1;
 }
 
 .button {
@@ -273,9 +277,8 @@ a.link:hover {
 }
 
 span.line {
-  background-color: currentColor;
   height: 0;
-  border: var(--borderHalf) solid currentColor;
+  border-bottom: var(--borderFull) solid currentColor;
   display: block;
 }
 
@@ -365,6 +368,10 @@ form {
 
 .input > .placeholder {
   color: silver;
+}
+
+form > .--warn {
+  background-color: var(--yellow);
 }
 
 /* .Tooltip > p.content {

@@ -19,6 +19,7 @@ const ProjectForm = function() {
   const instance = {
     $form: document.getElementById("SubmitProjectForm"),
     files: new ProjectFiles(),
+    description: new ProjectDescription(),
 
     async submit_direct(e) {
       e.preventDefault();
@@ -45,21 +46,26 @@ const ProjectForm = function() {
 
     async submit(e) {
       e.preventDefault();
-      const formdata = new FormData(this.$form);
+      if (this.files.hasMinimum) {
+        const formdata = new FormData(this.$form);
 
-      await this.appendFiles(formdata);
+        await this.appendFiles(formdata);
 
-      const req = new Request(
-                    "http://localhost:3000/api/newproject",
-                    {
-                      method: "POST",
-                      body: formdata,
-                      mode: "no-cors"
-                    }
-                  );
+        const req = new Request(
+                      "http://localhost:3000/api/newproject",
+                      {
+                        method: "POST",
+                        body: formdata,
+                        mode: "no-cors"
+                      }
+                    );
 
-      fetch(req)
-        .then((res) => console.log(res));
+        fetch(req)
+          .then((res) => console.log(res));
+      }
+      else {
+        this.files.addWarning();
+      }
     },
 
     appendFiles(formdata) {
@@ -81,25 +87,53 @@ const ProjectForm = function() {
 /* Project Files
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
 const ProjectFiles = function() {
+  const $formField = document.querySelector(".formField.Upload");
+  const $inputBox = $formField.querySelector(".inputBox");
+  const $input = $inputBox.querySelector("input[type='file']");
+  const $count = $formField.querySelector(".selected > .count");
+
   const instance = {
     selected: {},
-    $inputBox: document.querySelector(".formField.Upload .inputBox"),
-    $input: document.querySelector(".formField.Upload input[type='file']"),
+    $formField,
+    $inputBox,
+    $input,
+    $count,
+
+    max: $input.dataset.max,
+    min: 3, // $input.dataset.min,
+    count: 0,
+
+    hasMinimum: false,
 
     select() {
-      console.log("select file", this);
-      [...this.$input.files].forEach(
-        (_file) => {
+      const newFiles = [...this.$input.files];
+
+      for (let i = 0; i < newFiles.length; i++) {
+        this.saveFileCount();
+
+        if (this.count < this.max) {
+          const _file = newFiles[i];
           this.selected[_file.name] = _file;
           this.$inputBox.insertAdjacentElement(
             "AFTERBEGIN", this.insertHtmlItem(_file.name));
         }
-      );
+        else {
+          console.log("Zuviele Files");
+          this.addWarning();
+          break;
+        }
+      }
+
+      this.saveFileCount();
+      this.updateCount();
     },
 
     remove(e, filename) {
-      e.path[2].remove();
+      e.target.parentElement.parentElement.remove();
       delete this.selected[filename];
+      this.saveFileCount();
+      this.updateCount();
+      this.removeWarning();
     },
 
     insertHtmlItem(filename) {
@@ -122,10 +156,68 @@ const ProjectFiles = function() {
       );
 
       return $item;
+    },
+
+    saveFileCount() {
+      this.count = Object.keys(this.selected).length;
+    },
+
+    setState() {
+      if (this.count >= this.min)
+        this.hasMinimum = true;
+      else
+        this.hasMinimum = false;
+    },
+
+    updateCount() {
+      this.$count.innerHTML = this.count;
+    },
+
+    addWarning() {
+      this.$inputBox.classList.add("--warn");
+    },
+
+    removeWarning() {
+      this.$inputBox.classList.remove("--warn");
     }
   };
 
-  instance.$input.addEventListener("input", () => instance.select());
+  $input.addEventListener("input", () => instance.select());
+
+  return instance;
+};
+
+/* Project Description
+´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
+const ProjectDescription = function() {
+  const $formField = document.querySelector(".formField.Text");
+  const $inputBox = $formField.querySelector(".inputBox");
+  const $textarea = $inputBox.querySelector("textarea");
+  const $count = $formField.querySelector(".selected > .count");
+
+  const instance = {
+    $formField,
+    $inputBox,
+    $textarea,
+    $count,
+
+    max: $textarea.dataset.max,
+    count: 0,
+
+    updateCount() {
+      this.count = this.$textarea.value.length;
+
+      if (this.count > this.max) {
+        this.count = this.max;
+        this.$textarea.value = this.$textarea.value.slice(0, this.max);
+      }
+
+      this.$count.innerHTML = this.count;
+    }
+
+  };
+
+  $textarea.addEventListener("input", () => instance.updateCount());
 
   return instance;
 };

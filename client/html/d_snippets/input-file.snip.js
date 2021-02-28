@@ -1,7 +1,7 @@
 const IconPlus = getSnippet("icon-plus");
 const Tooltip = getSnippet("tooltip");
 
-module.exports = ({ label, required, tooltip }) => {
+module.exports = ({ label, required, tooltip, maxFiles = 1, minFiles = 1 }) => {
   required = required ? "--required" : "";
 
   const html = splitTemp/*html*/`
@@ -14,6 +14,10 @@ module.exports = ({ label, required, tooltip }) => {
           ${label?.de}
         </label>
         ${Tooltip(tooltip)}
+        <span class="selected">
+          <span class="count">0</span>
+          <span class="max">/${maxFiles}</span>
+        </span>
       </header>
 
       <div class="inputBox input Upload">
@@ -25,6 +29,8 @@ module.exports = ({ label, required, tooltip }) => {
             id="ProjectFileUpload"
             type="file"
             name="file"
+            data-max=${maxFiles}
+            data-min=${minFiles}
             multiple
             ${required ? "required" : ""}
           />
@@ -39,6 +45,11 @@ module.exports = ({ label, required, tooltip }) => {
       grid-column: 1/3;
     }
 
+    .formField.Upload .selected {
+      margin-left: auto;
+      display: flex;
+    }
+
     .inputBox.Upload {
       min-height: var(--spacing-L);
       height: unset;
@@ -49,6 +60,7 @@ module.exports = ({ label, required, tooltip }) => {
 
     .inputBox.Upload > * {
       margin: var(--spacing-S) var(--spacing-S) var(--spacing-S) 0;
+      display: flex;
     }
 
     .inputBox > .fileItem {
