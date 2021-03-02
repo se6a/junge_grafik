@@ -32,7 +32,7 @@
                     ]
 
     required        Bei Pflichtfeldern hinzufügen:
-                    required: true
+                    // required: true
                     Ansonsten weglassen oder:
                     required: false
 
@@ -59,7 +59,7 @@ module.exports = [
         it: "X"
       },
       type: "text-short",
-      required: true,
+      // required: true,
       tooltip: {
           de: `– Gib deinem Projekt einen Titel. Falls deine Arbeit ausgezeichnet wird, so wird der Projekttitel auf der Website als auch in der Publikation erscheinen.`,
           fr: "X",
@@ -76,11 +76,11 @@ module.exports = [
       },
       type: "select-1",
       options: [
-        { id: "1", de: "2021", fr: "2021", it: "2021" },
-        { id: "2", de: "2020", fr: "2020", it: "2020" },
-        { id: "3", de: "2019", fr: "2019", it: "2019" }
-      ],
-      required: true
+        { id: "2021", all: "2021" },
+        { id: "2020", all: "2020" },
+        { id: "2019", all: "2019" }
+      ]
+      // required: true
     }
   ],
 
@@ -109,7 +109,7 @@ module.exports = [
         { id: "14", all: "Typography" },
         { id: "15", all: "Web design" }
       ],
-      required: true,
+      // required: true,
       tooltip: {
         de: "– Wähle 1 bis 3 Tags, die zu deinem Projekt passen",
         fr: "X",
@@ -176,7 +176,7 @@ module.exports = [
       },
       type: "text",
       maxlength: "800",
-      required: true,
+      // required: true,
       tooltip: {
         de: "Nutze den Projektbeschrieb, um uns interessante Aspekte über die Aufgabenstellung, den Prozess und die Idee zu erzählen.",
         fr: "X",
@@ -200,8 +200,8 @@ module.exports = [
         { id: "1", de: "EFZ", fr: "X", it: "X" },
         { id: "2", de: "HF", fr: "X", it: "X" },
         { id: "3", de: "FH", fr: "X", it: "X" }
-      ],
-      required: true
+      ]
+      // required: true
     },
     {
       name: "ausbildungsjahr",
@@ -214,11 +214,11 @@ module.exports = [
         { id: "2", de: "2. Ausbildungsjahr", fr: "X", it: "X" },
         { id: "3", de: "3. Ausbildungsjahr", fr: "X", it: "X" },
         { id: "4", de: "4. Ausbildungsjahr", fr: "X", it: "X" }
-      ],
-      required: true
+      ]
+      // required: true
     },
     {
-      name: "ausbildungsinstitution-lehrbetrieb",
+      name: "name-ausbildungsinstitution-lehrbetrieb",
       type: "text-short",
       label: {
         de: "Name Ausbildungsinstitution / Lehrbetrieb",
@@ -229,11 +229,11 @@ module.exports = [
         de: "– In welcher Ausbildungsinstitution oder in welchem Lehrbetrieb ist dein Projekt entstanden?",
         fr: "X",
         it: "X"
-      },
-      required: true
+      }
+      // required: true
     },
     {
-      name: "kanton",
+      name: "kanton-des-ausbildungsortes",
       label: {
         de: "Kanton des Ausbildungsorts",
         fr: "X",
@@ -241,34 +241,34 @@ module.exports = [
       },
       type: "select-1",
       options: [
-        { id: "1", de: "Aargau", fr: "", it: "" },
-        { id: "2", de: "Appenzell Ausserrhoden", fr: "", it: "" },
-        { id: "3", de: "Appenzell Innerrhoden", fr: "", it: "" },
-        { id: "4", de: "Basel-Landschaft", fr: "", it: "" },
-        { id: "5", de: "Basel-Stadt", fr: "", it: "" },
-        { id: "6", de: "Bern", fr: "", it: "" },
-        { id: "7", de: "Freiburg", fr: "", it: "" },
-        { id: "8", de: "Genf", fr: "", it: "" },
-        { id: "9", de: "Glarus", fr: "", it: "" },
-        { id: "10", de: "Graubünden", fr: "", it: "" },
-        { id: "11", de: "Jura", fr: "", it: "" },
-        { id: "12", de: "Luzern", fr: "", it: "" },
-        { id: "13", de: "Neuenburg", fr: "", it: "" },
-        { id: "14", de: "Nidwalden", fr: "", it: "" },
-        { id: "15", de: "Obwalden", fr: "", it: "" },
-        { id: "16", de: "Schaffhausen", fr: "", it: "" },
-        { id: "17", de: "Schwyz", fr: "", it: "" },
-        { id: "18", de: "Solothurn", fr: "", it: "" },
-        { id: "19", de: "St. Gallen", fr: "", it: "" },
-        { id: "20", de: "Tessin", fr: "", it: "" },
-        { id: "21", de: "Thurgau", fr: "", it: "" },
-        { id: "22", de: "Uri", fr: "", it: "" },
-        { id: "23", de: "Waadt", fr: "", it: "" },
-        { id: "24", de: "Wallis", fr: "", it: "" },
-        { id: "25", de: "Zug", fr: "", it: "" },
-        { id: "26", de: "Zürich", fr: "", it: "" }
-      ],
-      required: true
+        { id: "414", de: "Aargau", fr: "", it: "" },
+        { id: "415", de: "Appenzell Ausserrhoden", fr: "", it: "" },
+        { id: "416", de: "Appenzell Innerrhoden", fr: "", it: "" },
+        { id: "417", de: "Basel-Landschaft", fr: "", it: "" },
+        { id: "418", de: "Basel-Stadt", fr: "", it: "" },
+        { id: "419", de: "Bern", fr: "", it: "" },
+        { id: "420", de: "Freiburg", fr: "", it: "" },
+        { id: "421", de: "Genf", fr: "", it: "" },
+        { id: "422", de: "Glarus", fr: "", it: "" },
+        { id: "423", de: "Graubünden", fr: "", it: "" },
+        { id: "424", de: "Jura", fr: "", it: "" },
+        { id: "425", de: "Luzern", fr: "", it: "" },
+        { id: "426", de: "Neuenburg", fr: "", it: "" },
+        { id: "427", de: "Nidwalden", fr: "", it: "" },
+        { id: "428", de: "Obwalden", fr: "", it: "" },
+        { id: "429", de: "Schaffhausen", fr: "", it: "" },
+        { id: "430", de: "Schwyz", fr: "", it: "" },
+        { id: "431", de: "Solothurn", fr: "", it: "" },
+        { id: "432", de: "St. Gallen", fr: "", it: "" },
+        { id: "433", de: "Tessin", fr: "", it: "" },
+        { id: "434", de: "Thurgau", fr: "", it: "" },
+        { id: "435", de: "Uri", fr: "", it: "" },
+        { id: "436", de: "Waadt", fr: "", it: "" },
+        { id: "437", de: "Wallis", fr: "", it: "" },
+        { id: "439", de: "Zürich", fr: "", it: "" },
+        { id: "438", de: "Zug", fr: "", it: "" }
+      ]
+      // required: true
      }
   ],
 
@@ -344,8 +344,8 @@ module.exports = [
           `,
           fr: "X",
           it: "X"
-      },
-      required: true
+      }
+      // required: true
     }
   ],
 

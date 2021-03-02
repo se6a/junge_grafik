@@ -32,7 +32,7 @@
                     ]
 
     required        Bei Pflichtfeldern hinzufügen:
-                    required: true
+                    // required: true
                     Ansonsten weglassen oder:
                     required: false
 
@@ -55,16 +55,16 @@ module.exports = [
         { id:"m", de: "Männlich" },
         { id:"w", de: "Weiblich" },
         { id:"x", de: "Keine Angabe" }
-      ],
-      required: true
+      ]
+      // required: true
     },
     {
       name: "geburtsjahr",
       label: { de: "Geburtsjahr", fr: "X", it: "X" },
       type: "number",
       min: 1000,
-      max: 9999,
-      required: true
+      max: 9999
+      // required: true
     }
   ],
 
@@ -72,14 +72,14 @@ module.exports = [
     {
       name: "vorname",
       label: { de: "Vorname", fr: "X", it: "X" },
-      type: "text-short",
-      required: true
+      type: "text-short"
+      // required: true
     },
     {
       name: "familienname",
       label: { de: "Familienname", fr: "X", it: "X" },
-      type: "text-short",
-      required: true
+      type: "text-short"
+      // required: true
     }
   ],
 
@@ -90,16 +90,14 @@ module.exports = [
       name: "strasse-nummer",
       label: { de: "Strasse / Nr.", fr: "X", it: "X" },
       type: "text-short",
-      maxchar: 6,
-      required: true
+      maxchar: 6
+      // required: true
     },
     {
       name: "postleitzahl-ort",
       label: { de: "PLZ / Ort", fr: "X", it: "X" },
-      type: "number",
-      min: 1000,
-      max: 9999,
-      required: true
+      type: "text-short"
+      // required: true
     }
   ],
 
@@ -109,14 +107,14 @@ module.exports = [
     {
       name: "e-mail",
       label: { de: "E-Mail", fr: "X", it: "X" },
-      type: "email",
-      required: true
+      type: "email"
+      // required: true
     },
     {
       name: "mobile",
       label: { de: "Mobile", fr: "X", it: "X" },
-      type: "text-short",
-      required: true
+      type: "text-short"
+      // required: true
     }
   ],
 

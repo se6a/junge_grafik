@@ -2,6 +2,24 @@ const Router     = Express.Router();
 const FormParser = require("multer")();
 const fetch      = require("node-fetch");
 const FormData   = require("form-data");
+const log4js     = require("log4js");
+
+log4js.configure({
+  appenders: {
+    submitErrors: {
+      type: "file",
+      filename: "./_logs/project-submit.log"
+    }
+  },
+  categories: {
+    default: {
+      appenders: ["submitErrors"],
+      level: "error"
+    }
+  }
+});
+
+const logger = log4js.getLogger("submitErrors");
 
 Router.post(
   "/newproject",
@@ -21,7 +39,7 @@ function prepareEntry(req, res, next) {
   res.locals.entry = {
     contestant: {
       firstname: originalForm.vorname,
-      lastname: originalForm.nachname
+      lastname: originalForm.familienname
     },
     year: new Date().getFullYear()
   };
@@ -56,24 +74,31 @@ function rebuildForm(req, res, next) {
 }
 
 async function sendForm(req, res, next) {
-  const url = "https://api.jungegrafik.ch/symphony/api/entries/einreichungen/?auth-token=02701d93";
+  await fetch(
+    "https://api.jungegrafik.ch/symphony/api/entries/einreichungen/?auth-token=02701d93&format=json",
+    {
+      method: "POST",
+      body: res.locals.newForm
+    }
+  )
 
-  const options = {
-    method: "POST",
-    body: res.locals.newForm
-  };
-
-  // Post Request to Symphony and receiving the ID of the new entry:
-  res.locals.entry.id = await fetch(url, options)
-    .then(async (symphResRaw) => {
-      const text = await symphResRaw.text();
-      // console.log("RAW", text);
-      const entryId = text.match(/id="(\d+)"/)[1];
-      return entryId;
+    .then(async (raw) => {
+      const formRes = await raw.json();
+      return formRes.response;
     })
-    .catch((error) => console.log(error));
 
-  next();
+    .then((formRes) => {
+      if (formRes._result === "success") {
+        res.locals.entry.id = formRes._id;
+      }
+      else {
+        throw Error(formRes.message.value);
+      }
+    })
+
+    .then(() => next())
+
+    .catch((error) => failed(res, req, "sendForm", error));
 }
 
 function buildFileForm(req, res, next) {
@@ -101,8 +126,23 @@ async function sendFiles(req, res, next) {
   };
 
   await fetch(url, options)
-    .then(async (resp2) => console.log("RESP 2", await resp2.text()))
-    .catch((error) => console.log(error));
+
+    .then((fileRes) => fullfilled(res))
+
+    .catch((error) => failed(res, req, "sendFiles", error));
+}
+
+function fullfilled(res) {
+  console.log("successfull submit");
+
+  res.body = "fullfilled";
+  res.sendStatus(200);
+}
+
+function failed(res, req, position, error) {
+  console.log(position, error);
+  logger.error(req.body, req.files, "\n\n\n\n");
+  res.status(500).send(position);
 }
 
 function renameFile(file, i, entry) {

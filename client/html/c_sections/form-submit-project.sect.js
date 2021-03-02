@@ -8,6 +8,7 @@ module.exports = (data) => {
     <form
       id="SubmitProjectForm"
       action="javascript:"
+      data-state="initial"
     >
       <section class="formSegment Designer">
         <header>
@@ -43,17 +44,42 @@ module.exports = (data) => {
           })}
         </fieldset>
 
+        <span class="message error">
+          Etwas ist schief gelaufen!
+        </span>
+
         <fieldset class="formFieldGroup">
           <div class="formField">
             ${RoundedButton({
               label: {
-                de: "Projekt abschicken \u2192",
+                de: `
+                  <span class="initial">
+                    Projekt abschicken \u2192
+                  </span>
+                  <span class="sending">
+                    Wird gesendet...
+                  </span>
+                  <span class="error">
+                    Nochmals versuchen?
+                  </span>
+                `,
                 fr: "fr",
                 it: "it"
               }
             })}
           </div>
         </fieldset>
+      </section>
+
+      <section class="formSegment Success">
+        <header>
+          <h1>
+            ${Underlined("Glückwunsch!")}
+          </h1>
+        </header>
+        <div class="formContent">
+          Du bist dabei.
+        </div>
       </section>
 
     </form>
@@ -74,6 +100,47 @@ module.exports = (data) => {
 
     .VIEW[data-lang="de"] .lang.de {
       display: inline;
+    }
+
+    .Submit .button .initial,
+    .Submit .button .sending,
+    .Submit .button .error {
+      display: none;
+    }
+
+    .message.error {
+      font-size: var(--fontSize-L);
+      display: none;
+      margin-bottom: var(--spacing-L);
+    }
+
+    .formSegment.Success {
+      display: none;
+      min-height: 40vh;
+    }
+
+    #SubmitProjectForm[data-state="initial"] .Submit .button .initial {
+      display: initial;
+    }
+
+    #SubmitProjectForm[data-state="sending"] .Submit .button .sending {
+      display: initial;
+    }
+
+    #SubmitProjectForm[data-state="error"] .Submit .button .error {
+      display: initial;
+    }
+
+    #SubmitProjectForm[data-state="error"] .message.error {
+      display: block;
+    }
+
+    #SubmitProjectForm[data-state="success"] .formSegment {
+      display: none;
+    }
+
+    #SubmitProjectForm[data-state="success"] .formSegment.Success {
+      display: inherit;
     }
 
     @media screen and (max-width: 1024px) {

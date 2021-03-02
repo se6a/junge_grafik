@@ -4,7 +4,6 @@ document.addEventListener(
     const path = this.location.pathname;
 
     if (path.startsWith("/submit")) {
-      console.log("ON SUBMIT PAGE");
       window.projectForm = new ProjectForm();
     }
   }
@@ -21,51 +20,61 @@ const ProjectForm = function() {
     files: new ProjectFiles(),
     description: new ProjectDescription(),
 
-    async submit_direct(e) {
-      e.preventDefault();
-      const formdata = new FormData();
-
-      formdata.append("action[reprografien]", "submit");
-      formdata.append("fields[einreichung]", "6805");
-      formdata.append("fields[datei]", projectFiles[Object.keys(projectFiles)[0]]);
-
-      const url = "https://api.jungegrafik.ch/symphony/api/entries/reprografien/?auth-token=02701d93";
-      const req = new Request(
-                    url,
-                    {
-                      method: "POST",
-                      body: formdata,
-                      mode: "no-cors"
-                    }
-                  );
-
-      fetch(req)
-        .then((res) => console.log(res))
-        .catch((error) => console.log(error));
-    },
-
     async submit(e) {
       e.preventDefault();
+
       if (this.files.hasMinimum) {
+        this.feedbackSending();
+
         const formdata = new FormData(this.$form);
 
         await this.appendFiles(formdata);
+        this.appendLanguage(formdata);
+        this.formatLinks(formdata);
 
-        const req = new Request(
-                      "http://localhost:3000/api/newproject",
-                      {
-                        method: "POST",
-                        body: formdata,
-                        mode: "no-cors"
-                      }
-                    );
+        fetch(
+          new Request(
+            `${HOST}/api/newproject`,
+            {
+              method: "POST",
+              body: formdata
+            }
+          )
+        )
 
-        fetch(req)
-          .then((res) => console.log(res));
+        .then((res) => {
+          if (res.status === 200)
+            this.feedbackSuccess();
+          else
+            this.feedbackError();
+        })
+
+        .catch(() => {
+          this.feedbackError();
+        });
       }
       else {
         this.files.addWarning();
       }
+    },
+
+    formatLinks(formdata) {
+      const pattern = /(^https?:\/\/)?(www\.)?([\w.]+)(\.\w+)(\/[\w\d/-_]*)?/;
+
+      [...formdata].forEach((_field) => {
+        const _name = _field[0];
+        const _value = _field[1];
+
+        if (_name.startsWith("fields[link") && _value) {
+          const _newLink = (pattern.exec(_value))
+                            .filter((item, i) => i > 0)
+                            .map((item, i) => i === 0 && !item ? "http://" : item)
+                            .filter((item) => item)
+                            .join("");
+
+          formdata.set(_name, _newLink);
+        }
+      });
     },
 
     appendFiles(formdata) {
@@ -73,6 +82,29 @@ const ProjectForm = function() {
       for (const _fileName in this.files.selected) {
         formdata.append("files", this.files.selected[_fileName]);
       }
+    },
+
+    appendLanguage(formdata) {
+      const lang = document.querySelector(".VIEW.Submit")
+                    .dataset.lang;
+
+      formdata.append("fields[language]", lang);
+    },
+
+    feedbackSending() {
+      this.$form.dataset.state = "sending";
+    },
+
+    feedbackError() {
+      this.$form.dataset.state = "error";
+    },
+
+    feedbackSuccess() {
+      this.$form.dataset.state = "success";
+    },
+
+    reset() {
+      this.$form.dataset.state = "initial";
     }
   };
 
@@ -130,7 +162,6 @@ const ProjectFiles = function() {
           }
         }
         else {
-          console.log("Zuviele Files");
           this.addWarning();
           break;
         }
@@ -138,22 +169,23 @@ const ProjectFiles = function() {
 
       this.saveFileCount();
       this.updateCount();
+      this.setState();
     },
 
     remove(e, filename, id) {
       document.getElementById(id).remove();
-      console.log("remove", filename, id);
 
       delete this.selected[filename];
       this.saveFileCount();
       this.updateCount();
       this.removeWarning();
+      this.setState();
     },
 
     insertHtmlItem(filename, i) {
       const id = makeId(i);
-      console.log(id);
       const $item = document.createElement("SPAN");
+
       $item.setAttribute("id", id);
       $item.setAttribute("class", "fileItem");
       $item.innerHTML = /*html*/`

@@ -27,6 +27,10 @@ module.exports = async (data) => {
         ${await View(data?.view)}
         ${Footer()}
         <span class="BottomLine line"></span>
+
+        <script>
+          const HOST = "${ENV.host}";
+        </script>
       </body>
 
     </html>

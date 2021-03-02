@@ -83,6 +83,10 @@ module.exports = (data) => {
       cursor: pointer;
     }
 
+    .Select .option > * {
+      pointer-events: none;
+    }
+
     .formField.Select .inputBox.outer {
       height: var(--spacing-L);
     }
