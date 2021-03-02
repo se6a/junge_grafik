@@ -8,7 +8,7 @@ module.exports = (button) => {
       ${e.onclick(button.onclick)}
       ${e.onsubmit(button.onsubmit)}
     >
-      ${button.label}
+      ${lang`<span>${button.label}</span>`}
     </button>
   `;
 

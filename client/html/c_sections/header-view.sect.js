@@ -1,12 +1,36 @@
 const Underlined = getSnippet("text-underlined");
 
-module.exports = ({ title, content }) => {
+function maybeTitle(title) {
+  let html = "";
+
+  if (title) {
+    html = splitTemp/*html*/`
+      <h1>
+        ${Underlined(title)}
+      </h1>
+    `;
+  }
+
+  return ["maybeTitle.fn", html];
+}
+
+function maybeImage(image) {
+  let html = "";
+
+  if (image) {
+    html = splitTemp/*html*/`
+      <img url="${image.url}">
+    `;
+  }
+
+  return ["maybeTitle.fn", html];
+}
+
+module.exports = ({ title, image, content }) => {
   const html = splitTemp/*html*/`
     <header class="HEADER-VIEW">
 
-      <h1 class="title">
-        ${Underlined(title)}
-      </h1>
+      ${maybeTitle(title)}
 
       <div class="content">
         ${content}

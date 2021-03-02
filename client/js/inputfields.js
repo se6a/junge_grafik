@@ -44,37 +44,55 @@ function blurField(e) {
 }
 
 function toggleTooltip($tip) {
-  const $content = $tip.querySelector(".content");
-  if ($content.style.visibility !== "visible")
-    openTooltip($content);
+  if ($tip.classList.contains("--open"))
+    closeTooltip($tip);
   else
-    closeTooltip($content);
+    openTooltip($tip);
 }
 
-function openTooltip($tipContent) {
-  const offsetLeft = $tipContent.getBoundingClientRect().left;
+function openTooltip($tip) {
+  const $content = $tip.querySelector(".content");
+  const offsetLeft = $content.getBoundingClientRect().left;
 
-  $tipContent.style.left = offsetLeft * -1 + "px";
-  $tipContent.style.visibility = "visible";
-  $tipContent.style.width = document.documentElement.clientWidth + "px";
+  $tip.classList.add("--open");
+
+  $content.style.left = offsetLeft * -1 + "px";
+  $content.style.width = document.documentElement.clientWidth + "px";
 
   window.addEventListener(
     "resize",
-    () => closeTooltip($tipContent),
+    () => closeTooltip($tip),
     { once: true }
   );
-
-  document.querySelector("main").addEventListener(
-    "click",
-    () => closeTooltip($tipContent),
-    { once: true, capture: true }
-  );
 }
 
-function closeTooltip($tipContent) {
-  $tipContent.style.visibility = "hidden";
-  $tipContent.style.left = "";
+function closeTooltip($tip) {
+  const $content = $tip.querySelector(".content");
+
+  $content.style.left = "";
+  $tip.classList.remove("--open");
+  $tip.blur();
 }
+
+// function setTooltipSize($tip) {
+//   const $content = $tip.querySelector(".content");
+//   const offsetLeft = $content.getBoundingClientRect().left;
+
+//   $content.style.left = offsetLeft * -1 + "px";
+//   $content.style.width = document.documentElement.clientWidth + "px";
+
+//   window.addEventListener(
+//     "resize",
+//     () => $tip.blur(),
+//     { once: true }
+//   );
+// }
+
+// function resetTooltip($tip) {
+//   const $content = $tip.querySelector(".content");
+
+//   $content.style.left = "";
+// }
 
 function toggleMenu() {
   document.querySelector(".MENU").classList.toggle("--show");

@@ -1,6 +1,6 @@
 const Tooltip = getSnippet("tooltip");
 
-module.exports = ({ name, label, required, tooltip, maxchars = 500 }) => {
+module.exports = ({ name, label, required, tooltip, maxlength = 500 }) => {
   required = required ? "--required" : "";
 
   const html = splitTemp/*html*/`
@@ -8,12 +8,12 @@ module.exports = ({ name, label, required, tooltip, maxchars = 500 }) => {
 
       <header class="header">
         <label class="label">
-          ${label?.de}
+          ${lang`<span>${label}</span>`}
         </label>
         ${Tooltip(tooltip)}
         <span class="selected">
           <span class="count">0</span>
-          <span class="max">/${maxchars}</span>
+          <span class="max">/${maxlength}</span>
         </span>
       </header>
 
@@ -21,7 +21,7 @@ module.exports = ({ name, label, required, tooltip, maxchars = 500 }) => {
         <textarea
           class="input Text"
           name="fields[${name}]"
-          data-max=${maxchars}
+          data-max=${maxlength}
           ${required ? "required" : ""}
         ></textarea>
       </div>

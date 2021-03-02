@@ -662,10 +662,7 @@ Object.defineProperty(
             theDeepCopy[i] = Object.deepCopy_(input[i]);
         }
         // Copy Object
-        else if (
-          input instanceof Object
-        && input instanceof Element === false
-        ) {
+        else if (input instanceof Object) {
           theDeepCopy = {};
 
           for (const _key in input)

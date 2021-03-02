@@ -34,7 +34,7 @@
   --fontSize-M: 1.9vmin;
   --lineHeight-M: 2.5vmin;
   --fontSize-L: 5vmin;
-  --lineHeight-L: 6vmin;
+  --lineHeight-L: 5.5vmin;
   --fontSize-XL: 9vmin;
   --lineHeight-XL: 8vmin;
 
@@ -252,20 +252,12 @@ h2 {
   border-radius: 50%;
 }
 
-.button:hover {
-  background-color: var(--gray);
-}
-
 .button.unstyled {
   background-color: transparent;
   border: none;
   padding: 0;
   width: auto;
   height: auto;
-}
-
-.button.unstyled:hover {
-  background-color: transparent;
 }
 
 a.link {
@@ -344,12 +336,6 @@ form {
 .formField.--required .label::after {
   content: "*";
   padding-left: var(--spacing-XS);
-}
-
-.input[type="email"] {
-  background-color: var(--white);
-  border: var(--borderFull) solid currentColor;
-  height: 2em;
 }
 
 .input.--warn {

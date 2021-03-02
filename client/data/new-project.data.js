@@ -40,9 +40,9 @@
                     für den Benutzer anzeigen zu lassen. Enthält ein Objekt:
                     tooltip: {de: "", fr: "", it: ""}
 
-    maxChars        Für Text-Inputs, maximale Zeichen.
-    maxFiles        Für File-Inputs, maximum der auswählbaren Files.
-    minFiles        Für File-Inputs, minimum der auswählbaren Files.
+    maxlength       Für Text-Inputs, maximale Zeichen.
+    maxfiles        Für File-Inputs, maximum der auswählbaren Files.
+    minfiles        Für File-Inputs, minimum der auswählbaren Files.
 */
 
 module.exports = [
@@ -54,27 +54,33 @@ module.exports = [
     {
       name: "projekttitel",
       label: {
-        de: "Projekttitel"
+        de: "Projekttitel",
+        fr: "X",
+        it: "X"
       },
       type: "text-short",
-      required: true
+      required: true,
+      tooltip: {
+          de: `– Gib deinem Projekt einen Titel. Falls deine Arbeit ausgezeichnet wird, so wird der Projekttitel auf der Website als auch in der Publikation erscheinen.`,
+          fr: "X",
+          it: "X"
+        }
     },
     // Enstehungsjahr
     {
       name: "entstehungsjahr",
       label: {
-        de: "Entstehungsjahr"
+        de: "Entstehungsjahr des Projekts",
+        fr: "X",
+        it: "X"
       },
       type: "select-1",
       options: [
-        { id: "1", de: "2021" },
-        { id: "2", de: "2020" },
-        { id: "2", de: "2019" }
+        { id: "1", de: "2021", fr: "2021", it: "2021" },
+        { id: "2", de: "2020", fr: "2020", it: "2020" },
+        { id: "3", de: "2019", fr: "2019", it: "2019" }
       ],
-      required: true,
-      tooltip: {
-        de: "some help here"
-      }
+      required: true
     }
   ],
 
@@ -84,41 +90,76 @@ module.exports = [
     // Tag #1
     {
       name: "tag-1",
-      label: {
-        de: "Tag #1"
-      },
+      label: { all: "Tag #1" },
       type: "select-1",
       options: [
-        { id: "1", de: "Buch" },
-        { id: "2", de: "Plakat" }
+        { id: "1", all: "Animation design" },
+        { id: "2", all: "Corporate design" },
+        { id: "3", all: "Editorial design" },
+        { id: "4", all: "Environmental design" },
+        { id: "5", all: "Exhibition design" },
+        { id: "6", all: "Photography" },
+        { id: "7", all: "Illustration" },
+        { id: "8", all: "Interaction design" },
+        { id: "9", all: "Infographic design" },
+        { id: "10", all: "Packaging design" },
+        { id: "11", all: "Poster design" },
+        { id: "12", all: "Signage design" },
+        { id: "13", all: "Typeface design" },
+        { id: "14", all: "Typography" },
+        { id: "15", all: "Web design" }
       ],
       required: true,
       tooltip: {
-        de: "Wähle eines aus."
+        de: "– Wähle 1 bis 3 Tags, die zu deinem Projekt passen",
+        fr: "X",
+        it: "X"
       }
     },
     // Tag #2
     {
       name: "tag-2",
-      label: {
-        de: "Tag #2"
-      },
-      type:   "select-1",
+      label: { all: "Tag #2" },
+      type: "select-1",
       options: [
-        { id: "1", de: "Buch", fr: "livre" },
-        { id: "2", de: "Plakat" }
+        { id: "1", all: "Animation design" },
+        { id: "2", all: "Corporate design" },
+        { id: "3", all: "Editorial design" },
+        { id: "4", all: "Environmtental design" },
+        { id: "5", all: "Exhibition design" },
+        { id: "6", all: "Photography" },
+        { id: "7", all: "Illustration" },
+        { id: "8", all: "Interaction design" },
+        { id: "9", all: "Infographic design" },
+        { id: "10", all: "Packaging design" },
+        { id: "11", all: "Poster design" },
+        { id: "12", all: "Signage design" },
+        { id: "13", all: "Typeface design" },
+        { id: "14", all: "Typography" },
+        { id: "15", all: "Web design" }
       ]
     },
     // Tag #3
     {
       name: "tag-3",
-      label: {
-        de: "Tag #3"
-      },
+      label: { all: "Tag #3" },
       type: "select-1",
       options: [
-        { id: "1", de: "Buch" },
-        { id: "2", de: "Plakat" }
+        { id: "1", all: "Animation design" },
+        { id: "2", all: "Corporate design" },
+        { id: "3", all: "Editorial design" },
+        { id: "4", all: "Environmtental design" },
+        { id: "5", all: "Exhibition design" },
+        { id: "6", all: "Photography" },
+        { id: "7", all: "Illustration" },
+        { id: "8", all: "Interaction design" },
+        { id: "9", all: "Infographic design" },
+        { id: "10", all: "Packaging design" },
+        { id: "11", all: "Poster design" },
+        { id: "12", all: "Signage design" },
+        { id: "13", all: "Typeface design" },
+        { id: "14", all: "Typography" },
+        { id: "15", all: "Web design" }
       ]
     }
   ],
@@ -127,15 +168,19 @@ module.exports = [
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
   [
     {
-      name: "projektbeschreibung",
+      name: "projektbeschrieb",
       label: {
-        de: "Projektbeschreibung"
+        de: "Projektbeschrieb",
+        fr: "X",
+        it: "X"
       },
       type: "text",
-      maxchars: "100",
+      maxlength: "800",
       required: true,
       tooltip: {
-        de: "beschreibe dein text mit maximal 1000 Zeichen."
+        de: "Nutze den Projektbeschrieb, um uns interessante Aspekte über die Aufgabenstellung, den Prozess und die Idee zu erzählen.",
+        fr: "X",
+        it: "X"
       }
     }
   ],
@@ -145,27 +190,109 @@ module.exports = [
   [
     {
       name: "ausbildungsniveau",
-      type: "text-short",
       label: {
-        de: "Ausbildungsniveau"
+        de: "Ausbildungsniveau",
+        fr: "X",
+        it: "X"
       },
+      type: "select-1",
+      options: [
+        { id: "1", de: "EFZ", fr: "X", it: "X" },
+        { id: "2", de: "HF", fr: "X", it: "X" },
+        { id: "3", de: "FH", fr: "X", it: "X" }
+      ],
       required: true
     },
     {
       name: "ausbildungsjahr",
+      label: {
+        de: "Ausbildungsjahr", fr: "X", it: "X"
+      },
+      type: "select-1",
+      options: [
+        { id: "1", de: "1. Ausbildungsjahr", fr: "X", it: "X" },
+        { id: "2", de: "2. Ausbildungsjahr", fr: "X", it: "X" },
+        { id: "3", de: "3. Ausbildungsjahr", fr: "X", it: "X" },
+        { id: "4", de: "4. Ausbildungsjahr", fr: "X", it: "X" }
+      ],
+      required: true
+    },
+    {
+      name: "ausbildungsinstitution-lehrbetrieb",
       type: "text-short",
       label: {
-        de: "Ausbildungsjahr"
+        de: "Name Ausbildungsinstitution / Lehrbetrieb",
+        fr: "X",
+        it: "X"
+      },
+      tooltip: {
+        de: "– In welcher Ausbildungsinstitution oder in welchem Lehrbetrieb ist dein Projekt entstanden?",
+        fr: "X",
+        it: "X"
       },
       required: true
     },
     {
-      name: "ausbildungsinstitution-buero",
+      name: "kanton",
+      label: {
+        de: "Kanton des Ausbildungsorts",
+        fr: "X",
+        it: "X"
+      },
+      type: "select-1",
+      options: [
+        { id: "1", de: "Aargau", fr: "", it: "" },
+        { id: "2", de: "Appenzell Ausserrhoden", fr: "", it: "" },
+        { id: "3", de: "Appenzell Innerrhoden", fr: "", it: "" },
+        { id: "4", de: "Basel-Landschaft", fr: "", it: "" },
+        { id: "5", de: "Basel-Stadt", fr: "", it: "" },
+        { id: "6", de: "Bern", fr: "", it: "" },
+        { id: "7", de: "Freiburg", fr: "", it: "" },
+        { id: "8", de: "Genf", fr: "", it: "" },
+        { id: "9", de: "Glarus", fr: "", it: "" },
+        { id: "10", de: "Graubünden", fr: "", it: "" },
+        { id: "11", de: "Jura", fr: "", it: "" },
+        { id: "12", de: "Luzern", fr: "", it: "" },
+        { id: "13", de: "Neuenburg", fr: "", it: "" },
+        { id: "14", de: "Nidwalden", fr: "", it: "" },
+        { id: "15", de: "Obwalden", fr: "", it: "" },
+        { id: "16", de: "Schaffhausen", fr: "", it: "" },
+        { id: "17", de: "Schwyz", fr: "", it: "" },
+        { id: "18", de: "Solothurn", fr: "", it: "" },
+        { id: "19", de: "St. Gallen", fr: "", it: "" },
+        { id: "20", de: "Tessin", fr: "", it: "" },
+        { id: "21", de: "Thurgau", fr: "", it: "" },
+        { id: "22", de: "Uri", fr: "", it: "" },
+        { id: "23", de: "Waadt", fr: "", it: "" },
+        { id: "24", de: "Wallis", fr: "", it: "" },
+        { id: "25", de: "Zug", fr: "", it: "" },
+        { id: "26", de: "Zürich", fr: "", it: "" }
+      ],
+      required: true
+     }
+  ],
+
+/*  Dozenten
+´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
+  [
+    {
+      name: "dozenten",
       type: "text-short",
       label: {
-        de: "Name Ausbildungsinstitution/Büro"
+        de: "Dozenten*innen / Ausbildner*innen",
+        fr: "X",
+        it: "X"
       },
-      required: true
+      tooltip: {
+        de: `
+          Wer hat dich bei deinem Projekt begleitet? Es sind mehrere Nennungen möglich.
+          <ul>
+            <li>– Gib die Namen wie folgt an: Vorname Familienname, Vorname Familienname</li>
+          </ul>
+        `,
+        fr: "X",
+        it: "X"
+      }
     }
   ],
 
@@ -176,47 +303,68 @@ module.exports = [
       name: "weitere-gestalter",
       type: "text-short",
       label: {
-        de: "Weitere Gestalter"
+        de: "Weitere Gestalter*Innen bei Gruppenarbeiten",
+        fr: "",
+        it: ""
+      },
+      tooltip: {
+        de: "Reichst du eine Gruppenarbeit ein? Nenne hier alle Namen deines Teams. Gib die Namen wie folgt an: Vorname Familienname, Vorname Familienname",
+        fr: "X",
+        it: "X"
       }
     }
   ],
 
-/*  Dozenten
-´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
-  [
-    {
-      name: "dozenten",
-      type: "text-short",
-      label: {
-        de: "Dozenten"
-      }
-    }
-  ],
-
-/*  Projektwebseite
-´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
-  [
-    {
-      name: "link-projektwebsite",
-      type: "text-short",
-      label: {
-        de: "Link Projektwebseite"
-      }
-    }
-  ],
-
-/*  Reprografien
+/*  File Upload
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
   [
     {
       name: "reprografien",
       type: "file",
       label: {
-        de: "Upload Reprografien"
+        de: "Upload Reprografien / Mockups",
+        fr: "",
+        it: ""
       },
-      minFiles: 3,
-      maxFiles: 6,
+      minfiles: 3,
+      maxfiles: 6,
+      accept: "image/jpeg",
+      tooltip: {
+          de: `
+            <ul>
+              <li>– 3 bis 6 Reprografien oder Mockups</li>
+              <li>– JPG Format</li>
+              <li>– RGB Farbraum</li>
+              <li>– Lange Seite: 3500px</li>
+              <li>– Diese Bilddateien werden für die Publikation verwendet. Übermittle uns das JPG darum möglichst unkomprimiert.</li>
+              <li>– Darf ich einen Farbigen Hintergrund verwenden? Ja.</li>
+              <li>– Darf ich mein Projekt inszenieren? Ja.</li>
+              <li>– Darf ich anstelle von klassischen Reprografien auch digitale Mockups einsenden? Ja.</li>
+            </ul>
+          `,
+          fr: "X",
+          it: "X"
+      },
       required: true
+    }
+  ],
+
+  /*  Projektwebseite
+  ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
+  [
+    {
+      name: "link-projektwebsite-prototyp",
+      type: "url",
+      label: {
+        de: "Link Prototyp oder Projekt-Website",
+        fr: "",
+        it: ""
+      },
+      tooltip: {
+        de: "Gibt es einen Link zu einer Projekt-Website oder zu einem Prototypen deines Projekts? Dann gib uns hier die URL an (optional).",
+        fr: "X",
+        it: "X"
+      }
     }
   ]
 ];

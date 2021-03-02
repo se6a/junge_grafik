@@ -5,27 +5,25 @@ function SelectOptions(options = []) {
   return options.reduce(
     (list, _option) => list + /*html*/`
       <li class="option" role="option" data-id="${_option.id}">
-        ${_option.de}
+        ${lang`<span>${_option}</span>`}
       </li>
       `,
       ""
     );
 }
 
-module.exports = ({ name, label, required, zindex, options, tooltip, placeholder }) => {
-  zindex = zindex ? `style="z-index: ${zindex}"` : "";
-  required = required ? "--required" : "";
-  placeholder = placeholder?.de
-                  ? placeholder.de
-                  : "select one";
+module.exports = (data) => {
+  const zindex      = data.zindex ? `style="z-index: ${data.zindex}"` : "";
+  const required    = data.required ? "--required" : "";
+  const placeholder = data.placeholder?.de || "select one";
 
   const html = splitTemp/*html*/`
     <div class="formField Select ${required}" ${zindex}>
       <div class="header">
         <label class="label">
-          ${label?.de}
+          ${lang`<span>${data.label}</span>`}
         </label>
-        ${Tooltip(tooltip)}
+        ${Tooltip(data.tooltip)}
       </div>
 
       <div class="inputBox outer">
@@ -44,7 +42,7 @@ module.exports = ({ name, label, required, zindex, options, tooltip, placeholder
             class="Select hiddenInput"
             type="text"
             value=""
-            name="fields[${name}]"
+            name="fields[${data.name}]"
             tabindex="-1"
             ${required ? 'required="required"' : ""}
           />
@@ -60,11 +58,11 @@ module.exports = ({ name, label, required, zindex, options, tooltip, placeholder
                 ? ""
                 : /* html */`
                   <li class="option" role="option" data-id="">
-                    Keines
-                  </li>   
+                    none
+                  </li>
                 `
             }
-            ${SelectOptions(options)}
+            ${SelectOptions(data.options)}
           </ul>
 
         </div>

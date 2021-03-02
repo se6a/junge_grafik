@@ -99,23 +99,35 @@ const ProjectFiles = function() {
     $input,
     $count,
 
+    accept: ($input.getAttribute("accept") || "")
+            .split(",")
+            .map((_acc) => _acc.trim())
+            .filter((_acc) => _acc !== ""),
+
     max: $input.dataset.max,
-    min: 3, // $input.dataset.min,
+    min: $input.dataset.min,
     count: 0,
 
     hasMinimum: false,
 
     select() {
       const newFiles = [...this.$input.files];
-
       for (let i = 0; i < newFiles.length; i++) {
         this.saveFileCount();
 
         if (this.count < this.max) {
           const _file = newFiles[i];
-          this.selected[_file.name] = _file;
-          this.$inputBox.insertAdjacentElement(
-            "AFTERBEGIN", this.insertHtmlItem(_file.name));
+          const [_type, _subtype] = _file.type.split("/");
+
+          if (this.accept.length === 0
+          || this.accept.includes(`${_type}/*`)
+          || this.accept.includes(`${_type}/${_subtype}`)
+          || this.accept.includes(`.${_subtype}`)
+          ) {
+            this.selected[_file.name] = _file;
+            this.$inputBox.insertAdjacentElement(
+              "AFTERBEGIN", this.insertHtmlItem(_file.name, i));
+          }
         }
         else {
           console.log("Zuviele Files");
@@ -128,16 +140,21 @@ const ProjectFiles = function() {
       this.updateCount();
     },
 
-    remove(e, filename) {
-      e.target.parentElement.parentElement.remove();
+    remove(e, filename, id) {
+      document.getElementById(id).remove();
+      console.log("remove", filename, id);
+
       delete this.selected[filename];
       this.saveFileCount();
       this.updateCount();
       this.removeWarning();
     },
 
-    insertHtmlItem(filename) {
+    insertHtmlItem(filename, i) {
+      const id = makeId(i);
+      console.log(id);
       const $item = document.createElement("SPAN");
+      $item.setAttribute("id", id);
       $item.setAttribute("class", "fileItem");
       $item.innerHTML = /*html*/`
           <span class="Filename">
@@ -151,7 +168,7 @@ const ProjectFiles = function() {
 
       $item.addEventListener(
         "click",
-        (e) => this.remove(e, filename),
+        (e) => this.remove(e, filename, id),
         { once: true }
       );
 

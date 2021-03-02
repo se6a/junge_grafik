@@ -14,17 +14,18 @@ module.exports = () => {
       <div class="formField Checkbox">
         ${Checkbox({
           name: "terms",
-          label: /*html*/`
-            <label for="footer-newsletter-agree">
-              I accept <a class="link">all the stuff</a>.
-            </label>`,
+          label: {
+            all: 'I accept <a class="link">all the stuff</a>.'
+          },
           required: true
         })}
       </div>
 
       <fieldset class="group">
         ${EmailInput({
+          id: "footer-newsletter-email",
           label: { de: "Email" },
+          placeholder: "your e-mail",
           required: true
         })}
 

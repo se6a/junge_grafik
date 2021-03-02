@@ -1,6 +1,4 @@
 const HeaderView = getSection("header-view");
-const Overview = getSection("overview");
-const Underlined = getSnippet("text-underlined");
 const data = getData("page-home");
 
 module.exports = () => {
@@ -15,8 +13,8 @@ module.exports = () => {
 
   const css = /*css*/`
     :root {
-      --colorTheme: var(--redLight);
-      --colorHilight: var(--red);
+      --colorTheme: var(--blueLight);
+      --colorHilight: var(--blue);
     }
   `;
 

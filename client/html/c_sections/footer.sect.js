@@ -1,4 +1,4 @@
-const Card           = getSnippet("card");
+const Card           = getSection("card");
 const NewsletterForm = getSection("form-newsletter");
 
 module.exports = () => {

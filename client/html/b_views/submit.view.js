@@ -1,8 +1,6 @@
-const HeaderView    = getSection("header-view");
-const Underlined    = getSnippet("text-underlined");
-const ProjectForm   = getSection("form-submit-project");
-const Select        = getSnippet("input-select");
-const RoundedButton = getSnippet("button-rounded");
+const HeaderView   = getSection("header-view");
+const LanguageForm = getSection("form-language");
+const ProjectForm  = getSection("form-submit-project");
 
 module.exports = (data) => {
   const html = splitTemp/*html*/`
@@ -14,32 +12,7 @@ module.exports = (data) => {
       })}
 
       <article class="mainSection fullpage Language">
-        <form id="ProjectRegistrationLang" onsubmit="selectLanguage(event)">
-          <fieldset class="formFieldGroup">
-            <div class="formField Language">
-              ${Select({
-                options: [
-                  { id: "de", de: "deutsch" },
-                  { id: "fr", de: "französisch" },
-                  { id: "it", de: "italienisch" }
-                ],
-                required: true,
-                label: {
-                  de: "Language"
-                },
-                name: "language"
-              })}
-            </div>
-          </fieldset>
-          <fieldset class="formFieldGroup">
-            <div class="formField ConfirmLang">
-              ${RoundedButton({
-                label: "Next \u2192",
-                type: "submit"
-              })}
-            </div>
-          </fieldset>
-        </form>
+        ${LanguageForm()}
       </article>
 
       <article class="mainSection fullpage Form" data-lang="">

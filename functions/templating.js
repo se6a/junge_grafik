@@ -238,6 +238,25 @@ global.$attr = (data) => {
   return attr.join(" ");
 };
 
+global.lang = (tag, texts) => {
+  let html = "";
+
+  if (texts.all) {
+    html = tag[0] + texts.all + tag[1];
+  }
+  else {
+    const languages = Object.keys(texts);
+    const tag_0 = tag[0].split(">")[0];
+    // if tag[0] = <li>, then tag_0 = <li
+
+    languages.forEach((_lang) => {
+      html += `${tag_0} class="lang ${_lang}">${texts[_lang]}${tag[1]}`;
+    });
+  }
+
+  return html;
+};
+
 global.buildSections = (sections) => {
   const built = [];
 
@@ -258,7 +277,10 @@ global.getView = (name) => _getTemplate(`b_views/${name}.view.js`);
 global.getSection = (name) => _getTemplate(`c_sections/${name}.sect.js`);
 global.getSnippet = (name) => _getTemplate(`d_snippets/${name}.snip.js`);
 global.getJs = (name) => require(`${__basedir}/functions/${name}.js`);
-global.getData = (name) => require(`${__basedir}/client/data/${name}.data`);
+global.getData = (name) => Object.deepCopy_(
+                            require(`${__basedir}/client/data/${name}.data`));
+
+global.makeId = () => new Date().getTime().toString(16);
 
 /*  Modules
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/

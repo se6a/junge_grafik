@@ -1,30 +1,11 @@
-const Tooltip = getSnippet("tooltip");
+const TextShort = getSnippet("input-text-short");
 
-module.exports = ({ label, required, tooltip }) => {
-  required = required ? "--required" : "";
-
-  const html = splitTemp/*html*/`
-    <div class="formField Email ${required}">
-      <header class="header">
-        <label class="label">
-          ${label?.de}
-        </label>
-        ${Tooltip(tooltip)}
-      </header>
-
-      <input
-        id="footer-newsletter-email"
-        class="input Email"
-        name="email"
-        type="email"
-        placeholder="Your email"
-        ${required ? "required" : ""}
-      />
-    </div>
+module.exports = (data) => {
+  data.subType = "email";
+  data.typeAttr = `type="email"`;
+  data.attr = `
+    placeholder="${data.placeholder || ""}"
   `;
 
-  const css = /*css*/`
-  `;
-
-  return ["input-email.snip", html, css];
+  return TextShort(data);
 };

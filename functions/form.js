@@ -3,6 +3,9 @@ const InputTextShort = getSnippet("input-text-short");
 const InputCheckbox  = getSnippet("input-checkbox");
 const InputSelection = getSnippet("input-select");
 const InputFile      = getSnippet("input-file");
+const InputEmail     = getSnippet("input-email");
+const InputNumber    = getSnippet("input-number");
+const InputUrl       = getSnippet("input-url");
 
 module.exports = {
   create(name) {
@@ -35,11 +38,22 @@ module.exports = {
 
     switch (field.type) {
       case "text-short":
-      case "text-year":
         $field = InputTextShort(field);
+        break;
+      case "email":
+        $field = InputEmail(field);
+        break;
+      case "url":
+        $field = InputUrl(field);
+        break;
+      case "number":
+        $field = InputNumber(field);
         break;
       case "text":
         $field = InputText(field);
+        break;
+      case "checkbox":
+        $field = InputCheckbox(field);
         break;
       case "select-1":
         $field = InputSelection(field);
@@ -47,6 +61,8 @@ module.exports = {
       case "file":
         $field = InputFile(field);
         break;
+      default:
+        $field = "field-type not found";
     };
 
     return ["formfield", ["", $field, ""]];

@@ -43,6 +43,11 @@ module.exports = () => {
     .MENU a:hover {
       background-color: var(--gray);
     }
+
+    .HEADER a:focus,
+    .HEADER button:focus {
+      z-index: 10;
+    }
   `;
 
   return ["menu.sect", html, css];

@@ -32,7 +32,7 @@ module.exports = () => {
       background-color: var(--redLight);
     }
 
-    .NAVIGATION > .button.Submit:hover {
+    .NAVIGATION > .button:hover {
       background-color: var(--gray);
     }
 

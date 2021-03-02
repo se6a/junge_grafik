@@ -31,7 +31,7 @@ module.exports = (field) => {
 
       <label class="label">
         <span>
-          ${field?.label}
+          ${lang`<span>${field.label}</span>`}
         </span>
       </label>
 

@@ -1,10 +1,13 @@
 const HeaderView = getSection("header-view");
-const Underlined = getSnippet("text-underlined");
+const data = getData("page-award");
 
-module.exports = ({ data }) => {
+module.exports = () => {
   const html = splitTemp/*html*/`
     <main class="VIEW Award">
-      <h1>${Underlined("super")}</h1>
+
+      ${HeaderView(data.header)}
+      ${buildSections(data.sections)}
+
     </main>
   `;
 
@@ -12,12 +15,6 @@ module.exports = ({ data }) => {
     :root {
       --colorTheme: var(--yellowLight);
       --colorHilight: var(--yelow);
-    }
-
-    .VIEW.Award {
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
   `;
 

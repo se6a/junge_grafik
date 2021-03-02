@@ -34,7 +34,11 @@ module.exports = (data) => {
       <section class="formSegment Submit">
         <fieldset class="formFieldGroup ProjectWebsite">
           ${InputCheckbox({
-            label: "Ich habe alle Felder überprüft.",
+            label: {
+              de: "Ich habe alle Felder überprüft.",
+              fr: "fr",
+              it: "it"
+            },
             required: true
           })}
         </fieldset>
@@ -42,7 +46,11 @@ module.exports = (data) => {
         <fieldset class="formFieldGroup">
           <div class="formField">
             ${RoundedButton({
-              label: "Projekt abschicken \u2192"
+              label: {
+                de: "Projekt abschicken \u2192",
+                fr: "fr",
+                it: "it"
+              }
             })}
           </div>
         </fieldset>
@@ -52,8 +60,24 @@ module.exports = (data) => {
   `;
 
   const css = /*css*/`
+    .lang {
+      display: none;
+    }
+
+    .VIEW[data-lang="it"] .lang.it {
+      display: inline;
+    }
+
+    .VIEW[data-lang="fr"] .lang.fr {
+      display: inline;
+    }
+
+    .VIEW[data-lang="de"] .lang.de {
+      display: inline;
+    }
 
     @media screen and (max-width: 1024px) {
+
       .formFieldGroup {
         grid-auto-flow: row;
         grid-template-columns: 1fr 1fr;

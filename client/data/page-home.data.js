@@ -8,6 +8,7 @@ module.exports = {
       content: [
         {
           type: "text",
+          size: "l",
           content: "Junge Grafik showcases, connects and promotes young and talented graphic designers from across Switzerland. An award, a travelling exhibition and this website provide a unique platform to celebrate their outstanding work and share it with the widest possible audience."
         }
       ]

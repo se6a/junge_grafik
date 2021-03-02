@@ -1,23 +1,51 @@
 const Tooltip = getSnippet("tooltip");
 
-module.exports = ({ name, label, required, tooltip }) => {
+module.exports = (data) => {
+  let {
+    name,
+    id = "",
+    label,
+    required,
+    tooltip,
+    type,
+    subType,
+    attr = "",
+    maxlength = "50"
+  } = data;
+
+  type = type
+       ? `type="${type}"`
+       : `type="text"`;
+
+  subType = subType
+          ? subType[0].toUpperCase() + subType.slice(1)
+          : "";
+
+  maxlength = maxlength
+            ? `maxlength="${maxlength}"`
+            : "";
+
+  id = id ? `id="${id}"` : "";
+
   required = required ? "--required" : "";
 
   const html = splitTemp/*html*/`
-    <div class="formField TextShort ${required}">
+    <div class="formField TextShort ${subType} ${required}">
 
       <header class="header">
         <label class="label">
-          ${label?.de}
+          ${lang`<span>${label}</span>`}
         </label>
         ${Tooltip(tooltip)}
       </header>
 
       <div class="inputBox">
         <input
-          class="input Text"
-          type="text"
+          ${id}
+          class="input TextShort ${subType}"
           name="fields[${name}]"
+          ${type}
+          ${attr}
           ${required ? "required" : ""}
         />
       </div>

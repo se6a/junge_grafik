@@ -1,8 +1,11 @@
 const IconPlus = getSnippet("icon-plus");
 const Tooltip = getSnippet("tooltip");
 
-module.exports = ({ label, required, tooltip, maxFiles = 1, minFiles = 1 }) => {
+module.exports = ({ label, required, tooltip, maxfiles = 1, minfiles = 1, accept }) => {
   required = required ? "--required" : "";
+  accept = accept
+         ? `accept="${accept}"`
+         : "";
 
   const html = splitTemp/*html*/`
     <div
@@ -11,12 +14,12 @@ module.exports = ({ label, required, tooltip, maxFiles = 1, minFiles = 1 }) => {
 
       <header class="header">
         <label class="label">
-          ${label?.de}
+          ${lang`<span>${label}</span>`}
         </label>
         ${Tooltip(tooltip)}
         <span class="selected">
           <span class="count">0</span>
-          <span class="max">/${maxFiles}</span>
+          <span class="max">/${maxfiles}</span>
         </span>
       </header>
 
@@ -29,9 +32,10 @@ module.exports = ({ label, required, tooltip, maxFiles = 1, minFiles = 1 }) => {
             id="ProjectFileUpload"
             type="file"
             name="file"
-            data-max=${maxFiles}
-            data-min=${minFiles}
+            data-max=${maxfiles}
+            data-min=${minfiles}
             multiple
+            ${accept}
             ${required ? "required" : ""}
           />
         </label>

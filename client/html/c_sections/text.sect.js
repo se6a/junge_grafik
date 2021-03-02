@@ -16,9 +16,11 @@ function maybeTitle(title) {
   return ["maybeTitle.fn", html];
 }
 
-module.exports = ({ title, content }) => {
+module.exports = ({ title, content, size }) => {
+  size = size || "normal";
+
   const html = splitTemp/*html*/`
-    <section class="Text box">
+    <section class="Text box ${size}">
       ${maybeTitle(title)}
 
       <p>
@@ -28,7 +30,21 @@ module.exports = ({ title, content }) => {
     </section>
   `;
 
-  const css = /*css*/``;
+  const css = /*css*/`
+    .Text.box p {
+      width: calc(100% / 8 * 7);
+    }
+
+    .Text.box.l {
+      font-size: var(--fontSize-L);
+      line-height: var(--lineHeight-L);
+    }
+
+    .Text.box.xl {
+      font-size: var(--fontSize-XL);
+      line-height: var(--lineHeight-XL);
+    }
+  `;
 
   return ["text.sect", html, css];
 };
