@@ -32,7 +32,7 @@
                     ]
 
     required        Bei Pflichtfeldern hinzufügen:
-                    // required: true
+                    required: true
                     Ansonsten weglassen oder:
                     required: false
 
@@ -59,7 +59,7 @@ module.exports = [
         it: "X"
       },
       type: "text-short",
-      // required: true,
+      required: true,
       tooltip: {
           de: `– Gib deinem Projekt einen Titel. Falls deine Arbeit ausgezeichnet wird, so wird der Projekttitel auf der Website als auch in der Publikation erscheinen.`,
           fr: "X",
@@ -79,8 +79,8 @@ module.exports = [
         { id: "2021", all: "2021" },
         { id: "2020", all: "2020" },
         { id: "2019", all: "2019" }
-      ]
-      // required: true
+      ],
+      required: true
     }
   ],
 
@@ -109,7 +109,7 @@ module.exports = [
         { id: "14", all: "Typography" },
         { id: "15", all: "Web design" }
       ],
-      // required: true,
+      required: true,
       tooltip: {
         de: "– Wähle 1 bis 3 Tags, die zu deinem Projekt passen",
         fr: "X",
@@ -176,7 +176,7 @@ module.exports = [
       },
       type: "text",
       maxlength: "800",
-      // required: true,
+      required: true,
       tooltip: {
         de: "Nutze den Projektbeschrieb, um uns interessante Aspekte über die Aufgabenstellung, den Prozess und die Idee zu erzählen.",
         fr: "X",
@@ -200,8 +200,8 @@ module.exports = [
         { id: "1", de: "EFZ", fr: "X", it: "X" },
         { id: "2", de: "HF", fr: "X", it: "X" },
         { id: "3", de: "FH", fr: "X", it: "X" }
-      ]
-      // required: true
+      ],
+      required: true
     },
     {
       name: "ausbildungsjahr",
@@ -214,8 +214,8 @@ module.exports = [
         { id: "2", de: "2. Ausbildungsjahr", fr: "X", it: "X" },
         { id: "3", de: "3. Ausbildungsjahr", fr: "X", it: "X" },
         { id: "4", de: "4. Ausbildungsjahr", fr: "X", it: "X" }
-      ]
-      // required: true
+      ],
+      required: true
     },
     {
       name: "name-ausbildungsinstitution-lehrbetrieb",
@@ -229,8 +229,8 @@ module.exports = [
         de: "– In welcher Ausbildungsinstitution oder in welchem Lehrbetrieb ist dein Projekt entstanden?",
         fr: "X",
         it: "X"
-      }
-      // required: true
+      },
+      required: true
     },
     {
       name: "kanton-des-ausbildungsortes",
@@ -267,8 +267,8 @@ module.exports = [
         { id: "437", de: "Wallis", fr: "", it: "" },
         { id: "439", de: "Zürich", fr: "", it: "" },
         { id: "438", de: "Zug", fr: "", it: "" }
-      ]
-      // required: true
+      ],
+      required: true
      }
   ],
 
@@ -344,8 +344,8 @@ module.exports = [
           `,
           fr: "X",
           it: "X"
-      }
-      // required: true
+      },
+      required: true
     }
   ],
 
