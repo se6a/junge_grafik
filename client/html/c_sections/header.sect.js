@@ -1,12 +1,26 @@
 const Underlined = getSnippet("text-underlined");
 
+/*
+<a class="logo" href="/home">
+  <span>
+    ${Underlined("<span class=\"first\">Junge</span><span class=\"second\">Grafik</span>")}
+  </span>
+  <span>
+    ${Underlined("<span class=\"first\">Jeune</span><span class=\"second\">Graphisme</span>")}
+  </span>
+  <span>
+    ${Underlined("<span class=\"first\">Giovane</span><span class=\"second\">Grafica</span>")}
+  </span>
+</a>
+*/
+
 module.exports = () => {
   const $navigation = require("./navigation.sect.js");
 
   const html = splitTemp/*html*/`
     <header class="HEADER">
 
-      <a class="logo" href="/home">
+      <a class="logo">
         <span>
           ${Underlined("<span class=\"first\">Junge</span><span class=\"second\">Grafik</span>")}
         </span>

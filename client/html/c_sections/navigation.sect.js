@@ -1,13 +1,26 @@
 const MenuIcon = getSnippet("icon-menu");
 
+/*
+<nav class="NAVIGATION">
+  <a id="navigation-award" class="button Award">Award</a>
+  <a id="navigation-follow" class="button Follow">Follow</a>
+  <a id="navigation-submit" class="button Submit">Submit!</a>
+
+  <button id="navigation-menu" class="button Menu" onclick="toggleMenu(this)">
+    <label class="label">Menu</label>
+    ${MenuIcon()}
+  </button>
+</nav>
+*/
+
 module.exports = () => {
   const html = splitTemp/*html*/`
     <nav class="NAVIGATION">
-      <a id="navigation-award" class="button Award" href="/award">Award</a>
-      <a id="navigation-follow" class="button Follow" href="/follow">Follow</a>
-      <a id="navigation-submit" class="button Submit" href="/submit">Submit!</a>
+      <a id="navigation-award" class="button Award">Award</a>
+      <a id="navigation-follow" class="button Follow">Follow</a>
+      <a id="navigation-submit" class="button Submit">Submit!</a>
 
-      <button id="navigation-menu" class="button Menu" onclick="toggleMenu(this)">
+      <button id="navigation-menu" class="button Menu">
         <label class="label">Menu</label>
         ${MenuIcon()}
       </button>

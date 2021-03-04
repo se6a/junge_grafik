@@ -29,7 +29,8 @@ function buildRoutes() {
 /*  Middleware
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 function resetUrl(req, res, next) {
-  req.url = "/home";
+  // req.url = "/home";
+  req.url = "/submit";
   next();
 }
 
