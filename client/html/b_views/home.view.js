@@ -13,8 +13,7 @@ module.exports = () => {
 
   const css = /*css*/`
     :root {
-      --colorTheme: var(--blueLight);
-      --colorHilight: var(--blue);
+      --colorTheme: var(--blue);
     }
   `;
 

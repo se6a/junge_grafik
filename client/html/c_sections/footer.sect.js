@@ -16,8 +16,9 @@ module.exports = () => {
         title: "Social",
         content: /*html*/`
           <ul>
-            <li><a class="link">Instagram</a></li>
-            <li><a class="link">Facebook</a></li>
+            <li><a class="link" href="" target="_blank">Instagram</a></li>
+            <li><a class="link" href="" target="_blank">Facebook</a></li>
+            <li><a class="link" href="" target="_blank">LinkedIn</a></li>
           </ul>
         `
       })}
@@ -27,9 +28,9 @@ module.exports = () => {
         title: "Network",
         content: /*html*/`
           <ul>
-            <li><a class="link">SGD</a></li>
-            <li><a class="link">SGV</a></li>
-            <li><a class="link">Weltformat</a></li>
+            <li><a class="link" href="" target="_blank">SGV Schweizer Grafiker Verband</a></li>
+            <li><a class="link" href="" target="_blank">SGD Swiss Graphic Designers</a></li>
+            <li><a class="link" href="" target="_blank">Weltformat Graphic Design Festival</a></li>
           </ul>
         `
       })}
@@ -39,8 +40,8 @@ module.exports = () => {
         title: "Links",
         content: /*html*/`
           <ul>
-            <li><a class="link">Imprint</a></li>
-            <li><a class="link">Data privacy</a></li>
+            <li><a class="link" href="" target="_blank">Imprint</a></li>
+            <li><a class="link" href="" target="_blank">Data privacy</a></li>
           </ul>
         `
       })}
@@ -57,7 +58,7 @@ module.exports = () => {
       grid-template-columns: 1fr;
       grid-auto-columns: 1fr;
       font-size: var(--fontSize-S);
-      line-height: var(--lineHeight-S);
+      line-height: var(--listHeight-S);
     }
 
     .FOOTER h3 {

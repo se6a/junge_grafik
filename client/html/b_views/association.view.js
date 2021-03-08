@@ -1,21 +1,20 @@
 const HeaderView = getSection("header-view");
+const data = getData("page-association");
 
-module.exports = ({ data }) => {
+module.exports = () => {
+  console.log(data);
   const html = splitTemp/*html*/`
     <main class="VIEW Association">
-      ${
-        HeaderView({
-          title:   "Association",
-          content: ""
-        })
-      }
+
+      ${HeaderView(data.header)}
+      ${buildSections(data.sections)}
+
     </main>
   `;
 
   const css = splitTemp/*css*/`
     :root {
-      --colorTheme: var(--yellowLight);
-      --colorHilight: var(--yelow);
+      --colorTheme: var(--green);
     }
   `;
 

@@ -2,22 +2,17 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 :root {
-  --violet: rgb(90, 72, 155);
-  --violetLight: rgb(172, 163, 205);
-  --red: rgb(220, 31, 90);
-  --redLight: rgb(237, 143, 172);
-  --green: rgb(0, 154, 102);
-  --greenLight: rgb(127, 205, 184);
-  --blue: rgb(90, 130, 235);
-  --blueLight: rgb(159, 193, 247);
-  --yellow: rgb(255, 205, 0);
-  --yellowLight: rgb(255, 231, 127);
+  --darkViolet: rgb(35, 0, 50);
+  --violet: rgb(120, 80, 255);
+  --red: rgb(255, 85, 90);
+  --green: rgb(60, 255, 100);
+  --blue: rgb(0, 215, 255);
+  --yellow: rgb(255, 255, 50);
   --white: rgb(255, 255, 255);
   --gray: rgb(200, 200, 200);
 
-  --colorKey: var(--violet);
-  --colorTheme: var(--redLight);
-  --colorHilight: var(--red);
+  --colorKey: var(--darkViolet);
+  --colorTheme: var(--blue);
 
   --spacing-XS: .5vmin;
   --spacing-S: 1vmin;
@@ -30,7 +25,8 @@
   --footerHeight: 30vmin;
 
   --fontSize-S: 1.4vmin;
-  --lineHeight-S: 1.7vmin;
+  --lineHeight-S: 2vmin;
+  --listHeight-S: 2.5vmin;
   --fontSize-M: 1.9vmin;
   --lineHeight-M: 2.5vmin;
   --fontSize-L: 5vmin;
@@ -180,12 +176,18 @@ body {
 
 h1 {
   font-size: var(--fontSize-XL);
+  line-height: var(--lineHeight-XL);
   margin-bottom: var(--spacing-L);
 }
 
 h2 {
   font-size: var(--fontSize-L);
-  margin-bottom: var(--spacing-M);
+  line-height: var(--lineHeight-L);
+}
+
+h3 {
+  font-size: var(--fontSize-M);
+  line-height: var(--lineHeight-M);
 }
 
 .icon.medium {
@@ -258,10 +260,6 @@ h2 {
   padding: 0;
   width: auto;
   height: auto;
-}
-
-a.link {
-  font-family: FeixenSansEdgy;
 }
 
 a.link:hover {

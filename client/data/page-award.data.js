@@ -1,7 +1,7 @@
 module.exports = {
   header: {
     title: "Award",
-    content: "Is your graphic design work more than just a school project? Then we’d love to see it. You can submit any outstanding work you’ve created as part of your studies. "
+    content: "Is your graphic design work more than just a school project? Then we’d love to see it. You can submit any outstanding work you’ve created as part of your studies."
   },
   sections: [
     {
@@ -83,56 +83,62 @@ module.exports = {
       ]
     },
     {
-      type: "columns",
-      number: 3,
+      type: "rows",
+      length: 4,
       content: [
         {
           type: "card-image",
-          title: "Larissa Kasper",
-          image: "jury/larissa-kasper.jpg",
-          content: `
-            <ul>
-              <li><a>kasper-florio.ch</a></li>
-              <li><a>Instagram</a></li>
-              <li><a>Facebook</a></li>
-            </ul>
-          `
+          title: "Audrey Fleur Ljubenovic",
+          image: "jury/jg_jury_21-audrey_fleur_ljubenovic.png",
+          content: `<a href"audreyfleur.ch" target="_blank">audreyfleur.ch</a>`
         },
         {
           type: "card-image",
-          title: "Valerie Bonin",
-          image: "jury/valerie-bonin.jpg",
-          content: `
-            <ul>
-              <li><a>bonin.ch</a></li>
-              <li><a>Instagram</a></li>
-              <li><a>Facebook</a></li>
-            </ul>
-          `
+          title: "Demian Conrad",
+          image: "jury/jg_jury_21-demian_conrad.png",
+          content: `<a href"demianconrad.ch" target="_blank">demianconrad.ch</a>`
         },
         {
           type: "card-image",
-          title: "Jonas Vögeli",
-          image: "jury/jonas-voegeli.jpg",
-          content: `
-            <ul>
-              <li><a>hubertus-design.ch</a></li>
-              <li><a>Instagram</a></li>
-              <li><a>Facebook</a></li>
-            </ul>
-          `
+          title: "Dennis Moya",
+          image: "jury/jg_jury_21-dennis_moya.png",
+          content: `<a href"dennismoya.ch" target="_blank">dennismoya.ch</a>`
         },
         {
           type: "card-image",
           title: "Felix Pfäffli",
-          image: "jury/felix-pfaeffli.jpg",
-          content: `
-            <ul>
-              <li><a>studio-feixen.ch</a></li>
-              <li><a>Instagram</a></li>
-              <li><a>Facebook</a></li>
-            </ul>
-          `
+          image: "jury/jg_jury_21-felix_pfaeffli.png",
+          content: `<a href"studiofeixen.ch" target="_blank">studiofeixen.ch</a>`
+        },
+        {
+          type: "card-image",
+          title: "Jonas Vögeli",
+          image: "jury/jg_jury_21-jonas_voegeli.png",
+          content: `<a href"hubertus-design.ch" target="_blank">hubertus-design.ch</a>`
+        },
+        {
+          type: "card-image",
+          title: "Larissa Kasper",
+          image: "jury/jg_jury_21-larissa_kasper.png",
+          content: `<a href"kasper-florio.ch" target="_blank">kasper-florio.ch</a>`
+        },
+        {
+          type: "card-image",
+          title: "Lena Ruppen",
+          image: "jury/jg_jury_21-lena_ruppen.png",
+          content: ""
+        },
+        {
+          type: "card-image",
+          title: "Marion Fink",
+          image: "jury/jg_jury_21-marion_fink.png",
+          content: ""
+        },
+        {
+          type: "card-image",
+          title: "Valeria Bonin",
+          image: "jury/jg_jury_21-valeria_bonin.png",
+          content: `<a href"bonbon.li" target="_blank">bonbon.li</a>`
         }
       ]
     }

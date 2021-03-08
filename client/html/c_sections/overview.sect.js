@@ -60,7 +60,7 @@ module.exports = ({ details }) => {
       flex-direction: column;
     }
 
-    .itemText {
+    .Overview .content {
       font-size: var(--fontSize-S);
       line-height: var(--lineHeight-S)
     }

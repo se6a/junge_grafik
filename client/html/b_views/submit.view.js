@@ -23,8 +23,7 @@ module.exports = (data) => {
 
   const css = /*css*/`
     :root {
-      --colorTheme: var(--redLight);
-      --colorHilight: var(--red);
+      --colorTheme: var(--yellow);
     }
 
     .VIEW.Submit > section {

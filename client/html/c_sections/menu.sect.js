@@ -3,6 +3,7 @@ const Underlined = getSnippet("text-underlined");
 module.exports = () => {
   const html = splitTemp/*html*/`
     <section class="MENU box">
+      <a href="/submit">${Underlined("Submit!")}</a>
       <a href="/award">${Underlined("Award")}</a>
       <a href="/association">${Underlined("Association")}</a>
       <a href="/contact">${Underlined("Contact")}</a>
@@ -11,7 +12,7 @@ module.exports = () => {
 
   const css = /*css*/`
     .MENU {
-      background-color: white;
+      background-color: var(--violet);
       height: 100vh;
       width: 100%;
       position: fixed;
@@ -41,7 +42,7 @@ module.exports = () => {
     }
 
     .MENU a:hover {
-      background-color: var(--gray);
+      background-color: var(--white);
     }
 
     .HEADER a:focus,

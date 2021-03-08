@@ -1,26 +1,13 @@
 const MenuIcon = getSnippet("icon-menu");
 
-/*
-<nav class="NAVIGATION">
-  <a id="navigation-award" class="button Award">Award</a>
-  <a id="navigation-follow" class="button Follow">Follow</a>
-  <a id="navigation-submit" class="button Submit">Submit!</a>
-
-  <button id="navigation-menu" class="button Menu" onclick="toggleMenu(this)">
-    <label class="label">Menu</label>
-    ${MenuIcon()}
-  </button>
-</nav>
-*/
-
 module.exports = () => {
   const html = splitTemp/*html*/`
     <nav class="NAVIGATION">
-      <a id="navigation-award" class="button Award">Award</a>
-      <a id="navigation-follow" class="button Follow">Follow</a>
-      <a id="navigation-submit" class="button Submit">Submit!</a>
+      <a id="navigation-award" class="button Support" href="/award">Support!</a>
+      <a id="navigation-follow" class="button Follow" href="/follow">Follow!</a>
+      <a id="navigation-submit" class="button Submit" href="/submit">Submit!</a>
 
-      <button id="navigation-menu" class="button Menu">
+      <button id="navigation-menu" class="button Menu" onclick="toggleMenu(this)">
         <label class="label">Menu</label>
         ${MenuIcon()}
       </button>
@@ -42,7 +29,7 @@ module.exports = () => {
     }
 
     .NAVIGATION > .button.Submit {
-      background-color: var(--redLight);
+      background-color: var(--yellow);
     }
 
     .NAVIGATION > .button:hover {
