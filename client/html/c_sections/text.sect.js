@@ -1,29 +1,22 @@
 const Underlined = getSnippet("text-underlined");
 
-function maybeTitle(title) {
-  let html = "";
+module.exports = ({ title, content, size }) => {
+  size = size || "normal";
 
-  if (title) {
-    html = splitTemp/*html*/`
-      <header>
+  let settingsClasses = "";
+
+  settingsClasses += title ? "--useTitle" : "";
+
+  const html = splitTemp/*html*/`
+    <section class="TextSection box ${size} ${settingsClasses}">
+
+      <header class="TextSection title">
         <h2>
           ${Underlined(title)}
         </h2>
       </header>
-    `;
-  }
 
-  return ["maybeTitle.fn", html];
-}
-
-module.exports = ({ title, content, size }) => {
-  size = size || "normal";
-
-  const html = splitTemp/*html*/`
-    <section class="Text box ${size}">
-      ${maybeTitle(title)}
-
-      <p>
+      <p class="TextSection content">
         ${content}
       </p>
 
@@ -31,18 +24,27 @@ module.exports = ({ title, content, size }) => {
   `;
 
   const css = /*css*/`
-    .Text.box p {
-      width: calc(100% / 8 * 7);
-    }
-
-    .Text.box.l {
+    .TextSection.box.l {
       font-size: var(--fontSize-L);
       line-height: var(--lineHeight-L);
     }
 
-    .Text.box.xl {
+    .TextSection.box.xl {
       font-size: var(--fontSize-XL);
       line-height: var(--lineHeight-XL);
+    }
+
+    .TextSection.title {
+      display: none;
+      margin-bottom: var(--spacing-S);
+    }
+
+    .TextSection.--useTitle > .title {
+      display: initial;
+    }
+
+    .--size-lg .TextSection.content {
+      width: calc(100% / 8 * 7);
     }
   `;
 

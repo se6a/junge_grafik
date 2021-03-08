@@ -5,7 +5,11 @@ module.exports = () => {
     ${Icon({ symbol: "\u2193", classes: "Dropdown" })}
   `;
 
-  const css = /*css*/``;
+  const css = /*css*/`
+    .Dropdown.icon {
+      font-size: var(--fontSize-M)
+    }
+  `;
 
   return ["icon-dropdown.snip", html, css];
 };

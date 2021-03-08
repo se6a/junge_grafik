@@ -1,7 +1,7 @@
 /*  Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-:root {
+body {
   --darkViolet: rgb(35, 0, 50);
   --violet: rgb(120, 80, 255);
   --red: rgb(255, 85, 90);
@@ -13,12 +13,6 @@
 
   --colorKey: var(--darkViolet);
   --colorTheme: var(--blue);
-
-  --spacing-XS: .5vmin;
-  --spacing-S: 1vmin;
-  --spacing-M: 2.5vmin;
-  --spacing-L: 5vmin;
-  --spacing-XL: 8vmin;
 
   --boxHeaderHeight: 5vmin;
   --headerHeight: 8vmin;
@@ -34,6 +28,12 @@
   --fontSize-XL: 9vmin;
   --lineHeight-XL: 8vmin;
 
+  --spacing-XS: .5vmin;
+  --spacing-S: 1vmin;
+  --spacing-M: 2.5vmin;
+  --spacing-L: 5vmin;
+  --spacing-XL: 8vmin;
+
   --circle-S: 1.7vmin;
   --circle-M: 2.5vmin;
   --circle-L: 3.2vmin;
@@ -46,10 +46,55 @@
   font-size: 1vmin;
 }
 
-@media screen and (max-width: 500px) {
-  :root {
-    --headerHeight: 12vmin;
-  }
+.--size-md {
+  --boxHeaderHeight: 5vmin;
+  --headerHeight: 10vmin;
+  --footerHeight: 30vmin;
+
+  --fontSize-S: 2vmin;
+  --lineHeight-S: 2.6vmin;
+  --listHeight-S: 3.1vmin;
+  --fontSize-M: 2.5vmin;
+  --lineHeight-M: 3.1vmin;
+  --fontSize-L: 5.6vmin;
+  --lineHeight-L: 6.1vmin;
+  --fontSize-XL: 9.6vmin;
+  --lineHeight-XL: 8.6vmin;
+
+  --spacing-XS: 1vmin;
+  --spacing-S: 2vmin;
+  --spacing-M: 4.5vmin;
+  --spacing-L: 8vmin;
+  --spacing-XL: 8vmin;
+
+  --circle-S: 3vmin;
+  --circle-M: 4vmin;
+  --circle-L: 5vmin;
+}
+
+.--size-sm {
+  --headerHeight: 15vmin;
+  --footerHeight: 70vmin;
+
+  --fontSize-S: 3vmin;
+  --lineHeight-S: 4vmin;
+  --listHeight-S: 5vmin;
+  --fontSize-M: 4.5vmin;
+  --lineHeight-M: 5.7vmin;
+  --fontSize-L: 6.5vmin;
+  --lineHeight-L: 8.3vmin;
+  --fontSize-XL: 11vmin;
+  --lineHeight-XL: 10vmin;
+
+  --spacing-XS: 1.5vmin;
+  --spacing-S: 2vmin;
+  --spacing-M: 5vmin;
+  --spacing-L: 10vmin;
+  --spacing-XL: 18vmin;
+
+  --circle-S: 5vmin;
+  --circle-M: 6vmin;
+  --circle-L: 7vmin;
 }
 
 /*  Font
@@ -190,6 +235,10 @@ h3 {
   line-height: var(--lineHeight-M);
 }
 
+.label {
+  white-space: pre-line;
+}
+
 .icon.medium {
   width: var(--circle-M);
   height: var(--circle-M);
@@ -206,6 +255,8 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
+  position: relative;
+  overflow: hidden;
 }
 
 .box {
@@ -216,13 +267,13 @@ h3 {
   padding: var(--spacing-M);
 }
 
-.box.Title {
+/* .box.title {
   padding: 0 var(--spacing-M);
   height: var(--boxHeaderHeight);
   justify-content: center;
-}
+} */
 
-.box.Content {
+.box.content {
   flex-grow: 1;
 }
 
@@ -310,7 +361,7 @@ form {
 .formField .header,
 .formField .input {
   display: flex;
-  height: var(--spacing-L);
+  min-height: var(--spacing-L);
   font-size: var(--fontSize-M);
   align-items: flex-end;
 }
@@ -323,7 +374,7 @@ form {
 }
 
 .formField .header {
-  padding-bottom: var(--spacing-XS);
+  padding: var(--spacing-S) 0 var(--spacing-XS);
   white-space: nowrap;
 }
 
@@ -337,7 +388,7 @@ form {
 }
 
 .input.--warn {
-  background-color: var(--yellow);
+  background-color: var(--red);
 }
 
 .hiddenInput {

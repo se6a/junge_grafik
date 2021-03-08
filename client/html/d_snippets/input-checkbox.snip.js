@@ -72,6 +72,13 @@ module.exports = (field) => {
       height: var(--fontSize-S);
     }
 
+
+    .--size-md .Checkbox .checkmark svg,
+    .--size-sm .Checkbox .checkmark svg {
+      width: var(--fontSize-M);
+      height: var(--fontSize-M);
+    }
+
     .Checkbox .checkmark path {
       stroke-width: 2px;
       fill: none;
@@ -83,7 +90,7 @@ module.exports = (field) => {
     }
 
     .Checkbox.--checked .icon {
-      background-color: var(--greenLight);
+      background-color: var(--green);
     }
   `;
 

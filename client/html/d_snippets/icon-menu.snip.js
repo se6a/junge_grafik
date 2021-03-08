@@ -12,8 +12,8 @@ module.exports = () => {
   const css = /*css*/`
     .icon.Menu .symbol {
       display: flex;
-      height: 1.5em;
-      width: 1.5em;
+      height: var(--spacing-M);
+      width: var(--spacing-M);
       flex-direction: column;
       justify-content: space-between;
     }

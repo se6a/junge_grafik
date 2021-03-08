@@ -12,7 +12,7 @@ module.exports = () => {
   `;
 
   const css = splitTemp/*css*/`
-    :root {
+    body {
       --colorTheme: var(--red);
     }
   `;

@@ -87,55 +87,55 @@ module.exports = {
       length: 4,
       content: [
         {
-          type: "card-image",
+          type: "card-with-image",
           title: "Audrey Fleur Ljubenovic",
           image: "jury/jg_jury_21-audrey_fleur_ljubenovic.png",
           content: `<a href"audreyfleur.ch" target="_blank">audreyfleur.ch</a>`
         },
         {
-          type: "card-image",
+          type: "card-with-image",
           title: "Demian Conrad",
           image: "jury/jg_jury_21-demian_conrad.png",
           content: `<a href"demianconrad.ch" target="_blank">demianconrad.ch</a>`
         },
         {
-          type: "card-image",
+          type: "card-with-image",
           title: "Dennis Moya",
           image: "jury/jg_jury_21-dennis_moya.png",
           content: `<a href"dennismoya.ch" target="_blank">dennismoya.ch</a>`
         },
         {
-          type: "card-image",
+          type: "card-with-image",
           title: "Felix Pfäffli",
           image: "jury/jg_jury_21-felix_pfaeffli.png",
           content: `<a href"studiofeixen.ch" target="_blank">studiofeixen.ch</a>`
         },
         {
-          type: "card-image",
+          type: "card-with-image",
           title: "Jonas Vögeli",
           image: "jury/jg_jury_21-jonas_voegeli.png",
           content: `<a href"hubertus-design.ch" target="_blank">hubertus-design.ch</a>`
         },
         {
-          type: "card-image",
+          type: "card-with-image",
           title: "Larissa Kasper",
           image: "jury/jg_jury_21-larissa_kasper.png",
           content: `<a href"kasper-florio.ch" target="_blank">kasper-florio.ch</a>`
         },
         {
-          type: "card-image",
+          type: "card-with-image",
           title: "Lena Ruppen",
           image: "jury/jg_jury_21-lena_ruppen.png",
           content: ""
         },
         {
-          type: "card-image",
+          type: "card-with-image",
           title: "Marion Fink",
           image: "jury/jg_jury_21-marion_fink.png",
           content: ""
         },
         {
-          type: "card-image",
+          type: "card-with-image",
           title: "Valeria Bonin",
           image: "jury/jg_jury_21-valeria_bonin.png",
           content: `<a href"bonbon.li" target="_blank">bonbon.li</a>`

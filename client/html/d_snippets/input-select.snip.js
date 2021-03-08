@@ -102,7 +102,7 @@ module.exports = (data) => {
     .formField.Select .icon.Dropdown {
       position: absolute;
       right: var(--spacing-S);
-      top: var(--spacing-S);
+      top: calc((var(--spacing-L) - var(--circle-L)) / 2);
       pointer-events: none;
     }
 

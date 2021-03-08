@@ -36,23 +36,22 @@ module.exports = () => {
       background-color: var(--gray);
     }
 
-    @media screen and (max-width: 1024px) {
+    .--size-sm .NAVIGATION > .button:not(.Menu) {
+      display: none;
     }
 
-    @media screen and (max-width: 500px) {
-      .NAVIGATION .button.Menu {
-        justify-content: center;
-      }
-
-      .NAVIGATION .button.Menu .label {
-        display: none;
-      }
-
-      .NAVIGATION .button.Menu .icon {
-        height: var(--spacing-L);
-        width: var(--spacing-L);
-      }
+    .--size-sm .NAVIGATION > .button.Menu {
+      padding: 0;
     }
+
+    .--size-sm .NAVIGATION > .button.Menu > .icon {
+      margin: auto;
+    }
+
+    .--size-sm .NAVIGATION .label {
+      display: none;
+    }
+
   `;
 
   return ["navigation.sect", html, css];

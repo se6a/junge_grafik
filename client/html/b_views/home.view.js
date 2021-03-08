@@ -12,7 +12,7 @@ module.exports = () => {
   `;
 
   const css = /*css*/`
-    :root {
+    body {
       --colorTheme: var(--blue);
     }
   `;

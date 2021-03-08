@@ -2,27 +2,30 @@ module.exports = ({ name = "", title, image, content }) => {
   const html = splitTemp/*html*/`
     <article class="card ImageCard ${name}">
 
-      <div class="cardImage wrapper">
+      <div class="ImageCard imageWrapper">
         <div class="box">
 
-          <img class="image" src="./media/${image}">
+          <img class="ImageCard image" src="./media/${image}">
 
         </div>
         <div class="pushHeight"></div>
       </div>
 
-      <div class="cardText wrapper">
+      <div class="ImageCard contentWrapper">
         <div class="box">
 
-          <header class="Title">
-            <h3>${title}</h3>
+          <header class="ImageCard title">
+            <h3>
+              ${title}
+            </h3>
           </header>
 
-          <div class="Text">
+          <div class="ImageCard content">
             ${content}
           </div>
 
         </div>
+
         <div class="pushHeight"></div>
       </div>
 
@@ -30,41 +33,44 @@ module.exports = ({ name = "", title, image, content }) => {
   `;
 
   const css = /*css*/`
-    .card {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card .wrapper {
+    .ImageCard .imageWrapper,
+    .ImageCard .contentWrapper {
       position: relative;
     }
     
-    .cardImage .box,
-    .cardText .box {
+    .ImageCard .box {
       overflow: hidden;
       width: 100%;
       height: 100%;
       position: absolute;
     }
 
-    .cardImage .box {
+    .ImageCard.title {
+      margin-bottom: var(--spacing-S);
+    }
+
+    .ImageCard.imageWrapper > .box {
       padding: 0;
     }
 
-    .cardImage .pushHeight {
+    .ImageCard > .pushHeight {
       margin-top: 100%;
     }
 
-    .cardText .pushHeight {
+    .ImageCard.contentWrapper > .pushHeight {
       margin-top: 50%;
     }
 
-    .cardText .Text {
+    .--size-sm .ImageCard.contentWrapper > .pushHeight {
+      margin-top: 30%;
+    }
+
+    .ImageCard.content {
       font-size: var(--fontSize-S);
       line-height: var(--lineHeight-S);
     }
 
   `;
 
-  return ["card-image.snip", html, css];
+  return ["card-with-image.snip", html, css];
 };

@@ -69,20 +69,12 @@ module.exports = () => {
       border: none;
     }
 
-    @media screen and (max-width: 1024px) {
-      .HEADER {
-        grid-template-columns: 40% 60%;
-      }
-    }
+    .--size-md .HEADER {
+      grid-template-columns: 40% 60%;
+  }
 
-    @media screen and (max-width: 500px) {
-      .HEADER {
+    .--size-sm .HEADER {
         grid-template-columns: auto var(--headerHeight);
-      }
-
-      .HEADER .NAVIGATION > a {
-        display: none;
-      }
     }
   `;
 

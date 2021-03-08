@@ -43,6 +43,11 @@ module.exports = ({ name, label, required, tooltip, maxlength = 500 }) => {
       min-height: calc(7 * var(--spacing-M));
       resize: vertical;
     }
+
+    .--size-md .formField textarea,
+    .--size-sm .formField textarea {
+      min-height: calc(7 * var(--spacing-L));
+    }
   `;
 
   return ["input-text.snip", html, css];

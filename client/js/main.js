@@ -2,8 +2,41 @@ document.addEventListener(
   "DOMContentLoaded",
   () => {
     console.log("DOM loaded");
+    attachMediaQueryListener();
   }
 );
+
+function attachMediaQueryListener() {
+  const sizes = {
+    lg: "(min-width: 1000px)",
+    md: "(min-width: 600px) and (max-width: 999px)",
+    sm: "(max-width: 599px)"
+  };
+
+  for (const _size in sizes) {
+    const _mediaQuery = window.matchMedia(sizes[_size]);
+
+    if (_mediaQuery.matches)
+      setDocumentSize(_size, _mediaQuery);
+
+    _mediaQuery.onchange = (q) => setDocumentSize(_size, q);
+  }
+}
+
+function setDocumentSize(size, q) {
+  if (q.matches) {
+    const newSize = `--size-${size}`;
+    const lastSize = [...document.body.classList].filter(
+      (_class) => _class.startsWith("--size"))[0];
+
+    if (lastSize) {
+      document.body.classList.replace(lastSize, newSize);
+    }
+    else {
+      document.body.classList.add(newSize);
+    }
+  }
+}
 
 function makeId(addition = "") {
   const random = Math.round(Math.random() * 1000);

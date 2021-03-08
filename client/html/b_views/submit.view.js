@@ -22,7 +22,7 @@ module.exports = (data) => {
   `;
 
   const css = /*css*/`
-    :root {
+    body {
       --colorTheme: var(--yellow);
     }
 

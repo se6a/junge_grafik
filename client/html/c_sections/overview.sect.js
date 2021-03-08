@@ -1,14 +1,14 @@
 function Detail({ title, items }) {
   return /*html*/`
-    <article class="item">
+    <article class="Overview item">
 
-      <header>
+      <header class="OverviewItem header">
         <h3>
           &rarr; ${title}
         </h3>
       </header>
 
-      <ul class="content">
+      <ul class="OverviewItem content">
         ${items.reduce((list, _item) => list + `<li>${_item}</li>`, "")}
       </ul>
 
@@ -27,7 +27,7 @@ function Columns(details) {
   let crntItem = 0;
 
   for (let i = 0; i < 2; i++) {
-    columns.push(`<div class="column">`);
+    columns.push(`<div class="Overview column">`);
 
     if (range[i] !== null) {
       for (; crntItem < range[i]; crntItem++) {
@@ -49,23 +49,31 @@ module.exports = ({ details }) => {
   `;
 
   const css = /*css*/`
-    .Overview.box {
+    .--size-lg .Overview.box {
       display: grid;
+    }
+
+    .--size-lg .Overview.box {
       grid-gap: var(--spacing-M);
       grid-template-columns: 1fr 1fr;
     }
 
-    .Overview > .column {
+    .--size-md .Overview.box,
+    .--size-sm .Overview.box {
+      grid-template-columns: 1fr;
+    }
+
+    .Overview.column {
       display: flex;
       flex-direction: column;
     }
 
-    .Overview .content {
+    .OverviewItem.content {
       font-size: var(--fontSize-S);
       line-height: var(--lineHeight-S)
     }
 
-    .Overview > .column > .item::after {
+    .Overview.item::after {
       content: "";
       height: var(--spacing-M);
       display: block;

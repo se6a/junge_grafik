@@ -8,9 +8,18 @@ module.exports = ({ content }) => {
   const css = /*css*/`
     .layoutSection.Columns {
       display: grid;
-      grid-auto-flow: column;
+      
+    }
+
+    .--size-lg .layoutSection.Columns,
+    .--size-md .layoutSection.Columns {
       grid-auto-columns: 1fr;
       grid-template-columns: 1fr;
+      grid-auto-flow: column;
+    }
+
+    .--size-sm .layoutSection.Columns {
+      grid-auto-flow: row;
     }
   `;
 

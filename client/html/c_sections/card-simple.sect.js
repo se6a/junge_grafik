@@ -10,13 +10,15 @@ module.exports = ({ name = "", title, image, content }) => {
   }
 
   const html = splitTemp/*html*/`
-    <article class="card ${name}">
+    <article class="SimpleCard card ${name}">
 
-      <header class="box Title"${displayTitle}>
-        <h3>${title}</h3>
+      <header class="SimbleCard box title"${displayTitle}>
+        <h3>
+          ${title}
+        </h3>
       </header>
 
-      <div class="box Content">
+      <div class="SimpleCard box content">
         ${content}
       </div>
 
@@ -26,5 +28,5 @@ module.exports = ({ name = "", title, image, content }) => {
   const css = /*css*/`
   `;
 
-  return ["card.snip", html, css];
+  return ["card-simple.snip", html, css];
 };

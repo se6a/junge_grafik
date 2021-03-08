@@ -54,6 +54,10 @@ module.exports = () => {
       display: none;
     }
 
+    .NewsletterForm .formField.Submit .button {
+      padding: 0 0 0 var(--spacing-M);
+    }
+
     .NewsletterForm .group {
       display: flex;
       column-gap: unset;

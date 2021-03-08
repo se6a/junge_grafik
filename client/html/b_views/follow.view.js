@@ -13,7 +13,7 @@ module.exports = ({ data }) => {
   `;
 
   const css = splitTemp/*css*/`
-    :root {
+    body {
       --colorTheme: var(--yellow);
     }
   `;

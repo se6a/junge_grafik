@@ -17,6 +17,7 @@ module.exports = () => {
       height: var(--circle-L);
       width: var(--circle-L);
       border: var(--borderFull) solid currentColor;
+      font-size: var(--fontSize-M);
       border-radius: 100%;
     }
 

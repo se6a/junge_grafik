@@ -30,7 +30,7 @@ module.exports = (tooltip) => {
       display: inline-block;
       width: 100%;
       min-height: var(--spacing-L);
-      background-color: var(--gray);
+      background-color: var(--green);
       border: var(--borderFull) solid currentColor;
       position: absolute;
       padding: var(--spacing-M);

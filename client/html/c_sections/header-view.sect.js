@@ -17,18 +17,18 @@ module.exports = ({ title = "", image = "", content }) => {
 
   const html = splitTemp/*html*/`
     <header class="HEADER-VIEW">
-      <div class="image" ${showImage}>
+      <div class="HeaderView image" ${showImage}>
         <img src="${image}">
         </svg>
       </div>
 
-      <div class="text" ${showText}>
+      <div class="HeaderView textWrapper" ${showText}>
       
         <h1 ${showTitle}>
           ${Underlined(title)}
         </h1>
 
-        <div class="content" ${showContent}>
+        <div class="HeaderView content" ${showContent}>
           ${content}
         </div>
 
@@ -44,7 +44,7 @@ module.exports = ({ title = "", image = "", content }) => {
       min-height: 100vh;
     }
 
-    .HEADER-VIEW > .text {
+    .HeaderView.textWrapper {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
@@ -55,30 +55,33 @@ module.exports = ({ title = "", image = "", content }) => {
                var(--spacing-M);
     }
 
-    .HEADER-VIEW > .image {
+    .HeaderView.image {
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    .HEADER-VIEW > .image > img {
+    .HeaderView.image > img {
       margin-top: calc(var(--headerHeight) - 3px);
     }
 
-    .HEADER-VIEW > .text > .content {
+    .HeaderView.textWrapper > .content {
       font-size: var(--fontSize-L);
       line-height: var(--lineHeight-L);
+    }
+
+    .--size-lg .HeaderView.content {
       width: calc(100% / 8 * 7);
     }
 
     @media (orientation: landscape) {
-      .HEADER-VIEW > .image > img {
+      .HeaderView.image > img {
         width: 100%;
       }
     }
 
     @media (orientation: portrait) {
-      .HEADER-VIEW > .image > img {
+      .HeaderView.image > img {
         height: calc(100vh - var(--headerHeight));
       }
     }
