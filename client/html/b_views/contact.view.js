@@ -35,7 +35,7 @@ module.exports = (data) => {
             type: "card-simple",
             content: `
                 <span>General matters</span>
-                <span><a href="mailto:remo.stahl@jungegrafik.ch">remo.stahl@jungegrafik.ch</a></span>
+                <span><a href="mailto:info@jungegrafik.ch">info@jungegrafik.ch</a></span>
             `
           },
           {

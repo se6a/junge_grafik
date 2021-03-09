@@ -57,7 +57,7 @@ module.exports = {
     },
     {
       type: "rows",
-      title: "Vorstand Junge Grafik",
+      title: "Executive board of Junge Grafik",
       length: 4,
       content: [
         {

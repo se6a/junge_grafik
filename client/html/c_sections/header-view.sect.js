@@ -63,6 +63,7 @@ module.exports = ({ title = "", image = "", content }) => {
 
     .HeaderView.image > img {
       margin-top: calc(var(--headerHeight) - 3px);
+      width: 100%;
     }
 
     .HeaderView.textWrapper > .content {
@@ -72,18 +73,6 @@ module.exports = ({ title = "", image = "", content }) => {
 
     .--size-lg .HeaderView.content {
       width: calc(100% / 8 * 7);
-    }
-
-    @media (orientation: landscape) {
-      .HeaderView.image > img {
-        width: 100%;
-      }
-    }
-
-    @media (orientation: portrait) {
-      .HeaderView.image > img {
-        height: calc(100vh - var(--headerHeight));
-      }
     }
   `;
 

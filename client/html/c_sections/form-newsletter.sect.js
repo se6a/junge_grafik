@@ -15,7 +15,7 @@ module.exports = () => {
         ${Checkbox({
           name: "terms",
           label: {
-            all: 'I accept <a class="link">all the stuff</a>.'
+            all: "I accept to receive Newsletters from Junge Grafik."
           },
           required: true
         })}

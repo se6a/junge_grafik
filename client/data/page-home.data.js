@@ -1,6 +1,6 @@
 module.exports = {
   header: {
-    image: "media/theme/fg_title.svg"
+    image: "media/theme/20210308_Keyvisual_Test_1920x960px.svg"
   },
   sections: [
     {

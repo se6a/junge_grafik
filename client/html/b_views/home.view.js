@@ -15,6 +15,11 @@ module.exports = () => {
     body {
       --colorTheme: var(--blue);
     }
+
+    .VIEW.Home .HEADER-VIEW {
+      min-height: unset;
+      height: auto;
+    }
   `;
 
   return ["home.view", html, css];
