@@ -27,34 +27,25 @@ module.exports = {
             {
               title: "Submission deadline",
               items: [
-                "01.01.2021 (for papers graded between 01.01.2020 and 01.01.2021)"
+                "14.06.2021 (for papers graded between 01.01.2019 and 15.03.2021)"
               ]
             },
             {
               title: "Awards ceremony",
               items: [
-                "01.01.2021, Lucerne, Neubad"
+                "09.10.2021, Lucerne, Neubad"
               ]
             },
             {
               title: "Exhibition",
               items: [
-                "01.01.2021, Lucerne, <br> Fachklasse Grafik Luzern"
+                "09.10.2021 – 17.10.2021, Lucerne, Fachklasse Grafik Luzern"
               ]
             },
             {
               title: "Afterparty",
               items: [
                 "01.01.2021, Lucerne, Neubad"
-              ]
-            },
-            {
-              title: "Travelling exhibition",
-              items: [
-                "01.01.2021, Lucerne",
-                "01.01.2021, Zurich",
-                "01.01.2021, Basel",
-                "01.01.2021, Geneva"
               ]
             }
           ]
