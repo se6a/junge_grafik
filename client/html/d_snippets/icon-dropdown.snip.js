@@ -1,4 +1,4 @@
-const Icon = getSnippet("icon-circle-l");
+const Icon = getSnippet("icon-circle-m");
 
 module.exports = () => {
   const html = splitTemp/*html*/`

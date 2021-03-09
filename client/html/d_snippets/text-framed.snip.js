@@ -8,11 +8,11 @@ module.exports = (data) => {
   const css = /*css*/`
     .textFramed {
       font-size: var(--fontSize-M);
-      padding: 0 var(--spacing-S);
+      padding: 0 var(--size-S);
       display: block;
       border: var(--borderFull) solid currentColor;
-      border-radius: var(--circle-M);
-      height: var(--circle-M);
+      border-radius: var(--size-M);
+      height: var(--size-M);
     }
 
     .textFramed > p {

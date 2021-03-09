@@ -49,10 +49,10 @@ module.exports = ({ title = "", image = "", content }) => {
       flex-direction: column;
       flex-grow: 1;
       justify-content: space-between;
-      padding: calc(var(--spacing-M) + var(--headerHeight))
-               var(--spacing-M)
-               var(--spacing-L)
-               var(--spacing-M);
+      padding: calc(var(--size-S) + var(--headerHeight))
+               var(--size-S)
+               var(--size-L)
+               var(--size-S);
     }
 
     .HeaderView.image {

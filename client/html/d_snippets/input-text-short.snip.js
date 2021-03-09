@@ -55,7 +55,7 @@ module.exports = (data) => {
 
   const css = /*css*/`
     .formField textarea {
-      min-height: calc(5 * var(--spacing-M));
+      min-height: calc(5 * var(--size-M));
       resize: vertical;
     }
   `;

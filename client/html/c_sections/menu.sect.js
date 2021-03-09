@@ -1,12 +1,31 @@
-const Underlined = getSnippet("text-underlined");
+const ButtonUnderlined = getSnippet("button-underlined");
 
 module.exports = () => {
   const html = splitTemp/*html*/`
     <section class="MENU box">
-      <a href="/submit">${Underlined("Submit!")}</a>
-      <a href="/award">${Underlined("Award")}</a>
-      <a href="/association">${Underlined("Association")}</a>
-      <a href="/contact">${Underlined("Contact")}</a>
+      ${ButtonUnderlined({
+        label: { all: "Submit!" },
+        type: "link",
+        href: "/submit"
+      })}
+
+      ${ButtonUnderlined({
+        label: { all: "Award" },
+        type: "link",
+        href: "/award"
+      })}
+
+      ${ButtonUnderlined({
+        label: { all: "Association" },
+        type: "link",
+        href: "/association"
+      })}
+
+      ${ButtonUnderlined({
+        label: { all: "Contact" },
+        type: "link",
+        href: "/contact"
+      })}
     </section>
   `;
 
@@ -29,25 +48,6 @@ module.exports = () => {
 
     .MENU.--show {
       display: flex;
-    }
-
-    .MENU a {
-      font-size: var(--fontSize-XL);
-      line-height: var(--lineHeight-XL);
-      padding-top: var(--spacing-M);
-    }
-
-    .MENU a .text {
-      padding: var(--spacing-M);
-    }
-
-    .MENU a:hover {
-      background-color: var(--white);
-    }
-
-    .HEADER a:focus,
-    .HEADER button:focus {
-      z-index: 10;
     }
   `;
 

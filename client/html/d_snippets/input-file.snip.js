@@ -55,7 +55,7 @@ module.exports = ({ label, required, tooltip, maxfiles = 1, minfiles = 1, accept
     }
 
     .inputBox.Upload {
-      min-height: var(--spacing-L);
+      min-height: var(--size-L);
       height: unset;
       display: flex;
       flex-direction: row;
@@ -63,22 +63,22 @@ module.exports = ({ label, required, tooltip, maxfiles = 1, minfiles = 1, accept
     }
 
     .inputBox.Upload > * {
-      margin: var(--spacing-S) var(--spacing-S) var(--spacing-S) 0;
+      margin: var(--size-S) var(--size-S) var(--size-S) 0;
       display: flex;
     }
 
     .inputBox > .fileItem {
       font-size: var(--fontSize-M);
-      padding-left: var(--spacing-S);
+      padding-left: var(--size-S);
       display: flex;
       border: var(--borderFull) solid currentColor;
-      border-radius: var(--circle-L);
-      height: var(--circle-L);
+      border-radius: var(--size-L);
+      height: var(--size-L);
     }
 
     .fileItem > .button {
       height: 100%;
-      width: var(--circle-L);
+      width: var(--size-L);
       position: relative;
       display: flex;
       justify-content: center;

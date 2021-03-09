@@ -29,7 +29,7 @@ module.exports = (data) => {
     }
     
     .VIEW.Support ul:first-child {
-      margin-bottom: var(--spacing-L);
+      margin-bottom: var(--size-L);
     }
   `;
 

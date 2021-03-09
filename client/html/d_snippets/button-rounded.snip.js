@@ -1,52 +1,29 @@
-const e = getJs("event-handler");
+const BareButton = getSnippet("button-bare");
 
 module.exports = (button) => {
-  const html = splitTemp/*html*/`
-    <button
-      type=${button.type || "submit"}
-      class="button RoundedButton"
-      ${e.onclick(button.onclick)}
-      ${e.onsubmit(button.onsubmit)}
-    >
-      ${lang`<span>${button.label}</span>`}
-    </button>
-  `;
+  const label = button.label instanceof Object
+              ? lang`<span>${button.label}</span>`
+              : button.label;
+  button.label = `<label class="label">${label}</label>`;
+  button.classes = button.classes
+                 ? button.classes + " RoundedButton"
+                 : "RoundedButton";
+
+  // lang`<span>${button.label}</span>
+
+  const html = ["", BareButton(button), ""];
 
   const css = /*css*/`
     .button.RoundedButton {
       width: auto;
-      border: var(--borderFull) solid currentColor;
-      border-radius: calc(var(--circle-L) / 2);
-      height: var(--circle-L);
+      border-radius: calc(var(--buttonSize-M) / 2);
+      height: var(--buttonSize-M);
       background-color: white;
-      padding: var(--spacing-S);
-      position: relative;
     }
 
-    .RoundedButton {
-      outline: none;
-    }
-    
-    .RoundedButton:hover::after {
-      content: "";
-      border: var(--borderHover) solid currentColor;
-      border-radius: calc(var(--circle-L) / 2);
-      position: absolute;
-      box-sizing: border-box;
-      height: var(--circle-L);
-      left: calc(var(--borderFull) * -1);
-      right: calc(var(--borderFull) * -1);
-    }
-    
-    .RoundedButton:focus::after {
-      content: "";
-      border: var(--borderFocus) solid currentColor;
-      border-radius: calc(var(--circle-L) / 2);
-      position: absolute;
-      box-sizing: border-box;
-      height: var(--circle-L);
-      left: calc(var(--borderFull) * -1);
-      right: calc(var(--borderFull) * -1);
+    .button.RoundedButton:hover {
+      background-color: var(--colorKey);
+      color: var(--white);
     }
   `;
 

@@ -10,12 +10,12 @@ module.exports = () => {
   const css = /*css*/`
     .icon.Next {
       display: flex;
-      right: var(--spacing-S);
+      right: var(--size-S);
       top: 0;
       bottom: 0;
       margin: auto;
-      height: var(--circle-L);
-      width: var(--circle-L);
+      height: var(--iconSize-M);
+      width: var(--iconSize-M);
       border: var(--borderFull) solid currentColor;
       font-size: var(--fontSize-M);
       border-radius: 100%;

@@ -7,12 +7,12 @@ module.exports = (classes = "") => {
 
 const css = /*css*/`
   .svg.circle.medium {
-    --center: calc(var(--circle-M) / 2);
-    --radius: calc(var(--circle-M) / 2 - var(--borderHalf));
+    --center: calc(var(--size-M) / 2);
+    --radius: calc(var(--size-M) / 2 - var(--borderHalf));
     background: yellow;
     display: flex;
-    min-width: var(--circle-M);
-    min-height: var(--circle-M);
+    min-width: var(--size-M);
+    min-height: var(--size-M);
   }
 
   .svg.circle.medium .circle {

@@ -54,7 +54,7 @@ module.exports = ({ details }) => {
     }
 
     .--size-lg .Overview.box {
-      grid-gap: var(--spacing-M);
+      grid-gap: var(--size-M);
       grid-template-columns: 1fr 1fr;
     }
 
@@ -68,6 +68,10 @@ module.exports = ({ details }) => {
       flex-direction: column;
     }
 
+    .OverviewItem.header {
+      margin-bottom: var(--size-XS);
+    }
+
     .OverviewItem.content {
       font-size: var(--fontSize-S);
       line-height: var(--lineHeight-S)
@@ -75,7 +79,7 @@ module.exports = ({ details }) => {
 
     .Overview.item::after {
       content: "";
-      height: var(--spacing-M);
+      height: var(--size-M);
       display: block;
     }
   `;

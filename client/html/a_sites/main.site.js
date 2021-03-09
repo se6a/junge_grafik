@@ -51,22 +51,9 @@ module.exports = async (data) => {
       flex-direction: column;
     }
 
-    .mainSection.splitpage > * {
-      padding: var(--spacing-M);
-      border: var(--borderHalf) solid currentColor;
-    }
-
     .mainSection.fullpage {
-      padding: var(--spacing-L) var(--spacing-M);
+      padding: var(--size-L) var(--size-S);
       border: var(--borderHalf) solid currentColor;
-    }
-
-    .mainSection.splitpage {
-      background-color: white;
-      display: grid;
-      grid-auto-flow: column;
-      grid-template-columns: 1fr;
-      grid-auto-columns: 1fr;
     }
 
     .BottomLine {

@@ -9,8 +9,8 @@ module.exports = ({ classes, symbol }) => {
 
   const css = /*css*/`
     .icon.circle.large {
-      width: var(--circle-L);
-      height: var(--circle-L);
+      width: var(--iconSize-L);
+      height: var(--iconSize-L);
       display: flex;
       justify-content: center;
       align-items: center;

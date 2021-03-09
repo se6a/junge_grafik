@@ -3,14 +3,18 @@ const RoundedButton = getSnippet("button-rounded");
 
 module.exports = () => {
   const html = splitTemp/*html*/`
-    <form id="ProjectRegistrationLang" onsubmit="selectLanguage(event)">
+    <form
+      id="ProjectRegistrationLang"
+      class="form"
+      onsubmit="selectLanguage(event)"
+    >
       <fieldset class="formFieldGroup">
         <div class="formField Language">
           ${Select({
             options: [
-              { id: "de", all: "german" },
-              { id: "fr", all: "french" },
-              { id: "it", all: "italian" }
+              { id: "fr", all: "French" },
+              { id: "de", all: "German" },
+              { id: "it", all: "Italian" }
             ],
             required: true,
             label: {

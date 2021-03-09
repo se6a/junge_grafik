@@ -94,10 +94,6 @@ function closeTooltip($tip) {
 //   $content.style.left = "";
 // }
 
-function toggleMenu() {
-  document.querySelector(".MENU").classList.toggle("--show");
-}
-
 function selectLanguage(e) {
   e.preventDefault();
   const $langForm = e.target;

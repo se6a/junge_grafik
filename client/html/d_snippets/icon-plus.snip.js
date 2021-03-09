@@ -1,4 +1,4 @@
-const IconLarge = getSnippet("icon-circle-l");
+const IconLarge = getSnippet("icon-circle-m");
 
 module.exports = () => {
   const symbol = '<span class="line"></span><span class="line"></span>';

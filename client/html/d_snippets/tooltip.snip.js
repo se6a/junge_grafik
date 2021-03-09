@@ -1,4 +1,4 @@
-const IconMedium = getSnippet("icon-circle-m");
+const IconSmall = getSnippet("icon-circle-s");
 
 module.exports = (tooltip) => {
   if (! tooltip) return "";
@@ -10,7 +10,7 @@ module.exports = (tooltip) => {
       onclick="toggleTooltip(this)"
       onblur="closeTooltip(this)"
     >
-      ${IconMedium({
+      ${IconSmall({
         symbol: "?",
         classes: "Tooltip"
       })}
@@ -29,12 +29,13 @@ module.exports = (tooltip) => {
     .Tooltip > .content {
       display: inline-block;
       width: 100%;
-      min-height: var(--spacing-L);
-      background-color: var(--green);
-      border: var(--borderFull) solid currentColor;
+      min-height: var(--size-L);
+      background-color: var(--colorKey);
+      color: var(--white);
+      border: var(--borderFull) solid var(--colorKey);
       position: absolute;
-      padding: var(--spacing-M);
-      margin-top: var(--spacing-XS);
+      padding: var(--size-M);
+      margin-top: var(--size-XS);
       left: 0;
       z-Index: 1000;
       visibility: hidden;
@@ -46,9 +47,11 @@ module.exports = (tooltip) => {
     }
 
     .Tooltip:hover .icon.circle,
+    .Tooltip:focus .icon.circle,
     .Tooltip.--open .icon.circle {
-      background-color: white;
-      border-width: var(--borderHover);
+      background-color: var(--colorKey);
+      border-color: var(--colorKey);
+      color: var(--white);
     }
 
     .Tooltip.--open .content {

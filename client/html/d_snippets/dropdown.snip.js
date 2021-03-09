@@ -29,8 +29,8 @@ module.exports = ({ title, content }) => {
 
   const css = /*css*/`
     .Dropdown .header.box {
-      padding-top: var(--spacing-S);
-      padding-bottom: var(--spacing-S);
+      padding-top: var(--size-S);
+      padding-bottom: var(--size-S);
       display: flex;
       justify-content: space-between;
       flex-direction: row;

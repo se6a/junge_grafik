@@ -40,13 +40,13 @@ module.exports = ({ name, label, required, tooltip, maxlength = 500 }) => {
     }
 
     .formField textarea {
-      min-height: calc(7 * var(--spacing-M));
+      min-height: calc(7 * var(--size-M));
       resize: vertical;
     }
 
     .--size-md .formField textarea,
     .--size-sm .formField textarea {
-      min-height: calc(7 * var(--spacing-L));
+      min-height: calc(7 * var(--size-L));
     }
   `;
 

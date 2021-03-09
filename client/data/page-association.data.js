@@ -1,7 +1,7 @@
 module.exports = {
   header: {
     title: "Association",
-    content: "Der Verein Junge Grafik möchte Schweizer Grafiktalente von Beginn an fördern. Ermöglicht wird das dank unseren engagierten Vorstandsmitgliedern und einer grosszügigen Gruppe aus Gönner*innen, Stiftungen und Sponsor*innen."
+    content: "The Junge Grafik association wants to ensure that talented young graphic designers in Switzerland are supported and promoted from the very beginning of their education and training. This is made possible thanks to our committed board members and the generous support of patrons, foundations and sponsors."
   },
   sections: [
     {
@@ -18,7 +18,7 @@ module.exports = {
             {
               title: "Founding",
               items: [
-                "Summer 2019"
+                "– Founding: 2019"
               ]
             },
             {
@@ -171,8 +171,8 @@ module.exports = {
         {
           type: "card-simple",
           content: `
-            <span>Sebastian Wyss</span>
-            <span>Programmer</span>
+            <span>Laura Robinson</span>
+            <span>Translator: English</span>
           `
         },
         {
@@ -187,6 +187,13 @@ module.exports = {
           content: `
             <span>Jakob Roduner</span>
             <span>Translator: Italian</span>
+          `
+        },
+        {
+          type: "card-simple",
+          content: `
+            <span>Sebastian Wyss</span>
+            <span>Programmer</span>
           `
         }
       ]

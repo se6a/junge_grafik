@@ -1,92 +1,108 @@
-const Checkbox   = getSnippet("input-checkbox");
-const EmailInput = getSnippet("input-email");
-const IconNext   = getSnippet("icon-next");
+const Checkbox     = getSnippet("input-checkbox");
+const EmailInput   = getSnippet("input-email");
+const IconNext     = getSnippet("icon-next");
+const CircleButton = getSnippet("button-circle");
 
 module.exports = () => {
   const html = splitTemp/*html*/`
     <form
-      class="NewsletterForm"
+      class="NewsletterForm form"
       id="Newsletter"
       action="javascript:"
-      onsubmit="console.log('hello newsletter')"
+      onsubmit="subscribeNewsletter(this)"
     >
+      <section class="NewsletterForm formSegment Success">
+        <p>
+          Thanks! You have successfully subscribed to our newsletter.
+        </p>
+      </section>
 
-      <div class="formField Checkbox">
-        ${Checkbox({
-          name: "terms",
-          label: {
-            all: "I accept to receive Newsletters from Junge Grafik."
-          },
-          required: true
-        })}
-      </div>
+      <section class="NewsletterForm formSegment Subscribe">
 
-      <fieldset class="group">
-        ${EmailInput({
-          id: "footer-newsletter-email",
-          label: { de: "Email" },
-          placeholder: "your e-mail",
-          required: true
-        })}
-
-        <div class="formField Submit">
-          <button id="footer-newsletter-submit" class="button" onclick="console.log('clicked')">
-            ${IconNext()}
-          </button>
+        <div class="NewsletterForm formField Checkbox">
+          ${Checkbox({
+            name: "terms",
+            label: {
+              all: "I accept to receive Newsletters from Junge Grafik."
+            },
+            required: true
+          })}
         </div>
-      </fieldset>
 
+        <fieldset class="NewsletterForm formFieldGroup">
+          ${EmailInput({
+            id: "footer-newsletter-email",
+            name: "email",
+            label: { de: "Email" },
+            placeholder: "your email",
+            required: true
+          })}
+
+          <div class="formField Submit">
+            ${CircleButton({
+              id: "footer-newsletter-submit",
+              classes: "Submit",
+              type: "submit",
+              icon: IconNext()
+            })}
+          </div>
+        </fieldset>
+
+      </section>
     </form>
   `;
 
   const css = /*css*/`
-    .NewsletterForm .formField.Checkbox,
-    .NewsletterForm .group {
-      margin-bottom: var(--spacing-S);
+    .NewsletterForm .label {
+      font-size: var(--fontSize-S);
+      line-height: var(--lineHeight-S);
     }
 
-    .NewsletterForm .group {
+    .NewsletterForm.formFieldGroup {
       display: flex;
       column-gap: unset;
     }
 
-    .NewsletterForm .formField.Email .header {
+    .NewsletterForm .formField {
+      width: auto;
+    }
+
+    .NewsletterForm .formField.Submit {
+      flex-grow: 0;
+    }
+
+    .NewsletterForm.Checkbox,
+    .NewsletterForm.formFieldGroup {
+      margin-bottom: var(--size-S);
+    }
+
+    .NewsletterForm > .Email > .header {
       display: none;
     }
 
-    .NewsletterForm .formField.Submit .button {
-      padding: 0 0 0 var(--spacing-M);
-    }
-
-    .NewsletterForm .group {
-      display: flex;
-      column-gap: unset;
-    }
-
-    .formField {
-      width: auto;
-    }
-
-    .NewsletterForm .group {
-      display: flex;
-      column-gap: unset;
-    }
-    
-    .Newsletter .input.Email {
+    .NewsletterForm .Email.input {
       font-size: inherit;
-      height: var(--circle-L);
+      height: var(--iconSize-M);
     }
 
-    .NewsletterForm .group {
-      display: flex;
-      column-gap: unset;
-    }
-    
-    .Newsletter .button {
+    .NewsletterForm .Submit.button {
       width: auto;
       padding: 0;
-      margin: 0 0 0 var(--spacing-S);
+      margin: 0 0 0 var(--size-S);
       border: 0;
+    }
+
+    .NewsletterForm .formSegment.Success {
+      visibility: hidden;
+      position: absolute;
+    }
+
+    .NewsletterForm.--subscribed .formSegment.Subscribe {
+      visibility: hidden;
+    }
+
+    .NewsletterForm.--subscribed .formSegment.Success {
+      visibility: visible; 
     }
   `;
 

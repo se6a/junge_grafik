@@ -9,8 +9,8 @@ module.exports = ({ classes, symbol, attributes = "" }) => {
 
   const css = /*css*/`
     .icon.circle.medium {
-      width: var(--circle-M);
-      height: var(--circle-M);
+      width: var(--iconSize-M);
+      height: var(--iconSize-M);
       display: flex;
       justify-content: center;
       align-items: center;

@@ -1,7 +1,7 @@
 module.exports = {
   header: {
     title: "Award",
-    content: "Is your graphic design work more than just a school project? Then we’d love to see it. You can submit any outstanding work you’ve created as part of your studies."
+    content: "Is your graphic design work more than just a project? Then we’d love to see it. You can submit any outstanding work you’ve created as part of your studies. "
   },
   sections: [
     {
@@ -18,13 +18,24 @@ module.exports = {
             {
               title: "Participation",
               items: [
-                "– All training courses in the fields of visual communication and graphic design *",
-                "– All levels of education",
-                "– All years of study and training",
-                "– Students from across Switzerland",
-                "– Both group and individual work",
-                "– All genres of visual communication and graphic design",
-                "– Work completed within the last two years: school year 2019–2020 and 2020–2021"
+                `
+                  <span data-lang="de" onclick="setLanguage(this, event.target)">
+                    <p>
+                      <button class="link" type="button" data-lang="fr">FR</button> /
+                      <button class="link" type="button" data-lang="de">DE</button> /
+                      <button class="link" type="button" data-lang="it">IT</button>
+                    </p>
+                    <p class="textOption fr">La participation est ouverte aux étudiant·es en graphisme CFC en entreprise ou dans une école de maturité professionnelle ; aux étudiant·es d’une haute école spécialisée (Bachelor en communication visuelle / graphisme) ou en formation professionnelle supérieure (Designer ES en communication visuelle)</p>
+                    <p class="textOption de">Grafiklernende EFZ in einem Betrieb oder an einer Fachklasse Grafik; Studierende an einer Fachhochschule (BA-Studiengang Visuelle Kommunikation / Graphic Design) oder in der Höheren Berufsbildung (dipl. Gestalterin / dipl. Gestalter HF)</p>
+                    <p class="textOption it">Apprendisti grafici AFC presso un’azienda o presso una scuola di arte applicata; studenti di una scuola universitaria professionale (corso BA in comunicazione visiva / graphic design) o in una formazione professionale superiore (dipl. Gestalterin / dipl. Gestalter HF)</p>
+                  </span>
+                `,
+                `– All levels of education`,
+                `– All years of study and training`,
+                `– Students from across Switzerland`,
+                `– Both group and individual work`,
+                `– All genres of visual communication and graphic design`,
+                `– Work completed within the last two years: school year 2019–2020 and 2020–2021`
               ]
             },
             {

@@ -9,6 +9,7 @@ module.exports = (data) => {
       id="SubmitProjectForm"
       action="javascript:"
       data-state="initial"
+      class="form"
     >
       <section class="formSegment Designer">
         <header>
@@ -17,7 +18,7 @@ module.exports = (data) => {
           </h1>
         </header>
         <div class="formContent">
-          ${Form.create("new-designer")}
+          ${Form.create("form-submit-designer")}
         </div>
       </section>
 
@@ -28,7 +29,7 @@ module.exports = (data) => {
           </h1>
         </header>
         <div class="formContent">
-          ${Form.create("new-project")}
+          ${Form.create("form-submit-project")}
         </div>
       </section>
 
@@ -108,13 +109,13 @@ module.exports = (data) => {
       display: none;
     }
 
-    .message.error {
+    .Submit .message.error {
       font-size: var(--fontSize-L);
       display: none;
-      margin-bottom: var(--spacing-L);
+      margin-bottom: var(--size-L);
     }
 
-    .formSegment.Success {
+    .Submit .formSegment.Success {
       display: none;
       min-height: 40vh;
     }
@@ -145,19 +146,19 @@ module.exports = (data) => {
 
     @media screen and (max-width: 1024px) {
 
-      .formFieldGroup {
+      .Submit .formFieldGroup {
         grid-auto-flow: row;
         grid-template-columns: 1fr 1fr;
       }
 
-      .formFieldGroup.Upload,
-      .formFieldGroup.Description {
+      .Submit .formFieldGroup.Upload,
+      .Submit .formFieldGroup.Description {
         grid-template-columns: 1fr;
       }
     }
 
     @media screen and (max-width: 750px) {
-      .formFieldGroup {
+      .Submit .formFieldGroup {
         grid-template-columns: 1fr;
       }
     } 

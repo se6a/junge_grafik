@@ -17,9 +17,15 @@ module.exports = () => {
             title: "Social",
             content: /*html*/`
               <ul>
-                <li><a class="link" href="" target="_blank">Instagram</a></li>
-                <li><a class="link" href="" target="_blank">Facebook</a></li>
-                <li><a class="link" href="" target="_blank">LinkedIn</a></li>
+                <li><a class="link" target="_blank" href="https://instagram.com/jungegrafik">
+                  Instagram
+                </a></li>
+                <li><a class="link" target="_blank" href="https://facebook.com/Junge-Grafik-108635944605605">
+                  Facebook
+                </a></li>
+                <li><a class="link" target="_blank" href="https://linkedin.com/company/junge-grafik-schweiz">
+                  LinkedIn
+                </a></li>
               </ul>
             `
           },
@@ -28,9 +34,15 @@ module.exports = () => {
             title: "Network",
             content: /*html*/`
               <ul>
-                <li><a class="link" href="" target="_blank">SGV Schweizer Grafiker Verband</a></li>
-                <li><a class="link" href="" target="_blank">SGD Swiss Graphic Designers</a></li>
-                <li><a class="link" href="" target="_blank">Weltformat Graphic Design Festival</a></li>
+                <li><a class="link" target="_blank" href="https://sgv.ch">
+                  SGV Schweizer Grafiker Verband
+                </a></li>
+                <li><a class="link" target="_blank" href="https://sgd.ch">
+                  SGD Swiss Graphic Designers
+                </a></li>
+                <li><a class="link" target="_blank" href="https://weltformat-festival.ch">
+                  Weltformat Graphic Design Festival
+                </a></li>
               </ul>
             `
           },

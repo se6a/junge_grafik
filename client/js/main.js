@@ -64,3 +64,20 @@ function closeDropdown($dropdown) {
     $dropdown.classList.remove("--open");
   }, 100);
 }
+
+function subscribeNewsletter($form) {
+  const formdata = new FormData($form);
+  console.log($form, formdata);
+  $form.classList.add("--subscribed");
+}
+
+function toggleMenu($menuButton) {
+  $menuButton.classList.toggle("--open");
+  document.querySelector(".MENU").classList.toggle("--show");
+}
+
+function setLanguage($container, $selector) {
+  if ($selector.dataset.lang) {
+    $container.dataset.lang = $selector.dataset.lang;
+  }
+}

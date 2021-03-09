@@ -36,7 +36,7 @@ module.exports = ({ title, content, size }) => {
 
     .TextSection.title {
       display: none;
-      margin-bottom: var(--spacing-S);
+      margin-bottom: var(--size-S);
     }
 
     .TextSection.--useTitle > .title {

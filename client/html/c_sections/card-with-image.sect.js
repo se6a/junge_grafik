@@ -46,7 +46,7 @@ module.exports = ({ name = "", title, image, content }) => {
     }
 
     .ImageCard.title {
-      margin-bottom: var(--spacing-S);
+      margin-bottom: var(--size-S);
     }
 
     .ImageCard.imageWrapper > .box {

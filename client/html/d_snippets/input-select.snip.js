@@ -78,35 +78,31 @@ module.exports = (data) => {
       width: 100%;
     }
 
-    .Select.input,
-    .Select.options {
-      cursor: pointer;
-    }
-
-    .Select .option > * {
-      pointer-events: none;
-    }
-
     .formField.Select .inputBox.outer {
-      height: var(--spacing-L);
+      height: inherit;
     }
 
     .formField.Select .inputBox.inner {
       position: absolute;
       width: 100%;
       background-color: white;
-      min-height: 100%;
       display: block;
     }
 
     .formField.Select .icon.Dropdown {
       position: absolute;
-      right: var(--spacing-S);
-      top: calc((var(--spacing-L) - var(--circle-L)) / 2);
+      right: var(--size-S);
+      top: calc((var(--fieldSize-M) - var(--iconSize-M)) / 2);
       pointer-events: none;
     }
 
+    .Select.input {
+      align-items: center;
+      cursor: pointer;
+    }
+
     .Select.options {
+      cursor: pointer;
       display: none;
       border: var(--borderFull) solid currentColor;
       border-top: 0;
@@ -115,18 +111,19 @@ module.exports = (data) => {
     }
 
     .Select > .option {
-      padding: var(--spacing-S);
-      height: var(--spacing-L);
+      padding: 0 var(--size-S);
+      height: var(--fieldSize-M);
+      display: flex;
+      align-items: center;
+    }
+
+    .Select > .option > * {
+      pointer-events: none;
     }
 
     .Select > .option:hover,
-    .Select .option.--selected {
+    .Select > .option.--selected {
       background-color: var(--gray);
-    }
-
-    input.Select {
-      outline: none;
-      pointer-events: none;
     }
 
     .Select .inputBox.inner:focus-within {
@@ -137,6 +134,11 @@ module.exports = (data) => {
 
     .inputBox.inner:focus-within .options {
       display: block;
+    }
+
+    input.Select {
+      outline: none;
+      pointer-events: none;
     }
   `;
 
