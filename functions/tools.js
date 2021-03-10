@@ -106,6 +106,8 @@
 
 ****************************************************************************/
 
+const e = require("express");
+
 /* SET GLOBAL VARIABLE FOR DIFFERENT ENVIRONMENTS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -556,6 +558,11 @@ g_.removeWhitespace_ = (input) => {
   }
 
   return output;
+};
+
+g_.easyEncode = function(email) {
+  const encoded = [...email].map((_char) => Math.pow(_char.charCodeAt(0), 2));
+  return JSON.stringify(encoded);
 };
 
 /****************************************************************************

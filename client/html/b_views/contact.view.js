@@ -18,13 +18,13 @@ module.exports = (data) => {
             content: `
                 <span>→ Address for letters</span>
                 <span>Verein Junge Grafik</span>
-                <span>6000 Luzern"</span>
+                <span>6000 Luzern</span>
             `
           },
           {
             type: "card-simple",
             content: `
-                <span>→ Address for Packages</span>
+                <span>→ Address for packages</span>
                 <span>SGV Schweizer Grafiker Verband</span>
                 <span>Junge Grafik</span>
                 <span>Schulhausstrasse 64</span>
@@ -34,29 +34,45 @@ module.exports = (data) => {
           {
             type: "card-simple",
             content: `
-                <span>General matters</span>
-                <span><a href="mailto:info@jungegrafik.ch">info@jungegrafik.ch</a></span>
+                <span>General matters / questions about project registration</span>
+                <span>
+                  <a class="link contactLink" data-contact="${easyEncode("info@jungegrafik.ch")}">
+                    contact
+                  </a>
+                </span>
             `
           },
           {
             type: "card-simple",
             content: `
                 <span>Sponsorship</span>
-                <span><a href="mailto:remo.stahl@jungegrafik.ch">remo.stahl@jungegrafik.ch</a></span>
+                <span>
+                  <a class="link contactLink" data-contact="${easyEncode("remo.stahl@jungegrafik.ch")}">
+                    contact
+                  </a>
+                </span>
             `
           },
           {
             type: "card-simple",
             content: `
                 <span>Foundations</span>
-                <span><a href="mailto:loana.boppart@jungegrafik.ch">loana.boppart@jungegrafik.ch</a></span>
+                <span>
+                  <a class="link contactLink" data-contact="${easyEncode("loana.boppart@jungegrafik.ch")}">
+                    contact
+                  </a>
+                </span>
             `
           },
           {
             type: "card-simple",
             content: `
                 <span>Patrons</span>
-                <span><a href="mailto:tobias.klauser@jungegrafik.ch">tobias.klauser@jungegrafik.ch</a></span>
+                <span>
+                  <a class="link contactLink" data-contact="${easyEncode("tobias.klauser@jungegrafik.ch")}">
+                    contact
+                  </a>
+                </span>
             `
           }
         ]

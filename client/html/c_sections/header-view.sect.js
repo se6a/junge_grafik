@@ -61,10 +61,19 @@ module.exports = ({ title = "", image = "", content }) => {
     .HeaderView.title {
       display: flex;
       flex-wrap: wrap;
+      overflow: hidden;
+      padding-bottom: var(--size-S);
     }
 
     .HeaderView.title > .textUnderlined:first-child {
       margin-bottom: var(--size-S);
+      position: relative;
+    }
+
+    .HeaderView.title > .textUnderlined:first-child .line {
+      bottom: calc(var(--borderFull) * -1);
+      width: 100vw;
+      position: absolute;
     }
 
     .HeaderView.title > .textUnderlined:last-child {
@@ -72,7 +81,7 @@ module.exports = ({ title = "", image = "", content }) => {
     }
 
     .HeaderView.title .text {
-      white-space: break-spaces;
+      white-space: pre;
     }
 
     .HEADER-VIEW .textUnderlined.outerBox {
@@ -90,7 +99,7 @@ module.exports = ({ title = "", image = "", content }) => {
       justify-content: space-between;
       padding: calc(var(--size-S) + var(--headerHeight))
                var(--size-S)
-               var(--size-L)
+               var(--size-M)
                var(--size-S);
     }
 

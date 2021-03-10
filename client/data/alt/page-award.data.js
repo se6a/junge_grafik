@@ -10,7 +10,7 @@ module.exports = {
         {
           type: "text",
           title: "Award",
-          content: "Junge Grafik recognizes innovative, diverse and exceptional graphic work created during a student’s education and training. The Junge Grafik Award was created for both apprentices and students across Switzerland. The 30 winners will be nominated by a renowned jury and awarded their prize at the Weltformat Graphic Design Festival. All winning entries will be exhibited in multiple locations across Switzerland and featured on this website and in a printed publication – providing the prize winners with an ideal platform to promote their work."
+          content: "Junge Grafik recognizes innovative, diverse and exceptional graphic work created during a student’s education and training. The Junge Grafik Award was created for both apprentices and students across Switzerland. The 30 winners will be nominated by a renowned jury and awarded their prize at the Weltformat Graphic Design Festival. All winning entries will be exhibited in multiple locations across Switzerland and featured on this website and in a printed publication - providing the prize winners with an ideal platform to promote their work."
         },
         {
           type: "overview",
@@ -57,7 +57,7 @@ module.exports = {
             {
               title: "Prize",
               items: [
-                "Winners will receive a certificate, at least CHF 400 in cash per project and a range of other prizes (such as Dinamo Typefaces, Magazines, coupons usw.) Their work will also be featured in the publication “Junge Grafik 2021”."
+                "Winners will receive a certificate, at least CHF 400 in cash per project and a range of other prizes. Their work will also be featured in the publication “Junge Grafik 2021”."
               ]
             },
             {
@@ -81,7 +81,7 @@ module.exports = {
             {
               title: "Publication",
               items: [
-                "The publication “Junge Grafik 2021” will feature all the winning entries. Prize winners, sponsors, media contacts and participating schools will receive a free copy. Additional copies will be sold in the Junge Grafik online shop."
+                "The publication “Junge Grafik 2021” will feature all the winning entries. Prize winners, sponsors, media contacts and participating schools will receive a free copy. Additional copies will be sold in the Junge Grafik online shop (Edition: XXX Ex.)."
               ]
             },
             {
@@ -106,7 +106,7 @@ module.exports = {
             src: "jury/jg_jury_21-audrey_fleur_ljubenovic.png",
             alt: "Portait of jury member Audrey Fleur Ljubenovic"
           },
-          content: `<a class="link" href="https://audreyfleur.ch" target="_blank">audreyfleur.ch</a>`
+          content: `<a href"audreyfleur.ch" target="_blank">audreyfleur.ch</a>`
         },
         {
           type: "card-with-image",
@@ -115,7 +115,7 @@ module.exports = {
             src: "jury/jg_jury_21-demian_conrad.png",
             alt: "Portait of jury member Demian Conrad"
           },
-          content: `<a class="link" href="https://demianconrad.ch" target="_blank">demianconrad.ch</a>`
+          content: `<a href"demianconrad.ch" target="_blank">demianconrad.ch</a>`
         },
         {
           type: "card-with-image",
@@ -124,7 +124,7 @@ module.exports = {
             src: "jury/jg_jury_21-dennis_moya.png",
             alt: "Portait of jury member Dennis Moya"
           },
-          content: `<a class="link" href="https://dennismoya.ch" target="_blank">dennismoya.ch</a>`
+          content: `<a href"dennismoya.ch" target="_blank">dennismoya.ch</a>`
         },
         {
           type: "card-with-image",
@@ -133,7 +133,7 @@ module.exports = {
             src: "jury/jg_jury_21-felix_pfaeffli.png",
             alt: "Portait of jury member Felix Pfäffli"
           },
-          content: `<a class="link" href="https://studiofeixen.ch" target="_blank">studiofeixen.ch</a>`
+          content: `<a href"studiofeixen.ch" target="_blank">studiofeixen.ch</a>`
         },
         {
           type: "card-with-image",
@@ -142,7 +142,7 @@ module.exports = {
             src: "jury/jg_jury_21-jonas_voegeli.png",
             alt: "Portait of jury member Jonas Vögeli"
           },
-          content: `<a class="link" href="https://hubertus-design.ch" target="_blank">hubertus-design.ch</a>`
+          content: `<a href"hubertus-design.ch" target="_blank">hubertus-design.ch</a>`
         },
         {
           type: "card-with-image",
@@ -151,7 +151,7 @@ module.exports = {
             src: "jury/jg_jury_21-larissa_kasper.png",
             alt: "Portait of jury member Larissa Kasper"
           },
-          content: `<a class="link" href="https://kasper-florio.ch" target="_blank">kasper-florio.ch</a>`
+          content: `<a href"kasper-florio.ch" target="_blank">kasper-florio.ch</a>`
         },
         {
           type: "card-with-image",
@@ -178,7 +178,7 @@ module.exports = {
             src: "jury/jg_jury_21-valeria_bonin.png",
             alt: "Portait of jury member Valeria Bonin"
           },
-          content: `<a class="link" href="https://bonbon.li" target="_blank">bonbon.li</a>`
+          content: `<a href"bonbon.li" target="_blank">bonbon.li</a>`
         }
       ]
     }

@@ -21,24 +21,56 @@ log4js.configure({
 
 const logger = log4js.getLogger("submitErrors");
 
+/* Newsletter Subscriber
+´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
 Router.post(
   "/email",
   FormParser.single("e-mail"),
-  (req, res) => {
-    const formdata = req.body;
-    const email = formdata.fields["e-mail"];
+  prepareSubscriber,
+  rebuildForm,
+  sendNewsletterForm
 
-    res.sendStatus(200);
-  }
 );
 
+async function prepareSubscriber(req, res, next) {
+  res.locals.originalForm = req.body;
+
+  next();
+}
+
+async function sendNewsletterForm(req, res, next) {
+  await fetch(
+    "https://api.jungegrafik.ch/newsletter/opt-in/",
+    {
+      method: "POST",
+      body: res.locals.newForm
+    }
+  )
+
+  .then(async (rawRes) => {
+    const symphonyRes = await rawRes.json();
+
+    if (symphonyRes.ergebnis === "success")
+      res.sendStatus(200);
+    else
+      throw Error("Something went wrong.");
+  })
+
+  .catch((error) => {
+    console.log(error);
+    res.sendStatus(400);
+  });
+}
+
+/* Project Entry
+´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
 Router.post(
   "/newproject",
   FormParser.array("files"),
   Express.raw(),
   prepareEntry,
   rebuildForm,
-  sendForm,
+  sendEntryForm,
   buildFileForm,
   sendFiles
 );
@@ -77,14 +109,14 @@ function rebuildForm(req, res, next) {
     }
   }
 
-  newForm.append("action[einreichung]", "submit");
-
   res.locals.newForm = newForm;
 
   next();
 }
 
-async function sendForm(req, res, next) {
+async function sendEntryForm(req, res, next) {
+  res.locals.newForm.append("action[einreichung]", "submit");
+
   await fetch(
     "https://api.jungegrafik.ch/symphony/api/entries/einreichungen/?auth-token=02701d93&format=json",
     {
@@ -93,23 +125,23 @@ async function sendForm(req, res, next) {
     }
   )
 
-    .then(async (raw) => {
-      const formRes = await raw.json();
-      return formRes.response;
-    })
+  .then(async (rawRes) => {
+    const symphonyRes = await rawRes.json();
+    return symphonyRes.response;
+  })
 
-    .then((formRes) => {
-      if (formRes._result === "success") {
-        res.locals.entry.id = formRes._id;
-      }
-      else {
-        throw Error(formRes.message.value);
-      }
-    })
+  .then((symphonyRes) => {
+    if (symphonyRes._result === "success") {
+      res.locals.entry.id = symphonyRes._id;
+    }
+    else {
+      throw Error(symphonyRes.message.value);
+    }
+  })
 
-    .then(() => next())
+  .then(() => next())
 
-    .catch((error) => failed(res, req, "sendForm", error));
+  .catch((error) => failed(res, req, "sendEntryForm", error));
 }
 
 function buildFileForm(req, res, next) {

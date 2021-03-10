@@ -9,7 +9,19 @@ function Detail({ title, items }) {
       </header>
 
       <ul class="OverviewItem content">
-        ${items.reduce((list, _item) => list + `<li>${_item}</li>`, "")}
+        ${items.reduce((list, _item) => {
+          let classes = "";
+          if (_item.startsWith("– ")) {
+            classes = ' class="dash"';
+            _item = _item.slice(2);
+          }
+          else
+          if (_item.startsWith("> ")) {
+            classes = ' class="arrow"';
+            _item = _item.slice(2);
+          }
+          return list + `<li${classes}>${_item}</li>`;
+        }, "")}
       </ul>
 
     </article>

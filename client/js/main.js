@@ -14,6 +14,7 @@ document.addEventListener(
   () => {
     console.log("DOM loaded");
     attachMediaQueryListener();
+    showContacts();
   }
 );
 
@@ -40,6 +41,8 @@ function setDocumentSize(size, q) {
     else {
       document.body.classList.add(newSize);
     }
+
+    setCssVariables();
   }
 }
 
@@ -71,7 +74,11 @@ function closeDropdown($dropdown) {
 }
 
 function subscribeNewsletter($form) {
-  const formdata = new FormData($form);
+  const email = $form.querySelector(".input.Email").value;
+  const formdata = new FormData();
+
+  formdata.set("fields[e-mail]", email);
+  formdata.set("action[newsletter-opt-in]", "Abschicken");
 
   postRequest("email", formdata)
 
@@ -120,4 +127,38 @@ function maybeQuery(name, selector) {
   if (! PAGE.$[name]) {
     PAGE.$[name] = document.querySelectorAll(selector);
   }
+}
+
+function setCssVariables() {
+  const vars = {
+    "--scrollbarWidth": `${scrollbarWidth()}px`
+  };
+
+  for (const _var in vars) {
+    document.body.style.setProperty(_var, vars[_var]);
+  }
+}
+
+function scrollbarWidth() {
+  return window.outerWidth - window.innerWidth;
+}
+
+function easyDecode(cypher) {
+  const contact = [...cypher].map(
+    (_char) => String.fromCharCode(Math.sqrt(_char))
+  ).join("");
+  return contact;
+}
+
+function showContacts() {
+  const $contacts = document.body.querySelectorAll(".contactLink");
+  console.log($contacts);
+  setTimeout(() => {
+    $contacts.forEach((_$contact) => {
+      const _cypher = JSON.parse(_$contact.dataset.contact);
+      const _decoded = easyDecode(_cypher);
+      _$contact.setAttribute("href", `mailto:${_decoded}`);
+      _$contact.innerHTML = _decoded;
+    });
+  }, 50);
 }

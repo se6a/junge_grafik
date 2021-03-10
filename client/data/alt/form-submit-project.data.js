@@ -61,10 +61,10 @@ module.exports = [
       type: "text-short",
       required: true,
       tooltip: {
-          de: `– Gib deinem Projekt einen Titel. Falls deine Arbeit ausgezeichnet wird, so wird der Projekttitel auf der Website als auch in der Publikation erscheinen.`,
-          fr: "X",
-          it: "X"
-        }
+        de: `– Gib deinem Projekt einen Titel. Falls deine Arbeit ausgezeichnet wird, so wird der Projekttitel auf der Website als auch in der Publikation erscheinen.`,
+        fr: "X",
+        it: "X"
+      }
     },
     // Enstehungsjahr
     {
@@ -93,21 +93,21 @@ module.exports = [
       label: { all: "Tag #1" },
       type: "select-1",
       options: [
-        { id: "1", all: "Animation design" },
-        { id: "2", all: "Corporate design" },
-        { id: "3", all: "Editorial design" },
-        { id: "4", all: "Environmental design" },
-        { id: "5", all: "Exhibition design" },
-        { id: "6", all: "Photography" },
-        { id: "7", all: "Illustration" },
-        { id: "8", all: "Interaction design" },
-        { id: "9", all: "Infographic design" },
-        { id: "10", all: "Packaging design" },
-        { id: "11", all: "Poster design" },
-        { id: "12", all: "Signage design" },
-        { id: "13", all: "Typeface design" },
-        { id: "14", all: "Typography" },
-        { id: "15", all: "Web design" }
+        { id: "Animation design", all: "Animation design" },
+        { id: "Corporate design", all: "Corporate design" },
+        { id: "Editorial design", all: "Editorial design" },
+        { id: "Environmental design", all: "Environmental design" },
+        { id: "Exhibition design", all: "Exhibition design" },
+        { id: "Photography", all: "Photography" },
+        { id: "Illustration", all: "Illustration" },
+        { id: "Interaction design", all: "Interaction design" },
+        { id: "Infographic design", all: "Infographic design" },
+        { id: "Packaging design", all: "Packaging design" },
+        { id: "Poster design", all: "Poster design" },
+        { id: "Signage design", all: "Signage design" },
+        { id: "Typeface design", all: "Typeface design" },
+        { id: "Typography", all: "Typography" },
+        { id: "Web design", all: "Web design" }
       ],
       required: true,
       tooltip: {
@@ -122,21 +122,21 @@ module.exports = [
       label: { all: "Tag #2" },
       type: "select-1",
       options: [
-        { id: "1", all: "Animation design" },
-        { id: "2", all: "Corporate design" },
-        { id: "3", all: "Editorial design" },
-        { id: "4", all: "Environmtental design" },
-        { id: "5", all: "Exhibition design" },
-        { id: "6", all: "Photography" },
-        { id: "7", all: "Illustration" },
-        { id: "8", all: "Interaction design" },
-        { id: "9", all: "Infographic design" },
-        { id: "10", all: "Packaging design" },
-        { id: "11", all: "Poster design" },
-        { id: "12", all: "Signage design" },
-        { id: "13", all: "Typeface design" },
-        { id: "14", all: "Typography" },
-        { id: "15", all: "Web design" }
+        { id: "Animation design", all: "Animation design" },
+        { id: "Corporate design", all: "Corporate design" },
+        { id: "Editorial design", all: "Editorial design" },
+        { id: "Environmental design", all: "Environmental design" },
+        { id: "Exhibition design", all: "Exhibition design" },
+        { id: "Photography", all: "Photography" },
+        { id: "Illustration", all: "Illustration" },
+        { id: "Interaction design", all: "Interaction design" },
+        { id: "Infographic design", all: "Infographic design" },
+        { id: "Packaging design", all: "Packaging design" },
+        { id: "Poster design", all: "Poster design" },
+        { id: "Signage design", all: "Signage design" },
+        { id: "Typeface design", all: "Typeface design" },
+        { id: "Typography", all: "Typography" },
+        { id: "Web design", all: "Web design" }
       ]
     },
     // Tag #3
@@ -145,21 +145,21 @@ module.exports = [
       label: { all: "Tag #3" },
       type: "select-1",
       options: [
-        { id: "1", all: "Animation design" },
-        { id: "2", all: "Corporate design" },
-        { id: "3", all: "Editorial design" },
-        { id: "4", all: "Environmtental design" },
-        { id: "5", all: "Exhibition design" },
-        { id: "6", all: "Photography" },
-        { id: "7", all: "Illustration" },
-        { id: "8", all: "Interaction design" },
-        { id: "9", all: "Infographic design" },
-        { id: "10", all: "Packaging design" },
-        { id: "11", all: "Poster design" },
-        { id: "12", all: "Signage design" },
-        { id: "13", all: "Typeface design" },
-        { id: "14", all: "Typography" },
-        { id: "15", all: "Web design" }
+        { id: "Animation design", all: "Animation design" },
+        { id: "Corporate design", all: "Corporate design" },
+        { id: "Editorial design", all: "Editorial design" },
+        { id: "Environmental design", all: "Environmental design" },
+        { id: "Exhibition design", all: "Exhibition design" },
+        { id: "Photography", all: "Photography" },
+        { id: "Illustration", all: "Illustration" },
+        { id: "Interaction design", all: "Interaction design" },
+        { id: "Infographic design", all: "Infographic design" },
+        { id: "Packaging design", all: "Packaging design" },
+        { id: "Poster design", all: "Poster design" },
+        { id: "Signage design", all: "Signage design" },
+        { id: "Typeface design", all: "Typeface design" },
+        { id: "Typography", all: "Typography" },
+        { id: "Web design", all: "Web design" }
       ]
     }
   ],
@@ -197,9 +197,9 @@ module.exports = [
       },
       type: "select-1",
       options: [
-        { id: "1", de: "EFZ", fr: "X", it: "X" },
-        { id: "2", de: "HF", fr: "X", it: "X" },
-        { id: "3", de: "FH", fr: "X", it: "X" }
+        { id: "683", de: "EFZ", fr: "X", it: "X" },
+        { id: "685", de: "HF", fr: "X", it: "X" },
+        { id: "684", de: "FH", fr: "X", it: "X" }
       ],
       required: true
     },

@@ -23,8 +23,6 @@ module.exports = ({ name = "", title, image, content }) => {
           </div>
 
         </div>
-
-        <div class="pushHeight"></div>
       </div>
 
     </article>
@@ -36,11 +34,16 @@ module.exports = ({ name = "", title, image, content }) => {
       position: relative;
     }
     
-    .ImageCard .box {
+    .ImageCard .imageWrapper .box {
       overflow: hidden;
       width: 100%;
       height: 100%;
       position: absolute;
+    }
+
+    .ImageCard .contentWrapper,
+    .ImageCard .contentWrapper .box {
+      height: 100%;
     }
 
     .ImageCard.title {
@@ -53,14 +56,6 @@ module.exports = ({ name = "", title, image, content }) => {
 
     .ImageCard > .pushHeight {
       margin-top: 100%;
-    }
-
-    .ImageCard.contentWrapper > .pushHeight {
-      margin-top: 50%;
-    }
-
-    .--size-sm .ImageCard.contentWrapper > .pushHeight {
-      margin-top: 30%;
     }
 
     .ImageCard.content {

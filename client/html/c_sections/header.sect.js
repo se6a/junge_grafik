@@ -69,6 +69,10 @@ module.exports = () => {
       border: none;
     }
 
+    .HEADER .logo:focus {
+      outline: none;
+    }
+
     .--size-md .HEADER {
       grid-template-columns: 40% 60%;
   }

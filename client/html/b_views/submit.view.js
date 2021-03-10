@@ -1,23 +1,34 @@
 const HeaderView   = getSection("header-view");
-const LanguageForm = getSection("form-language");
-const ProjectForm  = getSection("form-submit-project");
+// const LanguageForm = getSection("form-language");
+// const ProjectForm  = getSection("form-submit-project");
+
+// const html = splitTemp/*html*/`
+//     <main id="Submit" class="VIEW Submit" data-lang="">
+//       ${HeaderView({
+//         title: "Project registration",
+//         content: `Register to take part in the competition and submit your graphic work. Get started here.`
+//       })}
+
+//       <article class="mainSection fullpage Language">
+//         ${LanguageForm()}
+//       </article>
+
+//       <article class="mainSection fullpage Form" data-lang="">
+//         ${ProjectForm()}
+//       </article>
+//     </main>
+//   `;
 
 module.exports = (data) => {
   const html = splitTemp/*html*/`
     <main id="Submit" class="VIEW Submit" data-lang="">
       ${HeaderView({
         title: "Project registration",
-        content: `Hier kannst du dich zur Wettbewerbs-teilnahme registrieren und deine 
-        Grafik-arbeit einreichen. Let’s go.`
+        content: `
+          <div>Coming soon!</div>
+          <div>15.03.2021</div>
+        `
       })}
-
-      <article class="mainSection fullpage Language">
-        ${LanguageForm()}
-      </article>
-
-      <article class="mainSection fullpage Form" data-lang="">
-        ${ProjectForm()}
-      </article>
     </main>
   `;
 

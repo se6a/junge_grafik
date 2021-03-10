@@ -51,8 +51,7 @@ module.exports = () => {
             title: "Links",
             content: /*html*/`
               <ul>
-                <li><a class="link" href="" target="_blank">Imprint</a></li>
-                <li><a class="link" href="" target="_blank">Data privacy</a></li>
+                <li><a class="link" href="/data-privacy" target="_blank">Data privacy</a></li>
               </ul>
             `
           }

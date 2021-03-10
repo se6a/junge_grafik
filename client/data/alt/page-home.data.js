@@ -1,6 +1,6 @@
 module.exports = {
   header: {
-    image: "media/theme/20210309_Keyvisual_1920x960px_RZ_3.svg"
+    image: "media/theme/20210308_Keyvisual_Test_1920x960px.svg"
   },
   sections: [
     {
@@ -45,7 +45,7 @@ module.exports = {
             {
               title: "Afterparty",
               items: [
-                "09.10.2021, Lucerne, Neubad"
+                "01.01.2021, Lucerne, Neubad"
               ]
             }
           ]

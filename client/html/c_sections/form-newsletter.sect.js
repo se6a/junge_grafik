@@ -13,23 +13,23 @@ module.exports = () => {
     >
       <section class="NewsletterForm formSegment Success">
         <p>
-          Thanks! You have successfully subscribed to our newsletter.
+          Please check your mailbox and confirm your registration.
         </p>
       </section>
 
       <section class="NewsletterForm formSegment Subscribe">
 
-        <div class="NewsletterForm formField Checkbox">
-          ${Checkbox({
-            name: "terms",
-            label: {
-              all: "I accept to receive Newsletters from Junge Grafik."
-            },
-            required: true
-          })}
-        </div>
+        <p>
+          Subscribe to our newsletter!
+        </p>
 
         <fieldset class="NewsletterForm formFieldGroup">
+
+          <label class="hiddenInput">
+              E-Mail
+              <input name="fields[e-mail]" type="text" />
+          </label>
+ 
           ${EmailInput({
             id: "footer-newsletter-email",
             name: "e-mail",

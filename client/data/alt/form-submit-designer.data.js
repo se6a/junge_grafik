@@ -52,9 +52,9 @@ module.exports = [
       label: { de: "Geschlecht", fr: "X", it: "X" },
       type: "select-1",
       options: [
-        { id:"m", de: "Männlich" },
-        { id:"w", de: "Weiblich" },
-        { id:"x", de: "Keine Angabe" }
+        { id:"440", de: "Männlich" },
+        { id:"441", de: "Weiblich" },
+        { id:"682", de: "Keine Angabe" }
       ],
       required: true
     },
@@ -64,6 +64,7 @@ module.exports = [
       type: "number",
       min: 1000,
       max: 9999,
+      step: 1,
       required: true
     }
   ],
@@ -106,7 +107,7 @@ module.exports = [
   [
     {
       name: "e-mail",
-      label: { de: "E-Mail", fr: "X", it: "X" },
+      label: { all: "E-Mail" },
       type: "email",
       required: true
     },
@@ -138,7 +139,7 @@ module.exports = [
       }
     },
     {
-      name: "link-instagram",
+      name: "link-instagram-profil",
       label: { de: "Link Instagram-Profil", fr: "X", it: "X" },
       type: "url",
       tooltip: {

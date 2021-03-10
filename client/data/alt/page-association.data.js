@@ -10,7 +10,7 @@ module.exports = {
         {
           type: "text",
           title: "About Us",
-          content: "Students in Swiss training institutions are producing outstanding graphic work! Many of these projects deserve to be recognized beyond their school walls and the talented students behind them should be supported and encouraged to connect with other leading designers. The Junge Grafik association has created the Junge Grafik Award to make this possible. All association members work on a voluntary basis – and are passionate about graphic culture."
+          content: "Students in Swiss training institutions are producing outstanding graphic work! Many of these projects deserve to be recognized beyond their school walls and the talented students behind them should be supported and encouraged to connect with other leading designers. The Junge Grafik association has created the Junge Grafik Award to make this possible. All association members work on a voluntary basis - and are passionate about graphic culture."
         },
         {
           type: "overview",
@@ -18,7 +18,7 @@ module.exports = {
             {
               title: "Founding",
               items: [
-                "2019"
+                "– Founding: 2019"
               ]
             },
             {
@@ -63,105 +63,105 @@ module.exports = {
         {
           type: "card-with-image",
           title: `
-            <div>Loana Boppart</div>
-            <div>Remit: Foundations</div>
+            <span>Loana Boppart</span>
+            <span>Remit: Foundations</span>
           `,
           image: {
             src: "assoc/jg_board-loana_boppart.png",
             alt: "Portrait of Loana Boppart"
           },
-          content: `<a class="link" href"studiolametta.ch" target="_blank">studiolametta.ch</a>`
+          content: `<a href"studiolametta.ch" target="_blank">studiolametta.ch</a>`
         },
         {
           type: "card-with-image",
           title: `
-            <div>Meret Fischli</div>
-            <div>Remit: Jury, Printed communication materials</div>
+            <span>Meret Fischli</span>
+            <span>Remit: Jury, Printed communication materials</span>
           `,
         image: {
           src: "assoc/jg_board-meret_fischli.png",
           alt: "Portrait of Meret Fischli"
         },
-          content: `<a class="link" href"meretfischli.ch" target="_blank">meretfischli.ch</a>`
+          content: `<a href"meretfischli.ch" target="_blank">meretfischli.ch</a>`
         },
         {
           type: "card-with-image",
           title: `
-            <div>Remo Stahl</div>
-            <div>Remit: Sponsorship</div>
+            <span>Remo Stahl</span>
+            <span>Remit: Sponsorship</span>
           `,
           image: {
             src: "assoc/jg_board-remo_stahl.png",
             alt: "Portrait of Remo Stahl"
           },
-          content: `<a class="link" href"maison.ooo" target="_blank">maison.ooo</a>`
+          content: `<a href"maison.ooo" target="_blank">maison.ooo</a>`
         },
         {
           type: "card-with-image",
           title: `
-            <div>Jonas Keusch</div>
-            <div>Remit: Digital communication</div>
+            <span>Jonas Keusch</span>
+            <span>Remit: Digital communication</span>
           `,
           image: {
             src: "assoc/jg_board-jonas_keusch.png",
             alt: "Portrait of Jonas Keusch"
           },
-          content: `<a class="link" href"studiokeusch.ch" target="_blank">studiokeusch.ch</a>`
+          content: `<a href"studiokeusch.ch" target="_blank">studiokeusch.ch</a>`
         },
         {
           type: "card-with-image",
           title: `
-            <div>Nina Ruppen</div>
-            <div>Remit: Exhibition</div>
+            <span>Nina Ruppen</span>
+            <span>Remit: Exhibition</span>
           `,
           image: {
             src: "assoc/jg_board-nina_ruppen.png",
             alt: "Portrait of Nina Ruppen"
           },
-          content: `<a class="link" href"ninaruppen.ch" target="_blank">ninaruppen.ch</a>`
+          content: `<a href"ninaruppen.ch" target="_blank">ninaruppen.ch</a>`
         },
         {
           type: "card-with-image",
           title: `
-            <div>Thomas Steiner</div>
-            <div>Remit: Social Media, Events</div>
+            <span>Thomas Steiner</span>
+            <span>Remit: Social Media, Events</span>
           `,
           image: {
             src: "assoc/jg_board-thomas_steiner.png",
             alt: "Portrait of Thomas Steiner"
           },
-          content: `<a class="link" href"steiner-grafik.ch" target="_blank">steiner-grafik.ch</a>`
+          content: `<a href"steiner-grafik.ch" target="_blank">steiner-grafik.ch</a>`
         },
         {
           type: "card-with-image",
           title: `
-            <div>Rainer Brenner</div>
-            <div>Remit: Text</div>
+            <span>Rainer Brenner</span>
+            <span>Remit: Text</span>
           `,
           image: {
             src: "assoc/jg_board-rainer_brenner.png",
             alt: "Portrait of Rainer Brenner"
           },
-          content: `<a class="link" href"rainerbrenner.ch" target="_blank">rainerbrenner.ch</a>`
+          content: `<a href"rainerbrenner.ch" target="_blank">rainerbrenner.ch</a>`
         },
         {
           type: "card-with-image",
           title: `
-            <div>Moritz Profitlich</div>
-            <div>Remit: Website, IT support</div>
+            <span>Moritz Profitlich</span>
+            <span>Remit: Website, IT support</span>
           `,
           image: {
             src: "assoc/jg_board-moritz_profitlich.png",
             alt: "Portrait of Moritz Profitlich"
           },
-          content: `<a class="link" href"profitlich.ch" target="_blank">profitlich.ch</a>`
+          content: `<a href"profitlich.ch" target="_blank">profitlich.ch</a>`
         },
 
         {
           type: "card-with-image",
           title: `
-            <div>Bettina Klauser</div>
-            <div>Remit: Accounting, Administration</div>
+            <span>Bettina Klauser</span>
+            <span>Remit: Accounting, Administration</span>
           `,
           image: {
             src: "assoc/jg_board-bettina_klauser.png",
@@ -172,26 +172,26 @@ module.exports = {
         {
           type: "card-with-image",
           title: `
-            <div>Tobias Klauser</div>
-            <div>Remit: Contact with schools and professional associations</div>
+            <span>Tobias Klauser</span>
+            <span>Remit: Contact with schools and professional associations</span>
           `,
           image: {
             src: "assoc/jg_board-tobias_klauser.png",
             alt: "Portrait of Tobias Klauser"
           },
-          content: `<a class="link" href"fachklassegrafik.ch" target="_blank">fachklassegrafik.ch</a>`
+          content: `<a href"fachklassegrafik.ch" target="_blank">fachklassegrafik.ch</a>`
         },
         {
           type: "card-with-image",
           title: `
-            <div>Philipp Schubiger</div>
-            <div>Remit: Sponsoring in kind</div>
+            <span>Philipp Schubiger</span>
+            <span>Remit: Sponsoring in kind</span>
           `,
           image: {
             src: "assoc/jg_board-philipp_schubiger.png",
             alt: "Portrait of Philipp Schubiger"
           },
-          content: `<a class="link" href"philipp-schubiger.ch" target="_blank">philipp-schubiger.ch</a>`
+          content: `<a href"philipp-schubiger.ch" target="_blank">philipp-schubiger.ch</a>`
         }
       ]
     },
@@ -204,37 +204,29 @@ module.exports = {
         {
           type: "card-simple",
           content: `
-            <div>Philippe Desarzens</div>
-            <div>Translator: French</div>
+            <span>Laura Robinson</span>
+            <span>Translator: English</span>
           `
         },
         {
           type: "card-simple",
           content: `
-            <div>Sebastian Wyss</div>
-            <div>Programmer</div>
-          `
-        }
-      ]
-    },
-
-    {
-      type: "rows",
-      title: "Many thanks to our volunteer workers",
-      length: 4,
-      content: [
-        {
-          type: "card-simple",
-          content: `
-            <div>Laura Robinson</div>
-            <div>Translator: English</div>
+            <span>Philippe Desarzens</span>
+            <span>Translator: French</span>
           `
         },
         {
           type: "card-simple",
           content: `
-            <div>Jakob Roduner</div>
-            <div>Translator: Italian</div>
+            <span>Jakob Roduner</span>
+            <span>Translator: Italian</span>
+          `
+        },
+        {
+          type: "card-simple",
+          content: `
+            <span>Sebastian Wyss</span>
+            <span>Programmer</span>
           `
         }
       ]
@@ -254,7 +246,7 @@ module.exports = {
             alt: "Logo of Sponsor Engelberg Druck"
           },
           content: `
-            <a class="link" href="https://engelbergerdruck.ch" target="_blank">engelbergerdruck.ch</a>
+            <a href="engelbergerdruck.ch" target="_blank">engelbergerdruck.ch</a>
           `
         },
         {
@@ -265,7 +257,18 @@ module.exports = {
             alt: "Logo of Sponsor We-Talents"
           },
           content: `
-            <a class="link" href="https://wetalents.net" target="_blank">wetalents.net</a>
+            <a href="wetalents.net" target="_blank">wetalents.net</a>
+          `
+        },
+        {
+          type: "card-with-image",
+          title: "Dinamo",
+          image: {
+            src: "/sponsors/logo-dinamo.png",
+            alt: "Logo of Sponsor Dinamo"
+          },
+          content: `
+            <a href="abcdinamo.com" target="_blank">abcdinamo.com</a>
           `
         }
       ]
@@ -274,8 +277,15 @@ module.exports = {
     {
       type: "rows",
       length: 8,
-      subtitle: "Light sponsors",
+      subtitle: "Regular sponsors",
       content: [
+        {
+          type: "image-box",
+          image: {
+            src: "/sponsors/logo-fischer_papier.png",
+            alt: "Logo of Sponsor Fischer Papier"
+          }
+        },
         {
           type: "image-box",
           image: {
@@ -316,7 +326,7 @@ module.exports = {
               <span>SGV Schweizer Grafiker Verband</span>
           `,
           content: `
-            <a class="link" href="https://sgv.ch" target="_blank">
+            <a href="sgv.ch" target="_blank">
               sgv.ch
             </a>
           `
@@ -332,7 +342,7 @@ module.exports = {
               <span>SGD Swiss Graphic Designers</span>
           `,
           content: `
-            <a class="link" href="https://sgd.ch" target="_blank">sgd.ch</a>
+            <a href="sgd.ch" target="_blank">sgd.ch</a>
           `
         },
         {
@@ -346,7 +356,7 @@ module.exports = {
               <span>Weltformat Graphic Design Festival</span>
           `,
           content: `
-            <a class="link" href="https://weltformat-festival.ch" target="_blank">
+            <a href="weltformat-festival.ch" target="_blank">
               weltformat-festival.ch
             </a>
           `
@@ -362,7 +372,7 @@ module.exports = {
             <span>Ronorp</span>
           `,
           content: `
-            <a class="link" href="https://ronopr.net" target="_blank">ronopr.net</a>
+            <a href="ronopr.net" target="_blank">ronopr.net</a>
           `
         }
       ]
@@ -381,7 +391,7 @@ module.exports = {
           },
           title: `Josef Müller Stiftung Muri`,
           content: `
-            <a class="link" href="https://mueller-stiftung.ch" target="_blank">
+            <a href="mueller-stiftung.ch" target="_blank">
               mueller-stiftung.ch
             </a>
           `

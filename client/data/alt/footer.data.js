@@ -10,18 +10,17 @@ module.exports = [
     name: "social-media",
     label: "Social Media",
     links: [
-      { label: "Instagram", href: "https://instagram.com/jungegrafik" },
-      { label: "Facebook", href: "https://facebook.com/Junge-Grafik-108635944605605" },
-      { label: "LinkedIn", href: "https://linkedin.com/company/junge-grafik-schweiz" }
+      { label: "Instagram", href: "" },
+      { label: "Facebook", href: "" }
     ]
   },
   {
     name: "network",
     label: "Network",
     links: [
-      { label: "SGD", href: "https://sgd.ch" },
-      { label: "SGV", href: "https://sgv.ch" },
-      { label: "Weltformat", href: "https://weltformat-festival.ch" }
+      { label: "SGD", href: "" },
+      { label: "SGV", href: "" },
+      { label: "Weltformat", href: "" }
     ]
   },
   {

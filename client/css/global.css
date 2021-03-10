@@ -45,6 +45,8 @@ body {
   --borderHover: 3px;
   --borderFocus: 4px;
 
+  --scrollbarWidth: 17px;
+
   --animate-fast: 300ms;
   --animate-medium: 800ms;
   --animate-long: 1500ms;
@@ -53,6 +55,8 @@ body {
 }
 
 .--size-md {
+
+  --footerHeight: 50vmin;
 
   --fontSize-S: 2vmin;
   --lineHeight-S: 2.6vmin;
@@ -73,14 +77,14 @@ body {
 
 .--size-sm {
   --headerHeight: 15vmin;
-  --footerHeight: 70vmin;
+  --footerHeight: 150vmin;
 
-  --fontSize-S: 3vmin;
-  --lineHeight-S: 4vmin;
-  --listHeight-S: 5vmin;
-  --fontSize-M: 4.5vmin;
-  --lineHeight-M: 5.7vmin;
-  --fontSize-L: 6.5vmin;
+  --fontSize-S: 4vmin;
+  --lineHeight-S: 5.4vmin;
+  --listHeight-S: 5.5vmin;
+  --fontSize-M: 5vmin;
+  --lineHeight-M: 6vmin;
+  --fontSize-L: 7vmin;
   --lineHeight-L: 8.3vmin;
   --fontSize-XL: 11vmin;
   --lineHeight-XL: 10vmin;
@@ -236,6 +240,26 @@ h3 {
   line-height: var(--lineHeight-M);
 }
 
+ul > .arrow,
+ul > .dash {
+  display: flex;
+  margin-bottom: 0.5em;
+}
+
+ul > .arrow::before,
+ul > .dash::before {
+  white-space: pre;
+  font-size: inherit;
+}
+
+ul > .arrow::before {
+  content: "\2192" " ";
+}
+
+ul > .dash::before {
+  content: "– ";
+}
+
 .label {
   white-space: pre-line;
   font-size: var(--fontSize-M);
@@ -280,18 +304,13 @@ h3 {
   flex-grow: 1;
 }
 
-.link:hover {
-  border-bottom: var(--borderHover) solid currentColor;
-  margin: calc(var(--borderHover) * -1) 0;
-  box-sizing: border-box;
-}
-
+.link:hover,
 .link:focus {
+  border-bottom: var(--borderFull) solid currentColor;
+  margin: calc(var(--borderFull) * -1) 0;
+  box-sizing: border-box;
   outline: none;
-  margin: calc(var(--borderFocus) * -1) 0;
-  border-bottom: var(--borderFocus) solid currentColor;
 }
-
 
 .line {
   height: 0;
