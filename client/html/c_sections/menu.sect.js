@@ -46,6 +46,10 @@ module.exports = () => {
       padding-right: 0;
     }
 
+    .MENU .textUnderlined .text {
+      padding-left: var(--size-S);
+    }
+
     .MENU.--show {
       display: flex;
     }

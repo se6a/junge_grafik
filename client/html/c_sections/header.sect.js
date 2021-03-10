@@ -56,7 +56,7 @@ module.exports = () => {
     }
 
     .HEADER .logo .first {
-      padding-left: var(--size-M);
+      padding-left: var(--size-S);
       width: calc(2 * var(--size-XL));
       display: inline-block;
     }
