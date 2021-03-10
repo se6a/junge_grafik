@@ -1,6 +1,7 @@
 module.exports = {
   header: {
-    image: "media/theme/20210309_Keyvisual_1920x960px_RZ_3.svg"
+    image: "media/theme/20210309_Keyvisual_1920x960px_RZ_3.svg",
+    content: '<div class="HeaderColors"></div>'
   },
   sections: [
     {
