@@ -38,8 +38,10 @@ module.exports = () => {
       z-index: 10;
     }
 
+    .--size-lg .VIEW.Home .HeaderView.content,
     .VIEW.Home .HeaderView.content {
       height: 100%;
+      width: 100%;
     }
 
     .VIEW.Home .HeaderColors {
@@ -47,6 +49,7 @@ module.exports = () => {
       background-color: pink;
       animation-name: colors;
       animation-duration: 60s;
+      animation-iteration-count: infinite;
     }
 
     @keyframes colors {
