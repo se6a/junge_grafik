@@ -1,3 +1,14 @@
+const PAGE = {
+  $: {
+    rows: null
+  },
+  sizes: {
+    lg: "(min-width: 1000px)",
+    md: "(min-width: 600px) and (max-width: 999px)",
+    sm: "(max-width: 599px)"
+  }
+};
+
 document.addEventListener(
   "DOMContentLoaded",
   () => {
@@ -7,14 +18,8 @@ document.addEventListener(
 );
 
 function attachMediaQueryListener() {
-  const sizes = {
-    lg: "(min-width: 1000px)",
-    md: "(min-width: 600px) and (max-width: 999px)",
-    sm: "(max-width: 599px)"
-  };
-
-  for (const _size in sizes) {
-    const _mediaQuery = window.matchMedia(sizes[_size]);
+  for (const _size in PAGE.sizes) {
+    const _mediaQuery = window.matchMedia(PAGE.sizes[_size]);
 
     if (_mediaQuery.matches)
       setDocumentSize(_size, _mediaQuery);
@@ -67,8 +72,16 @@ function closeDropdown($dropdown) {
 
 function subscribeNewsletter($form) {
   const formdata = new FormData($form);
-  console.log($form, formdata);
-  $form.classList.add("--subscribed");
+
+  postRequest("email", formdata)
+
+  .then(() => {
+    $form.classList.add("--subscribed");
+  })
+
+  .catch(() => {
+    $form.classList.add("--failed");
+  });
 }
 
 function toggleMenu($menuButton) {
@@ -79,5 +92,32 @@ function toggleMenu($menuButton) {
 function setLanguage($container, $selector) {
   if ($selector.dataset.lang) {
     $container.dataset.lang = $selector.dataset.lang;
+  }
+}
+
+function postRequest(endpoint, data) {
+  return fetch(
+    new Request(
+      `${HOST}/api/${endpoint}`,
+      {
+        method: "POST",
+        body: data
+      }
+    )
+  )
+
+  .then((res) => {
+    if (res.ok === false) {
+      throw Error(`Status: ${res.status}`);
+    }
+    else {
+      return res;
+    }
+  });
+}
+
+function maybeQuery(name, selector) {
+  if (! PAGE.$[name]) {
+    PAGE.$[name] = document.querySelectorAll(selector);
   }
 }

@@ -189,8 +189,7 @@ function _getTemplate(path) {
   try {
     $temp = require(`${__basedir}/client/html/${path}`);
   } catch (error) {
-    $temp = () => "error 404";
-    console.log(error);
+    throw Error("not found");
   }
 
   return $temp;
@@ -268,8 +267,24 @@ global.buildSections = (sections) => {
 
   sections.forEach(
     (_section) => {
-      const sectTemp = getSection(_section.type);
-      built.push("", sectTemp(_section));
+      let sectTemp;
+
+      try {
+        sectTemp = getSection(_section.type);
+      }
+
+      catch (e) {
+        sectTemp = getSnippet(_section.type);
+      }
+
+      finally {
+        if (typeof sectTemp === "function") {
+          built.push("", sectTemp(_section));
+        }
+        else {
+          built.push("", "--template not found--");
+        }
+      }
     }
   );
 

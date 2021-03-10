@@ -54,7 +54,7 @@ module.exports = [
       options: [
         { id:"440", de: "Männlich" },
         { id:"441", de: "Weiblich" },
-        { id:"682", de: "Keine Angabe" } 
+        { id:"682", de: "Keine Angabe" }
       ],
       required: true
     },
@@ -107,7 +107,7 @@ module.exports = [
   [
     {
       name: "e-mail",
-      label: { de: "E-Mail", fr: "X", it: "X" },
+      label: { all: "E-Mail" },
       type: "email",
       required: true
     },

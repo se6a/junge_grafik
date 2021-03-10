@@ -32,15 +32,7 @@ const ProjectForm = function() {
         this.appendLanguage(formdata);
         this.formatLinks(formdata);
 
-        fetch(
-          new Request(
-            `${HOST}/api/newproject`,
-            {
-              method: "POST",
-              body: formdata
-            }
-          )
-        )
+        postRequest("newproject", formdata)
 
         .then((res) => {
           if (res.status === 200)

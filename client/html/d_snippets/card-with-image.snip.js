@@ -1,13 +1,11 @@
+const ImageBox = getSnippet("image-box");
+
 module.exports = ({ name = "", title, image, content }) => {
   const html = splitTemp/*html*/`
     <article class="card ImageCard ${name}">
 
       <div class="ImageCard imageWrapper">
-        <div class="box">
-
-          <img class="ImageCard image" src="./media/${image}">
-
-        </div>
+        ${ImageBox({ image })}
         <div class="pushHeight"></div>
       </div>
 

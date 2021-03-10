@@ -22,6 +22,17 @@ log4js.configure({
 const logger = log4js.getLogger("submitErrors");
 
 Router.post(
+  "/email",
+  FormParser.single("e-mail"),
+  (req, res) => {
+    const formdata = req.body;
+    const email = formdata.fields["e-mail"];
+
+    res.sendStatus(200);
+  }
+);
+
+Router.post(
   "/newproject",
   FormParser.array("files"),
   Express.raw(),

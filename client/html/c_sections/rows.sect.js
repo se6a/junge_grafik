@@ -1,5 +1,8 @@
+function calcUsePlaceholder(itemCount, maxLength) {
+  return itemCount % maxLength > 0;
+}
+
 module.exports = ({ content, length = 4, title, subtitle }) => {
-  const usePlaceholder = content.length % length > 0 ? " --use" : "";
   const useTitle       = title ? "--use" : "";
   const useSubtitle    = subtitle ? "--use" : "";
 
@@ -9,7 +12,17 @@ module.exports = ({ content, length = 4, title, subtitle }) => {
     sm: Math.ceil(length / 4)
   };
 
-  const responsiveLengthArray = `[${responsiveLength.lg},${responsiveLength.md},${responsiveLength.sm}]`;
+  const responsiveLengthArr = JSON.stringify([
+    responsiveLength.lg,
+    responsiveLength.md,
+    responsiveLength.sm
+  ]);
+
+  const usePlaceholder = `
+    data-show-lg="${calcUsePlaceholder(content.length, responsiveLength.lg)}"
+    data-show-md="${calcUsePlaceholder(content.length, responsiveLength.md)}"
+    data-show-sm="${calcUsePlaceholder(content.length, responsiveLength.sm)}"
+  `;
 
   const itemSizeLg = 100 / responsiveLength.lg + "%";
   const itemSizeMd = 100 / responsiveLength.md + "%";
@@ -18,7 +31,7 @@ module.exports = ({ content, length = 4, title, subtitle }) => {
   const html = splitTemp/*html*/`
     <section
       class="layoutSection Rows"
-      data-length="${responsiveLengthArray}"
+      data-length='${responsiveLengthArr}'
       data-items="${content.length}"
     >
 
@@ -33,7 +46,7 @@ module.exports = ({ content, length = 4, title, subtitle }) => {
 
       <div class="Rows content">
         ${buildSections(content)}
-        <div class="placeholder box ${usePlaceholder}"></div>
+        <div class="placeholder box" ${usePlaceholder}></div>
       </div>
 
     </section>
@@ -62,19 +75,21 @@ module.exports = ({ content, length = 4, title, subtitle }) => {
       display: none;
     }
 
-    .Rows > .placeholder.--use {
+    .--size-lg .Rows > .placeholder[data-show-lg="true"],
+    .--size-md .Rows > .placeholder[data-show-md="true"],
+    .--size-sm .Rows > .placeholder[data-show-sm="true"] {
       display: block;
     }
 
-    .layoutSection[data-length="${responsiveLengthArray}"].Rows > .Rows.content > * {
+    .layoutSection[data-length='${responsiveLengthArr}'].Rows > .Rows.content > * {
       width: ${itemSizeLg};
     }
 
-    .--size-md .layoutSection[data-length="${responsiveLengthArray}"].Rows > .Rows.content > * {
+    .--size-md .layoutSection[data-length='${responsiveLengthArr}'].Rows > .Rows.content > * {
       width: ${itemSizeMd};
     }
 
-    .--size-sm .layoutSection[data-length="${responsiveLengthArray}"].Rows > .Rows.content > * {
+    .--size-sm .layoutSection[data-length='${responsiveLengthArr}'].Rows > .Rows.content > * {
       width: ${itemSizeSm};
     }
   `;

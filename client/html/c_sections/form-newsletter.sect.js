@@ -32,8 +32,8 @@ module.exports = () => {
         <fieldset class="NewsletterForm formFieldGroup">
           ${EmailInput({
             id: "footer-newsletter-email",
-            name: "email",
-            label: { de: "Email" },
+            name: "e-mail",
+            label: { all: "E-Mail" },
             placeholder: "your email",
             required: true
           })}
@@ -47,6 +47,12 @@ module.exports = () => {
             })}
           </div>
         </fieldset>
+
+        <section class="NewsletterForm formSegment Failed">
+          <p>
+            Something went wrong!
+          </p>
+        </section>
 
       </section>
     </form>
@@ -92,9 +98,14 @@ module.exports = () => {
       border: 0;
     }
 
-    .NewsletterForm .formSegment.Success {
+    .NewsletterForm .formSegment.Success,
+    .NewsletterForm .formSegment.Failed {
       visibility: hidden;
       position: absolute;
+    }
+
+    .NewsletterForm .formSegment.Failed {
+      color: var(--red);
     }
 
     .NewsletterForm.--subscribed .formSegment.Subscribe {
@@ -102,6 +113,10 @@ module.exports = () => {
     }
 
     .NewsletterForm.--subscribed .formSegment.Success {
+      visibility: visible; 
+    }
+
+    .NewsletterForm.--failed .formSegment.Failed {
       visibility: visible; 
     }
   `;

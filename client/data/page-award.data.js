@@ -96,60 +96,88 @@ module.exports = {
     },
     {
       type: "rows",
+      title: "Jury 2021",
       length: 4,
       content: [
         {
           type: "card-with-image",
           title: "Audrey Fleur Ljubenovic",
-          image: "jury/jg_jury_21-audrey_fleur_ljubenovic.png",
+          image: {
+            src: "jury/jg_jury_21-audrey_fleur_ljubenovic.png",
+            alt: "Portait of jury member Audrey Fleur Ljubenovic"
+          },
           content: `<a href"audreyfleur.ch" target="_blank">audreyfleur.ch</a>`
         },
         {
           type: "card-with-image",
           title: "Demian Conrad",
-          image: "jury/jg_jury_21-demian_conrad.png",
+          image: {
+            src: "jury/jg_jury_21-demian_conrad.png",
+            alt: "Portait of jury member Demian Conrad"
+          },
           content: `<a href"demianconrad.ch" target="_blank">demianconrad.ch</a>`
         },
         {
           type: "card-with-image",
           title: "Dennis Moya",
-          image: "jury/jg_jury_21-dennis_moya.png",
+          image: {
+            src: "jury/jg_jury_21-dennis_moya.png",
+            alt: "Portait of jury member Dennis Moya"
+          },
           content: `<a href"dennismoya.ch" target="_blank">dennismoya.ch</a>`
         },
         {
           type: "card-with-image",
           title: "Felix Pfäffli",
-          image: "jury/jg_jury_21-felix_pfaeffli.png",
+          image: {
+            src: "jury/jg_jury_21-felix_pfaeffli.png",
+            alt: "Portait of jury member Felix Pfäffli"
+          },
           content: `<a href"studiofeixen.ch" target="_blank">studiofeixen.ch</a>`
         },
         {
           type: "card-with-image",
           title: "Jonas Vögeli",
-          image: "jury/jg_jury_21-jonas_voegeli.png",
+          image: {
+            src: "jury/jg_jury_21-jonas_voegeli.png",
+            alt: "Portait of jury member Jonas Vögeli"
+          },
           content: `<a href"hubertus-design.ch" target="_blank">hubertus-design.ch</a>`
         },
         {
           type: "card-with-image",
           title: "Larissa Kasper",
-          image: "jury/jg_jury_21-larissa_kasper.png",
+          image: {
+            src: "jury/jg_jury_21-larissa_kasper.png",
+            alt: "Portait of jury member Larissa Kasper"
+          },
           content: `<a href"kasper-florio.ch" target="_blank">kasper-florio.ch</a>`
         },
         {
           type: "card-with-image",
           title: "Lena Ruppen",
-          image: "jury/jg_jury_21-lena_ruppen.png",
+          image: {
+            src: "jury/jg_jury_21-lena_ruppen.png",
+            alt: "Portait of jury member Lena Ruppen"
+          },
           content: ""
         },
         {
           type: "card-with-image",
           title: "Marion Fink",
-          image: "jury/jg_jury_21-marion_fink.png",
+          image: {
+            src: "jury/jg_jury_21-marion_fink.png",
+            alt: "Portait of jury member Marion Fink"
+          },
           content: ""
         },
         {
           type: "card-with-image",
           title: "Valeria Bonin",
-          image: "jury/jg_jury_21-valeria_bonin.png",
+          image: {
+            src: "jury/jg_jury_21-valeria_bonin.png",
+            alt: "Portait of jury member Valeria Bonin"
+          },
           content: `<a href"bonbon.li" target="_blank">bonbon.li</a>`
         }
       ]
