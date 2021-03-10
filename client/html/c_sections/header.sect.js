@@ -74,7 +74,7 @@ module.exports = () => {
     }
 
     .--size-md .HEADER {
-      grid-template-columns: 40% 60%;
+      grid-template-columns: 33.33% 66.66%;
   }
 
     .--size-sm .HEADER {

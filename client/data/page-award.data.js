@@ -115,7 +115,7 @@ module.exports = {
             src: "jury/jg_jury_21-demian_conrad.png",
             alt: "Portait of jury member Demian Conrad"
           },
-          content: `<a class="link" href="https://demianconrad.ch" target="_blank">demianconrad.ch</a>`
+          content: `<a class="link" href="http://demianconrad.com" target="_blank">demianconrad.com</a>`
         },
         {
           type: "card-with-image",
@@ -151,7 +151,7 @@ module.exports = {
             src: "jury/jg_jury_21-larissa_kasper.png",
             alt: "Portait of jury member Larissa Kasper"
           },
-          content: `<a class="link" href="https://kasper-florio.ch" target="_blank">kasper-florio.ch</a>`
+          content: `<a class="link" href="http://kasper-florio.ch" target="_blank">kasper-florio.ch</a>`
         },
         {
           type: "card-with-image",
