@@ -50,11 +50,11 @@ module.exports = () => {
     }
 
     @keyframes colors {
-      0%   {background-color: var(--red);}
-      25%  {background-color: var(--yellow);}
-      50%  {background-color: var(--green);}
-      75%  {background-color: var(--blue);}
-      100% {background-color: var(--red);}
+      0%   {background-color: var(--blue);}
+      25%  {background-color: var(--red);}
+      50%  {background-color: var(--yellow);}
+      75%  {background-color: var(--green);}
+      100% {background-color: var(--blue);}
     }
   `;
 
