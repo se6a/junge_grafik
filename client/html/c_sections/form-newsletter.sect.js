@@ -77,6 +77,10 @@ module.exports = () => {
       flex-grow: 0;
     }
 
+    .NewsletterForm.Subscribe p:first-child {
+      margin-bottom: var(--size-S);
+    }
+
     .NewsletterForm.Checkbox,
     .NewsletterForm.formFieldGroup {
       margin-bottom: var(--size-S);
