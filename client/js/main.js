@@ -110,8 +110,8 @@ function postRequest(endpoint, data) {
       `${HOST}/api/${endpoint}`,
       {
         method: "POST",
-        body: data,
-        mode: "no-cors"
+        body: data
+        // mode: "no-cors"
       }
     )
   )

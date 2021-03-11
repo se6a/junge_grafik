@@ -29,7 +29,7 @@ module.exports = async (data) => {
         <span class="BottomLine line"></span>
 
         <script>
-          const HOST = "${ENV.host}";
+          const HOST = window.location.origin;
         </script>
       </body>
 
