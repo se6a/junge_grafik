@@ -12,7 +12,6 @@ const PAGE = {
 document.addEventListener(
   "DOMContentLoaded",
   () => {
-    console.log("DOM loaded");
     attachMediaQueryListener();
     showContacts();
   }
@@ -111,7 +110,8 @@ function postRequest(endpoint, data) {
       `${HOST}/api/${endpoint}`,
       {
         method: "POST",
-        body: data
+        body: data,
+        mode: "no-cors"
       }
     )
   )
@@ -155,7 +155,6 @@ function easyDecode(cypher) {
 
 function showContacts() {
   const $contacts = document.body.querySelectorAll(".contactLink");
-  console.log($contacts);
   setTimeout(() => {
     $contacts.forEach((_$contact) => {
       const _cypher = JSON.parse(_$contact.dataset.contact);
