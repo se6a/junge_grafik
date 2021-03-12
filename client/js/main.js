@@ -111,7 +111,6 @@ function postRequest(endpoint, data) {
       {
         method: "POST",
         body: data
-        // mode: "no-cors"
       }
     )
   )
