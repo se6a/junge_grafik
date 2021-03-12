@@ -6,7 +6,7 @@ module.exports = () => {
     <nav class="NAVIGATION">
 
       ${Button({
-        label: "Support!!!!!!!!!!!!",
+        label: "Support!",
         type: "link",
         id: "navigation-support",
         classes: "Support",
