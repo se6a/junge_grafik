@@ -46,7 +46,7 @@ const ProjectForm = function() {
         });
       }
       else {
-        this.files.addWarning();
+        this.files.addWarning_notEnoughFiles();
       }
     },
 
@@ -106,7 +106,8 @@ const ProjectForm = function() {
     },
 
     feedbackSuccess() {
-      this.$form.dataset.state = "success";
+      // this.$form.dataset.state = "success";
+      window.location.href = `${HOST}/thanks-for-your-submission`;
     },
 
     reset() {
@@ -149,26 +150,32 @@ const ProjectFiles = function() {
     hasMinimum: false,
 
     select() {
+      this.removeWarning_tooManySelected();
+
       const newFiles = [...this.$input.files];
+
       for (let i = 0; i < newFiles.length; i++) {
         this.saveFileCount();
 
         if (this.count < this.max) {
           const _file = newFiles[i];
+          const _filename = _file.name;
           const [_type, _subtype] = _file.type.split("/");
 
-          if (this.accept.length === 0
-          || this.accept.includes(`${_type}/*`)
-          || this.accept.includes(`${_type}/${_subtype}`)
-          || this.accept.includes(`.${_subtype}`)
-          ) {
-            this.selected[_file.name] = _file;
-            this.$inputBox.insertAdjacentElement(
-              "AFTERBEGIN", this.insertHtmlItem(_file.name, i));
+          if (! this.selected[_filename]) {
+            if (this.accept.length === 0
+            || this.accept.includes(`${_type}/*`)
+            || this.accept.includes(`${_type}/${_subtype}`)
+            || this.accept.includes(`.${_subtype}`)
+            ) {
+              this.selected[_filename] = _file;
+              this.$inputBox.insertAdjacentElement(
+                "AFTERBEGIN", this.insertHtmlItem(_file.name, i));
+            }
           }
         }
         else {
-          this.addWarning();
+          this.addWarning_tooManySelected();
           break;
         }
       }
@@ -184,13 +191,13 @@ const ProjectFiles = function() {
       delete this.selected[filename];
       this.saveFileCount();
       this.updateCount();
-      this.removeWarning();
+      this.removeWarning_tooManySelected();
       this.setState();
     },
 
     insertHtmlItem(filename, i) {
       const id = makeId(i);
-      const $item = document.createElement("SPAN");
+      const $item = document.createElement("DIV");
 
       $item.setAttribute("id", id);
       $item.setAttribute("class", "fileItem");
@@ -218,22 +225,33 @@ const ProjectFiles = function() {
     },
 
     setState() {
-      if (this.count >= this.min)
+      if (this.count >= this.min) {
         this.hasMinimum = true;
-      else
+        this.removeWarning_notEnoughFiles();
+      }
+      else {
         this.hasMinimum = false;
+      }
     },
 
     updateCount() {
       this.$count.innerHTML = this.count;
     },
 
-    addWarning() {
-      this.$inputBox.classList.add("--warn");
+    addWarning_notEnoughFiles() {
+      this.$inputBox.classList.add("--warn", "--notEnoughFiles");
     },
 
-    removeWarning() {
-      this.$inputBox.classList.remove("--warn");
+    removeWarning_notEnoughFiles() {
+      this.$inputBox.classList.remove("--warn", "--notEnoughFiles");
+    },
+
+    addWarning_tooManySelected() {
+      this.$inputBox.classList.add("--tooManySelected");
+    },
+
+    removeWarning_tooManySelected() {
+      this.$inputBox.classList.remove("--tooManySelected");
     }
   };
 

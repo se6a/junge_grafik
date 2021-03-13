@@ -2,26 +2,9 @@ const HeaderView   = getSection("header-view");
 const LanguageForm = getSection("form-language");
 const ProjectForm  = getSection("form-submit-project");
 
-// const html = splitTemp/*html*/`
-//     <main id="Submit" class="VIEW Submit" data-lang="">
-//       ${HeaderView({
-//         title: "Project registration",
-//         content: `Register to take part in the competition and submit your graphic work. Get started here.`
-//       })}
-
-//       <article class="mainSection fullpage Language">
-//         ${LanguageForm()}
-//       </article>
-
-//       <article class="mainSection fullpage Form" data-lang="">
-//         ${ProjectForm()}
-//       </article>
-//     </main>
-//   `;
-
 module.exports = (data) => {
   const html = splitTemp/*html*/`
-    <main id="Submit" class="VIEW Submit" data-lang="">
+    <main id="Submit" class="VIEW Submit" data-lang="de">
       ${HeaderView({
         title: "Project registration",
         content: `Register to take part in the competition and submit your graphic work. Get started here.`
@@ -31,7 +14,7 @@ module.exports = (data) => {
         ${LanguageForm()}
       </article>
 
-      <article class="mainSection fullpage Form" data-lang="">
+      <article class="mainSection fullpage Form">
         ${ProjectForm()}
       </article>
     </main>

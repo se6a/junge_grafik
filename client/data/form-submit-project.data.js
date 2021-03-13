@@ -32,7 +32,7 @@
                     ]
 
     required        Bei Pflichtfeldern hinzufügen:
-                    required: true
+                    // required: true
                     Ansonsten weglassen oder:
                     required: false
 
@@ -59,7 +59,7 @@ module.exports = [
         it: "X"
       },
       type: "text-short",
-      required: true,
+      // required: true,
       tooltip: {
         de: `– Gib deinem Projekt einen Titel. Falls deine Arbeit ausgezeichnet wird, so wird der Projekttitel auf der Website als auch in der Publikation erscheinen.`,
         fr: "X",
@@ -79,8 +79,8 @@ module.exports = [
         { id: "2021", all: "2021" },
         { id: "2020", all: "2020" },
         { id: "2019", all: "2019" }
-      ],
-      required: true
+      ]
+      // required: true
     }
   ],
 
@@ -109,7 +109,7 @@ module.exports = [
         { id: "Typography", all: "Typography" },
         { id: "Web design", all: "Web design" }
       ],
-      required: true,
+      // required: true,
       tooltip: {
         de: "– Wähle 1 bis 3 Tags, die zu deinem Projekt passen",
         fr: "X",
@@ -176,7 +176,7 @@ module.exports = [
       },
       type: "text",
       maxlength: "800",
-      required: true,
+      // required: true,
       tooltip: {
         de: "Nutze den Projektbeschrieb, um uns interessante Aspekte über die Aufgabenstellung, den Prozess und die Idee zu erzählen.",
         fr: "X",
@@ -200,13 +200,13 @@ module.exports = [
         { id: "683", de: "EFZ", fr: "X", it: "X" },
         { id: "685", de: "HF", fr: "X", it: "X" },
         { id: "684", de: "FH", fr: "X", it: "X" }
-      ],
-      required: true
+      ]
+      // required: true
     },
     {
       name: "ausbildungsjahr",
       label: {
-        de: "Ausbildungsjahr", fr: "X", it: "X"
+        de: "Ausbildungsjahr (zum Zeitpunkt des Projektes)", fr: "X", it: "X"
       },
       type: "select-1",
       options: [
@@ -214,8 +214,8 @@ module.exports = [
         { id: "2", de: "2. Ausbildungsjahr", fr: "X", it: "X" },
         { id: "3", de: "3. Ausbildungsjahr", fr: "X", it: "X" },
         { id: "4", de: "4. Ausbildungsjahr", fr: "X", it: "X" }
-      ],
-      required: true
+      ]
+      // required: true
     },
     {
       name: "name-ausbildungsinstitution-lehrbetrieb",
@@ -226,11 +226,11 @@ module.exports = [
         it: "X"
       },
       tooltip: {
-        de: "– In welcher Ausbildungsinstitution oder in welchem Lehrbetrieb ist dein Projekt entstanden?",
+        de: "In welcher Ausbildungsinstitution oder in welchem Lehrbetrieb ist dein Projekt entstanden?",
         fr: "X",
         it: "X"
-      },
-      required: true
+      }
+      // required: true
     },
     {
       name: "kanton-des-ausbildungsortes",
@@ -267,8 +267,8 @@ module.exports = [
         { id: "437", de: "Wallis", fr: "", it: "" },
         { id: "439", de: "Zürich", fr: "", it: "" },
         { id: "438", de: "Zug", fr: "", it: "" }
-      ],
-      required: true
+      ]
+      // required: true
      }
   ],
 
@@ -287,7 +287,7 @@ module.exports = [
         de: `
           Wer hat dich bei deinem Projekt begleitet? Es sind mehrere Nennungen möglich.
           <ul>
-            <li>– Gib die Namen wie folgt an: Vorname Familienname, Vorname Familienname</li>
+            <li class="dash">Gib die Namen wie folgt an: Vorname Familienname, Vorname Familienname</li>
           </ul>
         `,
         fr: "X",
@@ -332,26 +332,49 @@ module.exports = [
       tooltip: {
           de: `
             <ul>
-              <li>– 3 bis 6 Reprografien oder Mockups</li>
-              <li>– JPG Format</li>
-              <li>– RGB Farbraum</li>
-              <li>– Lange Seite: 3500px</li>
-              <li>– Diese Bilddateien werden für die Publikation verwendet. Übermittle uns das JPG darum möglichst unkomprimiert.</li>
-              <li>– Darf ich einen Farbigen Hintergrund verwenden? Ja.</li>
-              <li>– Darf ich mein Projekt inszenieren? Ja.</li>
-              <li>– Darf ich anstelle von klassischen Reprografien auch digitale Mockups einsenden? Ja.</li>
+              <li class="dash>3 bis 6 Reprografien oder Mockups</li>
+              <li class="dash>JPG Format</li>
+              <li class="dash>RGB Farbraum</li>
+              <li class="dash>Lange Seite: 3500px</li>
+              <li class="dash>Diese Bilddateien werden für die Publikation verwendet. Übermittle uns das JPG darum möglichst unkomprimiert.</li>
+              <li class="dash>Darf ich einen Farbigen Hintergrund verwenden? Ja.</li>
+              <li class="dash>Darf ich mein Projekt inszenieren? Ja.</li>
+              <li class="dash>Darf ich anstelle von klassischen Reprografien auch digitale Mockups einsenden? Ja.</li>
             </ul>
           `,
           fr: "X",
           it: "X"
-      },
-      required: true
+      }
+      // required: true
     }
   ],
 
   /*  Projektwebseite
   ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
   [
+    {
+      name: "link-videomaterial",
+      type: "url",
+      label: {
+        de: "Youtube- oder Vimeolink zu einem Video- oder Animationsprojekt",
+        fr: "",
+        it: ""
+      },
+      tooltip: {
+        de: `
+          <p>Video- und Animations-Projekte müssen einen Video-Link einreichen. Gib uns hier die URL an.</p>
+          <ul>
+            <li class="dash">Beispiel Youtube: https://www.youtube.com/watch?v=a3RGv-w99Cg</li>
+            <li class="dash">Beispiel Vimeo: https://vimeo.com/183907133"</li>
+          </ul>
+        `,
+        fr: "X",
+        it: "X"
+      }
+    },
+
+  /*  Projektwebseite
+  ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
     {
       name: "link-projektwebsite-prototyp",
       type: "url",

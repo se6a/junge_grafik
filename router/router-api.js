@@ -66,13 +66,16 @@ async function sendNewsletterForm(req, res, next) {
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
 Router.post(
   "/newproject",
-  FormParser.array("files"),
-  Express.raw(),
-  prepareEntry,
-  rebuildForm,
-  sendEntryForm,
-  buildFileForm,
-  sendFiles
+  (req, res) => {
+    res.sendStatus(200);
+  }
+  // FormParser.array("files"),
+  // Express.raw(),
+  // prepareEntry,
+  // rebuildForm,
+  // sendEntryForm,
+  // buildFileForm,
+  // sendFiles
 );
 
 function prepareEntry(req, res, next) {

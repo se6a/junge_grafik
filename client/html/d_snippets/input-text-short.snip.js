@@ -10,7 +10,7 @@ module.exports = (data) => {
     type,
     subType,
     attr = "",
-    maxlength = "50"
+    maxlength = "40"
   } = data;
 
   type = type
@@ -46,6 +46,7 @@ module.exports = (data) => {
           name="fields[${name}]"
           ${type}
           ${attr}
+          ${maxlength}
           ${required ? "required" : ""}
         />
       </div>

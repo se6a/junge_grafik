@@ -26,6 +26,15 @@ function buildRoutes() {
     });
 }
 
+Router.get(
+  /^\/newsletter(\/.*)?/,
+  (req, res) => {
+    const version = req.params[0].slice(1);
+    // res.send(`hello ${version}`);
+    res.sendFile(`${__basedir}/0.jpg`);
+  }
+);
+
 /*  Middleware
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 function resetUrl(req, res, next) {

@@ -335,11 +335,24 @@ ul > .dash::before {
   -ms-grid-auto-flow: row;
   -ms-grid-rows: 1fr;
   display: grid;
-  grid-auto-columns: 1fr;
-  grid-template-columns: 1fr;
-  grid-auto-flow: column;
+  grid-auto-flow: row;
+  align-items: flex-end;
   column-gap: var(--size-M);
 }
+
+
+.formFieldGroup.oneColumn {
+  grid-template-columns: 1fr;
+}
+
+.formFieldGroup.twoColumns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.formFieldGroup.threeColumns {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 
 .formSegment:not(:last-child),
 .formFieldGroup:not(:last-child) {
@@ -359,7 +372,7 @@ ul > .dash::before {
 .formField .header,
 .formField .input {
   display: flex;
-  height: var(--fieldSize-M);
+  min-height: var(--fieldSize-M);
   font-size: var(--fontSize-M);
   align-items: flex-end;
 }

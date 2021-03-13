@@ -52,6 +52,7 @@ module.exports = (data) => {
         <fieldset class="formFieldGroup">
           <div class="formField">
             ${RoundedButton({
+              type: "submit",
               label: {
                 de: `
                   <span class="initial">

@@ -17,6 +17,16 @@ document.addEventListener(
   }
 );
 
+window.addEventListener("dragover", function(e) {
+  e = e || event;
+  e.preventDefault();
+}, false);
+
+window.addEventListener("drop", function(e) {
+  e = e || event;
+  e.preventDefault();
+}, false);
+
 function attachMediaQueryListener() {
   for (const _size in PAGE.sizes) {
     const _mediaQuery = window.matchMedia(PAGE.sizes[_size]);

@@ -72,6 +72,16 @@ module.exports = {
     const $group = [""];
     const groupZindex = group.pop();
 
+    const columnClass = [
+      "oneColumn",
+      "twoColumns",
+      "threeColumns"
+    ];
+
+    const colCount = group.length < 3
+                   ? group.length - 1
+                   : 2;
+
     group.forEach((_member, index) => {
       if (group.length > 1)
         _member.zindex = group.length - index;
@@ -81,7 +91,7 @@ module.exports = {
     return [
       "fieldset",
       [
-        `<fieldset class="formFieldGroup" style="z-index: ${groupZindex}">`,
+        `<fieldset class="formFieldGroup ${columnClass[colCount]}" style="z-index: ${groupZindex}">`,
         ...$group,
         "</fieldset>"
       ]

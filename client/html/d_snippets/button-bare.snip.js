@@ -44,10 +44,12 @@ module.exports = ({
       justify-content: space-between;
       transition: background-color 200ms;
       border: var(--borderFull) solid var(--darkViolet);
+      cursor: pointer;
     }
 
     .button.unstyled {
       background-color: transparent;
+      outline: 1px;
       border: none;
       padding: 0;
       width: auto;
@@ -58,18 +60,16 @@ module.exports = ({
       pointer-events: none;
     }
     
-    .button:hover {
+    .button:not(.unstyled):hover {
       background-color: var(--colorKey);
       color: var(--white);
     }
     
-    .button:focus {
+    .button:not(.unstyled):focus {
       outline: none;
       background-color: var(--colorKey);
       color: var(--white);
     }
-    
-    
   `;
 
   return ["button-bare.snip", html, css];

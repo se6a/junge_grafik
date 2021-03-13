@@ -25,7 +25,7 @@ module.exports = ({ label, required, tooltip, maxfiles = 1, minfiles = 1, accept
 
       <div class="inputBox input Upload">
 
-        <label for="ProjectFileUpload" class="upload">
+        <label for="ProjectFileUpload" class="Upload button unstyled">
           ${IconPlus()}
           <input
             class="hiddenInput"
@@ -39,6 +39,16 @@ module.exports = ({ label, required, tooltip, maxfiles = 1, minfiles = 1, accept
             ${required ? "required" : ""}
           />
         </label>
+
+        <span class="warning tooManySelected">
+          ${lang`
+            <span>
+              ${{
+                de: "Du hast zu viele Bilder ausgewählt.</br>Überprüfe welche Dateien hochgeladen werden."
+              }}
+            </span>
+          `}
+        </span>
 
       </div>
     </div>
@@ -55,30 +65,33 @@ module.exports = ({ label, required, tooltip, maxfiles = 1, minfiles = 1, accept
     }
 
     .inputBox.Upload {
-      min-height: var(--size-L);
-      height: unset;
+      height: auto;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      padding: var(--size-S) 0 0 var(--size-S);
+
     }
 
     .inputBox.Upload > * {
-      margin: var(--size-S) var(--size-S) var(--size-S) 0;
       display: flex;
+      margin: 0 var(--size-S) var(--size-S) 0;
     }
 
     .inputBox > .fileItem {
       font-size: var(--fontSize-M);
-      padding-left: var(--size-S);
       display: flex;
+      align-items: center;
       border: var(--borderFull) solid currentColor;
-      border-radius: var(--size-L);
-      height: var(--size-L);
+      border-radius: var(--size-M);
+      height: var(--size-M);
+      padding-left: var(--size-S);
+      transition: color 200ms ease, background-color 200ms ease;
     }
 
     .fileItem > .button {
       height: 100%;
-      width: var(--size-L);
+      width: var(--size-M);
       position: relative;
       display: flex;
       justify-content: center;
@@ -95,20 +108,35 @@ module.exports = ({ label, required, tooltip, maxfiles = 1, minfiles = 1, accept
       transform: rotate(-45deg);
     }
 
-    .fileItem > .button:hover .line {
-      width: 50%;
-    }
-
     .inputBox > .fileItem > p {
       vertical-align: middle;
       display: inline;
     }
 
-    label.upload .icon {
-      cursor: pointer;
+    .Upload.button:hover .icon,
+    .fileItem:hover {
+      background-color: var(--colorKey);
     }
-    label.upload:hover .icon {
-      border-width: var(--borderHover);
+
+    .Upload.button:hover .symbol,
+    .fileItem:hover > * {
+      color: var(--white);
+    }
+
+    .Upload.button:hover .line {
+      width: 50%;
+    }
+
+    .warning.tooManySelected {
+      color: var(--violet);
+      display: none;
+      font-size: var(--fontSize-S);
+      line-height: var(--lineHeight-S);
+      width: 100%;
+    }
+
+    .Upload.inputBox.--tooManySelected .tooManySelected {
+      display: block;
     }
   `;
 

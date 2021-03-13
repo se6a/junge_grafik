@@ -26,9 +26,9 @@ module.exports = (data) => {
         ${Tooltip(data.tooltip)}
       </div>
 
-      <div class="inputBox outer">
+      <div class="Select inputBox outer">
         <div
-          class="inputBox inner"
+          class="Select inputBox inner"
           onclick="selectOption(this, event)"
           onmouseleave="blurField(event)"
           tabindex="0"
@@ -79,13 +79,13 @@ module.exports = (data) => {
     }
 
     .formField.Select .inputBox.outer {
-      height: inherit;
+      height: var(--fieldSize-M);
     }
 
     .formField.Select .inputBox.inner {
       position: absolute;
       width: 100%;
-      background-color: white;
+      background-color: var(--white);
       display: block;
     }
 
@@ -99,12 +99,14 @@ module.exports = (data) => {
     .Select.input {
       align-items: center;
       cursor: pointer;
+      background-color: transparent;
+      border-color: var(--colorKey);
     }
 
     .Select.options {
       cursor: pointer;
       display: none;
-      border: var(--borderFull) solid currentColor;
+      border: var(--borderFull) solid var(--colorKey);
       border-top: 0;
       max-height: 40vh;
       overflow-y: auto;
@@ -121,20 +123,34 @@ module.exports = (data) => {
       pointer-events: none;
     }
 
+    .Select .icon {
+      transition: transform 100ms ease;
+    }
+
     .Select > .option:hover,
     .Select > .option.--selected {
-      background-color: var(--gray);
+      background-color: var(--violet);
     }
 
-    .Select .inputBox.inner:focus-within {
+    .Select.inputBox.inner:focus-within {
       outline: calc(var(--borderFocus) - var(--borderFull))
                solid
-               currentColor;
+               var(--colorKey);
+      border-color: var(--colorKey);
+      color: var(--white);
+      background-color: var(--colorKey);
     }
 
-    .inputBox.inner:focus-within .options {
+    .Select.inputBox.inner:focus-within .options {
       display: block;
     }
+
+    .Select.inputBox.inner:focus-within .icon {
+      color: white;
+      transform: rotate(180deg);
+    }
+
+
 
     input.Select {
       outline: none;

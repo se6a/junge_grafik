@@ -32,7 +32,7 @@
                     ]
 
     required        Bei Pflichtfeldern hinzufügen:
-                    required: true
+                    // required: true
                     Ansonsten weglassen oder:
                     required: false
 
@@ -55,8 +55,8 @@ module.exports = [
         { id:"440", de: "Männlich" },
         { id:"441", de: "Weiblich" },
         { id:"682", de: "Keine Angabe" }
-      ],
-      required: true
+      ]
+      // required: true
     },
     {
       name: "geburtsjahr",
@@ -64,8 +64,8 @@ module.exports = [
       type: "number",
       min: 1000,
       max: 9999,
-      step: 1,
-      required: true
+      step: 1
+      // required: true
     }
   ],
 
@@ -73,14 +73,14 @@ module.exports = [
     {
       name: "vorname",
       label: { de: "Vorname", fr: "X", it: "X" },
-      type: "text-short",
-      required: true
+      type: "text-short"
+      // required: true
     },
     {
       name: "familienname",
       label: { de: "Familienname", fr: "X", it: "X" },
-      type: "text-short",
-      required: true
+      type: "text-short"
+      // required: true
     }
   ],
 
@@ -91,14 +91,14 @@ module.exports = [
       name: "strasse-nummer",
       label: { de: "Strasse / Nr.", fr: "X", it: "X" },
       type: "text-short",
-      maxchar: 6,
-      required: true
+      maxchar: 6
+      // required: true
     },
     {
       name: "postleitzahl-ort",
       label: { de: "PLZ / Ort", fr: "X", it: "X" },
-      type: "text-short",
-      required: true
+      type: "text-short"
+      // required: true
     }
   ],
 
@@ -108,14 +108,14 @@ module.exports = [
     {
       name: "e-mail",
       label: { all: "E-Mail" },
-      type: "email",
-      required: true
+      type: "email"
+      // required: true
     },
     {
       name: "mobile",
       label: { de: "Mobile", fr: "X", it: "X" },
-      type: "text-short",
-      required: true
+      type: "text-short"
+      // required: true
     }
   ],
 
@@ -129,9 +129,12 @@ module.exports = [
       tooltip: {
         de: `
           <ul>
-            <li>– Der Link zu deinem Portfolio ist freiwillig</li>
-            <li>– Das Portfolio beeinflusst nicht die Jurierung deines Projekts</li>
-            <li>– Wenn du gewinnst, werden wir die URL in unserem Archiv verlinken</li>
+            <li class="dash">Der Link zu deinem Portfolio ist freiwillig</li>
+            <li class="dash">Das Portfolio beeinflusst nicht die Jurierung deines Projekts</li>
+            <li class="dash">Wenn du gewinnst, werden wir die URL in unserem Archiv verlinken</li>
+            <li class="dash">Beispiel Website Portfolio: jungegrafik.ch</li>
+            <li class="dash">Beispiel Behance Portfolio: behance.net/jungegrafik</li>
+            <li class="dash">Beispiel Instagram Portfolio: instagram.com/jungegrafik</li>
           </ul>
         `,
         fr: "X",
