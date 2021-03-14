@@ -2,7 +2,7 @@ const HeaderView   = getSection("header-view");
 
 module.exports = (data) => {
   const html = splitTemp/*html*/`
-    <main id="SuccessfullSubmission" class="VIEW SuccessfullSubmission" data-lang="de">
+    <main id="SubmissionCompleted" class="VIEW SubmissionCompleted" data-lang="de">
       ${HeaderView({
         title: "Project registration",
         content: lang`
@@ -28,10 +28,10 @@ module.exports = (data) => {
       --colorTheme: var(--yellow);
     }
 
-    .VIEW.SuccessfullSubmission .HeaderView p:not(:last-child) {
+    .VIEW.SubmissionComplete .HeaderView p:not(:last-child) {
       margin-bottom: var(--size-L);
     }
   `;
 
-  return ["thanks-for-your-submission.view", html, css];
+  return ["submission-completed.view", html, css];
 };

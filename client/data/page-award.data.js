@@ -1,7 +1,12 @@
 module.exports = {
+  meta: {
+    title: "Award",
+    description: "Is your graphic design work more than just a project? Then we’d love to see it. You can submit any outstanding work you’ve created as part of your studies.",
+    indexed: true
+  },
   header: {
     title: "Award",
-    content: "Is your graphic design work more than just a project? Then we’d love to see it. You can submit any outstanding work you’ve created as part of your studies. "
+    content: "Is your graphic design work more than just a project? Then we’d love to see it. You can submit any outstanding work you’ve created as part of your studies."
   },
   sections: [
     {

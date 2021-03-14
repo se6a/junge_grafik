@@ -132,21 +132,19 @@ const ProjectFiles = function() {
   const $count = $formField.querySelector(".selected > .count");
 
   const instance = {
-    selected: {},
     $formField,
     $inputBox,
     $input,
     $count,
 
+    selected: {},
     accept: ($input.getAttribute("accept") || "")
             .split(",")
             .map((_acc) => _acc.trim())
             .filter((_acc) => _acc !== ""),
-
     max: $input.dataset.max,
     min: $input.dataset.min,
     count: 0,
-
     hasMinimum: false,
 
     select() {

@@ -1,4 +1,9 @@
 module.exports = {
+  meta: {
+    title: "",
+    description: "Junge Grafik showcases, connects and promotes young and talented graphic designers from across Switzerland.",
+    indexed: true
+  },
   header: {
     image: "media/theme/20210309_Keyvisual_1920x960px_RZ_3.svg",
     content: '<div class="HeaderColors"></div>'

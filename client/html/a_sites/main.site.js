@@ -4,14 +4,27 @@ module.exports = async (data) => {
   const Menu   = getSection("menu");
   const View   = getView(data.viewName);
 
+  const seoMeta  = ENV.environment === "dev"
+                || data.meta.indexed === false
+                 ? `<meta name="robots" content="noindex,nofollow"/>`
+                 : "";
+
+  const titleAddition = data.meta.title
+                      ? `: ${data.meta.title}`
+                      : "";
+
   const html = splitTemp/*html*/`
     <!DOCTYPE html>
     <html>
 
       <head>
+        <title>Junge Grafik${titleAddition}</title>
+
         <meta char="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Junge Grafik</title>
+        <meta name="description" content="${data.meta.description}">
+
+        ${seoMeta}
 
         <link rel="stylesheet" href="/css/global.css">
         <script defer type="text/javascript" src="/js/main.js"></script>
@@ -24,7 +37,7 @@ module.exports = async (data) => {
       <body>
         ${Header()}
         ${Menu()}
-        ${await View(data?.view)}
+        ${await View(data)}
         ${Footer()}
         <span class="BottomLine line"></span>
 

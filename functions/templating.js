@@ -141,10 +141,8 @@ async function build(req) {
 }
 
 function _assembleRaw(req) {
-  const data = {
-    viewName: req.url.slice(1),
-    view:     {}
-  };
+  const viewName = req.url.slice(1);
+  const data = { ...getData(`page-${viewName}`), viewName };
 
   const $site = getSite("main");
   const raw = $site(data);

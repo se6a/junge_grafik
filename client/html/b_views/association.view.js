@@ -1,8 +1,6 @@
 const HeaderView = getSection("header-view");
-const data = getData("page-association");
 
-module.exports = () => {
-  console.log(data);
+module.exports = (data) => {
   const html = splitTemp/*html*/`
     <main class="VIEW Association">
 

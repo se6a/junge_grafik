@@ -1,6 +1,5 @@
 const HeaderView = getSection("header-view");
 const Rows = getSection("rows");
-const Link = getSnippet("link");
 
 module.exports = (data) => {
   const html = splitTemp/*html*/`

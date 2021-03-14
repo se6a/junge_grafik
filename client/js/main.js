@@ -17,15 +17,17 @@ document.addEventListener(
   }
 );
 
-window.addEventListener("dragover", function(e) {
-  e = e || event;
-  e.preventDefault();
-}, false);
+window.addEventListener(
+  "dragover",
+  (e) => e.preventDefault(),
+  false
+);
 
-window.addEventListener("drop", function(e) {
-  e = e || event;
-  e.preventDefault();
-}, false);
+window.addEventListener(
+  "drop",
+  (e) => e.preventDefault(),
+  false
+);
 
 function attachMediaQueryListener() {
   for (const _size in PAGE.sizes) {

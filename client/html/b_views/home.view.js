@@ -1,7 +1,6 @@
 const HeaderView = getSection("header-view");
-const data = getData("page-home");
 
-module.exports = () => {
+module.exports = (data) => {
   const html = splitTemp/*html*/`
     <main class="VIEW Home">
 

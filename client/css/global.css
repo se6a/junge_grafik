@@ -193,7 +193,7 @@ body {
   line-height: var(--lineHeight-M);
   color: var(--colorKey);
   border: var(--borderHalf) solid currentColor;
-  font-family: FeixenSans;
+  font-family: FeixenSans, sans-serif;
   font-style: normal;
   overflow-x: hidden;
 }
@@ -419,11 +419,3 @@ ul > .dash::before {
 .form > .--warn {
   background-color: var(--yellow);
 }
-
-/* .Tooltip > p.content {
-  width: calc(100vw - 17px - 4px);
-  border-left: none;
-  border-right: none;
-  min-height: var(--size-XL);
-  left: calc( -1 * var(--size-M));
-}  */

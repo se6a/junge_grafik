@@ -1,6 +1,5 @@
 const HeaderView = getSection("header-view");
 const Rows = getSection("rows");
-const Dropdown = getSnippet("dropdown");
 
 module.exports = (data) => {
   const html = splitTemp/*html*/`

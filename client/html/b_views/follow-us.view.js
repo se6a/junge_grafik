@@ -1,7 +1,7 @@
 const HeaderView = getSection("header-view");
 const Link = getSnippet("link");
 
-module.exports = (data) => {
+module.exports = (view) => {
   const html = splitTemp/*html*/`
     <main class="VIEW Follow">
       ${HeaderView({

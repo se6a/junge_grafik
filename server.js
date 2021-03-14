@@ -17,8 +17,8 @@ global.Server = Express();
 
 /*  Live Reload Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-if (ENV.environment === "local")
-{ const LiveReload      = require("livereload");
+if (ENV.environment === "local") {
+  const LiveReload      = require("livereload");
   const LRServer        = LiveReload.createServer();
   const ConnectLRServer = require("connect-livereload");
 

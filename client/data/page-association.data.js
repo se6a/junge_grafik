@@ -1,4 +1,9 @@
 module.exports = {
+  meta: {
+    title: "Association",
+    description: "The Junge Grafik association wants to ensure that talented young graphic designers in Switzerland are supported and promoted from the very beginning of their education and training.",
+    indexed: true
+  },
   header: {
     title: "Association",
     content: "The Junge Grafik association wants to ensure that talented young graphic designers in Switzerland are supported and promoted from the very beginning of their education and training. This is made possible thanks to our committed board members and the generous support of patrons, foundations and sponsors."
