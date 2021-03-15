@@ -17,13 +17,13 @@ module.exports = () => {
             title: "Social",
             content: /*html*/`
               <ul>
-                <li><a class="link" target="_blank" href="https://instagram.com/jungegrafik">
+                <li><a class="textButton" target="_blank" href="https://instagram.com/jungegrafik">
                   Instagram
                 </a></li>
-                <li><a class="link" target="_blank" href="https://facebook.com/Junge-Grafik-108635944605605">
+                <li><a class="textButton" target="_blank" href="https://facebook.com/Junge-Grafik-108635944605605">
                   Facebook
                 </a></li>
-                <li><a class="link" target="_blank" href="https://linkedin.com/company/junge-grafik-schweiz">
+                <li><a class="textButton" target="_blank" href="https://linkedin.com/company/junge-grafik-schweiz">
                   LinkedIn
                 </a></li>
               </ul>
@@ -34,13 +34,13 @@ module.exports = () => {
             title: "Network",
             content: /*html*/`
               <ul>
-                <li><a class="link" target="_blank" href="https://sgv.ch">
+                <li><a class="textButton" target="_blank" href="https://sgv.ch">
                   SGV Schweizer Grafiker Verband
                 </a></li>
-                <li><a class="link" target="_blank" href="https://sgd.ch">
+                <li><a class="textButton" target="_blank" href="https://sgd.ch">
                   SGD Swiss Graphic Designers
                 </a></li>
-                <li><a class="link" target="_blank" href="https://weltformat-festival.ch">
+                <li><a class="textButton" target="_blank" href="https://weltformat-festival.ch">
                   Weltformat Graphic Design Festival
                 </a></li>
               </ul>
@@ -51,7 +51,7 @@ module.exports = () => {
             title: "Links",
             content: /*html*/`
               <ul>
-                <li><a class="link" href="/data-privacy" target="_blank">Data privacy</a></li>
+                <li><a class="textButton" href="/data-privacy" target="_blank">Data privacy</a></li>
               </ul>
             `
           }

@@ -21,9 +21,9 @@ module.exports = {
                 `
                   <span data-lang="de" onclick="setLanguage(this, event.target)">
                     <p>
-                      <button class="link" type="button" data-lang="fr">FR</button> /
-                      <button class="link" type="button" data-lang="de">DE</button> /
-                      <button class="link" type="button" data-lang="it">IT</button>
+                      <button class="textButton" type="button" data-lang="fr">FR</button> /
+                      <button class="textButton" type="button" data-lang="de">DE</button> /
+                      <button class="textButton" type="button" data-lang="it">IT</button>
                     </p>
                     <p class="textOption fr">La participation est ouverte aux étudiant·es en graphisme CFC en entreprise ou dans une école de maturité professionnelle ; aux étudiant·es d’une haute école spécialisée (Bachelor en communication visuelle / graphisme) ou en formation professionnelle supérieure (Designer ES en communication visuelle)</p>
                     <p class="textOption de">Grafiklernende EFZ in einem Betrieb oder an einer Fachklasse Grafik; Studierende an einer Fachhochschule (BA-Studiengang Visuelle Kommunikation / Graphic Design) oder in der Höheren Berufsbildung (dipl. Gestalterin / dipl. Gestalter HF)</p>

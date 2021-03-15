@@ -75,7 +75,7 @@ module.exports = {
             src: "assoc/jg_board-loana_boppart.png",
             alt: "Portrait of Loana Boppart"
           },
-          content: `<a class="link" href="http://studiolametta.ch" target="_blank">studiolametta.ch</a>`
+          content: `<a class="textButton" href="http://studiolametta.ch" target="_blank">studiolametta.ch</a>`
         },
         {
           type: "card-with-image",
@@ -87,7 +87,7 @@ module.exports = {
           src: "assoc/jg_board-meret_fischli.png",
           alt: "Portrait of Meret Fischli"
         },
-          content: `<a class="link" href="https://meretfischli.ch" target="_blank">meretfischli.ch</a>`
+          content: `<a class="textButton" href="https://meretfischli.ch" target="_blank">meretfischli.ch</a>`
         },
         {
           type: "card-with-image",
@@ -99,7 +99,7 @@ module.exports = {
             src: "assoc/jg_board-remo_stahl.png",
             alt: "Portrait of Remo Stahl"
           },
-          content: `<a class="link" href="https://www.maison.ooo/" target="_blank">maison.ooo</a>`
+          content: `<a class="textButton" href="https://www.maison.ooo/" target="_blank">maison.ooo</a>`
         },
         {
           type: "card-with-image",
@@ -111,7 +111,7 @@ module.exports = {
             src: "assoc/jg_board-jonas_keusch.png",
             alt: "Portrait of Jonas Keusch"
           },
-          content: `<a class="link" href="http://studiokeusch.ch" target="_blank">studiokeusch.ch</a>`
+          content: `<a class="textButton" href="http://studiokeusch.ch" target="_blank">studiokeusch.ch</a>`
         },
         {
           type: "card-with-image",
@@ -123,7 +123,7 @@ module.exports = {
             src: "assoc/jg_board-nina_ruppen.png",
             alt: "Portrait of Nina Ruppen"
           },
-          content: `<a class="link" href="https://ninaruppen.ch" target="_blank">ninaruppen.ch</a>`
+          content: `<a class="textButton" href="https://ninaruppen.ch" target="_blank">ninaruppen.ch</a>`
         },
         {
           type: "card-with-image",
@@ -135,7 +135,7 @@ module.exports = {
             src: "assoc/jg_board-thomas_steiner.png",
             alt: "Portrait of Thomas Steiner"
           },
-          content: `<a class="link" href="https://steiner-grafik.ch" target="_blank">steiner-grafik.ch</a>`
+          content: `<a class="textButton" href="https://steiner-grafik.ch" target="_blank">steiner-grafik.ch</a>`
         },
         {
           type: "card-with-image",
@@ -147,7 +147,7 @@ module.exports = {
             src: "assoc/jg_board-rainer_brenner.png",
             alt: "Portrait of Rainer Brenner"
           },
-          content: `<a class="link" href="https://rainerbrenner.ch" target="_blank">rainerbrenner.ch</a>`
+          content: `<a class="textButton" href="https://rainerbrenner.ch" target="_blank">rainerbrenner.ch</a>`
         },
         {
           type: "card-with-image",
@@ -159,7 +159,7 @@ module.exports = {
             src: "assoc/jg_board-moritz_profitlich.png",
             alt: "Portrait of Moritz Profitlich"
           },
-          content: `<a class="link" href="https://profitlich.ch" target="_blank">profitlich.ch</a>`
+          content: `<a class="textButton" href="https://profitlich.ch" target="_blank">profitlich.ch</a>`
         },
 
         {
@@ -184,7 +184,7 @@ module.exports = {
             src: "assoc/jg_board-tobias_klauser.png",
             alt: "Portrait of Tobias Klauser"
           },
-          content: `<a class="link" href="https://fachklassegrafik.ch" target="_blank">fachklassegrafik.ch</a>`
+          content: `<a class="textButton" href="https://fachklassegrafik.ch" target="_blank">fachklassegrafik.ch</a>`
         },
         {
           type: "card-with-image",
@@ -196,7 +196,7 @@ module.exports = {
             src: "assoc/jg_board-philipp_schubiger.png",
             alt: "Portrait of Philipp Schubiger"
           },
-          content: `<a class="link" href="https://philipp-schubiger.ch" target="_blank">philipp-schubiger.ch</a>`
+          content: `<a class="textButton" href="https://philipp-schubiger.ch" target="_blank">philipp-schubiger.ch</a>`
         }
       ]
     },
@@ -259,7 +259,7 @@ module.exports = {
             alt: "Logo of Sponsor Engelberg Druck"
           },
           content: `
-            <a class="link" href="https://engelbergerdruck.ch" target="_blank">engelbergerdruck.ch</a>
+            <a class="textButton" href="https://engelbergerdruck.ch" target="_blank">engelbergerdruck.ch</a>
           `
         },
         {
@@ -270,7 +270,7 @@ module.exports = {
             alt: "Logo of Sponsor We-Talents"
           },
           content: `
-            <a class="link" href="https://wetalents.net" target="_blank">wetalents.net</a>
+            <a class="textButton" href="https://wetalents.net" target="_blank">wetalents.net</a>
           `
         }
       ]
@@ -321,7 +321,7 @@ module.exports = {
               <span>SGV Schweizer Grafiker Verband</span>
           `,
           content: `
-            <a class="link" href="https://sgv.ch" target="_blank">
+            <a class="textButton" href="https://sgv.ch" target="_blank">
               sgv.ch
             </a>
           `
@@ -337,7 +337,7 @@ module.exports = {
               <span>SGD Swiss Graphic Designers</span>
           `,
           content: `
-            <a class="link" href="https://sgd.ch" target="_blank">sgd.ch</a>
+            <a class="textButton" href="https://sgd.ch" target="_blank">sgd.ch</a>
           `
         },
         {
@@ -351,7 +351,7 @@ module.exports = {
               <span>Weltformat Graphic Design Festival</span>
           `,
           content: `
-            <a class="link" href="https://weltformat-festival.ch" target="_blank">
+            <a class="textButton" href="https://weltformat-festival.ch" target="_blank">
               weltformat-festival.ch
             </a>
           `
@@ -367,7 +367,7 @@ module.exports = {
             <span>Ronorp</span>
           `,
           content: `
-            <a class="link" href="https://ronorp.net" target="_blank">ronorp.net</a>
+            <a class="textButton" href="https://ronorp.net" target="_blank">ronorp.net</a>
           `
         }
       ]
@@ -386,7 +386,7 @@ module.exports = {
           },
           title: `Josef Müller Stiftung Muri`,
           content: `
-            <a class="link" href="https://mueller-stiftung.ch" target="_blank">
+            <a class="textButton" href="https://mueller-stiftung.ch" target="_blank">
               mueller-stiftung.ch
             </a>
           `

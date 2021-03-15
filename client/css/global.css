@@ -304,8 +304,8 @@ ul > .dash::before {
   flex-grow: 1;
 }
 
-.link:hover,
-.link:focus {
+.textButton:hover,
+.textButton:focus {
   border-bottom: var(--borderFull) solid currentColor;
   margin: calc(var(--borderFull) * -1) 0;
   box-sizing: border-box;

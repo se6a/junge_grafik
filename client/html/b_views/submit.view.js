@@ -4,19 +4,21 @@ const ProjectForm  = getSection("form-submit-project");
 
 module.exports = (data) => {
   const html = splitTemp/*html*/`
-    <main id="Submit" class="VIEW Submit" data-lang="de">
+    <main id="Submit" class="VIEW Submit" lang="">
+
       ${HeaderView({
         title: "Project registration",
         content: `Register to take part in the competition and submit your graphic work. Get started here.`
       })}
 
-      <article class="mainSection fullpage Language">
+      <article class="mainSection fullpage SelectLanguage">
         ${LanguageForm()}
       </article>
 
-      <article class="mainSection fullpage Form">
+      <article class="mainSection fullpage ProjectRegistration">
         ${ProjectForm()}
       </article>
+
     </main>
   `;
 
@@ -29,15 +31,15 @@ module.exports = (data) => {
       border: var(--borderHalf) solid currentColor;
     }
 
-    .mainSection.Language {
+    .mainSection.SelectLanguage {
       display: none;
     }
 
-    .VIEW.Submit[data-lang=""] .mainSection.Language {
+    .VIEW.Submit[lang=""] .mainSection.SelectLanguage {
       display: flex;
     }
 
-    .VIEW.Submit[data-lang=""] .mainSection.Form {
+    .VIEW.Submit[lang=""] .mainSection.ProjectRegistration {
       display: none;
     }
   `;

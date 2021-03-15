@@ -35,7 +35,7 @@ module.exports = (data) => {
             content: `
                 <span>General matters / questions about project registration</span>
                 <span>
-                  <a class="link contactLink" data-contact="${easyEncode("info@jungegrafik.ch")}">
+                  <a class="textButton contactLink" data-contact="${easyEncode("info@jungegrafik.ch")}">
                     contact
                   </a>
                 </span>
@@ -46,7 +46,7 @@ module.exports = (data) => {
             content: `
                 <span>Sponsorship</span>
                 <span>
-                  <a class="link contactLink" data-contact="${easyEncode("remo.stahl@jungegrafik.ch")}">
+                  <a class="link contacttextButton" data-contact="${easyEncode("remo.stahl@jungegrafik.ch")}">
                     contact
                   </a>
                 </span>

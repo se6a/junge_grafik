@@ -29,7 +29,7 @@ module.exports = (data) => {
       <div class="Select inputBox outer">
         <div
           class="Select inputBox inner"
-          onclick="selectOption(this, event)"
+          onclick="selectOption(this, event.target)"
           onmouseleave="blurField(event)"
           tabindex="0"
           data-placeholder="${placeholder}"

@@ -1,9 +1,8 @@
-function selectOption($field, e) {
-  if (e.target.classList.contains("option")) {
+function selectOption($field, $option) {
+  if ($option.classList.contains("option")) {
     const $input      = $field.querySelector("input");
     const $display    = $field.querySelector(".input.Select");
     const $lastOption = $field.querySelector("li.option.--selected");
-    const $option     = e.target;
     const optionId    = $option.dataset.id;
 
     optionId !== ""
@@ -93,23 +92,3 @@ function closeTooltip($tip) {
 
 //   $content.style.left = "";
 // }
-
-function selectLanguage(e) {
-  e.preventDefault();
-  const $langForm = e.target;
-  const $langInput = $langForm.querySelector('input[name="fields[language]"');
-  const lang = $langInput.value;
-
-  if (! lang) {
-    $langInput.classList.add("--warn");
-  }
-
-  else {
-    const $ViewSubmit = document.querySelector(".VIEW.Submit");
-
-    $ViewSubmit.dataset.lang = "de";
-    $langInput.classList.remove("--warn");
-  }
-
-  console.log($langInput.value);
-}

@@ -24,7 +24,7 @@ module.exports = ({
   const html = splitTemp/*html*/`
     <${tag}
       ${id}
-      class="link styledLink ${classes}"
+      class="textButton styledLink ${classes}"
       type=${type}
       ${href}
       ${onclick}

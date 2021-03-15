@@ -4,10 +4,39 @@ document.addEventListener(
     const path = this.location.pathname;
 
     if (path.startsWith("/submit")) {
+      preselectLanguage("ProjectRegistrationLang");
       window.projectForm = new ProjectForm();
     }
   }
 );
+
+function preselectLanguage(formId) {
+  const lang = document.body.getAttribute("class").match(/--(fr|de|it)\s/)[1];
+  const $field = document.querySelector(`#${formId} .Language .Select.inputBox.outer`);
+  const $option = $field.querySelector(`.option[data-id="${lang}"]`);
+  selectOption($field, $option);
+}
+
+function setFormLanguage(e) {
+  e.preventDefault();
+  const $langForm = e.target;
+  const $langInput = $langForm.querySelector('input[name="fields[language]"');
+  const lang = $langInput.value;
+
+  if (! lang) {
+    $langInput.classList.add("--warn");
+  }
+
+  else {
+    const $ViewSubmit = document.querySelector(".VIEW.Submit");
+
+    $ViewSubmit.lang = lang;
+    $ViewSubmit.classList.add(`--${lang}`);
+    $langInput.classList.remove("--warn");
+  }
+
+  console.log($langInput.value);
+}
 
 /* SUBMIT PROJECT FORM
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

@@ -26,9 +26,9 @@ module.exports = (data) => {
       display: block;
     }
 
-    .VIEW.Award .OverviewItem [data-lang="fr"] .link[data-lang="fr"],
-    .VIEW.Award .OverviewItem [data-lang="de"] .link[data-lang="de"],
-    .VIEW.Award .OverviewItem [data-lang="it"] .link[data-lang="it"] {
+    .VIEW.Award .OverviewItem [data-lang="fr"] .textButton[data-lang="fr"],
+    .VIEW.Award .OverviewItem [data-lang="de"] .textButton[data-lang="de"],
+    .VIEW.Award .OverviewItem [data-lang="it"] .textButton[data-lang="it"] {
       border-bottom: var(--borderFull) solid currentColor;
       margin: calc(var(--borderFull) * -1) 0;
     }

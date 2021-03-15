@@ -110,12 +110,6 @@ function toggleMenu($menuButton) {
   document.querySelector(".MENU").classList.toggle("--show");
 }
 
-function setLanguage($container, $selector) {
-  if ($selector.dataset.lang) {
-    $container.dataset.lang = $selector.dataset.lang;
-  }
-}
-
 function postRequest(endpoint, data) {
   return fetch(
     new Request(
@@ -174,4 +168,10 @@ function showContacts() {
       _$contact.innerHTML = _decoded;
     });
   }, 50);
+}
+
+function setLanguage($container, $button) {
+  if ($button.dataset.lang) {
+    $container.lang = $button.dataset.lang;
+  }
 }

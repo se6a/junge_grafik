@@ -49,18 +49,18 @@ module.exports = [
   [
     {
       name: "geschlecht",
-      label: { de: "Geschlecht", fr: "Genre", it: "Sesso" },
+      label: { de: "Geschlecht", fr: "X", it: "X" },
       type: "select-1",
       options: [
-        { id:"440", de: "Weiblich", fr: "Femme", it: "Femminile" },
-        { id:"441", de: "Männlich", fr: "Homme", it: "Maschile"},
-        { id:"682", de: "Keine Angabe", fr: "Non spécifié", it: "Nessuna indicazione"}
+        { id:"440", de: "Männlich" },
+        { id:"441", de: "Weiblich" },
+        { id:"682", de: "Keine Angabe" }
       ]
       // required: true
     },
     {
       name: "geburtsjahr",
-      label: { de: "Geburtsjahr", fr: "Année de naissance", it: "Anno si nascita" },
+      label: { de: "Geburtsjahr", fr: "X", it: "X" },
       type: "number",
       min: 1000,
       max: 9999,
@@ -72,13 +72,13 @@ module.exports = [
   [
     {
       name: "vorname",
-      label: { de: "Vorname", fr: "Prénom", it: "Nome" },
+      label: { de: "Vorname", fr: "X", it: "X" },
       type: "text-short"
       // required: true
     },
     {
       name: "familienname",
-      label: { de: "Familienname", fr: "Nom de famille", it: "Cognome" },
+      label: { de: "Familienname", fr: "X", it: "X" },
       type: "text-short"
       // required: true
     }
@@ -89,14 +89,14 @@ module.exports = [
   [
     {
       name: "strasse-nummer",
-      label: { de: "Strasse / Nr.", fr: "Rue / no.", it: "Via / No." },
+      label: { de: "Strasse / Nr.", fr: "X", it: "X" },
       type: "text-short",
       maxchar: 6
       // required: true
     },
     {
       name: "postleitzahl-ort",
-      label: { de: "PLZ / Ort", fr: "Code postal / localité", it: "NPA / Luogo" },
+      label: { de: "PLZ / Ort", fr: "X", it: "X" },
       type: "text-short"
       // required: true
     }
@@ -113,7 +113,7 @@ module.exports = [
     },
     {
       name: "mobile",
-      label: { de: "Mobile", fr: "Télephone", it: "Mobile" },
+      label: { de: "Mobile", fr: "X", it: "X" },
       type: "text-short"
       // required: true
     }
@@ -124,67 +124,37 @@ module.exports = [
   [
     {
       name: "link-portfolio",
-      label: { de: "Link Portfolio", fr: "Lien site portfolio", it: "Link a sito web del portfolio" },
+      label: { de: "Link Portfolio", fr: "X", it: "X" },
       type: "url",
       tooltip: {
         de: `
           <ul>
             <li class="dash">Der Link zu deinem Portfolio ist freiwillig</li>
-            <li class="dash">Das Portfolio beeinflusst nicht die Jurierung deines Projekts.</li>
-            <li class="dash">Wenn du gewinnst, werden wir die URL in unserem Archiv verlinken.</li>
+            <li class="dash">Das Portfolio beeinflusst nicht die Jurierung deines Projekts</li>
+            <li class="dash">Wenn du gewinnst, werden wir die URL in unserem Archiv verlinken</li>
             <li class="dash">Beispiel Website Portfolio: jungegrafik.ch</li>
             <li class="dash">Beispiel Behance Portfolio: behance.net/jungegrafik</li>
             <li class="dash">Beispiel Instagram Portfolio: instagram.com/jungegrafik</li>
           </ul>
         `,
-        fr: `
-          <ul>
-            <li class="dash">Le lien vers le site web de ton portfolio est facultatif.</li>
-            <li class="dash">Le portfolio n'influence pas l'évaluation de ton projet.</li>
-            <li class="dash">Si tu gagnes, nous ajouterons un lien vers l'URL dans nos archives.</li>
-            <li class="dash">X</li>
-            <li class="dash">X</li>
-            <li class="dash">X</li>
-          </ul>
-        `,
-        it: `
-          <ul>
-            <li class="dash">Il link al tuo sito web del portfolio è opzionale.</li>
-            <li class="dash">Il portfolio non influenza il giudizio del tuo progetto.</li>
-            <li class="dash">Se vinci, inseriremo l'URL nel nostro archivio.</li>
-            <li class="dash">X</li>
-            <li class="dash">X</li>
-            <li class="dash">X</li>
-          </ul>
-        `
+        fr: "X",
+        it: "X"
       }
     },
     {
       name: "link-instagram-profil",
-      label: { de: "Link Instagram-Profil", fr: "Lien profil Instagram", it: "Link profilo Instagram" },
+      label: { de: "Link Instagram-Profil", fr: "X", it: "X" },
       type: "url",
       tooltip: {
         de: `
           <ul>
-            <li class="dash">Der Link zu deinem Instagram-Profil ist freiwillig</li>
-            <li class="dash">Das Instagram-Profil beeinflusst nicht die Jurierung deines Projekts</li>
-            <li class="dash">Wenn du gewinnst, werden wir dein Instagram-Profil in unserem Archiv verlinken</li>
+            <li>– Der Link zu deinem Instagram-Profil ist freiwillig</li>
+            <li>– Das Instagram-Profil beeinflusst nicht die Jurierung deines Projekts</li>
+            <li>– Wenn du gewinnst, werden wir dein Instagram-Profil in unserem Archiv verlinken</li>
           </ul>
         `,
-        fr: `
-          <ul>
-            <li class="dash">Le lien vers le site web de ton portfolio est facultatif.</li>
-            <li class="dash">Le portfolio n'influence pas l'évaluation de ton projet.</li>
-            <li class="dash">Si tu gagnes, nous ajouterons un lien vers l'URL dans nos archives.</li>
-          </ul>
-        `,
-        it: `
-          <ul>
-            <li class="dash">Il link al tuo sito web del portfolio è opzionale.</li>
-            <li class="dash">Se vinci, inseriremo l'URL nel nostro archivio.</li>
-            <li class="dash">Il portfolio non influenza il giudizio del tuo progetto.</li>
-          </ul>
-        `
+        fr: "X",
+        it: "X"
       }
     }
   ]

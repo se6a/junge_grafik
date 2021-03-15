@@ -1,24 +1,37 @@
-module.exports = async (data) => {
-  const Header = getSection("header");
-  const Footer = getSection("footer");
-  const Menu   = getSection("menu");
-  const View   = getView(data.viewName);
+const Header = getSection("header");
+const Footer = getSection("footer");
+const Menu   = getSection("menu");
 
+function getUrlLanguage(req) {
+  return (req.headers.host.includes("jeunegraphisme")
+          ? "fr"
+          : req.headers.host.includes("giovanegrafica")
+          ? "it"
+          : "de");
+}
+
+module.exports = async (data) => {
+  const View     = getView(data.viewName);
+  const language = `--${getUrlLanguage(data.req)}`;
   const seoMeta  = ENV.environment === "dev"
                 || data.meta.indexed === false
                  ? `<meta name="robots" content="noindex,nofollow"/>`
                  : "";
-
+  const title    = {
+                    fr: "Jeune Graphisme",
+                    de: "Junge Grafik",
+                    it: "Giovane Grafica"
+                   }[language];
   const titleAddition = data.meta.title
                       ? `: ${data.meta.title}`
                       : "";
 
   const html = splitTemp/*html*/`
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
 
       <head>
-        <title>Junge Grafik${titleAddition}</title>
+        <title>${title}${titleAddition}</title>
 
         <meta char="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +47,7 @@ module.exports = async (data) => {
         <inject-css />
       </head>
 
-      <body>
+      <body class="${language}">
         ${Header()}
         ${Menu()}
         ${await View(data)}

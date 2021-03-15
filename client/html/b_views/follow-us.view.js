@@ -8,9 +8,9 @@ module.exports = (view) => {
         title:   "Follow us!",
         content: `
           <ul>
-            <li><a class="link" target="_blank" href="https://instagram.com/jungegrafik">Instagram</a></li>
-            <li><a class="link" target="_blank" href="https://facebook.com/Junge-Grafik-108635944605605">Facebook</a></li>
-            <li><a class="link" target="_blank" href="https://linkedin.com/company/junge-grafik-schweiz">LinkedIn</a></li>
+            <li><a class="textButton" target="_blank" href="https://instagram.com/jungegrafik">Instagram</a></li>
+            <li><a class="textButton" target="_blank" href="https://facebook.com/Junge-Grafik-108635944605605">Facebook</a></li>
+            <li><a class="textButton" target="_blank" href="https://linkedin.com/company/junge-grafik-schweiz">LinkedIn</a></li>
           </ul>
         `
       })}

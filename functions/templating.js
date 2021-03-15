@@ -142,7 +142,11 @@ async function build(req) {
 
 function _assembleRaw(req) {
   const viewName = req.url.slice(1);
-  const data = { ...getData(`page-${viewName}`), viewName };
+  const data = {
+    ...getData(`view-${viewName}`),
+    viewName,
+    req
+  };
 
   const $site = getSite("main");
   const raw = $site(data);
@@ -248,7 +252,8 @@ global.lang = (tag, texts) => {
       // if tag[0] = <li>, then tag_0 = <li
 
       languages.forEach((_lang) => {
-        html += `${tag_0} class="lang ${_lang}">${texts[_lang]}${tag[1]}`;
+        html += `${tag_0} class="langOption ${_lang}" lang="${_lang}">${texts[_lang]}${tag[1]}`;
+        // html += `${tag_0} class="lang ${_lang}">${texts[_lang]}${tag[1]}`;
       });
     }
   }

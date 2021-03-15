@@ -88,19 +88,13 @@ module.exports = (data) => {
   `;
 
   const css = /*css*/`
-    .lang {
+    .langOption {
       display: none;
     }
 
-    .VIEW[data-lang="it"] .lang.it {
-      display: inline;
-    }
-
-    .VIEW[data-lang="fr"] .lang.fr {
-      display: inline;
-    }
-
-    .VIEW[data-lang="de"] .lang.de {
+    .VIEW.--it .langOption.it,
+    .VIEW.--fr .langOption.fr,
+    .VIEW.--de .langOption.de {
       display: inline;
     }
 
@@ -121,15 +115,15 @@ module.exports = (data) => {
       min-height: 40vh;
     }
 
-    #SubmitProjectForm[data-state="initial"] .Submit .button .initial {
+    #SubmitProjectForm[data-state="initial"] .label .initial {
       display: initial;
     }
 
-    #SubmitProjectForm[data-state="sending"] .Submit .button .sending {
+    #SubmitProjectForm[data-state="sending"] .label .sending {
       display: initial;
     }
 
-    #SubmitProjectForm[data-state="error"] .Submit .button .error {
+    #SubmitProjectForm[data-state="error"] .label .error {
       display: initial;
     }
 

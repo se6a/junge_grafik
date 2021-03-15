@@ -24,15 +24,15 @@ module.exports = {
               title: "Participation",
               items: [
                 `
-                  <span data-lang="de" onclick="setLanguage(this, event.target)">
+                  <span lang="de" onclick="setLanguage(this, event.target)">
                     <p>
-                      <button class="link" type="button" data-lang="fr">FR</button> /
-                      <button class="link" type="button" data-lang="de">DE</button> /
-                      <button class="link" type="button" data-lang="it">IT</button>
+                      <button class="textButton fr" type="button" data-lang="fr">FR</button> /
+                      <button class="textButton de" type="button" data-lang="de">DE</button> /
+                      <button class="textButton it" type="button" data-lang="it">IT</button>
                     </p>
-                    <p class="textOption fr">La participation est ouverte aux étudiant·es en graphisme CFC en entreprise ou dans une école de maturité professionnelle ; aux étudiant·es d’une haute école spécialisée (Bachelor en communication visuelle / graphisme) ou en formation professionnelle supérieure (Designer ES en communication visuelle)</p>
-                    <p class="textOption de">Grafiklernende EFZ in einem Betrieb oder an einer Fachklasse Grafik; Studierende an einer Fachhochschule (BA-Studiengang Visuelle Kommunikation / Graphic Design) oder in der Höheren Berufsbildung (dipl. Gestalterin / dipl. Gestalter HF)</p>
-                    <p class="textOption it">Apprendisti grafici AFC presso un’azienda o presso una scuola di arte applicata; studenti di una scuola universitaria professionale (corso BA in comunicazione visiva / graphic design) o in una formazione professionale superiore (dipl. Gestalterin / dipl. Gestalter HF)</p>
+                    <p class="textOption fr" lang="fr">La participation est ouverte aux étudiant·es en graphisme CFC en entreprise ou dans une école de maturité professionnelle ; aux étudiant·es d’une haute école spécialisée (Bachelor en communication visuelle / graphisme) ou en formation professionnelle supérieure (Designer ES en communication visuelle)</p>
+                    <p class="textOption de" lang="de">Grafiklernende EFZ in einem Betrieb oder an einer Fachklasse Grafik; Studierende an einer Fachhochschule (BA-Studiengang Visuelle Kommunikation / Graphic Design) oder in der Höheren Berufsbildung (dipl. Gestalterin / dipl. Gestalter HF)</p>
+                    <p class="textOption it" lang="it">Apprendisti grafici AFC presso un’azienda o presso una scuola di arte applicata; studenti di una scuola universitaria professionale (corso BA in comunicazione visiva / graphic design) o in una formazione professionale superiore (dipl. Gestalterin / dipl. Gestalter HF)</p>
                   </span>
                 `,
                 `– All levels of education`,
@@ -111,7 +111,7 @@ module.exports = {
             src: "jury/jg_jury_21-audrey_fleur_ljubenovic.png",
             alt: "Portait of jury member Audrey Fleur Ljubenovic"
           },
-          content: `<a class="link" href="https://audreyfleur.ch" target="_blank">audreyfleur.ch</a>`
+          content: `<a class="textButton" href="https://audreyfleur.ch" target="_blank">audreyfleur.ch</a>`
         },
         {
           type: "card-with-image",
@@ -120,7 +120,7 @@ module.exports = {
             src: "jury/jg_jury_21-demian_conrad.png",
             alt: "Portait of jury member Demian Conrad"
           },
-          content: `<a class="link" href="http://demianconrad.com" target="_blank">demianconrad.com</a>`
+          content: `<a class="textButton" href="http://demianconrad.com" target="_blank">demianconrad.com</a>`
         },
         {
           type: "card-with-image",
@@ -129,7 +129,7 @@ module.exports = {
             src: "jury/jg_jury_21-dennis_moya.png",
             alt: "Portait of jury member Dennis Moya"
           },
-          content: `<a class="link" href="https://dennismoya.ch" target="_blank">dennismoya.ch</a>`
+          content: `<a class="textButton" href="https://dennismoya.ch" target="_blank">dennismoya.ch</a>`
         },
         {
           type: "card-with-image",
@@ -138,7 +138,7 @@ module.exports = {
             src: "jury/jg_jury_21-felix_pfaeffli.png",
             alt: "Portait of jury member Felix Pfäffli"
           },
-          content: `<a class="link" href="https://studiofeixen.ch" target="_blank">studiofeixen.ch</a>`
+          content: `<a class="textButton" href="https://studiofeixen.ch" target="_blank">studiofeixen.ch</a>`
         },
         {
           type: "card-with-image",
@@ -147,7 +147,7 @@ module.exports = {
             src: "jury/jg_jury_21-jonas_voegeli.png",
             alt: "Portait of jury member Jonas Vögeli"
           },
-          content: `<a class="link" href="https://hubertus-design.ch" target="_blank">hubertus-design.ch</a>`
+          content: `<a class="textButton" href="https://hubertus-design.ch" target="_blank">hubertus-design.ch</a>`
         },
         {
           type: "card-with-image",
@@ -156,7 +156,7 @@ module.exports = {
             src: "jury/jg_jury_21-larissa_kasper.png",
             alt: "Portait of jury member Larissa Kasper"
           },
-          content: `<a class="link" href="http://kasper-florio.ch" target="_blank">kasper-florio.ch</a>`
+          content: `<a class="textButton" href="http://kasper-florio.ch" target="_blank">kasper-florio.ch</a>`
         },
         {
           type: "card-with-image",
@@ -183,7 +183,7 @@ module.exports = {
             src: "jury/jg_jury_21-valeria_bonin.png",
             alt: "Portait of jury member Valeria Bonin"
           },
-          content: `<a class="link" href="https://bonbon.li" target="_blank">bonbon.li</a>`
+          content: `<a class="textButton" href="https://bonbon.li" target="_blank">bonbon.li</a>`
         }
       ]
     }

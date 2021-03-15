@@ -6,7 +6,7 @@ module.exports = () => {
     <form
       id="ProjectRegistrationLang"
       class="form"
-      onsubmit="selectLanguage(event)"
+      onsubmit="setFormLanguage(event)"
     >
       <fieldset class="formFieldGroup">
         <div class="formField Language">
