@@ -171,7 +171,12 @@ function showContacts() {
 }
 
 function setLanguage($container, $button) {
-  if ($button.dataset.lang) {
-    $container.lang = $button.dataset.lang;
+  const lang = $button.dataset.lang;
+
+  if (lang) {
+    const prevLang = $container.lang;
+    $container.lang = lang;
+    $container.classList.remove(`--${prevLang}`);
+    $container.classList.add(`--${lang}`);
   }
 }

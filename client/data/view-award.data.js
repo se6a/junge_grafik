@@ -24,15 +24,15 @@ module.exports = {
               title: "Participation",
               items: [
                 `
-                  <span lang="de" onclick="setLanguage(this, event.target)">
-                    <p>
+                  <span onclick="setLanguage(this, event.target)">
+                    <span>
                       <button class="textButton fr" type="button" data-lang="fr">FR</button> /
                       <button class="textButton de" type="button" data-lang="de">DE</button> /
                       <button class="textButton it" type="button" data-lang="it">IT</button>
-                    </p>
-                    <p class="textOption fr" lang="fr">La participation est ouverte aux étudiant·es en graphisme CFC en entreprise ou dans une école de maturité professionnelle ; aux étudiant·es d’une haute école spécialisée (Bachelor en communication visuelle / graphisme) ou en formation professionnelle supérieure (Designer ES en communication visuelle)</p>
-                    <p class="textOption de" lang="de">Grafiklernende EFZ in einem Betrieb oder an einer Fachklasse Grafik; Studierende an einer Fachhochschule (BA-Studiengang Visuelle Kommunikation / Graphic Design) oder in der Höheren Berufsbildung (dipl. Gestalterin / dipl. Gestalter HF)</p>
-                    <p class="textOption it" lang="it">Apprendisti grafici AFC presso un’azienda o presso una scuola di arte applicata; studenti di una scuola universitaria professionale (corso BA in comunicazione visiva / graphic design) o in una formazione professionale superiore (dipl. Gestalterin / dipl. Gestalter HF)</p>
+                    </span>
+                    <p class="langOption fr" lang="fr">La participation est ouverte aux étudiant·es en graphisme CFC en entreprise ou dans une école de maturité professionnelle ; aux étudiant·es d’une haute école spécialisée (Bachelor en communication visuelle / graphisme) ou en formation professionnelle supérieure (Designer ES en communication visuelle).</p>
+                    <p class="langOption de" lang="de">Grafiklernende EFZ in einem Betrieb oder an einer Fachklasse Grafik; Studierende an einer Fachhochschule (BA-Studiengang Visuelle Kommunikation / Graphic Design) oder in der Höheren Berufsbildung (dipl. Gestalterin / dipl. Gestalter HF).</p>
+                    <p class="langOption it" lang="it">Apprendisti grafici AFC presso un’azienda o presso una scuola di arte applicata; studenti di una scuola universitaria professionale (corso BA in comunicazione visiva / graphic design) o in una formazione professionale superiore (designer dipl. SSS).</p>
                   </span>
                 `,
                 `– All levels of education`,

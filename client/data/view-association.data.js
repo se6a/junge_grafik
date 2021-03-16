@@ -247,66 +247,6 @@ module.exports = {
 
     {
       type: "rows",
-      title: "Many thanks to our sponsors",
-      subtitle: "Bold sponsors",
-      length: 4,
-      content: [
-        {
-          type: "card-with-image",
-          title: "Engelberger Druck AG",
-          image: {
-            src: "/sponsors/logo-engelberger_druck.png",
-            alt: "Logo of Sponsor Engelberg Druck"
-          },
-          content: `
-            <a class="textButton" href="https://engelbergerdruck.ch" target="_blank">engelbergerdruck.ch</a>
-          `
-        },
-        {
-          type: "card-with-image",
-          title: "We Talents",
-          image: {
-            src: "/sponsors/logo-wetalents.png",
-            alt: "Logo of Sponsor We-Talents"
-          },
-          content: `
-            <a class="textButton" href="https://wetalents.net" target="_blank">wetalents.net</a>
-          `
-        }
-      ]
-    },
-
-    {
-      type: "rows",
-      length: 8,
-      subtitle: "Light sponsors",
-      content: [
-        {
-          type: "image-box",
-          image: {
-            src: "/sponsors/logo-an_der_reuss.png",
-            alt: "Logo of Sponsor An Der Reuss"
-          }
-        },
-        {
-          type: "image-box",
-          image: {
-            src: "/sponsors/logo-studio_feixen.png",
-            alt: "Logo of Sponsor Studio Feixen"
-          }
-        },
-        {
-          type: "image-box",
-          image: {
-            src: "/sponsors/logo-sonderegger.png",
-            alt: "Logo of Sponsor Sonderegger"
-          }
-        }
-      ]
-    },
-
-    {
-      type: "rows",
       title: "Many thanks to our Patronage and Partners",
       length: 4,
       content: [
@@ -369,6 +309,66 @@ module.exports = {
           content: `
             <a class="textButton" href="https://ronorp.net" target="_blank">ronorp.net</a>
           `
+        }
+      ]
+    },
+
+    {
+      type: "rows",
+      title: "Many thanks to our sponsors",
+      subtitle: "Bold sponsors",
+      length: 4,
+      content: [
+        {
+          type: "card-with-image",
+          title: "Engelberger Druck AG",
+          image: {
+            src: "/sponsors/logo-engelberger_druck.png",
+            alt: "Logo of Sponsor Engelberg Druck"
+          },
+          content: `
+            <a class="textButton" href="https://engelbergerdruck.ch" target="_blank">engelbergerdruck.ch</a>
+          `
+        },
+        {
+          type: "card-with-image",
+          title: "We Talents",
+          image: {
+            src: "/sponsors/logo-wetalents.png",
+            alt: "Logo of Sponsor We-Talents"
+          },
+          content: `
+            <a class="textButton" href="https://wetalents.net" target="_blank">wetalents.net</a>
+          `
+        }
+      ]
+    },
+
+    {
+      type: "rows",
+      length: 8,
+      subtitle: "Light sponsors",
+      content: [
+        {
+          type: "image-box",
+          image: {
+            src: "/sponsors/logo-an_der_reuss.png",
+            alt: "Logo of Sponsor An Der Reuss"
+          }
+        },
+        {
+          type: "image-box",
+          image: {
+            src: "/sponsors/logo-studio_feixen.png",
+            alt: "Logo of Sponsor Studio Feixen"
+          }
+        },
+        {
+          type: "image-box",
+          image: {
+            src: "/sponsors/logo-sonderegger.png",
+            alt: "Logo of Sponsor Sonderegger"
+          }
         }
       ]
     },

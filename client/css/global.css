@@ -261,13 +261,17 @@ ul > .dash::before {
 }
 
 .langOption {
-  display: none;
+  pointer-events: none;
+  visibility: hidden;
+  position: absolute;
 }
 
 .--fr .langOption.fr,
 .--de .langOption.de,
 .--it .langOption.it {
-  display: inline;
+  pointer-events: inherit;
+  visibility: visible;
+  position: inherit;
 }
 
 .label {

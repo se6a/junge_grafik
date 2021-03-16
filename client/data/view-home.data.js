@@ -57,6 +57,40 @@ module.exports = {
           ]
         }
       ]
+    },
+    {
+      type: "rows",
+      length: 8,
+      content: [
+        {
+          type: "image-box",
+          image: {
+            src: "/sponsors/logo-sgv.png",
+            alt: "Logo of SGV"
+          }
+        },
+        {
+          type: "image-box",
+          image: {
+            src: "/sponsors/logo-sgd.png",
+            alt: "Logo of SGD"
+          }
+        },
+        {
+          type: "image-box",
+          image: {
+            src: "/sponsors/logo-weltformat.png",
+            alt: "Logo of Weltformat"
+          }
+        },
+        {
+          type: "image-box",
+          image: {
+            src: "/sponsors/logo-ronorp.png",
+            alt: "Logo of Ronorp"
+          }
+        }
+      ]
     }
   ],
   footer: true

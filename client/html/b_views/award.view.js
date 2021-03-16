@@ -15,23 +15,34 @@ module.exports = (data) => {
       --colorTheme: var(--red);
     }
 
-    .VIEW.Award .OverviewItem .textOption {
-      display: none;
-      margin: var(--size-XS) 0;
+    .VIEW.Award .OverviewItem .langOption {
+      margin: var(--size-XS) 0 var(--size-S);
     }
 
-    .VIEW.Award .OverviewItem [data-lang="fr"] .textOption.fr,
-    .VIEW.Award .OverviewItem [data-lang="de"] .textOption.de,
-    .VIEW.Award .OverviewItem [data-lang="it"] .textOption.it {
-      display: block;
+    .VIEW.Award .OverviewItem .--fr .langOption:not(.fr),
+    .VIEW.Award .OverviewItem .--de .langOption:not(.de),
+    .VIEW.Award .OverviewItem .--it .langOption:not(.it) {
+      pointer-events: none;
+      visibility: hidden;
+      position: absolute;
     }
 
-    .VIEW.Award .OverviewItem [data-lang="fr"] .textButton[data-lang="fr"],
-    .VIEW.Award .OverviewItem [data-lang="de"] .textButton[data-lang="de"],
-    .VIEW.Award .OverviewItem [data-lang="it"] .textButton[data-lang="it"] {
+    span.--fr .textButton:not(.fr),
+    span.--de .textButton:not(.de),
+    span.--it .textButton:not(.it) {
+      border-bottom: 0;
+      margin: 0;
+    }
+
+    .--fr .textButton.fr,
+    .--de .textButton.de,
+    .--it .textButton.it {
       border-bottom: var(--borderFull) solid currentColor;
       margin: calc(var(--borderFull) * -1) 0;
     }
+
+
+
   `;
 
   return ["award.view", html, css];
