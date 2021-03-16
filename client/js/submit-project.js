@@ -106,20 +106,20 @@ const ProjectForm = function() {
     },
 
     appendLanguage(formdata) {
-      const lang = document.querySelector(".VIEW.Submit")
-                    .dataset.lang;
+      const lang = document.querySelector(".VIEW.Submit").lang;
 
       let langId = 0;
 
       switch (lang) {
-        case "de":
-          langId = 697;
-          break;
         case "it":
           langId = 698;
           break;
         case "fr":
           langId = 699;
+          break;
+        case "de":
+        default:
+          langId = 697;
           break;
       }
 

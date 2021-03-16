@@ -24,6 +24,7 @@ module.exports = (tooltip) => {
     .Tooltip {
       margin-left: 10px;
       cursor: pointer;
+      display: none;
     }
 
     .Tooltip > .content {
