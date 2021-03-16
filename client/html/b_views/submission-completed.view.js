@@ -4,7 +4,7 @@ module.exports = (data) => {
   const html = splitTemp/*html*/`
     <main id="SubmissionCompleted" class="VIEW SubmissionCompleted" data-lang="de">
       ${HeaderView({
-        title: "Project registration",
+        title: "Danke!",
         content: lang`
           <span>
           ${{
@@ -28,7 +28,7 @@ module.exports = (data) => {
       --colorTheme: var(--yellow);
     }
 
-    .VIEW.SubmissionComplete .HeaderView p:not(:last-child) {
+    .VIEW.SubmissionCompleted .HeaderView p:not(:last-child) {
       margin-bottom: var(--size-L);
     }
   `;

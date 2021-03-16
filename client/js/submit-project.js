@@ -60,14 +60,19 @@ const ProjectForm = function() {
         await this.appendFiles(formdata);
         this.appendLanguage(formdata);
         this.formatLinks(formdata);
+        formdata.append("field[einreichedatum]", Date.now());
+        formdata.append("action[einreichung]", "submit");
 
         postRequest("newproject", formdata)
 
         .then((res) => {
-          if (res.status === 200)
+          if (res.status === 200) {
+            this.reset();
             this.feedbackSuccess();
-          else
+          }
+          else {
             this.feedbackError();
+          }
         })
 
         .catch(() => {
@@ -135,11 +140,11 @@ const ProjectForm = function() {
     },
 
     feedbackSuccess() {
-      // this.$form.dataset.state = "success";
-      window.location.href = `${HOST}/thanks-for-your-submission`;
+      window.location.href = `${HOST}/submission-completed`;
     },
 
     reset() {
+      this.$form.reset();
       this.$form.dataset.state = "initial";
     }
   };

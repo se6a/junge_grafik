@@ -35,16 +35,21 @@ module.exports = (data) => {
     }
 
     .VIEW.Newsletter {
-      height: 100vh;
-      position: absolute;
-      top: 0;
-      width: 100%;
+      height: 100%;
     }
 
     .Newsletter .HEADER-VIEW {
-      height: 20vh;
+      height: unset;
       min-height: unset;
       border-bottom: 0;
+    }
+
+    .Newsletter .HeaderView.textWrapper {
+      padding-bottom: 0;
+    }
+
+    .Newsletter .HeaderView.textWrapper .title {
+      margin-bottom: 0;
     }
 
     .Newsletter .Fullpage {

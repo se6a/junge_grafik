@@ -252,11 +252,13 @@ global.lang = (tag, texts) => {
       // if tag[0] = <li>, then tag_0 = <li
 
       languages.forEach((_lang) => {
-        html += `
-                  ${tag_0} class="langOption ${_lang}" lang="${_lang}">
-                    ${texts[_lang]}
-                  ${tag[1]}
-                `;
+        if (["fr", "de", "it"].includes(_lang)) {
+          html += `
+            ${tag_0} class="langOption ${_lang}" lang="${_lang}">
+              ${texts[_lang]}
+            ${tag[1]}
+          `;
+        }
       });
     }
   }

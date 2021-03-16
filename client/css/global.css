@@ -117,6 +117,21 @@ body {
 
 /*  Normalizing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+html {
+  height: 100%;
+}
+
+body {
+  font-size: var(--fontSize-M);
+  line-height: var(--lineHeight-M);
+  color: var(--colorKey);
+  border: var(--borderHalf) solid currentColor;
+  font-family: FeixenSans, sans-serif;
+  font-style: normal;
+  overflow-x: hidden;
+  height: inherit;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -186,16 +201,6 @@ select:focus {
   outline: calc(var(--borderFocus) - var(--borderFull))
            solid
            currentColor;
-}
-
-body {
-  font-size: var(--fontSize-M);
-  line-height: var(--lineHeight-M);
-  color: var(--colorKey);
-  border: var(--borderHalf) solid currentColor;
-  font-family: FeixenSans, sans-serif;
-  font-style: normal;
-  overflow-x: hidden;
 }
 
 /*  Layout

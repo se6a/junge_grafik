@@ -15,7 +15,7 @@ function SelectOptions(options = []) {
 module.exports = (data) => {
   const zindex      = data.zindex ? `style="z-index: ${data.zindex}"` : "";
   const required    = data.required ? "--required" : "";
-  const placeholder = data.placeholder?.de || "select one";
+  const placeholder = "select one";
 
   const html = splitTemp/*html*/`
     <div class="formField Select ${required}" ${zindex}>

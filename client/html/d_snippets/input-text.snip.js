@@ -19,7 +19,7 @@ module.exports = ({ name, label, required, tooltip, maxlength = 500 }) => {
 
       <div class="inputBox">
         <textarea
-          class="input Text"
+          class="input Text textarea"
           name="fields[${name}]"
           data-max=${maxlength}
           ${required ? "required" : ""}
@@ -39,13 +39,15 @@ module.exports = ({ name, label, required, tooltip, maxlength = 500 }) => {
       display: flex;
     }
 
-    .formField textarea {
+    .formField.Text .textarea {
       min-height: calc(7 * var(--size-M));
       resize: vertical;
+      padding-top: var(--size-XS);
+      padding-bottom: var(--size-XS);
     }
 
-    .--size-md .formField textarea,
-    .--size-sm .formField textarea {
+    .--size-md .formField.Text .textarea,
+    .--size-sm .formField.Text .textarea {
       min-height: calc(7 * var(--size-L));
     }
   `;

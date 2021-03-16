@@ -115,9 +115,6 @@ function rebuildForm(req, res, next) {
 }
 
 async function sendEntryForm(req, res, next) {
-  res.locals.newForm.append("field[einreichedatum]", Date.now());
-  res.locals.newForm.append("action[einreichung]", "submit");
-
   await fetch(
     "https://api.jungegrafik.ch/symphony/api/entries/einreichungen/?auth-token=02701d93&format=json",
     {

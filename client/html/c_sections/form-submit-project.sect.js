@@ -82,17 +82,6 @@ module.exports = (data) => {
         </fieldset>
       </section>
 
-      <section class="formSegment Success">
-        <header>
-          <h1>
-            ${Underlined("Glückwunsch!")}
-          </h1>
-        </header>
-        <div class="formContent">
-          Du bist dabei.
-        </div>
-      </section>
-
     </form>
   `;
 
@@ -115,11 +104,6 @@ module.exports = (data) => {
       margin-bottom: var(--size-L);
     }
 
-    .Submit .formSegment.Success {
-      display: none;
-      min-height: 40vh;
-    }
-
     #SubmitProjectForm[data-state="initial"] .label .initial {
       display: initial;
     }
@@ -134,14 +118,6 @@ module.exports = (data) => {
 
     #SubmitProjectForm[data-state="error"] .message.error {
       display: block;
-    }
-
-    #SubmitProjectForm[data-state="success"] .formSegment {
-      display: none;
-    }
-
-    #SubmitProjectForm[data-state="success"] .formSegment.Success {
-      display: inherit;
     }
 
     @media screen and (max-width: 1024px) {
