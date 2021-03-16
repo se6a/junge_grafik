@@ -32,7 +32,7 @@
                     ]
 
     required        Bei Pflichtfeldern hinzufügen:
-                    // required: true
+                    required: true
                     Ansonsten weglassen oder:
                     required: false
 
@@ -59,11 +59,11 @@ module.exports = [
         it: "Titolo del progetto"
       },
       type: "text-short",
-      // required: true,
+      required: true,
       tooltip: {
         de: `– Gib deinem Projekt einen Titel. Falls deine Arbeit ausgezeichnet wird, so wird der Projekttitel auf der Website als auch in der Publikation erscheinen.`,
         fr: `– Donnez un titre à ton projet. Si ton travail est récompensé, le titre du projet apparaîtra sur notre site web ainsi que dans la publication.`,
-        it: `– Dai un titolo al tuo progetto. Se il tuo lavoro viene premiato, il titolo del progetto apparirà sul sito web e nella pubblicazione.`,
+        it: `– Dai un titolo al tuo progetto. Se il tuo lavoro viene premiato, il titolo del progetto apparirà sul sito web e nella pubblicazione.`
       }
     },
     // Enstehungsjahr
@@ -79,8 +79,8 @@ module.exports = [
         { id: "2021", all: "2021" },
         { id: "2020", all: "2020" },
         { id: "2019", all: "2019" }
-      ]
-      // required: true
+      ],
+      required: true
     }
   ],
 
@@ -109,7 +109,7 @@ module.exports = [
         { id: "Typography", all: "Typography" },
         { id: "Web design", all: "Web design" }
       ],
-      // required: true,
+      required: true,
       tooltip: {
         de: "– Wähle 1 bis 3 Tags, die zu deinem Projekt passen.",
         fr: "– Choisis 1 à 3 tags (mots-clés) qui correspondent à ton projet-",
@@ -176,7 +176,7 @@ module.exports = [
       },
       type: "text",
       maxlength: "800",
-      // required: true,
+      required: true,
       tooltip: {
         de: "– Nutze den Projektbeschrieb, um uns interessante Aspekte über die Aufgabenstellung, den Prozess und die Idee zu erzählen.",
         fr: "– Utilise cette description pour nous faire part d’aspects intéressants dans la donnée de base, le processus et l'idée de ton projet.",
@@ -200,8 +200,8 @@ module.exports = [
         { id: "683", de: "EFZ", fr: "CFC", it: "AFC" },
         { id: "685", de: "HF", fr: "ES", it: "SSS" },
         { id: "684", de: "FH", fr: "Bachelor Hes-So", it: "SUP" }
-      ]
-      // required: true
+      ],
+      required: true
     },
     {
       name: "ausbildungsjahr",
@@ -214,8 +214,8 @@ module.exports = [
         { id: "2", de: "2. Ausbildungsjahr", fr: "2ème année de formation", it: "2. Anno di formazione" },
         { id: "3", de: "3. Ausbildungsjahr", fr: "3ème année de formation", it: "3. Anno di formazione" },
         { id: "4", de: "4. Ausbildungsjahr", fr: "4ème année de formation", it: "4. Anno di formazione" }
-      ]
-      // required: true
+      ],
+      required: true
     },
     {
       name: "name-ausbildungsinstitution-lehrbetrieb",
@@ -229,8 +229,8 @@ module.exports = [
         de: "– In welcher Ausbildungsinstitution oder in welchem Lehrbetrieb ist dein Projekt entstanden?",
         fr: "– Dans quel établissement d'enseignement ou entreprise d’apprentissage ton projet a-t-il vu le jour ?",
         it: "– In quale scuola o azienda formatrice è stato realizzato il tuo progetto?"
-      }
-      // required: true
+      },
+      required: true
     },
     {
       name: "kanton-des-ausbildungsortes",
@@ -267,8 +267,8 @@ module.exports = [
         { id: "437", de: "Wallis", fr: "Valais", it: "Vallese" },
         { id: "439", de: "Zürich", fr: "Zug", it: "Zugo" },
         { id: "438", de: "Zug", fr: "Zurich", it: "Zurigo" }
-      ]
-      // required: true
+      ],
+      required: true
      }
   ],
 
@@ -375,9 +375,9 @@ module.exports = [
               <li class="dash>– Posso mettere in scena (contestualizzare) il mio progetto? Sì!</li>
               <li class="dash>– Posso inviare mockup digitali invece di riproduzioni? Sì!</li>
             </ul>
-          `,
-      }
-      // required: true
+          `
+      },
+      required: true
     }
   ],
 

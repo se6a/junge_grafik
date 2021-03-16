@@ -29,7 +29,6 @@ Router.post(
   prepareSubscriber,
   rebuildForm,
   sendNewsletterForm
-
 );
 
 async function prepareSubscriber(req, res, next) {
@@ -72,7 +71,8 @@ Router.post(
   rebuildForm,
   sendEntryForm,
   buildFileForm,
-  sendFiles
+  sendFiles,
+  triggerConfirmationEmail
 );
 
 function prepareEntry(req, res, next) {
@@ -168,14 +168,30 @@ async function sendFiles(req, res, next) {
 
   await fetch(url, options)
 
-    .then((fileRes) => fullfilled(res))
+    .then((symphRes) => next())
 
     .catch((error) => failed(res, req, "sendFiles", error));
 }
 
-function fullfilled(res) {
-  console.log("successfull submit");
+async function triggerConfirmationEmail(req, res, next) {
+  const formdata = new FormData();
+  formdata.append("id", res.locals.entry.id);
+  formdata.append("action[einreichung-bestaetigung]", "Abschicken");
 
+  await fetch(
+    "https://api.jungegrafik.ch/mailings/einreichung-bestaetigung/",
+    {
+      method: "POST",
+      body: formdata
+    }
+  )
+
+  .then((symphRes) => fullfilled(res))
+
+  .catch((error) => failed(res, req, "triggerConfirmationEmail", error));
+}
+
+function fullfilled(res) {
   res.body = "fullfilled";
   res.sendStatus(200);
 }

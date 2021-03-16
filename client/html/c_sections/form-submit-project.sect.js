@@ -82,10 +82,23 @@ module.exports = (data) => {
   `;
 
   const css = /*css*/`
-    .VIEW.Submit.--fr .langOption:not(.fr),
-    .VIEW.Submit.--de .langOption:not(.de),
-    .VIEW.Submit.--it .langOption:not(.it) {
-      display: none;
+    .VIEW.Submit .formSegment.Designer {
+      z-index: 30;
+    }
+
+    .VIEW.Submit .formSegment.Project {
+      z-index: 20;
+    }
+
+    .VIEW.Submit .formSegment.Submit {
+      z-index: 10;
+    }
+
+    .VIEW.Submit.--fr .label > .langOption.fr,
+    .VIEW.Submit.--de .label > .langOption.de,
+    .VIEW.Submit.--it .label > .langOption.it {
+      position: initial;
+      visibility: visible;
     }
 
     .Submit .button .initial,

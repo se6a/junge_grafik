@@ -265,17 +265,12 @@ ul > .dash::before {
   content: "– ";
 }
 
-.langOption:not(.all) {
+.--fr .langOption:not(.fr),
+.--de .langOption:not(.de),
+.--it .langOption:not(.it) {
   pointer-events: none;
   visibility: hidden;
   position: absolute;
-}
-
-.--fr .langOption.fr,
-.--de .langOption.de,
-.--it .langOption.it {
-  visibility: visible;
-  position: inherit;
 }
 
 .label {
@@ -340,6 +335,10 @@ ul > .dash::before {
 .formContent {
   display: flex;
   flex-direction: column;
+}
+
+.formSegment {
+  position: relative;
 }
 
 .formFieldGroup {

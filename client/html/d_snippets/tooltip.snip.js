@@ -22,9 +22,8 @@ module.exports = (tooltip) => {
 
   const css = /*css*/`
     .Tooltip {
-      margin-left: 10px;
+      margin-left: var(--size-S);
       cursor: pointer;
-      display: none;
     }
 
     .Tooltip > .content {
@@ -57,6 +56,17 @@ module.exports = (tooltip) => {
 
     .Tooltip.--open .content {
       visibility: visible;
+    }
+
+    .Tooltip .langOption {
+      visibility: hidden;
+    }
+
+    .--fr .Tooltip.--open .langOption.fr,
+    .--de .Tooltip.--open .langOption.de,
+    .--it .Tooltip.--open .langOption.it {
+      visibility: visible;
+      position: initial;
     }
   `;
 

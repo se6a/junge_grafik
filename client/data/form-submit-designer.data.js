@@ -32,7 +32,7 @@
                     ]
 
     required        Bei Pflichtfeldern hinzufügen:
-                    // required: true
+                    required: true
                     Ansonsten weglassen oder:
                     required: false
 
@@ -55,8 +55,8 @@ module.exports = [
         { id:"440", de: "Weiblich", fr: "Femme", it: "Femminile" },
         { id:"441", de: "Männlich", fr: "Homme", it: "Maschile" },
         { id:"682", de: "Keine Angabe", fr: "Non spécifié", it: "Nessuna indicazione" }
-      ]
-      // required: true
+      ],
+      required: true
     },
     {
       name: "geburtsjahr",
@@ -64,8 +64,8 @@ module.exports = [
       type: "number",
       min: 1000,
       max: 9999,
-      step: 1
-      // required: true
+      step: 1,
+      required: true
     }
   ],
 
@@ -73,14 +73,14 @@ module.exports = [
     {
       name: "vorname",
       label: { de: "Vorname", fr: "Prénom", it: "Nome" },
-      type: "text-short"
-      // required: true
+      type: "text-short",
+      required: true
     },
     {
       name: "familienname",
       label: { de: "Familienname", fr: "Nom de famille", it: "Cognome" },
-      type: "text-short"
-      // required: true
+      type: "text-short",
+      required: true
     }
   ],
 
@@ -91,14 +91,14 @@ module.exports = [
       name: "strasse-nummer",
       label: { de: "Strasse / Nr.", fr: "Rue / no.", it: "Via / No." },
       type: "text-short",
-      maxchar: 6
-      // required: true
+      maxchar: 6,
+      required: true
     },
     {
       name: "postleitzahl-ort",
       label: { de: "PLZ / Ort", fr: "Code postal / localité", it: "NPA / Luogo" },
-      type: "text-short"
-      // required: true
+      type: "text-short",
+      required: true
     }
   ],
 
@@ -108,14 +108,14 @@ module.exports = [
     {
       name: "e-mail",
       label: { all: "E-Mail" },
-      type: "email"
-      // required: true
+      type: "email",
+      required: true
     },
     {
       name: "mobile",
       label: { de: "Mobile", fr: "Télephone", it: "Mobile" },
-      type: "text-short"
-      // required: true
+      type: "text-short",
+      required: true
     }
   ],
 

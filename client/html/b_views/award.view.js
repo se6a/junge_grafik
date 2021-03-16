@@ -19,12 +19,12 @@ module.exports = (data) => {
       margin: var(--size-XS) 0 var(--size-S);
     }
 
-    .VIEW.Award .OverviewItem .--fr .langOption:not(.fr),
-    .VIEW.Award .OverviewItem .--de .langOption:not(.de),
-    .VIEW.Award .OverviewItem .--it .langOption:not(.it) {
-      pointer-events: none;
-      visibility: hidden;
-      position: absolute;
+    .VIEW.Award .OverviewItem .--fr .langOption.fr,
+    .VIEW.Award .OverviewItem .--de .langOption.de,
+    .VIEW.Award .OverviewItem .--it .langOption.it {
+      pointer-events: initial;
+      visibility: visible;
+      position: initial;
     }
 
     span.--fr .textButton:not(.fr),
@@ -40,9 +40,6 @@ module.exports = (data) => {
       border-bottom: var(--borderFull) solid currentColor;
       margin: calc(var(--borderFull) * -1) 0;
     }
-
-
-
   `;
 
   return ["award.view", html, css];
