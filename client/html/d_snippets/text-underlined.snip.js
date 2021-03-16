@@ -1,6 +1,6 @@
-module.exports = (text) => {
+module.exports = (text, classes = "") => {
   const html = splitTemp/*html*/`
-    <div class="textUnderlined outerBox">
+    <div class="textUnderlined outerBox ${classes}">
       <div class="textUnderlined innerBox">
         <span class="text">${text}</span>
       </div>

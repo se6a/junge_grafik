@@ -1,20 +1,11 @@
-const HeaderView   = getSection("header-view");
+const HeaderView = getSection("header-view");
 
 module.exports = (data) => {
   const html = splitTemp/*html*/`
     <main id="Newsletter" class="VIEW Newsletter" data-lang="de">
       ${HeaderView({
         title: "Newsletter",
-        content: lang`
-          <span>
-          ${{
-            de: `
-            `,
-            fr: "",
-            it: ""
-          }}
-          </span>
-        `
+        content: ""
       })}
 
       <section class="layoutSection Fullpage box">

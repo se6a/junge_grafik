@@ -265,7 +265,7 @@ ul > .dash::before {
   content: "– ";
 }
 
-.langOption {
+.langOption:not(.all) {
   pointer-events: none;
   visibility: hidden;
   position: absolute;
@@ -274,7 +274,6 @@ ul > .dash::before {
 .--fr .langOption.fr,
 .--de .langOption.de,
 .--it .langOption.it {
-  pointer-events: inherit;
   visibility: visible;
   position: inherit;
 }
@@ -312,12 +311,6 @@ ul > .dash::before {
   overflow: hidden;
   padding: var(--size-S);
 }
-
-/* .box.title {
-  padding: 0 var(--size-M);
-  height: var(--boxHeaderHeight);
-  justify-content: center;
-} */
 
 .box.content {
   flex-grow: 1;

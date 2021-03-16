@@ -34,8 +34,6 @@ function setFormLanguage(e) {
     $ViewSubmit.classList.add(`--${lang}`);
     $langInput.classList.remove("--warn");
   }
-
-  console.log($langInput.value);
 }
 
 /* SUBMIT PROJECT FORM

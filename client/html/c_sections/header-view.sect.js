@@ -1,17 +1,4 @@
-const Underlined = getSnippet("text-underlined");
-
-function multilineTitle(title) {
-  titleParts = title.replace(" ", " --")
-                .split("--");
-
-  const html = [""];
-
-  titleParts.forEach((_part) => {
-    html.push(Underlined(_part), "");
-  });
-
-  return ["text-underlined-multiline.fn", html];
-};
+const UnderlinedMulti = getSnippet("text-underlined-multiline");
 
 module.exports = ({ title = "", image = "", content }) => {
   const showImage   = image
@@ -38,7 +25,7 @@ module.exports = ({ title = "", image = "", content }) => {
       <div class="HeaderView textWrapper" ${showText}>
       
         <h1 class="HeaderView title" ${showTitle}>
-          ${multilineTitle(title)}
+          ${UnderlinedMulti(title)}
         </h1>
 
         <div class="HeaderView content" ${showContent}>
@@ -56,40 +43,6 @@ module.exports = ({ title = "", image = "", content }) => {
       column-gap: 0;
       border: var(--borderHalf) solid currentColor;
       min-height: 100vh;
-    }
-
-    .HeaderView.title {
-      display: flex;
-      flex-wrap: wrap;
-      overflow: hidden;
-      padding-bottom: var(--size-S);
-    }
-
-    .HeaderView.title > .textUnderlined:first-child {
-      margin-bottom: var(--size-S);
-      position: relative;
-    }
-
-    .HeaderView.title > .textUnderlined:first-child .line {
-      bottom: calc(var(--borderFull) * -1);
-      width: 100vw;
-      position: absolute;
-    }
-
-    .HeaderView.title > .textUnderlined:last-child {
-      flex-grow: 1;
-    }
-
-    .HeaderView.title .text {
-      white-space: pre;
-    }
-
-    .HEADER-VIEW .textUnderlined.outerBox {
-      display: inline-flex;
-    }
-
-    .HEADER-VIEW .textUnderlined.outerBox > * {
-      flex-grow: 0;
     }
 
     .HeaderView.textWrapper {

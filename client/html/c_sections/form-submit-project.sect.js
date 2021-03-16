@@ -1,7 +1,7 @@
-const Form          = getJs("form");
-const InputCheckbox = getSnippet("input-checkbox");
-const RoundedButton = getSnippet("button-rounded");
-const Underlined    = getSnippet("text-underlined");
+const Form            = getJs("form");
+const InputCheckbox   = getSnippet("input-checkbox");
+const RoundedButton   = getSnippet("button-rounded");
+const UnderlinedMulti = getSnippet("text-underlined-multiline");
 
 module.exports = (data) => {
   const html = splitTemp/*html*/`
@@ -15,15 +15,11 @@ module.exports = (data) => {
       <section class="formSegment Designer">
         <header>
           <h1>
-            ${Underlined(lang`
-              <span>
-                ${{
-                  fr: "Données personnelles",
-                  de: "Personenangaben",
-                  it: "Dati personali"
-                }}
-              </span>
-            `)}
+            ${UnderlinedMulti({
+              fr: "Données personnelles",
+              de: "Personenangaben",
+              it: "Dati personali"
+            })}
           </h1>
         </header>
         <div class="formContent">
@@ -34,7 +30,7 @@ module.exports = (data) => {
       <section class="formSegment Project">
         <header>
           <h1>
-            ${Underlined("Projekt")}
+            ${UnderlinedMulti("Projekt")}
           </h1>
         </header>
         <div class="formContent">
