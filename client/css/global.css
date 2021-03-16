@@ -260,6 +260,16 @@ ul > .dash::before {
   content: "– ";
 }
 
+.langOption {
+  display: none;
+}
+
+.--fr .langOption.fr,
+.--de .langOption.de,
+.--it .langOption.it {
+  display: inline;
+}
+
 .label {
   white-space: pre-line;
   font-size: var(--fontSize-M);

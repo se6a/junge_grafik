@@ -16,7 +16,7 @@ module.exports = (data) => {
           <li>Verein Junge Grafik</li>
           <li>Konto-Nr.: 248-165901.40W</li>
           <li>BIC: UBSWCHZH80A</li>
-          <li>IBAN: CH41 0024 8248 1659 0140 W</li>
+          <li><span>IBAN: </span><span>CH41 0024 8248 </span><span>1659 0140 W</span></li>
         </ul>
         `
       })}
@@ -30,6 +30,11 @@ module.exports = (data) => {
     
     .VIEW.Support ul:first-child {
       margin-bottom: var(--size-L);
+    }
+
+    .VIEW.Support li span {
+      white-space: pre;
+      display: inline-block;
     }
   `;
 

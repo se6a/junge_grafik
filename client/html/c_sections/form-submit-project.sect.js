@@ -11,10 +11,19 @@ module.exports = (data) => {
       data-state="initial"
       class="form"
     >
+
       <section class="formSegment Designer">
         <header>
           <h1>
-            ${Underlined("Personenangaben")}
+            ${Underlined(lang`
+              <span>
+                ${{
+                  fr: "Données personnelles",
+                  de: "Personenangaben",
+                  it: "Dati personali"
+                }}
+              </span>
+            `)}
           </h1>
         </header>
         <div class="formContent">
@@ -88,14 +97,10 @@ module.exports = (data) => {
   `;
 
   const css = /*css*/`
-    .langOption {
+    .VIEW.Submit.--fr .langOption:not(.fr),
+    .VIEW.Submit.--de .langOption:not(.de),
+    .VIEW.Submit.--it .langOption:not(.it) {
       display: none;
-    }
-
-    .VIEW.--it .langOption.it,
-    .VIEW.--fr .langOption.fr,
-    .VIEW.--de .langOption.de {
-      display: inline;
     }
 
     .Submit .button .initial,
