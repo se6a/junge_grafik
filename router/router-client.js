@@ -26,14 +26,19 @@ function buildRoutes() {
     });
 }
 
-Router.get(
-  /^\/newsletter(\/.*)?/,
-  (req, res) => {
-    const version = req.params[0].slice(1);
-    // res.send(`hello ${version}`);
-    res.sendFile(`${__basedir}/0.jpg`);
-  }
-);
+// Router.get(
+//   /^\/newsletter(\/.*)?/,
+//   (req, res) => {
+//     let version;
+
+//     if (req.params.length) {
+//       version = req.params[0].slice(1);
+//     }
+//     console.log(version);
+//     // res.send(`hello ${version}`);
+//     res.download(`${__basedir}/client/media/newsletter/jungegrafik-newsletter-2021-03.pdf`);
+//   }
+// );
 
 /*  Middleware
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

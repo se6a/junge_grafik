@@ -1,6 +1,6 @@
 module.exports = {
   meta: {
-    title: "Support us!",
+    title: "",
     description: "",
     indexed: true
   },
