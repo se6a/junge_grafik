@@ -19,7 +19,7 @@ function buildRoutes() {
   Server.cache.viewsByName
     .forEach((_view) => {
       Router.get(
-        `/${_view}`,
+        `/${_view}*`,
         buildResponse,
         send
       );

@@ -2,7 +2,7 @@ const HeaderView   = getSection("header-view");
 
 module.exports = (data) => {
   const html = splitTemp/*html*/`
-    <main id="SuccessfullSubmission" class="VIEW SuccessfullSubmission" data-lang="de">
+    <main id="Newsletter" class="VIEW Newsletter" data-lang="de">
       ${HeaderView({
         title: "Newsletter",
         content: lang`
@@ -17,27 +17,14 @@ module.exports = (data) => {
         `
       })}
 
-      <object data="/media/newsletter/jungegrafik-newsletter-2021-03.pdf" type="application/pdf">
-        <iframe data-src="/media/newsletter/jungegrafik-newsletter-2021-03.pdf"></iframe>
-      </object>
-
-      <script>
-        document.addEventListener(
-          "DOMContentLoaded",
-          () => {
-            const $iframe = document.querySelector("iframe");
-
-            $iframe.onload = () => {
-              console.log("loaded");
-              const $pdfViewer = $iframe.contentWindow.document.querySelector("html");
-              console.log("$pdfViewer",$pdfViewer);
-            };
-
-            const src = $iframe.dataset.src;
-            $iframe.src = HOST + src;
-          }
-        );
-      </script>
+      <section class="layoutSection Fullpage box">
+        <object class="pdfViewer" data="/media/newsletter/jungegrafik-newsletter-2021-03.pdf#zoom=60">
+          <iframe
+            class="pdfViewer"
+            src="/media/newsletter/jungegrafik-newsletter-2021-03.pdf#zoom=60">
+          </iframe>
+        </object>
+      </section>
 
     </main>
   `;
@@ -47,14 +34,36 @@ module.exports = (data) => {
       --colorTheme: var(--violet);
     }
 
-    iframe .sidebarContainer,
-    iframe .findbar,
-    iframe .toolbar {
-      display: none !important;
+    .VIEW.Newsletter {
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      width: 100%;
     }
 
-    iframe .viewerContainer {
-      top: 0;
+    .Newsletter .HEADER-VIEW {
+      height: 20vh;
+      min-height: unset;
+      border-bottom: 0;
+    }
+
+    .Newsletter .Fullpage {
+      border-top: 0;
+    }
+
+    .Newsletter .pdfViewer {
+      all: unset;
+    }
+
+
+    .Newsletter .Fullpage,
+    .Newsletter .pdfViewer {
+      height: 100%;
+      width: 100%;
+    }
+
+    .Newsletter + .FOOTER {
+      display: none;
     }
   `;
 

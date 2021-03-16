@@ -141,7 +141,7 @@ async function build(req) {
 }
 
 function _assembleRaw(req) {
-  const viewName = req.url.slice(1);
+  const viewName = req.url.split("/")[1];
   const data = {
     ...getData(`view-${viewName}`),
     viewName,
