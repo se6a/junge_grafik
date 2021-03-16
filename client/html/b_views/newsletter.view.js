@@ -1,13 +1,6 @@
-const HeaderView = getSection("header-view");
-
 module.exports = (data) => {
   const html = splitTemp/*html*/`
     <main id="Newsletter" class="VIEW Newsletter" data-lang="de">
-      ${HeaderView({
-        title: "Newsletter",
-        content: ""
-      })}
-
       <section class="layoutSection Fullpage box">
         <object class="pdfViewer" data="/media/newsletter/jungegrafik-newsletter-2021-03.pdf#zoom=60">
           <iframe
@@ -29,28 +22,13 @@ module.exports = (data) => {
       height: 100%;
     }
 
-    .Newsletter .HEADER-VIEW {
-      height: unset;
-      min-height: unset;
-      border-bottom: 0;
-    }
-
-    .Newsletter .HeaderView.textWrapper {
-      padding-bottom: 0;
-    }
-
-    .Newsletter .HeaderView.textWrapper .title {
-      margin-bottom: 0;
-    }
-
     .Newsletter .Fullpage {
-      border-top: 0;
+      padding: calc(var(--headerHeight) - 2px) 0 0 0;
     }
 
     .Newsletter .pdfViewer {
       all: unset;
     }
-
 
     .Newsletter .Fullpage,
     .Newsletter .pdfViewer {
