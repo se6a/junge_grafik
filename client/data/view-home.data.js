@@ -33,7 +33,7 @@ module.exports = {
             {
               title: "Submission deadline",
               items: [
-                "14.06.2021 (for papers graded between 01.01.2019 and 15.03.2021)"
+                "14.06.2021"
               ]
             },
             {
@@ -65,28 +65,28 @@ module.exports = {
         {
           type: "image-box",
           image: {
-            src: "/sponsors/logo-sgv.png",
+            src: "/logos/logo-sgv.png",
             alt: "Logo of SGV"
           }
         },
         {
           type: "image-box",
           image: {
-            src: "/sponsors/logo-sgd.png",
+            src: "/logos/logo-sgd.png",
             alt: "Logo of SGD"
           }
         },
         {
           type: "image-box",
           image: {
-            src: "/sponsors/logo-weltformat.png",
+            src: "/logos/logo-engelberger_druck.png",
             alt: "Logo of Weltformat"
           }
         },
         {
           type: "image-box",
           image: {
-            src: "/sponsors/logo-ronorp.png",
+            src: "/logos/logo-wetalents.png",
             alt: "Logo of Ronorp"
           }
         }

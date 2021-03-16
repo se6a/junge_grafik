@@ -48,7 +48,7 @@ module.exports = {
               items: [
                 "– Via this website",
                 "– Call for Entries will be launched on 15.03.2021",
-                "– Deadline: 14.06.2021 (for papers graded between 01.01.2019 and 15.03.2021)"
+                "– Deadline: 14.06.2021"
               ]
             },
             {

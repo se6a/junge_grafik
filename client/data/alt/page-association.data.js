@@ -242,7 +242,7 @@ module.exports = {
           type: "card-with-image",
           title: "Engelberger Druck AG",
           image: {
-            src: "/sponsors/logo-engelberger_druck.png",
+            src: "/logos/logo-engelberger_druck.png",
             alt: "Logo of Sponsor Engelberg Druck"
           },
           content: `
@@ -253,7 +253,7 @@ module.exports = {
           type: "card-with-image",
           title: "We Talents",
           image: {
-            src: "/sponsors/logo-wetalents.png",
+            src: "/logos/logo-wetalents.png",
             alt: "Logo of Sponsor We-Talents"
           },
           content: `
@@ -264,7 +264,7 @@ module.exports = {
           type: "card-with-image",
           title: "Dinamo",
           image: {
-            src: "/sponsors/logo-dinamo.png",
+            src: "/logos/logo-dinamo.png",
             alt: "Logo of Sponsor Dinamo"
           },
           content: `
@@ -282,28 +282,28 @@ module.exports = {
         {
           type: "image-box",
           image: {
-            src: "/sponsors/logo-fischer_papier.png",
+            src: "/logos/logo-fischer_papier.png",
             alt: "Logo of Sponsor Fischer Papier"
           }
         },
         {
           type: "image-box",
           image: {
-            src: "/sponsors/logo-an_der_reuss.png",
+            src: "/logos/logo-an_der_reuss.png",
             alt: "Logo of Sponsor An Der Reuss"
           }
         },
         {
           type: "image-box",
           image: {
-            src: "/sponsors/logo-studio_feixen.png",
+            src: "/logos/logo-studio_feixen.png",
             alt: "Logo of Sponsor Studio Feixen"
           }
         },
         {
           type: "image-box",
           image: {
-            src: "/sponsors/logo-sonderegger.png",
+            src: "/logos/logo-sonderegger.png",
             alt: "Logo of Sponsor Sonderegger"
           }
         }
@@ -318,7 +318,7 @@ module.exports = {
         {
           type: "card-with-image",
           image: {
-            src: "/sponsors/logo-sgv.png",
+            src: "/logos/logo-sgv.png",
             alt: "Logo of SGV"
           },
           title: `
@@ -334,7 +334,7 @@ module.exports = {
         {
           type: "card-with-image",
           image: {
-            src: "/sponsors/logo-sgd.png",
+            src: "/logos/logo-sgd.png",
             alt: "Logo of SGD"
           },
           title: `
@@ -348,7 +348,7 @@ module.exports = {
         {
           type: "card-with-image",
           image: {
-            src: "/sponsors/logo-weltformat.png",
+            src: "/logos/logo-weltformat.png",
             alt: "Logo of Weltformat"
           },
           title: `
@@ -364,7 +364,7 @@ module.exports = {
         {
           type: "card-with-image",
           image: {
-            src: "/sponsors/logo-ronorp.png",
+            src: "/logos/logo-ronorp.png",
             alt: "Logo of Ronorp"
           },
           title: `
@@ -386,7 +386,7 @@ module.exports = {
         {
           type: "card-with-image",
           image: {
-            src: "/sponsors/logo-josef_mueller_stiftung.png",
+            src: "/logos/logo-josef_mueller_stiftung.png",
             alt: "Logo of the Josef Müller Foundation"
           },
           title: `Josef Müller Stiftung Muri`,
@@ -399,7 +399,7 @@ module.exports = {
         {
           type: "card-with-image",
           image: {
-            src: "/sponsors/logo-huser_oesch_stiftung.png",
+            src: "/logos/logo-huser_oesch_stiftung.png",
             alt: "Logo of the Huser Oesch Foundation"
           },
           title: `
@@ -411,7 +411,7 @@ module.exports = {
         {
           type: "card-with-image",
           image: {
-            src: "/sponsors/logo-casimir_eigensatz_stiftung.png",
+            src: "/logos/logo-casimir_eigensatz_stiftung.png",
             alt: "Logo of the Casimir Eigensatz Foundation"
           },
           title: `Casimir Eigensatz Stiftung`,
