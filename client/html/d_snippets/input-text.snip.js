@@ -42,8 +42,8 @@ module.exports = ({ name, label, required, tooltip, maxlength = 500 }) => {
     .formField.Text .textarea {
       min-height: calc(7 * var(--size-M));
       resize: vertical;
-      padding-top: var(--size-XS);
-      padding-bottom: var(--size-XS);
+      padding-top: var(--size-S);
+      padding-bottom: var(--size-S);
     }
 
     .--size-md .formField.Text .textarea,

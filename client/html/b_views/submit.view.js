@@ -9,15 +9,14 @@ module.exports = (data) => {
       ${HeaderView({
         title: "Project registration",
         content: lang`
-          <span>
-            ${{
-              fr: "Tu peux t'inscrire ici pour participer et soumettre ton projet. Let’s go.",
-              de: "Hier kannst du dich zur Teilnahme registrieren und dein Projekt einreichen. Let’s go.",
-              it: "Qui puoi registrarti per partecipare e inoltrare il tuo progetto. Let’s go."
-            }}
-          </span>
-        `
-      })}
+            <span>
+              ${{
+                fr: "Tu peux t'inscrire ici pour participer et soumettre ton projet. Let’s go.",
+                de: "Hier kannst du dich zur Teilnahme registrieren und dein Projekt einreichen. Let’s go.",
+                it: "Qui puoi registrarti per partecipare e inoltrare il tuo progetto. Let’s go."
+              }}
+            </span>`
+        })}
 
       <article class="mainSection fullpage SelectLanguage">
         ${LanguageForm()}
@@ -35,6 +34,16 @@ module.exports = (data) => {
       --colorTheme: var(--yellow);
     }
 
+    .VIEW.Submit {
+      min-height: 100vh;
+    }
+
+    .VIEW.Submit .HEADER-VIEW {
+      min-height: unset;
+      flex-grow: 1;
+      display: none;
+    }
+
     .VIEW.Submit > section {
       border: var(--borderHalf) solid currentColor;
     }
@@ -43,7 +52,12 @@ module.exports = (data) => {
       display: none;
     }
 
-    .VIEW.Submit[lang=""] .mainSection.SelectLanguage {
+    .mainSection.ProjectRegistration {
+      padding-top: calc(var(--headerHeight) + var(--size-S));
+    }
+
+    .VIEW.Submit[lang=""] .mainSection.SelectLanguage,
+    .VIEW.Submit[lang=""] .HEADER-VIEW {
       display: flex;
     }
 
