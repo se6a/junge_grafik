@@ -129,7 +129,6 @@ body {
   font-family: FeixenSans, sans-serif;
   font-style: normal;
   overflow-x: hidden;
-  height: inherit;
 }
 
 * {
@@ -265,9 +264,9 @@ ul > .dash::before {
   content: "– ";
 }
 
-.--fr .langOption:not(.fr),
-.--de .langOption:not(.de),
-.--it .langOption:not(.it) {
+.--fr .langOption:not(.fr):not(.all),
+.--de .langOption:not(.de):not(.all),
+.--it .langOption:not(.it):not(.all) {
   pointer-events: none;
   visibility: hidden;
   position: absolute;

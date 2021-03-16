@@ -23,17 +23,15 @@ module.exports = (data) => {
     }
 
     .Newsletter .Fullpage {
-      padding: calc(var(--headerHeight) - 2px) 0 0 0;
+      padding: 0;
+      height: calc(100vh - 2 * var(--borderFull));
+      width: 100%;
     }
 
     .Newsletter .pdfViewer {
       all: unset;
-    }
-
-    .Newsletter .Fullpage,
-    .Newsletter .pdfViewer {
+      padding: calc(var(--headerHeight) - 2px) 0 0 0;
       height: 100%;
-      width: 100%;
     }
 
     .Newsletter + .FOOTER {
