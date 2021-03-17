@@ -72,23 +72,3 @@ function closeTooltip($tip) {
   $tip.classList.remove("--open");
   $tip.blur();
 }
-
-// function setTooltipSize($tip) {
-//   const $content = $tip.querySelector(".content");
-//   const offsetLeft = $content.getBoundingClientRect().left;
-
-//   $content.style.left = offsetLeft * -1 + "px";
-//   $content.style.width = document.documentElement.clientWidth + "px";
-
-//   window.addEventListener(
-//     "resize",
-//     () => $tip.blur(),
-//     { once: true }
-//   );
-// }
-
-// function resetTooltip($tip) {
-//   const $content = $tip.querySelector(".content");
-
-//   $content.style.left = "";
-// }
