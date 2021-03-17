@@ -1,5 +1,3 @@
-const ButtonBare = require("./button-bare.snip");
-
 const BareButton = getSnippet("button-bare");
 
 module.exports = (button) => {
@@ -30,6 +28,12 @@ module.exports = (button) => {
       background-color: var(--colorKey);
       color: var(--white);
       border-color: var(--colorKey);
+    }
+
+    .button.CircleButton:hover,
+    .button.CircleButton:focus {
+      background-color: transparent;
+      border: 0;
     }
   `;
 

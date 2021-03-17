@@ -14,8 +14,6 @@ module.exports = () => {
       top: 0;
       bottom: 0;
       margin: auto;
-      height: var(--iconSize-M);
-      width: var(--iconSize-M);
       border: var(--borderFull) solid currentColor;
       font-size: var(--fontSize-M);
       border-radius: 100%;

@@ -93,6 +93,7 @@ module.exports = () => {
     .NewsletterForm .Email.input {
       font-size: inherit;
       height: var(--iconSize-M);
+      min-height: unset;
     }
 
     .NewsletterForm .Submit.button {
