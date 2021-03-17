@@ -109,6 +109,8 @@ function rebuildForm(req, res, next) {
     }
   }
 
+  newForm.append("fields[einreichedatum][start][]", "now");
+
   res.locals.newForm = newForm;
 
   next();
@@ -168,9 +170,9 @@ async function sendFiles(req, res, next) {
 
   await fetch(url, options)
 
-    .then((symphRes) => next())
+  .then((symphRes) => next())
 
-    .catch((error) => failed(res, req, "sendFiles", error));
+  .catch((error) => failed(res, req, "sendFiles", error));
 }
 
 async function triggerConfirmationEmail(req, res, next) {

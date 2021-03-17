@@ -57,9 +57,8 @@ const ProjectForm = function() {
 
         await this.appendFiles(formdata);
         this.appendLanguage(formdata);
+        this.appendAction(formdata);
         this.formatLinks(formdata);
-        formdata.append("fields[einreichedatum]", Date.now());
-        formdata.append("action[einreichung]", "submit");
 
         postRequest("newproject", formdata)
 
@@ -127,6 +126,10 @@ const ProjectForm = function() {
       }
 
       formdata.append("fields[sprache]", langId);
+    },
+
+    appendAction(formdata) {
+      formdata.append("action[einreichung]", "submit");
     },
 
     feedbackSending() {
