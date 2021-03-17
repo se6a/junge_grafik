@@ -101,6 +101,14 @@ module.exports = (data) => {
       visibility: visible;
     }
 
+    .VIEW.Submit.--fr .option > .langOption.fr,
+    .VIEW.Submit.--de .option > .langOption.de,
+    .VIEW.Submit.--it .option > .langOption.it {
+      pointer-events: none;
+      visibility: visible;
+      position: inherit;
+    }
+
     .Submit .button .initial,
     .Submit .button .sending,
     .Submit .button .error {
