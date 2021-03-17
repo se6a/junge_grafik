@@ -58,7 +58,7 @@ const ProjectForm = function() {
         await this.appendFiles(formdata);
         this.appendLanguage(formdata);
         this.formatLinks(formdata);
-        formdata.append("field[einreichedatum]", Date.now());
+        formdata.append("fields[einreichedatum]", Date.now());
         formdata.append("action[einreichung]", "submit");
 
         postRequest("newproject", formdata)
