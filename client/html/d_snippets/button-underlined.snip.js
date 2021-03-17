@@ -27,12 +27,12 @@ module.exports = (button) => {
       padding: var(--size-M);
     }
 
-    .UnderlinedButton:hover {
+    .button.UnderlinedButton:hover {
       background-color: var(--white);
       color: var(--colorKey);
     }
 
-    .UnderlinedButton:focus{
+    .UnderlinedButton:focus {
       z-index: 10;
     }
   `;
