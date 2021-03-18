@@ -18,9 +18,9 @@ module.exports = async (data) => {
                  ? `<meta name="robots" content="noindex,nofollow"/>`
                  : "";
   const title    = {
-                    fr: "Jeune Graphisme",
-                    de: "Junge Grafik",
-                    it: "Giovane Grafica"
+                    "--fr": "Jeune Graphisme",
+                    "--de": "Junge Grafik",
+                    "--it": "Giovane Grafica"
                    }[language];
   const titleAddition = data.meta.title
                       ? `: ${data.meta.title}`

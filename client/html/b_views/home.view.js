@@ -7,12 +7,14 @@ module.exports = (data) => {
       ${HeaderView(data.header)}
       ${buildSections(data.sections)}
 
+      <div class="AnimatedBackground"></div>
+
     </main>
   `;
 
   const css = /*css*/`
     body {
-      --colorTheme: var(--blue);
+      --colorTheme: transparent;
     }
 
     .VIEW.Home .HEADER-VIEW {
@@ -45,6 +47,20 @@ module.exports = (data) => {
 
     .VIEW.Home .HeaderColors {
       height: 100%;
+      background-color: pink;
+      animation-name: colors;
+      animation-duration: 60s;
+      animation-iteration-count: infinite;
+      display: none;
+    }
+
+    .AnimatedBackground {
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
       background-color: pink;
       animation-name: colors;
       animation-duration: 60s;
