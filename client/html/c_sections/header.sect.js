@@ -62,7 +62,7 @@ module.exports = () => {
     }
 
     .HEADER .logo .innerBox {
-      margin-bottom: -1px;
+      margin-bottom: 0;
     }
 
     .HEADER .logo > span:last-child .line {
