@@ -5,6 +5,7 @@ module.exports = (data) => {
   data.typeAttr = `type="email"`;
   data.attr = `
     placeholder="${data.placeholder || ""}"
+    pattern="^[\\w0-9._%+-]+@[\\w0-9.-]+\\.[\\w]{2,}$"
   `;
 
   return TextShort(data);

@@ -408,10 +408,6 @@ ul > .dash::before {
   padding-left: var(--size-XS);
 }
 
-.input.--warn {
-  background-color: var(--red);
-}
-
 .hiddenInput {
   position: absolute;
   opacity: 0;
@@ -426,6 +422,34 @@ ul > .dash::before {
   color: silver;
 }
 
-.form > .--warn {
-  background-color: var(--yellow);
+
+
+.form .input.--invalid:not(.Checkbox) {
+  background-color: var(--red);
+}
+
+.form .input.Checkbox.--invalid .icon {
+  background-color: var(--red);
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--colorKey) !important;
+  -webkit-box-shadow: 0 0 0 100px var(--white) inset !important;
+  -webkit-background-clip: content-box !important;
+}
+
+.input.--invalid:not(.Checkbox):-webkit-autofill,
+.input.--invalid:not(.Checkbox):-webkit-autofill:hover,
+.input.--invalid:not(.Checkbox):-webkit-autofill:focus,
+.input.--invalid:not(.Checkbox):-webkit-autofill:active {
+  -webkit-text-fill-color: var(--colorKey) !important;
+  -webkit-box-shadow: 0 0 0 100px var(--red) inset !important;
+  -webkit-background-clip: content-box !important;
+}
+
+.form.--invalid .Submit.button {
+  background-color: var(--red);
 }

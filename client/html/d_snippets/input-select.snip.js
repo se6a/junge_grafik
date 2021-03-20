@@ -31,11 +31,14 @@ module.exports = (data) => {
           class="Select inputBox inner"
           onclick="selectOption(this, event.target)"
           onmouseleave="blurField(event)"
+          onblur="validateSelection(this)"
           tabindex="0"
           data-placeholder="${placeholder}"
         >
           <span class="input Select">
-            <span class="placeholder">${placeholder}</span>
+            <span class="placeholder">
+              ${placeholder}
+            </span>
           </span>
 
           <input
@@ -44,6 +47,7 @@ module.exports = (data) => {
             value=""
             name="fields[${data.name}]"
             tabindex="-1"
+            onchange="() => console.log('change')"
             ${required ? 'required="required"' : ""}
           />
 

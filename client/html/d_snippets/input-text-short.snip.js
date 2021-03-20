@@ -10,7 +10,7 @@ module.exports = (data) => {
     type,
     subType,
     attr = "",
-    maxlength = "40"
+    maxlength = "150"
   } = data;
 
   type = type
@@ -45,6 +45,7 @@ module.exports = (data) => {
           class="input TextShort ${subType}"
           name="fields[${name}]"
           ${type}
+          onblur="validate(this)"
           ${attr}
           ${maxlength}
           ${required ? "required" : ""}

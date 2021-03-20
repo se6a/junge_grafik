@@ -24,7 +24,7 @@ function setFormLanguage(e) {
   const lang = $langInput.value;
 
   if (! lang) {
-    $langInput.classList.add("--warn");
+    $langInput.classList.add("--invalid");
   }
 
   else {
@@ -32,7 +32,7 @@ function setFormLanguage(e) {
 
     $ViewSubmit.lang = lang;
     $ViewSubmit.classList.add(`--${lang}`);
-    $langInput.classList.remove("--warn");
+    $langInput.classList.remove("--invalid");
   }
 }
 
@@ -44,41 +44,35 @@ function setFormLanguage(e) {
 const ProjectForm = function() {
   const instance = {
     $form: document.getElementById("SubmitProjectForm"),
-    files: new ProjectFiles(),
     description: new ProjectDescription(),
 
     async submit(e) {
       e.preventDefault();
 
-      if (this.files.hasMinimum) {
-        this.feedbackSending();
+      this.feedbackSending();
 
-        const formdata = new FormData(this.$form);
+      const formdata = new FormData(this.$form);
 
-        await this.appendFiles(formdata);
-        this.appendLanguage(formdata);
-        this.appendAction(formdata);
-        this.formatLinks(formdata);
+      await this.appendFiles(formdata);
+      this.appendLanguage(formdata);
+      this.appendAction(formdata);
+      this.formatLinks(formdata);
 
-        postRequest("newproject", formdata)
+      postRequest("newproject", formdata)
 
-        .then((res) => {
-          if (res.status === 200) {
-            this.reset();
-            this.feedbackSuccess();
-          }
-          else {
-            this.feedbackError();
-          }
-        })
-
-        .catch(() => {
+      .then((res) => {
+        if (res.status === 200) {
+          this.reset();
+          this.feedbackSuccess();
+        }
+        else {
           this.feedbackError();
-        });
-      }
-      else {
-        this.files.addWarning_notEnoughFiles();
-      }
+        }
+      })
+
+      .catch(() => {
+        this.feedbackError();
+      });
     },
 
     formatLinks(formdata) {
@@ -101,9 +95,11 @@ const ProjectForm = function() {
     },
 
     appendFiles(formdata) {
+      const selected = fileInputs.ProjectFileUpload.selected;
       formdata.delete("file");
-      for (const _fileName in this.files.selected) {
-        formdata.append("files", this.files.selected[_fileName]);
+
+      for (const _fileName in selected) {
+        formdata.append("files", selected[_fileName]);
       }
     },
 
@@ -154,141 +150,6 @@ const ProjectForm = function() {
     "submit",
     (e) => instance.submit(e)
   );
-
-  return instance;
-};
-
-/* Project Files
-´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
-const ProjectFiles = function() {
-  const $formField = document.querySelector(".formField.Upload");
-  const $inputBox = $formField.querySelector(".inputBox");
-  const $input = $inputBox.querySelector("input[type='file']");
-  const $count = $formField.querySelector(".selected > .count");
-
-  const instance = {
-    $formField,
-    $inputBox,
-    $input,
-    $count,
-
-    selected: {},
-    accept: ($input.getAttribute("accept") || "")
-            .split(",")
-            .map((_acc) => _acc.trim())
-            .filter((_acc) => _acc !== ""),
-    max: $input.dataset.max,
-    min: $input.dataset.min,
-    count: 0,
-    hasMinimum: false,
-
-    select() {
-      this.removeWarning_tooManySelected();
-
-      const newFiles = [...this.$input.files];
-
-      for (let i = 0; i < newFiles.length; i++) {
-        this.saveFileCount();
-
-        if (this.count < this.max) {
-          const _file = newFiles[i];
-          const _filename = _file.name;
-          const [_type, _subtype] = _file.type.split("/");
-
-          if (! this.selected[_filename]) {
-            if (this.accept.length === 0
-            || this.accept.includes(`${_type}/*`)
-            || this.accept.includes(`${_type}/${_subtype}`)
-            || this.accept.includes(`.${_subtype}`)
-            ) {
-              this.selected[_filename] = _file;
-              this.$inputBox.insertAdjacentElement(
-                "AFTERBEGIN", this.insertHtmlItem(_file.name, i));
-            }
-          }
-        }
-        else {
-          this.addWarning_tooManySelected();
-          break;
-        }
-      }
-
-      this.saveFileCount();
-      this.updateCount();
-      this.setState();
-    },
-
-    remove(e, filename, id) {
-      document.getElementById(id).remove();
-
-      delete this.selected[filename];
-      this.saveFileCount();
-      this.updateCount();
-      this.removeWarning_tooManySelected();
-      this.setState();
-    },
-
-    insertHtmlItem(filename, i) {
-      const id = makeId(i);
-      const $item = document.createElement("DIV");
-
-      $item.setAttribute("id", id);
-      $item.setAttribute("class", "fileItem");
-      $item.innerHTML = /*html*/`
-          <span class="Filename">
-            ${filename}
-          </span>
-          <button class="button unstyled" type="button">
-            <span class="line"></span>
-            <span class="line"></span>
-          </button>
-      `;
-
-      $item.addEventListener(
-        "click",
-        (e) => this.remove(e, filename, id),
-        { once: true }
-      );
-
-      return $item;
-    },
-
-    saveFileCount() {
-      this.count = Object.keys(this.selected).length;
-    },
-
-    setState() {
-      if (this.count >= this.min) {
-        this.hasMinimum = true;
-        this.removeWarning_notEnoughFiles();
-      }
-      else {
-        this.hasMinimum = false;
-      }
-    },
-
-    updateCount() {
-      this.$count.innerHTML = this.count;
-    },
-
-    addWarning_notEnoughFiles() {
-      this.$inputBox.classList.add("--warn", "--notEnoughFiles");
-    },
-
-    removeWarning_notEnoughFiles() {
-      this.$inputBox.classList.remove("--warn", "--notEnoughFiles");
-    },
-
-    addWarning_tooManySelected() {
-      this.$inputBox.classList.add("--tooManySelected");
-    },
-
-    removeWarning_tooManySelected() {
-      this.$inputBox.classList.remove("--tooManySelected");
-    }
-  };
-
-  $input.addEventListener("input", () => instance.select());
 
   return instance;
 };

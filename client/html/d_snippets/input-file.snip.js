@@ -10,6 +10,7 @@ module.exports = ({ label, required, tooltip, maxfiles = 1, minfiles = 1, accept
   const html = splitTemp/*html*/`
     <div
       class="formField Upload ${required}"
+      onclick="instanciateFileInput(this)"
     >
 
       <header class="header">
@@ -35,8 +36,8 @@ module.exports = ({ label, required, tooltip, maxfiles = 1, minfiles = 1, accept
             data-max=${maxfiles}
             data-min=${minfiles}
             multiple
-            ${accept}
             ${required ? "required" : ""}
+            ${accept}
           />
         </label>
 

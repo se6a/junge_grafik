@@ -22,6 +22,7 @@ module.exports = ({ name, label, required, tooltip, maxlength = 500 }) => {
           class="input Text textarea"
           name="fields[${name}]"
           data-max=${maxlength}
+          onblur="validate(this)"
           ${required ? "required" : ""}
         ></textarea>
       </div>

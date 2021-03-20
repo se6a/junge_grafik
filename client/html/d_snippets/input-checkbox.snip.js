@@ -1,6 +1,6 @@
-const Tooltip   = getSnippet("tooltip");
-const IconSmall = getSnippet("icon-circle-m");
-const e         = getJs("event-handler");
+const Tooltip = getSnippet("tooltip");
+const Icon    = getSnippet("icon-circle-m");
+const e       = getJs("event-handler");
 
 module.exports = (field) => {
   const required = field?.required ? "--required" : "";
@@ -13,13 +13,15 @@ module.exports = (field) => {
     >
       <div class="inputBox" onclick="setCheckbox(this, event)">
 
-        <span class="checkmark">
-          <svg viewBox="0 0 10 10" preserveAspectRatio=""  overflow="visible" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 0 7 L 2 9 L 8 1" vector-effect="non-scaling-stroke"/>
-          </svg>
-        </span>
+        <div class="Checkbox input">
+          <span class="checkmark">
+            <svg viewBox="0 0 8 10" preserveAspectRatio=""  overflow="visible" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 0 7 L 2 9 L 8 1" vector-effect="non-scaling-stroke"/>
+            </svg>
+          </span>
 
-        ${IconSmall({})}
+          ${Icon({})}
+        </div>
 
         <input
           class="hiddenInput"
@@ -60,6 +62,13 @@ module.exports = (field) => {
       align-items: flex-end;
     }
 
+    .Checkbox .input {
+      min-height: unset;
+      background-color: transparent;
+      padding: 0;
+      border: 0;
+    }
+
     .Checkbox .icon {
       background-color: white;
     }
@@ -69,7 +78,10 @@ module.exports = (field) => {
       position: absolute;
       align-items: center;
       height: 100%;
-      left: calc(var(--size-M) * 0.25);
+      left: 0;
+      right: 0;
+      align-items: center;
+      justify-content: center;
     }
 
     .Checkbox .checkmark svg {

@@ -58,6 +58,8 @@ module.exports = (data) => {
           <div class="formField">
             ${RoundedButton({
               type: "submit",
+              onclick: "validateForm(this, event)",
+              classes: "Submit",
               label: {
                 de: `
                   <span class="initial">
