@@ -3,11 +3,22 @@ const Footer = getSection("footer");
 const Menu   = getSection("menu");
 
 function getUrlLanguage(req) {
-  return (req.headers.host.includes("jeunegraphisme")
-          ? "fr"
-          : req.headers.host.includes("giovanegrafica")
-          ? "it"
-          : "de");
+  let lang;
+
+  if (req.query.lang
+  && ["fr", "de", "it"].includes(req.query.lang)) {
+    lang = req.query.lang;
+  }
+
+  else {
+    lang = req.headers.host.includes("jeunegraphisme")
+         ? "fr"
+         : req.headers.host.includes("giovanegrafica")
+         ? "it"
+         : "de";
+  }
+
+  return lang;
 }
 
 module.exports = async (data) => {

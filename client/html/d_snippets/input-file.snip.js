@@ -138,7 +138,7 @@ module.exports = ({
     }
 
     .warning.tooManySelected {
-      color: var(--violet);
+      color: var(--violetBright);
       display: none;
       font-size: var(--fontSize-S);
       line-height: var(--lineHeight-S);

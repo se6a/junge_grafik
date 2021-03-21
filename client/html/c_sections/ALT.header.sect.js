@@ -27,7 +27,10 @@ module.exports = () => {
     .HEADER {
       height: var(--headerHeight);
       width: 100%;
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
       font-size: var(--fontSize-M);
       line-height: var(--lineHeight-M);
       position: fixed;
@@ -41,7 +44,6 @@ module.exports = () => {
     .HEADER .logo {
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
       justify-content: stretch;
       border: var(--borderHalf) solid currentColor;
     }
@@ -69,7 +71,14 @@ module.exports = () => {
 
     .HEADER .logo:focus {
       outline: none;
-      background-color: var(--gray);
+    }
+
+    .--size-md .HEADER {
+      grid-template-columns: 33.33% 66.66%;
+  }
+
+    .--size-sm .HEADER {
+        grid-template-columns: auto var(--headerHeight);
     }
   `;
 

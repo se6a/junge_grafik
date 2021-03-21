@@ -406,42 +406,42 @@ module.exports = [
       maxfiles: 6,
       accept: "image/jpeg",
       tooltip: {
-          de: `
-            <ul>
-              <li class="dash>3 bis 6 Reprografien oder Mockups</li>
-              <li class="dash">JPG Format</li>
-              <li class="dash">RGB Farbraum</li>
-              <li class="dash">Lange Seite: 3800px</li>
-              <li class="dash">Diese Bilddateien werden für die Publikation verwendet. Übermittle uns das JPG darum möglichst unkomprimiert.</li>
-              <li class="dash">Darf ich einen Farbigen Hintergrund verwenden? Ja.</li>
-              <li class="dash">Darf ich mein Projekt inszenieren? Ja.</li>
-              <li class="dash">Darf ich anstelle von klassischen Reprografien auch digitale Mockups einsenden? Ja.</li>
-            </ul>
-          `,
-          fr: `
-            <ul>
-              <li class="dash">3 à 6 photos ou mock-ups</li>
-              <li class="dash">Format JPG</li>
-              <li class="dash">Profil couleur RGB</li>
-              <li class="dash">résolution d’au minimum 3800 Pixel sur le côté long.</li>
-              <li class="dash">Ces fichiers seront utilisés pour la publication. Veuillez donc nous envoyer des JPG aussi peu comprimés que possible.</li>
-              <li class="dash">Puis-je utiliser un fond coloré ? Oui !</li>
-              <li class="dash">Puis-je mettre en scène mon projet ? Oui !</li>
-              <li class="dash">Puis-je envoyer des mock-ups au lieu des reproductions classiques ? Oui !</li>
-            </ul>
-          `,
-          it: `
-            <ul>
-              <li class="dash">da 3 a 6 immagni o Mockup</li>
-              <li class="dash">Formato JPG</li>
-              <li class="dash">Spazio colore RGB</li>
-              <li class="dash">Il lato lungo deve essere di almeno 3800 Pixel</li>
-              <li class="dash">Questi file di immagine saranno utilizzati per la pubblicazione. Pertanto, vi preghiamo di inviarci il JPG non compressi.</li>
-              <li class="dash">Posso usare uno sfondo colorato? Sì!</li>
-              <li class="dash">Posso mettere in scena (contestualizzare) il mio progetto? Sì!</li>
-              <li class="dash">Posso inviare mockup digitali invece di riproduzioni? Sì!</li>
-            </ul>
-          `
+        fr: `
+          <ul>
+            <li class="dash">3 à 6 photos ou mock-ups</li>
+            <li class="dash">Format JPG</li>
+            <li class="dash">Profil couleur RGB</li>
+            <li class="dash">résolution d’au minimum 3800 Pixel sur le côté long.</li>
+            <li class="dash">Ces fichiers seront utilisés pour la publication. Veuillez donc nous envoyer des JPG aussi peu comprimés que possible.</li>
+            <li class="dash">Puis-je utiliser un fond coloré ? Oui !</li>
+            <li class="dash">Puis-je mettre en scène mon projet ? Oui !</li>
+            <li class="dash">Puis-je envoyer des mock-ups au lieu des reproductions classiques ? Oui !</li>
+          </ul>
+        `,
+        de: `
+          <ul>
+            <li class="dash">3 bis 6 Reprografien oder Mockups</li>
+            <li class="dash">JPG Format</li>
+            <li class="dash">RGB Farbraum</li>
+            <li class="dash">Lange Seite: 3800px</li>
+            <li class="dash">Diese Bilddateien werden für die Publikation verwendet. Übermittle uns das JPG darum möglichst unkomprimiert.</li>
+            <li class="dash">Darf ich einen Farbigen Hintergrund verwenden? Ja.</li>
+            <li class="dash">Darf ich mein Projekt inszenieren? Ja.</li>
+            <li class="dash">Darf ich anstelle von klassischen Reprografien auch digitale Mockups einsenden? Ja.</li>
+          </ul>
+        `,
+        it: `
+          <ul>
+            <li class="dash">da 3 a 6 immagni o Mockup</li>
+            <li class="dash">Formato JPG</li>
+            <li class="dash">Spazio colore RGB</li>
+            <li class="dash">Il lato lungo deve essere di almeno 3800 Pixel</li>
+            <li class="dash">Questi file di immagine saranno utilizzati per la pubblicazione. Pertanto, vi preghiamo di inviarci il JPG non compressi.</li>
+            <li class="dash">Posso usare uno sfondo colorato? Sì!</li>
+            <li class="dash">Posso mettere in scena (contestualizzare) il mio progetto? Sì!</li>
+            <li class="dash">Posso inviare mockup digitali invece di riproduzioni? Sì!</li>
+          </ul>
+        `
       },
       required: true
     }

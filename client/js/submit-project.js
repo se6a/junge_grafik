@@ -104,7 +104,7 @@ const ProjectForm = function() {
     },
 
     appendLanguage(formdata) {
-      const lang = document.querySelector(".VIEW.Submit").lang;
+      const lang = document.body.dataset.lang;
 
       let langId = 0;
 
@@ -137,7 +137,8 @@ const ProjectForm = function() {
     },
 
     feedbackSuccess() {
-      window.location.href = `${HOST}/submission-completed`;
+      const lang = document.body.dataset.lang;
+      window.location.href = `${HOST}/submission-completed?lang=${lang}`;
     },
 
     reset() {

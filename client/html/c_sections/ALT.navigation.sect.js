@@ -6,6 +6,22 @@ module.exports = () => {
     <nav class="NAVIGATION">
 
       ${Button({
+        label: "Support!",
+        type: "link",
+        id: "navigation-support",
+        classes: "Support",
+        href: "/support-us"
+      })}
+
+      ${Button({
+        label: "Follow!",
+        type: "link",
+        id: "navigation-follow",
+        classes: "Follow",
+        href: "/follow-us"
+      })}
+
+      ${Button({
         label: "Submit!",
         type: "link",
         id: "navigation-submit",
@@ -14,7 +30,7 @@ module.exports = () => {
       })}
 
       ${Button({
-        label: "",
+        label: "Menu",
         id: "navigation-menu",
         classes: "Menu",
         href: "/submit",
@@ -28,7 +44,10 @@ module.exports = () => {
   const css = /*css*/`
     .NAVIGATION {
       height: 100%;
-      display: flex;
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: 1fr;
+      grid-auto-columns: 1fr;
       font-family: FeixenSansEdgy;
     }
 
@@ -36,24 +55,34 @@ module.exports = () => {
       border-width: var(--borderHalf);
     }
 
-    .NAVIGATION > .button.Menu {
-      width: var(--headerHeight);
-      padding: 0;
-      justify-content: center;
-    }
-
     .NAVIGATION > .button.Submit {
       background-color: var(--yellow);
-      width: auto;
     }
 
     .NAVIGATION > .button.Submit:hover {
       background-color: var(--darkViolet);
     }
 
+    .NAVIGATION .button {
+      z-index: 10;
+    }
+
     .--size-sm .NAVIGATION > .button:not(.Menu) {
       display: none;
     }
+
+    .--size-sm .NAVIGATION > .button.Menu {
+      padding: 0;
+    }
+
+    .--size-sm .NAVIGATION > .button.Menu > .icon {
+      margin: auto;
+    }
+
+    .--size-sm .NAVIGATION .label {
+      display: none;
+    }
+
   `;
 
   return ["navigation.sect", html, css];

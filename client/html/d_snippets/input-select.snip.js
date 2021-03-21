@@ -143,7 +143,7 @@ module.exports = ({
 
     .Select > .option:hover,
     .Select > .option.--selected {
-      background-color: var(--violet);
+      background-color: var(--violetBright);
     }
 
     .Select.inputBox.inner:focus-within .options {

@@ -5,6 +5,7 @@ module.exports = () => {
     <section class="MENU box">
       ${ButtonUnderlined({
         label: { all: "Submit!" },
+        classes: "Submit",
         type: "link",
         href: "/submit",
         size: "XL"
@@ -12,6 +13,7 @@ module.exports = () => {
 
       ${ButtonUnderlined({
         label: { all: "Award" },
+        classes: "Award",
         type: "link",
         href: "/award",
         size: "XL"
@@ -19,6 +21,7 @@ module.exports = () => {
 
       ${ButtonUnderlined({
         label: { all: "Association" },
+        classes: "Association",
         type: "link",
         href: "/association",
         size: "XL"
@@ -26,8 +29,25 @@ module.exports = () => {
 
       ${ButtonUnderlined({
         label: { all: "Contact" },
+        classes: "Contact",
         type: "link",
         href: "/contact",
+        size: "XL"
+      })}
+
+      ${ButtonUnderlined({
+        label: { all: "Follow us!" },
+        classes: "Follow",
+        type: "link",
+        href: "/follow-us",
+        size: "XL"
+      })}
+
+      ${ButtonUnderlined({
+        label: { all: "Support us!" },
+        classes: "Support",
+        type: "link",
+        href: "/support-us",
         size: "XL"
       })}
     </section>
@@ -35,7 +55,7 @@ module.exports = () => {
 
   const css = /*css*/`
     .MENU {
-      background-color: var(--violet);
+      background-color: var(--violetBright);
       height: 100vh;
       width: 100%;
       position: fixed;
@@ -56,6 +76,11 @@ module.exports = () => {
       width: 100%;
       padding: var(--size-M) 0 0 0;
       margin: 0;
+    }
+
+    .MENU .button.UnderlinedButton.Follow,
+    .MENU .button.UnderlinedButton.Support {
+      color: var(--violet);
     }
 
     .MENU .button.UnderlinedButton .line {

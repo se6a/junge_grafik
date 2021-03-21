@@ -15,7 +15,7 @@ module.exports = (data) => {
 
   const css = /*css*/`
     body {
-      --colorTheme: var(--violet);
+      --colorTheme: var(--violetBright);
     }
 
     .VIEW.Newsletter {

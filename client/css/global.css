@@ -3,7 +3,8 @@
 
 body {
   --darkViolet: rgb(35, 0, 50);
-  --violet: rgb(120, 80, 255);
+  --violet: rgb(70, 35, 190);
+  --violetBright: rgb(120, 80, 255);
   --red: rgb(255, 85, 90);
   --green: rgb(60, 255, 100);
   --blue: rgb(0, 215, 255);
