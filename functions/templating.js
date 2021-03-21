@@ -309,7 +309,10 @@ global.getJs = (name) => require(`${__basedir}/functions/${name}.js`);
 global.getData = (name) => Object.deepCopy_(
                             require(`${__basedir}/client/data/${name}.data`));
 
-global.makeId = () => new Date().getTime().toString(16);
+global.makeId = () => {
+  return (new Date().getTime().toString(16)
+  + Math.floor(Math.random() * 100000));
+};
 
 /*  Modules
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/

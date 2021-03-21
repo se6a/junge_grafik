@@ -78,9 +78,11 @@ module.exports = {
       "threeColumns"
     ];
 
-    const colCount = group.length < 3
-                   ? group.length - 1
-                   : 2;
+    const colCount = group.length % 3 === 0 || group.length > 6
+                   ? 3
+                   : group.length % 2 === 0 || group.length > 4
+                   ? 2
+                   : 1;
 
     group.forEach((_member, index) => {
       if (group.length > 1)
@@ -91,7 +93,7 @@ module.exports = {
     return [
       "fieldset",
       [
-        `<fieldset class="formFieldGroup ${columnClass[colCount]}" style="z-index: ${groupZindex}">`,
+        `<fieldset class="formFieldGroup ${columnClass[colCount - 1]}" style="z-index: ${groupZindex}">`,
         ...$group,
         "</fieldset>"
       ]

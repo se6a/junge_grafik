@@ -12,16 +12,19 @@ function getUrlLanguage(req) {
 
 module.exports = async (data) => {
   const View     = getView(data.viewName);
-  const language = `--${getUrlLanguage(data.req)}`;
+  const language = getUrlLanguage(data.req);
+
   const seoMeta  = ENV.environment === "dev"
                 || data.meta.indexed === false
                  ? `<meta name="robots" content="noindex,nofollow"/>`
                  : "";
+
   const title    = {
-                    "--fr": "Jeune Graphisme",
-                    "--de": "Junge Grafik",
-                    "--it": "Giovane Grafica"
+                    fr: "Jeune Graphisme",
+                    de: "Junge Grafik",
+                    it: "Giovane Grafica"
                    }[language];
+
   const titleAddition = data.meta.title
                       ? `: ${data.meta.title}`
                       : "";
@@ -47,7 +50,7 @@ module.exports = async (data) => {
         <inject-css />
       </head>
 
-      <body class="${language}">
+      <body data-lang="${language}">
         ${Header()}
         ${Menu()}
         ${await View(data)}

@@ -142,9 +142,9 @@ module.exports = [
             <li class="dash">Le lien vers le site web de ton portfolio est facultatif.</li>
             <li class="dash">Le portfolio n'influence pas l'évaluation de ton projet.</li>
             <li class="dash">Si tu gagnes, nous ajouterons un lien vers l'URL dans nos archives.</li>
-            <li class="dash">Exemple de site web portfolio: jungegrafik.ch</li>
-            <li class="dash">Exemple de portfolio Behance : behance.net/jungegrafik</li>
-            <li class="dash">Exemple de portfolio instagram : instagram.com/jungegrafik</li>
+            <li class="dash">X</li>
+            <li class="dash">X</li>
+            <li class="dash">X</li>
           </ul>
         `,
         it: `
@@ -152,9 +152,9 @@ module.exports = [
             <li class="dash">Il link al tuo sito web del portfolio è opzionale.</li>
             <li class="dash">Il portfolio non influenza il giudizio del tuo progetto.</li>
             <li class="dash">Se vinci, inseriremo l'URL nel nostro archivio.</li>
-            <li class="dash">Esempio di sito web: jungegrafik.ch</li>
-            <li class="dash">Esempio Behance: behance.net/jungegrafik</li>
-            <li class="dash">Esempio Instagram: instagram.com/jungegrafik</li>
+            <li class="dash">X</li>
+            <li class="dash">X</li>
+            <li class="dash">X</li>
           </ul>
         `
       }

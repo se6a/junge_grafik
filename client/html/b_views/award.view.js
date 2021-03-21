@@ -19,26 +19,23 @@ module.exports = (data) => {
       margin: var(--size-XS) 0 var(--size-S);
     }
 
-    .VIEW.Award .OverviewItem .--fr .langOption.fr,
-    .VIEW.Award .OverviewItem .--de .langOption.de,
-    .VIEW.Award .OverviewItem .--it .langOption.it {
+    .VIEW.Award .OverviewItem .langOption {
       pointer-events: initial;
-      visibility: visible;
       position: initial;
     }
 
-    span.--fr .textButton:not(.fr),
-    span.--de .textButton:not(.de),
-    span.--it .textButton:not(.it) {
-      border-bottom: 0;
-      margin: 0;
-    }
-
-    .--fr .textButton.fr,
-    .--de .textButton.de,
-    .--it .textButton.it {
+    body[data-lang="fr"] .textButton.fr,
+    body[data-lang="de"] .textButton.de,
+    body[data-lang="it"] .textButton.it {
       border-bottom: var(--borderFull) solid currentColor;
       margin: calc(var(--borderFull) * -1) 0;
+    }
+
+    body[data-lang="fr"] .textButton:not(.fr),
+    body[data-lang="de"] .textButton:not(.de),
+    body[data-lang="it"] .textButton:not(.it) {
+      border-bottom: 0;
+      margin: 0;
     }
   `;
 

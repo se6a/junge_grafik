@@ -96,27 +96,17 @@ module.exports = (data) => {
       z-index: 10;
     }
 
-    .VIEW.Submit.--fr .label > .langOption.fr,
-    .VIEW.Submit.--de .label > .langOption.de,
-    .VIEW.Submit.--it .label > .langOption.it {
+    body[data-lang="fr"] .textButton:not(.fr),
+    body[data-lang="de"] .textButton:not(.de),
+    body[data-lang="it"] .textButton:not(.it) {
+      border-bottom: 0;
+      margin: 0;
+    }
+
+    .langOption.fr,
+    .langOption.de,
+    .langOption.it {
       position: initial;
-      visibility: visible;
-    }
-
-    .VIEW.Submit.--fr .option > .langOption.fr,
-    .VIEW.Submit.--de .option > .langOption.de,
-    .VIEW.Submit.--it .option > .langOption.it {
-      pointer-events: none;
-      visibility: visible;
-      position: inherit;
-    }
-
-    .VIEW.Submit.--fr .input > .langOption.fr,
-    .VIEW.Submit.--de .input > .langOption.de,
-    .VIEW.Submit.--it .input > .langOption.it {
-      pointer-events: none;
-      visibility: visible;
-      position: inherit;
     }
 
     .Submit .button .initial,

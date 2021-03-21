@@ -1,10 +1,17 @@
-const Tooltip = getSnippet("tooltip");
 const Icon    = getSnippet("icon-circle-m");
 const e       = getJs("event-handler");
 
-module.exports = (field) => {
-  const required = field?.required ? "--required" : "";
-  const zindex = field?.zindex ? `style="z-index: ${field.zindex}"` : "";
+module.exports = ({
+  id = makeId(),
+  name,
+  label,
+  required,
+  callback,
+  zindex
+
+}) => {
+  required = required ? "--required" : "";
+  zindex = zindex ? `style="z-index: ${zindex}"` : "";
 
   const html = splitTemp/*html*/`
     <div
@@ -24,19 +31,20 @@ module.exports = (field) => {
         </div>
 
         <input
+          id="${id}"
           class="hiddenInput"
-          name="${field?.name}"
+          name="${name}"
           type="checkbox"
           value="false"
-          ${e.onchecked(field?.callback)}
+          ${e.onchecked(callback)}
           ${required ? "required" : ""}
         >
 
       </div>
 
-      <label class="label">
+      <label class="label" for="${id}">
         <span>
-          ${lang`<span>${field.label}</span>`}
+          ${lang`<span>${label}</span>`}
         </span>
       </label>
 

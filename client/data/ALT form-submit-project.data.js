@@ -61,21 +61,9 @@ module.exports = [
       type: "text-short",
       required: true,
       tooltip: {
-        de: `
-          <ul>
-            <li class="dash">Gib deinem Projekt einen Titel. Falls deine Arbeit ausgezeichnet wird, so wird der Projekttitel auf der Website als auch in der Publikation erscheinen.</li>          
-          </ul>
-        `,
-        fr: `
-          <ul>
-            <li class="dash">Donnez un titre à ton projet. Si ton travail est récompensé, le titre du projet apparaîtra sur notre site web ainsi que dans la publication.</li>          
-          </ul>
-        `,
-        it: `
-          <ul>
-            <li class="dash">Dai un titolo al tuo progetto. Se il tuo lavoro viene premiato, il titolo del progetto apparirà sul sito web e nella pubblicazione.</li>          
-          </ul>
-        `
+        de: `– Gib deinem Projekt einen Titel. Falls deine Arbeit ausgezeichnet wird, so wird der Projekttitel auf der Website als auch in der Publikation erscheinen.`,
+        fr: `– Donnez un titre à ton projet. Si ton travail est récompensé, le titre du projet apparaîtra sur notre site web ainsi que dans la publication.`,
+        it: `– Dai un titolo al tuo progetto. Se il tuo lavoro viene premiato, il titolo del progetto apparirà sul sito web e nella pubblicazione.`
       }
     },
     // Enstehungsjahr
@@ -123,21 +111,9 @@ module.exports = [
       ],
       required: true,
       tooltip: {
-        de: `
-          <ul>
-            <li class="dash">Wähle 1 bis 3 Tags, die zu deinem Projekt passen.</li>          
-          </ul>
-        `,
-        fr: `
-          <ul>
-            <li class="dash">Choisis 1 à 3 tags (mots-clés) qui correspondent à ton projet</li>          
-          </ul>
-        `,
-        it: `
-          <ul>
-            <li class="dash">Scegli da 1 a 3 tag che si adattano al tuo progetto.</li>          
-          </ul>
-        `
+        de: "– Wähle 1 bis 3 Tags, die zu deinem Projekt passen.",
+        fr: "– Choisis 1 à 3 tags (mots-clés) qui correspondent à ton projet-",
+        it: "– Scegli da 1 a 3 tag che si adattano al tuo progetto."
       }
     },
     // Tag #2
@@ -192,7 +168,6 @@ module.exports = [
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
   [
     {
-      id: "ProjectDescription",
       name: "projektbeschrieb",
       label: {
         de: "Projektbeschrieb",
@@ -203,21 +178,9 @@ module.exports = [
       maxlength: "800",
       required: true,
       tooltip: {
-        de: `
-          <ul>
-            <li class="dash">Nutze den Projektbeschrieb, um uns interessante Aspekte über die Aufgabenstellung, den Prozess und die Idee zu erzählen.</li>          
-          </ul>
-        `,
-        fr: `
-          <ul>
-            <li class="dash">Utilise cette description pour nous faire part d’aspects intéressants dans la donnée de base, le processus et l'idée de ton projet.</li>          
-          </ul>
-        `,
-        it: `
-          <ul>
-            <li class="dash">Descrivi il progetto per raccontarci aspetti interessanti sul compito, il processo e l'idea.</li>          
-          </ul>
-        `
+        de: "– Nutze den Projektbeschrieb, um uns interessante Aspekte über die Aufgabenstellung, den Prozess und die Idee zu erzählen.",
+        fr: "– Utilise cette description pour nous faire part d’aspects intéressants dans la donnée de base, le processus et l'idée de ton projet.",
+        it: "– Descrivi il progetto per raccontarci aspetti interessanti sul compito, il processo e l'idea."
       }
     }
   ],
@@ -263,21 +226,9 @@ module.exports = [
         it: "Nome dell’istituto di formazione / Azienda formatrice"
       },
       tooltip: {
-        de: `
-          <ul>
-            <li class="dash">In welcher Ausbildungsinstitution oder in welchem Lehrbetrieb ist dein Projekt entstanden?</li>          
-          </ul>
-        `,
-        fr: `
-          <ul>
-            <li class="dash">Dans quel établissement d'enseignement ou entreprise d’apprentissage ton projet a-t-il vu le jour ?</li>          
-          </ul>
-        `,
-        it: `
-          <ul>
-            <li class="dash">In quale scuola o azienda formatrice è stato realizzato il tuo progetto?</li>          
-          </ul>
-        `
+        de: "– In welcher Ausbildungsinstitution oder in welchem Lehrbetrieb ist dein Projekt entstanden?",
+        fr: "– Dans quel établissement d'enseignement ou entreprise d’apprentissage ton projet a-t-il vu le jour ?",
+        it: "– In quale scuola o azienda formatrice è stato realizzato il tuo progetto?"
       },
       required: true
     },
@@ -285,7 +236,7 @@ module.exports = [
       name: "kanton-des-ausbildungsortes",
       label: {
         de: "Kanton des Ausbildungsorts",
-        fr: "Canton du lieu de formation",
+        fr: "X",
         it: "Cantone del luogo di formazione"
       },
       type: "select-1",
@@ -336,19 +287,19 @@ module.exports = [
         de: `
           <ul>
             <li class="dash">Wer hat dich bei deinem Projekt begleitet? Es sind mehrere Nennungen möglich.</li>          
-            <li class="dash">Gib die Namen wie folgt an: Vorname Familienname, ...</li>
+            <li class="dash">Gib die Namen wie folgt an: Vorname Familienname, Vorname Familienname</li>
           </ul>
         `,
         fr: `
           <ul>
             <li class="dash">Qui t'a suivi pendant ton projet ? Plusieurs noms sont possibles.</li>          
-            <li class="dash">Indique les noms comme suit : Prénom Nom, ...</li>
+            <li class="dash">Indique les noms comme suit : Prénom Nom, Prénom Nom</li>
           </ul>
         `,
         it: `
           <ul>
             <li class="dash">Chi ti ha accompagnato durante il progetto? Possono essere indicate più persone.</li>          
-            <li class="dash">Indica i nomi come segue: Nome Cognome, ...</li>
+            <li class="dash">Indica i nomi come segue: nome cognome, nome cognome</li>
           </ul>
         `
       }
@@ -361,31 +312,15 @@ module.exports = [
     {
       name: "weitere-gestalter",
       type: "text-short",
-      maxlength: "450",
       label: {
-        de: "Weitere Gestalter*innen (bei Gruppenarbeiten)",
+        de: "Weitere Gestalter*Innen bei Gruppenarbeiten",
         fr: "Autres graphistes dans le cadre d’un travail de groupe",
         it: "Altri membri del gruppo in caso di progetto realizzato da un gruppo"
       },
       tooltip: {
-        de: `
-          <ul>
-            <li class="dash">Reichst du eine Gruppenarbeit ein? Nenne hier alle Namen deines Teams.</li>
-            <li class="dash">Gib die Namen wie folgt an: Vorname Familienname, Vorname Familienname</li>
-          </ul>
-            `,
-        fr: `
-          <ul>
-            <li class="dash">Vous soumettez un travail de groupe ? Listez ici tous les noms de votre équipe.</li>
-            <li class="dash">Donnez les noms comme suit : Prénom Nom, ...</li>
-          </ul>
-            `,
-        it: `
-          <ul>
-            <li class="dash">Stai inoltrando un lavoro di gruppo? Elenca qui tutti i nomi dei membri del tuo gruppo.</li>
-            <li class="dash">Indica i nomi come segue: Nome Cognome, ...</li>
-          </ul>
-        `
+        de: "– Reichst du eine Gruppenarbeit ein? Nenne hier alle Namen deines Teams. Gib die Namen wie folgt an: Vorname Familienname, Vorname Familienname",
+        fr: "Vous soumettez un travail de groupe ? Listez ici tous les noms de votre équipe. Donnez les noms comme suit : Prénom Nom, Prénom Nom",
+        it: "Stai inoltrando un lavoro di gruppo? Elenca qui tutti i nomi dei membri del tuo gruppo. Indica i nomi come segue: Nome Cognome, Nome Cognome"
       }
     }
   ],
@@ -394,13 +329,12 @@ module.exports = [
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
   [
     {
-      id: "ProjectFileUpload",
       name: "reprografien",
       type: "file",
       label: {
-        de: "Upload Reprografien / Mockups (3–6)",
-        fr: "Téléchargement de reproductions / mock-ups (3–6)",
-        it: "Upload Riproduzione / Mockup (3–6)"
+        de: "Upload Reprografien / Mockups",
+        fr: "Téléchargement de reproductions / mock-ups",
+        it: "Upload Riproduzione / Mockup"
       },
       minfiles: 3,
       maxfiles: 6,
@@ -408,38 +342,38 @@ module.exports = [
       tooltip: {
           de: `
             <ul>
-              <li class="dash>3 bis 6 Reprografien oder Mockups</li>
-              <li class="dash">JPG Format</li>
-              <li class="dash">RGB Farbraum</li>
-              <li class="dash">Lange Seite: 3800px</li>
-              <li class="dash">Diese Bilddateien werden für die Publikation verwendet. Übermittle uns das JPG darum möglichst unkomprimiert.</li>
-              <li class="dash">Darf ich einen Farbigen Hintergrund verwenden? Ja.</li>
-              <li class="dash">Darf ich mein Projekt inszenieren? Ja.</li>
-              <li class="dash">Darf ich anstelle von klassischen Reprografien auch digitale Mockups einsenden? Ja.</li>
+              <li class="dash>– 3 bis 6 Reprografien oder Mockups</li>
+              <li class="dash>– JPG Format</li>
+              <li class="dash>– RGB Farbraum</li>
+              <li class="dash>– Lange Seite: 3800px</li>
+              <li class="dash>– Diese Bilddateien werden für die Publikation verwendet. Übermittle uns das JPG darum möglichst unkomprimiert.</li>
+              <li class="dash>– Darf ich einen Farbigen Hintergrund verwenden? Ja.</li>
+              <li class="dash>– Darf ich mein Projekt inszenieren? Ja.</li>
+              <li class="dash>– Darf ich anstelle von klassischen Reprografien auch digitale Mockups einsenden? Ja.</li>
             </ul>
           `,
           fr: `
             <ul>
-              <li class="dash">3 à 6 photos ou mock-ups</li>
-              <li class="dash">Format JPG</li>
-              <li class="dash">Profil couleur RGB</li>
-              <li class="dash">résolution d’au minimum 3800 Pixel sur le côté long.</li>
-              <li class="dash">Ces fichiers seront utilisés pour la publication. Veuillez donc nous envoyer des JPG aussi peu comprimés que possible.</li>
-              <li class="dash">Puis-je utiliser un fond coloré ? Oui !</li>
-              <li class="dash">Puis-je mettre en scène mon projet ? Oui !</li>
-              <li class="dash">Puis-je envoyer des mock-ups au lieu des reproductions classiques ? Oui !</li>
+              <li class="dash>– 3 à 6 photos ou mock-ups</li>
+              <li class="dash>– Format JPG</li>
+              <li class="dash>– Profil couleur RGB</li>
+              <li class="dash>– résolution d’au minimum 3800 Pixel sur le côté long.</li>
+              <li class="dash>– Ces fichiers seront utilisés pour la publication. Veuillez donc nous envoyer des JPG aussi peu comprimés que possible.</li>
+              <li class="dash>– Puis-je utiliser un fond coloré ? Oui !</li>
+              <li class="dash>– Puis-je mettre en scène mon projet ? Oui !</li>
+              <li class="dash>– Puis-je envoyer des mock-ups au lieu des reproductions classiques ? Oui !</li>
             </ul>
           `,
           it: `
             <ul>
-              <li class="dash">da 3 a 6 immagni o Mockup</li>
-              <li class="dash">Formato JPG</li>
-              <li class="dash">Spazio colore RGB</li>
-              <li class="dash">Il lato lungo deve essere di almeno 3800 Pixel</li>
-              <li class="dash">Questi file di immagine saranno utilizzati per la pubblicazione. Pertanto, vi preghiamo di inviarci il JPG non compressi.</li>
-              <li class="dash">Posso usare uno sfondo colorato? Sì!</li>
-              <li class="dash">Posso mettere in scena (contestualizzare) il mio progetto? Sì!</li>
-              <li class="dash">Posso inviare mockup digitali invece di riproduzioni? Sì!</li>
+              <li class="dash>– da 3 a 6 immagni o Mockup</li>
+              <li class="dash>– Formato JPG</li>
+              <li class="dash>– Spazio colore RGB</li>
+              <li class="dash>– Il lato lungo deve essere di almeno 3800 Pixel</li>
+              <li class="dash>– Questi file di immagine saranno utilizzati per la pubblicazione. Pertanto, vi preghiamo di inviarci il JPG non compressi.</li>
+              <li class="dash>– Posso usare uno sfondo colorato? Sì!</li>
+              <li class="dash>– Posso mettere in scena (contestualizzare) il mio progetto? Sì!</li>
+              <li class="dash>– Posso inviare mockup digitali invece di riproduzioni? Sì!</li>
             </ul>
           `
       },
@@ -455,29 +389,19 @@ module.exports = [
       type: "url",
       label: {
         de: "Youtube- oder Vimeolink zu einem Video- oder Animationsprojekt",
-        fr: "Lien Youtube ou Vimeo vers un projet de vidéo ou d’animation",
-        it: "Link di un tuo video o animazione a Youtube o Vimeo"
+        fr: "",
+        it: ""
       },
       tooltip: {
         de: `
           <p>– Video- und Animations-Projekte müssen einen Video-Link einreichen. Gib uns hier die URL an.</p>
           <ul>
             <li class="dash">Beispiel Youtube: https://www.youtube.com/watch?v=a3RGv-w99Cg</li>
-            <li class="dash">Beispiel Vimeo: https://vimeo.com/183907133</li>
+            <li class="dash">Beispiel Vimeo: https://vimeo.com/183907133"</li>
           </ul>
         `,
-        fr: `
-          <ul>
-            <li class="dash">Exemple Youtube : https://www.youtube.com/watch?v=a3RGv-w99Cg</li>
-            <li class="dash">Exemple Vimeo : https://vimeo.com/183907133</li>
-          </ul>
-        `,
-        it: `
-          <ul>
-            <li class="dash">Esempio Youtube: https://www.youtube.com/watch?v=a3RGv-w99Cg</li>
-            <li class="dash">Esempio Vimeo: https://vimeo.com/183907133</li>
-          </ul>
-        `
+        fr: "X",
+        it: "X"
       }
     },
 
@@ -492,25 +416,9 @@ module.exports = [
         it: "Link al prototipo o sito web del progetto"
       },
       tooltip: {
-        de:`      
-            <ul>
-                <li class="dash">Gibt es einen Link zu einer Projekt-Website oder zu einem Prototypen deines Projekts? Dann gib uns hier die URL an (optional).</li>
-                <li class="dash">Beispiel: https://jungegrafik.ch/</li>
-            </ul>
-           `,
-        fr:`      
-            <ul>
-                <li class="dash">Existe-t-il un lien vers un site web ou vers un prototype de ton projet ? Donne-nous ici l'URL (facultatif).</li>
-                <li class="dash">Exemple : https://jungegrafik.ch/</li>
-            </ul>
-           `,
-
-        it:`      
-            <ul>
-                <li class="dash">C'è un link a un sito web del progetto o a un prototipo del tuo progetto? Poi indicaci l’URL qui (opzionale).</li>
-                <li class="dash">Esempio: https://jungegrafik.ch/</li>
-            </ul>
-           `
+        de: "– Gibt es einen Link zu einer Projekt-Website oder zu einem Prototypen deines Projekts? Dann gib uns hier die URL an (optional).",
+        fr: "– Existe-t-il un lien vers un site web ou vers un prototype de ton projet ? Donne-nous ici l'URL (facultatif).",
+        it: "– C'è un link a un sito web del progetto o a un prototipo del tuo progetto? Poi indicaci l’URL qui (opzionale)."
       }
     }
   ]

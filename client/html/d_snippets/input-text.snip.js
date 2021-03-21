@@ -1,13 +1,21 @@
 const Tooltip = getSnippet("tooltip");
 
-module.exports = ({ name, label, required, tooltip, maxlength = 500 }) => {
+module.exports = ({
+  id = makeId(),
+  name,
+  label,
+  required,
+  tooltip,
+  minlength = 1,
+  maxlength = 500
+}) => {
   required = required ? "--required" : "";
 
   const html = splitTemp/*html*/`
-    <div class="formField Text ${required}">
+    <div class="formField Text ${required}" onclick="instanciateTextInput(this)">
 
       <header class="header">
-        <label class="label">
+        <label class="label" for="${id}">
           ${lang`<span>${label}</span>`}
         </label>
         ${Tooltip(tooltip)}
@@ -19,10 +27,13 @@ module.exports = ({ name, label, required, tooltip, maxlength = 500 }) => {
 
       <div class="inputBox">
         <textarea
+          id="${id}"
           class="input Text textarea"
           name="fields[${name}]"
-          data-max=${maxlength}
+          minlength="${minlength}"
+          maxlength="${maxlength}"
           onblur="validate(this)"
+          onpaste="validate(this)"
           ${required ? "required" : ""}
         ></textarea>
       </div>

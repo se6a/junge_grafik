@@ -42,6 +42,17 @@ module.exports = (tooltip) => {
       white-space: pre-line;
     }
 
+    .Tooltip.--open .content {
+      visibility: visible;
+    }
+
+    body[data-lang="fr"] .Tooltip.--open .langOption.fr,
+    body[data-lang="de"] .Tooltip.--open .langOption.de,
+    body[data-lang="it"] .Tooltip.--open .langOption.it {
+      display: initial;
+      position: initial;
+    }
+
     .Tooltip:focus {
       outline: none;
     }
@@ -52,21 +63,6 @@ module.exports = (tooltip) => {
       background-color: var(--colorKey);
       border-color: var(--colorKey);
       color: var(--white);
-    }
-
-    .Tooltip.--open .content {
-      visibility: visible;
-    }
-
-    .Tooltip .langOption {
-      visibility: hidden;
-    }
-
-    .--fr .Tooltip.--open .langOption.fr,
-    .--de .Tooltip.--open .langOption.de,
-    .--it .Tooltip.--open .langOption.it {
-      visibility: visible;
-      position: initial;
     }
   `;
 

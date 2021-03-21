@@ -11,7 +11,7 @@ document.addEventListener(
 );
 
 function preselectLanguage(formId) {
-  const lang = document.body.getAttribute("class").match(/--(fr|de|it)\s/)[1];
+  const lang = document.body.dataset.lang;
   const $field = document.querySelector(`#${formId} .Language .Select.inputBox.outer`);
   const $option = $field.querySelector(`.option[data-id="${lang}"]`);
   selectOption($field, $option);
@@ -31,7 +31,7 @@ function setFormLanguage(e) {
     const $ViewSubmit = document.querySelector(".VIEW.Submit");
 
     $ViewSubmit.lang = lang;
-    $ViewSubmit.classList.add(`--${lang}`);
+    document.body.dataset.lang = lang;
     $langInput.classList.remove("--invalid");
   }
 }
@@ -44,7 +44,6 @@ function setFormLanguage(e) {
 const ProjectForm = function() {
   const instance = {
     $form: document.getElementById("SubmitProjectForm"),
-    description: new ProjectDescription(),
 
     async submit(e) {
       e.preventDefault();
@@ -150,41 +149,6 @@ const ProjectForm = function() {
     "submit",
     (e) => instance.submit(e)
   );
-
-  return instance;
-};
-
-/* Project Description
-´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
-const ProjectDescription = function() {
-  const $formField = document.querySelector(".formField.Text");
-  const $inputBox = $formField.querySelector(".inputBox");
-  const $textarea = $inputBox.querySelector("textarea");
-  const $count = $formField.querySelector(".selected > .count");
-
-  const instance = {
-    $formField,
-    $inputBox,
-    $textarea,
-    $count,
-
-    max: $textarea.dataset.max,
-    count: 0,
-
-    updateCount() {
-      this.count = this.$textarea.value.length;
-
-      if (this.count > this.max) {
-        this.count = this.max;
-        this.$textarea.value = this.$textarea.value.slice(0, this.max);
-      }
-
-      this.$count.innerHTML = this.count;
-    }
-
-  };
-
-  $textarea.addEventListener("input", () => instance.updateCount());
 
   return instance;
 };

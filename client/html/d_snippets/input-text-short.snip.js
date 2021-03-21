@@ -3,7 +3,7 @@ const Tooltip = getSnippet("tooltip");
 module.exports = (data) => {
   let {
     name,
-    id = "",
+    id = makeId(),
     label,
     required,
     tooltip,
@@ -25,15 +25,13 @@ module.exports = (data) => {
             ? `maxlength="${maxlength}"`
             : "";
 
-  id = id ? `id="${id}"` : "";
-
   required = required ? "--required" : "";
 
   const html = splitTemp/*html*/`
     <div class="formField TextShort ${subType} ${required}">
 
       <header class="header">
-        <label class="label">
+        <label class="label" for="${id}">
           ${lang`<span>${label}</span>`}
         </label>
         ${Tooltip(tooltip)}
@@ -41,7 +39,7 @@ module.exports = (data) => {
 
       <div class="inputBox">
         <input
-          ${id}
+          id="${id}"
           class="input TextShort ${subType}"
           name="fields[${name}]"
           ${type}

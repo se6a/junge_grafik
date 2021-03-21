@@ -326,3 +326,46 @@ const FileInput = function($formField) {
 
   return instance;
 };
+
+/* TextInput
+´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
+const textInputs = {};
+
+function instanciateTextInput($formField) {
+  const textInput = new TextInput($formField);
+  textInputs[textInput.id] = textInput;
+}
+
+const TextInput = function($formField) {
+  const $inputBox = $formField.querySelector(".inputBox");
+  const $textarea = $inputBox.querySelector("textarea");
+  const $count = $formField.querySelector(".selected > .count");
+
+  const instance = {
+    $formField,
+    $inputBox,
+    $textarea,
+    $count,
+
+    id: $textarea.id,
+    max: $textarea.maxlength,
+    min: $textarea.minlength,
+    count: 0,
+
+    updateCount() {
+      this.count = this.$textarea.value.length;
+
+      if (this.count > this.max) {
+        this.count = this.max;
+        this.$textarea.value = this.$textarea.value.slice(0, this.max);
+      }
+
+      this.$count.innerHTML = this.count;
+    }
+
+  };
+
+  $textarea.addEventListener("input", () => instance.updateCount());
+
+  return instance;
+};

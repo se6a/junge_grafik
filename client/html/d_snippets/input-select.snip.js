@@ -12,18 +12,35 @@ function SelectOptions(options = []) {
     );
 }
 
-module.exports = (data) => {
-  const zindex      = data.zindex ? `style="z-index: ${data.zindex}"` : "";
-  const required    = data.required ? "--required" : "";
-  const placeholder = "";
+module.exports = ({
+  id = makeId(),
+  name,
+  label,
+  placeholder = "",
+  required,
+  options = [],
+  tooltip,
+  zindex
+
+}) => {
+  zindex = zindex ? `style="z-index: ${zindex}"` : "";
+  required = required ? "--required" : "";
+
+  const noneOption = required
+                   ? ""
+                   : /*html*/`
+                    <li class="option" role="option" data-id="">
+                      none
+                    </li>
+                  `;
 
   const html = splitTemp/*html*/`
     <div class="formField Select ${required}" ${zindex}>
       <div class="header">
-        <label class="label">
-          ${lang`<span>${data.label}</span>`}
+        <label class="label" for="${id}">
+          ${lang`<span>${label}</span>`}
         </label>
-        ${Tooltip(data.tooltip)}
+        ${Tooltip(tooltip)}
       </div>
 
       <div class="Select inputBox outer">
@@ -42,10 +59,11 @@ module.exports = (data) => {
           </span>
 
           <input
+            id="${id}"
             class="Select hiddenInput"
             type="text"
             value=""
-            name="fields[${data.name}]"
+            name="fields[${name}]"
             tabindex="-1"
             onchange="() => console.log('change')"
             ${required ? 'required="required"' : ""}
@@ -57,16 +75,8 @@ module.exports = (data) => {
             class="Select options"
             role="listbox"
           >
-            ${
-              required
-                ? ""
-                : /* html */`
-                  <li class="option" role="option" data-id="">
-                    none
-                  </li>
-                `
-            }
-            ${SelectOptions(data.options)}
+            ${noneOption}
+            ${SelectOptions(options)}
           </ul>
 
         </div>
@@ -103,7 +113,7 @@ module.exports = (data) => {
     .Select.input {
       align-items: center;
       cursor: pointer;
-      background-color: transparent;
+      background-color: var(--white);
       border-color: var(--colorKey);
     }
 
@@ -136,25 +146,15 @@ module.exports = (data) => {
       background-color: var(--violet);
     }
 
-    .Select.inputBox.inner:focus-within {
-      outline: calc(var(--borderFocus) - var(--borderFull))
-               solid
-               var(--colorKey);
-      border-color: var(--colorKey);
-      color: var(--white);
-      background-color: var(--colorKey);
-    }
-
     .Select.inputBox.inner:focus-within .options {
       display: block;
+      background-color: var(--colorKey);
+      color: var(--white);
     }
 
     .Select.inputBox.inner:focus-within .icon {
-      color: white;
       transform: rotate(180deg);
     }
-
-
 
     input.Select {
       outline: none;

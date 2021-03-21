@@ -1,7 +1,15 @@
 const IconPlus = getSnippet("icon-plus");
 const Tooltip = getSnippet("tooltip");
 
-module.exports = ({ label, required, tooltip, maxfiles = 1, minfiles = 1, accept }) => {
+module.exports = ({
+  id = makeId(),
+  label,
+  required,
+  tooltip,
+  maxfiles = 1,
+  minfiles = 1,
+  accept
+}) => {
   required = required ? "--required" : "";
   accept = accept
          ? `accept="${accept}"`
@@ -14,7 +22,7 @@ module.exports = ({ label, required, tooltip, maxfiles = 1, minfiles = 1, accept
     >
 
       <header class="header">
-        <label class="label">
+        <label class="label" for="${id}">
           ${lang`<span>${label}</span>`}
         </label>
         ${Tooltip(tooltip)}
@@ -26,11 +34,11 @@ module.exports = ({ label, required, tooltip, maxfiles = 1, minfiles = 1, accept
 
       <div class="inputBox input Upload">
 
-        <label for="ProjectFileUpload" class="Upload button unstyled">
+        <label class="Upload button unstyled">
           ${IconPlus()}
           <input
+            id="${id}"
             class="hiddenInput"
-            id="ProjectFileUpload"
             type="file"
             name="file"
             data-max=${maxfiles}

@@ -6,6 +6,7 @@ module.exports = (data) => {
   data.attr = `
     min="${data.min || 0}"
     max="${data.max || 9999999}"
+    step="${data.step || ""}"
   `;
 
   const html = splitTemp/*html*/`

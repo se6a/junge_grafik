@@ -225,6 +225,15 @@ select:focus {
   grid-auto-rows: 1fr;
 }
 
+/*  Dynamic Language Display
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+body[data-lang="fr"] .langOption:not(.fr):not(.all),
+body[data-lang="de"] .langOption:not(.de):not(.all),
+body[data-lang="it"] .langOption:not(.it):not(.all) {
+  display: none;
+}
+
 /*  Elements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -262,14 +271,6 @@ ul > .arrow::before {
 
 ul > .dash::before {
   content: "– ";
-}
-
-.--fr .langOption:not(.fr):not(.all),
-.--de .langOption:not(.de):not(.all),
-.--it .langOption:not(.it):not(.all) {
-  pointer-events: none;
-  visibility: hidden;
-  position: absolute;
 }
 
 .label {
