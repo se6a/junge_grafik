@@ -69,7 +69,7 @@ module.exports = {
           type: "card-with-image",
           title: `
             <div>Loana Boppart</div>
-            <div>Remit: Foundations</div>
+            <div>Remit: Foundations, Co project manager</div>
           `,
           image: {
             src: "assoc/jg_board-loana_boppart.png",
@@ -105,7 +105,7 @@ module.exports = {
           type: "card-with-image",
           title: `
             <div>Jonas Keusch</div>
-            <div>Remit: Digital communication</div>
+            <div>Remit: Digital communication, Website</div>
           `,
           image: {
             src: "assoc/jg_board-jonas_keusch.png",
@@ -153,7 +153,7 @@ module.exports = {
           type: "card-with-image",
           title: `
             <div>Moritz Profitlich</div>
-            <div>Remit: Website, IT support</div>
+            <div>Remit: Website Backend</div>
           `,
           image: {
             src: "assoc/jg_board-moritz_profitlich.png",
@@ -178,7 +178,7 @@ module.exports = {
           type: "card-with-image",
           title: `
             <div>Tobias Klauser</div>
-            <div>Remit: Contact with schools and professional associations</div>
+            <div>Remit: Contact with schools, Co project manager</div>
           `,
           image: {
             src: "assoc/jg_board-tobias_klauser.png",

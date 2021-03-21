@@ -32,8 +32,8 @@ module.exports = (data) => {
         <header>
           <h1>
             ${UnderlinedMulti({
-              fr: "Données personnelles",
-              de: "Détails du projet",
+              fr: "Détails du projet",
+              de: "Angaben zum Projekt",
               it: "Indicazioni per il progetto"
             })}
           </h1>
