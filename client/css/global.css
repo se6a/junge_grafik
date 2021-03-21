@@ -18,24 +18,32 @@ body {
   --headerHeight: 8vmin;
   --footerHeight: 30vmin;
 
+  --lineHeight-S: 1.3;
+  --lineHeight-M: 1.3;
+  --lineHeight-L: 1.2;
+  --lineHeight-XL: 1.2;
+
+  --listHeight-S: 1.7;
+  --listHeight-M: 1.7;
+  --listHeight-L: 1.7;
+  --listHeight-XL: 1.7;
+
   --fontSize-S: 1.4vmin;
-  --lineHeight-S: 2vmin;
-  --listHeight-S: 2.5vmin;
   --fontSize-M: 1.9vmin;
-  --lineHeight-M: 2.5vmin;
   --fontSize-L: 5vmin;
-  --lineHeight-L: 5.5vmin;
   --fontSize-XL: 9vmin;
-  --lineHeight-XL: 8vmin;
 
   --size-XS: .5vmin;
   --size-S: 2vmin;
   --size-M: 4vmin;
-  --size-L: 5vmin;
-  --size-XL: 8vmin;
+  --size-L: 7.5vmin;
+  --size-XL: 9vmin;
 
   --fieldSize-M: calc(var(--size-M) * 1.4);
+
   --buttonSize-M: calc(var(--size-M) * 0.9);
+  --buttonSize-L: calc(var(--size-L) * 0.9);
+
   --iconSize-XS: calc(var(--size-M) * 0.6);
   --iconSize-S: calc(var(--size-M) * 0.75);
   --iconSize-M: var(--size-M);
@@ -55,18 +63,13 @@ body {
 }
 
 .--size-md {
-
   --footerHeight: 50vmin;
 
   --fontSize-S: 2vmin;
-  --lineHeight-S: 2.6vmin;
   --listHeight-S: 3.1vmin;
   --fontSize-M: 2.5vmin;
-  --lineHeight-M: 3.1vmin;
   --fontSize-L: 5.6vmin;
-  --lineHeight-L: 6.1vmin;
   --fontSize-XL: 9.6vmin;
-  --lineHeight-XL: 8.6vmin;
 
   --size-XS: 1vmin;
   --size-S: 2vmin;
@@ -80,15 +83,11 @@ body {
   --footerHeight: 150vmin;
 
   --fontSize-S: 4vmin;
-  --lineHeight-S: 5.4vmin;
   --listHeight-S: 5.5vmin;
   --fontSize-M: 5vmin;
-  --lineHeight-M: 6vmin;
   --fontSize-L: 7vmin;
-  --lineHeight-L: 8.3vmin;
   --fontSize-XL: 11vmin;
-  --lineHeight-XL: 10vmin;
-
+  
   --size-XS: 1.5vmin;
   --size-S: 2vmin;
   --size-M: 5vmin;
@@ -234,6 +233,12 @@ body[data-lang="it"] .langOption:not(.it):not(.all) {
   display: none;
 }
 
+.langOption.fr,
+.langOption.de,
+.langOption.it {
+  position: initial;
+}
+
 /*  Elements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -311,12 +316,14 @@ ul > .dash::before {
   flex-grow: 1;
 }
 
-.textButton:hover,
-.textButton:focus {
+.textButton {
+  font-family: FeixenSansEdgy;
   border-bottom: var(--borderFull) solid currentColor;
   margin: calc(var(--borderFull) * -1) 0;
-  box-sizing: border-box;
-  outline: none;
+}
+
+.textButton:focus {
+  outline: var(--borderFull) solid currentColor;
 }
 
 .line {

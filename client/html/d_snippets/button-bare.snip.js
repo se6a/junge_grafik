@@ -8,12 +8,15 @@ module.exports = ({
   onclick,
   href,
   onsubmit,
-  icon
+  icon,
+  attr,
+  size = "M"
 }) => {
   const tag = type === "link" ? "a" : "button";
 
+  size = `--${size}`;
   id = id ? `id="${id}"` : "";
-  classes = classes || "";
+  classes = (`${classes} ` || "") + size;
   icon = icon || "";
   href = href ? `href="${href}"` : "";
   onclick = onclick ? e.onclick(onclick) : "";
@@ -24,6 +27,7 @@ module.exports = ({
       ${id}
       class="button ${classes}"
       type=${type}
+      ${attr}
       ${href}
       ${onclick}
       ${onsubmit}
@@ -34,7 +38,8 @@ module.exports = ({
   `;
 
   const css = /*css*/`
-    .button {
+    .button:not(.unstyled) {
+      font-family: FeixenSansEdgy;
       position: relative;
       padding: 0 var(--size-S);
       width: 100%;
@@ -45,15 +50,6 @@ module.exports = ({
       transition: background-color 200ms;
       border: var(--borderFull) solid var(--darkViolet);
       cursor: pointer;
-    }
-
-    .button.unstyled {
-      background-color: transparent;
-      outline: 1px;
-      border: none;
-      padding: 0;
-      width: auto;
-      height: auto;
     }
 
     .button .label {

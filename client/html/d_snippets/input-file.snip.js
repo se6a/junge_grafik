@@ -93,6 +93,7 @@ module.exports = ({
       align-items: center;
       border: var(--borderFull) solid currentColor;
       border-radius: var(--size-M);
+      background-color: var(--green);
       height: var(--size-M);
       padding-left: var(--size-S);
       transition: color 200ms ease, background-color 200ms ease;

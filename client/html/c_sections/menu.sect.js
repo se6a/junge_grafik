@@ -6,25 +6,29 @@ module.exports = () => {
       ${ButtonUnderlined({
         label: { all: "Submit!" },
         type: "link",
-        href: "/submit"
+        href: "/submit",
+        size: "XL"
       })}
 
       ${ButtonUnderlined({
         label: { all: "Award" },
         type: "link",
-        href: "/award"
+        href: "/award",
+        size: "XL"
       })}
 
       ${ButtonUnderlined({
         label: { all: "Association" },
         type: "link",
-        href: "/association"
+        href: "/association",
+        size: "XL"
       })}
 
       ${ButtonUnderlined({
         label: { all: "Contact" },
         type: "link",
-        href: "/contact"
+        href: "/contact",
+        size: "XL"
       })}
     </section>
   `;
@@ -44,6 +48,23 @@ module.exports = () => {
     .MENU.box {
       padding-left: 0;
       padding-right: 0;
+    }
+
+    .MENU .button.UnderlinedButton {
+      display: block;
+      height: auto;
+      width: 100%;
+      padding: var(--size-M) 0 0 0;
+      margin: 0;
+    }
+
+    .MENU .button.UnderlinedButton .line {
+      visibility: visible;
+    }
+
+    .MENU .button.UnderlinedButton:hover,
+    .MENU .button.UnderlinedButton:focus {
+      background-color: var(--white);
     }
 
     .MENU .textUnderlined .text {

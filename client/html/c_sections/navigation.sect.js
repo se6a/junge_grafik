@@ -51,7 +51,7 @@ module.exports = () => {
       font-family: FeixenSansEdgy;
     }
 
-    .NAVIGATION > .button {
+    .HEADER .NAVIGATION > .button {
       border-width: var(--borderHalf);
     }
 

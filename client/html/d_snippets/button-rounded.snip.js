@@ -16,9 +16,22 @@ module.exports = (button) => {
   const css = /*css*/`
     .button.RoundedButton {
       width: auto;
+      background-color: white;
+    }
+
+    .--S.button.RoundedButton {
+      border-radius: calc(var(--buttonSize-S) / 2);
+      height: var(--buttonSize-S);
+    }
+
+    .--M.button.RoundedButton {
       border-radius: calc(var(--buttonSize-M) / 2);
       height: var(--buttonSize-M);
-      background-color: white;
+    }
+
+    .--L.button.RoundedButton {
+      border-radius: calc(var(--buttonSize-L) / 2);
+      height: var(--buttonSize-L);
     }
 
     .button.RoundedButton:hover {

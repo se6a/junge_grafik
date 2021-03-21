@@ -11,16 +11,16 @@ module.exports = () => {
       <fieldset class="formFieldGroup">
         <div class="formField Language">
           ${Select({
+            label: {
+              all: "Language"
+            },
+            name: "language",
             options: [
               { id: "fr", all: "French" },
               { id: "de", all: "German" },
               { id: "it", all: "Italian" }
             ],
-            required: true,
-            label: {
-              all: "Language"
-            },
-            name: "language"
+            required: true
           })}
         </div>
       </fieldset>

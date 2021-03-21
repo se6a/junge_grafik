@@ -24,16 +24,21 @@ module.exports = (data) => {
       position: initial;
     }
 
-    body[data-lang="fr"] .textButton.fr,
-    body[data-lang="de"] .textButton.de,
-    body[data-lang="it"] .textButton.it {
+    .VIEW.Award .textButton {
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    body[data-lang="fr"] .VIEW.Award .textButton.fr,
+    body[data-lang="de"] .VIEW.Award .textButton.de,
+    body[data-lang="it"] .VIEW.Award .textButton.it {
       border-bottom: var(--borderFull) solid currentColor;
       margin: calc(var(--borderFull) * -1) 0;
     }
 
-    body[data-lang="fr"] .textButton:not(.fr),
-    body[data-lang="de"] .textButton:not(.de),
-    body[data-lang="it"] .textButton:not(.it) {
+    body[data-lang="fr"] .VIEW.Award .textButton:not(.fr):not(:hover),
+    body[data-lang="de"] .VIEW.Award .textButton:not(.de):not(:hover),
+    body[data-lang="it"] .VIEW.Award .textButton:not(.it):not(:hover) {
       border-bottom: 0;
       margin: 0;
     }

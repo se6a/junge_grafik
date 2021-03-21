@@ -3,7 +3,7 @@ const Underlined = getSnippet("text-underlined");
 
 module.exports = (button) => {
   const label = button.label instanceof Object
-              ? lang`${button.label}`
+              ? lang`<span>${button.label}</span>`
               : button.label;
   button.label = Underlined(label);
   button.classes = button.classes
@@ -13,28 +13,50 @@ module.exports = (button) => {
   const html = ["", BareButton(button), ""];
 
   const css = /*css*/`
-    .UnderlinedButton {
-      display: block;
-      height: auto;
-      width: 100%;
+    .button.UnderlinedButton {
       border: none;
+      padding: 0;
+      display: inline-flex;
+      width: auto;
+      vertical-align: top;
+      margin: calc(1em / 10.5) 0;
+    }
+
+    .--S.UnderlinedButton {
+      font-size: var(--fontSize-S);
+      line-height: var(--lineHeight-S);
+    }
+
+    .--M.UnderlinedButton {
+      font-size: var(--fontSize-M);
+      line-height: var(--lineHeight-M);
+    }
+
+    .--L.UnderlinedButton {
+      font-size: var(--fontSize-L);
+      line-height: var(--lineHeight-L);
+    }
+
+    .--XL.UnderlinedButton {
       font-size: var(--fontSize-XL);
       line-height: var(--lineHeight-XL);
-      padding: var(--size-M) 0 0 0;
     }
 
-    .UnderlinedButton .text {
-      padding: var(--size-M);
+    .button.UnderlinedButton .line {
+      visibility: hidden;
     }
 
-    .button.UnderlinedButton:hover {
-      background-color: var(--white);
+    .button.UnderlinedButton:hover,
+    .button.UnderlinedButton:focus {
+      background-color: transparent;
       color: var(--colorKey);
     }
 
-    .UnderlinedButton:focus {
-      z-index: 10;
+    .button.UnderlinedButton:hover .line,
+    .button.UnderlinedButton:focus .line {
+      visibility: visible;
     }
+
   `;
 
   return ["button-underlined.snip", html, css];

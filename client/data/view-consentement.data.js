@@ -1,6 +1,6 @@
 module.exports = {
   meta: {
-    title: "Data privacy",
+    title: "Consentement",
     description: "",
     indexed: false
   },

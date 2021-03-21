@@ -243,24 +243,19 @@ global.lang = (tag, texts) => {
   let html = "";
 
   if (texts) {
-    if (texts.all) {
-      html = tag[0] + texts.all + tag[1];
-    }
-    else {
-      const languages = Object.keys(texts);
-      const tag_0 = tag[0].split(">")[0];
-      // if tag[0] = <li>, then tag_0 = <li
+    const languages = Object.keys(texts);
+    const tag_0 = tag[0].split(">")[0];
+    // if tag[0] = <li>, then tag_0 = <li
 
-      languages.forEach((_lang) => {
-        if (["fr", "de", "it"].includes(_lang)) {
-          html += `
-            ${tag_0} class="langOption ${_lang}" lang="${_lang}">
-              ${texts[_lang]}
-            ${tag[1]}
-          `;
-        }
-      });
-    }
+    languages.forEach((_lang) => {
+      if (["fr", "de", "it", "all"].includes(_lang)) {
+        html += `
+          ${tag_0} class="langOption ${_lang}" lang="${_lang}">
+            ${texts[_lang]}
+          ${tag[1]}
+        `;
+      }
+    });
   }
 
   else {

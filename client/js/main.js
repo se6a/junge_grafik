@@ -164,8 +164,12 @@ function showContacts() {
     $contacts.forEach((_$contact) => {
       const _cypher = JSON.parse(_$contact.dataset.contact);
       const _decoded = easyDecode(_cypher);
+      const _$textbox =  _$contact.querySelector(".text")
+                     || _$contact.querySelector(".label")
+                     || _$contact;
+
       _$contact.setAttribute("href", `mailto:${_decoded}`);
-      _$contact.innerHTML = _decoded;
+      _$textbox.innerHTML = _decoded;
     });
   }, 50);
 }

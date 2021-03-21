@@ -46,7 +46,7 @@ module.exports = (data) => {
             content: `
                 <span>Sponsorship</span>
                 <span>
-                  <a class="link contacttextButton" data-contact="${easyEncode("remo.stahl@jungegrafik.ch")}">
+                  <a class="link contactLink" data-contact="${easyEncode("remo.stahl@jungegrafik.ch")}">
                     contact
                   </a>
                 </span>

@@ -1,7 +1,8 @@
-const Form            = getJs("form");
-const InputCheckbox   = getSnippet("input-checkbox");
-const RoundedButton   = getSnippet("button-rounded");
-const UnderlinedMulti = getSnippet("text-underlined-multiline");
+const Form             = getJs("form");
+const InputCheckbox    = getSnippet("input-checkbox");
+const RoundedButton    = getSnippet("button-rounded");
+const UnderlinedMulti  = getSnippet("text-underlined-multiline");
+const ButtonUnderlined = getSnippet("button-underlined");
 
 module.exports = (data) => {
   const html = splitTemp/*html*/`
@@ -17,7 +18,7 @@ module.exports = (data) => {
           <h1>
             ${UnderlinedMulti({
               fr: "Données personnelles",
-              de: "Personenangaben",
+              de: "Personalien",
               it: "Dati personali"
             })}
           </h1>
@@ -30,7 +31,11 @@ module.exports = (data) => {
       <section class="formSegment Project">
         <header>
           <h1>
-            ${UnderlinedMulti("Projekt")}
+            ${UnderlinedMulti({
+              fr: "Données personnelles",
+              de: "Détails du projet",
+              it: "Indicazioni per il progetto"
+            })}
           </h1>
         </header>
         <div class="formContent">
@@ -39,19 +44,66 @@ module.exports = (data) => {
       </section>
 
       <section class="formSegment Submit">
-        <fieldset class="formFieldGroup ProjectWebsite">
+        <fieldset class="formFieldGroup oneColumn">
           ${InputCheckbox({
             label: {
-              de: "Ich habe alle Felder überprüft.",
-              fr: "fr",
-              it: "it"
+              fr: "J’ai rempli tous les champs avec exactitude et j’ai vérifié mes renseignements.",
+              de: "Ich habe alle Felder wahrheitsgetreu ausgefüllt und meine Angaben überprüft.",
+              it: "Ho compilato tutti i campi in modo veritiero e ho controllato i miei dati."
+            },
+            required: true
+          })}
+
+          ${InputCheckbox({
+            label: {
+              fr: `
+                Je déclare avoir lu, compris et accepté les
+                <a class="Link textButton" href="/consentement" target="_blanc">
+                  conditions de déclaration
+                </a>
+                d’accord.
+                Je donne par la présente mon accord pour que toutes les images et les textes de mon projet soient publiés sur tous les canaux de communication de « Jeune Graphisme ».
+              `,
+              de: `
+                Ich habe die
+                <a class="Link textButton" href="/consentement" target="_blanc">
+                  Einverständniserklärung
+                </a>
+                gelesen und akzeptiere die Bedingungen. 
+                Hiermit gebe ich mein Einverständnis, dass alle Bilder und Texte meines Projekts auf allen Kanälen der Junge Grafik publiziert werden dürfen.
+              `,
+              it: `
+                
+                Ho letto il
+                <a class="Link textButton" href="/consentement" target="_blanc">
+                  modulo di consenso
+                </a>
+                e accetto le condizioni.
+                Do il mio consenso affinché tutte le immagini e i testi del mio progetto possano essere pubblicati su tutti i canali di Giovane Grafica.
+              `
             },
             required: true
           })}
         </fieldset>
 
         <span class="message error">
-          Etwas ist schief gelaufen!
+          <span class="langOption fr">
+            Quelque chose n’a pas fonctionné. Veuillez nous contacter si l’envoi échoue lors d’un nouvel essai :
+          </span>
+          <span class="langOption de">
+            Etwas ist schiefgelaufen. Melde dich bitte bei uns, falls die Einsendung beim zweiten Mal wieder nicht funktioniert:
+          </span>
+          <span class="langOption it">
+            Qualcosa è andato storto, riprova. Se al secondo tentativo non funziona ti preghiamo di metterti in contatto direttamente con noi:
+          </span>
+          <span>
+              ${ButtonUnderlined({
+                classes: "Contact contactLink",
+                attr: `data-contact="${easyEncode("info@jungegrafik.ch")}"`,
+                label: "contact",
+                size: "L"
+              })}
+            </span>
         </span>
 
         <fieldset class="formFieldGroup">
@@ -61,19 +113,39 @@ module.exports = (data) => {
               onclick: "validateForm(this, event)",
               classes: "Submit",
               label: {
+                fr: `
+                  <span class="initial">
+                    Envoyer le projet \u2192
+                  </span>
+                  <span class="sending">
+                    Projet envoyé …
+                  </span>
+                  <span class="error">
+                    Essayer à nouveau \u2192
+                  </span>
+                `,
                 de: `
                   <span class="initial">
                     Projekt abschicken \u2192
                   </span>
                   <span class="sending">
-                    Wird gesendet...
+                    Wird gesendet …
                   </span>
                   <span class="error">
-                    Nochmals versuchen?
+                    Nochmal versuchen \u2192
                   </span>
                 `,
-                fr: "fr",
-                it: "it"
+                it: `
+                  <span class="initial">
+                    Inviare il progetto \u2192
+                  </span>
+                  <span class="sending">
+                    Invio …
+                  </span>
+                  <span class="error">
+                    Prova di nuovo \u2192
+                  </span>
+                `
               }
             })}
           </div>
@@ -81,6 +153,9 @@ module.exports = (data) => {
       </section>
 
     </form>
+
+    <section>
+    </section>
   `;
 
   const css = /*css*/`
@@ -94,19 +169,6 @@ module.exports = (data) => {
 
     .VIEW.Submit .formSegment.Submit {
       z-index: 10;
-    }
-
-    body[data-lang="fr"] .textButton:not(.fr),
-    body[data-lang="de"] .textButton:not(.de),
-    body[data-lang="it"] .textButton:not(.it) {
-      border-bottom: 0;
-      margin: 0;
-    }
-
-    .langOption.fr,
-    .langOption.de,
-    .langOption.it {
-      position: initial;
     }
 
     .Submit .button .initial,
@@ -139,7 +201,7 @@ module.exports = (data) => {
 
     @media screen and (max-width: 1024px) {
 
-      .Submit .formFieldGroup {
+      .Submit .formFieldGroup.threeColumns {
         grid-auto-flow: row;
         grid-template-columns: 1fr 1fr;
       }
@@ -151,7 +213,8 @@ module.exports = (data) => {
     }
 
     @media screen and (max-width: 750px) {
-      .Submit .formFieldGroup {
+      .Submit .formFieldGroup.threeColumns,
+      .Submit .formFieldGroup.twoColumns {
         grid-template-columns: 1fr;
       }
     } 

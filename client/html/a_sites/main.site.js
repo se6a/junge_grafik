@@ -81,7 +81,7 @@ module.exports = async (data) => {
     }
 
     .mainSection.fullpage {
-      padding: var(--size-L) var(--size-S);
+      padding: var(--size-M) var(--size-S);
       border: var(--borderHalf) solid currentColor;
     }
 

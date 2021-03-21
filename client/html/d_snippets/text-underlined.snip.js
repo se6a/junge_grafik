@@ -18,7 +18,6 @@ module.exports = (text, classes = "") => {
       font-size: 1em;
       padding-top: 0.5em;
       line-height: 0;
-      margin-bottom: var(--borderHalf);
     }
     
     .textUnderlined .text {
