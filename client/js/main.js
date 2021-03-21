@@ -185,7 +185,7 @@ function setLanguage($container, $button) {
 }
 
 function scrollToTop() {
-  requestAnimationFrame(() => {
+  const raf = requestAnimationFrame(() => {
     const nextOffset = window.pageYOffset * 0.8;
 
     if (nextOffset > 2) {
@@ -196,4 +196,10 @@ function scrollToTop() {
       window.scrollTo(0, 0);
     }
   });
+
+  window.addEventListener(
+    "mousewheel",
+    () => cancelAnimationFrame(raf),
+    { once: true }
+  );
 }
