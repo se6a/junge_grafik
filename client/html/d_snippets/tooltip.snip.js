@@ -34,7 +34,7 @@ module.exports = (tooltip) => {
       color: var(--white);
       border: var(--borderFull) solid var(--colorKey);
       position: absolute;
-      padding: var(--size-M);
+      padding: var(--size-S);
       margin-top: var(--size-XS);
       left: 0;
       z-Index: 1000;
