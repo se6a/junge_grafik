@@ -183,3 +183,17 @@ function setLanguage($container, $button) {
     document.body.dataset.lang = lang;
   }
 }
+
+function scrollToTop() {
+  requestAnimationFrame(() => {
+    const nextOffset = window.pageYOffset * 0.8;
+
+    if (nextOffset > 2) {
+      window.scrollTo(0, nextOffset);
+      scrollToTop();
+    }
+    else {
+      window.scrollTo(0, 0);
+    }
+  });
+}

@@ -8,7 +8,7 @@ module.exports = () => {
       class="form"
       onsubmit="setFormLanguage(event)"
     >
-      <fieldset class="formFieldGroup">
+      <fieldset class="formFieldGroup threeColumns">
         <div class="formField Language">
           ${Select({
             label: {

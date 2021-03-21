@@ -29,6 +29,7 @@ function setFormLanguage(e) {
 
   else {
     const $ViewSubmit = document.querySelector(".VIEW.Submit");
+    scrollToTop();
 
     $ViewSubmit.lang = lang;
     document.body.dataset.lang = lang;
