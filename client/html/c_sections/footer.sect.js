@@ -1,5 +1,6 @@
-const Rows           = getSection("rows");
-const NewsletterForm = getSection("form-newsletter");
+const Rows             = getSection("rows");
+const NewsletterForm   = getSection("form-newsletter");
+const UnderlinedButton = getSnippet("button-underlined");
 
 module.exports = () => {
   const html = splitTemp/*html*/`
@@ -34,6 +35,7 @@ module.exports = () => {
             title: "Network",
             content: /*html*/`
               <ul>
+
                 <li><a class="textButton" target="_blank" href="https://sgv.ch">
                   SGV Schweizer Grafiker Verband
                 </a></li>

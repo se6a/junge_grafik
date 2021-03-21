@@ -102,6 +102,15 @@ module.exports = (data) => {
       display: flex;
     }
 
+    .VIEW.Submit .Checkbox .textButton {
+      border-bottom: var(--borderFull) solid currentColor;
+      margin: calc(var(--borderFull) * -1) 0;
+    }
+
+    .VIEW.Submit .Checkbox .textButton:focus {
+      outline: var(--borderFull) solid currentColor;
+    }
+
     .VIEW.Submit[lang=""] .mainSection.ProjectRegistration,
     .VIEW.Submit[lang=""] .mainSection.Support {
       display: none;
@@ -120,7 +129,6 @@ module.exports = (data) => {
       padding-left: var(--size-M);
       position: relative;
     }
-
 
     .VIEW.Submit .Support .icon:not(.astrix) {
       font-size: var(--fontSize-M);

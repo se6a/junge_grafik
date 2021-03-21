@@ -318,12 +318,13 @@ ul > .dash::before {
 
 .textButton {
   font-family: FeixenSansEdgy;
-  border-bottom: var(--borderFull) solid currentColor;
-  margin: calc(var(--borderFull) * -1) 0;
 }
 
+.textButton:hover,
 .textButton:focus {
-  outline: var(--borderFull) solid currentColor;
+  outline: 0;
+  border-bottom: var(--borderFull) solid currentColor;
+  margin: calc(var(--borderFull) * -1) 0;
 }
 
 .line {
