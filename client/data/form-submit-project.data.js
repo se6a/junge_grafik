@@ -332,6 +332,7 @@ module.exports = [
         fr: "Enseignant·e·s, formateurs/formatrices",
         it: "Docenti / Formatori"
       },
+      required: true,
       tooltip: {
         de: `
           <ul>

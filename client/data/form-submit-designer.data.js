@@ -52,8 +52,8 @@ module.exports = [
       label: { de: "Geschlecht", fr: "Genre", it: "Sesso" },
       type: "select-1",
       options: [
-        { id:"440", de: "Weiblich", fr: "Femme", it: "Femminile" },
-        { id:"441", de: "Männlich", fr: "Homme", it: "Maschile" },
+        { id:"441", de: "Weiblich", fr: "Femme", it: "Femminile" },
+        { id:"440", de: "Männlich", fr: "Homme", it: "Maschile" },
         { id:"682", de: "Keine Angabe", fr: "Non spécifié", it: "Nessuna indicazione" }
       ],
       required: true
