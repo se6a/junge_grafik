@@ -254,7 +254,8 @@ module.exports = {
           type: "card-with-image",
           image: {
             src: "/logos/logo-sgv.png",
-            alt: "Logo of SGV"
+            alt: "Logo of SGV",
+            classes: "logo"
           },
           title: `
               <span>Patronage:</span>
@@ -270,7 +271,8 @@ module.exports = {
           type: "card-with-image",
           image: {
             src: "/logos/logo-sgd.png",
-            alt: "Logo of SGD"
+            alt: "Logo of SGD",
+            classes: "logo"
           },
           title: `
               <span>Partner:</span>
@@ -284,7 +286,8 @@ module.exports = {
           type: "card-with-image",
           image: {
             src: "/logos/logo-weltformat.png",
-            alt: "Logo of Weltformat"
+            alt: "Logo of Weltformat",
+            classes: "logo"
           },
           title: `
               <span>Partner:</span>
@@ -300,7 +303,8 @@ module.exports = {
           type: "card-with-image",
           image: {
             src: "/logos/logo-ronorp.png",
-            alt: "Logo of Ronorp"
+            alt: "Logo of Ronorp",
+            classes: "logo"
           },
           title: `
             <span>Media partner:</span>
@@ -324,7 +328,8 @@ module.exports = {
           title: "Engelberger Druck AG",
           image: {
             src: "/logos/logo-engelberger_druck.png",
-            alt: "Logo of Sponsor Engelberg Druck"
+            alt: "Logo of Sponsor Engelberg Druck",
+            classes: "logo"
           },
           content: `
             <a class="textButton" href="https://engelbergerdruck.ch" target="_blank">engelbergerdruck.ch</a>
@@ -335,7 +340,8 @@ module.exports = {
           title: "We Talents",
           image: {
             src: "/logos/logo-wetalents.png",
-            alt: "Logo of Sponsor We-Talents"
+            alt: "Logo of Sponsor We-Talents",
+            classes: "logo"
           },
           content: `
             <a class="textButton" href="https://wetalents.net" target="_blank">wetalents.net</a>
@@ -353,21 +359,24 @@ module.exports = {
           type: "image-box",
           image: {
             src: "/logos/logo-an_der_reuss.png",
-            alt: "Logo of Sponsor An Der Reuss"
+            alt: "Logo of Sponsor An Der Reuss",
+            classes: "logo"
           }
         },
         {
           type: "image-box",
           image: {
             src: "/logos/logo-studio_feixen.png",
-            alt: "Logo of Sponsor Studio Feixen"
+            alt: "Logo of Sponsor Studio Feixen",
+            classes: "logo"
           }
         },
         {
           type: "image-box",
           image: {
             src: "/logos/logo-sonderegger.png",
-            alt: "Logo of Sponsor Sonderegger"
+            alt: "Logo of Sponsor Sonderegger",
+            classes: "logo"
           }
         }
       ]
@@ -382,7 +391,8 @@ module.exports = {
           type: "card-with-image",
           image: {
             src: "/logos/logo-josef_mueller_stiftung.png",
-            alt: "Logo of the Josef Müller Foundation"
+            alt: "Logo of the Josef Müller Foundation",
+            classes: "logo"
           },
           title: `Josef Müller Stiftung Muri`,
           content: `
@@ -395,7 +405,8 @@ module.exports = {
           type: "card-with-image",
           image: {
             src: "/logos/logo-huser_oesch_stiftung.png",
-            alt: "Logo of the Huser Oesch Foundation"
+            alt: "Logo of the Huser Oesch Foundation",
+            classes: "logo"
           },
           title: `
             <span>Kurt und Silvia</span>
@@ -407,7 +418,8 @@ module.exports = {
           type: "card-with-image",
           image: {
             src: "/logos/logo-casimir_eigensatz_stiftung.png",
-            alt: "Logo of the Casimir Eigensatz Foundation"
+            alt: "Logo of the Casimir Eigensatz Foundation",
+            classes: "logo"
           },
           title: `Casimir Eigensatz Stiftung`,
           content: ``

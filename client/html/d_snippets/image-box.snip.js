@@ -1,10 +1,17 @@
-module.exports = ({ image }) => {
+module.exports = ({
+  image
+}) => {
+  const {
+    src = "",
+    alt = "no description",
+    classes = ""
+  } = image;
+
   const html = splitTemp/*html*/`
-    <figure class="ImageBox box">
-      <div class="colorOverlay"></div>
+    <figure class="ImageBox box ${classes}">
       <picture>
-        <source media="" srcset="./media/${image?.src}">
-        <img class="image" src="./media/${image?.src}" alt="${image?.alt}">
+        <source media="" srcset="./media/${src}">
+        <img class="image" src="./media/${src}" alt="${alt}">
       </picture>
     </figure>
   `;
@@ -29,14 +36,19 @@ module.exports = ({ image }) => {
       height: auto;
     }
 
-    .ImageBox .colorOverlay {
+    .ImageBox.box::before {
+      content: "";
       width: 100%;
       height: 100%;
       background-color: var(--colorKey);
       position: absolute;
+      mix-blend-mode: screen;
       z-index: 1;
-      mix-blend-mode: lighten;
       pointer-events: none;
+    }
+
+    .ImageBox.box.logo::before {
+      mix-blend-mode: lighten;
     }
   `;
 
