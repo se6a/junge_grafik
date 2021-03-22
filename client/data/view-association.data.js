@@ -72,7 +72,11 @@ module.exports = {
             <div>Remit: Foundations, Co project manager</div>
           `,
           image: {
-            src: "assoc/jg_board-loana_boppart.png",
+            src: {
+              sm: "assoc/jg_board-loana_boppart-sm.jpg",
+              md: "assoc/jg_board-loana_boppart-md.jpg",
+              lg: "assoc/jg_board-loana_boppart-lg.jpg"
+            },
             alt: "Portrait of Loana Boppart"
           },
           content: `<a class="textButton" href="http://studiolametta.ch" target="_blank">studiolametta.ch</a>`
@@ -84,7 +88,11 @@ module.exports = {
             <div>Remit: Jury, Printed communication materials</div>
           `,
         image: {
-          src: "assoc/jg_board-meret_fischli.png",
+          src: {
+            sm: "assoc/jg_board-meret_fischli-sm.jpg",
+            md: "assoc/jg_board-meret_fischli-md.jpg",
+            lg: "assoc/jg_board-meret_fischli-lg.jpg"
+          },
           alt: "Portrait of Meret Fischli"
         },
           content: `<a class="textButton" href="https://meretfischli.ch" target="_blank">meretfischli.ch</a>`
@@ -96,7 +104,11 @@ module.exports = {
             <div>Remit: Sponsorship</div>
           `,
           image: {
-            src: "assoc/jg_board-remo_stahl.png",
+            src: {
+              sm: "assoc/jg_board-remo_stahl-sm.jpg",
+              md: "assoc/jg_board-remo_stahl-md.jpg",
+              lg: "assoc/jg_board-remo_stahl-lg.jpg"
+            },
             alt: "Portrait of Remo Stahl"
           },
           content: `<a class="textButton" href="https://www.maison.ooo/" target="_blank">maison.ooo</a>`
@@ -108,7 +120,11 @@ module.exports = {
             <div>Remit: Digital communication, Website</div>
           `,
           image: {
-            src: "assoc/jg_board-jonas_keusch.png",
+            src: {
+              sm: "assoc/jg_board-jonas_keusch-sm.jpg",
+              md: "assoc/jg_board-jonas_keusch-md.jpg",
+              lg: "assoc/jg_board-jonas_keusch-lg.jpg"
+            },
             alt: "Portrait of Jonas Keusch"
           },
           content: `<a class="textButton" href="http://studiokeusch.ch" target="_blank">studiokeusch.ch</a>`
@@ -120,7 +136,11 @@ module.exports = {
             <div>Remit: Exhibition</div>
           `,
           image: {
-            src: "assoc/jg_board-nina_ruppen.png",
+            src: {
+              sm: "assoc/jg_board-nina_ruppen-sm.jpg",
+              md: "assoc/jg_board-nina_ruppen-md.jpg",
+              lg: "assoc/jg_board-nina_ruppen-lg.jpg"
+            },
             alt: "Portrait of Nina Ruppen"
           },
           content: `<a class="textButton" href="https://ninaruppen.ch" target="_blank">ninaruppen.ch</a>`
@@ -132,7 +152,11 @@ module.exports = {
             <div>Remit: Social Media, Events</div>
           `,
           image: {
-            src: "assoc/jg_board-thomas_steiner.png",
+            src: {
+              sm: "assoc/jg_board-thomas_steiner-sm.jpg",
+              md: "assoc/jg_board-thomas_steiner-md.jpg",
+              lg: "assoc/jg_board-thomas_steiner-lg.jpg"
+            },
             alt: "Portrait of Thomas Steiner"
           },
           content: `<a class="textButton" href="https://steiner-grafik.ch" target="_blank">steiner-grafik.ch</a>`
@@ -144,7 +168,11 @@ module.exports = {
             <div>Remit: Text</div>
           `,
           image: {
-            src: "assoc/jg_board-rainer_brenner.png",
+            src: {
+              sm: "assoc/jg_board-rainer_brenner-sm.jpg",
+              md: "assoc/jg_board-rainer_brenner-md.jpg",
+              lg: "assoc/jg_board-rainer_brenner-lg.jpg"
+            },
             alt: "Portrait of Rainer Brenner"
           },
           content: `<a class="textButton" href="https://rainerbrenner.ch" target="_blank">rainerbrenner.ch</a>`
@@ -156,7 +184,11 @@ module.exports = {
             <div>Remit: Website Backend</div>
           `,
           image: {
-            src: "assoc/jg_board-moritz_profitlich.png",
+            src: {
+              sm: "assoc/jg_board-moritz_profitlich-sm.jpg",
+              md: "assoc/jg_board-moritz_profitlich-md.jpg",
+              lg: "assoc/jg_board-moritz_profitlich-lg.jpg"
+            },
             alt: "Portrait of Moritz Profitlich"
           },
           content: `<a class="textButton" href="https://profitlich.ch" target="_blank">profitlich.ch</a>`
@@ -169,7 +201,11 @@ module.exports = {
             <div>Remit: Accounting, Administration</div>
           `,
           image: {
-            src: "assoc/jg_board-bettina_klauser.png",
+            src: {
+              sm: "assoc/jg_board-bettina_klauser-sm.jpg",
+              md: "assoc/jg_board-bettina_klauser-md.jpg",
+              lg: "assoc/jg_board-bettina_klauser-lg.jpg"
+            },
             alt: "Portrait of Bettina Klauser"
           },
           content: ``
@@ -181,7 +217,11 @@ module.exports = {
             <div>Remit: Contact with schools, Co project manager</div>
           `,
           image: {
-            src: "assoc/jg_board-tobias_klauser.png",
+            src: {
+              sm: "assoc/jg_board-tobias_klauser-sm.jpg",
+              md: "assoc/jg_board-tobias_klauser-md.jpg",
+              lg: "assoc/jg_board-tobias_klauser-lg.jpg"
+            },
             alt: "Portrait of Tobias Klauser"
           },
           content: `<a class="textButton" href="https://fachklassegrafik.ch" target="_blank">fachklassegrafik.ch</a>`
@@ -193,7 +233,11 @@ module.exports = {
             <div>Remit: Sponsoring in kind</div>
           `,
           image: {
-            src: "assoc/jg_board-philipp_schubiger.png",
+            src: {
+              sm: "assoc/jg_board-philipp_schubiger-sm.jpg",
+              md: "assoc/jg_board-philipp_schubiger-md.jpg",
+              lg: "assoc/jg_board-philipp_schubiger-lg.jpg"
+            },
             alt: "Portrait of Philipp Schubiger"
           },
           content: `<a class="textButton" href="https://philipp-schubiger.ch" target="_blank">philipp-schubiger.ch</a>`

@@ -1,3 +1,24 @@
+function Sources(src) {
+  let source = "";
+  const media = {
+    sm: "max-width: 599px",
+    md: "min-width: 600px",
+    lg: "min-width: 1200px"
+  };
+
+  if (src instanceof Object) {
+    for (const _size in src) {
+      source += `<source media="(${media[_size]})" srcset="./media/${src[_size]}">`;
+    }
+  }
+
+  else {
+    source = `<source media="" srcset="./media/${src}">`;
+  }
+
+  return source;
+}
+
 module.exports = ({
   image
 }) => {
@@ -10,8 +31,8 @@ module.exports = ({
   const html = splitTemp/*html*/`
     <figure class="ImageBox box ${classes}">
       <picture>
-        <source media="" srcset="./media/${src}">
-        <img class="image" src="./media/${src}" alt="${alt}">
+        ${Sources(src)}
+        <img class="image" alt="${alt}">
       </picture>
     </figure>
   `;
