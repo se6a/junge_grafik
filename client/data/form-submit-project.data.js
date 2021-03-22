@@ -63,17 +63,17 @@ module.exports = [
       tooltip: {
         de: `
           <ul>
-            <li class="dash">Gib deinem Projekt einen Titel. Falls deine Arbeit ausgezeichnet wird, so wird der Projekttitel auf der Website als auch in der Publikation erscheinen.</li>          
+            <li class="dash">Gib deinem Projekt einen Titel. Falls deine Arbeit ausgezeichnet wird, so wird der Projekttitel auf der Website als auch in der Publikation erscheinen.</li>
           </ul>
         `,
         fr: `
           <ul>
-            <li class="dash">Donnez un titre à ton projet. Si ton travail est récompensé, le titre du projet apparaîtra sur notre site web ainsi que dans la publication.</li>          
+            <li class="dash">Donnez un titre à ton projet. Si ton travail est récompensé, le titre du projet apparaîtra sur notre site web ainsi que dans la publication.</li>
           </ul>
         `,
         it: `
           <ul>
-            <li class="dash">Dai un titolo al tuo progetto. Se il tuo lavoro viene premiato, il titolo del progetto apparirà sul sito web e nella pubblicazione.</li>          
+            <li class="dash">Dai un titolo al tuo progetto. Se il tuo lavoro viene premiato, il titolo del progetto apparirà sul sito web e nella pubblicazione.</li>
           </ul>
         `
       }
@@ -125,17 +125,17 @@ module.exports = [
       tooltip: {
         de: `
           <ul>
-            <li class="dash">Wähle 1 bis 3 Tags, die zu deinem Projekt passen.</li>          
+            <li class="dash">Wähle 1 bis 3 Tags, die zu deinem Projekt passen.</li>
           </ul>
         `,
         fr: `
           <ul>
-            <li class="dash">Choisis 1 à 3 tags (mots-clés) qui correspondent à ton projet</li>          
+            <li class="dash">Choisis 1 à 3 tags (mots-clés) qui correspondent à ton projet</li>
           </ul>
         `,
         it: `
           <ul>
-            <li class="dash">Scegli da 1 a 3 tag che si adattano al tuo progetto.</li>          
+            <li class="dash">Scegli da 1 a 3 tag che si adattano al tuo progetto.</li>
           </ul>
         `
       }
@@ -205,17 +205,17 @@ module.exports = [
       tooltip: {
         de: `
           <ul>
-            <li class="dash">Nutze den Projektbeschrieb, um uns interessante Aspekte über die Aufgabenstellung, den Prozess und die Idee zu erzählen.</li>          
+            <li class="dash">Nutze den Projektbeschrieb, um uns interessante Aspekte über die Aufgabenstellung, den Prozess und die Idee zu erzählen.</li>
           </ul>
         `,
         fr: `
           <ul>
-            <li class="dash">Utilise cette description pour nous faire part d’aspects intéressants dans la donnée de base, le processus et l'idée de ton projet.</li>          
+            <li class="dash">Utilise cette description pour nous faire part d’aspects intéressants dans la donnée de base, le processus et l'idée de ton projet.</li>
           </ul>
         `,
         it: `
           <ul>
-            <li class="dash">Descrivi il progetto per raccontarci aspetti interessanti sul compito, il processo e l'idea.</li>          
+            <li class="dash">Descrivi il progetto per raccontarci aspetti interessanti sul compito, il processo e l'idea.</li>
           </ul>
         `
       }
@@ -235,8 +235,8 @@ module.exports = [
       type: "select-1",
       options: [
         { id: "683", de: "EFZ", fr: "CFC", it: "AFC" },
-        { id: "685", de: "HF", fr: "ES", it: "SSS" },
-        { id: "684", de: "FH", fr: "Bachelor Hes-So", it: "SUP" }
+        { id: "684", de: "FH", fr: "Bachelor Hes-So", it: "SUP" },
+        { id: "685", de: "HF", fr: "ES", it: "SSS" }
       ],
       required: true
     },
@@ -265,17 +265,17 @@ module.exports = [
       tooltip: {
         de: `
           <ul>
-            <li class="dash">In welcher Ausbildungsinstitution oder in welchem Lehrbetrieb ist dein Projekt entstanden?</li>          
+            <li class="dash">In welcher Ausbildungsinstitution oder in welchem Lehrbetrieb ist dein Projekt entstanden?</li>
           </ul>
         `,
         fr: `
           <ul>
-            <li class="dash">Dans quel établissement d'enseignement ou entreprise d’apprentissage ton projet a-t-il vu le jour ?</li>          
+            <li class="dash">Dans quel établissement d'enseignement ou entreprise d’apprentissage ton projet a-t-il vu le jour ?</li>
           </ul>
         `,
         it: `
           <ul>
-            <li class="dash">In quale scuola o azienda formatrice è stato realizzato il tuo progetto?</li>          
+            <li class="dash">In quale scuola o azienda formatrice è stato realizzato il tuo progetto?</li>
           </ul>
         `
       },
@@ -314,8 +314,8 @@ module.exports = [
         { id: "435", de: "Uri", fr: "Uri", it: "Uri" },
         { id: "436", de: "Waadt", fr: "Vaud", it: "Vaud" },
         { id: "437", de: "Wallis", fr: "Valais", it: "Vallese" },
-        { id: "439", de: "Zürich", fr: "Zug", it: "Zugo" },
-        { id: "438", de: "Zug", fr: "Zurich", it: "Zurigo" }
+        { id: "439", de: "Zürich", fr: "Zurich", it: "Zurigo" },
+        { id: "438", de: "Zug", fr: "Zug", it: "Zugo" }
       ],
       required: true
      }

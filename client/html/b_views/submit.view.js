@@ -9,15 +9,8 @@ module.exports = (data) => {
 
       ${HeaderView({
         title: "Project registration",
-        content: lang`
-            <span>
-              ${{
-                fr: "Tu peux t'inscrire ici pour participer et soumettre ton projet. Let’s go.",
-                de: "Hier kannst du dich zur Teilnahme registrieren und dein Projekt einreichen. Let’s go.",
-                it: "Qui puoi registrarti per partecipare e inoltrare il tuo progetto. Let’s go."
-              }}
-            </span>`
-        })}
+        content: "Register to take part in the competition and submit your graphic work. Get started here."
+      })}
 
       <article class="mainSection fullpage SelectLanguage">
         ${LanguageForm()}

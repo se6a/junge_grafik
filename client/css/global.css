@@ -88,10 +88,19 @@ body {
   --fontSize-M: 5vmin;
   --fontSize-L: 7vmin;
   --fontSize-XL: 11vmin;
+
+  --fieldSize-M: calc(var(--size-M) * 1.4);
+
+  --buttonSize-M: calc(var(--size-M) * 1.1);
+  --buttonSize-L: calc(var(--size-L) * 0.9);
+
+  --iconSize-XS: calc(var(--size-M) * 0.6);
+  --iconSize-S: calc(var(--size-M) * 0.9);
+  --iconSize-M: var(--size-M);
   
-  --size-XS: 1.5vmin;
-  --size-S: 2vmin;
-  --size-M: 5vmin;
+  --size-XS: 2vmin;
+  --size-S: 3vmin;
+  --size-M: 7vmin;
   --size-L: 10vmin;
   --size-XL: 18vmin;
 }
@@ -200,6 +209,26 @@ select:focus {
   outline: calc(var(--borderFocus) - var(--borderFull))
            solid
            currentColor;
+}
+
+input::placeholder {
+  color: var(--colorKey);
+  opacity: 1;
+}
+
+input::-ms-input-placeholder {
+  color: var(--colorKey);
+  opacity: 1;
+}
+
+input::-webkit-input-placeholder {
+  color: var(--colorKey);
+  opacity: 1;
+}
+
+input:-moz-placeholder {
+  color: var(--colorKey);
+  opacity: 1;
 }
 
 /*  Layout
