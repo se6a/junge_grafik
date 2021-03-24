@@ -39,10 +39,21 @@ function attachMediaQueryListener() {
       setDocumentSize(_size, _mediaQuery);
     }
 
-    _mediaQuery.addEventListener(
-      "change",
-      (q) => setDocumentSize(_size, q)
-    );
+    if (_mediaQuery.addEventListener) {
+      _mediaQuery.addEventListener(
+        "change",
+        (q) => setDocumentSize(_size, q)
+      );
+    }
+
+    // Safari Support:
+    else
+    if (_mediaQuery.addListener) {
+      _mediaQuery.addListener(
+        "change",
+        (q) => setDocumentSize(_size, q)
+      );
+    }
   }
 }
 
