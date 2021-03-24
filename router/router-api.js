@@ -169,8 +169,11 @@ async function sendFiles(req, res, next) {
 
   .then(async (rawRes) => {
     const body = await rawRes.json();
+    const errors = body.response.entry
+                    .map((_file) => _file._result)
+                    .filter((_result) => _result === "error");
 
-    if (body.response._result === "success") {
+    if (errors.length === 0) {
       next();
     }
 
@@ -208,8 +211,6 @@ async function triggerConfirmationEmail(req, res, next) {
   })
 
   .catch((error) => failed(res, req, "triggerConfirmationEmail", error));
-
-  res.sendStatus(500);
 }
 
 function fullfilled(res) {

@@ -134,10 +134,7 @@ function generalValidation($field) {
 
     returnValue = new Promise((resolve) => {
       const Observer = new MutationObserver((e) => {
-        console.log("mutated", e[0].target);
-
         if (! e[0].target.classList.contains("--invalid")) {
-          console.log("resolved");
           resolve();
         }
       });
@@ -168,7 +165,6 @@ function validateForm($submitButton, e) {
     $form.classList.add("--invalid");
     Promise.allSettled(invalides)
     .then(() => {
-      console.log("validate form again");
       validateForm($submitButton, null);
     });
   }
