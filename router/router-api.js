@@ -126,20 +126,17 @@ async function sendEntryForm(req, res, next) {
   )
 
   .then(async (rawRes) => {
-    const symphonyRes = await rawRes.json();
-    return symphonyRes.response;
-  })
+    const body = await rawRes.json();
 
-  .then((symphonyRes) => {
-    if (symphonyRes._result === "success") {
-      res.locals.entry.id = symphonyRes._id;
+    if (body.response._result === "success") {
+      res.locals.entry.id = body.response._id;
+      next();
     }
+
     else {
-      throw Error(symphonyRes.message.value);
+      throw Error(body.response.message.value);
     }
   })
-
-  .then(() => next())
 
   .catch((error) => failed(res, req, "sendEntryForm", error));
 }
@@ -161,7 +158,7 @@ function buildFileForm(req, res, next) {
 }
 
 async function sendFiles(req, res, next) {
-  const url = "https://api.jungegrafik.ch/symphony/api/entries/reprografien/?auth-token=02701d93";
+  const url = "https://api.jungegrafik.ch/symphony/api/entries/reprografien/?auth-token=02701d93&format=json";
 
   const options = {
     method: "POST",
@@ -170,7 +167,17 @@ async function sendFiles(req, res, next) {
 
   await fetch(url, options)
 
-  .then((symphRes) => next())
+  .then(async (rawRes) => {
+    const body = await rawRes.json();
+
+    if (body.response._result === "success") {
+      next();
+    }
+
+    else {
+      throw Error(body.response.message.value);
+    }
+  })
 
   .catch((error) => failed(res, req, "sendFiles", error));
 }
@@ -181,16 +188,28 @@ async function triggerConfirmationEmail(req, res, next) {
   formdata.append("action[einreichung-bestaetigung]", "Abschicken");
 
   await fetch(
-    "https://api.jungegrafik.ch/mailings/einreichung-bestaetigung/",
+    "https://api.jungegrafik.ch/mailings/einreichung-bestaetigung?format=json",
     {
       method: "POST",
       body: formdata
     }
   )
 
-  .then((symphRes) => fullfilled(res))
+  .then(async (rawRes) => {
+    const body = await rawRes.text();
+
+    if (body.includes("Einreichung: Bestätigung")) {
+      fullfilled(res);
+    }
+
+    else {
+      throw Error(body);
+    };
+  })
 
   .catch((error) => failed(res, req, "triggerConfirmationEmail", error));
+
+  res.sendStatus(500);
 }
 
 function fullfilled(res) {

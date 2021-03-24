@@ -31,10 +31,11 @@ window.addEventListener(
 
 function attachMediaQueryListener() {
   for (const _size in PAGE.sizes) {
-    const _mediaQuery = window.matchMedia(PAGE.sizes[_size]);
+    const _mediaQuery = window.matchMedia(`screen and ${PAGE.sizes[_size]}`);
 
-    if (_mediaQuery.matches)
+    if (_mediaQuery.matches) {
       setDocumentSize(_size, _mediaQuery);
+    }
 
     _mediaQuery.addEventListener(
       "change",
@@ -45,6 +46,7 @@ function attachMediaQueryListener() {
 
 function setDocumentSize(size, q) {
   if (q.matches) {
+    console.log("setDocumentSize");
     const newSize = `--size-${size}`;
     const lastSize = [...document.body.classList].filter(
       (_class) => _class.startsWith("--size"))[0];
