@@ -33,6 +33,8 @@ function attachMediaQueryListener() {
   for (const _size in PAGE.sizes) {
     const _mediaQuery = window.matchMedia(`screen and ${PAGE.sizes[_size]}`);
 
+    console.log(_mediaQuery);
+
     if (_mediaQuery.matches) {
       setDocumentSize(_size, _mediaQuery);
     }
