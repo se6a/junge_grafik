@@ -8,6 +8,7 @@ module.exports = ({
   tooltip,
   maxfiles = 1,
   minfiles = 1,
+  maxuploadsize = 50,
   accept
 }) => {
   required = required ? "--required" : "";
@@ -28,7 +29,7 @@ module.exports = ({
         ${Tooltip(tooltip)}
         <span class="selected">
           <span class="count">0</span>
-          <span class="max">/${maxfiles}</span>
+          <span class="max">/${maxuploadsize} mb</span>
         </span>
       </header>
 
@@ -41,8 +42,9 @@ module.exports = ({
             class="hiddenInput"
             type="file"
             name="file"
-            data-max=${maxfiles}
-            data-min=${minfiles}
+            data-maxfiles=${maxfiles}
+            data-minfiles=${minfiles}
+            data-maxuploadsize=${maxuploadsize}
             multiple
             ${required ? "required" : ""}
             ${accept}
@@ -54,6 +56,16 @@ module.exports = ({
             <span>
               ${{
                 de: "Du hast zu viele Bilder ausgewählt.</br>Überprüfe welche Dateien hochgeladen werden."
+              }}
+            </span>
+          `}
+        </span>
+
+        <span class="warning uploadSizeExceeded">
+          ${lang`
+            <span>
+              ${{
+                de: "Mindestens ein Bild wurde ignoriert, da es die maximale Upload Grösse überschreiten würde.</br>Überprüfe welche Dateien hochgeladen werden."
               }}
             </span>
           `}
@@ -97,6 +109,12 @@ module.exports = ({
       height: var(--size-M);
       padding-left: var(--size-S);
       transition: color 200ms ease, background-color 200ms ease;
+      max-width: calc(100% - var(--size-S));
+    }
+
+    .fileItem > .Filename {
+      white-space: nowrap;
+      overflow: hidden;
     }
 
     .fileItem > .button {
@@ -137,7 +155,8 @@ module.exports = ({
       width: 50%;
     }
 
-    .warning.tooManySelected {
+    .warning.tooManySelected,
+    .warning.uploadSizeExceeded {
       color: var(--violetBright);
       display: none;
       font-size: var(--fontSize-S);
@@ -145,7 +164,8 @@ module.exports = ({
       width: 100%;
     }
 
-    .Upload.inputBox.--tooManySelected .tooManySelected {
+    .Upload.inputBox.--tooManySelected .tooManySelected,
+    .Upload.inputBox.--uploadSizeExceeded .uploadSizeExceeded {
       display: block;
     }
   `;

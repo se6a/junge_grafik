@@ -203,21 +203,38 @@ const FileInput = function($formField) {
             .split(",")
             .map((_acc) => _acc.trim())
             .filter((_acc) => _acc !== ""),
-    max: $input.dataset.max,
-    min: $input.dataset.min,
+    maxFiles: $input.dataset.maxfiles,
+    minFiles: $input.dataset.minfiles,
+    maxUploadSize: parseInt($input.dataset.maxuploadsize) * 1000000,
     count: 0,
+    uploadSize: 0,
     hasMinimum: false,
 
     select() {
       this.removeWarning_tooManySelected();
+      this.removeWarning_uploadSizeExceeded();
 
       const newFiles = [...this.$input.files];
+      let uploadSize = this.uploadSize;
+      let fileCount = this.count;
 
       for (let i = 0; i < newFiles.length; i++) {
-        this.saveFileCount();
+        fileCount++;
 
-        if (this.count < this.max) {
-          const _file = newFiles[i];
+        if (fileCount > this.maxFiles) {
+          this.addWarning_tooManySelected();
+          break;
+        }
+
+        const _file = newFiles[i];
+        uploadSize += _file.size;
+
+        if (uploadSize > this.maxUploadSize) {
+          this.addWarning_uploadSizeExceeded();
+          break;
+        }
+
+        else {
           const _filename = _file.name;
           const [_type, _subtype] = _file.type.split("/");
 
@@ -233,14 +250,10 @@ const FileInput = function($formField) {
             }
           }
         }
-        else {
-          this.addWarning_tooManySelected();
-          break;
-        }
       }
 
       this.saveFileCount();
-      this.updateCount();
+      this.updateUploadSize();
       this.setState();
     },
 
@@ -249,8 +262,9 @@ const FileInput = function($formField) {
 
       delete this.selected[filename];
       this.saveFileCount();
-      this.updateCount();
+      this.updateUploadSize();
       this.removeWarning_tooManySelected();
+      this.removeWarning_uploadSizeExceeded();
       this.setState();
     },
 
@@ -280,11 +294,22 @@ const FileInput = function($formField) {
     },
 
     saveFileCount() {
-      this.count = Object.keys(this.selected).length;
+      let count = 0;
+      let uploadSize = 0;
+
+      for (const _file in this.selected) {
+        uploadSize += this.selected[_file].size;
+        count++;
+      }
+
+      this.count = count;
+      this.uploadSize = uploadSize;
+
+      console.log(count, `${Math.ceil(uploadSize / 1000000)} mb`);
     },
 
     setState() {
-      if (this.count >= this.min) {
+      if (this.count >= this.minFiles) {
         this.hasMinimum = true;
         this.removeWarning_notEnoughFiles();
         this.$input.setCustomValidity("");
@@ -295,8 +320,8 @@ const FileInput = function($formField) {
       }
     },
 
-    updateCount() {
-      this.$count.innerHTML = this.count;
+    updateUploadSize() {
+      this.$count.innerHTML = Math.ceil(this.uploadSize / 1000000);
     },
 
     addWarning_notEnoughFiles() {
@@ -313,6 +338,14 @@ const FileInput = function($formField) {
 
     removeWarning_tooManySelected() {
       this.$inputBox.classList.remove("--tooManySelected");
+    },
+
+    addWarning_uploadSizeExceeded() {
+      this.$inputBox.classList.add("--uploadSizeExceeded");
+    },
+
+    removeWarning_uploadSizeExceeded() {
+      this.$inputBox.classList.remove("--uploadSizeExceeded");
     }
   };
 

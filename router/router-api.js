@@ -169,9 +169,18 @@ async function sendFiles(req, res, next) {
 
   .then(async (rawRes) => {
     const body = await rawRes.json();
-    const errors = body.response.entry
-                    .map((_file) => _file._result)
-                    .filter((_result) => _result === "error");
+    let errors = [];
+
+    if (body.response.entry) {
+      errors = body.response.entry
+              .map((_file) => _file._result)
+              .filter((_result) => _result === "error");
+    }
+
+    else
+    if (body.response._result === "error") {
+      errors = "error";
+    }
 
     if (errors.length === 0) {
       next();
@@ -220,7 +229,7 @@ function fullfilled(res) {
 
 function failed(res, req, position, error) {
   console.log(position, error);
-  logger.error(req.body, req.files, "\n\n\n\n");
+  logger.error(req.body, req.files, error, "\n\n\n\n");
   res.status(500).send(position);
 }
 

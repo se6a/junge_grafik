@@ -405,6 +405,7 @@ module.exports = [
       },
       minfiles: 3,
       maxfiles: 6,
+      maxuploadsize: 15,
       accept: "image/jpeg",
       tooltip: {
         fr: `
