@@ -50,7 +50,6 @@ function attachMediaQueryListener() {
     else
     if (_mediaQuery.addListener) {
       _mediaQuery.addListener(
-        "change",
         (q) => setDocumentSize(_size, q)
       );
     }
