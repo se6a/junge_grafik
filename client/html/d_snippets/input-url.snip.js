@@ -5,7 +5,7 @@ module.exports = (data) => {
   data.type = "text";
   data.maxlength = 80;
   data.attr = `
-    pattern="(^https?://)?(www\\.)?([\\w.]+)(\\.\\w+)(/.*)?"
+    pattern="(^https?://)?(www\\.)?([\\w.æøåöäüé]+)(\\.\\w+)(/.*)?"
   `;
 
   return TextShort(data);

@@ -128,14 +128,50 @@
 
 ******************************************************************************/
 
+const {
+  performance
+} = require("perf_hooks");
+
 /*  Build
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
 async function build(req) {
+  const startAssemble = performance.now();
   const raw = await _assembleRaw(req);
+  const endAssemble = performance.now();
+  const assemble = `assemble: ${Math.round(endAssemble - startAssemble)}ms`;
+
+  const startFlatten = performance.now();
   let [html, cssList] = _flatten_rc(raw);
+  const endFlatten = performance.now();
+  const flatten = `flatten: ${Math.round(endFlatten - startFlatten)}ms`;
+
+  const startStringifyCss = performance.now();
   const css = _stringifyCss(cssList);
-  html = removeWhitespace_(
-    _injectCss(html, css));
+  const endStringifyCss = performance.now();
+  const stringifyCss = `stringifyCss: ${Math.round(endStringifyCss - startStringifyCss)}ms`;
+
+  const startInjectCss = performance.now();
+  html = _injectCss(html, css);
+  const endInjectCss = performance.now();
+  const injectCss = `injectCss: ${Math.round(endInjectCss - startInjectCss)}ms`;
+
+  const lengthBefore = html.length;
+
+  const startWhitespace = performance.now();
+  html = removeWhitespaceNew4_(html);
+  const endWhitespace = performance.now();
+  const whitespace = `whitespace: ${Math.round(endWhitespace - startWhitespace)}ms`;
+
+  const lengthAfter = html.length;
+
+  console.log(assemble);
+  console.log(flatten);
+  console.log(stringifyCss);
+  console.log(injectCss);
+  console.log(`html length before: ${lengthBefore}`);
+  console.log(whitespace);
+  console.log(`html length after: ${lengthAfter}`);
+  console.log(`----------------------------------------------`);
 
   return { raw, cssList, css, html };
 }

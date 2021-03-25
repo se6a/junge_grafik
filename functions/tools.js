@@ -476,7 +476,7 @@ g_.forAS_ = function(i, comparison, mx, step, callback) {
   case ">=": for (i; i >= mx; i += step) cb(i); break;
   case "<": for (i; i < mx; i += step) cb(i); break;
   case "<=": for (i; i <= mx; i += step) cb(i); break;
-  default: throw "Invalid comparison: " + comparison;
+  default: throw new Error("Invalid comparison: " + comparison);
   }
 };
 
@@ -499,8 +499,7 @@ g_.removeWhitespace_ = (input) => {
       cache = "";
     }
     else if (cache === "#" && _char !== "#"
-    || cache === "##" && _char !== "#"
-    ) {
+    || cache === "##" && _char !== "#") {
       output = cache + output;
       cache = "";
     }
@@ -554,7 +553,142 @@ g_.removeWhitespace_ = (input) => {
     /* STORE CURRENT CHARACTER
 ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´ ´*/
     output = addChunk + output;
-    lastChar = output[0] || null;
+  }
+
+  return output;
+};
+
+g_.removeWhitespaceNew_ = (input) => {
+  let bypass = false,
+      output = [];
+
+  for (let i = input.length - 1; i >= 0; i--) {
+    const _char  = input[i];
+
+    // Check if entering/leaving bypass-area:
+    if (_char === "#") {
+      if (input[i - 1] === "#") {
+        if (input[i - 2] === "#") {
+          bypass = bypass === false; // invert
+          i -= 2;
+          continue;
+        }
+      }
+    }
+
+    if (! bypass) {
+      if ([" ", "\n", "\r", "\t"].includes(_char)) {
+        if (output[0] !== " ") {
+          output = " " + output;
+        }
+        continue;
+      }
+    }
+
+    output = _char + output;
+  }
+
+  return output;
+};
+
+g_.removeWhitespaceNew2_ = (input) => {
+  let bypass = false,
+      output = "";
+
+  const length = input.length;
+
+  for (let i = 0; i < length; i++) {
+    const _char  = input[i];
+
+    // Check if entering/leaving bypass-area:
+    if (_char === "#" && input[i + 1] === "#" && input[i + 2]) {
+      bypass = bypass === false; // invert
+      i += 2;
+      continue;
+    }
+
+    if (! bypass) {
+      if ([" ", "\n", "\r", "\t"].includes(_char)) {
+        if (! output.endsWith(" ")) {
+          output += " ";
+        }
+
+        continue;
+      }
+    }
+
+    output += _char;
+  }
+
+  return output;
+};
+
+g_.removeWhitespaceNew3_ = (input) => {
+  let bypass = false,
+      output = "";
+
+  const length = input.length;
+  let i = 0;
+
+  while (i < length) {
+    const _char  = input[i];
+
+    // Check if entering/leaving bypass-area:
+    if (_char === "#" && input[i + 1] === "#" && input[i + 2]) {
+      bypass = bypass === false; // invert
+      i += 3;
+      continue;
+    }
+
+    if (! bypass) {
+      if ([" ", "\n", "\r", "\t"].includes(_char)) {
+        if (! output.endsWith(" ")) {
+          output += " ";
+        }
+        i++;
+        continue;
+      }
+    }
+
+    i++;
+    output += _char;
+  }
+
+  return output;
+};
+
+g_.removeWhitespaceNew4_ = (input) => {
+  let bypass = false,
+      output = "",
+      i = input.length;
+
+  while (i >= 0) {
+    const _char = input[i];
+
+    // Check if entering/leaving bypass-area:
+    if (_char === "#") {
+      if (input[i - 1] === "#") {
+        if (input[i - 2] === "#") {
+          bypass = bypass === false; // invert
+          i -= 3;
+          continue;
+        }
+      }
+    }
+
+    if (! bypass) {
+      if ([" ", "\n", "\r", "\t"].includes(_char)) {
+        if (output[0] !== " ") {
+          output = " " + output;
+        }
+
+        i--;
+        continue;
+      }
+    }
+
+    i--;
+    output = _char + output;
   }
 
   return output;

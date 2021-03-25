@@ -46,7 +46,7 @@ module.exports = (data) => {
             content: `
                 <span>Sponsorship</span>
                 <span>
-                  <a class="link contactLink" data-contact="${easyEncode("remo.stahl@jungegrafik.ch")}">
+                  <a class="textButton contactLink" data-contact="${easyEncode("remo.stahl@jungegrafik.ch")}">
                     contact
                   </a>
                 </span>
@@ -57,7 +57,7 @@ module.exports = (data) => {
             content: `
                 <span>Foundations</span>
                 <span>
-                  <a class="link contactLink" data-contact="${easyEncode("loana.boppart@jungegrafik.ch")}">
+                  <a class="textButton contactLink" data-contact="${easyEncode("loana.boppart@jungegrafik.ch")}">
                     contact
                   </a>
                 </span>
@@ -68,7 +68,7 @@ module.exports = (data) => {
             content: `
                 <span>Patrons</span>
                 <span>
-                  <a class="link contactLink" data-contact="${easyEncode("tobias.klauser@jungegrafik.ch")}">
+                  <a class="textButton contactLink" data-contact="${easyEncode("tobias.klauser@jungegrafik.ch")}">
                     contact
                   </a>
                 </span>

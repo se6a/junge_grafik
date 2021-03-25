@@ -60,7 +60,7 @@ module.exports = () => {
         ]
       })}
 
-    </div>
+    </footer>
   `;
 
   const css = /*css*/`

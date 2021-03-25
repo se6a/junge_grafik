@@ -304,8 +304,6 @@ const FileInput = function($formField) {
 
       this.count = count;
       this.uploadSize = uploadSize;
-
-      console.log(count, `${Math.ceil(uploadSize / 1000000)} mb`);
     },
 
     setState() {
