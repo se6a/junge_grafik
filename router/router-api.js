@@ -4,6 +4,8 @@ const fetch      = require("node-fetch");
 const FormData   = require("form-data");
 const log4js     = require("log4js");
 
+const fs         = require("fs");
+
 log4js.configure({
   appenders: {
     submitErrors: {

@@ -205,7 +205,7 @@ const FileInput = function($formField) {
             .filter((_acc) => _acc !== ""),
     maxFiles: $input.dataset.maxfiles,
     minFiles: $input.dataset.minfiles,
-    maxUploadSize: parseInt($input.dataset.maxuploadsize) * 1000000,
+    maxUploadSize: parseInt($input.dataset.maxuploadsize) * 1048576,
     count: 0,
     uploadSize: 0,
     hasMinimum: false,
@@ -319,7 +319,7 @@ const FileInput = function($formField) {
     },
 
     updateUploadSize() {
-      this.$count.innerHTML = Math.ceil(this.uploadSize / 1000000);
+      this.$count.innerHTML = Math.ceil(this.uploadSize / 1048576);
     },
 
     addWarning_notEnoughFiles() {
