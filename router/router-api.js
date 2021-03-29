@@ -202,7 +202,7 @@ async function triggerConfirmationEmail(req, res, next) {
   formdata.append("action[einreichung-bestaetigung]", "Abschicken");
 
   await fetch(
-    "https://api.jungegrafik.ch/mailings/einreichung-bestaetigung?format=json",
+    "https://api.jungegrafik.ch/mailings/einreichung-bestaetigung/",
     {
       method: "POST",
       body: formdata
@@ -210,9 +210,9 @@ async function triggerConfirmationEmail(req, res, next) {
   )
 
   .then(async (rawRes) => {
-    const body = await rawRes.text();
+    const body = await rawRes.json();
 
-    if (body.includes("Einreichung: Bestätigung")) {
+    if (body.ergebnis && body.ergebnis === "success") {
       fullfilled(res);
     }
 
