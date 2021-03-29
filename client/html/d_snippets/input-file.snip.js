@@ -55,7 +55,9 @@ module.exports = ({
           ${lang`
             <span>
               ${{
-                de: "Du hast zu viele Bilder ausgewählt.</br>Überprüfe welche Dateien hochgeladen werden."
+                de: "Du hast zu viele Bilder ausgewählt.</br>Überprüfe welche Dateien hochgeladen werden.",
+                fr: "At least one image was ignored. Please note the maximum number of allowed images.",
+                it: "At least one image was ignored. Please note the maximum number of allowed images."
               }}
             </span>
           `}
@@ -65,7 +67,9 @@ module.exports = ({
           ${lang`
             <span>
               ${{
-                de: "Mindestens ein Bild wurde ignoriert, da es die maximale Upload Grösse überschreiten würde.</br>Überprüfe welche Dateien hochgeladen werden."
+                de: "Mindestens ein Bild wurde ignoriert, da es die maximale Upload Grösse überschreiten würde.</br>Überprüfe welche Dateien hochgeladen werden.",
+                fr: "At least one image was ignored. Please note the maximum upload size.",
+                it: "At least one image was ignored. Please note the maximum upload size."
               }}
             </span>
           `}

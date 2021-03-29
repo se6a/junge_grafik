@@ -76,14 +76,14 @@ const ProjectForm = function() {
     },
 
     formatLinks(formdata) {
-      const pattern = /(^https?:\/\/)?(www\.)?([\w.]+)(\.\w+)(\/[\w\d/-_]*)?/;
+      const pattern = /(^https?:\/\/)?(www\.)?([^www][a-zA-Z0-9æøåöäüéÆØÅÖÄÜÉ]{2,})(\.[a-zA-Z]{2,})(\/.*)?/;
 
       [...formdata].forEach((_field) => {
         const _name = _field[0];
         const _value = _field[1];
 
         if (_name.startsWith("fields[link") && _value) {
-          const _newLink = (pattern.exec(_value))
+          const _newLink = (pattern.exec(_value) || [])
                             .filter((item, i) => i > 0)
                             .map((item, i) => i === 0 && !item ? "http://" : item)
                             .filter((item) => item)
