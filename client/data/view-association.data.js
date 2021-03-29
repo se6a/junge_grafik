@@ -297,7 +297,7 @@ module.exports = {
         {
           type: "card-with-image",
           image: {
-            src: "/logos/logo-sgv.png",
+            src: "logos/logo-sgv.png",
             alt: "Logo of SGV",
             classes: "logo"
           },
@@ -314,7 +314,7 @@ module.exports = {
         {
           type: "card-with-image",
           image: {
-            src: "/logos/logo-sgd.png",
+            src: "logos/logo-sgd.png",
             alt: "Logo of SGD",
             classes: "logo"
           },
@@ -329,7 +329,7 @@ module.exports = {
         {
           type: "card-with-image",
           image: {
-            src: "/logos/logo-weltformat.png",
+            src: "logos/logo-weltformat.png",
             alt: "Logo of Weltformat",
             classes: "logo"
           },
@@ -346,7 +346,7 @@ module.exports = {
         {
           type: "card-with-image",
           image: {
-            src: "/logos/logo-ronorp.png",
+            src: "logos/logo-ronorp.png",
             alt: "Logo of Ronorp",
             classes: "logo"
           },
@@ -371,7 +371,7 @@ module.exports = {
           type: "card-with-image",
           title: "Engelberger Druck AG",
           image: {
-            src: "/logos/logo-engelberger_druck.png",
+            src: "logos/logo-engelberger_druck.png",
             alt: "Logo of Sponsor Engelberg Druck",
             classes: "logo"
           },
@@ -383,7 +383,7 @@ module.exports = {
           type: "card-with-image",
           title: "We Talents",
           image: {
-            src: "/logos/logo-wetalents.png",
+            src: "logos/logo-wetalents.png",
             alt: "Logo of Sponsor We-Talents",
             classes: "logo"
           },
@@ -402,7 +402,7 @@ module.exports = {
         {
           type: "image-box",
           image: {
-            src: "/logos/logo-an_der_reuss.png",
+            src: "logos/logo-an_der_reuss.png",
             alt: "Logo of Sponsor An Der Reuss",
             classes: "logo"
           }
@@ -410,7 +410,7 @@ module.exports = {
         {
           type: "image-box",
           image: {
-            src: "/logos/logo-studio_feixen.png",
+            src: "logos/logo-studio_feixen.png",
             alt: "Logo of Sponsor Studio Feixen",
             classes: "logo"
           }
@@ -418,7 +418,7 @@ module.exports = {
         {
           type: "image-box",
           image: {
-            src: "/logos/logo-sonderegger.png",
+            src: "logos/logo-sonderegger.png",
             alt: "Logo of Sponsor Sonderegger",
             classes: "logo"
           }
@@ -434,7 +434,7 @@ module.exports = {
         {
           type: "card-with-image",
           image: {
-            src: "/logos/logo-josef_mueller_stiftung.png",
+            src: "logos/logo-josef_mueller_stiftung.png",
             alt: "Logo of the Josef Müller Foundation",
             classes: "logo"
           },
@@ -448,7 +448,7 @@ module.exports = {
         {
           type: "card-with-image",
           image: {
-            src: "/logos/logo-huser_oesch_stiftung.png",
+            src: "logos/logo-huser_oesch_stiftung.png",
             alt: "Logo of the Huser Oesch Foundation",
             classes: "logo"
           },
@@ -461,7 +461,7 @@ module.exports = {
         {
           type: "card-with-image",
           image: {
-            src: "/logos/logo-casimir_eigensatz_stiftung.png",
+            src: "logos/logo-casimir_eigensatz_stiftung.png",
             alt: "Logo of the Casimir Eigensatz Foundation",
             classes: "logo"
           },

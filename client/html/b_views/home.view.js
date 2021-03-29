@@ -45,15 +45,6 @@ module.exports = (data) => {
       width: 100%;
     }
 
-    .VIEW.Home .HeaderColors {
-      height: 100%;
-      background-color: pink;
-      animation-name: colors;
-      animation-duration: 60s;
-      animation-iteration-count: infinite;
-      display: none;
-    }
-
     .AnimatedBackground {
       position: fixed;
       z-index: -1;
@@ -61,10 +52,14 @@ module.exports = (data) => {
       left: 0;
       width: 100%;
       height: 100vh;
-      background-color: pink;
+      background-color: var(--blue);
       animation-name: colors;
       animation-duration: 60s;
       animation-iteration-count: infinite;
+    }
+
+    .VIEW.Home .ImageBox.logo::before {
+      display: none;
     }
 
     @keyframes colors {

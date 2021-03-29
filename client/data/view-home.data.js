@@ -65,7 +65,7 @@ module.exports = {
         {
           type: "image-box",
           image: {
-            src: "/logos/logo-sgv.png",
+            src: "logos/logo-sgv.png",
             alt: "Logo of SGV",
             classes: "logo"
           }
@@ -73,7 +73,7 @@ module.exports = {
         {
           type: "image-box",
           image: {
-            src: "/logos/logo-sgd.png",
+            src: "logos/logo-sgd.png",
             alt: "Logo of SGD",
             classes: "logo"
           }
@@ -81,7 +81,7 @@ module.exports = {
         {
           type: "image-box",
           image: {
-            src: "/logos/logo-engelberger_druck.png",
+            src: "logos/logo-engelberger_druck.png",
             alt: "Logo of Weltformat",
             classes: "logo"
           }
@@ -89,7 +89,7 @@ module.exports = {
         {
           type: "image-box",
           image: {
-            src: "/logos/logo-wetalents.png",
+            src: "logos/logo-wetalents.png",
             alt: "Logo of Ronorp",
             classes: "logo"
           }

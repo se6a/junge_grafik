@@ -71,8 +71,8 @@ module.exports = async (data) => {
         <script type="text/javascript">
           const HOST = window.location.origin;
         </script>
-      </body>
 
+      </body>
     </html>
   `;
 
