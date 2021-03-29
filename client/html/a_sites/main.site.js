@@ -68,7 +68,7 @@ module.exports = async (data) => {
         ${Footer()}
         <span class="BottomLine line"></span>
 
-        <script>
+        <script type="text/javascript">
           const HOST = window.location.origin;
         </script>
       </body>

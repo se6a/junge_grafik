@@ -660,7 +660,7 @@ g_.removeWhitespaceNew3_ = (input) => {
 g_.removeWhitespaceNew4_ = (input) => {
   let bypass = false,
       output = "",
-      i = input.length;
+      i = input.length - 1;
 
   while (i >= 0) {
     const _char = input[i];
