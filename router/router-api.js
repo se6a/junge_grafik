@@ -212,7 +212,7 @@ async function triggerConfirmationEmail(req, res, next) {
   .then(async (rawRes) => {
     const body = await rawRes.json();
 
-    if (body.ergebnis && body.ergebnis === "success") {
+    if (body.mailversand && body.mailversand === "passed") {
       fullfilled(res);
     }
 
