@@ -56,7 +56,7 @@ module.exports = async (data) => {
         <meta property="og:type" content="website">
         <meta property="og:title" content="Junge Grafik">
         <meta property="og:description" content="Junge Grafik showcases, connects and promotes young and talented graphic designers from across Switzerland.">
-        <meta property="og:image" content="./media/opengraph/jg.jpeg">
+        <meta property="og:image" content="media/opengraph/test.jpg">
 
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
