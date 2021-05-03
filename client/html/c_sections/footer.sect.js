@@ -53,6 +53,7 @@ module.exports = () => {
             title: "Links",
             content: /*html*/`
               <ul>
+                <li><a class="textButton" href="/support-us" target="_blank">Support us!</a></li>
                 <li><a class="textButton" href="/data-privacy" target="_blank">Data privacy</a></li>
               </ul>
             `

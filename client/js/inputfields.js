@@ -252,6 +252,8 @@ const FileInput = function($formField) {
         }
       }
 
+      // Reset Input:
+      this.$input.value = "";
       this.saveFileCount();
       this.updateUploadSize();
       this.setState();

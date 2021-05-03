@@ -427,7 +427,7 @@ module.exports = [
             <li class="dash">RGB Farbraum</li>
             <li class="dash">Lange Seite: 3800px</li>
             <li class="dash">Diese Bilddateien werden für die Publikation verwendet. Übermittle uns das JPG darum möglichst unkomprimiert.</li>
-            <li class="dash">Darf ich einen Farbigen Hintergrund verwenden? Ja.</li>
+            <li class="dash">Darf ich einen farbigen Hintergrund verwenden? Ja.</li>
             <li class="dash">Darf ich mein Projekt inszenieren? Ja.</li>
             <li class="dash">Darf ich anstelle von klassischen Reprografien auch digitale Mockups einsenden? Ja.</li>
           </ul>

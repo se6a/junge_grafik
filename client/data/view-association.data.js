@@ -396,6 +396,26 @@ module.exports = {
 
     {
       type: "rows",
+      subtitle: "Regular sponsors",
+      length: 6,
+      content: [
+        {
+          type: "card-with-image",
+          title: "Dinamo",
+          image: {
+            src: "logos/logo-dinamo.png",
+            alt: "Logo of Dinamo",
+            classes: "logo"
+          },
+          content: `
+            <a class="textButton" href="https://abcdinamo.com" target="_blank">abcdinamo.com</a>
+          `
+        }
+      ]
+    },
+
+    {
+      type: "rows",
       length: 8,
       subtitle: "Light sponsors",
       content: [

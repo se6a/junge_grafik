@@ -58,7 +58,7 @@ module.exports = (data) => {
             label: {
               fr: `
                 Je déclare avoir lu, compris et accepté les
-                <a class="Link textButton" href="/consentement" target="_blanK">
+                <a class="Link textButton" href="/terms-of-submission" target="_blank">
                   conditions de déclaration
                 </a>
                 d’accord.
@@ -66,7 +66,7 @@ module.exports = (data) => {
               `,
               de: `
                 Ich habe die
-                <a class="Link textButton" href="/consentement" target="_blanK">
+                <a class="Link textButton" href="/terms-of-submission" target="_blank">
                   Einverständniserklärung
                 </a>
                 gelesen und akzeptiere die Bedingungen. 
@@ -75,7 +75,7 @@ module.exports = (data) => {
               it: `
                 
                 Ho letto il
-                <a class="Link textButton" href="/consentement" target="_blanK">
+                <a class="Link textButton" href="/terms-of-submission" target="_blank">
                   modulo di consenso
                 </a>
                 e accetto le condizioni.

@@ -158,14 +158,14 @@ module.exports = {
         },
         {
           type: "card-with-image",
-          title: "Jonas Vögeli",
+          title: "Jonas Voegeli",
           image: {
             src: {
               sm: "jury/jg_jury_21-jonas_voegeli-sm.jpg",
               md: "jury/jg_jury_21-jonas_voegeli-md.jpg",
               lg: "jury/jg_jury_21-jonas_voegeli-lg.jpg"
             },
-            alt: "Portait of jury member Jonas Vögeli"
+            alt: "Portait of jury member Jonas Voegeli"
           },
           content: `<a class="textButton" href="https://hubertus-design.ch" target="_blank">hubertus-design.ch</a>`
         },

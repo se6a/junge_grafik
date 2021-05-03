@@ -28,8 +28,9 @@ module.exports = [
     name: "links",
     label: "Links",
     links: [
+      { label: "Support us!", href: "https://jungegrafik.ch/support-us" },
       { label: "Imprint", href: "" },
-      { label: "Data privacy", href: "" }
+      { label: "Data privacy", href: "https://jungegrafik.ch/data-privacy" }
     ]
   }
 ];

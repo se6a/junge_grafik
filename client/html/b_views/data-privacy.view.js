@@ -17,8 +17,17 @@ module.exports = (data) => {
             type: "card-simple",
             content: `
               <ul>
-                <li class="arrow">Zur Verwendung Deiner Einreichung haben wir eine eigene Seite angelegt: jungegrafik.ch/einreichungsbestimmungen</li>
-                <li class="arrow">Unsere Hoster Hostpoint und Digital Ocean erfassen in einem Serverlog aufgerufene URLs und IP-Adressen</li>
+                <li class="arrow">
+                  <span>
+                    A dedicated page explains how we use your submission for our channels:
+                    <a class="textButton" href="/terms-of-submission" target:"_blank">
+                      jungegrafik.ch/terms-of-submission
+                    </a>
+                  </span>
+                </li>
+                <li class="arrow">
+                  Our hosters Hostpoint and Digital Ocean record URLs and IP addresses in a server log.
+                </li>
               </ul>
             `
           },
@@ -26,8 +35,12 @@ module.exports = (data) => {
             type: "card-simple",
             content: `
             <ul>
-              <li class="arrow">E-Mails speichern wir in unseren Serverpostfächern bei Hostpoint und in Kopie auf unseren Computern</li>
-              <li class="arrow">Um eine Idee über Besucherzahlen zu haben, erfassen wir Deinen Besuch mit Google Analytics. Deine IP wird dabei anonymisiert (gekürzt).</li>
+              <li class="arrow">
+                We store e-mails in our server mailboxes at Hostpoint and a copy on our computers.
+              </li>
+              <li class="arrow">
+                In order to have an idea of visitor numbers, we record your visit with Google Analytics. Your IP is anonymised (shortened).
+              </li>
             </ul>
             `
           }
