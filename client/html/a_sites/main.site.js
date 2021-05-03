@@ -51,20 +51,19 @@ module.exports = async (data) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="${data.meta.description}">
 
-        <!-- Facebook Meta Tags -->
+        <!-- Preview -->
         <meta property="og:url" content="https://jungegrafik.ch">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Junge Grafik">
         <meta property="og:description" content="Junge Grafik showcases, connects and promotes young and talented graphic designers from across Switzerland.">
-        <meta property="og:image" content="media/opengraph/test.jpg">
-
-        <!-- Twitter Meta Tags -->
+        <meta property="og:image" content="${data.req.headers.host}/media/opengraph/test.jpg">
         <meta name="twitter:card" content="summary_large_image">
         <meta property="twitter:domain" content="jungegrafik.ch">
         <meta property="twitter:url" content="https://jungegrafik.ch">
         <meta name="twitter:title" content="Junge Grafik">
         <meta name="twitter:description" content="Junge Grafik showcases, connects and promotes young and talented graphic designers from across Switzerland.">
         <meta name="twitter:image" content="">
+        <!-- ----- -->
 
         ${seoMeta}
 
