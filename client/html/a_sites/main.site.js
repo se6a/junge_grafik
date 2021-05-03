@@ -55,13 +55,13 @@ module.exports = async (data) => {
         <meta property="og:url" content="https://jungegrafik.ch">
         <meta property="og:type" content="website">
         <meta property="og:title" content="Junge Grafik">
-        <meta property="og:description" content="Junge Grafik showcases, connects and promotes young and talented graphic designers from across Switzerland.">
+        <meta property="og:description" content="${data.meta.description}">
         <meta property="og:image" content="https://${data.req.headers.host}/media/opengraph/test.jpg">
         <meta name="twitter:card" content="summary_large_image">
         <meta property="twitter:domain" content="jungegrafik.ch">
         <meta property="twitter:url" content="https://jungegrafik.ch">
         <meta name="twitter:title" content="Junge Grafik">
-        <meta name="twitter:description" content="Junge Grafik showcases, connects and promotes young and talented graphic designers from across Switzerland.">
+        <meta name="twitter:description" content="${data.meta.description}">
         <meta name="twitter:image" content="">
         <!-- ----- -->
 

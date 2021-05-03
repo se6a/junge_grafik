@@ -70,6 +70,7 @@ Router.post(
   prepareEntry,
   rebuildForm,
   sendEntryForm,
+  getProjectId,
   buildFileForm,
   sendFiles,
   triggerConfirmationEmail
@@ -139,6 +140,30 @@ async function sendEntryForm(req, res, next) {
   })
 
   .catch((error) => failed(res, req, "sendEntryForm", error));
+}
+
+async function getProjectId(req, res, next) {
+  await fetch(
+    `https://api.jungegrafik.ch/symphony/api/entries/einreichungen/${res.locals.entry.id}/?fields=projekt-id&auth-token=02701d93&format=json`,
+    {
+      method: "GET"
+    }
+  )
+
+  .then(async (rawRes) => {
+    const body = await rawRes.json();
+
+    if (typeof parseInt(body.response.entry["projekt-id"].value) === "number") {
+      res.locals.entry.projectId = body.response.entry["projekt-id"].value;
+      next();
+    }
+
+    else {
+      throw Error(body.response.message.value);
+    }
+  })
+
+  .catch((error) => failed(res, req, "getProjectId", error));
 }
 
 function buildFileForm(req, res, next) {
@@ -235,9 +260,9 @@ function failed(res, req, position, error) {
 
 function renameFile(file, i, entry) {
   const ext = file.mimetype.split("/")[1];
-  const { year, contestant, id } = entry;
+  const { year, contestant, projectId } = entry;
   const { firstname, lastname } = contestant;
-  const newName = `${year}-${id}-`
+  const newName = `${year}-${projectId}-`
                 + `${firstname}-${lastname}-`
                 + `${i + 1}.${ext}`;
 
