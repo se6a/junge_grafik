@@ -228,8 +228,8 @@ const FileInput = function($formField) {
 
         else
         if (this.checkUniqueName(_file)
-        || this.checkFiletype(_file)
-        || await this.checkImageResolution(_file)
+        && this.checkFiletype(_file)
+        && await this.checkImageResolution(_file)
         ) {
           this.add(_file, i);
         }
