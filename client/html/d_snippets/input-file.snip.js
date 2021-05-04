@@ -76,7 +76,7 @@ module.exports = ({
         </span>
 
         <span class="warning tooSmallImage">
-          The resolution of your images is too small.</br>
+          At least one image was ignored, because its resolution does not match the minimum requirement.</br>
           The longer side of each image needs to have 2900 pixel or more.
         </span>
 
