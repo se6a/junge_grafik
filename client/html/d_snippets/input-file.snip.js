@@ -75,6 +75,11 @@ module.exports = ({
           `}
         </span>
 
+        <span class="warning tooSmallImage">
+          The resolution of your images is too small.</br>
+          The longer side of each image needs to have 2900 pixel or more.
+        </span>
+
       </div>
     </div>
   `;
@@ -160,7 +165,8 @@ module.exports = ({
     }
 
     .warning.tooManySelected,
-    .warning.uploadSizeExceeded {
+    .warning.uploadSizeExceeded,
+    .warning.tooSmallImage {
       color: var(--violetBright);
       display: none;
       font-size: var(--fontSize-S);
@@ -169,7 +175,8 @@ module.exports = ({
     }
 
     .Upload.inputBox.--tooManySelected .tooManySelected,
-    .Upload.inputBox.--uploadSizeExceeded .uploadSizeExceeded {
+    .Upload.inputBox.--uploadSizeExceeded .uploadSizeExceeded,
+    .Upload.inputBox.--tooSmallImage .tooSmallImage {
       display: block;
     }
   `;

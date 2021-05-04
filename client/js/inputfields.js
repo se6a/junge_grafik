@@ -210,60 +210,124 @@ const FileInput = function($formField) {
     uploadSize: 0,
     hasMinimum: false,
 
-    select() {
+    async select() {
       this.removeWarning_tooManySelected();
       this.removeWarning_uploadSizeExceeded();
+      this.removeWarning_tooSmallImage();
 
       const newFiles = [...this.$input.files];
-      let uploadSize = this.uploadSize;
-      let fileCount = this.count;
 
       for (let i = 0; i < newFiles.length; i++) {
-        fileCount++;
-
-        if (fileCount > this.maxFiles) {
-          this.addWarning_tooManySelected();
-          break;
-        }
-
         const _file = newFiles[i];
-        uploadSize += _file.size;
 
-        if (uploadSize > this.maxUploadSize) {
-          this.addWarning_uploadSizeExceeded();
+        if (this.checkFileCount() === false
+        || this.checkUploadSize(_file) === false
+        ) {
           break;
         }
 
-        else {
-          const _filename = _file.name;
-          const [_type, _subtype] = _file.type.split("/");
-
-          if (! this.selected[_filename]) {
-            if (this.accept.length === 0
-            || this.accept.includes(`${_type}/*`)
-            || this.accept.includes(`${_type}/${_subtype}`)
-            || this.accept.includes(`.${_subtype}`)
-            ) {
-              this.selected[_filename] = _file;
-              this.$inputBox.insertAdjacentElement(
-                "AFTERBEGIN", this.insertHtmlItem(_file.name, i));
-            }
-          }
+        else
+        if (this.checkUniqueName(_file)
+        || this.checkFiletype(_file)
+        || await this.checkImageResolution(_file)
+        ) {
+          this.add(_file, i);
         }
       }
 
       // Reset Input:
       this.$input.value = "";
-      this.saveFileCount();
+      this.safeFileCount();
       this.updateUploadSize();
       this.setState();
+    },
+
+    checkFileCount() {
+      let valid = true;
+      this.count++;
+
+      if (this.count > this.maxFiles) {
+        this.addWarning_tooManySelected();
+        this.count--;
+        valid = false;
+      }
+
+      return valid;
+    },
+
+    checkUniqueName(file) {
+      let valid = true;
+
+      if (this.selected[file.name]) {
+        valid = false;
+      }
+
+      return valid;
+    },
+
+    checkFiletype(file) {
+      let valid = true;
+      const [type, subtype] = file.type.split("/");
+
+      if (this.accept.length > 0) {
+        if (this.accept.includes(`${type}/*`) === false
+        && this.accept.includes(`${type}/${subtype}`) === false
+        && this.accept.includes(`.${subtype}`) === false
+        ) {
+          valid = false;
+        }
+      }
+
+      return valid;
+    },
+
+    checkUploadSize(file) {
+      const newUploadSize = this.uploadSize + file.size;
+      let valid = true;
+
+      if (newUploadSize > this.maxUploadSize) {
+        this.addWarning_uploadSizeExceeded();
+        valid = false;
+      }
+
+      else {
+        this.uploadSize = newUploadSize;
+      }
+
+      return valid;
+    },
+
+    async checkImageResolution(file) {
+      const img = new Image();
+      img.src = window.URL.createObjectURL(file);
+
+      return new Promise((resolve, reject) => {
+        let valid = true;
+
+        img.onload = () => {
+          if (parseInt(img.width) < 2900
+          && parseInt(img.height) < 2900
+          ) {
+            this.addWarning_tooSmallImage();
+            valid = false;
+          }
+
+          resolve(valid);
+        };
+      });
+    },
+
+    add(file, index) {
+      this.selected[file.name] = file;
+      this.$inputBox.insertAdjacentElement(
+        "AFTERBEGIN", this.insertHtmlItem(file.name, index));
     },
 
     remove(e, filename, id) {
       document.getElementById(id).remove();
 
       delete this.selected[filename];
-      this.saveFileCount();
+      this.safeFileCount();
       this.updateUploadSize();
       this.removeWarning_tooManySelected();
       this.removeWarning_uploadSizeExceeded();
@@ -295,7 +359,7 @@ const FileInput = function($formField) {
       return $item;
     },
 
-    saveFileCount() {
+    safeFileCount() {
       let count = 0;
       let uploadSize = 0;
 
@@ -346,6 +410,14 @@ const FileInput = function($formField) {
 
     removeWarning_uploadSizeExceeded() {
       this.$inputBox.classList.remove("--uploadSizeExceeded");
+    },
+
+    addWarning_tooSmallImage() {
+      this.$inputBox.classList.add("--tooSmallImage");
+    },
+
+    removeWarning_tooSmallImage() {
+      this.$inputBox.classList.remove("--tooSmallImage");
     }
   };
 
