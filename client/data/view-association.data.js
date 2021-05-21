@@ -133,7 +133,7 @@ module.exports = {
           type: "card-with-image",
           title: `
             <div>Nina Ruppen</div>
-            <div>Remit: Exhibition</div>
+            <div>Remit: Communication, Exhibition</div>
           `,
           image: {
             src: {
@@ -263,6 +263,27 @@ module.exports = {
             <div>Sebastian Wyss</div>
             <div>Programmer</div>
           `
+        },
+        {
+          type: "card-simple",
+          content: `
+            <div>Jakob Roduner</div>
+            <div>Translator: Italian</div>
+          `
+        },
+        {
+          type: "card-simple",
+          content: `
+            <div>Benjamin Ramsauer</div>
+            <div>Translator: English</div>
+          `
+        },
+        {
+          type: "card-simple",
+          content: `
+            <div>Sandro Egger</div>
+            <div>Former board member</div>
+          `
         }
       ]
     },
@@ -277,13 +298,6 @@ module.exports = {
           content: `
             <div>Laura Robinson</div>
             <div>Translator: English</div>
-          `
-        },
-        {
-          type: "card-simple",
-          content: `
-            <div>Jakob Roduner</div>
-            <div>Translator: Italian</div>
           `
         }
       ]
@@ -409,6 +423,18 @@ module.exports = {
           },
           content: `
             <a class="textButton" href="https://abcdinamo.com" target="_blank">abcdinamo.com</a>
+          `
+        },
+        {
+          type: "card-with-image",
+          title: "Grafikmagazin",
+          image: {
+            src: "logos/logo-grafikmagazin.png",
+            alt: "Logo of Grafikmagazin",
+            classes: "logo"
+          },
+          content: `
+            <a class="textButton" href="https://grafikmagazin.de" target="_blank">grafikmagazin.de</a>
           `
         }
       ]

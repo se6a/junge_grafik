@@ -71,6 +71,11 @@ module.exports = () => {
       outline: none;
       background-color: var(--gray);
     }
+
+    .--safari.--size-lg .HEADER .textUnderlined.innerBox,
+    .--safari.--size-md .HEADER .textUnderlined.innerBox {
+      margin-bottom: -1px;
+    }
   `;
 
   return ["header.sect", html, css];
