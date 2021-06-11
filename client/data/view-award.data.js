@@ -47,8 +47,7 @@ module.exports = {
               title: "Submission",
               items: [
                 "– Via this website",
-                "– Call for Entries will be launched on 15.03.2021",
-                "– Deadline: 14.06.2021"
+                "– Deadline: 19.07.2021"
               ]
             },
             {
@@ -132,7 +131,7 @@ module.exports = {
         },
         {
           type: "card-with-image",
-          title: "Dennis Moya",
+          title: "Dennis Moya Razafimandimby",
           image: {
             src: {
               sm: "jury/jg_jury_21-dennis_moya-sm.jpg",

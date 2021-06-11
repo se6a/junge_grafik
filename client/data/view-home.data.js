@@ -5,7 +5,7 @@ module.exports = {
     indexed: true
   },
   header: {
-    image: "media/theme/20210309_Keyvisual_1920x960px_RZ_3.svg",
+    image: "media/theme/quite_late.svg",
     content: '<div class="HeaderColors"></div>'
   },
   sections: [
@@ -15,7 +15,7 @@ module.exports = {
         {
           type: "text",
           size: "l",
-          content: "Junge Grafik showcases, connects and promotes young and talented graphic designers from across Switzerland. An award, a travelling exhibition and this website provide a unique platform to celebrate their outstanding work and share it with the widest possible audience."
+          content: "We have prolonged the deadline. You can submit your work until Monday the 19th of July 2021. We are looking forward to all the great projects!"
         }
       ]
     },
@@ -33,7 +33,7 @@ module.exports = {
             {
               title: "Submission deadline",
               items: [
-                "14.06.2021"
+                "19.07.2021"
               ]
             },
             {
