@@ -61,7 +61,7 @@ module.exports = {
             {
               title: "Prize",
               items: [
-                "Winners will receive a certificate, at least CHF 400 in cash per project and a range of other prizes (such as Dinamo Typefaces, Magazines, coupons usw.) Their work will also be featured in the publication “Junge Grafik 2021”."
+                "Winners will receive a certificate, a bag filled with great prizes (typefaces, magazines, books, vouchers and much more!) and a small amount of money. Their work will also be featured in the publication “Junge Grafik 2021”."
               ]
             },
             {
