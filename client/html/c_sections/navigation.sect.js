@@ -6,14 +6,6 @@ module.exports = () => {
     <nav class="NAVIGATION">
 
       ${Button({
-        label: "Submit!",
-        type: "link",
-        id: "navigation-submit",
-        classes: "Submit",
-        href: "/submit"
-      })}
-
-      ${Button({
         label: "",
         id: "navigation-menu",
         classes: "Menu",

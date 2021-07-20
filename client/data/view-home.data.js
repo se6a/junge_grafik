@@ -5,7 +5,7 @@ module.exports = {
     indexed: true
   },
   header: {
-    image: "media/theme/quite_late.svg",
+    image: "media/theme/waiting.svg",
     content: '<div class="HeaderColors"></div>'
   },
   sections: [
@@ -15,7 +15,7 @@ module.exports = {
         {
           type: "text",
           size: "l",
-          content: "We have prolonged the deadline. You can submit your work until Monday the 19th of July 2021. We are looking forward to all the great projects!"
+          content: "WOW! Thanks to all the students who have submitted more than 300 projects during the last couple of months. We are looking forward to announcing the winners at our award night on October 9."
         }
       ]
     },

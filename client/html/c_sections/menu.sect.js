@@ -3,13 +3,6 @@ const ButtonUnderlined = getSnippet("button-underlined");
 module.exports = () => {
   const html = splitTemp/*html*/`
     <section class="MENU box">
-      ${ButtonUnderlined({
-        label: { all: "Submit!" },
-        classes: "Submit",
-        type: "link",
-        href: "/submit",
-        size: "XL"
-      })}
 
       ${ButtonUnderlined({
         label: { all: "Award" },
