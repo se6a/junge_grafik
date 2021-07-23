@@ -1,18 +1,17 @@
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-    const path = this.location.pathname;
+document.addEventListener("DOMContentLoaded", () => {
+  const path = this.location.pathname;
 
-    if (path.startsWith("/submit")) {
-      preselectLanguage("ProjectRegistrationLang");
-      window.projectForm = new ProjectForm();
-    }
+  if (path.startsWith("/__submit")) {
+    preselectLanguage("ProjectRegistrationLang");
+    window.projectForm = new ProjectForm();
   }
-);
+});
 
 function preselectLanguage(formId) {
   const lang = document.body.dataset.lang;
-  const $field = document.querySelector(`#${formId} .Language .Select.inputBox.outer`);
+  const $field = document.querySelector(
+    `#${formId} .Language .Select.inputBox.outer`
+  );
   const $option = $field.querySelector(`.option[data-id="${lang}"]`);
   selectOption($field, $option);
 }
@@ -23,11 +22,9 @@ function setFormLanguage(e) {
   const $langInput = $langForm.querySelector('input[name="fields[language]"');
   const lang = $langInput.value;
 
-  if (! lang) {
+  if (!lang) {
     $langInput.classList.add("--invalid");
-  }
-
-  else {
+  } else {
     const $ViewSubmit = document.querySelector(".VIEW.Submit");
     scrollToTop();
 
@@ -42,7 +39,7 @@ function setFormLanguage(e) {
 
 /* Form
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
-const ProjectForm = function() {
+const ProjectForm = function () {
   const instance = {
     $form: document.getElementById("SubmitProjectForm"),
 
@@ -59,24 +56,23 @@ const ProjectForm = function() {
       this.formatLinks(formdata);
 
       postRequest("newproject", formdata)
+        .then((res) => {
+          if (res.status === 200) {
+            this.reset();
+            this.feedbackSuccess();
+          } else {
+            this.feedbackError();
+          }
+        })
 
-      .then((res) => {
-        if (res.status === 200) {
-          this.reset();
-          this.feedbackSuccess();
-        }
-        else {
+        .catch(() => {
           this.feedbackError();
-        }
-      })
-
-      .catch(() => {
-        this.feedbackError();
-      });
+        });
     },
 
     formatLinks(formdata) {
-      const pattern = /(^https?:\/\/)?(www\.)?([^www][a-zA-Z0-9æøåöäüéÆØÅÖÄÜÉ]{2,})(\.[a-zA-Z]{2,})(\/.*)?/;
+      const pattern =
+        /(^https?:\/\/)?(www\.)?([^www][a-zA-Z0-9æøåöäüéÆØÅÖÄÜÉ]{2,})(\.[a-zA-Z]{2,})(\/.*)?/;
 
       [...formdata].forEach((_field) => {
         const _name = _field[0];
@@ -84,10 +80,10 @@ const ProjectForm = function() {
 
         if (_name.startsWith("fields[link") && _value) {
           const _newLink = (pattern.exec(_value) || [])
-                            .filter((item, i) => i > 0)
-                            .map((item, i) => i === 0 && !item ? "http://" : item)
-                            .filter((item) => item)
-                            .join("");
+            .filter((item, i) => i > 0)
+            .map((item, i) => (i === 0 && !item ? "http://" : item))
+            .filter((item) => item)
+            .join("");
 
           formdata.set(_name, _newLink);
         }
@@ -144,13 +140,10 @@ const ProjectForm = function() {
     reset() {
       this.$form.reset();
       this.$form.dataset.state = "initial";
-    }
+    },
   };
 
-  instance.$form.addEventListener(
-    "submit",
-    (e) => instance.submit(e)
-  );
+  instance.$form.addEventListener("submit", (e) => instance.submit(e));
 
   return instance;
 };
