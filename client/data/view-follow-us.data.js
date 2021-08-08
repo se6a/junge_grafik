@@ -2,7 +2,7 @@ module.exports = {
   meta: {
     title: "Follow us!",
     description: "Follow us on social media!",
-    indexed: true
+    indexed: true,
   },
-  footer: true
+  footer: true,
 };

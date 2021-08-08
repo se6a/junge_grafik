@@ -3,41 +3,35 @@ function Sources(src) {
   const media = {
     sm: "max-width: 599px",
     md: "min-width: 600px",
-    lg: "min-width: 1200px"
+    lg: "min-width: 1200px",
   };
 
   if (src instanceof Object) {
     for (const _size in src) {
       source += `<source media="(${media[_size]})" srcset="./media/${src[_size]}">`;
     }
-  }
-
-  else {
+  } else {
     source = `<source media="" srcset="./media/${src}">`;
   }
 
   return source;
 }
 
-module.exports = ({
-  image
-}) => {
-  const {
-    src = "",
-    alt = "no description",
-    classes = ""
-  } = image;
+module.exports = ({ image }) => {
+  const { src = "", alt = "no description", classes = "", href = "" } = image;
 
-  const html = splitTemp/*html*/`
+  const html = splitTemp/*html*/ `
     <figure class="ImageBox box ${classes}">
-      <picture>
-        ${Sources(src)}
-        <img class="image" alt="${alt}">
-      </picture>
+      ${href && `<a href=${href} target="_blank">`}
+        <picture>
+          ${Sources(src)}
+          <img class="image" alt="${alt}">
+        </picture>
+      ${href && "</a>"}
     </figure>
   `;
 
-  const css = /*css*/`
+  const css = /*css*/ `
     .ImageBox {
       padding: 0;
       position: relative;

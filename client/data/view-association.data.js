@@ -1,12 +1,14 @@
 module.exports = {
   meta: {
     title: "Association",
-    description: "The Junge Grafik association wants to ensure that talented young graphic designers in Switzerland are supported and promoted from the very beginning of their education and training.",
+    description:
+      "The Junge Grafik association wants to ensure that talented young graphic designers in Switzerland are supported and promoted from the very beginning of their education and training.",
     indexed: true
   },
   header: {
     title: "Association",
-    content: "The Junge Grafik association wants to ensure that talented young graphic designers in Switzerland are supported and promoted from the very beginning of their education and training. This is made possible thanks to our committed board members and the generous support of patrons, foundations and sponsors."
+    content:
+      "The Junge Grafik association wants to ensure that talented young graphic designers in Switzerland are supported and promoted from the very beginning of their education and training. This is made possible thanks to our committed board members and the generous support of patrons, foundations and sponsors."
   },
   sections: [
     {
@@ -15,16 +17,15 @@ module.exports = {
         {
           type: "text",
           title: "About Us",
-          content: "Students in Swiss training institutions are producing outstanding graphic work! Many of these projects deserve to be recognized beyond their school walls and the talented students behind them should be supported and encouraged to connect with other leading designers. The Junge Grafik association has created the Junge Grafik Award to make this possible. All association members work on a voluntary basis – and are passionate about graphic culture."
+          content:
+            "Students in Swiss training institutions are producing outstanding graphic work! Many of these projects deserve to be recognized beyond their school walls and the talented students behind them should be supported and encouraged to connect with other leading designers. The Junge Grafik association has created the Junge Grafik Award to make this possible. All association members work on a voluntary basis – and are passionate about graphic culture."
         },
         {
           type: "overview",
           details: [
             {
               title: "Founding",
-              items: [
-                "2019"
-              ]
+              items: ["2019"]
             },
             {
               title: "Aim",
@@ -34,15 +35,11 @@ module.exports = {
             },
             {
               title: "Patronage",
-              items: [
-                "SGV Schweizer Grafiker Verband"
-              ]
+              items: ["SGV Schweizer Grafiker Verband"]
             },
             {
               title: "Partner",
-              items: [
-                "SGD Swiss Graphic Designers"
-              ]
+              items: ["SGD Swiss Graphic Designers"]
             },
             {
               title: "Network partners",
@@ -52,9 +49,7 @@ module.exports = {
             },
             {
               title: "Event partner",
-              items: [
-                "Weltformat Graphic Design Festival"
-              ]
+              items: ["Weltformat Graphic Design Festival"]
             }
           ]
         }
@@ -87,14 +82,14 @@ module.exports = {
             <div>Meret Fischli</div>
             <div>Remit: Jury, Printed communication materials</div>
           `,
-        image: {
-          src: {
-            sm: "assoc/jg_board-meret_fischli-sm.jpg",
-            md: "assoc/jg_board-meret_fischli-md.jpg",
-            lg: "assoc/jg_board-meret_fischli-lg.jpg"
+          image: {
+            src: {
+              sm: "assoc/jg_board-meret_fischli-sm.jpg",
+              md: "assoc/jg_board-meret_fischli-md.jpg",
+              lg: "assoc/jg_board-meret_fischli-lg.jpg"
+            },
+            alt: "Portrait of Meret Fischli"
           },
-          alt: "Portrait of Meret Fischli"
-        },
           content: `<a class="textButton" href="https://meretfischli.ch" target="_blank">meretfischli.ch</a>`
         },
         {
@@ -313,7 +308,8 @@ module.exports = {
           image: {
             src: "logos/logo-sgv.png",
             alt: "Logo of SGV",
-            classes: "logo"
+            classes: "logo",
+            href: "https://sgv.ch"
           },
           title: `
               <span>Patronage:</span>
@@ -330,7 +326,8 @@ module.exports = {
           image: {
             src: "logos/logo-sgd.png",
             alt: "Logo of SGD",
-            classes: "logo"
+            classes: "logo",
+            href: "https://sgd.ch"
           },
           title: `
               <span>Partner:</span>
@@ -345,7 +342,8 @@ module.exports = {
           image: {
             src: "logos/logo-weltformat.png",
             alt: "Logo of Weltformat",
-            classes: "logo"
+            classes: "logo",
+            href: "https://weltformat-festival.ch"
           },
           title: `
               <span>Partner:</span>
@@ -362,7 +360,8 @@ module.exports = {
           image: {
             src: "logos/logo-ronorp.png",
             alt: "Logo of Ronorp",
-            classes: "logo"
+            classes: "logo",
+            href: "https://ronorp.net"
           },
           title: `
             <span>Media partner:</span>
@@ -382,28 +381,31 @@ module.exports = {
       length: 4,
       content: [
         {
-          type: "card-with-image",
-          title: "Engelberger Druck AG",
+          type: "image-box",
           image: {
             src: "logos/logo-engelberger_druck.png",
             alt: "Logo of Sponsor Engelberg Druck",
-            classes: "logo"
-          },
-          content: `
-            <a class="textButton" href="https://engelbergerdruck.ch" target="_blank">engelbergerdruck.ch</a>
-          `
+            classes: "logo",
+            href: "https://engelbergerdruck.ch"
+          }
         },
         {
-          type: "card-with-image",
-          title: "We Talents",
+          type: "image-box",
           image: {
             src: "logos/logo-wetalents.png",
             alt: "Logo of Sponsor We-Talents",
-            classes: "logo"
-          },
-          content: `
-            <a class="textButton" href="https://wetalents.net" target="_blank">wetalents.net</a>
-          `
+            classes: "logo",
+            href: "https://wetalents.net"
+          }
+        },
+        {
+          type: "image-box",
+          image: {
+            src: "logos/logo-grafikmagazin.png",
+            alt: "Logo of Grafikmagazin",
+            classes: "logo",
+            href: "https://grafikmagazin.de"
+          }
         }
       ]
     },
@@ -414,28 +416,22 @@ module.exports = {
       length: 6,
       content: [
         {
-          type: "card-with-image",
-          title: "Dinamo",
+          type: "image-box",
           image: {
             src: "logos/logo-dinamo.png",
             alt: "Logo of Dinamo",
-            classes: "logo"
-          },
-          content: `
-            <a class="textButton" href="https://abcdinamo.com" target="_blank">abcdinamo.com</a>
-          `
+            classes: "logo",
+            href: "https://abcdinamo.com"
+          }
         },
         {
-          type: "card-with-image",
-          title: "Grafikmagazin",
+          type: "image-box",
           image: {
-            src: "logos/logo-grafikmagazin.png",
-            alt: "Logo of Grafikmagazin",
-            classes: "logo"
-          },
-          content: `
-            <a class="textButton" href="https://grafikmagazin.de" target="_blank">grafikmagazin.de</a>
-          `
+            src: "logos/logo-zumstein.png",
+            alt: "Logo of Zumstein",
+            classes: "logo",
+            href: "https://www.zumstein.ch/"
+          }
         }
       ]
     },
@@ -450,7 +446,8 @@ module.exports = {
           image: {
             src: "logos/logo-an_der_reuss.png",
             alt: "Logo of Sponsor An Der Reuss",
-            classes: "logo"
+            classes: "logo",
+            href: "https://www.anderreuss.ch/"
           }
         },
         {
@@ -458,7 +455,8 @@ module.exports = {
           image: {
             src: "logos/logo-studio_feixen.png",
             alt: "Logo of Sponsor Studio Feixen",
-            classes: "logo"
+            classes: "logo",
+            href: "https://www.studiofeixen.ch/"
           }
         },
         {
@@ -466,7 +464,26 @@ module.exports = {
           image: {
             src: "logos/logo-sonderegger.png",
             alt: "Logo of Sponsor Sonderegger",
-            classes: "logo"
+            classes: "logo",
+            href: "https://www.sonderegger.ch/"
+          }
+        },
+        {
+          type: "image-box",
+          image: {
+            src: "logos/logo-ast_beschriftet.png",
+            alt: "Logo of AST Beschriftet",
+            classes: "logo",
+            href: "https://www.ast-beschriftet.ch/"
+          }
+        },
+        {
+          type: "image-box",
+          image: {
+            src: "logos/logo-luzi_type.png",
+            alt: "Logo of Luzi type",
+            classes: "logo",
+            href: "https://www.luzi-type.ch/"
           }
         }
       ]
@@ -478,41 +495,56 @@ module.exports = {
       length: 4,
       content: [
         {
-          type: "card-with-image",
+          type: "image-box",
+          image: {
+            src: "logos/logo-arthur_waser_foundation.png",
+            alt: "Logo of the Arthur Waser Foundation",
+            classes: "logo",
+            href: "https://www.arthur-waser-foundation.ch/"
+          }
+        },
+        {
+          type: "image-box",
+          image: {
+            src: "logos/logo-ggl.png",
+            alt: "Logo of the Gemeinnützige Gesellschaft der Stadt Luzern",
+            classes: "logo",
+            href: "https://ggl-luzern.ch/"
+          }
+        },
+        {
+          type: "image-box",
+          image: {
+            src: "logos/logo-p_herzog_stiftung.png",
+            alt: "Logo of the P. Herzog Foundation",
+            classes: "logo",
+            href: "http://herzog-stiftung.ch/"
+          }
+        },
+        {
+          type: "image-box",
           image: {
             src: "logos/logo-josef_mueller_stiftung.png",
             alt: "Logo of the Josef Müller Foundation",
-            classes: "logo"
-          },
-          title: `Josef Müller Stiftung Muri`,
-          content: `
-            <a class="textButton" href="https://mueller-stiftung.ch" target="_blank">
-              mueller-stiftung.ch
-            </a>
-          `
+            classes: "logo",
+            href: "https://mueller-stiftung.ch"
+          }
         },
         {
-          type: "card-with-image",
+          type: "image-box",
           image: {
             src: "logos/logo-huser_oesch_stiftung.png",
             alt: "Logo of the Huser Oesch Foundation",
             classes: "logo"
-          },
-          title: `
-            <span>Kurt und Silvia</span>
-            <span>Huser-Oesch Stiftung</span>
-          `,
-          content: ``
+          }
         },
         {
-          type: "card-with-image",
+          type: "image-box",
           image: {
             src: "logos/logo-casimir_eigensatz_stiftung.png",
             alt: "Logo of the Casimir Eigensatz Foundation",
             classes: "logo"
-          },
-          title: `Casimir Eigensatz Stiftung`,
-          content: ``
+          }
         }
       ]
     }
