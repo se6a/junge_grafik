@@ -1,8 +1,8 @@
 const ImageBox = getSnippet("image-box");
 
-module.exports = ({ name = "", title, image, content }) => {
-  const html = splitTemp/*html*/`
-    <article class="card ImageCard ${name}">
+module.exports = ({ classes = "", title, image, content }) => {
+  const html = splitTemp/*html*/ `
+    <article class="${classes} card ImageCard">
 
       <div class="ImageCard imageWrapper">
         ${ImageBox({ image })}
@@ -28,7 +28,7 @@ module.exports = ({ name = "", title, image, content }) => {
     </article>
   `;
 
-  const css = /*css*/`
+  const css = /*css*/ `
     .ImageCard .imageWrapper,
     .ImageCard .contentWrapper {
       position: relative;

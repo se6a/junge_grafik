@@ -3,12 +3,12 @@ module.exports = {
     title: "Association",
     description:
       "The Junge Grafik association wants to ensure that talented young graphic designers in Switzerland are supported and promoted from the very beginning of their education and training.",
-    indexed: true
+    indexed: true,
   },
   header: {
     title: "Association",
     content:
-      "The Junge Grafik association wants to ensure that talented young graphic designers in Switzerland are supported and promoted from the very beginning of their education and training. This is made possible thanks to our committed board members and the generous support of patrons, foundations and sponsors."
+      "The Junge Grafik association wants to ensure that talented young graphic designers in Switzerland are supported and promoted from the very beginning of their education and training. This is made possible thanks to our committed board members and the generous support of patrons, foundations and sponsors.",
   },
   sections: [
     {
@@ -18,42 +18,42 @@ module.exports = {
           type: "text",
           title: "About Us",
           content:
-            "Students in Swiss training institutions are producing outstanding graphic work! Many of these projects deserve to be recognized beyond their school walls and the talented students behind them should be supported and encouraged to connect with other leading designers. The Junge Grafik association has created the Junge Grafik Award to make this possible. All association members work on a voluntary basis – and are passionate about graphic culture."
+            "Students in Swiss training institutions are producing outstanding graphic work! Many of these projects deserve to be recognized beyond their school walls and the talented students behind them should be supported and encouraged to connect with other leading designers. The Junge Grafik association has created the Junge Grafik Award to make this possible. All association members work on a voluntary basis – and are passionate about graphic culture.",
         },
         {
           type: "overview",
           details: [
             {
               title: "Founding",
-              items: ["2019"]
+              items: ["2019"],
             },
             {
               title: "Aim",
               items: [
-                "Creation of an award to promote the next generation of leading graphic designers in Switzerland"
-              ]
+                "Creation of an award to promote the next generation of leading graphic designers in Switzerland",
+              ],
             },
             {
               title: "Patronage",
-              items: ["SGV Schweizer Grafiker Verband"]
+              items: ["SGV Schweizer Grafiker Verband"],
             },
             {
               title: "Partner",
-              items: ["SGD Swiss Graphic Designers"]
+              items: ["SGD Swiss Graphic Designers"],
             },
             {
               title: "Network partners",
               items: [
-                "Swiss vocational colleges (graphic design), higher technical colleges and universities of applied sciences"
-              ]
+                "Swiss vocational colleges (graphic design), higher technical colleges and universities of applied sciences",
+              ],
             },
             {
               title: "Event partner",
-              items: ["Weltformat Graphic Design Festival"]
-            }
-          ]
-        }
-      ]
+              items: ["Weltformat Graphic Design Festival"],
+            },
+          ],
+        },
+      ],
     },
     {
       type: "rows",
@@ -70,11 +70,11 @@ module.exports = {
             src: {
               sm: "assoc/jg_board-loana_boppart-sm.jpg",
               md: "assoc/jg_board-loana_boppart-md.jpg",
-              lg: "assoc/jg_board-loana_boppart-lg.jpg"
+              lg: "assoc/jg_board-loana_boppart-lg.jpg",
             },
-            alt: "Portrait of Loana Boppart"
+            alt: "Portrait of Loana Boppart",
           },
-          content: `<a class="textButton" href="http://studiolametta.ch" target="_blank">studiolametta.ch</a>`
+          content: `<a class="textButton" href="http://studiolametta.ch" target="_blank">studiolametta.ch</a>`,
         },
         {
           type: "card-with-image",
@@ -86,11 +86,11 @@ module.exports = {
             src: {
               sm: "assoc/jg_board-meret_fischli-sm.jpg",
               md: "assoc/jg_board-meret_fischli-md.jpg",
-              lg: "assoc/jg_board-meret_fischli-lg.jpg"
+              lg: "assoc/jg_board-meret_fischli-lg.jpg",
             },
-            alt: "Portrait of Meret Fischli"
+            alt: "Portrait of Meret Fischli",
           },
-          content: `<a class="textButton" href="https://meretfischli.ch" target="_blank">meretfischli.ch</a>`
+          content: `<a class="textButton" href="https://meretfischli.ch" target="_blank">meretfischli.ch</a>`,
         },
         {
           type: "card-with-image",
@@ -102,11 +102,11 @@ module.exports = {
             src: {
               sm: "assoc/jg_board-remo_stahl-sm.jpg",
               md: "assoc/jg_board-remo_stahl-md.jpg",
-              lg: "assoc/jg_board-remo_stahl-lg.jpg"
+              lg: "assoc/jg_board-remo_stahl-lg.jpg",
             },
-            alt: "Portrait of Remo Stahl"
+            alt: "Portrait of Remo Stahl",
           },
-          content: `<a class="textButton" href="https://www.maison.ooo/" target="_blank">maison.ooo</a>`
+          content: `<a class="textButton" href="https://www.maison.ooo/" target="_blank">maison.ooo</a>`,
         },
         {
           type: "card-with-image",
@@ -118,11 +118,11 @@ module.exports = {
             src: {
               sm: "assoc/jg_board-jonas_keusch-sm.jpg",
               md: "assoc/jg_board-jonas_keusch-md.jpg",
-              lg: "assoc/jg_board-jonas_keusch-lg.jpg"
+              lg: "assoc/jg_board-jonas_keusch-lg.jpg",
             },
-            alt: "Portrait of Jonas Keusch"
+            alt: "Portrait of Jonas Keusch",
           },
-          content: `<a class="textButton" href="http://studiokeusch.ch" target="_blank">studiokeusch.ch</a>`
+          content: `<a class="textButton" href="http://studiokeusch.ch" target="_blank">studiokeusch.ch</a>`,
         },
         {
           type: "card-with-image",
@@ -134,11 +134,11 @@ module.exports = {
             src: {
               sm: "assoc/jg_board-nina_ruppen-sm.jpg",
               md: "assoc/jg_board-nina_ruppen-md.jpg",
-              lg: "assoc/jg_board-nina_ruppen-lg.jpg"
+              lg: "assoc/jg_board-nina_ruppen-lg.jpg",
             },
-            alt: "Portrait of Nina Ruppen"
+            alt: "Portrait of Nina Ruppen",
           },
-          content: `<a class="textButton" href="https://ninaruppen.ch" target="_blank">ninaruppen.ch</a>`
+          content: `<a class="textButton" href="https://ninaruppen.ch" target="_blank">ninaruppen.ch</a>`,
         },
         {
           type: "card-with-image",
@@ -150,11 +150,11 @@ module.exports = {
             src: {
               sm: "assoc/jg_board-thomas_steiner-sm.jpg",
               md: "assoc/jg_board-thomas_steiner-md.jpg",
-              lg: "assoc/jg_board-thomas_steiner-lg.jpg"
+              lg: "assoc/jg_board-thomas_steiner-lg.jpg",
             },
-            alt: "Portrait of Thomas Steiner"
+            alt: "Portrait of Thomas Steiner",
           },
-          content: `<a class="textButton" href="https://steiner-grafik.ch" target="_blank">steiner-grafik.ch</a>`
+          content: `<a class="textButton" href="https://steiner-grafik.ch" target="_blank">steiner-grafik.ch</a>`,
         },
         {
           type: "card-with-image",
@@ -166,11 +166,11 @@ module.exports = {
             src: {
               sm: "assoc/jg_board-rainer_brenner-sm.jpg",
               md: "assoc/jg_board-rainer_brenner-md.jpg",
-              lg: "assoc/jg_board-rainer_brenner-lg.jpg"
+              lg: "assoc/jg_board-rainer_brenner-lg.jpg",
             },
-            alt: "Portrait of Rainer Brenner"
+            alt: "Portrait of Rainer Brenner",
           },
-          content: `<a class="textButton" href="https://rainerbrenner.ch" target="_blank">rainerbrenner.ch</a>`
+          content: `<a class="textButton" href="https://rainerbrenner.ch" target="_blank">rainerbrenner.ch</a>`,
         },
         {
           type: "card-with-image",
@@ -182,11 +182,11 @@ module.exports = {
             src: {
               sm: "assoc/jg_board-moritz_profitlich-sm.jpg",
               md: "assoc/jg_board-moritz_profitlich-md.jpg",
-              lg: "assoc/jg_board-moritz_profitlich-lg.jpg"
+              lg: "assoc/jg_board-moritz_profitlich-lg.jpg",
             },
-            alt: "Portrait of Moritz Profitlich"
+            alt: "Portrait of Moritz Profitlich",
           },
-          content: `<a class="textButton" href="https://profitlich.ch" target="_blank">profitlich.ch</a>`
+          content: `<a class="textButton" href="https://profitlich.ch" target="_blank">profitlich.ch</a>`,
         },
 
         {
@@ -199,11 +199,11 @@ module.exports = {
             src: {
               sm: "assoc/jg_board-bettina_klauser-sm.jpg",
               md: "assoc/jg_board-bettina_klauser-md.jpg",
-              lg: "assoc/jg_board-bettina_klauser-lg.jpg"
+              lg: "assoc/jg_board-bettina_klauser-lg.jpg",
             },
-            alt: "Portrait of Bettina Klauser"
+            alt: "Portrait of Bettina Klauser",
           },
-          content: ``
+          content: ``,
         },
         {
           type: "card-with-image",
@@ -215,11 +215,11 @@ module.exports = {
             src: {
               sm: "assoc/jg_board-tobias_klauser-sm.jpg",
               md: "assoc/jg_board-tobias_klauser-md.jpg",
-              lg: "assoc/jg_board-tobias_klauser-lg.jpg"
+              lg: "assoc/jg_board-tobias_klauser-lg.jpg",
             },
-            alt: "Portrait of Tobias Klauser"
+            alt: "Portrait of Tobias Klauser",
           },
-          content: `<a class="textButton" href="https://fachklassegrafik.ch" target="_blank">fachklassegrafik.ch</a>`
+          content: `<a class="textButton" href="https://fachklassegrafik.ch" target="_blank">fachklassegrafik.ch</a>`,
         },
         {
           type: "card-with-image",
@@ -231,13 +231,13 @@ module.exports = {
             src: {
               sm: "assoc/jg_board-philipp_schubiger-sm.jpg",
               md: "assoc/jg_board-philipp_schubiger-md.jpg",
-              lg: "assoc/jg_board-philipp_schubiger-lg.jpg"
+              lg: "assoc/jg_board-philipp_schubiger-lg.jpg",
             },
-            alt: "Portrait of Philipp Schubiger"
+            alt: "Portrait of Philipp Schubiger",
           },
-          content: `<a class="textButton" href="https://philipp-schubiger.ch" target="_blank">philipp-schubiger.ch</a>`
-        }
-      ]
+          content: `<a class="textButton" href="https://philipp-schubiger.ch" target="_blank">philipp-schubiger.ch</a>`,
+        },
+      ],
     },
 
     {
@@ -250,37 +250,37 @@ module.exports = {
           content: `
             <div>Philippe Desarzens</div>
             <div>Translator: French</div>
-          `
+          `,
         },
         {
           type: "card-simple",
           content: `
             <div>Sebastian Wyss</div>
             <div>Programmer</div>
-          `
+          `,
         },
         {
           type: "card-simple",
           content: `
             <div>Jakob Roduner</div>
             <div>Translator: Italian</div>
-          `
+          `,
         },
         {
           type: "card-simple",
           content: `
             <div>Benjamin Ramsauer</div>
             <div>Translator: English</div>
-          `
+          `,
         },
         {
           type: "card-simple",
           content: `
             <div>Sandro Egger</div>
             <div>Former board member</div>
-          `
-        }
-      ]
+          `,
+        },
+      ],
     },
 
     {
@@ -293,9 +293,9 @@ module.exports = {
           content: `
             <div>Laura Robinson</div>
             <div>Translator: English</div>
-          `
-        }
-      ]
+          `,
+        },
+      ],
     },
 
     {
@@ -309,7 +309,7 @@ module.exports = {
             src: "logos/logo-sgv.png",
             alt: "Logo of SGV",
             classes: "logo",
-            href: "https://sgv.ch"
+            href: "https://sgv.ch",
           },
           title: `
               <span>Patronage:</span>
@@ -319,7 +319,7 @@ module.exports = {
             <a class="textButton" href="https://sgv.ch" target="_blank">
               sgv.ch
             </a>
-          `
+          `,
         },
         {
           type: "card-with-image",
@@ -327,7 +327,7 @@ module.exports = {
             src: "logos/logo-sgd.png",
             alt: "Logo of SGD",
             classes: "logo",
-            href: "https://sgd.ch"
+            href: "https://sgd.ch",
           },
           title: `
               <span>Partner:</span>
@@ -335,7 +335,7 @@ module.exports = {
           `,
           content: `
             <a class="textButton" href="https://sgd.ch" target="_blank">sgd.ch</a>
-          `
+          `,
         },
         {
           type: "card-with-image",
@@ -343,7 +343,7 @@ module.exports = {
             src: "logos/logo-weltformat.png",
             alt: "Logo of Weltformat",
             classes: "logo",
-            href: "https://weltformat-festival.ch"
+            href: "https://weltformat-festival.ch",
           },
           title: `
               <span>Partner:</span>
@@ -353,7 +353,7 @@ module.exports = {
             <a class="textButton" href="https://weltformat-festival.ch" target="_blank">
               weltformat-festival.ch
             </a>
-          `
+          `,
         },
         {
           type: "card-with-image",
@@ -361,7 +361,7 @@ module.exports = {
             src: "logos/logo-ronorp.png",
             alt: "Logo of Ronorp",
             classes: "logo",
-            href: "https://ronorp.net"
+            href: "https://ronorp.net",
           },
           title: `
             <span>Media partner:</span>
@@ -369,9 +369,9 @@ module.exports = {
           `,
           content: `
             <a class="textButton" href="https://ronorp.net" target="_blank">ronorp.net</a>
-          `
-        }
-      ]
+          `,
+        },
+      ],
     },
 
     {
@@ -386,8 +386,8 @@ module.exports = {
             src: "logos/logo-engelberger_druck.png",
             alt: "Logo of Sponsor Engelberg Druck",
             classes: "logo",
-            href: "https://engelbergerdruck.ch"
-          }
+            href: "https://engelbergerdruck.ch",
+          },
         },
         {
           type: "image-box",
@@ -395,8 +395,8 @@ module.exports = {
             src: "logos/logo-wetalents.png",
             alt: "Logo of Sponsor We-Talents",
             classes: "logo",
-            href: "https://wetalents.net"
-          }
+            href: "https://wetalents.net",
+          },
         },
         {
           type: "image-box",
@@ -404,10 +404,19 @@ module.exports = {
             src: "logos/logo-grafikmagazin.png",
             alt: "Logo of Grafikmagazin",
             classes: "logo",
-            href: "https://grafikmagazin.de"
-          }
-        }
-      ]
+            href: "https://grafikmagazin.de",
+          },
+        },
+        {
+          type: "image-box",
+          image: {
+            src: "logos/logo-extraset.png",
+            alt: "Logo of Extraset",
+            classes: "logo",
+            href: "https://extraset.ch",
+          },
+        },
+      ],
     },
 
     {
@@ -421,8 +430,8 @@ module.exports = {
             src: "logos/logo-dinamo.png",
             alt: "Logo of Dinamo",
             classes: "logo",
-            href: "https://abcdinamo.com"
-          }
+            href: "https://abcdinamo.com",
+          },
         },
         {
           type: "image-box",
@@ -430,10 +439,10 @@ module.exports = {
             src: "logos/logo-zumstein.png",
             alt: "Logo of Zumstein",
             classes: "logo",
-            href: "https://www.zumstein.ch/"
-          }
-        }
-      ]
+            href: "https://www.zumstein.ch/",
+          },
+        },
+      ],
     },
 
     {
@@ -447,8 +456,8 @@ module.exports = {
             src: "logos/logo-an_der_reuss.png",
             alt: "Logo of Sponsor An Der Reuss",
             classes: "logo",
-            href: "https://www.anderreuss.ch/"
-          }
+            href: "https://www.anderreuss.ch/",
+          },
         },
         {
           type: "image-box",
@@ -456,8 +465,8 @@ module.exports = {
             src: "logos/logo-studio_feixen.png",
             alt: "Logo of Sponsor Studio Feixen",
             classes: "logo",
-            href: "https://www.studiofeixen.ch/"
-          }
+            href: "https://www.studiofeixen.ch/",
+          },
         },
         {
           type: "image-box",
@@ -465,8 +474,8 @@ module.exports = {
             src: "logos/logo-sonderegger.png",
             alt: "Logo of Sponsor Sonderegger",
             classes: "logo",
-            href: "https://www.sonderegger.ch/"
-          }
+            href: "https://www.sonderegger.ch/",
+          },
         },
         {
           type: "image-box",
@@ -474,8 +483,8 @@ module.exports = {
             src: "logos/logo-ast_beschriftet.png",
             alt: "Logo of AST Beschriftet",
             classes: "logo",
-            href: "https://www.ast-beschriftet.ch/"
-          }
+            href: "https://www.ast-beschriftet.ch/",
+          },
         },
         {
           type: "image-box",
@@ -483,10 +492,19 @@ module.exports = {
             src: "logos/logo-luzi_type.png",
             alt: "Logo of Luzi type",
             classes: "logo",
-            href: "https://www.luzi-type.ch/"
-          }
-        }
-      ]
+            href: "https://www.luzi-type.ch/",
+          },
+        },
+        {
+          type: "image-box",
+          image: {
+            src: "logos/logo-swiss_typefaces.png",
+            alt: "Logo of Swiss Typefaces",
+            classes: "logo",
+            href: "https://www.swisstypefaces.com/",
+          },
+        },
+      ],
     },
 
     {
@@ -500,8 +518,8 @@ module.exports = {
             src: "logos/logo-arthur_waser_foundation.png",
             alt: "Logo of the Arthur Waser Foundation",
             classes: "logo",
-            href: "https://www.arthur-waser-foundation.ch/"
-          }
+            href: "https://www.arthur-waser-foundation.ch/",
+          },
         },
         {
           type: "image-box",
@@ -509,8 +527,8 @@ module.exports = {
             src: "logos/logo-ggl.png",
             alt: "Logo of the Gemeinnützige Gesellschaft der Stadt Luzern",
             classes: "logo",
-            href: "https://ggl-luzern.ch/"
-          }
+            href: "https://ggl-luzern.ch/",
+          },
         },
         {
           type: "image-box",
@@ -518,8 +536,8 @@ module.exports = {
             src: "logos/logo-p_herzog_stiftung.png",
             alt: "Logo of the P. Herzog Foundation",
             classes: "logo",
-            href: "http://herzog-stiftung.ch/"
-          }
+            href: "http://herzog-stiftung.ch/",
+          },
         },
         {
           type: "image-box",
@@ -527,27 +545,27 @@ module.exports = {
             src: "logos/logo-josef_mueller_stiftung.png",
             alt: "Logo of the Josef Müller Foundation",
             classes: "logo",
-            href: "https://mueller-stiftung.ch"
-          }
+            href: "https://mueller-stiftung.ch",
+          },
         },
         {
           type: "image-box",
           image: {
             src: "logos/logo-huser_oesch_stiftung.png",
             alt: "Logo of the Huser Oesch Foundation",
-            classes: "logo"
-          }
+            classes: "logo",
+          },
         },
         {
           type: "image-box",
           image: {
             src: "logos/logo-casimir_eigensatz_stiftung.png",
             alt: "Logo of the Casimir Eigensatz Foundation",
-            classes: "logo"
-          }
-        }
-      ]
-    }
+            classes: "logo",
+          },
+        },
+      ],
+    },
   ],
-  footer: true
+  footer: true,
 };

@@ -34,7 +34,7 @@ body {
   --fontSize-L: 5vmin;
   --fontSize-XL: 9vmin;
 
-  --size-XS: .5vmin;
+  --size-XS: 0.5vmin;
   --size-S: 2vmin;
   --size-M: 4vmin;
   --size-L: 7.5vmin;
@@ -42,6 +42,7 @@ body {
 
   --fieldSize-M: calc(var(--size-M) * 1.4);
 
+  --buttonSize-S: calc(var(--size-S) * 1.2);
   --buttonSize-M: calc(var(--size-M) * 0.9);
   --buttonSize-L: calc(var(--size-L) * 0.9);
 
@@ -97,7 +98,7 @@ body {
   --iconSize-XS: calc(var(--size-M) * 0.6);
   --iconSize-S: calc(var(--size-M) * 0.9);
   --iconSize-M: var(--size-M);
-  
+
   --size-XS: 2vmin;
   --size-S: 3vmin;
   --size-M: 7vmin;
@@ -111,17 +112,17 @@ body {
   font-family: FeixenSansEdgy;
   font-weight: normal;
 
-  src: url("../font/StudioFeixenSans-EdgyRegular.woff2") format('woff2'),
-       url("../font/StudioFeixenSans-EdgyRegular.woff") format('woff'),
-       url("../font/StudioFeixenSans-EdgyRegular.ttf")  format('truetype')
+  src: url("../font/StudioFeixenSans-EdgyRegular.woff2") format("woff2"),
+    url("../font/StudioFeixenSans-EdgyRegular.woff") format("woff"),
+    url("../font/StudioFeixenSans-EdgyRegular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: FeixenSans;
   font-weight: normal;
-  src: url("../font/StudioFeixenSans-Regular.woff2") format('woff2'),
-       url("../font/StudioFeixenSans-Regular.woff") format('woff'),
-       url("../font/StudioFeixenSans-Regular.ttf")  format('truetype')
+  src: url("../font/StudioFeixenSans-Regular.woff2") format("woff2"),
+    url("../font/StudioFeixenSans-Regular.woff") format("woff"),
+    url("../font/StudioFeixenSans-Regular.ttf") format("truetype");
 }
 
 /*  Normalizing
@@ -193,10 +194,9 @@ textarea {
 input:hover,
 textarea:hover,
 select:hover,
-.Select .inputBox.inner:hover {
-  outline: calc(var(--borderHover) - var(--borderFull))
-           solid
-           currentColor;
+.Select .inputBox.inner:hover,
+.SelectMulti .inputBox.inner:hover {
+  outline: calc(var(--borderHover) - var(--borderFull)) solid currentColor;
 }
 
 *:focus {
@@ -206,9 +206,7 @@ select:hover,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: calc(var(--borderFocus) - var(--borderFull))
-           solid
-           currentColor;
+  outline: calc(var(--borderFocus) - var(--borderFull)) solid currentColor;
 }
 
 input::placeholder {
@@ -301,7 +299,7 @@ ul > .dash::before {
 }
 
 ul > .arrow::before {
-  content: "\2192" " ";
+  content: "\2192"" ";
 }
 
 ul > .dash::before {
@@ -389,7 +387,6 @@ ul > .dash::before {
   column-gap: var(--size-M);
 }
 
-
 .formFieldGroup.oneColumn {
   grid-template-columns: 1fr;
 }
@@ -401,7 +398,6 @@ ul > .dash::before {
 .formFieldGroup.threeColumns {
   grid-template-columns: 1fr 1fr 1fr;
 }
-
 
 .formSegment:not(:last-child),
 .formFieldGroup:not(:last-child) {
@@ -460,8 +456,6 @@ ul > .dash::before {
 .input > .placeholder {
   color: silver;
 }
-
-
 
 .form .input.--invalid:not(.Checkbox) {
   background-color: var(--red);

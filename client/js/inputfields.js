@@ -1,15 +1,15 @@
 function selectOption($field, $option) {
   if ($option.classList.contains("option")) {
-    const $input      = $field.querySelector("input");
-    const $display    = $field.querySelector(".input.Select");
+    const $input = $field.querySelector("input");
+    const $display = $field.querySelector(".input.Select");
     const $lastOption = $field.querySelector("li.option.--selected");
-    const optionId    = $option.dataset.id;
+    const optionId = $option.dataset.id;
 
     optionId !== ""
-      ? $display.innerHTML = $option.innerHTML
-      : $display.innerHTML = `<span class="placeholder">
+      ? ($display.innerHTML = $option.innerHTML)
+      : ($display.innerHTML = `<span class="placeholder">
                                 ${$field.dataset.placeholder}
-                              </span>`;
+                              </span>`);
 
     $input.value = optionId;
 
@@ -22,12 +22,55 @@ function selectOption($field, $option) {
   }
 }
 
+function selectOptionMulti($field, $option) {
+  if ($option.classList.contains("option")) {
+    const $input = $field.querySelector("input");
+    const $display = $field.querySelector(".input.SelectMulti");
+    const optionId = $option.dataset.id;
+    const optionName = $option.textContent.trim();
+    const value = JSON.parse($input.dataset.value);
+    const $newItem = selectMultiItem(optionId, optionName);
+
+    $newItem.addEventListener("click", () => {
+      let values = JSON.parse($input.dataset.value);
+      values = values.filter((v) => v !== $newItem.id);
+      $input.dataset.value = JSON.stringify(values);
+      $newItem.remove();
+      $option.classList.remove("--selected");
+    });
+
+    value.push(optionId);
+    $input.dataset.value = JSON.stringify(value);
+
+    $display.insertAdjacentElement("BEFOREEND", $newItem);
+
+    $option.classList.add("--selected");
+  }
+}
+
+function selectMultiItem(optionId, optionName) {
+  const $item = document.createElement("DIV");
+  $item.setAttribute("id", optionId);
+  $item.setAttribute("class", "selectedItem");
+  $item.innerHTML = /*html*/ `
+        <span class="Name">
+          ${optionName}
+        </span>
+        <button class="button unstyled" type="button">
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+    `;
+
+  return $item;
+}
+
 function setCheckbox($inputBox) {
-  const $checkbox    = $inputBox.parentElement;
+  const $checkbox = $inputBox.parentElement;
   const $hiddenInput = $checkbox.querySelector("input");
   const $representativeInput = $checkbox.querySelector(".input");
 
-  $hiddenInput.value = (`${$hiddenInput.value}` === "false");
+  $hiddenInput.value = `${$hiddenInput.value}` === "false";
 
   if ($hiddenInput.value === "true") {
     $representativeInput.classList.add("--checked");
@@ -36,8 +79,7 @@ function setCheckbox($inputBox) {
     if ($representativeInput.classList.contains("--invalid")) {
       $representativeInput.classList.remove("--invalid");
     }
-  }
-  else {
+  } else {
     $representativeInput.classList.remove("--checked");
     $hiddenInput.removeAttribute("checked", "false");
   }
@@ -48,10 +90,8 @@ function blurField(e) {
 }
 
 function toggleTooltip($tip) {
-  if ($tip.classList.contains("--open"))
-    closeTooltip($tip);
-  else
-    openTooltip($tip);
+  if ($tip.classList.contains("--open")) closeTooltip($tip);
+  else openTooltip($tip);
 }
 
 function openTooltip($tip) {
@@ -63,11 +103,7 @@ function openTooltip($tip) {
   $content.style.left = offsetLeft * -1 + "px";
   $content.style.width = document.documentElement.clientWidth + "px";
 
-  window.addEventListener(
-    "resize",
-    () => closeTooltip($tip),
-    { once: true }
-  );
+  window.addEventListener("resize", () => closeTooltip($tip), { once: true });
 }
 
 function closeTooltip($tip) {
@@ -81,23 +117,16 @@ function closeTooltip($tip) {
 function validate($input) {
   const isValid = $input.checkValidity();
 
-  if (! isValid) {
+  if (!isValid) {
     $input.classList.add("--invalid");
     liveValidation($input);
-  }
-
-  else
-  if ($input.classList.contains("--invalid")) {
+  } else if ($input.classList.contains("--invalid")) {
     $input.classList.remove("--invalid");
   }
 }
 
 function liveValidation($input) {
-  $input.addEventListener(
-    "input",
-    () => validate($input),
-    { once: true }
-  );
+  $input.addEventListener("input", () => validate($input), { once: true });
 }
 
 function validateSelection($inputBox) {
@@ -105,12 +134,9 @@ function validateSelection($inputBox) {
   const $hiddenInput = $inputBox.querySelector(".Select.hiddenInput");
   const isValid = $hiddenInput.checkValidity();
 
-  if (! isValid) {
+  if (!isValid) {
     $input.classList.add("--invalid");
-  }
-
-  else
-  if ($input.classList.contains("--invalid")) {
+  } else if ($input.classList.contains("--invalid")) {
     $input.classList.remove("--invalid");
   }
 }
@@ -123,26 +149,21 @@ function generalValidation($field) {
 
   if ($hiddenInput) {
     isValid = $hiddenInput.checkValidity();
-  }
-
-  else {
+  } else {
     isValid = $representativeInput.checkValidity();
   }
 
-  if (! isValid) {
+  if (!isValid) {
     $representativeInput.classList.add("--invalid");
 
     returnValue = new Promise((resolve) => {
       const Observer = new MutationObserver((e) => {
-        if (! e[0].target.classList.contains("--invalid")) {
+        if (!e[0].target.classList.contains("--invalid")) {
           resolve();
         }
       });
 
-      Observer.observe(
-        $representativeInput,
-        { attributes: true }
-      );
+      Observer.observe($representativeInput, { attributes: true });
     });
   }
 
@@ -154,8 +175,9 @@ function validateForm($submitButton, e) {
 
   const $fields = $form.querySelectorAll(".formField.--required");
 
-  const invalides = [...$fields].map((_$field) => generalValidation(_$field))
-                     .filter((_valid) => _valid !== null);
+  const invalides = [...$fields]
+    .map((_$field) => generalValidation(_$field))
+    .filter((_valid) => _valid !== null);
 
   if (invalides.length) {
     if (e) {
@@ -163,14 +185,10 @@ function validateForm($submitButton, e) {
     }
 
     $form.classList.add("--invalid");
-    Promise.allSettled(invalides)
-    .then(() => {
+    Promise.allSettled(invalides).then(() => {
       validateForm($submitButton, null);
     });
-  }
-
-  else
-  if ($form.classList.contains("--invalid")) {
+  } else if ($form.classList.contains("--invalid")) {
     $form.classList.remove("--invalid");
   }
 }
@@ -185,7 +203,7 @@ function instanciateFileInput($formField) {
   fileInputs[fileInput.id] = fileInput;
 }
 
-const FileInput = function($formField) {
+const FileInput = function ($formField) {
   const $inputBox = $formField.querySelector(".inputBox");
   const $input = $inputBox.querySelector("input[type='file']");
   const $count = $formField.querySelector(".selected > .count");
@@ -200,9 +218,9 @@ const FileInput = function($formField) {
 
     selected: {},
     accept: ($input.getAttribute("accept") || "")
-            .split(",")
-            .map((_acc) => _acc.trim())
-            .filter((_acc) => _acc !== ""),
+      .split(",")
+      .map((_acc) => _acc.trim())
+      .filter((_acc) => _acc !== ""),
     maxFiles: $input.dataset.maxfiles,
     minFiles: $input.dataset.minfiles,
     maxUploadSize: parseInt($input.dataset.maxuploadsize) * 1048576,
@@ -220,16 +238,15 @@ const FileInput = function($formField) {
       for (let i = 0; i < newFiles.length; i++) {
         const _file = newFiles[i];
 
-        if (this.checkFileCount() === false
-        || this.checkUploadSize(_file) === false
+        if (
+          this.checkFileCount() === false ||
+          this.checkUploadSize(_file) === false
         ) {
           break;
-        }
-
-        else
-        if (this.checkUniqueName(_file)
-        && this.checkFiletype(_file)
-        && await this.checkImageResolution(_file)
+        } else if (
+          this.checkUniqueName(_file) &&
+          this.checkFiletype(_file) &&
+          (await this.checkImageResolution(_file))
         ) {
           this.add(_file, i);
         }
@@ -270,9 +287,10 @@ const FileInput = function($formField) {
       const [type, subtype] = file.type.split("/");
 
       if (this.accept.length > 0) {
-        if (this.accept.includes(`${type}/*`) === false
-        && this.accept.includes(`${type}/${subtype}`) === false
-        && this.accept.includes(`.${subtype}`) === false
+        if (
+          this.accept.includes(`${type}/*`) === false &&
+          this.accept.includes(`${type}/${subtype}`) === false &&
+          this.accept.includes(`.${subtype}`) === false
         ) {
           valid = false;
         }
@@ -288,9 +306,7 @@ const FileInput = function($formField) {
       if (newUploadSize > this.maxUploadSize) {
         this.addWarning_uploadSizeExceeded();
         valid = false;
-      }
-
-      else {
+      } else {
         this.uploadSize = newUploadSize;
       }
 
@@ -305,9 +321,7 @@ const FileInput = function($formField) {
         let valid = true;
 
         img.onload = () => {
-          if (parseInt(img.width) < 2900
-          && parseInt(img.height) < 2900
-          ) {
+          if (parseInt(img.width) < 2900 && parseInt(img.height) < 2900) {
             this.addWarning_tooSmallImage();
             valid = false;
           }
@@ -320,7 +334,9 @@ const FileInput = function($formField) {
     add(file, index) {
       this.selected[file.name] = file;
       this.$inputBox.insertAdjacentElement(
-        "AFTERBEGIN", this.insertHtmlItem(file.name, index));
+        "AFTERBEGIN",
+        this.insertHtmlItem(file.name, index)
+      );
     },
 
     remove(e, filename, id) {
@@ -340,7 +356,7 @@ const FileInput = function($formField) {
 
       $item.setAttribute("id", id);
       $item.setAttribute("class", "fileItem");
-      $item.innerHTML = /*html*/`
+      $item.innerHTML = /*html*/ `
           <span class="Filename">
             ${filename}
           </span>
@@ -350,11 +366,9 @@ const FileInput = function($formField) {
           </button>
       `;
 
-      $item.addEventListener(
-        "click",
-        (e) => this.remove(e, filename, id),
-        { once: true }
-      );
+      $item.addEventListener("click", (e) => this.remove(e, filename, id), {
+        once: true,
+      });
 
       return $item;
     },
@@ -377,8 +391,7 @@ const FileInput = function($formField) {
         this.hasMinimum = true;
         this.removeWarning_notEnoughFiles();
         this.$input.setCustomValidity("");
-      }
-      else {
+      } else {
         this.hasMinimum = false;
         this.$input.setCustomValidity(false);
       }
@@ -418,7 +431,7 @@ const FileInput = function($formField) {
 
     removeWarning_tooSmallImage() {
       this.$inputBox.classList.remove("--tooSmallImage");
-    }
+    },
   };
 
   $input.removeAttribute("required");
@@ -437,7 +450,7 @@ function instanciateTextInput($formField) {
   textInputs[textInput.id] = textInput;
 }
 
-const TextInput = function($formField) {
+const TextInput = function ($formField) {
   const $inputBox = $formField.querySelector(".inputBox");
   const $textarea = $inputBox.querySelector("textarea");
   const $count = $formField.querySelector(".selected > .count");
@@ -462,8 +475,7 @@ const TextInput = function($formField) {
       }
 
       this.$count.innerHTML = this.count;
-    }
-
+    },
   };
 
   $textarea.addEventListener("input", () => instance.updateCount());

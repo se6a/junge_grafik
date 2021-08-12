@@ -1,33 +1,22 @@
 const PAGE = {
   $: {
-    rows: null
+    rows: null,
   },
   sizes: {
     lg: "(min-width: 1000px)",
     md: "(min-width: 600px) and (max-width: 999px)",
-    sm: "(max-width: 599px)"
-  }
+    sm: "(max-width: 599px)",
+  },
 };
 
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-    attachMediaQueryListener();
-    showContacts();
-  }
-);
+document.addEventListener("DOMContentLoaded", () => {
+  attachMediaQueryListener();
+  showContacts();
+});
 
-window.addEventListener(
-  "dragover",
-  (e) => e.preventDefault(),
-  false
-);
+window.addEventListener("dragover", (e) => e.preventDefault(), false);
 
-window.addEventListener(
-  "drop",
-  (e) => e.preventDefault(),
-  false
-);
+window.addEventListener("drop", (e) => e.preventDefault(), false);
 
 function attachMediaQueryListener() {
   for (const _size in PAGE.sizes) {
@@ -38,18 +27,12 @@ function attachMediaQueryListener() {
     }
 
     if (_mediaQuery.addEventListener) {
-      _mediaQuery.addEventListener(
-        "change",
-        (q) => setDocumentSize(_size, q)
-      );
+      _mediaQuery.addEventListener("change", (q) => setDocumentSize(_size, q));
     }
 
     // Safari Support:
-    else
-    if (_mediaQuery.addListener) {
-      _mediaQuery.addListener(
-        (q) => setDocumentSize(_size, q)
-      );
+    else if (_mediaQuery.addListener) {
+      _mediaQuery.addListener((q) => setDocumentSize(_size, q));
     }
   }
 }
@@ -57,13 +40,13 @@ function attachMediaQueryListener() {
 function setDocumentSize(size, q) {
   if (q.matches) {
     const newSize = `--size-${size}`;
-    const lastSize = [...document.body.classList].filter(
-      (_class) => _class.startsWith("--size"))[0];
+    const lastSize = [...document.body.classList].filter((_class) =>
+      _class.startsWith("--size")
+    )[0];
 
     if (lastSize) {
       document.body.classList.replace(lastSize, newSize);
-    }
-    else {
+    } else {
       document.body.classList.add(newSize);
     }
 
@@ -73,14 +56,12 @@ function setDocumentSize(size, q) {
 
 function makeId(addition = "") {
   const random = Math.round(Math.random() * 1000);
-  return (new Date().getTime().toString(16) + random) + addition;
-};
+  return new Date().getTime().toString(16) + random + addition;
+}
 
 function toggleDropdown($dropdown) {
-  if ($dropdown.classList.contains("--open"))
-    closeDropdown($dropdown);
-  else
-    openDropdown($dropdown);
+  if ($dropdown.classList.contains("--open")) closeDropdown($dropdown);
+  else openDropdown($dropdown);
 }
 
 function openDropdown($dropdown) {
@@ -106,14 +87,13 @@ function subscribeNewsletter($form) {
   formdata.set("action[newsletter-opt-in]", "Abschicken");
 
   postRequest("email", formdata)
+    .then(() => {
+      $form.classList.add("--subscribed");
+    })
 
-  .then(() => {
-    $form.classList.add("--subscribed");
-  })
-
-  .catch(() => {
-    $form.classList.add("--failed");
-  });
+    .catch(() => {
+      $form.classList.add("--failed");
+    });
 }
 
 function toggleMenu($menuButton) {
@@ -123,34 +103,28 @@ function toggleMenu($menuButton) {
 
 function postRequest(endpoint, data) {
   return fetch(
-    new Request(
-      `${HOST}/api/${endpoint}`,
-      {
-        method: "POST",
-        body: data
-      }
-    )
-  )
-
-  .then((res) => {
+    new Request(`${HOST}/api/${endpoint}`, {
+      method: "POST",
+      body: data,
+    })
+  ).then((res) => {
     if (res.ok === false) {
       throw Error(`Status: ${res.status}`);
-    }
-    else {
+    } else {
       return res;
     }
   });
 }
 
 function maybeQuery(name, selector) {
-  if (! PAGE.$[name]) {
+  if (!PAGE.$[name]) {
     PAGE.$[name] = document.querySelectorAll(selector);
   }
 }
 
 function setCssVariables() {
   const vars = {
-    "--scrollbarWidth": `${scrollbarWidth()}px`
+    "--scrollbarWidth": `${scrollbarWidth()}px`,
   };
 
   for (const _var in vars) {
@@ -163,9 +137,9 @@ function scrollbarWidth() {
 }
 
 function easyDecode(cypher) {
-  const contact = [...cypher].map(
-    (_char) => String.fromCharCode(Math.sqrt(_char))
-  ).join("");
+  const contact = [...cypher]
+    .map((_char) => String.fromCharCode(Math.sqrt(_char)))
+    .join("");
   return contact;
 }
 
@@ -175,9 +149,10 @@ function showContacts() {
     $contacts.forEach((_$contact) => {
       const _cypher = JSON.parse(_$contact.dataset.contact);
       const _decoded = easyDecode(_cypher);
-      const _$textbox =  _$contact.querySelector(".text")
-                     || _$contact.querySelector(".label")
-                     || _$contact;
+      const _$textbox =
+        _$contact.querySelector(".text") ||
+        _$contact.querySelector(".label") ||
+        _$contact;
 
       _$contact.setAttribute("href", `mailto:${_decoded}`);
       _$textbox.innerHTML = _decoded;
@@ -202,17 +177,14 @@ function scrollToTop() {
     if (nextOffset > 2) {
       window.scrollTo(0, nextOffset);
       scrollToTop();
-    }
-    else {
+    } else {
       window.scrollTo(0, 0);
     }
   });
 
-  window.addEventListener(
-    "mousewheel",
-    () => cancelAnimationFrame(raf),
-    { once: true }
-  );
+  window.addEventListener("mousewheel", () => cancelAnimationFrame(raf), {
+    once: true,
+  });
 }
 
 function sniffBrowser() {
@@ -225,57 +197,53 @@ function sniffBrowser() {
 
   // For Chrome
   if ((OffsetVersion = browserAgent.indexOf("Chrome")) !== -1) {
-      browserName = "Chrome";
-      browserVersion = browserAgent.substring(OffsetVersion + 7);
+    browserName = "Chrome";
+    browserVersion = browserAgent.substring(OffsetVersion + 7);
   }
 
   // For Microsoft internet explorer
   else if ((OffsetVersion = browserAgent.indexOf("MSIE")) !== -1) {
-      browserName = "Microsoft Internet Explorer";
-      browserVersion = browserAgent.substring(OffsetVersion + 5);
+    browserName = "Microsoft Internet Explorer";
+    browserVersion = browserAgent.substring(OffsetVersion + 5);
   }
 
   // For Firefox
   else if ((OffsetVersion = browserAgent.indexOf("Firefox")) !== -1) {
-      browserName = "Firefox";
+    browserName = "Firefox";
   }
 
   // For Safari
   else if ((OffsetVersion = browserAgent.indexOf("Safari")) !== -1) {
-      browserName = "Safari";
-      browserVersion = browserAgent.substring(OffsetVersion + 7);
-      if ((OffsetVersion = browserAgent.indexOf("Version")) !== -1)
-          browserVersion = browserAgent.substring(OffsetVersion + 8);
+    browserName = "Safari";
+    browserVersion = browserAgent.substring(OffsetVersion + 7);
+    if ((OffsetVersion = browserAgent.indexOf("Version")) !== -1)
+      browserVersion = browserAgent.substring(OffsetVersion + 8);
   }
 
   // For other browser "name/version" is at the end of userAgent
-  else if ((Offset = browserAgent.lastIndexOf(" ") + 1)
-      < (OffsetVersion = browserAgent.lastIndexOf("/"))) {
-      browserName = browserAgent.substring(Offset, OffsetVersion);
-      browserVersion = browserAgent.substring(OffsetVersion + 1);
-      if (browserName.toLowerCase() === browserName.toUpperCase()) {
-          browserName = navigator.appName;
-      }
+  else if (
+    (Offset = browserAgent.lastIndexOf(" ") + 1) <
+    (OffsetVersion = browserAgent.lastIndexOf("/"))
+  ) {
+    browserName = browserAgent.substring(Offset, OffsetVersion);
+    browserVersion = browserAgent.substring(OffsetVersion + 1);
+    if (browserName.toLowerCase() === browserName.toUpperCase()) {
+      browserName = navigator.appName;
+    }
   }
 
   // Trimming the fullVersion string at
   // semicolon/space if present
   if ((ix = browserVersion.indexOf(";")) !== -1)
-      browserVersion = browserVersion.substring(0, ix);
+    browserVersion = browserVersion.substring(0, ix);
   if ((ix = browserVersion.indexOf(" ")) !== -1)
-      browserVersion = browserVersion.substring(0, ix);
+    browserVersion = browserVersion.substring(0, ix);
 
   browserMajorVersion = parseInt("" + browserVersion, 10);
   if (isNaN(browserMajorVersion)) {
-      browserVersion = "" + parseFloat(navigator.appVersion);
-      browserMajorVersion = parseInt(navigator.appVersion, 10);
+    browserVersion = "" + parseFloat(navigator.appVersion);
+    browserMajorVersion = parseInt(navigator.appVersion, 10);
   }
-
-  console.log("Name of Browser = ", browserName);
-  console.log("Full version = ", browserVersion);
-  console.log("Major version = ", browserMajorVersion);
-  console.log("navigator.appName = ", navigator.appName);
-  console.log("navigator.userAgent = ", navigator.userAgent);
 
   document.body.classList.add(`--${browserName.toLowerCase()}`);
 }

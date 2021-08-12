@@ -128,10 +128,6 @@
 
 ******************************************************************************/
 
-const {
-  performance
-} = require("perf_hooks");
-
 /*  Build
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
 async function build(req) {
@@ -148,7 +144,7 @@ function _assembleRaw(req) {
   const data = {
     ...getData(`view-${viewName}`),
     viewName,
-    req
+    req,
   };
 
   const $site = getSite("main");
@@ -160,7 +156,7 @@ function _assembleRaw(req) {
 function _flatten_rc(raw, css = {}) {
   const _name = raw[0];
   const _temp = raw[1];
-  const _css  = raw[2] || "";
+  const _css = raw[2] || "";
 
   let flatHtml = "";
   css[_name] = _css;
@@ -168,20 +164,19 @@ function _flatten_rc(raw, css = {}) {
   if (Array.isArray(_temp))
     for (let i = 0; i < _temp.length; i++) {
       const _tempPart = _temp[i];
-      if (Array.isArray(_tempPart))
-        flatHtml += _flatten_rc(_tempPart, css)[0];
-      else
-        flatHtml += _tempPart;
+      if (Array.isArray(_tempPart)) flatHtml += _flatten_rc(_tempPart, css)[0];
+      else flatHtml += _tempPart;
     }
-  else
-    flatHtml = _temp;
+  else flatHtml = _temp;
 
   return [flatHtml, css];
 }
 
 function _stringifyCss(cssList) {
   return Object.keys(cssList).reduce(
-    (total, _key) => (total += cssList[_key]), "");
+    (total, _key) => (total += cssList[_key]),
+    ""
+  );
 }
 
 function _injectCss(html, css) {
@@ -198,7 +193,7 @@ function _getTemplate(path) {
   }
 
   return $temp;
-};
+}
 
 /******************************************************************************
 
@@ -212,10 +207,8 @@ global.splitTemp = (strings, ...variables) => {
   const splitted = [];
 
   for (let i = 0; i < strings.length; i++) {
-    if (strings[i] !== "")
-      splitted.push(strings[i]);
-    if (variables[i])
-      splitted.push(variables[i]);
+    if (strings[i] !== "") splitted.push(strings[i]);
+    if (variables[i]) splitted.push(variables[i]);
   }
 
   return splitted;
@@ -224,20 +217,16 @@ global.splitTemp = (strings, ...variables) => {
 global.$attr = (data) => {
   const attr = [];
 
-  if (data.class)
-    attr.push(`class="${data.class}"`);
+  if (data.class) attr.push(`class="${data.class}"`);
 
-  if (data.style)
-    attr.push(`style="${data.style}"`);
+  if (data.style) attr.push(`style="${data.style}"`);
 
   if (data.attr) {
-    if (Array.isArray(data.attr))
-      data.attr = data.attr.join(" ");
+    if (Array.isArray(data.attr)) data.attr = data.attr.join(" ");
     attr.push(data.attr);
   }
 
-  if (attr.length > 0)
-    attr.unshift("");
+  if (attr.length > 0) attr.unshift("");
 
   return attr.join(" ");
 };
@@ -259,9 +248,7 @@ global.lang = (tag, texts) => {
         `;
       }
     });
-  }
-
-  else {
+  } else {
     html = tag;
   }
 
@@ -271,28 +258,21 @@ global.lang = (tag, texts) => {
 global.buildSections = (sections) => {
   const built = [];
 
-  sections.forEach(
-    (_section) => {
-      let sectTemp;
+  sections.forEach((_section) => {
+    let sectTemp;
 
-      try {
-        sectTemp = getSection(_section.type);
-      }
-
-      catch (e) {
-        sectTemp = getSnippet(_section.type);
-      }
-
-      finally {
-        if (typeof sectTemp === "function") {
-          built.push("", sectTemp(_section));
-        }
-        else {
-          built.push("", "--template not found--");
-        }
+    try {
+      sectTemp = getSection(_section.type);
+    } catch (e) {
+      sectTemp = getSnippet(_section.type);
+    } finally {
+      if (typeof sectTemp === "function") {
+        built.push("", sectTemp(_section));
+      } else {
+        built.push("", "--template not found--");
       }
     }
-  );
+  });
 
   const builtDone = ["buildSections.fn", [...built, ""]];
 
@@ -304,12 +284,11 @@ global.getView = (name) => _getTemplate(`b_views/${name}.view.js`);
 global.getSection = (name) => _getTemplate(`c_sections/${name}.sect.js`);
 global.getSnippet = (name) => _getTemplate(`d_snippets/${name}.snip.js`);
 global.getJs = (name) => require(`${__basedir}/functions/${name}.js`);
-global.getData = (name) => Object.deepCopy_(
-                            require(`${__basedir}/client/data/${name}.data`));
+global.getData = (name) =>
+  Object.deepCopy_(require(`${__basedir}/client/data/${name}.data`));
 
 global.makeId = () => {
-  return (new Date().getTime().toString(16)
-  + Math.floor(Math.random() * 100000));
+  return new Date().getTime().toString(16) + Math.floor(Math.random() * 100000);
 };
 
 /*  Modules

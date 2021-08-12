@@ -2,20 +2,20 @@ function calcUsePlaceholder(itemCount, maxLength) {
   return itemCount % maxLength > 0;
 }
 
-module.exports = ({ content, length = 4, title, subtitle }) => {
-  const useTitle       = title ? "--use" : "";
-  const useSubtitle    = subtitle ? "--use" : "";
+module.exports = ({ content, length = 4, title, subtitle, classes = "" }) => {
+  const useTitle = title ? "--use" : "";
+  const useSubtitle = subtitle ? "--use" : "";
 
   const responsiveLength = {
     lg: length,
     md: Math.ceil(length / 2),
-    sm: Math.ceil(length / 4)
+    sm: Math.ceil(length / 4),
   };
 
   const responsiveLengthArr = JSON.stringify([
     responsiveLength.lg,
     responsiveLength.md,
-    responsiveLength.sm
+    responsiveLength.sm,
   ]);
 
   const usePlaceholder = `
@@ -28,9 +28,9 @@ module.exports = ({ content, length = 4, title, subtitle }) => {
   const itemSizeMd = 100 / responsiveLength.md + "%";
   const itemSizeSm = 100 / responsiveLength.sm + "%";
 
-  const html = splitTemp/*html*/`
+  const html = splitTemp/*html*/ `
     <section
-      class="layoutSection Rows"
+      class="layoutSection Rows ${classes}"
       data-length='${responsiveLengthArr}'
       data-items="${content.length}"
     >
@@ -52,7 +52,7 @@ module.exports = ({ content, length = 4, title, subtitle }) => {
     </section>
   `;
 
-  const css = /*css*/`
+  const css = /*css*/ `
     .Rows.header > * {
       display: none;
     }
