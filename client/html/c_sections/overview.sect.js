@@ -1,5 +1,5 @@
 function Detail({ title, items }) {
-  return /*html*/`
+  return /*html*/ `
     <article class="Overview item">
 
       <header class="OverviewItem header">
@@ -14,9 +14,7 @@ function Detail({ title, items }) {
           if (_item.startsWith("– ")) {
             classes = ' class="dash"';
             _item = _item.slice(2);
-          }
-          else
-          if (_item.startsWith("> ")) {
+          } else if (_item.startsWith("> ")) {
             classes = ' class="arrow"';
             _item = _item.slice(2);
           }
@@ -32,9 +30,10 @@ function Columns(details) {
   const columns = [];
   // range[0] = column 1
   // range[1] = column 2
-  const range = details.length > 2
-                    ? [Math.ceil(details.length / 2), details.length]
-                    : [details.length, null];
+  const range =
+    details.length > 2
+      ? [Math.ceil(details.length / 2), details.length]
+      : [details.length, null];
 
   let crntItem = 0;
 
@@ -54,13 +53,13 @@ function Columns(details) {
 }
 
 module.exports = ({ details }) => {
-  const html = /*html*/`
+  const html = /*html*/ `
     <section class="Overview box">
       ${Columns(details)}
     </section>
   `;
 
-  const css = /*css*/`
+  const css = /*css*/ `
     .--size-lg .Overview.box {
       display: grid;
     }

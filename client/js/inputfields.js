@@ -37,10 +37,13 @@ function selectOptionMulti($field, $option) {
       $input.dataset.value = JSON.stringify(values);
       $newItem.remove();
       $option.classList.remove("--selected");
+      $input.dispatchEvent(new InputEvent("update"));
     });
 
     value.push(optionId);
     $input.dataset.value = JSON.stringify(value);
+
+    $input.dispatchEvent(new InputEvent("update"));
 
     $display.insertAdjacentElement("BEFOREEND", $newItem);
 

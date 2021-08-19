@@ -1,7 +1,9 @@
 const HeaderView = getSection("header-view");
 const Rows = getSection("rows");
 const Select = getSnippet("input-select-multi");
-const ButtonRounded = getSnippet("button-rounded");
+const CategoryBadges = getSnippet("category-badges");
+
+const getProjects = getJs("get-projects");
 
 const options = [
   { id: "Animation design", all: "Animation design" },
@@ -19,9 +21,12 @@ const options = [
   { id: "Typeface design", all: "Typeface design" },
   { id: "Typography", all: "Typography" },
   { id: "Web design", all: "Web design" },
-].map(({ id, all }) => ({ id, all: "#" + all.replace(" design", "") }));
+].map(({ id, all }) => ({
+  id: "#" + all.replace(" design", ""),
+  all: "#" + all.replace(" design", ""),
+}));
 
-function ProjectGallery() {
+function ProjectCard(project) {
   const html = [
     /*html*/ `
       <p class="Description">
@@ -29,26 +34,29 @@ function ProjectGallery() {
       </p>
       <div class="Categories">
     `,
-    ...options.reduce((categories, option) => {
-      categories.push(
-        ButtonRounded({
-          classes: "badge Category",
-          size: "S",
-          label: option.all,
-        })
-      );
-      return categories;
-    }, []),
+    CategoryBadges(project),
     `</div>`,
   ];
 
   const css = splitTemp/*html*/ ``;
 
-  return ["project-gallery.fn", html, ""];
+  return ["project-card.fn", html, ""];
 }
 
-module.exports = () => {
+function categoryClasses(project) {
+  const categories = Object.keys(project)
+    .filter((k) => k.startsWith("tag-"))
+    .map((k) => "#" + project[k].replace(" design", ""));
+
+  return categories.join(" ");
+}
+
+module.exports = async () => {
+  const projects = await getProjects.all();
+
   const html = splitTemp/*html*/ `
+    <script defer type="text/javascript" src="/js/archive.js"></script>
+
     <main class="VIEW Archive">
       ${HeaderView({
         title: "Winners 2021",
@@ -62,14 +70,14 @@ module.exports = () => {
       ${Rows({
         length: 4,
         classes: "ProjectGallery",
-        content: [1, 2, 3, 4].map((project) => ({
+        content: projects.map((project) => ({
           type: "card-with-image",
-          classes: "Project",
+          classes: `Project ${categoryClasses(project)}`,
           image: {
             src: "logos/logo-dinamo.png",
           },
-          title: "Hello",
-          content: ProjectGallery(),
+          title: project.projekttitel,
+          content: ProjectCard(project),
         })),
       })}
 
@@ -89,6 +97,10 @@ module.exports = () => {
       display: flex;
       gap: var(--size-XS);
       flex-wrap: wrap;
+    }
+
+    .Project.card.--hidden {
+      display: none
     }
 
     .badge.Category {

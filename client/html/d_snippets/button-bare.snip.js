@@ -62,6 +62,7 @@ module.exports = ({
 
     .button .label {
       pointer-events: none;
+      white-space: nowrap;
     }
     
     .button:not(.unstyled):hover {
