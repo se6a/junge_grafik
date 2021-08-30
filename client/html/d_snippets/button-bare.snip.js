@@ -53,7 +53,7 @@ module.exports = ({
     }
 
     .button:not(.unstyled).--S {
-      padding: 0 calc(var(--size-S) / 2);
+      padding: 0 calc(var(--size-S) / 1.5);
     }
 
     .button:not(.unstyled).--S .label {

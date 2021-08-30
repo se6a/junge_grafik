@@ -1,9 +1,9 @@
 const ImageBox = getSnippet("image-box");
 
-module.exports = ({ classes = "", title, image, content }) => {
+module.exports = ({ classes = "", title, image, content, link = "" }) => {
+  const onclick = link ? `onclick="document.location.href='${link}'"` : "";
   const html = splitTemp/*html*/ `
-    <article class="${classes} card ImageCard">
-
+    <article class="${classes} card ImageCard" ${onclick}>
       <div class="ImageCard imageWrapper">
         ${ImageBox({ image })}
         <div class="pushHeight"></div>
@@ -24,11 +24,27 @@ module.exports = ({ classes = "", title, image, content }) => {
 
         </div>
       </div>
-
     </article>
   `;
 
   const css = /*css*/ `
+    ${
+      link
+        ? /*css*/ `
+      article.card {
+        cursor: pointer;
+        outline: 0px solid black;
+        transition: outline 100ms;
+      }
+
+      article.card:hover {
+        outline: calc(var(--borderHover) - var(--borderHalf)) solid black;
+        z-index: 100;
+      }
+    `
+        : ""
+    }
+
     .ImageCard .imageWrapper,
     .ImageCard .contentWrapper {
       position: relative;

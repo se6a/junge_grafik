@@ -1,7 +1,8 @@
 const HeaderView = getSection("header-view");
 const Rows = getSection("rows");
-const Select = getSnippet("input-select-multi");
+const SelectMulti = getSnippet("input-select-multi");
 const CategoryBadges = getSnippet("category-badges");
+const reproLinks = require("../../data/reprolinks.data.js");
 
 const getProjects = getJs("get-projects");
 
@@ -26,12 +27,10 @@ const options = [
   all: "#" + all.replace(" design", ""),
 }));
 
-function ProjectCard(project) {
+function ProjectCardContent(project) {
   const html = [
     /*html*/ `
-      <p class="Description">
-        Zwanzig Jahre Kulturbüro Zürich
-      </p>
+      <p class="Description"></p>
       <div class="Categories">
     `,
     CategoryBadges(project),
@@ -40,7 +39,7 @@ function ProjectCard(project) {
 
   const css = splitTemp/*html*/ ``;
 
-  return ["project-card.fn", html, ""];
+  return ["project-card.fn", html, css];
 }
 
 function categoryClasses(project) {
@@ -51,8 +50,20 @@ function categoryClasses(project) {
   return categories.join(" ");
 }
 
+function shuffleProjects(projects) {
+  const shuffled = [];
+
+  do {
+    randomIndex = Math.floor(Math.random() * projects.length);
+    shuffled.push(projects.splice(randomIndex, 1)[0]);
+  } while (projects.length);
+
+  return shuffled;
+}
+
 module.exports = async () => {
   const projects = await getProjects.all();
+  const shuffledProjects = shuffleProjects([...projects]);
 
   const html = splitTemp/*html*/ `
     <script defer type="text/javascript" src="/js/archive.js"></script>
@@ -63,21 +74,21 @@ module.exports = async () => {
       })}
 
       <section style="z-index: 10; overflow: visible;" class="layoutSection fullpage box ProjectFilter">
-        Filter
-        ${Select({ options })}
+        ${SelectMulti({ label: { all: "Filter" }, options })}
       </section>
 
       ${Rows({
         length: 4,
         classes: "ProjectGallery",
-        content: projects.map((project) => ({
+        content: shuffledProjects.map((project) => ({
           type: "card-with-image",
           classes: `Project ${categoryClasses(project)}`,
           image: {
-            src: "logos/logo-dinamo.png",
+            src: `symphony/${reproLinks[project.id][0]}`,
           },
           title: project.projekttitel,
-          content: ProjectCard(project),
+          content: ProjectCardContent(project),
+          link: `http://localhost:3000/project?id=${project.id}`,
         })),
       })}
 
@@ -101,6 +112,10 @@ module.exports = async () => {
 
     .Project.card.--hidden {
       display: none
+    }
+
+    .Project.card > .contentWrapper > .box {
+      justify-content: space-between;
     }
 
     .badge.Category {

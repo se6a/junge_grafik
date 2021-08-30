@@ -53,6 +53,7 @@ function Columns(details) {
 }
 
 module.exports = ({ details }) => {
+  details = details.filter((d) => Object.keys(d).length > 0);
   const html = /*html*/ `
     <section class="Overview box">
       ${Columns(details)}

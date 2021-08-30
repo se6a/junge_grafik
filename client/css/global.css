@@ -34,6 +34,11 @@ body {
   --fontSize-L: 5vmin;
   --fontSize-XL: 9vmin;
 
+  --kerning-S: calc(var(--fontSize-S) * 0.05);
+  --kerning-M: calc(var(--fontSize-M) * 0.02);
+  --kerning-L: calc(var(--fontSize-L) * 0.01);
+  --kerning-XL: calc(var(--fontSize-XL) * 0.01);
+
   --size-XS: 0.5vmin;
   --size-S: 2vmin;
   --size-M: 4vmin;
@@ -42,7 +47,7 @@ body {
 
   --fieldSize-M: calc(var(--size-M) * 1.4);
 
-  --buttonSize-S: calc(var(--size-S) * 1.2);
+  --buttonSize-S: calc(var(--size-S) * 1.4);
   --buttonSize-M: calc(var(--size-M) * 0.9);
   --buttonSize-L: calc(var(--size-L) * 0.9);
 
@@ -65,45 +70,50 @@ body {
 }
 
 .--size-md {
-  --footerHeight: 50vmin;
-
-  --fontSize-S: 2vmin;
-  --listHeight-S: 3.1vmin;
-  --fontSize-M: 2.5vmin;
-  --fontSize-L: 5.6vmin;
-  --fontSize-XL: 9.6vmin;
-
   --size-XS: 1vmin;
   --size-S: 2vmin;
   --size-M: 4.5vmin;
   --size-L: 8vmin;
   --size-XL: 8vmin;
+
+  --footerHeight: 50vmin;
+
+  --fontSize-S: 1.7vmin;
+  --fontSize-M: 2.5vmin;
+  --fontSize-L: 5.6vmin;
+  --fontSize-XL: 9.6vmin;
+
+  --listHeight-S: 3.1vmin;
+
+  --buttonSize-S: calc(var(--size-S) * 1.6);
 }
 
 .--size-sm {
+  --size-XS: 2vmin;
+  --size-S: 3vmin;
+  --size-M: 7vmin;
+  --size-L: 10vmin;
+  --size-XL: 18vmin;
+
   --headerHeight: 15vmin;
   --footerHeight: 150vmin;
 
-  --fontSize-S: 4vmin;
-  --listHeight-S: 5.5vmin;
+  --fontSize-S: 3.5vmin;
   --fontSize-M: 5vmin;
   --fontSize-L: 7vmin;
   --fontSize-XL: 11vmin;
 
+  --listHeight-S: 5.5vmin;
+
   --fieldSize-M: calc(var(--size-M) * 1.4);
 
+  --buttonSize-S: calc(var(--size-S) * 1.8);
   --buttonSize-M: calc(var(--size-M) * 1.1);
   --buttonSize-L: calc(var(--size-L) * 0.9);
 
   --iconSize-XS: calc(var(--size-M) * 0.6);
   --iconSize-S: calc(var(--size-M) * 0.9);
   --iconSize-M: var(--size-M);
-
-  --size-XS: 2vmin;
-  --size-S: 3vmin;
-  --size-M: 7vmin;
-  --size-L: 10vmin;
-  --size-XL: 18vmin;
 }
 
 /*  Font
@@ -270,20 +280,32 @@ body[data-lang="it"] .langOption:not(.it):not(.all) {
 /*  Elements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-h1 {
+h1,
+.--XL {
   font-size: var(--fontSize-XL);
   line-height: var(--lineHeight-XL);
   margin-bottom: var(--size-L);
+  letter-spacing: var(--kerning-L);
 }
 
-h2 {
+h2,
+.--L {
   font-size: var(--fontSize-L);
   line-height: var(--lineHeight-L);
+  letter-spacing: var(--kerning-L);
 }
 
-h3 {
+h3,
+.--M {
   font-size: var(--fontSize-M);
   line-height: var(--lineHeight-M);
+  letter-spacing: var(--kerning-M);
+}
+
+.--S {
+  font-size: var(--fontSize-S);
+  line-height: var(--lineHeight-S);
+  letter-spacing: var(--kerning-S);
 }
 
 ul > .arrow,

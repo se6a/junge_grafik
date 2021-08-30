@@ -1,6 +1,5 @@
 const DropDownIcon = getSnippet("icon-dropdown");
 const Tooltip = getSnippet("tooltip");
-const ButtonRounded = getSnippet("button-rounded");
 
 function SelectOptions(options = []) {
   const done = options.reduce((all, _option) => {
@@ -151,7 +150,7 @@ module.exports = ({
       color: var(--white);
     }
 
-    .SelectMulti.inputBox.inner:focus-within .icon {
+    .SelectMulti.inputBox.inner:focus-within .icon.Dropdown {
       transform: rotate(180deg);
     }
 
@@ -178,21 +177,32 @@ module.exports = ({
     }
 
     .selectedItem > .button {
-      height: 100%;
+      height: var(--size-M);
       width: var(--size-M);
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: transform 100ms;
     }
 
-    .selectedItem > .button .line {
+    .selectedItem .icon.Close {
+      height: inherit;
+      width: inherit;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: width 100ms, height 100ms;
+    }
+
+    .selectedItem .icon.Close > .line {
       transform: rotate(45deg);
       width: 40%;
       position: absolute;
     }
 
-    .selectedItem > .button .line:first-child {
+    .selectedItem .icon.Close > .line:first-child {
       transform: rotate(-45deg);
     }
 
@@ -201,14 +211,26 @@ module.exports = ({
       display: inline;
     }
 
-    .Upload.button:hover .icon,
     .selectedItem:hover {
       background-color: var(--colorKey);
     }
 
-    .Upload.button:hover .symbol,
     .selectedItem:hover > * {
       color: var(--white);
+    }
+
+    .selectedItem .button:focus {
+      outline: 0;
+    }
+
+    .selectedItem .button:hover > .icon.Close {
+      width: 120%;
+      height: 120%;
+    }
+
+    .selectedItem .button:focus > .icon.Close {
+      width: 150%;
+      height: 150%;
     }
   `;
 

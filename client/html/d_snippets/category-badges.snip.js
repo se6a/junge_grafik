@@ -7,9 +7,21 @@ module.exports = (project) => {
 
   const html = splitTemp/*html*/ `
     <div class="CategoryBadges">
-      ${project[`tag-1`] ? Badge({ label: label(project[`tag-1`]) }) : ""}
-      ${project[`tag-2`] ? Badge({ label: label(project[`tag-2`]) }) : ""}
-      ${project[`tag-3`] ? Badge({ label: label(project[`tag-3`]) }) : ""}
+      ${
+        project[`tag-1`]
+          ? Badge({ size: "S", label: label(project[`tag-1`]) })
+          : ""
+      }
+      ${
+        project[`tag-2`]
+          ? Badge({ size: "S", label: label(project[`tag-2`]) })
+          : ""
+      }
+      ${
+        project[`tag-3`]
+          ? Badge({ size: "S", label: label(project[`tag-3`]) })
+          : ""
+      }
     </div>
   `;
 

@@ -11,7 +11,12 @@ function Sources(src) {
       source += `<source media="(${media[_size]})" srcset="./media/${src[_size]}">`;
     }
   } else {
-    source = `<source media="" srcset="./media/${src}">`;
+    if (src.startsWith("symphony/")) {
+      source = `<source media="" srcset="https://api.jungegrafik.ch/workspace/medien/einreichungen/${src.replace(
+        "symphony/",
+        ""
+      )}">`;
+    } else source = `<source media="" srcset="./media/${src}">`;
   }
 
   return source;

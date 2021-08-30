@@ -60,8 +60,10 @@ function selectMultiItem(optionId, optionName) {
           ${optionName}
         </span>
         <button class="button unstyled" type="button">
-          <span class="line"></span>
-          <span class="line"></span>
+          <i class="icon Close">
+            <span class="line"></span>
+            <span class="line"></span>
+          </i>
         </button>
     `;
 
