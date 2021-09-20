@@ -416,6 +416,15 @@ module.exports = {
             href: "https://extraset.ch",
           },
         },
+        {
+          type: "image-box",
+          image: {
+            src: "logos/logo-mockup_maison.png",
+            alt: "Logo of Mockup.Maison",
+            classes: "logo",
+            href: "https://www.mockup.maison",
+          },
+        },
       ],
     },
 
@@ -431,15 +440,6 @@ module.exports = {
             alt: "Logo of Dinamo",
             classes: "logo",
             href: "https://abcdinamo.com",
-          },
-        },
-        {
-          type: "image-box",
-          image: {
-            src: "logos/logo-zumstein.png",
-            alt: "Logo of Zumstein",
-            classes: "logo",
-            href: "https://www.zumstein.ch/",
           },
         },
       ],
@@ -462,7 +462,7 @@ module.exports = {
         {
           type: "image-box",
           image: {
-            src: "logos/logo-studio_feixen.png",
+            src: "logos/logo-studio_feixen_fonts.png",
             alt: "Logo of Sponsor Studio Feixen",
             classes: "logo",
             href: "https://www.studiofeixen.ch/",
@@ -502,6 +502,97 @@ module.exports = {
             alt: "Logo of Swiss Typefaces",
             classes: "logo",
             href: "https://www.swisstypefaces.com/",
+          },
+        },
+
+        {
+          type: "image-box",
+          image: {
+            src: "logos/logo-h+m.png",
+            alt: "Logo of H+M",
+            classes: "logo",
+            href: "https://www.hinderer-muehlich.de/eng/start/about-us/about-us/kurz-group.html",
+          },
+        },
+
+        {
+          type: "image-box",
+          image: {
+            src: "logos/logo-welti_furrer.png",
+            alt: "Logo of Welti Furrer",
+            classes: "logo",
+            href: "https://www.welti-furrer.ch/",
+          },
+        },
+      ],
+    },
+
+    {
+      type: "rows",
+      length: 8,
+      subtitle: "Thin sponsors",
+      content: [
+        {
+          type: "image-box",
+          image: {
+            src: "logos/logo-snac.png",
+            alt: "Logo of SNAC Grafik Design und Typografie",
+            classes: "logo",
+            href: "https://www.snac.ch/",
+          },
+        },
+        {
+          type: "image-box",
+          image: {
+            src: "logos/logo-einfach_siebdruck.png",
+            alt: "Logo of Einfach Siebdruck",
+            classes: "logo",
+            href: "https://www.einfachsiebdruck.ch/ueber-uns",
+          },
+        },
+        {
+          type: "image-box",
+          image: {
+            src: "logos/logo-museum_fuer_gestaltung.png",
+            alt: "Logo of Museum Für Gestaltung Zürich",
+            classes: "logo",
+            href: "https://museum-gestaltung.ch/de/",
+          },
+        },
+        {
+          type: "image-box",
+          image: {
+            src: "logos/logo-papeterie_zumstein_ag.png",
+            alt: "Logo of Papeterie Zumstein AG",
+            classes: "logo",
+            href: "https://www.zumstein.ch/",
+          },
+        },
+        {
+          type: "image-box",
+          image: {
+            src: "logos/logo-niggli_verlag.png",
+            alt: "Logo of Niggli Verlag",
+            classes: "logo",
+            href: "https://www.niggli.ch/",
+          },
+        },
+
+        {
+          type: "image-box",
+          image: {
+            src: "logos/logo-richard_frick.png",
+            alt: "Logo of Richard Frick",
+            classes: "logo",
+          },
+        },
+        {
+          type: "image-box",
+          image: {
+            src: "logos/logo-leuchtturm1917.png",
+            alt: "Logo of Leuchturm 1917",
+            classes: "logo",
+            href: "https://www.leuchtturm1917.ch/",
           },
         },
       ],

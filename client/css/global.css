@@ -29,7 +29,7 @@ body {
   --listHeight-L: 1.7;
   --listHeight-XL: 1.7;
 
-  --fontSize-S: 1.4vmin;
+  --fontSize-S: 1.5vmin;
   --fontSize-M: 1.9vmin;
   --fontSize-L: 5vmin;
   --fontSize-XL: 9vmin;
@@ -78,7 +78,7 @@ body {
 
   --footerHeight: 50vmin;
 
-  --fontSize-S: 1.7vmin;
+  --fontSize-S: 1.8vmin;
   --fontSize-M: 2.5vmin;
   --fontSize-L: 5.6vmin;
   --fontSize-XL: 9.6vmin;
@@ -90,7 +90,7 @@ body {
 
 .--size-sm {
   --size-XS: 2vmin;
-  --size-S: 3vmin;
+  --size-S: 3.5vmin;
   --size-M: 7vmin;
   --size-L: 10vmin;
   --size-XL: 18vmin;

@@ -113,6 +113,15 @@ module.exports = {
             href: "https://extraset.ch/",
           },
         },
+        {
+          type: "image-box",
+          image: {
+            src: "logos/logo-mockup_maison.png",
+            alt: "Logo of Mockup.Maison",
+            classes: "logo",
+            href: "https://www.mockup.maison",
+          },
+        },
       ],
     },
   ],
