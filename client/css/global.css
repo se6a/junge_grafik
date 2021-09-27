@@ -44,6 +44,7 @@ body {
   --size-M: 4vmin;
   --size-L: 7.5vmin;
   --size-XL: 9vmin;
+  --size-2XL: 18vmin;
 
   --fieldSize-M: calc(var(--size-M) * 1.4);
 
@@ -67,6 +68,13 @@ body {
   --animate-long: 1500ms;
 
   font-size: 1vmin;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+  body {
+    --borderFull: 1.5px;
+    --borderHalf: 0.5px;
+  }
 }
 
 .--size-md {
@@ -293,6 +301,7 @@ h2,
   font-size: var(--fontSize-L);
   line-height: var(--lineHeight-L);
   letter-spacing: var(--kerning-L);
+  margin-bottom: var(--size-L);
 }
 
 h3,
@@ -321,7 +330,7 @@ ul > .dash::before {
 }
 
 ul > .arrow::before {
-  content: "\2192"" ";
+  content: "\2192";
 }
 
 ul > .dash::before {
@@ -378,9 +387,13 @@ ul > .dash::before {
 }
 
 .line {
-  height: 0;
   border-bottom: var(--borderFull) solid currentColor;
-  display: block;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+  .line {
+    margin: -1px;
+  }
 }
 
 /*  Form

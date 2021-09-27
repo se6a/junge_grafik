@@ -1,25 +1,22 @@
 const UnderlinedMulti = getSnippet("text-underlined-multiline");
+const Picture = getSnippet("picture");
 
 module.exports = ({ title = "", image = "", content }) => {
-  const showImage   = image
-                    ? ""
-                    : 'style="display: none;"';
-  const showTitle   = title
-                    ? ""
-                    : 'style="display: none;"';
-  const showContent = content
-                    ? ""
-                    : 'style="display: none;"';
+  const showImage = image ? "" : 'style="display: none;"';
+  const showTitle = title ? "" : 'style="display: none;"';
+  const showContent = content ? "" : 'style="display: none;"';
 
-  const showText    = showTitle !== "" && showContent !== ""
-                    ? 'style="display: none;"'
-                    : "";
+  const showText =
+    showTitle !== "" && showContent !== "" ? 'style="display: none;"' : "";
 
-  const html = splitTemp/*html*/`
+  const html = splitTemp/*html*/ `
     <header class="HEADER-VIEW">
       <div class="HeaderView image" ${showImage}>
-        <img src="${image}">
-        </svg>
+        ${
+          image
+            ? Picture({ src: image, alt: "Header image. No description." })
+            : null
+        }
       </div>
 
       <div class="HeaderView textWrapper" ${showText}>
@@ -36,7 +33,7 @@ module.exports = ({ title = "", image = "", content }) => {
     </header>
   `;
 
-  const css = /*css*/`
+  const css = /*css*/ `
     .HEADER-VIEW {
       display: flex;
       flex-direction: column;
@@ -52,7 +49,7 @@ module.exports = ({ title = "", image = "", content }) => {
       justify-content: space-between;
       padding: calc(var(--size-S) + var(--headerHeight))
                var(--size-S)
-               var(--size-M)
+               var(--size-S)
                var(--size-S);
     }
 
@@ -62,7 +59,7 @@ module.exports = ({ title = "", image = "", content }) => {
       align-items: center;
     }
 
-    .HeaderView.image > img {
+    .HeaderView.image > picture > img {
       margin-top: calc(var(--headerHeight) - 3px);
       width: 100%;
     }

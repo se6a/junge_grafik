@@ -1,6 +1,6 @@
 module.exports = {
   meta: {
-    title: "Archive",
+    title: "Winners",
     description: "The winner projects.",
     indexed: true,
   },

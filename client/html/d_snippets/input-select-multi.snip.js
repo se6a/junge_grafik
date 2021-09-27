@@ -150,6 +150,12 @@ module.exports = ({
       color: var(--white);
     }
 
+    .SelectMulti.inputBox.inner:focus-within .options {
+      display: block;
+      background-color: var(--colorKey);
+      color: var(--white);
+    }
+
     .SelectMulti.inputBox.inner:focus-within .icon.Dropdown {
       transform: rotate(180deg);
     }

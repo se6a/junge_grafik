@@ -8,22 +8,24 @@ const buildResponse = require("../functions/templating");
 
 /*  Routes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+Router.get(/^\/(index\/?)?$/, resetUrl, buildResponse, send);
+
 Router.get(
-  /^\/(index\/?)?$/,
-  resetUrl,
+  /^\/2021-\d+$/,
+  (req, res, next) => {
+    const [, year, projectId] = req.url.match(/\/(\d{4})-(\d+)/);
+    req.url = `/project?id=${projectId}`;
+    req.query.id = projectId;
+    next();
+  },
   buildResponse,
   send
 );
 
 function buildRoutes() {
-  Server.cache.viewsByName
-    .forEach((_view) => {
-      Router.get(
-        `/${_view}*`,
-        buildResponse,
-        send
-      );
-    });
+  Server.cache.viewsByName.forEach((_view) => {
+    Router.get(`/${_view}*`, buildResponse, send);
+  });
 }
 
 /*  Middleware

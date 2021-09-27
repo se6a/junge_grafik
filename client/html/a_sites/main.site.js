@@ -1,46 +1,46 @@
 const Header = getSection("header");
 const Footer = getSection("footer");
-const Menu   = getSection("menu");
+const Menu = getSection("menu");
 
 function getUrlLanguage(req) {
   let lang;
 
-  if (req.query.lang
-  && ["fr", "de", "it"].includes(req.query.lang)) {
+  if (req.query.lang && ["fr", "de", "it"].includes(req.query.lang)) {
     lang = req.query.lang;
-  }
-
-  else {
+  } else {
     lang = req.headers.host.includes("jeunegraphisme")
-         ? "fr"
-         : req.headers.host.includes("giovanegrafica")
-         ? "it"
-         : "de";
+      ? "fr"
+      : req.headers.host.includes("giovanegrafica")
+      ? "it"
+      : "de";
   }
 
   return lang;
 }
 
 module.exports = async (data) => {
-  const View     = getView(data.viewName);
+  const View = getView(data.viewName);
   const language = getUrlLanguage(data.req);
 
-  const seoMeta  = ENV.environment === "dev"
-                || data.meta.indexed === false
-                 ? `<meta name="robots" content="noindex,nofollow"/>`
-                 : "";
+  const seoMeta =
+    ENV.environment === "dev" || data.meta.indexed === false
+      ? `<meta name="robots" content="noindex,nofollow"/>`
+      : "";
 
-  const title    = {
-                    fr: "Jeune Graphisme",
-                    de: "Junge Grafik",
-                    it: "Giovane Grafica"
-                   }[language];
+  const title = {
+    fr: "Jeune Graphisme",
+    de: "Junge Grafik",
+    it: "Giovane Grafica",
+  }[language];
 
-  const titleAddition = data.meta.title
-                      ? `: ${data.meta.title}`
-                      : "";
+  const titleAddition = data.meta.title ? `: ${data.meta.title}` : "";
 
-  const html = splitTemp/*html*/`
+  const viewName = [...data.viewName].reduce(
+    (str, chr, i) => (str += i === 0 ? chr.toUpperCase() : chr),
+    ""
+  );
+
+  const html = splitTemp/*html*/ `
     <!DOCTYPE html>
     <html lang="en">
 
@@ -56,13 +56,17 @@ module.exports = async (data) => {
         <meta property="og:type" content="website">
         <meta property="og:title" content="Junge Grafik">
         <meta property="og:description" content="${data.meta.description}">
-        <meta property="og:image" content="https://${data.req.headers.host}/media/opengraph/shareimage.jpg">
+        <meta property="og:image" content="https://${
+          data.req.headers.host
+        }/media/opengraph/shareimage.jpg">
         <meta name="twitter:card" content="summary_large_image">
         <meta property="twitter:domain" content="jungegrafik.ch">
         <meta property="twitter:url" content="https://jungegrafik.ch">
         <meta name="twitter:title" content="Junge Grafik">
         <meta name="twitter:description" content="${data.meta.description}">
-        <meta name="twitter:image" content="https://${data.req.headers.host}/media/opengraph/shareimage.jpg">
+        <meta name="twitter:image" content="https://${
+          data.req.headers.host
+        }/media/opengraph/shareimage.jpg">
         <!-- ----- -->
 
         ${seoMeta}
@@ -75,9 +79,9 @@ module.exports = async (data) => {
         <inject-css />
       </head>
 
-      <body data-lang="${language}">
+      <body class="View${viewName}" data-view="${viewName}" data-lang="${language}">
         ${Header()}
-        ${Menu()}
+        ${Menu(viewName)}
         ${await View(data)}
         ${Footer()}
         <span class="BottomLine line"></span>
@@ -90,7 +94,7 @@ module.exports = async (data) => {
     </html>
   `;
 
-  const css = /*css*/`
+  const css = /*css*/ `
     .VIEW, .MENU {
       display: flex;
       flex-direction: column;

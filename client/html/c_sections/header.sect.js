@@ -1,29 +1,45 @@
 const Underlined = getSnippet("text-underlined");
+const Button = getSnippet("button");
 
 module.exports = () => {
   const $navigation = require("./navigation.sect.js");
 
-  const html = splitTemp/*html*/`
+  const html = splitTemp/*html*/ `
     <header class="HEADER">
 
       <a class="logo" href="/home">
         <span>
-          ${Underlined(`<span class="first">Junge</span><span class="second">Grafik</span>`)}
+          ${Underlined(
+            `<span class="first">Junge</span><span class="second">Grafik</span>`
+          )}
         </span>
         <span>
-          ${Underlined(`<span class="first">Jeune</span><span class="second">Graphisme</span>`)}
+          ${Underlined(
+            `<span class="first">Jeune</span><span class="second">Graphisme</span>`
+          )}
         </span>
         <span>
-          ${Underlined(`<span class="first">Giovane</span><span class="second">Grafica</span>`)}
+          ${Underlined(
+            `<span class="first">Giovane</span><span class="second">Grafica</span>`
+          )}
         </span>
       </a>
+
+      ${
+        /* Button({
+        classes: "GoToWinner",
+        type: "link",
+        label: "Winners",
+        href: `${ENV.host}/winners`,
+      })*/ ""
+      }
 
       ${$navigation()}
 
     </header>
   `;
 
-  const css = /*css*/`
+  const css = /*css*/ `
     .HEADER {
       height: var(--headerHeight);
       width: 100%;
@@ -64,7 +80,11 @@ module.exports = () => {
     }
 
     .HEADER .logo > span:last-child .line {
-      border: none;
+      display: none;
+    }
+
+    .HEADER .logo > span {
+      margin-bottom: -1px;
     }
 
     .HEADER .logo:focus {
@@ -75,6 +95,19 @@ module.exports = () => {
     .--safari.--size-lg .HEADER .textUnderlined.innerBox,
     .--safari.--size-md .HEADER .textUnderlined.innerBox {
       margin-bottom: -1px;
+    }
+
+    .HEADER .button.GoToWinner {
+      background-color: var(--yellow);
+      border-width: var(--borderHalf);
+      width: calc(var(--headerHeight) * 3);
+      justify-content: center;
+    }
+
+    .--size-sm .HEADER .button.GoToWinner,
+    .ViewWinners .button.GoToWinner,
+    .ViewProject .button.GoToWinner {
+      display: none;
     }
   `;
 

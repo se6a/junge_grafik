@@ -1,9 +1,7 @@
 const Underlined = getSnippet("text-underlined");
 
 module.exports = (text) => {
-  const dings = text instanceof Object
-              ? text
-              : { all: text };
+  const dings = text instanceof Object ? text : { all: text };
 
   const lines = [];
 
@@ -20,13 +18,9 @@ module.exports = (text) => {
     lines.push("</div>");
   }
 
-  const html = [
-    `<div class="textUnderlinedMulti">`,
-      ...lines,
-    `</div>`
-  ];
+  const html = [`<div class="textUnderlinedMulti">`, ...lines, `</div>`];
 
-  const css = /*css*/`
+  const css = /*css*/ `
     .textUnderlinedMulti {
       width: 100%;
     }
@@ -56,6 +50,12 @@ module.exports = (text) => {
       bottom: calc(var(--borderFull) * -1);
       width: 100vw;
       position: absolute;
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 1.5) {
+      .textUnderlinedMulti .textUnderlined.outerBox .line {
+        margin: unset;
+      }
     }
 
     .textUnderlinedMulti .textUnderlined.outerBox:last-child {

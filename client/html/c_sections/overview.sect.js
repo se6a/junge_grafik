@@ -1,10 +1,12 @@
-function Detail({ title, items }) {
+const Underlined = getSnippet("text-underlined-multiline");
+
+function Detail({ title, items, hasArrow = true }) {
   return /*html*/ `
     <article class="Overview item">
 
       <header class="OverviewItem header">
         <h3>
-          &rarr; ${title}
+          ${hasArrow ? `&rarr; ` : ""}${title}
         </h3>
       </header>
 
@@ -52,26 +54,45 @@ function Columns(details) {
   return columns.join("");
 }
 
-module.exports = ({ details }) => {
+module.exports = ({ title = "", details }) => {
   details = details.filter((d) => Object.keys(d).length > 0);
-  const html = /*html*/ `
+  const useTitle = title ? "--use" : "";
+
+  console.log("details", title);
+
+  const html = splitTemp/*html*/ `
     <section class="Overview box">
-      ${Columns(details)}
+      <header class="Overview title ${useTitle}">
+        <h2>
+          ${title ? Underlined(title) : ""}
+        </h2>
+      </header>
+      <div class="Overview columns">
+        ${Columns(details)}
+      </div>
     </section>
   `;
 
   const css = /*css*/ `
-    .--size-lg .Overview.box {
+    .Overview.title {
+      display: none;
+    }
+
+    .Overview.title.--use {
+      display: block;
+    }
+
+    .--size-lg .Overview .columns {
       display: grid;
     }
 
-    .--size-lg .Overview.box {
+    .--size-lg .Overview .columns {
       grid-gap: var(--size-M);
       grid-template-columns: 1fr 1fr;
     }
 
-    .--size-md .Overview.box,
-    .--size-sm .Overview.box {
+    .--size-md .Overview .columns,
+    .--size-sm .Overview .columns {
       grid-template-columns: 1fr;
     }
 

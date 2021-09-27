@@ -39,37 +39,49 @@ module.exports.all = async () => {
 };
 
 module.exports.first = async () => {
-  const raw = (
-    await (
-      await fetch(
-        `https://api.jungegrafik.ch/symphony/api/entries/einreichungen/?${auth}&format=json&limit=1`,
-        {
-          method: "GET",
-        }
-      )
-    ).json()
-  ).response.entry;
+  try {
+    const raw = (
+      await (
+        await fetch(
+          `https://api.jungegrafik.ch/symphony/api/entries/einreichungen/?${auth}&format=json&limit=1`,
+          {
+            method: "GET",
+          }
+        )
+      ).json()
+    ).response.entry;
 
-  const formatted = formatResponse(raw);
+    const formatted = formatResponse(raw);
 
-  return formatted;
+    return formatted;
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 module.exports.byId = async (id) => {
-  const raw = (
-    await (
-      await fetch(
-        `https://api.jungegrafik.ch/symphony/api/entries/einreichungen/${id}/?${auth}&format=json`,
-        {
-          method: "GET",
-        }
-      )
-    ).json()
-  ).response.entry;
+  console.log("HERE first", id);
 
-  const formatted = formatResponse(raw);
+  try {
+    const raw = (
+      await (
+        await fetch(
+          `https://api.jungegrafik.ch/symphony/api/entries/einreichungen/${id}/?${auth}&format=json`,
+          {
+            method: "GET",
+          }
+        )
+      ).json()
+    ).response.entry;
+    console.log("HEEERE", raw);
 
-  return formatted;
+    if (!raw) throw "no response";
+
+    const formatted = formatResponse(raw);
+    return formatted;
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 module.exports.reproLinksOf = async (id) => {

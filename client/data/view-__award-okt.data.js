@@ -2,13 +2,13 @@ module.exports = {
   meta: {
     title: "Award",
     description:
-      "Is your graphic design work more than just a project? Then we’d love to see it. You can submit any outstanding work you’ve created as part of your studies.",
+      "Submissions will open again in 2023! In the meantime you can check out the winning projects on our winner page.",
     indexed: true,
   },
   header: {
     title: "Award",
     content:
-      "Is your graphic design work more than just a project? Then we’d love to see it. You can submit any outstanding work you’ve created as part of your studies.",
+      "Submissions will open again in 2023! In the meantime you can check out the winning projects on our winner page.",
   },
   sections: [
     {
@@ -18,7 +18,7 @@ module.exports = {
           type: "text",
           title: "Award",
           content:
-            "Junge Grafik recognizes innovative, diverse and exceptional graphic work created during a student’s education and training. The Junge Grafik Award was created for both apprentices and students across Switzerland. The 30 winners will be nominated by a renowned jury and awarded their prize at the Weltformat Graphic Design Festival. All winning entries will be exhibited in multiple locations across Switzerland and featured on this website and in a printed publication – providing the prize winners with an ideal platform to promote their work.",
+            "Junge Grafik recognizes innovative, diverse and exceptional graphic work created during a student’s education and training. The biennial Junge Grafik Award was created for both apprentices and students across Switzerland. The 30 winners will be nominated by a renowned jury and awarded their prize at the ceremony event. All winning entries will be exhibited in multiple locations across Switzerland and featured on this website and in a printed publication – providing the prize winners with an ideal platform to promote their work.",
         },
         {
           type: "overview",
@@ -48,20 +48,16 @@ module.exports = {
             },
             {
               title: "Submission",
-              items: ["– Via this website", "– Deadline: 19.07.2021"],
+              items: ["– Our biennial award opens submission again in 2023"],
             },
             {
               title: "Award",
-              items: [
-                "– Awarded every two years",
-                "– 30 entries selected",
-                "– The first awards will be presented in October 2021",
-              ],
+              items: ["– The next awards will be presented in 2023"],
             },
             {
               title: "Prize",
               items: [
-                "Winners will receive a certificate, a bag filled with great prizes (typefaces, magazines, books, vouchers and much more!) and a small amount of money. Their work will also be featured in the publication “Junge Grafik 2021”.",
+                "Winners will receive a certificate, a bag filled with great prizes (typefaces, magazines, books, vouchers and much more!) and a small amount of money. Most importantly: All the winning projects will be displayed in a publication as well as a travelling exhibition. In addition the projects will be uploaded to the winner page on our website.",
               ],
             },
             {
@@ -71,19 +67,19 @@ module.exports = {
             {
               title: "Award ceremony / Afterparty",
               items: [
-                "Winners will have the chance to network with other leading young designers over drinks at an exclusive afterparty as part of the Weltformat Graphic Design Festival. ",
+                "At the ceremony and the afterparty the winners have the chance to network with other leading graphic designers.",
               ],
             },
             {
               title: "Exhibition",
               items: [
-                "A travelling exhibition will showcase the winning entries in schools across Switzerland.",
+                "A travelling exhibition showcases the winning entries in schools across Switzerland.",
               ],
             },
             {
               title: "Publication",
               items: [
-                "The publication “Junge Grafik 2021” will feature all the winning entries. Prize winners, sponsors, media contacts and participating schools will receive a free copy. Additional copies will be sold in the Junge Grafik online shop.",
+                "The winning entries will be featured on this website and shared on our social media channels.",
               ],
             },
             {

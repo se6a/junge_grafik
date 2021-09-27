@@ -17,7 +17,7 @@ module.exports = {
           type: "text",
           size: "l",
           content:
-            "WOW! Thanks to all the students who have submitted more than 300 projects during the last couple of months. We are looking forward to announcing the winners at our award night on October 9.",
+            "This year’s winners are online! Check out the stunning projects of our new generation of swiss graphic designers. Big up to all the students and apprentices who submitted their works to the Junge Grafik Award 2021. Grazie! Merci! Danke!",
         },
       ],
     },
@@ -25,48 +25,10 @@ module.exports = {
       type: "columns",
       content: [
         {
-          type: "overview",
-          title: "Award Event",
-          details: [
-            {
-              title: "09.10.2021, 20:00",
-              items: ["Award ceremony"],
-              hasArrow: false,
-            },
-            {
-              title: "09.10.2021, 22:00",
-              items: ["Party"],
-              hasArrow: false,
-            },
-          ],
-        },
-        {
-          type: "overview",
-          title: "Travelling exhibition",
-          details: [
-            {
-              title: "9. – 17.10.2021",
-              items: ["Weltformat Graphic Design Festival, Luzern"],
-              hasArrow: false,
-            },
-            {
-              title: "30.10. – 7.11.2021",
-              items: ["F+F Schule für Kunst und Design Zürich"],
-              hasArrow: false,
-            },
-            {
-              title: "27.11. – 4.12.2021",
-              items: [
-                "EDHEA – Ecole de design et haute école d’art du Valais, Sierre",
-              ],
-              hasArrow: false,
-            },
-            {
-              title: "13. – 17.12.2021",
-              items: ["CFP Arts Genève"],
-              hasArrow: false,
-            },
-          ],
+          type: "text",
+          title: "Award",
+          content:
+            "Many thanks to all of you! We are still overwhelmed by all the outstanding projects. It was a close race, so make sure to submit your new projects in 2023! In the meantime you can check out the winning projects on our winner page.",
         },
       ],
     },

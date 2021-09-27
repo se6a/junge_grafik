@@ -1,37 +1,18 @@
-function Sources(src) {
-  let source = "";
-  const media = {
-    sm: "max-width: 599px",
-    md: "min-width: 600px",
-    lg: "min-width: 1200px",
-  };
-
-  if (src instanceof Object) {
-    for (const _size in src) {
-      source += `<source media="(${media[_size]})" srcset="./media/${src[_size]}">`;
-    }
-  } else {
-    if (src.startsWith("symphony/")) {
-      source = `<source media="" srcset="https://api.jungegrafik.ch/workspace/medien/einreichungen/${src.replace(
-        "symphony/",
-        ""
-      )}">`;
-    } else source = `<source media="" srcset="./media/${src}">`;
-  }
-
-  return source;
-}
+const Picture = getSnippet("picture");
 
 module.exports = ({ image }) => {
   const { src = "", alt = "no description", classes = "", href = "" } = image;
 
+  const format = src.includes("-lnd-")
+    ? "landscape"
+    : src.includes("-prt-")
+    ? "portrait"
+    : "";
+
   const html = splitTemp/*html*/ `
-    <figure class="ImageBox box ${classes}">
+    <figure class="ImageBox box ${classes} ${format}">
       ${href && `<a href=${href} target="_blank">`}
-        <picture>
-          ${Sources(src)}
-          <img class="image" alt="${alt}">
-        </picture>
+        ${Picture({ src, alt })}
       ${href && "</a>"}
     </figure>
   `;
@@ -47,13 +28,6 @@ module.exports = ({ image }) => {
 
     .ImageBox source {
       display: none;
-    }
-
-    .ImageBox .image {
-      padding: 0;
-      position: relative;
-      width: 100%;
-      height: auto;
     }
 
     .ImageBox.box::before {

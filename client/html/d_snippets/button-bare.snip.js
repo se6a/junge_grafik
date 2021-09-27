@@ -50,6 +50,7 @@ module.exports = ({
       transition: background-color 200ms;
       border: var(--borderFull) solid var(--darkViolet);
       cursor: pointer;
+      border-radius: unset;
     }
 
     .button:not(.unstyled).--S {

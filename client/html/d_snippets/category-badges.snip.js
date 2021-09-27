@@ -1,27 +1,16 @@
 const Badge = getSnippet("badge");
 
-module.exports = (project) => {
+module.exports = (tags) => {
   function label(category) {
     return `#${category.replace(" design", "")}`;
   }
 
   const html = splitTemp/*html*/ `
     <div class="CategoryBadges">
-      ${
-        project[`tag-1`]
-          ? Badge({ size: "S", label: label(project[`tag-1`]) })
-          : ""
-      }
-      ${
-        project[`tag-2`]
-          ? Badge({ size: "S", label: label(project[`tag-2`]) })
-          : ""
-      }
-      ${
-        project[`tag-3`]
-          ? Badge({ size: "S", label: label(project[`tag-3`]) })
-          : ""
-      }
+      ${tags?.[0] ? Badge({ size: "S", label: label(tags[0]) }) : ""}
+      ${tags?.[1] ? Badge({ size: "S", label: label(tags[1]) }) : ""}
+      ${tags?.[2] ? Badge({ size: "S", label: label(tags[2]) }) : ""}
+      ${tags?.[3] ? Badge({ size: "S", label: label(tags[3]) }) : ""}
     </div>
   `;
 
@@ -29,8 +18,23 @@ module.exports = (project) => {
     .CategoryBadges {
       display: flex;
       flex-direction: row;
-      gap: var(--size-XS);
+      gap: 2px 1px;
       flex-wrap: wrap;
+    }
+
+    .CategoryBadges .button.RoundedButton {
+      border: unset;
+      background-color: var(--colorKey);
+      color: var(--white);
+    }
+
+    .--size-sm .CategoryBadges .button.RoundedButton {
+      height: calc(var(--size-S) * 1.5);
+      border-radius: calc(var(--size-S) * 1.5 / 2);
+    }
+
+    .--size-sm .CategoryBadges .button.RoundedButton .label {
+      font-size: calc(var(--fontSize-S) / 1.3);
     }
   `;
 

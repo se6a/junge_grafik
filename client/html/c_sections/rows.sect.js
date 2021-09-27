@@ -59,6 +59,7 @@ module.exports = ({ content, length = 4, title, subtitle, classes = "" }) => {
 
     .Rows.title.--use {
       display: block;
+      margin: 0;
     }
 
     .Rows.subtitle.--use {

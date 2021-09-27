@@ -1,52 +1,74 @@
 const ButtonUnderlined = getSnippet("button-underlined");
 
-module.exports = () => {
-  const html = splitTemp/*html*/`
-    <section class="MENU box">
+module.exports = (crntView) => {
+  const MenuItems = [
+    {
+      label: { all: "Award" },
+      classes: "Award",
+      type: "link",
+      href: "/award",
+      size: "XL",
+    },
 
-      ${ButtonUnderlined({
-        label: { all: "Award" },
-        classes: "Award",
-        type: "link",
-        href: "/award",
-        size: "XL"
-      })}
+    // {
+    //   label: { all: "Award Winners" },
+    //   classes: "Winners",
+    //   type: "link",
+    //   href: "/winners",
+    //   size: "XL",
+    // },
 
-      ${ButtonUnderlined({
-        label: { all: "Association" },
-        classes: "Association",
-        type: "link",
-        href: "/association",
-        size: "XL"
-      })}
+    {
+      label: { all: "Association" },
+      classes: "Association",
+      type: "link",
+      href: "/association",
+      size: "XL",
+    },
 
-      ${ButtonUnderlined({
-        label: { all: "Contact" },
-        classes: "Contact",
-        type: "link",
-        href: "/contact",
-        size: "XL"
-      })}
+    {
+      label: { all: "Contact" },
+      classes: "Contact",
+      type: "link",
+      href: "/contact",
+      size: "XL",
+    },
 
-      ${ButtonUnderlined({
-        label: { all: "Follow us!" },
-        classes: "Follow",
-        type: "link",
-        href: "/follow-us",
-        size: "XL"
-      })}
+    // {
+    //   label: { all: "Shop" },
+    //   classes: "Shop",
+    //   type: "link",
+    //   href: "/shop",
+    //   size: "XL",
+    // },
 
-      ${ButtonUnderlined({
-        label: { all: "Support us!" },
-        classes: "Support",
-        type: "link",
-        href: "/support-us",
-        size: "XL"
-      })}
-    </section>
-  `;
+    {
+      label: { all: "Follow us!" },
+      classes: "Follow-us",
+      type: "link",
+      href: "/follow-us",
+      size: "XL",
+    },
 
-  const css = /*css*/`
+    {
+      label: { all: "Support us!" },
+      classes: "Support-us",
+      type: "link",
+      href: "/support-us",
+      size: "XL",
+    },
+  ];
+
+  const html = [
+    '<section class="MENU box">',
+    ...MenuItems.map((item) => {
+      if (item.classes === crntView) item.classes = item.classes + " --current";
+      return ButtonUnderlined(item);
+    }),
+    "</section>",
+  ];
+
+  const css = /*css*/ `
     .MENU {
       background-color: var(--violetBright);
       height: 100vh;
@@ -69,6 +91,10 @@ module.exports = () => {
       width: 100%;
       padding: var(--size-M) 0 0 0;
       margin: 0;
+    }
+
+    .MENU .button.UnderlinedButton.--current {
+      background-color: white;
     }
 
     .MENU .button.UnderlinedButton.Follow,

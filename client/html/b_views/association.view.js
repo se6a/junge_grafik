@@ -1,7 +1,7 @@
 const HeaderView = getSection("header-view");
 
 module.exports = (data) => {
-  const html = splitTemp/*html*/`
+  const html = splitTemp/*html*/ `
     <main class="VIEW Association">
 
       ${HeaderView(data.header)}
@@ -10,9 +10,13 @@ module.exports = (data) => {
     </main>
   `;
 
-  const css = splitTemp/*css*/`
+  const css = splitTemp/*css*/ `
     body {
       --colorTheme: var(--green);
+    }
+
+    .VIEW.Association .ImageCard.contentWrapper > .box {
+      justify-content: space-between;
     }
   `;
 
