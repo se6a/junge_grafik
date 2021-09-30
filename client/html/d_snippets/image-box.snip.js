@@ -30,7 +30,7 @@ module.exports = ({ image }) => {
       display: none;
     }
 
-    .ImageBox.box::before {
+    .ImageBox.box:not(.logo)::before {
       content: "";
       width: 100%;
       height: 100%;
@@ -41,8 +41,8 @@ module.exports = ({ image }) => {
       pointer-events: none;
     }
 
-    .ImageBox.box.logo::before {
-      mix-blend-mode: lighten;
+    .ImageBox.box.logo {
+      mix-blend-mode: darken;
     }
   `;
 

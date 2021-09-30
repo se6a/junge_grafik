@@ -301,7 +301,7 @@ h2,
   font-size: var(--fontSize-L);
   line-height: var(--lineHeight-L);
   letter-spacing: var(--kerning-L);
-  margin-bottom: var(--size-L);
+  margin-bottom: var(--size-S);
 }
 
 h3,
@@ -391,7 +391,7 @@ ul > .dash::before {
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
-  .line {
+  body:not(.--maybeFirefox) .line {
     margin: -1px;
   }
 }

@@ -38,6 +38,17 @@ module.exports = {
               items: ["Party"],
               hasArrow: false,
             },
+            {
+              title: "COVID-19 protection concept",
+              items: [
+                /*html*/ `
+                  <a class="textButton" href="media/covid-19/jg_protection_concept_210929.pdf" target="_blank">
+                    PDF
+                  </a>
+                `,
+              ],
+              hasArrow: false,
+            },
           ],
         },
         {

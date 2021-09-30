@@ -58,8 +58,6 @@ module.exports = ({ title = "", details }) => {
   details = details.filter((d) => Object.keys(d).length > 0);
   const useTitle = title ? "--use" : "";
 
-  console.log("details", title);
-
   const html = splitTemp/*html*/ `
     <section class="Overview box">
       <header class="Overview title ${useTitle}">
@@ -99,6 +97,7 @@ module.exports = ({ title = "", details }) => {
     .Overview.column {
       display: flex;
       flex-direction: column;
+      gap: var(--size-S);
     }
 
     .OverviewItem.header {
@@ -108,12 +107,6 @@ module.exports = ({ title = "", details }) => {
     .OverviewItem.content {
       font-size: var(--fontSize-S);
       line-height: var(--lineHeight-S)
-    }
-
-    .Overview.item::after {
-      content: "";
-      height: var(--size-M);
-      display: block;
     }
   `;
 

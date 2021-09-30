@@ -83,7 +83,7 @@ module.exports = () => {
       display: none;
     }
 
-    .HEADER .logo > span {
+    body:not(.--maybeFirefox) .HEADER .logo > span {
       margin-bottom: -1px;
     }
 

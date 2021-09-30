@@ -30,7 +30,6 @@ module.exports = (text) => {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-      padding-bottom: var(--size-S);
     }
 
     .textUnderlinedMulti .textUnderlined.outerBox {

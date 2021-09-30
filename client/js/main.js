@@ -192,3 +192,24 @@ function scrollToTop() {
     once: true,
   });
 }
+
+((agent) => {
+  const browser =
+    agent.indexOf("edge") > -1
+      ? "MsEdge"
+      : agent.indexOf("edg/") > -1
+      ? "EdgeChromium"
+      : agent.indexOf("opr") > -1 && !!window.opr
+      ? "Opera"
+      : agent.indexOf("chrome") > -1 && !!window.chrome
+      ? "Chrome"
+      : agent.indexOf("firefox") > -1
+      ? "Firefox"
+      : agent.indexOf("safari") > -1
+      ? "Safari"
+      : null;
+
+  if (browser) {
+    document.body.classList.add(`--maybe${browser}`);
+  }
+})(window.navigator.userAgent.toLowerCase());
