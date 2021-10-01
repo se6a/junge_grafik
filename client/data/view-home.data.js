@@ -26,16 +26,16 @@ module.exports = {
       content: [
         {
           type: "overview",
-          title: "Award Event",
+          title: "Awards event",
           details: [
             {
-              title: "09.10.2021, 20:00",
-              items: ["Award ceremony"],
+              title: "Awards ceremony",
+              items: ["09.10.2021, 20:00", "Lucerne, Neubad"],
               hasArrow: false,
             },
             {
-              title: "09.10.2021, 22:00",
-              items: ["Party"],
+              title: "Junge Grafik + Weltformat party",
+              items: ["09.10.2021, 22:00", "Lucerne, Neubad"],
               hasArrow: false,
             },
             {

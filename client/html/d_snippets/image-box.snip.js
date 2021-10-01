@@ -30,7 +30,7 @@ module.exports = ({ image }) => {
       display: none;
     }
 
-    .ImageBox.box:not(.logo)::before {
+    .ImageBox.box:not(.logo, .projectImage)::before {
       content: "";
       width: 100%;
       height: 100%;

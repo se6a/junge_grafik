@@ -4,7 +4,7 @@ const CategoryBadges = getSnippet("category-badges");
 const submissions = require("../../data/submissions/winner-2021");
 const Button = getSnippet("button");
 
-function makeLinkLabel(link) {
+function linkToLabel(link) {
   return link
     .toLowerCase()
     .replace(/^(https?:\/\/)?(www\.)?/, "")
@@ -14,7 +14,8 @@ function makeLinkLabel(link) {
 function Link(title, link) {
   if (!link) return {};
 
-  const label = makeLinkLabel(link);
+  const label = linkToLabel(link);
+  if (title === "Instagram") link = "https://instagram.com/" + link;
 
   return {
     title: title,
@@ -43,7 +44,6 @@ module.exports = async ({ req }) => {
     <main class="VIEW Project">
       ${HeaderView({
         image: `projects/${project.images[0]}`,
-        // title: `${student.firstname} ${student.lastname}`,
         content: [
           "projectHeader",
           splitTemp/*html*/ `
@@ -99,7 +99,7 @@ module.exports = async ({ req }) => {
               image: {
                 classes: "projectImage",
                 src: `projects/${image}`,
-                href: `${ENV.host}/media/projects/2021/lg/${image}`,
+                href: `${ENV.host}/media/projects/2021/lg/${image.replace("__SIZE__", "lg")}`,
               },
             };
           }),
@@ -147,7 +147,7 @@ module.exports = async ({ req }) => {
       padding-bottom: 0;
     }
 
-    .--size-lg .Project .Overview.box {
+    body.--size-lg .Project .Overview.box {
       gap: 0;
       grid-template-columns: 1fr;
     }
@@ -176,7 +176,7 @@ module.exports = async ({ req }) => {
       max-width: 37.5%;
     }
 
-    :not(.--size-lg) .Project .ImageBox.projectImage {
+    body:not(.--size-lg) .Project .ImageBox.projectImage {
       max-width: 100%;
     }
 
@@ -185,13 +185,9 @@ module.exports = async ({ req }) => {
       height: 40vw;
     }
 
-    :not(.--size-lg) .Project .VideoBox iframe {
+    body:not(.--size-lg) .Project .VideoBox iframe {
       width: 100%;
       height: 55vw;
-    }
-
-    .Project .ImageBox.projectImage::before {
-      background-color: unset;
     }
 
     .Project .button.BackToWinners {
