@@ -8,7 +8,7 @@ const options = [
   { id: "Animation design", all: "Animation design" },
   { id: "Corporate design", all: "Corporate design" },
   { id: "Editorial design", all: "Editorial design" },
-  { id: "Environmental design", all: "Environmental design" },
+  // { id: "Environmental design", all: "Environmental design" },
   { id: "Exhibition design", all: "Exhibition design" },
   { id: "Illustration", all: "Illustration" },
   { id: "Infographic design", all: "Infographic design" },

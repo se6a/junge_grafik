@@ -317,7 +317,7 @@ module.exports = {
     ],
     education: {
       institution:
-        "F+F Schule für Kunst und Design Zürich, Visuelle Gestaltung HF",
+        "F+F Schule für Kunst und Design Zürich",
       company: "Blast Off Studio, Zürich",
       type: "HF",
       year: "3",

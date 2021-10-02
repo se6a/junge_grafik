@@ -8,7 +8,7 @@ module.exports = {
   header: {
     title: "Award",
     content:
-      "Submissions will open again in 2023! In the meantime you can check out the winning projects on our winner page.",
+      /*html*/`Submissions will open again in 2023! In the meantime you can check out the winning projects on our <a class="textButton" href="/__winners-okt" target="_blank">winner page</a>.`,
   },
   sections: [
     {

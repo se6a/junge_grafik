@@ -84,21 +84,16 @@ module.exports = async ({ req }) => {
               },
               {
                 title: "School",
-                items: [education.institution],
+                items: [`${education.institution}, ${education.type}, ${["1st", "2nd", "3rd", "4th"][education.year - 1]} year`],
                 hasArrow: false,
               },
               education.company
                 ? {
                     title: "Company",
-                    items: [`${education.company}, ${education.canton}`],
+                    items: [`${education.company}`],
                     hasArrow: false,
                   }
                 : {},
-              {
-                title: "Level",
-                items: [education.type],
-                hasArrow: false,
-              },
               {
                 title: "Mentors",
                 items: [project.teacher.join(", ")],
