@@ -100,6 +100,10 @@ module.exports = ({ title = "", details }) => {
       gap: var(--size-S);
     }
 
+    body:not(.--size-lg) .Overview .column:not(:first-child) {
+      margin-top: var(--size-S);
+    }
+
     .OverviewItem.header {
       margin-bottom: var(--size-XS);
     }

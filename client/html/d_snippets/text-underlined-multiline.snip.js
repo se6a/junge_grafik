@@ -1,13 +1,13 @@
 const Underlined = getSnippet("text-underlined");
 
 module.exports = (text) => {
-  const dings = text instanceof Object ? text : { all: text };
-
+  if (!text) text = "";
+  const langOptions = text instanceof Object ? text : { all: text };
   const lines = [];
 
-  for (const _lang in dings) {
-    const _text = dings[_lang];
-    const _textParts = _text.replace(" ", " --").split("--");
+  for (const _lang in langOptions) {
+    const _text = langOptions[_lang];
+    const _textParts = _text.replace(/ /g, " --").split("--");
 
     lines.push(`<div class="langOption ${_lang}">`);
 
@@ -26,7 +26,8 @@ module.exports = (text) => {
     }
 
     .textUnderlinedMulti .langOption {
-      overflow: hidden;
+      overflow-x: clip;
+      overflow-y: visible;
       width: 100%;
       display: flex;
       flex-wrap: wrap;

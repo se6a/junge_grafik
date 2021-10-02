@@ -1,4 +1,4 @@
-const Underlined = getSnippet("text-underlined");
+const Underlined = getSnippet("text-underlined-multiline");
 
 module.exports = ({ title, content, size }) => {
   size = size || "normal";
@@ -7,7 +7,7 @@ module.exports = ({ title, content, size }) => {
 
   settingsClasses += title ? "--useTitle" : "";
 
-  const html = splitTemp/*html*/`
+  const html = splitTemp/*html*/ `
     <section class="TextSection box ${size} ${settingsClasses}">
 
       <header class="TextSection title">
@@ -16,14 +16,14 @@ module.exports = ({ title, content, size }) => {
         </h2>
       </header>
 
-      <p class="TextSection content">
+      <div class="TextSection content">
         ${content}
-      </p>
+      </div>
 
     </section>
   `;
 
-  const css = /*css*/`
+  const css = /*css*/ `
     .TextSection.box.l {
       font-size: var(--fontSize-L);
       line-height: var(--lineHeight-L);
@@ -41,6 +41,28 @@ module.exports = ({ title, content, size }) => {
 
     .TextSection.--useTitle > .title {
       display: initial;
+    }
+
+    .TextSection figure::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: var(--colorKey);
+      position: absolute;
+      mix-blend-mode: screen;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .TextSection figure {
+      position: relative;
+      line-height: 0;
+      margin-bottom: var(--size-S);
+    }
+
+    .TextSection .image,
+    .TextSection figure {
+      max-width: 100%;
     }
 
     .--size-lg .TextSection.content {

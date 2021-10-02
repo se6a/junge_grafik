@@ -1,7 +1,7 @@
 const HeaderView = getSection("header-view");
 const Rows = getSection("rows");
 const CategoryBadges = getSnippet("category-badges");
-const submissions = require("../../data/submissions/winner-2021");
+const submissions = require("../../data/submissions/winners-2021");
 const Button = getSnippet("button");
 
 function linkToLabel(link) {
@@ -11,30 +11,38 @@ function linkToLabel(link) {
     .replace(/\/$/, "");
 }
 
-function Link(title, link) {
-  if (!link) return {};
+function Link(title, links) {
+  if (!links || links.length < 1) return {};
+  if (Array.isArray(links) === false) links = [links];
+  const isInsta = title === "Instagram";
 
-  const label = linkToLabel(link);
-  if (title === "Instagram") link = "https://instagram.com/" + link;
+  links = links.map((link) => ({
+    href: isInsta ? "https://instagram.com/" + link : link,
+    label: linkToLabel(link),
+  }));
 
   return {
     title: title,
     items: [
-      /*html*/ `
+      links
+        .map(
+          (link) => /*html*/ `
         <a class="textButton"
-          href="${link}"
+          href="${link.href}"
           target="_blank"
         >
-          ${label}
+          ${link.label}
         </a>
-      `,
+      `
+        )
+        .join(", "),
     ],
     hasArrow: false,
   };
 }
 
 module.exports = async ({ req }) => {
-  const { project, student, education } = submissions[req.query.id];
+  const { project, students, education } = submissions[req.query.id];
   const prevWinnersOrder = req.query.winnersOrder || false;
   const prevWinnersFilter = req.query.winnersFilter || false;
 
@@ -47,7 +55,9 @@ module.exports = async ({ req }) => {
         content: [
           "projectHeader",
           splitTemp/*html*/ `
-            <h3>${student.firstname} ${student.lastname}<h3>
+            <h3>${students
+              .map((st) => `${st.firstname} ${st.lastname}`)
+              .join(", ")}<h3>
             <h2>${project.title}</h2>
             ${CategoryBadges(["winner2021", ...project.tags])}
           `,
@@ -68,22 +78,40 @@ module.exports = async ({ req }) => {
             title: "",
             details: [
               {
-                title: "Date of origin",
+                title: "Year of origin",
                 items: [project.year],
                 hasArrow: false,
               },
               {
-                title: "Educational institution",
-                items: [education.at],
+                title: "School",
+                items: [education.institution],
+                hasArrow: false,
+              },
+              education.company
+                ? {
+                    title: "Company",
+                    items: [`${education.company}, ${education.canton}`],
+                    hasArrow: false,
+                  }
+                : {},
+              {
+                title: "Level",
+                items: [education.type],
                 hasArrow: false,
               },
               {
-                title: "Level",
-                items: [education.level],
+                title: "Mentors",
+                items: [project.teacher.join(", ")],
                 hasArrow: false,
               },
-              Link("Portfolio", student.portfolio),
-              Link("Instagram", student.instagram),
+              Link(
+                "Portfolio",
+                students.filter((st) => st.portfolio).map((st) => st.portfolio)
+              ),
+              Link(
+                "Instagram",
+                students.filter((st) => st.instagram).map((st) => st.instagram)
+              ),
               Link("Website Prototype", project.protoSite),
             ],
           },
@@ -91,23 +119,32 @@ module.exports = async ({ req }) => {
       })}
 
       <div class="gallery box">
-        ${Rows({
-          length: 1,
-          content: project.images.slice(1, 6).map((image) => {
-            return {
-              type: "image-box",
-              image: {
-                classes: "projectImage",
-                src: `projects/${image}`,
-                href: `${ENV.host}/media/projects/2021/lg/${image.replace("__SIZE__", "lg")}`,
-              },
-            };
-          }),
-        })}
         ${
-          project?.videos
+          project?.images?.length
             ? Rows({
                 length: 1,
+                classes: "images",
+                content: project.images.slice(1, 6).map((image) => {
+                  return {
+                    type: "image-box",
+                    image: {
+                      classes: "projectImage",
+                      src: `projects/${image}`,
+                      href: `${ENV.host}/media/projects/2021/lg/${image.replace(
+                        "__SIZE__",
+                        "lg"
+                      )}`,
+                    },
+                  };
+                }),
+              })
+            : ""
+        }
+        ${
+          project?.videos?.length
+            ? Rows({
+                length: 1,
+                classes: "videos",
                 content: project?.videos.map((video) => {
                   return {
                     type: "video-box",
@@ -160,12 +197,16 @@ module.exports = async ({ req }) => {
       gap: 2px;
     }
 
-    .Project .gallery > :nth-child(2) .Rows.content {
+    .Project .gallery .images ~ .videos {
       margin-top: 2px;
     }
-  
+
     .Project .ImageBox.projectImage {
       border: unset;
+    }
+
+    .Project .ImageBox.projectImage picture {
+      justify-content: flex-start;
     }
 
     .Project .ImageBox.projectImage.landscape {

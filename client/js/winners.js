@@ -23,7 +23,6 @@ function maybeRestoreScroll() {
   // If coming back from project, scroll to position of that project in the winners gallery:
   if (queryParams.from) {
     const $card = document.querySelector(`.P-${queryParams.from}`);
-    console.log($card.offsetTop);
     scrollTo(0, $card.offsetTop);
   }
 }
@@ -47,9 +46,6 @@ function maybeRestoreFilter() {
       let values = JSON.parse($filter.dataset.value);
       values = values.filter((v) => v !== $item.id);
       $filter.dataset.value = JSON.stringify(values);
-
-      console.log("REMOVE", $item);
-
       $item.remove();
       $option.classList.remove("--selected");
       $filter.dispatchEvent(new InputEvent("update"));
@@ -65,13 +61,14 @@ function updateFilter() {
   const value = JSON.parse($filter.dataset.value);
   if (value.length) selectedCategories = value;
   else selectedCategories = "all";
-  updateCardsOnclick();
+  updateCardsATag();
   updateGallery();
 }
 
-function updateCardsOnclick() {
+function updateCardsATag() {
   [...$projectCards].forEach(($card) => {
-    const oldLink = $card.getAttribute("onclick");
+    const $aTag = $card.querySelector("a");
+    const oldLink = $aTag.getAttribute("href");
     const newLink = oldLink.replace(
       /winnersFilter=[^&']*/,
       `winnersFilter=${
@@ -80,7 +77,7 @@ function updateCardsOnclick() {
           : "false"
       }`
     );
-    $card.setAttribute("onclick", newLink);
+    $aTag.setAttribute("href", newLink);
   });
 }
 

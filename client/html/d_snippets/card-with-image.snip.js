@@ -1,9 +1,9 @@
 const ImageBox = getSnippet("image-box");
 
 module.exports = ({ classes = "", title, image, content, link = "" }) => {
-  const onclick = link ? `onclick="document.location.href='${link}'"` : "";
   const html = splitTemp/*html*/ `
-    <article class="${classes} card ImageCard" ${onclick}>
+  <article class="${classes} card ImageCard">
+  ${link ? `<a href="${link}">` : ""}
       <div class="ImageCard imageWrapper">
         ${ImageBox({ image })}
         <div class="pushHeight"></div>
@@ -24,27 +24,11 @@ module.exports = ({ classes = "", title, image, content, link = "" }) => {
 
         </div>
       </div>
+      ${link ? `</a>` : ""}
     </article>
   `;
 
   const css = /*css*/ `
-    ${
-      link
-        ? /*css*/ `
-      article.card {
-        cursor: pointer;
-        outline: 0px solid black;
-        transition: outline 100ms;
-      }
-
-      article.card:hover {
-        outline: calc(var(--borderHover) - var(--borderHalf)) solid black;
-        z-index: 100;
-      }
-    `
-        : ""
-    }
-
     .ImageCard .imageWrapper,
     .ImageCard .contentWrapper {
       position: relative;
@@ -60,6 +44,10 @@ module.exports = ({ classes = "", title, image, content, link = "" }) => {
     .ImageCard .contentWrapper,
     .ImageCard .contentWrapper .box {
       height: 100%;
+    }
+
+    .ImageCard .contentWrapper .box {
+      justify-content: space-between;
     }
 
     .ImageCard.title {
@@ -79,6 +67,19 @@ module.exports = ({ classes = "", title, image, content, link = "" }) => {
       line-height: var(--lineHeight-S);
     }
 
+    .ImageCard.card > a {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      cursor: pointer;
+      outline: 0px solid black;
+      transition: outline 100ms;
+    }
+  
+    .ImageCard.card > a:hover {
+      outline: calc(var(--borderHover) - var(--borderHalf)) solid black !important;
+      z-index: 100 !important;
+    }
   `;
 
   return ["card-with-image.snip", html, css];

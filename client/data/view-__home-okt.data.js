@@ -30,6 +30,22 @@ module.exports = {
           content:
             "Many thanks to all of you! We are still overwhelmed by all the outstanding projects. It was a close race, so make sure to submit your new projects in 2023! In the meantime you can check out the winning projects on our winner page.",
         },
+        {
+          type: "text",
+          title: "Junge Grafik 2021 publication",
+          content: /*html*/ `
+            <figure>
+              <img class="image" src="/media/assoc/md/jg_board-jonas_keusch-md.jpg">
+            </figure>
+            <p>
+              The Junge Grafik 2021 publication is a cross-section of the upcoming generation of Swiss graphic designers. On 128 pages, we present this year’s winning works, facts and figures about the submission process as well as interviews with the jury, a selection of patrons and various graphic designers.
+            </p>
+            <br>
+            <a class="textButton" href="https://checkoutpage.co/c/jungegrafik/junge-grafik-2021-publication" target="_blank">
+              Buy your copy – here and now!
+            </a>
+          `,
+        },
       ],
     },
     {

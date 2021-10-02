@@ -2,7 +2,7 @@ const HeaderView = getSection("header-view");
 const Rows = getSection("rows");
 const SelectMulti = getSnippet("input-select-multi");
 const CategoryBadges = getSnippet("category-badges");
-const submissions = require("../../data/submissions/winner-2021");
+const submissions = require("../../data/submissions/winners-2021");
 
 const options = [
   { id: "Animation design", all: "Animation design" },
@@ -92,14 +92,19 @@ module.exports = async (data) => {
       ${Rows({
         length: 4,
         classes: "ProjectGallery",
-        content: shuffledSubmissions.map(({ project, student }) => ({
+        content: shuffledSubmissions.map(({ project, students }) => ({
           type: "card-with-image",
           classes: `Project P-${project.id} ${categoryClasses(project)}`,
+          attr: `role="button" aria-pressed="false"`,
           image: {
             src: "projects/" + project.images?.[0] || "",
           },
           title: `
-            <p class="student">${student.firstname} ${student.lastname}</p>
+            <p class="students">
+              ${students
+                .map((st) => `${st.firstname} ${st.lastname}`)
+                .join(", ")}
+            </p>
             <p class="project">${project.title}</p>
           `,
           content: CardContent(project),
@@ -119,7 +124,11 @@ module.exports = async (data) => {
       --colorTheme: var(--white);
     }
 
-    .Project.card .title .student {
+    .Project.card {
+      overflow: visible;
+    }
+
+    .Project.card .title .students {
       margin-bottom: var(--size-XS);
     }
 

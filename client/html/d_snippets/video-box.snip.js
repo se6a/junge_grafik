@@ -1,6 +1,6 @@
 module.exports = (video) => {
   const { src = "", classes = "", href = "" } = video;
-  const parts = src.match(/\/(\w+)$/);
+  const parts = src.match(/([^/]+)$/);
   const videoId = Array.isArray(parts) ? parts[1] : "";
 
   const html = splitTemp/*html*/ `

@@ -51,10 +51,6 @@ module.exports = {
               items: ["– Our biennial award opens submission again in 2023"],
             },
             {
-              title: "Award",
-              items: ["– The next awards will be presented in 2023"],
-            },
-            {
               title: "Prize",
               items: [
                 "Winners will receive a certificate, a bag filled with great prizes (typefaces, magazines, books, vouchers and much more!) and a small amount of money. Most importantly: All the winning projects will be displayed in a publication as well as a travelling exhibition. In addition the projects will be uploaded to the winner page on our website.",
@@ -79,7 +75,15 @@ module.exports = {
             {
               title: "Publication",
               items: [
-                "The winning entries will be featured on this website and shared on our social media channels.",
+                /*html*/ `
+                  <p>
+                    The Junge Grafik 2021 publication is a cross-section of the upcoming generation of Swiss graphic designers. On 128 pages, we present this year’s winning works, facts and figures about the submission process as well as interviews with the jury, a selection of patrons and various graphic designers.
+                  </p>
+                  <br>
+                  <a class="textButton" href="https://checkoutpage.co/c/jungegrafik/junge-grafik-2021-publication" target="_blank">
+                    Buy your copy – here and now!
+                  </a>
+                `,
               ],
             },
             {
