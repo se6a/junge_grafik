@@ -128,11 +128,12 @@ module.exports = async (data) => {
       overflow: visible;
     }
 
-    .Project.card .title .students {
+    .Project.card .title .project {
       margin-bottom: var(--size-XS);
+      font-size: calc(var(--fontSize-M) * 1.5);
     }
 
-    .Project.card .title .project {
+    .Project.card .title .students {
       font-size: var(--fontSize-S);
       margin-bottom: var(--size-XS);
     }

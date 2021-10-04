@@ -84,7 +84,11 @@ module.exports = async ({ req }) => {
               },
               {
                 title: "School",
-                items: [`${education.institution}, ${education.type}, ${["1st", "2nd", "3rd", "4th"][education.year - 1]} year`],
+                items: [
+                  `${education.institution}, ${education.type}, ${
+                    ["1st", "2nd", "3rd", "4th"][education.year - 1]
+                  } year`,
+                ],
                 hasArrow: false,
               },
               education.company
@@ -107,7 +111,6 @@ module.exports = async ({ req }) => {
                 "Instagram",
                 students.filter((st) => st.instagram).map((st) => st.instagram)
               ),
-              Link("Website Prototype", project.protoSite),
             ],
           },
         ],

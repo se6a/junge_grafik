@@ -21,7 +21,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "Fachklasse Grafik Luzern",
+      institution: "Fachklasse Grafik",
       type: "EFZ",
       year: "4",
       canton: "lu",
@@ -38,7 +38,7 @@ module.exports = {
         "Philippe Desarzens",
       ],
       description:
-        "Meine Projektarbeit an der Fachklasse Grafik habe ich meiner unsterblichen Liebe für Pasta gewidmet. Begonnen hat alles mit einer umfangreichen Recherche rund um die Geschichte, die Form, die Geheimnisse, die Bedeutung und die Zukunft von Pasta. Entstanden ist eine romantische Liebeserklärung in Form eines Magazins: 70 Seiten schwärmen von den faszinierenden Facetten und der Schönheit dieses Grundnahrungsmittels, begleitet von leidenschaftlichen Comics und intimen Fotografien. In diesem Projekt war ich sowohl Grafikerin als auch Journalistin, Illustratorin, Fotografin, Autorin, Forscherin, Köchin und Poetin, denn: Für dich mach ich alles, meine geliebte Pasta!",
+        "Meine Projektarbeit an der Fachklasse Grafik habe ich meiner unsterblichen Liebe für Pasta gewidmet. Begonnen hat alles mit einer umfangreichen Recherche rund um die Geschichte, die Form, die Geheimnisse, die Bedeutung und die Zukunft von Pasta. Entstanden ist eine romantische Liebeserklärung in Form eines Magazins: 70 Seiten schwärmen von den faszinierenden Facetten und der Schönheit dieses Grundnahrungsmittels, begleitet von leidenschaftlichen Comics und intimen Fotografien. \r\nIn diesem Projekt war ich sowohl Grafikerin, als auch Journalistin, Illustratorin, Fotografin, Autorin, Forscherin, Köchin und Poetin, denn: Für dich mach ich alles, meine geliebte Pasta!",
       images: [
         "2021-020-laeura-maurer-__SIZE__-lnd-01.jpg",
         "2021-020-laeura-maurer-__SIZE__-lnd-02.jpg",
@@ -47,7 +47,7 @@ module.exports = {
         "2021-020-laeura-maurer-__SIZE__-lnd-05.jpg",
         "2021-020-laeura-maurer-__SIZE__-lnd-06.jpg",
       ],
-      protoSite: "",
+      protoSite: "http://läuramaurer.ch/liebe-mit-sugo",
     },
   },
 
@@ -72,7 +72,8 @@ module.exports = {
       },
     ],
     education: {
-      institution: "SUPSI Lugano",
+      institution:
+        "SUPSI – Scuola universitaria professionale della Svizzera italiana",
       company: "",
       type: "FH",
       year: "3",
@@ -80,12 +81,12 @@ module.exports = {
     },
     project: {
       id: "21",
-      title: "Segreti d’Efra",
+      title: "segreti d'Efra",
       tags: ["Editorial design", "Photography", "Typography"],
       year: "2020",
       teacher: ["Nicolas Polli"],
       description:
-        "Segreti d’Efra ha lo scopo primario di raccontare la storia del ritrovamento di un baule nella casa di mia nonna in Valle Verzasca. All’interno di questo baule vi sono fotografie e documenti appartenenti a mio bisnonno Guido Pedrazzi. L’interesse di questa scoperta sta nell’aver rinvenuto una sorprendente lettera scritta da lui, nella quale dice di aver trovato un cristallo contenente dell’oro durante una passeggiata in Val d’Efra nel 1940. Attraverso un progetto personale, storico ma anche artistico, cerco di ritrarre il fascino di questa valle ripercorrendo la vita di Guido. Iniziando, grazie a questo evento, una serie d’indagini e ricerche sia visive che teorico-storiche che mi hanno permesso di trovare un nuovo approccio per raccontare questa storia al limite tra la realtà e la finzione.",
+        "Segreti d’Efra ha lo scopo primario di raccontare la storia del ritrovamento di un baule nella casa di mia nonna in Valle Verzasca. All’interno di questo baule vi sono fotografie e documenti appartenenti a mio bisnonno Guido Pedrazzi. L’interesse di questa scoperta sta nell’aver trovato una sorprendente lettera scritta da lui, nella quale dice di aver trovato un cristallo contenente dell’oro durante una passeggiata in Val d’Efra nel 1940. Attraverso un progetto personale, storico ma anche artistico, cerco di ritrarre il fascino di questa valle ripercorrendo la vita di Guido. Iniziando, grazie a questo evento, una serie d’ indagini e ricerche sia visive che teorico-storiche che mi hanno permesso di trovare un nuovo approccio per raccontare questa storia al limite tra la realtà e la finzione",
       images: [
         "2021-021-nadine-curanz-__SIZE__-lnd-01.jpg",
         "2021-021-nadine-curanz-__SIZE__-lnd-02.jpg",
@@ -120,7 +121,9 @@ module.exports = {
       },
     ],
     education: {
-      institution: "SUPSI Lugano",
+      // at: "SUPSI – Scuola universitaria professionale della Svizzera italiana",
+      institution:
+        "Dipartimento ambienti costruzioni e design, Comunicazione visiva",
       company: "",
       type: "FH",
       year: "3",
@@ -133,7 +136,7 @@ module.exports = {
       year: "2020",
       teacher: ["Leonardo Angelucci"],
       description:
-        "NEMESI è un carattere leggibile dagli umani ma che non può essere riconosciuto dal computer. L’introduzione di nuove tecniche di machine learning nella computer vision ha permesso ai computer di processare dati in modo più efficiente. Le macchine sono ora capaci di «vedere» in un modo, che per certi aspetti è simile a come vedono gli occhi umani. Quale sarà il ruolo della tipografia in un mondo in cui occhio umano e digitale possono leggere le stesse forme e interpretare gli stessi messaggi? NEMESI mette in discussione la tecnologia e sfida i limiti dei software di Optical Character Recognition. Ho realizzato una pubblicazione cartacea che racconta NEMESI, poi ho sviluppato un’interazione digitale: due twitter-bot che provano a comunicare utilizzando il carattere NEMESI.",
+        "NEMESI è un carattere leggibile dagli umani ma che non può essere riconosciuto dal computer. L'introduzione di nuove tecniche di machine learning nella computer vision ha permesso ai computer di processare dati in modo più efficiente. Le macchine sono ora capaci di \"vedere\" in un modo, che per certi aspetti è simile a come vedono gli occhi umani. Quale sarà il ruolo della tipografia in un mondo in cui occhio umano e digitale possono leggere le stesse forme e interpretare gli stessi messaggi? NEMESI mette in discussione la tecnologia e sfida i limiti dei software di Optical Character Recognition. Ho realizzato una pubblicazione cartacea che racconta NEMESI, poi ho sviluppato un'interazione digitale: due twitter-bot che provano a comunicare utilizzando il carattere NEMESI.",
       images: [
         "2021-030-mattia-dellamora-__SIZE__-lnd-01.jpg",
         "2021-030-mattia-dellamora-__SIZE__-lnd-02.jpg",
@@ -168,7 +171,8 @@ module.exports = {
       },
     ],
     education: {
-      institution: "ECAL Lausanne",
+      // at: "ECAL – Ecole cantonale d’art de Lausanne",
+      institution: "Graphic Design",
       company: "",
       type: "FH",
       year: "3",
@@ -180,7 +184,7 @@ module.exports = {
       year: "2019",
       teacher: ["Aurèle Sack", "Guy Meldem"],
       description:
-        "Ripley is an adaptable typeface with multiple axes designed to optimize on-screen legibility. It combines historical and contemporary shapes to create a new serif design that serves as a toolbox for readers. In addition, Ripley changes by reacting to the ambient light. It thus adapts to the time of day and the light available in order to take into account that a reader’s eyes might be fatigued by the end of the day. Evolving thus throughout the reading experience, it strives to provide the best possible on-screen legibility.",
+        "Ripley is an interrogation about optimized legibility on-screen environment that develops the idea of transposing the legibility rules of a body text from print to the new media. Ripley is a mix of historical and contemporary shapes in this new serif design. This Typeface is a toolbox that compiles many axes to allow people to decide what’s the best for them. As a second step, Ripley is evolving itself by responding to the ambient light. The new experiment proposing by Ripley is the combination of the multiples axes with the ambient light embed by the screen. Adapting to fatigue eyes throughout the day increases his readability as the day goes and the ambient light changes. the more comfortable the type becomes. Ripley becomes a living organism to provide the best legibility on-screen.",
       tags: ["Typeface design", "Interaction design", "Web design"],
       images: [
         "2021-088-david-massara-__SIZE__-lnd-01.jpg",
@@ -217,7 +221,8 @@ module.exports = {
       },
     ],
     education: {
-      institution: "EAA La Chaux-de-Fonds",
+      // at: "EAA – L’Ecole d’arts appliques, La Chaux-de-Fonds",
+      institution: "Graphisme",
       company: "",
       type: "EFZ",
       year: "4",
@@ -230,7 +235,7 @@ module.exports = {
       year: "2019",
       teacher: ["Thibaud Tissot", "Vincent Devaud"],
       description:
-        "The project explores the last 60 years of newly coined words that have been added to the English language. From the word Junk Food (1960) to the word Tender-Age Shelter (2018), we see how the world has evolved technologically and culturally through the years. In the first chapter, it goes into depth regarding each word, specifically their definition, their origin etc. In the second chapter, a modern comparison of these words is made by using digital platforms, like Google and Instagram. By making this comparison, we can notice the difference between the words’ past and present usage.",
+        "It explores the last 60 years of newly coined words being added to the english language. From the word Junk Food (1960) to the word Tender-Age Shelter (2018), we see how the world has evolved technologically and culturally through the years. In the first chapter, it goes into depth regarding each word, specifically their definition, their origin, etc. In the second chapter, it makes a modern comparison of these words by using digital platforms, like Google and Instagram. By making this comparison we can visibly notice the difference between the words’ past and present usage.",
       images: [
         "2021-093-irini-gleglakou-__SIZE__-lnd-01.jpg",
         "2021-093-irini-gleglakou-__SIZE__-lnd-02.jpg",
@@ -263,7 +268,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "HEAD Genève",
+      institution: "HEAD – Haute école d’art et de design, Genève",
       company: "",
       type: "FH",
       year: "3",
@@ -276,7 +281,7 @@ module.exports = {
       tags: ["Editorial design", "Infographic design"],
       teacher: ["Xavier Erni"],
       description:
-        "Redesign of the 20 Minutes newspaper. The visual approach plays on the original concept of the newspaper, the notion of time, here used in an alarming way (movie images in relation to the subject of the article). The images of the articles are diverted to offer a filmography related to the titles of the absurd editorial line. Advertising slogans with multiple typography replace classic newspaper advertising. It was very challenging to use a digital font similar to the 20 Minutes logotype.",
+        "Redesign of the 20minutes.ch newspaper in a graphic object.\r\nThe visual approach plays on the original concept of the newspaper, the notion of time, here in an alarming way (uses of movies images in relation to the subject of the article). \r\nThe images of the articles are diverted to offer a filmography related to the titles of the absurd editorial line. \r\nAdvertising slogans with multiple typography replace classic newspaper advertising.\r\nChallenging to use a digital font alarm similar to the 20 Minutes logotype.",
       images: [
         "2021-113-leo-monnet-__SIZE__-lnd-01.jpg",
         "2021-113-leo-monnet-__SIZE__-lnd-02.jpg",
@@ -311,7 +316,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "F+F Zürich",
+      institution: "F+F Schule für Kunst und Design Zürich",
       company: "Blast Off Studio, Zürich",
       type: "HF",
       year: "3",
@@ -324,7 +329,7 @@ module.exports = {
       year: "2021",
       teacher: ["Julia Marti"],
       description:
-        "Ich stelle fest, dass mir dreidimensional generierte grafische Gestaltung vermehrt begegnet. Diese Ästhetik wird durch Designprogram-me und deren Instrumente, auf welche immer mehr Personen Zugriff haben, geschaffen und geprägt. Aufgrund dieser Beobachtung und angelehnt an diesen Stil möchte ich eine neue Bildproduktion entwickeln. Dazu wechsle ich vom Computer zu einer physischen Bildinszenierung. Ich möchte anhand analoger Methoden die von Computern eingeschränkten Gestaltungsmethoden überschreiten. Um dies umzusetzen, bediene ich mich der Werkzeuge Raum, Material und Licht. Meine Erzeugnisse halte ich fotografisch fest und untersu-che diese mittels eines selbstentwickelten infografischen Systems, welches mir wiederum als Baukasten dient, um damit neue Bilder zu generieren.",
+        "Ich stelle fest, dass mir dreidimensional generierte grafische Gestaltung vermehrt\r\nbegegnet. Diese Ästhetik wird durch Designprogramme und deren Instrumente, auf\r\nwelche immer mehr Personen Zugriff haben, geschaffen und geprägt. Aufgrund dieser\r\nBeobachtung und angelehnt an diesen Stil möchte ich eine neue Bildproduktion\r\nentwickeln. Dazu wechsle ich vom Computer zu einer physischen Bildinszenierung.\r\nIch möchte anhand analoger Methoden die von Computern eingeschränkten Gestaltungsmethoden\r\nüberschreiten. Um dies umzusetzen, bediene ich mich der Werkzeuge\r\nRaum, Material und Licht. Meine Erzeugnisse halte ich fotografisch fest und untersuche\r\ndiese mittels eines selbstentwickelten infografischen Systems, welches mir wiederum\r\nals Baukasten dient, um damit neue Bilder zu generieren.",
       images: [
         "2021-124-yannic-cserhati-__SIZE__-lnd-01.jpg",
         "2021-124-yannic-cserhati-__SIZE__-lnd-02.jpg",
@@ -359,7 +364,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "CSIA Lugano",
+      institution: "CSIA – Centro scolastico per le industrie artistiche",
       company: "",
       type: "EFZ",
       year: "4",
@@ -372,7 +377,7 @@ module.exports = {
       year: "2020",
       teacher: ["Sidi Vanetti", "Michele Forzano"],
       description:
-        "In October 2020, we were asked to design the entire identity of the event for the CSIA exhibition I Manifesti del Museum für Gestal-tung: poster, caption, invitation cards and other media. The stylistic diversity that distinguishes the coordinated image of the Museum für Gestaltung made me opt for the creation of a neutral but extremely detailed identity. My visual communication consists in a complex, “layered”, “infographic” and above all neutral language. My project aims to contrast the posters presented in the exhibition: if the intention is usually to “summarize the contents”, the identity I have developed, on the contrary, deepens the context and the contents.",
+        "In October 2020 we were asked to design the entire identity of the event for the CSIA exhibition I Manifesti del Museum für Gestaltung: poster, caption, invitation cards and other media. Stylistic diversity that distinguishes the coordinated image of the Museum für Gestaltung made me opt for the creation of a neutral but extremely detailed identity. My visual communication consists in a complex, “layered”, “infographic” and above all neutral language. My project aims to contrast the posters presented in the exhibition: if the intention is usually to “summarize the contents”, the identity I have developed, on the contrary, deepens the context and the contents.",
       images: [
         "2021-128-monica-mueller-__SIZE__-lnd-01.jpg",
         "2021-128-monica-mueller-__SIZE__-prt-02.jpg",
@@ -405,12 +410,10 @@ module.exports = {
         firstname: "Refael",
         lastname: "Blatt",
         portfolio: "http://refael.ch",
-        instagram: "refchef",
-
       },
     ],
     education: {
-      institution: "FHNW Basel",
+      institution: "Hochschule für Gestaltung und Kunst FHNW",
       company: "",
       type: "FH",
       year: "3",
@@ -423,7 +426,7 @@ module.exports = {
       year: "2020",
       teacher: ["Prof. Marion Fink"],
       description:
-        "Lange blieb die Reaktion der Erde auf das menschliche Handeln unbeachtet. Mittlerweile ist sich jede:r der Bedrohung unserer Lebensbedingungen auf der Erde bewusst. Doch nur wenige besitzen eine Vorstellung davon, wie sie mit dieser neuen Situation umgehen sollen. Das Kapitel 8 aus dem Buch «Grenzen des Wachstums» (1972) beschäftigt sich mit Visionen, Netzwerken, Wahrhaftigkeit, Lernbereitschaft und Nächstenliebe. Diese Texte dienen als Grundlagen und Lösungsansätze für dieses Projekt. Die fünf entstandenen Bücher Kalzit, Serpentin, Biotit, Muskovit und Quarz nehmen die Leser:innen mit auf eine faszinierende Reise in lokale Gesteinswelten der Alpen. Sie stellen die Fragen, wie die Beziehung zur Natur heute gelebt wird und wie wir uns darin nachhaltig vortasten können.",
+        "Lange blieb die Reaktion der Erde auf das menschliche Handeln unbeachtet. Mittlerweile ist sich jede*r der Bedrohung unserer Lebensbedingungen auf der Erde bewusst. Doch nur wenige besitzen eine Vorstellung davon, wie sie mit dieser neuen Situation umgehen sollen. Das Kapitel 8 aus dem Buch «Grenzen des Wachstums» (1972) beschäftigt sich mit Visionen, Netzwerke, Wahrhaftigkeit, Lernbereitschaft und Nächstenliebe. Diese Texte dienen als Grundlagen und Lösungsansätze, für die wir eine visuelle lang entworfen haben. Die fünf Bücher Kalzit, Serpentin, Biotit, Muskovit und Quarz nehmen die Leser*innen mit auf eine faszinierende Reise in lokale Gesteinswelten der Alpen. Sie stellen die Fragen, wie die Beziehung zur Natur heute gelebt wird, und wie wir uns darin nachhaltig vortasten können.",
       images: [
         "2021-134-lukas-mueller-__SIZE__-lnd-01.jpg",
         "2021-134-lukas-mueller-__SIZE__-lnd-02.jpg",
@@ -456,7 +459,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "Fachklasse Grafik St. Gallen",
+      institution: "Fachklasse Grafik",
       company: "",
       type: "EFZ",
       year: "4",
@@ -469,7 +472,7 @@ module.exports = {
       year: "2020",
       teacher: ["Anita Meier", "Ramon Lenherr"],
       description:
-        "Meine Projektarbeit steht unter dem Thema «Reise ins Morgen». Ich thematisierte damit eine aktuelle, sich verstärkende Problematik – das Artensterben. Täglich sterben Tierarten aus, viele Arten sind den meisten nicht bekannt. Ich wollte für dieses Thema sensibilisieren, indem ich in einem Buch je fünf bedrohte und ausgestorbene Arten mittels Infografiken und Illustrationen portraitiert habe. Pro Art gibt es 2 Doppelseiten. Die ersten zwei zeigen anhand von Infografiken verschiedene Daten über das Tier. Wobei auf der rechten Seite immer ein Fakt / Eigenschaft / Fähigkeit der Art individuell dargestellt wird. Die zweite Doppelseite zeigt das Tier in einer Illustration im natürlichen Lebensraum. ",
+        "Meine Diplomarbeit steht unter dem Thema «Reise ins Morgen». Ich thematisierte damit eine aktuelle, sich verstärkende Problematik – das Artensterben. Täglich sterben Tierarten aus, viele Arten sind den meisten nicht bekannt. Ich wollte für dieses Thema sensibilisieren, indem ich in einem Buch je fünf bedrohte und ausgestorbene Arten mittels Infografiken und Illustrationen portraitiert habe. Pro Art gibt es 2 Doppelseiten. Die ersten zwei zeigen anhand von Infografiken verschiedene Daten über das Tier. Wobei auf der rechten Seite immer ein Fakt/Eigenschaft/Fähigkeit der Art individuell dargestellt wird. Die zweite Doppelseite zeigt das Tier in einer Illustration im natürlichen Lebensraum. Infos: Flatbook, 230x300 mm, Digitaldruck, PlanoJet hochweiss 160 g/m2, Atlas Grotesk & Typewriter",
       images: [
         "2021-136-elia-vogt-__SIZE__-lnd-01.jpg",
         "2021-136-elia-vogt-__SIZE__-lnd-02.jpg",
@@ -503,11 +506,10 @@ module.exports = {
       {
         firstname: "Michelle",
         lastname: "Strähler",
-        instagram: "michellestraehler",
       },
     ],
     education: {
-      institution: "FHNW Basel",
+      institution: "Hochschule für Gestaltung und Kunst FHNW",
       company: "",
       type: "FH",
       year: "3",
@@ -520,7 +522,7 @@ module.exports = {
       year: "2020",
       teacher: ["Prof. Marion Fink"],
       description:
-        "Aus den Resultaten eines experimentellen Bildlabors* bestimmten wir das Thema Vulkanismus. Damit dokumentieren wir visuell die letzten Ausbrüche der fünf aktivsten Vulkane und generierten dazu Karten aus georeferenzierten Daten. Es entstand ein Konzept, welches das Zusammenspiel von statisch kartografischen und dynamisch plakativen Eruptions-Bildern aufzeigt, gefolgt von einer Liste mit allen registrierten Vulkanen der Erde und deren Status. Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus flüssiger Farbe und Reinigungsmittel. Die daraus resultierende eruptive Bildwelt war Ausgangslage für die Themenfindung und das ganze Konzept.",
+        "Aus den Resultaten eines experimentellen Bildlabors* bestimmten wir das Thema Vulkanismus. Damit dokumentieren wir visuell die letzten Ausbrüche der fünf aktivsten Vulkane und generierten dazu Karten aus georeferenzierten Daten. Es entstand ein Konzept, welches das Zusammenspiel von statisch kartografischen und dynamisch plakativen Eruptions-Bildern aufzeigt, gefolgt von einer Liste mit allen registrierten Vulkanen der Erde und dessen Status. \r\n*Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus flüssiger Farbe und Reinigungsmittel. Die daraus resultierende eruptive Bildwelt, war Ausgangslage für die Themenfindung und das ganze Konzept.",
       images: [
         "2021-140-timo-reber-__SIZE__-lnd-01.jpg",
         "2021-140-timo-reber-__SIZE__-lnd-02.jpg",
@@ -555,7 +557,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "HEAD Genève",
+      institution: "HEAD – Haute école d’art et de design, Genève",
       company: "",
       type: "FH",
       year: "2",
@@ -568,7 +570,7 @@ module.exports = {
       year: "2019",
       teacher: ["Mitch Paone"],
       description:
-        "Animation cinétique pour P.A.G.E.S. Print & Art Book Fair, réalisée autour du thème de l’imprimé, de la page et des procédés d’impres-sion. Le concept visuel reflète le mouvement poétique des pages d’un livre s’ouvrant sous l’effet d’une rafale de vent de manière naturelle, et invite à venir explorer les ouvrages exposés.",
+        "Creation of animations on the theme of the edition, the page and the universe of the print for P.A.G.E.S. Art Book fair, international fair dedicated to print, art books and multiples.\r\n\r\nBased on the poetic observation of a print opening onto the effect of the wind, under a flurry the animation takes the page literally and the creation of a work through a typographic allegory based on the identity\r\nof the event. Each letter opens by inviting the public to discover the creations presented.",
       images: [
         "2021-148-leo-monnet-__SIZE__-lnd-01.jpg",
         "2021-148-leo-monnet-__SIZE__-prt-02.jpg",
@@ -599,7 +601,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "ZHdK Zürich",
+      institution: "Zürcher Hochschule der Künste",
       company: "",
       type: "FH",
       year: "3",
@@ -612,7 +614,7 @@ module.exports = {
       year: "2021",
       teacher: ["Jonas Vögeli", "Matthias Michel"],
       description:
-        "Digitales Lesen ist anstrengend. Das mediale Potenzial bleibt bis zum heutigen Tag jedoch unausgeschöpft. Beim Lesen wird man mit Fragen konfrontiert, reagiert auf den Inhalt und kritisiert ihn, bezieht also Stellung. Eine Stellung, die man teilen möchte. Der Leser will immer mehr erfahren. Sich vertiefen. Einfach eintauchen und sich treiben lassen. Digital Reading Matter ist eine Applikation zur Förderung digitaler Leselust und -effizienz, die sich an den Wünschen und Bedürfnissen der Benutzer orientiert. Die Sensoren des Gerätes werden funktional eingesetzt. Eine Eye-Tracking-Funktion warnt vor möglichen Konzentrationsstörungen. Die Kommunikation erfolgt schnell und reibungslos durch Spracheingabe. Das bisher einschränkende Medium wird zur Chance.",
+        "Digitales Lesen ist anstrengend. Das mediale Potenzial bleibt bis zum heutigen Tag jedoch unausgeschöpft. Beim Lesen wird man mit Fragen konfrontiert, reagiert auf den Inhalt und kritisiert ihn, bezieht also Stellung. Eine Stellung, die man teilen möchte. Der Leser will immer mehr erfahren. Sich vertiefen. Einfach eintauchen und sich treiben lassen. Digital Reading Matter ist eine Applikation zur Förderung digitaler Leselust und -effizienz, die sich an den Wünschen und Bedürfnissen der Benutzer orientiert. Die Sensoren des Gerätes werden funktional eingesetzt. Eine Eye-Tracking-Funktion warnt vor möglichen Konzentrationsstörungen. Die Kommunikation erfolgt schnell und reibungslos durch langingabe. Das bisher einschränkende Medium wird zur Chance.",
       images: [
         "2021-149-anna-tuena-__SIZE__-lnd-01.jpg",
         "2021-149-anna-tuena-__SIZE__-lnd-02.jpg",
@@ -644,7 +646,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "Fachklasse Grafik St. Gallen",
+      institution: "Fachklasse Grafik",
       company: "",
       type: "EFZ",
       year: "4",
@@ -657,7 +659,7 @@ module.exports = {
       tags: ["Illustration", "Editorial design"],
       teacher: ["Ramon Lenherr", "Sylvia Geel", "Anita Meier"],
       description:
-        "Als Projektarbeit durften wir im vierten Jahr einen Reiseführer zu einem Thema unserer Wahl gestalten. Da Bücher eine grosse Leidenschaft von mir sind, habe ich einen fantastischen Reiseführer geschrieben, der Kinder und Erwachsene zum Träumen, Vorlesen und Weiterdenken anregt. Im Vordergrund stehen drei fiktive Orte aus drei unterschiedlichen Büchern, welche man mit Hilfe von Landkarten, Erklärungen und grossflächigen Illustrationen in Gedanken bereisen kann.",
+        "Als Projektarbeit durften wir im vierten Jahr einen Reiseführer zu einem Thema unserer Wahl gestalten. Da Bücher eine grosse Leidenschaft von mir sind, habe ich einen fantastischen Reiseführer geschrieben, der Kinder und Erwachsene zum Träumen, Vorlesen und Weiterdenken anregt. Im Vordergrund stehen drei fiktive Orte aus drei unterschiedlichen Büchern, welche man mit Hilfe von Landkarten, Erklärungen und gross- flächigen Illustrationen in Gedanken bereisen kann.",
       images: [
         "2021-150-madleina-doerig-__SIZE__-lnd-01.jpg",
         "2021-150-madleina-doerig-__SIZE__-lnd-02.jpg",
@@ -690,7 +692,8 @@ module.exports = {
       },
     ],
     education: {
-      institution: "EDHEA Sierre",
+      institution: "EDHEA – École de design et haute école d’art du Valais",
+      // institution: "Graphiste CFC",
       company: "",
       type: "EFZ",
       year: "4",
@@ -703,7 +706,7 @@ module.exports = {
       year: "2021",
       teacher: ["Daniel Schmid", "Tim Meylan"],
       description:
-        "Édition sous forme d’archive sur les pionniers de l’aviation composée d’une partie historique, de tableaux des records et d’une section biographique. Le livre retrace les tout débuts de l’aéronautique depuis ses origines et jusqu’au 3 août 1914. La complexité des mises en pages représente la difficulté que les premiers pilotes ont réussi à surmonter et donne une idée du courage dont ils ont fait preuve.",
+        "Édition sous forme d'archive sur les pionniers de l'aviation composée d'une partie historique, de tableaux des records et d'une section biographique. Le livre retrace les tout débuts de l'aéronautique depuis ses origines et jusqu'au 3 août 1914. La complexité des mises en pages représente la difficulté que les premiers pilotes ont réussi à surmonter et donne une idée du courage dont ils ont fait preuve.\r\n\r\n\r\n\r\n",
       images: [
         "2021-157-baptiste-torrent-__SIZE__-lnd-01.jpg",
         "2021-157-baptiste-torrent-__SIZE__-lnd-02.jpg",
@@ -737,7 +740,8 @@ module.exports = {
       },
     ],
     education: {
-      institution: "EDHEA Sierre",
+      institution: "EDHEA – École de design et haute école d’art du Valais",
+      // institution: "Graphiste CFC",
       company: "",
       type: "EFZ",
       year: "4",
@@ -750,7 +754,7 @@ module.exports = {
       year: "2021",
       teacher: ["Daniel Schmid", "Tim Meylan"],
       description:
-        "Le je est un autre est une édition sur le thème de la perception de soi. Le soi se distingue en quatre parties : Le soi social, la connais-sance de soi, l’image de soi et l’estime de soi. Lorsque ces quatre parties ne sont pas équilibrées, nous avons affaire alors à une crise identitaire. Cette édition est repartie en cinq chapitres qui traitent chacun d’un soi spécifique d’un point de vue théorique, puis la vision que l’on en a lors d’une crise identitaire.",
+        "Le je est un autre est une édition sur le thème de la perception de soi.\r\nLe soi se distingue en quatre parties: Le soi social, la connaissance de soi, l'image de soi et l'estime de soi. Lorsque ces quatre parties ne sont pas équilibrées, nous faisons affaire alors à une crise identitaire. Cette édition est repartie en cinq chapitre qui traitent chacun d'un soi spécifique d'un point de vue théorique puis la vision que l'on en a lors d'une crise identitaire. \r\n",
       images: [
         "2021-170-sacha-decoppet-__SIZE__-lnd-01.jpg",
         "2021-170-sacha-decoppet-__SIZE__-lnd-02.jpg",
@@ -785,7 +789,6 @@ module.exports = {
       {
         firstname: "Livia",
         lastname: "Benz",
-        instagram: "liviabenz_",
       },
       {
         firstname: "Anna",
@@ -794,7 +797,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "ZHdK Zürich",
+      institution: "Zürcher Hochschule der Künste",
       company: "",
       type: "FH",
       year: "3",
@@ -807,7 +810,7 @@ module.exports = {
       year: "2020",
       teacher: ["Cybu Richli", "Silvan Possa"],
       description:
-        "Invasive Neophyten sind gebietsfremde Pflanzen, die sich in unserer Natur rasch etablieren und effizient ausbreiten. Sie verdrängen unsere heimische Flora und bedrohen die Biodiversität in der Stadt Zürich. Invasive Neophyten sind mitverantwortlich für das Verschwin-den von rund einem Drittel unserer Pflanzen. Die konzipierte App bietet auf spielerische Art und Weise eine Hilfestellung bei der Bekämpfung von Neophyten an. Dank verschiedener Zugänge zur Thematik werden auch Laien angesprochen. So werden Pflanzen mithilfe der Smartphone-Kamera identifiziert, nach Gefährlichkeitsgrad eingestuft und die korrekte Handhabung /Vorgehensweise vermittelt. Mit jeder bekämpften Pflanze kann der Benutzer der App Punkte sammeln und sich so mit anderen Usern messen.",
+        "Invasive Neophyten sind gebietsfremde Pflanzen, die sich in unserer Natur rasch etablieren und effizient ausbreiten. Sie verdrängen unsere heimische Flora und bedrohen die Biodiversität in der Stadt Zürich. Invasive Neophyten sind mitverantwortlich für das Verschwinden von rund einem Drittel unserer Pflanzen. Die konzipierte App bietet auf spielerische Art und Weise eine Hilfestellung bei der Bekämpfung von Neophyten an. Dank verschiedener Zugänge zur Thematik werden auch Laien angesprochen. So werden Pflanzen mithilfe der Smartphone-Kamera identifiziert, nach Gefährlichkeitsgrad eingestuft und die korrekte Handhabung/Vorgehensweise vermittelt. Mit jeder bekämpften Pflanze kann der Benutzer der App Punkte sammeln und sich so mit anderen Usern messen. ",
       images: [
         "2021-182-anna-pravorotskaya-__SIZE__-lnd-01.jpg",
         "2021-182-anna-pravorotskaya-__SIZE__-lnd-02.jpg",
@@ -842,7 +845,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "ZHdK Zürich",
+      institution: "Zürcher Hochschule der Künste",
       company: "",
       type: "FH",
       year: "2",
@@ -860,7 +863,7 @@ module.exports = {
         "Samuel Weidmann",
       ],
       description:
-        "Für das Redesign eines literarischen Klassikers habe ich eine meiner Lieblingsnovellen ausgesucht: «Die Taube» von Patrick Süskind. Die Novelle erzählt 24 Stunden aus Jonathan Noels sehr geregeltem Leben. Die unerwartete Begegnung mit einer Taube bringt dieses komplett durcheinan-der. Die Novelle liest sich sehr einfach. Das neue Layout legt den Fokus auf seine neuartigen Verhaltensweisen und Gedankenspiralen, um der Leser:in mehr Einblick zu gewähren, und zeigt visuell, wie die 24 Stunden vergehen. Zur gedruckten Version im Zeitungsformat wurde ein Digitorial gestaltet, welches das Geschriebene mit Gesprochenem verbindet und einfaches Switchen ermöglicht. Die Gedanken Jonathans werden in der digitalen Version noch immersiver, da diese Textpassagen aktiv verschoben werden müssen, um weiter lesen zu können.",
+        "Für das Redesign eines literarischen Klassikers habe ich eine meiner Lieblingsnovellen ausgesucht – «Die Taube» von Patrick Süskind. Die Novelle erzählt 24 Stunden aus Jonathan Noels sehr geregeltem Leben. Die unerwartete Begegnung mit einer Taube bringt dieses komplett durcheinander. Die Novelle liest sich sehr einfach. Das neue Layout legt den Fokus auf seine neuartigen Verhaltensweisen und Gedankenspiralen, um der Leser*in mehr Einblick zu gewähren und zeigt visuell, wie die 24 Stunden vergehen. Zur gedruckten Version im Zeitungsformat wurde ein Digitorial gestaltet, welches das Geschriebene mit Gesprochenem vereint und einfaches Switchen ermöglicht. Die Gedanken Jonathans werden in der digitalen Version noch immersiver, da diese Textpassagen aktiv verschoben werden müssen, um weiter lesen zu können.",
       images: [
         "2021-199-martina-holenstein-__SIZE__-lnd-01.jpg",
         "2021-199-martina-holenstein-__SIZE__-lnd-02.jpg",
@@ -894,7 +897,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "ECAL Lausanne",
+      institution: "ECAL – Ecole cantonale d’art de Lausanne",
       company: "",
       type: "FH",
       year: "2",
@@ -907,7 +910,7 @@ module.exports = {
       year: "2021",
       teacher: ["Nicole Udry"],
       description:
-        "The women’s house of Ouled Merzoug: This book aims to highlight the weavings of the women of the village of Ouled Merzoug, Morocco. The edition takes the form of an ABC-book based on the women’s names to classify their creations. A typographic pattern inspired by the weaving technique was created for each letter of the alphabet. This project was created in collaboration with Harmonie Begon who met the women and shared her experience with me.",
+        "The women’s house of Ouled Merzoug This edition aims to highlight the weavings of the women of the village of Ouled Merzoug, Morocco. The edition takes the form of a ABC-book based on the women’s names to classify their creations. A typographic pattern inspired by the weaving technique was created for each letter of the alphabet. This project was created in collaboration with Harmonie Begon who met the women and shared her experience with me. (@harmonie.begon)",
       images: [
         "2021-203-charlotte-viglino-__SIZE__-lnd-01.jpg",
         "2021-203-charlotte-viglino-__SIZE__-lnd-02.jpg",
@@ -942,11 +945,10 @@ module.exports = {
       {
         firstname: "Dimitris",
         lastname: "Giannoulas",
-        instagram: "dimitris.giannoulas",
       },
     ],
     education: {
-      institution: "ZHdK Zürich",
+      institution: "Zürcher Hochschule der Künste",
       company: "",
       type: "FH",
       year: "2",
@@ -959,7 +961,7 @@ module.exports = {
       year: "2021",
       teacher: ["Rebecca Morganti-Pfaffhauser", "Martin Woodtli"],
       description:
-        "Poster réalisé pour la retrospective « Film Noir International » du cinéma Filmpodium dans le cadre d’un concours interne à la ZHdK. L’affiche a été conçue en travaillant une image tirée d’une scène du film « Get Carter », que l’on a trouée afin de représenter les impacts de balles, dans le but de plonger l’interlocuteur dans le feu de l’action. L’impression en sérigraphie 2 couleurs (orange fluo et noir) permet d’apporter une touche contemporaine et accentue l’intensité du cliché.",
+        "Poster réalisé pour la retrospective « Film Noir International » du cinéma Filmpodium dans le cadre d’un concours interne à la ZHdK. L’Affiche a été conçue en travaillant une image tirée d’une scène du film « Get Carter », que l’on a trouée afin de représenter les impactes de balles, dans le but de plonger l’interlocuteur dans le feu de l’action. L’impression en sérigraphie 2 couleurs (orange fluo et noir) permet d’apporter une touche contemporaine et accentue l’intensité du cliché.",
       images: [
         "2021-208-nathan-meyer-__SIZE__-lnd-01.jpg",
         "2021-208-nathan-meyer-__SIZE__-prt-02.jpg",
@@ -990,7 +992,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "ECAL Lausanne",
+      institution: "ECAL – Ecole cantonale d’art de Lausanne",
       company: "",
       type: "FH",
       year: "1",
@@ -1003,7 +1005,7 @@ module.exports = {
       year: "2021",
       teacher: ["Guy Meldem"],
       description:
-        "La communauté Butterfly vous invite à unir vos forces pour préserver Mère Nature, prendre soin de votre corps et de votre âme tout en défendant vos idéaux. Dans un cadre calme et paisible vous pourrez participer à la vie collaborative de notre système autosuffisant à travers diverses activités comme le yoga. Si, vous aussi, vous n’acceptez pas les agissements de l’État et de la police, unissons nos forces afin de protéger notre liberté et notre environnement. Butterfly est un mouvement sectaire féministe croyant en l’énergie et la pérennité de la nature. Défendant son environnement en punissant les forces de l’ordre, leur but est de prendre le pouvoir dans le monde pour préserver la nature et éviter la croissance du réchauffement climatique. Technique : papier découpé et scanner.",
+        "La communauté Butterfly vous invite à unir vos forces pour préserver Mère Nature, prendre soin de votre corps et de votre âme tout en défendant vos idéaux. Dans un cadre calme et paisible vous pourrez participer à la vie collaborative de notre système autosuffisant à travers diverses activités comme le yoga. Si vous aussi vous n'acceptez pas les agissements de l’Etat et de la police, unissons ensemble nos forces afin de protéger notre liberté et notre environnement. Butterfly est un mouvement sectaire féministe croyant en l'énergie et la pérennité de la nature. Défendant son environnement en punissant les forces de l'ordre, leur but est de prendre le pouvoir du monde pour préserver la nature et éviter la croissance du réchauffement climatique. Technique : papier découpé et scanner",
       images: [
         "2021-262-laeticia-jakob-__SIZE__-lnd-01.jpg",
         "2021-262-laeticia-jakob-__SIZE__-lnd-02.jpg",
@@ -1037,7 +1039,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "ZHdK Zürich",
+      institution: "Zürcher Hochschule der Künste",
       company: "",
       type: "FH",
       year: "1",
@@ -1050,7 +1052,7 @@ module.exports = {
       year: "2020",
       teacher: ["Giliane Cachin", "Jonas Vögeli", "Lea Michel"],
       description:
-        "Die Textebene beinhaltet ein Lehrbuch der plastischen Chirurgie und zieht sich über alle Seiten. In der Mitte wird diese durch eine Art Werbeteil getrennt: Die fabulöse Welt der südkoreanischen plastischen Chirurgie, visualisiert mit Logo-Zeichen aus dessen Praxen sowie Statements von Ärzt:innen und Patient:innen. Das Haupt-Layout soll klinisch sauber wirken und mit der fremden, luxuriösen Welt aus Südkorea durchbrochen werden. Die Fotografie behandelt verbrauchte Beautyprodukte aus dem Alltag. Das Editorial startet mit den verbrauchten Produkten in ihrer gewohnten Alltagssituation und endet mit den gescannten «spiegelglatten» Versionen.",
+        "Editorial/Fotografie zum Thema Beauty \r\nDie Text-Ebene beinhaltet ein Lehrbuch der Plastischen Chirurgie und zieht sich über alle Seiten. In der Mitte wird diese durch eine Art Werbeteil getrennt: Die fabulöse Welt der südkoreanischen plastischen Chirurgie, visualisiert mit Logo-Zeichen aus dessen Praxen sowie Statements von Ärzt*innen und Patient*innen. Das Haupt-Layout soll klinisch sauber wirken und mit der fremden luxuriösen Welt aus Südkorea durchbrochen werden. Die Fotografie behandelt verbrauchte Beautyprodukte aus dem Alltag. Das Editorial startet mit den verbrauchten Produkten in ihrer gewohnten Alltagssituation und endet mit den gescannten «spiegelglatten» Versionen. \r\n\r\n132 Seiten\r\nSchrift: Akzidenz Grotesk\r\nPapier: Lessebo Smooth White 100gm, Magno Star 135gm, Splendorlux 250gm",
       images: [
         "2021-271-ladina-doerig-__SIZE__-lnd-01.jpg",
         "2021-271-ladina-doerig-__SIZE__-lnd-02.jpg",
@@ -1084,8 +1086,8 @@ module.exports = {
       },
     ],
     education: {
-      institution: "SfGZ Zürich",
-      company: "Hinderling Volkart, Zürich",
+      institution: "Schule für Gestaltung Zürich",
+      company: "Hinderling Volkart",
       type: "EFZ",
       year: "4",
       canton: "zh",
@@ -1097,7 +1099,7 @@ module.exports = {
       year: "2020",
       teacher: ["Michael Hinderling"],
       description:
-        "Nightline Barcelona vereint Schweizer Nüchternheit mit der verträumten und surrealen Atmosphäre der mediterranen Grossstadt. Das Branding erinnert an einen Horizont, über dem ein spannungsgeladener Nachthimmel thront. Die gelbe Nightline steht dabei für den Zug und die Route nach Barcelona. Der Nachthimmel ist grafisch reduziert auf Flächen und Linien, was in Kombination mit der Farbpalette einen hohen Wiedererkennungswert verspricht. Die App umfasst zum einen eine Booking Engine, zum anderen können die Reisenden wichtige Informationen zur Fahrt abrufen, das Ticket einsehen oder bei einer nächtlichen Hungerattacke Snacks bestellen. VISION 2025 ist der Name des Projekts für die neu konzipierte Nachtzug-linie nach Barcelona inklusive neuartiger Waggons mit Schlafkapsel-Unter-künften. Diese Arbeit entstand im Rahmen des Qualifikationsverfahrens 2020.",
+        "Nightline Barcelona vereint Schweizer Nüchternheit mit der verträumten und surrealen Anmutung der mediterranen Grossstadt. Das Branding erinnert an einen Horizont, über dem ein spannungsgeladener Nachthimmel thront. Die gelbe Nightline steht dabei für den Zug und die Route nach Barcelona. Der Nachthimmel ist grafisch reduziert auf Flächen und Linien, was in Kombination mit der Farbpalette einen hohen Wiedererkennungswert verspricht. Die App umfasst zum einen eine Booking Engine, zum anderen kann die Reisende wichtige Informationen zur Fahrt abrufen, das Ticket einsehen oder bei einer nächtlichen Hungerattacke Snacks bestellen. VISION 2025 ist der Name des Projekts für die neu konzipierte Nachtzuglinie nach Barcelona inklusive neuartiger Waggons mit Schlafkapsel-Unterkünften.",
       images: [
         "2021-274-valentin-baumann-__SIZE__-lnd-01.jpg",
         "2021-274-valentin-baumann-__SIZE__-lnd-02.jpg",
@@ -1132,7 +1134,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "Fachklasse Grafik Luzern",
+      institution: "Fachklasse Grafik",
       company: "",
       type: "EFZ",
       year: "4",
@@ -1145,7 +1147,7 @@ module.exports = {
       year: "2021",
       teacher: ["Martin Infanger"],
       description:
-        "Die Aufgabe des Qualifikationsverfahrens 2021 bestand darin, eine Neuauflage eines Gesellschaftsspiels zu gestalten. Ich entschied mich für das Memory. Mein Ziel war es, einen Lernfaktor einzubauen und Jugendliche sowie junge Erwachsene anzusprechen. Aus diesen Intentionen entstand «DOPPELT HÄLT BESSER!», mit welchem deutsche Redewendungen spielerisch gelernt werden können. Zusätzlich entwickelte ich ein Nachschlagewerk in Form eines Kreuzbruch-Falzblattes, auf dessen Rückseite die Herleitungen der Ausdrücke aufgelistet sind sowie eine Spielanleitung. Als digitales Medium konzipierte ich eine Instagram-Seite und zwei animierte Werbe-Beiträge in Form eines Instagram-Posts und -Story.",
+        "Die Aufgabe der diesjährigen VPA der GrafikerInnen bestand darin, eine Neuauflage eines Gesellschaftsspiels zu gestalten. Ich entschied mich für das Memory. Mein Ziel war es, einen Lernfaktor einzubauen \r\nund Jugendliche, sowie junge Erwachsene anzusprechen. Aus diesen Intensionen entstand «DOPPELT HÄLT BESSER!», mit welchem sich deutsche Redewendungen spielerisch beigebracht werden können. \r\nZusätzlich entwickelte ich ein Nachschlagewerk in Form eines Kreuzbruch-Falzblattes, auf wessen Rückseite die Herleitungen der Ausdrücke aufgelistet sind, sowie eine Spielanleitung. Als digitales Medium konzipierte ich eine Instagram-Seite und zwei animierte Werbe-Beiträge in Form eines Instagram Posts- und Story.",
       images: [
         "2021-300-marina-huber-__SIZE__-lnd-01.jpg",
         "2021-300-marina-huber-__SIZE__-lnd-02.jpg",
@@ -1178,20 +1180,20 @@ module.exports = {
       },
     ],
     education: {
-      institution: "SfG BB Bern und Biel",
-      company: "Clou Werbeagentur, Luzern",
+      institution: "Schule für Gestaltung Basel",
+      company: "",
       type: "HF",
       year: "3",
       canton: "be",
     },
     project: {
       id: "307",
-      title: "Rebranding carvelo2go",
+      title: "Diplomarbeit HF – Rebranding carvelo2go",
       tags: ["Corporate design", "Interaction design", "Illustration"],
       year: "2021",
       teacher: ["Manuel Häfliger"],
       description:
-        "Im Rahmen meiner Diplomarbeit habe ich zum Thema «Megatrend Mobilität» ein fiktives Rebranding für carvelo2go erarbeitet. Carvelo2go ist eine eCargoBike Sharing-Plattform mit dem Ziel, den Nutzer:innen positive Mobilitätserlebnisse und eine echte Alternati-ve zum Auto zu bieten. Der definierte Claim «Mobilität, die glücklich macht» soll auf allen Ebenen der neuen Markenidentität mit einer frischen, lebendigen Erscheinung und einer wohltuenden Verspieltheit zur Geltung kommen. Nicht nur im visuellen Auftritt, sondern auch bei den digitalen Anwendungen soll ein «Joy of Use» ein frisches und positives Erlebnis auslösen. Um sich von der Konkurrenz abzuheben, werden als Keyvisuals auffallende Illustrationen eingesetzt, welche das eCargo-Bike ins Zentrum rücken und das Angebot visuell erklären.",
+        "In Rahmen meiner Diplomarbeit habe ich zum Thema «Megatrend Mobilität» ein fiktives Rebranding für carvelo2go erarbeitet. Carvelo2go ist eine eCargo-Bike Sharing-Plattform mit dem Ziel, den Nutzer*Innen positive Mobilitätserlebnisse und eine echte Alternative zum Auto zu bieten. Der definierte Claim «Mobilität, die glücklich macht», soll auf allen Ebenen der neuen Markenidentität mit einer frischen, lebendigen Erscheinung und einer wohltuender Verspieltheit zur Geltung kommen. Nicht nur im visuellen Auftritt, sondern auch bei den digitalen Anwendungen soll ein «Joy of Use» ein frisches und positives Erlebnis auslösen. Um sich von der Konkurrenz abzuheben, werden als Keyvisuals auffallende Illustrationen eingesetzt, welche das eCargo-Bike ins Zentrum rücken und das Angebot visuell erklären.",
       images: [
         "2021-307-fabian-gubelmann-__SIZE__-lnd-01.jpg",
         "2021-307-fabian-gubelmann-__SIZE__-lnd-02.jpg",
@@ -1227,7 +1229,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "ECAL Lausanne",
+      institution: "ECAL – Ecole cantonale d’art de Lausanne",
       company: "",
       type: "FH",
       year: "2",
@@ -1235,12 +1237,12 @@ module.exports = {
     },
     project: {
       id: "342",
-      title: "Les féministes, les réacs et les putes.",
+      title: "« Les féministes, les réacs et les putes. »",
       tags: ["Editorial design", "Poster design"],
       year: "2020",
       teacher: ["Diego Bontognali"],
       description:
-        "Réinterprétation graphique du livre « Sexpowerment » de la journaliste française Camille Emmanuelle sous deux formes différentes. Le concept graphique de l’édition se base sur l’intensité et la diversité des sujets abordés dans le livre, en passant par le féminisme, le mouvement LGBTQIA+, le racisme, la religion ou encore la sexualité. L’aspect frontal de l’écriture de l’auteurice se reflète dans la mise en page par la proximité du texte et des images, qui rend visible la frontière poreuse entre les mots et les actes. Enfin, l’édition s’accompag-ne d’une série de posters inspirés du mouvement punk très présent dans les références de l’auteurice. Chaque poster représente un chapitre du livre et s’accompagne d’images créées par différentes photographes féministes.",
+        "Réinterprétation graphique du livre \"Sexpowerment\" de la journaliste française Camille Emanuelle sous deux formes différentes. \r\n\r\nLe concept graphique de l'édition se base sur l'intensité et la diversité des sujets abordés dans le livre, en passant par le féminisme, le mouvement LGBTQIA+, le racisme, la religion ou encore la sexualité.  L'aspect frontal de l'écriture de l'auteurice se reflète dans la mise en page par la proximité du texte et des images, qui rend visible la frontière poreuse entre les mots et les actes.\r\n\r\nEnfin, l'édition s'accompagne d'une série de posters inspirés du mouvement punk très présent dans les références de l'auteurice. Chaque poster représente un chapitre du livre et s'accompagne d'images créées par différentes photographes féministes.",
       images: [
         "2021-342-tania-praz-__SIZE__-lnd-01.jpg",
         "2021-342-tania-praz-__SIZE__-lnd-02.jpg",
@@ -1275,7 +1277,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "Fachklasse Grafik Luzern",
+      institution: "Fachklasse Grafik",
       company: "",
       type: "EFZ",
       year: "4",
@@ -1288,7 +1290,7 @@ module.exports = {
       year: "2020",
       teacher: ["Martin Infanger", "Loana Boppart"],
       description:
-        "Zum Qualifikationsverfahren 2020 wurde mir die Aufgabe gestellt, ein Corporate Design zu gestalten für einen Nachtzug nach Berlin. Ich entschied mich rasch, ein CD für einen Kapselzug zu gestalten, der junge Menschen möglichst schnell und günstig in die Metropole des Nachtlebens transportiert. Nach verschiedenen Experimenten bin ich durch analoge typografische Stempel auf die Übersetzung der Kapseln in die Typografie gestossen. Die Klammern, die wie eine Kapsel verschiedene Inhalte enthalten können, wurden zu meinen Hauptprotagonistinnen. Durch die Vervielfachung der Klammern und die sich zuspitzenden Schriftdicken wird der Aspekt des Tempos aufgenommen. Das typografische System bietet viel Spielraum für verschiedene Medien, Formate und Inhalte, die darin bespielt werden können.",
+        "Zum QV-Verfahren 2020 wurde mir die Aufgabe gestellt ein CD zu gestalten für einen Nachtzug nach Berlin. Ich entschied mich rasch, ein CD für einen Kapselzug zu gestalten, der junge Menschen möglichst schnell und günstig in die Metropole des Nachtleben transportiert. Nach verschiedenen Experimenten bin ich durch analoge Typografische Stempel auf die Übersetzung der Kapseln in die Typografie gestossen. Die Klammern, die wie eine Kapsel verschiedene Inhalte enthalten können, wurden zu meinen Hauptprotagonistinnen. Durch die Vervielfachung der Klammern und die sich zuspitzenden Schriftdicken, wird der Aspekt des Tempos aufgenommen. Das Typografische System bietet viel Spielraum für verschiedene Medien, Formate und Inhalte die darin bespielt werden können.",
       images: [
         "2021-358-max-fingerhuth-__SIZE__-lnd-01.jpg",
         "2021-358-max-fingerhuth-__SIZE__-lnd-02.jpg",
@@ -1324,7 +1326,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "Fachklasse Grafik Luzern",
+      institution: "Fachklasse Grafik",
       company: "",
       type: "EFZ",
       year: "3",
@@ -1336,10 +1338,13 @@ module.exports = {
       tags: ["Editorial design", "Typography", "Photography"],
       year: "2019",
       teacher: [
-        "Marco Backer", "Valeria Bonin", "Hanspeter Künzler", "Michael Pilz", "Patrina Strähl", "Silvio Waser", "Markus Wicki",
+        "Patrina Strähl",
+        "Valeria Bonin",
+        "Markus Wicki",
+        "Silvio Waser",
       ],
       description:
-        "This book is a simulated journey, exploring the interventions of 29 students from the Fachklasse Grafik Luzern in London. You will experience the same things the students experienced when travelling from one intervention to another. An important tool the students used for orientation was Google Maps. Utilising the output of Google Maps, this book is based on a strict minute grid. With the options of either walking, taking the bus or the metro, the reader can vary their travelling speed and the amount of information they want. These different travelling speeds are visually represented through typographic size and hierarchies. This enables you to get a simulated version of the real-live experience of visiting the interventions in London.",
+        "This book is a simulated journey, exploring the interventions of 29 students from the Fachklasse Grafik Luzern in London. You will experience the same things the students experienced when travelling from one intervention to another. An important tool the students used for orientation was Google Maps. Utilising the output of Google Maps, this book is based on a strict minute grid. With the options of either walking, taking the bus or the metro, the reader can vary their travelling speed and amount of information they want. These different travelling speeds are visually represented through typographic size and hierarchies. This enables you to get a simulated version of the real live experience of visiting the interventions in London.\r\n",
       images: [
         "2021-362-max-fingerhuth-__SIZE__-lnd-01.jpg",
         "2021-362-max-fingerhuth-__SIZE__-lnd-02.jpg",
@@ -1370,7 +1375,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "ECAL Lausanne",
+      institution: "ECAL – Ecole cantonale d’art de Lausanne",
       company: "",
       type: "FH",
       year: "2",
@@ -1383,7 +1388,7 @@ module.exports = {
       year: "2021",
       teacher: ["Diego Bontognali"],
       description:
-        "Edition 1 – Ce travail d’édition utilise le premier chapitre « Economy » du livre Walden de Henry David Thoreau, et explique toute la philosophie et la façon du livre. L’édition s’inspire des codes esthétiques de l’Art nouveau (même époque que Walden). Comme Walden, l’Art nouveau est un mouvement prônant la décroissance, le retour à l’essentiel, visant à retrouver sa vraie nature. L’essentiel pas au niveau du rien mais ce qui importe réellement, c’est-à dire la nature. Edition 2 – Ce travail se base sur l’extrait de la page 100 du livre Walden. L’extrait raconte qu’il faut se familiariser avec l’environnement du lieu pour pouvoir y habiter. Cette édition montre la recherche de l’endroit parfait pour vivre une éxperience en nature, comme Thoreau l’a fait.",
+        "Edition 1. Ce travail d'édition utilise le premier chapitre « Economy » du livre Walden de Henry David Thoreau, et explique toute la philosophie et la façon du livre. L'édition s’inspire des codes esthétiques de l’Art nouveau (même époque que Walden). Comme Walden, l’Art nouveau est un mouvement prônant la décroissance, le retour à l’essentiel, visant à retrouver sa vraie nature. L’essentiel pas au niveau du rien mais ce qui importe réellement, c’est-à dire la nature. Edition 2. Ce travail se base sur l’extrait de la page 100 du livre Walden. L’extrait raconte qu’il faut se familiariser avec l’environnement du lieu pour pouvoir y habiter. Cette édition montre la recherche de l’endroit parfait pour vivre une éxperience en nature, comme Thoreau l’a fait.",
       images: [
         "2021-378-mara-wohlfahrt-__SIZE__-lnd-01.jpg",
         "2021-378-mara-wohlfahrt-__SIZE__-lnd-02.jpg",
@@ -1414,7 +1419,7 @@ module.exports = {
       },
     ],
     education: {
-      institution: "Fachklasse Grafik Luzern",
+      institution: "Fachklasse Grafik",
       company: "",
       type: "EFZ",
       year: "2",
@@ -1422,14 +1427,18 @@ module.exports = {
     },
     project: {
       id: "379",
-      title: "DON’T TOUCH MY BABY",
+      title: "DONT TOUCH MY BABY",
       tags: ["Illustration", "Poster design"],
       year: "2021",
       teacher: [
-        "Melchior Imboden", "Martin Infanger", "Felix Pfäffli", "Tarcisius", "Schelbert", "Martin Woodtli",
+        "Martin Woodtli",
+        "Felix Pfäffli",
+        "Martin Infanger",
+        "Melk Imboden",
+        "Tarcisius Schelbert",
       ],
       description:
-        "In Kooperation mit Clear Channel gestaltete ich ein Plakat, das sich mit dem Thema Tiermisshandlung in der Luxusindustrie beschäf-tigte. Ein aggressives Krokodil beschützt seine Kinder, aber eines seiner Kinder ist eine Lederhandtasche. Mit diesem Plakat möchte ich den Betrachter zum Nachdenken bringen, wie absurd es ist, dass wir exotische Tiere immer noch zu unserem Vergnügen töten. Exotenle-der ist weder Mode noch Accessoire, es ist Tierquälerei. Dieses Plakat wurde von Hand gezeichnet, dann wurden die Farben in 3 verschiedene Schichten getrennt, was dem Plakat einen Siebdruck-Stil verleiht.",
+        "In Kooperation mit Clear Channel gestaltete ich ein Plakat, das sich mit dem Thema Tiermisshandlung in der Luxusindustrie beschäftigte.\r\n\r\nEin aggressives Krokodil beschützt seine Kinder, aber eines seiner Kinder ist eine Lederhandtasche.\r\n\r\nMit diesem Plakat möchte ich den Betrachter zum Nachdenken bringen, wie absurd es ist, dass wir exotische Tiere immer noch zu unserem Vergnügen töten. Exotenleder ist weder Mode noch Accessoire, es ist Tierquälerei. \r\n\r\nDieses Plakat wird von Hand gezeichnet, dann wurden die Farben in 3 verschiedene Schichten getrennt, was dem Plakat einen Siebdruck-Stil erzeugt.",
       images: [
         "2021-379-akira-yamaguchi-__SIZE__-lnd-01.jpg",
         "2021-379-akira-yamaguchi-__SIZE__-prt-02.jpg",
