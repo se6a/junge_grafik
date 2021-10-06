@@ -3,13 +3,13 @@ const BareButton = getSnippet("button-bare");
 module.exports = (button) => {
   button.label = "";
   button.classes = button.classes
-                 ? button.classes + " CircleButton"
-                 : "CircleButton";
+    ? button.classes + " CircleButton"
+    : "CircleButton";
 
   const html = ["", BareButton(button), ""];
 
-  const css = /*css*/`
-    .CircleButton {
+  const css = /*css*/ `
+    .button.CircleButton {
       display: flex;
       border: none;
       width: auto;
@@ -18,13 +18,13 @@ module.exports = (button) => {
       padding: 0;
     }
 
-    .CircleButton:hover,
-    .CircleButton:focus {
+    .button.CircleButton:hover,
+    .button.CircleButton:focus {
       background-color: inherit;
     }
 
-    .CircleButton:hover .icon,
-    .CircleButton:focus .icon {
+    .button.CircleButton:hover .icon,
+    .button.CircleButton:focus .icon {
       background-color: var(--colorKey);
       color: var(--white);
       border-color: var(--colorKey);

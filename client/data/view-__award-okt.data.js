@@ -7,8 +7,7 @@ module.exports = {
   },
   header: {
     title: "Award",
-    content:
-      /*html*/`Submissions will open again in 2023! In the meantime you can check out the winning projects on our <a class="textButton" href="/__winners-okt" target="_blank">winner page</a>.`,
+    content: /*html*/ `Submissions will open again in 2023! In the meantime you can check out the winning projects on our <a class="textButton" href="/__winners-okt" target="_blank">winner page</a>.`,
   },
   sections: [
     {
@@ -43,7 +42,7 @@ module.exports = {
                 `– Students from across Switzerland`,
                 `– Both group and individual work`,
                 `– All genres of visual communication and graphic design`,
-                `– Work completed within the last two years: school year 2019–2020 and 2020–2021`,
+                `– Work completed within the last two school years`,
               ],
             },
             {

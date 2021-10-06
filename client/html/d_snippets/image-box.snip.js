@@ -26,6 +26,10 @@ module.exports = ({ image }) => {
       overflow: hidden;
     }
 
+    .ImageBox picture {
+      
+    }
+
     .ImageBox source {
       display: none;
     }

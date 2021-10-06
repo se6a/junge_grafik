@@ -29,7 +29,7 @@ module.exports = {
     project: {
       id: "20",
       title: "Liebe mit Sugo",
-      tags: ["editorial design", "illustration", "photography"],
+      tags: ["Editorial design", "Illustration", "Photography"],
       year: "2020",
       teacher: [
         "Patrina Strähl",
@@ -72,16 +72,16 @@ module.exports = {
       },
     ],
     education: {
-      institution: "SUPSI Mendrisio",
+      institution: "SUPSI Lugano",
       company: "",
-      type: "SUP",
+      type: "FH",
       year: "3",
       canton: "ti",
     },
     project: {
       id: "21",
       title: "Segreti d’Efra",
-      tags: ["editorial design", "photography", "typography"],
+      tags: ["Editorial design", "Photography", "Typography"],
       year: "2020",
       teacher: ["Nicolas Polli"],
       description:
@@ -120,16 +120,16 @@ module.exports = {
       },
     ],
     education: {
-      institution: "SUPSI Mendrisio",
+      institution: "SUPSI Lugano",
       company: "",
-      type: "SUP",
+      type: "FH",
       year: "3",
       canton: "ti",
     },
     project: {
       id: "30",
       title: "NEMESI – Communication hidden to the digital eye",
-      tags: ["typography", "editorial design", "web design"],
+      tags: ["Typography", "Editorial design", "Web design"],
       year: "2020",
       teacher: ["Leonardo Angelucci"],
       description:
@@ -170,7 +170,7 @@ module.exports = {
     education: {
       institution: "ECAL Lausanne",
       company: "",
-      type: "HES",
+      type: "FH",
       year: "3",
       canton: "vd",
     },
@@ -181,7 +181,7 @@ module.exports = {
       teacher: ["Aurèle Sack", "Guy Meldem"],
       description:
         "Ripley is an adaptable typeface with multiple axes designed to optimize on-screen legibility. It combines historical and contemporary shapes to create a new serif design that serves as a toolbox for readers. In addition, Ripley changes by reacting to the ambient light. It thus adapts to the time of day and the light available in order to take into account that a reader’s eyes might be fatigued by the end of the day. Evolving thus throughout the reading experience, it strives to provide the best possible on-screen legibility.",
-      tags: ["typeface design", "interaction design", "web design"],
+      tags: ["Typeface design", "Interaction design", "Web design"],
       images: [
         "2021-088-david-massara-__SIZE__-lnd-01.jpg",
         "2021-088-david-massara-__SIZE__-lnd-02.jpg",
@@ -219,14 +219,14 @@ module.exports = {
     education: {
       institution: "EAA La Chaux-de-Fonds",
       company: "",
-      type: "CFC",
+      type: "EFZ",
       year: "4",
       canton: "ne",
     },
     project: {
       id: "93",
       title: "Atlas of Neologism",
-      tags: ["editorial design", "infographic design", "typography"],
+      tags: ["Editorial design", "Infographic design", "Typography"],
       year: "2019",
       teacher: ["Thibaud Tissot", "Vincent Devaud"],
       description:
@@ -265,7 +265,7 @@ module.exports = {
     education: {
       institution: "HEAD Genève",
       company: "",
-      type: "HES",
+      type: "FH",
       year: "3",
       canton: "ge",
     },
@@ -273,13 +273,13 @@ module.exports = {
       id: "113",
       title: "20 Minutes",
       year: "2021",
-      tags: ["editorial design", "infographic design"],
+      tags: ["Editorial design", "Infographic design"],
       teacher: ["Xavier Erni"],
       description:
         "Redesign of the 20 Minutes newspaper. The visual approach plays on the original concept of the newspaper, the notion of time, here used in an alarming way (movie images in relation to the subject of the article). The images of the articles are diverted to offer a filmography related to the titles of the absurd editorial line. Advertising slogans with multiple typography replace classic newspaper advertising. It was very challenging to use a digital font similar to the 20 Minutes logotype.",
       images: [
-        "2021-113-leo-monnet-__SIZE__-lnd-02.jpg",
         "2021-113-leo-monnet-__SIZE__-lnd-01.jpg",
+        "2021-113-leo-monnet-__SIZE__-lnd-02.jpg",
         "2021-113-leo-monnet-__SIZE__-lnd-03.jpg",
         "2021-113-leo-monnet-__SIZE__-lnd-04.jpg",
         "2021-113-leo-monnet-__SIZE__-lnd-05.jpg",
@@ -312,7 +312,7 @@ module.exports = {
     ],
     education: {
       institution: "F+F Zürich",
-      company: "",
+      company: "Blast Off Studio, Zürich",
       type: "HF",
       year: "3",
       canton: "zh",
@@ -320,11 +320,11 @@ module.exports = {
     project: {
       id: "124",
       title: "Farben sind Licht, Material ist Stoffe",
-      tags: ["infographic design", "exhibition design", "photography"],
+      tags: ["Infographic design", "Exhibition design", "Photography"],
       year: "2021",
       teacher: ["Julia Marti"],
       description:
-        "Ich stelle fest, dass mir dreidimensional generierte grafische Gestaltung vermehrt begegnet. Diese Ästhetik wird durch Designprogramme und deren Instrumente, auf welche immer mehr Personen Zugriff haben, geschaffen und geprägt. Aufgrund dieser Beobachtung und angelehnt an diesen Stil möchte ich eine neue Bildproduktion entwickeln. Dazu wechsle ich vom Computer zu einer physischen Bildinszenierung. Ich möchte anhand analoger Methoden die von Computern eingeschränkten Gestaltungsmethoden überschreiten. Um dies umzusetzen, bediene ich mich der Werkzeuge Raum, Material und Licht. Meine Erzeugnisse halte ich fotografisch fest und untersuche diese mittels eines selbstentwickelten infografischen Systems, welches mir wiederum als Baukasten dient, um damit neue Bilder zu generieren.",
+        "Ich stelle fest, dass mir dreidimensional generierte grafische Gestaltung vermehrt begegnet. Diese Ästhetik wird durch Designprogram-me und deren Instrumente, auf welche immer mehr Personen Zugriff haben, geschaffen und geprägt. Aufgrund dieser Beobachtung und angelehnt an diesen Stil möchte ich eine neue Bildproduktion entwickeln. Dazu wechsle ich vom Computer zu einer physischen Bildinszenierung. Ich möchte anhand analoger Methoden die von Computern eingeschränkten Gestaltungsmethoden überschreiten. Um dies umzusetzen, bediene ich mich der Werkzeuge Raum, Material und Licht. Meine Erzeugnisse halte ich fotografisch fest und untersu-che diese mittels eines selbstentwickelten infografischen Systems, welches mir wiederum als Baukasten dient, um damit neue Bilder zu generieren.",
       images: [
         "2021-124-yannic-cserhati-__SIZE__-lnd-01.jpg",
         "2021-124-yannic-cserhati-__SIZE__-lnd-02.jpg",
@@ -361,14 +361,14 @@ module.exports = {
     education: {
       institution: "CSIA Lugano",
       company: "",
-      type: "AFC",
+      type: "EFZ",
       year: "4",
       canton: "ti",
     },
     project: {
       id: "128",
       title: "I Manifesti del Museum für Gestaltung",
-      tags: ["corporate design", "exhibition design", "poster design"],
+      tags: ["Corporate design", "Exhibition design", "Poster design"],
       year: "2020",
       teacher: ["Sidi Vanetti", "Michele Forzano"],
       description:
@@ -406,6 +406,7 @@ module.exports = {
         lastname: "Blatt",
         portfolio: "http://refael.ch",
         instagram: "refchef",
+
       },
     ],
     education: {
@@ -418,7 +419,7 @@ module.exports = {
     project: {
       id: "134",
       title: "Horizonte für eine neue Erdpolitik",
-      tags: ["editorial design", "infographic design"],
+      tags: ["Editorial design", "Infographic design"],
       year: "2020",
       teacher: ["Prof. Marion Fink"],
       description:
@@ -463,10 +464,10 @@ module.exports = {
     },
     project: {
       id: "136",
-      title: "Atlas bedrohter Tierarten",
-      tags: ["editorial design", "illustration", "infographic design"],
+      title: "Atlas bedrohter Tierearten",
+      tags: ["Editorial design", "Illustration", "Infographic design"],
       year: "2020",
-      teacher: ["Ramon Lenherr", "Anita Meier", "Sylvia Geel", "Holger Huber"],
+      teacher: ["Anita Meier", "Ramon Lenherr"],
       description:
         "Meine Projektarbeit steht unter dem Thema «Reise ins Morgen». Ich thematisierte damit eine aktuelle, sich verstärkende Problematik – das Artensterben. Täglich sterben Tierarten aus, viele Arten sind den meisten nicht bekannt. Ich wollte für dieses Thema sensibilisieren, indem ich in einem Buch je fünf bedrohte und ausgestorbene Arten mittels Infografiken und Illustrationen portraitiert habe. Pro Art gibt es 2 Doppelseiten. Die ersten zwei zeigen anhand von Infografiken verschiedene Daten über das Tier. Wobei auf der rechten Seite immer ein Fakt / Eigenschaft / Fähigkeit der Art individuell dargestellt wird. Die zweite Doppelseite zeigt das Tier in einer Illustration im natürlichen Lebensraum. ",
       images: [
@@ -515,11 +516,11 @@ module.exports = {
     project: {
       id: "140",
       title: "Atlas der Vulkane",
-      tags: ["infographic design", "editorial design", "photography"],
+      tags: ["Infographic design", "Editorial design", "Photography"],
       year: "2020",
       teacher: ["Prof. Marion Fink"],
-      description: `Aus den Resultaten eines experimentellen Bildlabors* bestimmten wir das Thema Vulkanismus. Damit dokumentieren wir visuell die letzten Ausbrüche der fünf aktivsten Vulkane und generierten dazu Karten aus georeferenzierten Daten. Es entstand ein Konzept, welches das Zusammenspiel von statisch kartografischen und dynamisch plakativen Eruptions-Bildern aufzeigt, gefolgt von einer Liste mit allen registrierten Vulkanen der Erde und deren Status.
-Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus flüssiger Farbe und Reinigungsmittel. Die daraus resultierende eruptive Bildwelt war Ausgangslage für die Themenfindung und das ganze Konzept.`,
+      description:
+        "Aus den Resultaten eines experimentellen Bildlabors* bestimmten wir das Thema Vulkanismus. Damit dokumentieren wir visuell die letzten Ausbrüche der fünf aktivsten Vulkane und generierten dazu Karten aus georeferenzierten Daten. Es entstand ein Konzept, welches das Zusammenspiel von statisch kartografischen und dynamisch plakativen Eruptions-Bildern aufzeigt, gefolgt von einer Liste mit allen registrierten Vulkanen der Erde und deren Status. Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus flüssiger Farbe und Reinigungsmittel. Die daraus resultierende eruptive Bildwelt war Ausgangslage für die Themenfindung und das ganze Konzept.",
       images: [
         "2021-140-timo-reber-__SIZE__-lnd-01.jpg",
         "2021-140-timo-reber-__SIZE__-lnd-02.jpg",
@@ -556,14 +557,14 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     education: {
       institution: "HEAD Genève",
       company: "",
-      type: "HES",
+      type: "FH",
       year: "2",
       canton: "ge",
     },
     project: {
       id: "148",
       title: "P.A.G.E.S.",
-      tags: ["animation design"],
+      tags: ["Animation design"],
       year: "2019",
       teacher: ["Mitch Paone"],
       description:
@@ -607,9 +608,9 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     project: {
       id: "149",
       title: "Digital Reading Matter",
-      tags: ["web design"],
+      tags: ["Web design"],
       year: "2021",
-      teacher: ["Jonas Voegeli", "Matthias Michel"],
+      teacher: ["Jonas Vögeli", "Matthias Michel"],
       description:
         "Digitales Lesen ist anstrengend. Das mediale Potenzial bleibt bis zum heutigen Tag jedoch unausgeschöpft. Beim Lesen wird man mit Fragen konfrontiert, reagiert auf den Inhalt und kritisiert ihn, bezieht also Stellung. Eine Stellung, die man teilen möchte. Der Leser will immer mehr erfahren. Sich vertiefen. Einfach eintauchen und sich treiben lassen. Digital Reading Matter ist eine Applikation zur Förderung digitaler Leselust und -effizienz, die sich an den Wünschen und Bedürfnissen der Benutzer orientiert. Die Sensoren des Gerätes werden funktional eingesetzt. Eine Eye-Tracking-Funktion warnt vor möglichen Konzentrationsstörungen. Die Kommunikation erfolgt schnell und reibungslos durch Spracheingabe. Das bisher einschränkende Medium wird zur Chance.",
       images: [
@@ -653,8 +654,8 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
       id: "150",
       title: "Reiseführer für fantastische Orte",
       year: "2020",
-      tags: ["illustration", "editorial design"],
-      teacher: ["Sylvia Geel", "Ramon Lenherr", "Anita Meier"],
+      tags: ["Illustration", "Editorial design"],
+      teacher: ["Ramon Lenherr", "Sylvia Geel", "Anita Meier"],
       description:
         "Als Projektarbeit durften wir im vierten Jahr einen Reiseführer zu einem Thema unserer Wahl gestalten. Da Bücher eine grosse Leidenschaft von mir sind, habe ich einen fantastischen Reiseführer geschrieben, der Kinder und Erwachsene zum Träumen, Vorlesen und Weiterdenken anregt. Im Vordergrund stehen drei fiktive Orte aus drei unterschiedlichen Büchern, welche man mit Hilfe von Landkarten, Erklärungen und grossflächigen Illustrationen in Gedanken bereisen kann.",
       images: [
@@ -691,14 +692,14 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     education: {
       institution: "EDHEA Sierre",
       company: "",
-      type: "CFC",
+      type: "EFZ",
       year: "4",
       canton: "vs",
     },
     project: {
       id: "157",
-      title: "Les Hommes illustres de l’aviation",
-      tags: ["editorial design"],
+      title: "Les Hommes illustres de l'aviation",
+      tags: ["Editorial design"],
       year: "2021",
       teacher: ["Daniel Schmid", "Tim Meylan"],
       description:
@@ -738,14 +739,14 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     education: {
       institution: "EDHEA Sierre",
       company: "",
-      type: "CFC",
+      type: "EFZ",
       year: "4",
       canton: "vs",
     },
     project: {
       id: "170",
-      title: "Le « je  » est un autre",
-      tags: ["editorial design"],
+      title: 'Le "je" est un autre',
+      tags: ["Editorial design"],
       year: "2021",
       teacher: ["Daniel Schmid", "Tim Meylan"],
       description:
@@ -802,11 +803,11 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     project: {
       id: "182",
       title: "Invasive Neophyten Zürich",
-      tags: ["animation design", "web design"],
+      tags: ["Animation design", "Web design"],
       year: "2020",
       teacher: ["Cybu Richli", "Silvan Possa"],
       description:
-        "Invasive Neophyten sind gebietsfremde Pflanzen, die sich in unserer Natur rasch etablieren und effizient ausbreiten. Sie verdrängen unsere heimische Flora und bedrohen die Biodiversität in der Stadt Zürich. Invasive Neophyten sind mitverantwortlich für das Verschwin-den von rund einem Drittel unserer Pflanzen. Die konzipierte App bietet auf spielerische Art und Weise eine Hilfestellung bei der Bekämpfung von Neophyten an. Dank verschiedener Zugänge zur Thematik werden auch Laien angesprochen. So werden Pflanzen mithilfe der Smartphone-Kamera identifiziert, nach Gefährlichkeitsgrad eingestuft und die korrekte Handhabung / Vorgehensweise vermittelt. Mit jeder bekämpften Pflanze kann der Benutzer der App Punkte sammeln und sich so mit anderen Usern messen.",
+        "Invasive Neophyten sind gebietsfremde Pflanzen, die sich in unserer Natur rasch etablieren und effizient ausbreiten. Sie verdrängen unsere heimische Flora und bedrohen die Biodiversität in der Stadt Zürich. Invasive Neophyten sind mitverantwortlich für das Verschwin-den von rund einem Drittel unserer Pflanzen. Die konzipierte App bietet auf spielerische Art und Weise eine Hilfestellung bei der Bekämpfung von Neophyten an. Dank verschiedener Zugänge zur Thematik werden auch Laien angesprochen. So werden Pflanzen mithilfe der Smartphone-Kamera identifiziert, nach Gefährlichkeitsgrad eingestuft und die korrekte Handhabung /Vorgehensweise vermittelt. Mit jeder bekämpften Pflanze kann der Benutzer der App Punkte sammeln und sich so mit anderen Usern messen.",
       images: [
         "2021-182-anna-pravorotskaya-__SIZE__-lnd-01.jpg",
         "2021-182-anna-pravorotskaya-__SIZE__-lnd-02.jpg",
@@ -850,7 +851,7 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     project: {
       id: "199",
       title: "Die Taube",
-      tags: ["editorial design", "animation design", "interaction design"],
+      tags: ["Editorial design", "Animation design", "Interaction design"],
       year: "2020",
       teacher: [
         "Jonas Voegeli",
@@ -859,7 +860,7 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
         "Samuel Weidmann",
       ],
       description:
-        "Für das Redesign eines literarischen Klassikers habe ich eine meiner Lieblingsnovellen ausgesucht: «Die Taube» von Patrick Süskind. Die Novelle erzählt 24 Stunden aus Jonathan Noels sehr geregeltem Leben. Die unerwartete Begegnung mit einer Taube bringt dieses komplett durcheinander. Die Novelle liest sich sehr einfach. Das neue Layout legt den Fokus auf seine neuartigen Verhaltensweisen und Gedankenspiralen, um der Leser:in mehr Einblick zu gewähren, und zeigt visuell, wie die 24 Stunden vergehen. Zur gedruckten Version im Zeitungsformat wurde ein Digitorial gestaltet, welches das Geschriebene mit Gesprochenem verbindet und einfaches Switchen ermöglicht. Die Gedanken Jonathans werden in der digitalen Version noch immersiver, da diese Textpassagen aktiv verschoben werden müssen, um weiter lesen zu können.",
+        "Für das Redesign eines literarischen Klassikers habe ich eine meiner Lieblingsnovellen ausgesucht: «Die Taube» von Patrick Süskind. Die Novelle erzählt 24 Stunden aus Jonathan Noels sehr geregeltem Leben. Die unerwartete Begegnung mit einer Taube bringt dieses komplett durcheinan-der. Die Novelle liest sich sehr einfach. Das neue Layout legt den Fokus auf seine neuartigen Verhaltensweisen und Gedankenspiralen, um der Leser:in mehr Einblick zu gewähren, und zeigt visuell, wie die 24 Stunden vergehen. Zur gedruckten Version im Zeitungsformat wurde ein Digitorial gestaltet, welches das Geschriebene mit Gesprochenem verbindet und einfaches Switchen ermöglicht. Die Gedanken Jonathans werden in der digitalen Version noch immersiver, da diese Textpassagen aktiv verschoben werden müssen, um weiter lesen zu können.",
       images: [
         "2021-199-martina-holenstein-__SIZE__-lnd-01.jpg",
         "2021-199-martina-holenstein-__SIZE__-lnd-02.jpg",
@@ -895,14 +896,14 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     education: {
       institution: "ECAL Lausanne",
       company: "",
-      type: "HES",
+      type: "FH",
       year: "2",
       canton: "vd",
     },
     project: {
       id: "203",
       title: "La maison des Femmes de Ouled Merzoug",
-      tags: ["editorial design", "photography", "typography"],
+      tags: ["Editorial design", "Photography", "Typography"],
       year: "2021",
       teacher: ["Nicole Udry"],
       description:
@@ -954,7 +955,7 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     project: {
       id: "208",
       title: "Film Noir International",
-      tags: ["poster design"],
+      tags: ["Poster design"],
       year: "2021",
       teacher: ["Rebecca Morganti-Pfaffhauser", "Martin Woodtli"],
       description:
@@ -991,14 +992,14 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     education: {
       institution: "ECAL Lausanne",
       company: "",
-      type: "HES",
+      type: "FH",
       year: "1",
       canton: "vd",
     },
     project: {
       id: "262",
       title: "Butterfly",
-      tags: ["editorial design", "illustration"],
+      tags: ["Editorial design", "Illustration"],
       year: "2021",
       teacher: ["Guy Meldem"],
       description:
@@ -1045,9 +1046,9 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     project: {
       id: "271",
       title: "Beauty Solutions",
-      tags: ["editorial design", "typography", "photography"],
+      tags: ["Editorial design", "Typography", "Photography"],
       year: "2020",
-      teacher: ["Giliane Cachin", "Lea Michel", "Jonas Voegeli"],
+      teacher: ["Giliane Cachin", "Jonas Vögeli", "Lea Michel"],
       description:
         "Die Textebene beinhaltet ein Lehrbuch der plastischen Chirurgie und zieht sich über alle Seiten. In der Mitte wird diese durch eine Art Werbeteil getrennt: Die fabulöse Welt der südkoreanischen plastischen Chirurgie, visualisiert mit Logo-Zeichen aus dessen Praxen sowie Statements von Ärzt:innen und Patient:innen. Das Haupt-Layout soll klinisch sauber wirken und mit der fremden, luxuriösen Welt aus Südkorea durchbrochen werden. Die Fotografie behandelt verbrauchte Beautyprodukte aus dem Alltag. Das Editorial startet mit den verbrauchten Produkten in ihrer gewohnten Alltagssituation und endet mit den gescannten «spiegelglatten» Versionen.",
       images: [
@@ -1092,11 +1093,11 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     project: {
       id: "274",
       title: "Nightline Barcelona",
-      tags: ["corporate design", "animation design", "interaction design"],
+      tags: ["Corporate design", "Animation design", "Interaction design"],
       year: "2020",
-      teacher: [""],
+      teacher: ["Michael Hinderling"],
       description:
-        "Nightline Barcelona vereint Schweizer Nüchternheit mit der verträumten und surrealen Atmosphäre der mediterranen Grossstadt. Das Branding erinnert an einen Horizont, über dem ein spannungsgeladener Nachthimmel thront. Die gelbe Nightline steht dabei für den Zug und die Route nach Barcelona. Der Nachthimmel ist grafisch reduziert auf Flächen und Linien, was in Kombination mit der Farbpalette einen hohen Wiedererkennungswert verspricht. Die App umfasst zum einen eine Booking Engine, zum anderen können die Reisenden wichtige Informationen zur Fahrt abrufen, das Ticket einsehen oder bei einer nächtlichen Hungerattacke Snacks bestellen. VISION 2025 ist der Name des Projekts für die neu konzipierte Nachtzuglinie nach Barcelona inklusive neuartiger Waggons mit Schlafkapsel-Unterkünften. Diese Arbeit entstand im Rahmen des Qualifikationsverfahrens 2020.",
+        "Nightline Barcelona vereint Schweizer Nüchternheit mit der verträumten und surrealen Atmosphäre der mediterranen Grossstadt. Das Branding erinnert an einen Horizont, über dem ein spannungsgeladener Nachthimmel thront. Die gelbe Nightline steht dabei für den Zug und die Route nach Barcelona. Der Nachthimmel ist grafisch reduziert auf Flächen und Linien, was in Kombination mit der Farbpalette einen hohen Wiedererkennungswert verspricht. Die App umfasst zum einen eine Booking Engine, zum anderen können die Reisenden wichtige Informationen zur Fahrt abrufen, das Ticket einsehen oder bei einer nächtlichen Hungerattacke Snacks bestellen. VISION 2025 ist der Name des Projekts für die neu konzipierte Nachtzug-linie nach Barcelona inklusive neuartiger Waggons mit Schlafkapsel-Unter-künften. Diese Arbeit entstand im Rahmen des Qualifikationsverfahrens 2020.",
       images: [
         "2021-274-valentin-baumann-__SIZE__-lnd-01.jpg",
         "2021-274-valentin-baumann-__SIZE__-lnd-02.jpg",
@@ -1140,9 +1141,9 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     project: {
       id: "300",
       title: "DOPPELT HÄLT BESSER! – Das Redewende-Memory",
-      tags: ["corporate design", "illustration", "animation design"],
+      tags: ["Corporate design", "Illustration", "Animation design"],
       year: "2021",
-      teacher: [""],
+      teacher: ["Martin Infanger"],
       description:
         "Die Aufgabe des Qualifikationsverfahrens 2021 bestand darin, eine Neuauflage eines Gesellschaftsspiels zu gestalten. Ich entschied mich für das Memory. Mein Ziel war es, einen Lernfaktor einzubauen und Jugendliche sowie junge Erwachsene anzusprechen. Aus diesen Intentionen entstand «DOPPELT HÄLT BESSER!», mit welchem deutsche Redewendungen spielerisch gelernt werden können. Zusätzlich entwickelte ich ein Nachschlagewerk in Form eines Kreuzbruch-Falzblattes, auf dessen Rückseite die Herleitungen der Ausdrücke aufgelistet sind sowie eine Spielanleitung. Als digitales Medium konzipierte ich eine Instagram-Seite und zwei animierte Werbe-Beiträge in Form eines Instagram-Posts und -Story.",
       images: [
@@ -1186,11 +1187,11 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     project: {
       id: "307",
       title: "Rebranding carvelo2go",
-      tags: ["corporate design", "interaction design", "illustration"],
+      tags: ["Corporate design", "Interaction design", "Illustration"],
       year: "2021",
       teacher: ["Manuel Häfliger"],
       description:
-        "Im Rahmen meiner Diplomarbeit habe ich zum Thema «Megatrend Mobilität» ein fiktives Rebranding für carvelo2go erarbeitet. Carvelo2go ist eine eCargoBike Sharing-Plattform mit dem Ziel, den Nutzer:innen positive Mobilitätserlebnisse und eine echte Alternative zum Auto zu bieten. Der definierte Claim «Mobilität, die glücklich macht» soll auf allen Ebenen der neuen Markenidentität mit einer frischen, lebendigen Erscheinung und einer wohltuenden Verspieltheit zur Geltung kommen. Nicht nur im visuellen Auftritt, sondern auch bei den digitalen Anwendungen soll ein «Joy of Use» ein frisches und positives Erlebnis auslösen. Um sich von der Konkurrenz abzuheben, werden als Keyvisuals auffallende Illustrationen eingesetzt, welche das eCargo-Bike ins Zentrum rücken und das Angebot visuell erklären.",
+        "Im Rahmen meiner Diplomarbeit habe ich zum Thema «Megatrend Mobilität» ein fiktives Rebranding für carvelo2go erarbeitet. Carvelo2go ist eine eCargoBike Sharing-Plattform mit dem Ziel, den Nutzer:innen positive Mobilitätserlebnisse und eine echte Alternati-ve zum Auto zu bieten. Der definierte Claim «Mobilität, die glücklich macht» soll auf allen Ebenen der neuen Markenidentität mit einer frischen, lebendigen Erscheinung und einer wohltuenden Verspieltheit zur Geltung kommen. Nicht nur im visuellen Auftritt, sondern auch bei den digitalen Anwendungen soll ein «Joy of Use» ein frisches und positives Erlebnis auslösen. Um sich von der Konkurrenz abzuheben, werden als Keyvisuals auffallende Illustrationen eingesetzt, welche das eCargo-Bike ins Zentrum rücken und das Angebot visuell erklären.",
       images: [
         "2021-307-fabian-gubelmann-__SIZE__-lnd-01.jpg",
         "2021-307-fabian-gubelmann-__SIZE__-lnd-02.jpg",
@@ -1235,7 +1236,7 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     project: {
       id: "342",
       title: "Les féministes, les réacs et les putes.",
-      tags: ["editorial design", "poster design"],
+      tags: ["Editorial design", "Poster design"],
       year: "2020",
       teacher: ["Diego Bontognali"],
       description:
@@ -1283,9 +1284,9 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     project: {
       id: "358",
       title: "Nightline Berlin",
-      tags: ["corporate design", "typography", "poster design"],
+      tags: ["Corporate design", "Typography", "Poster design"],
       year: "2020",
-      teacher: [""],
+      teacher: ["Martin Infanger", "Loana Boppart"],
       description:
         "Zum Qualifikationsverfahren 2020 wurde mir die Aufgabe gestellt, ein Corporate Design zu gestalten für einen Nachtzug nach Berlin. Ich entschied mich rasch, ein CD für einen Kapselzug zu gestalten, der junge Menschen möglichst schnell und günstig in die Metropole des Nachtlebens transportiert. Nach verschiedenen Experimenten bin ich durch analoge typografische Stempel auf die Übersetzung der Kapseln in die Typografie gestossen. Die Klammern, die wie eine Kapsel verschiedene Inhalte enthalten können, wurden zu meinen Hauptprotagonistinnen. Durch die Vervielfachung der Klammern und die sich zuspitzenden Schriftdicken wird der Aspekt des Tempos aufgenommen. Das typografische System bietet viel Spielraum für verschiedene Medien, Formate und Inhalte, die darin bespielt werden können.",
       images: [
@@ -1332,16 +1333,10 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     project: {
       id: "362",
       title: "5440 minutes to read through London",
-      tags: ["editorial design", "typography", "photography"],
+      tags: ["Editorial design", "Typography", "Photography"],
       year: "2019",
       teacher: [
-        "Marco Backer",
-        "Valeria Bonin",
-        "Hanspeter Künzler",
-        "Michael Pilz",
-        "Patrina Strähl",
-        "Silvio Waser",
-        "Markus Wicki",
+        "Marco Backer", "Valeria Bonin", "Hanspeter Künzler", "Michael Pilz", "Patrina Strähl", "Silvio Waser", "Markus Wicki",
       ],
       description:
         "This book is a simulated journey, exploring the interventions of 29 students from the Fachklasse Grafik Luzern in London. You will experience the same things the students experienced when travelling from one intervention to another. An important tool the students used for orientation was Google Maps. Utilising the output of Google Maps, this book is based on a strict minute grid. With the options of either walking, taking the bus or the metro, the reader can vary their travelling speed and the amount of information they want. These different travelling speeds are visually represented through typographic size and hierarchies. This enables you to get a simulated version of the real-live experience of visiting the interventions in London.",
@@ -1377,18 +1372,18 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     education: {
       institution: "ECAL Lausanne",
       company: "",
-      type: "HES",
+      type: "FH",
       year: "2",
       canton: "vd",
     },
     project: {
       id: "378",
       title: "Walden",
-      tags: ["editorial design"],
+      tags: ["Editorial design"],
       year: "2021",
       teacher: ["Diego Bontognali"],
       description:
-        "Edition 1 – Ce travail d’édition utilise le premier chapitre « Economy » du livre Walden de Henry David Thoreau, et explique toute la philosophie et la façon du livre. L’édition s’inspire des codes esthétiques de l’Art nouveau (même époque que Walden). Comme Walden, l’Art nouveau est un mouvement prônant la décroissance, le retour à l’essentiel, visant à retrouver sa vraie nature. L’essentiel pas au niveau du rien mais ce qui importe réellement, c’est-à-dire la nature. Edition 2 – Ce travail se base sur l’extrait de la page 100 du livre Walden. L’extrait raconte qu’il faut se familiariser avec l’environnement du lieu pour pouvoir y habiter. Cette édition montre la recherche de l’endroit parfait pour vivre une éxperience en nature, comme Thoreau l’a fait.",
+        "Edition 1 – Ce travail d’édition utilise le premier chapitre « Economy » du livre Walden de Henry David Thoreau, et explique toute la philosophie et la façon du livre. L’édition s’inspire des codes esthétiques de l’Art nouveau (même époque que Walden). Comme Walden, l’Art nouveau est un mouvement prônant la décroissance, le retour à l’essentiel, visant à retrouver sa vraie nature. L’essentiel pas au niveau du rien mais ce qui importe réellement, c’est-à dire la nature. Edition 2 – Ce travail se base sur l’extrait de la page 100 du livre Walden. L’extrait raconte qu’il faut se familiariser avec l’environnement du lieu pour pouvoir y habiter. Cette édition montre la recherche de l’endroit parfait pour vivre une éxperience en nature, comme Thoreau l’a fait.",
       images: [
         "2021-378-mara-wohlfahrt-__SIZE__-lnd-01.jpg",
         "2021-378-mara-wohlfahrt-__SIZE__-lnd-02.jpg",
@@ -1428,18 +1423,13 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     project: {
       id: "379",
       title: "DON’T TOUCH MY BABY",
-      tags: ["illustration", "poster design"],
+      tags: ["Illustration", "Poster design"],
       year: "2021",
       teacher: [
-        "Melchior Imboden",
-        "Martin Infanger",
-        "Felix Pfäffli",
-        "Tarcisius",
-        "Schelbert",
-        "Martin Woodtli",
+        "Melchior Imboden", "Martin Infanger", "Felix Pfäffli", "Tarcisius", "Schelbert", "Martin Woodtli",
       ],
       description:
-        "In Kooperation mit Clear Channel gestaltete ich ein Plakat, das sich mit dem Thema Tiermisshandlung in der Luxusindustrie beschäftigte. Ein aggressives Krokodil beschützt seine Kinder, aber eines seiner Kinder ist eine Lederhandtasche. Mit diesem Plakat möchte ich den Betrachter zum Nachdenken bringen, wie absurd es ist, dass wir exotische Tiere immer noch zu unserem Vergnügen töten. Exotenleder ist weder Mode noch Accessoire, es ist Tierquälerei. Dieses Plakat wurde von Hand gezeichnet, dann wurden die Farben in 3 verschiedene Schichten getrennt, was dem Plakat einen Siebdruck-Stil verleiht.",
+        "In Kooperation mit Clear Channel gestaltete ich ein Plakat, das sich mit dem Thema Tiermisshandlung in der Luxusindustrie beschäf-tigte. Ein aggressives Krokodil beschützt seine Kinder, aber eines seiner Kinder ist eine Lederhandtasche. Mit diesem Plakat möchte ich den Betrachter zum Nachdenken bringen, wie absurd es ist, dass wir exotische Tiere immer noch zu unserem Vergnügen töten. Exotenle-der ist weder Mode noch Accessoire, es ist Tierquälerei. Dieses Plakat wurde von Hand gezeichnet, dann wurden die Farben in 3 verschiedene Schichten getrennt, was dem Plakat einen Siebdruck-Stil verleiht.",
       images: [
         "2021-379-akira-yamaguchi-__SIZE__-lnd-01.jpg",
         "2021-379-akira-yamaguchi-__SIZE__-prt-02.jpg",

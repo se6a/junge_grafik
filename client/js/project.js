@@ -1,23 +1,26 @@
 (() => {
-  let [url, queryParamaters] = location.href.split("?");
-  queryParamaters = queryParamaters
-    ? queryParamaters
-        .split("&")
-        .filter((para) => para.startsWith("id"))
-        .join("&")
-    : "";
+  const fromWinners = location.href.includes("winnersOrder");
 
-  history.pushState(
-    null,
-    "",
-    url + (queryParamaters ? `?${queryParamaters}` : "")
-  );
+  if (fromWinners) {
+    const [url, originalQueryParamaters] = location.href.split("?");
+    const projectId = originalQueryParamaters
+      ? originalQueryParamaters
+          .split("&")
+          .filter((para) => para.startsWith("id"))
+      : "";
 
-  // when clicking the browser back button after pushstate,
-  // the user is still on the same site, just the queryParameters changed.
-  // Therefore double it:
-  window.onpopstate = (e) => {
-    console.log("e", e);
-    history.back();
-  };
+    history.pushState(
+      null,
+      "",
+      url + (projectId.length ? `?${projectId}` : "")
+    );
+
+    window.onpopstate = (e) => {
+      const goTo =
+        window.location.origin +
+        "/__winners-okt" +
+        (originalQueryParamaters.length ? `?${originalQueryParamaters}` : "");
+      window.location.href = goTo;
+    };
+  }
 })();

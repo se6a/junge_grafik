@@ -33,6 +33,12 @@ module.exports = (text) => {
       flex-wrap: wrap;
     }
 
+    body.--maybeSafari .textUnderlinedMulti .langOption {
+      overflow: hidden;
+      padding-bottom: var(--size-S);
+      margin-bottom: calc(var(--size-S) * -1);
+    }
+
     .textUnderlinedMulti .textUnderlined.outerBox {
       display: inline-flex;
     }

@@ -21,8 +21,8 @@ const options = [
   { id: "Typography", all: "Typography" },
   { id: "Web design", all: "Web design" },
 ].map(({ all }) => ({
-  id: "#" + all.replace(" design", ""),
-  all: "#" + all.replace(" design", ""),
+  id: "#" + all.replace(" design", "").toLowerCase(),
+  all: "#" + all.replace(" design", "").toLowerCase(),
 }));
 
 function CardContent(project) {

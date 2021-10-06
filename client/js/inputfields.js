@@ -22,33 +22,76 @@ function selectOption($field, $option) {
   }
 }
 
-function selectOptionMulti($field, $option) {
-  if ($option.classList.contains("option")) {
-    const $input = $field.querySelector("input");
-    const $display = $field.querySelector(".input.SelectMulti");
-    const optionId = $option.dataset.id;
-    const optionName = $option.textContent.trim();
-    const value = JSON.parse($input.dataset.value);
-    const $newItem = selectMultiItem(optionId, optionName);
-
-    $newItem.addEventListener("click", () => {
-      let values = JSON.parse($input.dataset.value);
-      values = values.filter((v) => v !== $newItem.id);
-      $input.dataset.value = JSON.stringify(values);
-      $newItem.remove();
-      $option.classList.remove("--selected");
-      $input.dispatchEvent(new InputEvent("update"));
-    });
-
-    value.push(optionId);
-    $input.dataset.value = JSON.stringify(value);
-
-    $input.dispatchEvent(new InputEvent("update"));
-
-    $display.insertAdjacentElement("BEFOREEND", $newItem);
-
-    $option.classList.add("--selected");
+function handleMultiSelectEvent($field, $target) {
+  // When clicking on selectedItem's (to delete them), do not open Dropdown:
+  if ($target.classList.contains("selectedItem")) {
+    return;
   }
+
+  // Handle User Selection:
+  if ($target.classList.contains("option")) {
+    selectOptionMulti($field, $target);
+  }
+  // Toggle Dropdown
+  else {
+    toggleMultiSelect($field);
+  }
+}
+
+function selectOptionMulti($field, $option) {
+  const $input = $field.querySelector("input");
+  const $display = $field.querySelector(".input.SelectMulti");
+  const optionId = $option.dataset.id;
+  const optionName = $option.textContent.trim();
+  const value = JSON.parse($input.dataset.value);
+  const $newItem = selectMultiItem(optionId, optionName);
+
+  $newItem.addEventListener("click", () => {
+    let values = JSON.parse($input.dataset.value);
+    values = values.filter((v) => v !== $newItem.id);
+    $input.dataset.value = JSON.stringify(values);
+    $newItem.remove();
+    $option.classList.remove("--selected");
+    $input.dispatchEvent(new InputEvent("update"));
+  });
+
+  value.push(optionId);
+  $input.dataset.value = JSON.stringify(value);
+  $input.dispatchEvent(new InputEvent("update"));
+  $display.insertAdjacentElement("BEFOREEND", $newItem);
+  $option.classList.add("--selected");
+}
+
+function toggleMultiSelect($field) {
+  // Toggle open / close if not clicking on options:
+  if ($field.dataset.isOpen === "0") openMultiSelect($field);
+  else closeMultiSelect($field);
+}
+
+function openMultiSelect($field) {
+  $field.dataset.isOpen = "1";
+
+  document.body.addEventListener(
+    "click",
+    (e) => closeMultiSelectOnBlur($field, e),
+    { once: true }
+  );
+}
+
+function closeMultiSelectOnBlur($field, { target }) {
+  if (!$field.isEqualNode(target) && !$field.contains(target)) {
+    closeMultiSelect($field);
+  } else {
+    document.body.addEventListener(
+      "click",
+      (e) => closeMultiSelectOnBlur($field, e),
+      { once: true }
+    );
+  }
+}
+
+function closeMultiSelect($field) {
+  $field.dataset.isOpen = "0";
 }
 
 function selectMultiItem(optionId, optionName) {

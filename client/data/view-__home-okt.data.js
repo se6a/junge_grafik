@@ -6,7 +6,7 @@ module.exports = {
     indexed: true,
   },
   header: {
-    image: "theme/waiting_V2.svg",
+    image: "theme/winners.svg",
     content: '<div class="HeaderColors"></div>',
   },
   sections: [
@@ -34,9 +34,11 @@ module.exports = {
           type: "text",
           title: "Junge Grafik 2021 publication",
           content: /*html*/ `
-            <figure>
-              <img class="image" src="/media/assoc/md/jg_board-jonas_keusch-md.jpg">
-            </figure>
+            <a href="/media/publication/publication-preview-lg.jpg" target="_blank">
+              <figure>
+                <img class="image" src="/media/publication/publication-preview-lg.jpg">
+              </figure>
+            </a>
             <p>
               The Junge Grafik 2021 publication is a cross-section of the upcoming generation of Swiss graphic designers. On 128 pages, we present this year’s winning works, facts and figures about the submission process as well as interviews with the jury, a selection of patrons and various graphic designers.
             </p>

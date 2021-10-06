@@ -217,6 +217,14 @@ select:hover,
   outline: calc(var(--borderHover) - var(--borderFull)) solid currentColor;
 }
 
+input:focus:hover,
+textarea:focus:hover,
+select:focus:hover,
+.Select .inputBox.inner:focus:hover,
+.SelectMulti .inputBox.inner:focus:hover {
+  outline: calc(var(--borderFocus) - var(--borderFull)) solid currentColor;
+}
+
 *:focus {
   outline: var(--borderFocus) solid currentColor;
 }

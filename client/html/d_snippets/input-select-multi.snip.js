@@ -1,5 +1,6 @@
 const DropDownIcon = getSnippet("icon-dropdown");
 const Tooltip = getSnippet("tooltip");
+const CircleButton = getSnippet("button-circle");
 
 function SelectOptions(options = []) {
   const done = options.reduce((all, _option) => {
@@ -41,9 +42,9 @@ module.exports = ({
       <div class="SelectMulti inputBox outer">
         <div
           class="SelectMulti inputBox inner"
-          onclick="selectOptionMulti(this, event.target)"
-          onmouseleave="blurField(event)"
+          onclick="handleMultiSelectEvent(this, event.target)"
           tabindex="0"
+          data-is-open="0"
           data-placeholder="${placeholder}"
         >
           <span class="input SelectMulti">
@@ -59,7 +60,11 @@ module.exports = ({
             ${required ? 'required="required"' : ""}
           />
 
-          ${DropDownIcon()}
+          ${CircleButton({
+            id: "",
+            classes: "SelectDropDown",
+            icon: DropDownIcon(),
+          })}
 
           <ul
             class="SelectMulti options"
@@ -92,10 +97,13 @@ module.exports = ({
       display: block;
     }
 
-    .formField.SelectMulti .icon.Dropdown {
+    .formField.SelectMulti .button.SelectDropDown {
       position: absolute;
       right: var(--size-XS);
       top: calc((var(--fieldSize-M) - var(--iconSize-M)) / 2);
+    }
+
+    .formField.SelectMulti .icon.Dropdown {
       pointer-events: none;
     }
 
@@ -119,6 +127,8 @@ module.exports = ({
       max-height: 40vh;
       min-height: 10vh;
       overflow-y: auto;
+      position: absolute;
+      width: 100%;
     }
 
     .SelectMulti > .option {
@@ -144,19 +154,23 @@ module.exports = ({
       display: none;
     }
 
-    .SelectMulti.inputBox.inner:focus-within .options {
+    // .SelectMulti.inputBox.inner:focus-within .options {
+    //   display: block;
+    //   background-color: var(--colorKey);
+    //   color: var(--white);
+    //   border: 2px solid var(--colorKey);
+    //   border-top: unset;
+    // }
+
+    .SelectMulti.inputBox.inner[data-is-open="1"] .options {
       display: block;
       background-color: var(--colorKey);
       color: var(--white);
+      border: 2px solid var(--colorKey);
+      border-top: unset;
     }
 
-    .SelectMulti.inputBox.inner:focus-within .options {
-      display: block;
-      background-color: var(--colorKey);
-      color: var(--white);
-    }
-
-    .SelectMulti.inputBox.inner:focus-within .icon.Dropdown {
+    .SelectMulti.inputBox.inner[data-is-open="1"] .icon.Dropdown {
       transform: rotate(180deg);
     }
 
@@ -175,6 +189,10 @@ module.exports = ({
       padding-left: var(--size-S);
       transition: color 200ms ease, background-color 200ms ease;
       max-width: calc(100% - var(--size-S));
+    }
+
+    .selectedItem * {
+      pointer-events: none;
     }
 
     .selectedItem > .Name {

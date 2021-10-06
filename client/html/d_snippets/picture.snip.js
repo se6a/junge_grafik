@@ -67,6 +67,7 @@ module.exports = ({ src = "", alt = "No Description." }) => {
       height: 100%;
       display: flex;
       justify-content: center;
+      align-items: flex-start;
     }
 
     picture > .image {

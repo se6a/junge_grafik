@@ -1,10 +1,9 @@
-const Checkbox     = getSnippet("input-checkbox");
-const EmailInput   = getSnippet("input-email");
-const IconNext     = getSnippet("icon-next");
+const EmailInput = getSnippet("input-email");
+const IconNext = getSnippet("icon-next");
 const CircleButton = getSnippet("button-circle");
 
 module.exports = () => {
-  const html = splitTemp/*html*/`
+  const html = splitTemp/*html*/ `
     <form
       class="NewsletterForm form"
       id="Newsletter"
@@ -35,7 +34,7 @@ module.exports = () => {
             name: "e-mail",
             label: { all: "E-Mail" },
             placeholder: "your email",
-            required: true
+            required: true,
           })}
 
           <div class="formField Submit">
@@ -43,7 +42,7 @@ module.exports = () => {
               id: "footer-newsletter-submit",
               classes: "Submit",
               type: "submit",
-              icon: IconNext()
+              icon: IconNext(),
             })}
           </div>
         </fieldset>
@@ -58,7 +57,7 @@ module.exports = () => {
     </form>
   `;
 
-  const css = /*css*/`
+  const css = /*css*/ `
     .NewsletterForm .label {
       font-size: var(--fontSize-S);
       line-height: var(--lineHeight-S);

@@ -21,19 +21,18 @@ function Link(title, links) {
     label: linkToLabel(link),
   }));
 
+  console.log("LINKS", links);
   return {
     title: title,
     items: [
       links
         .map(
-          (link) => /*html*/ `
-        <a class="textButton"
+          (link) => /*html*/ `<a class="textButton"
           href="${link.href}"
           target="_blank"
         >
           ${link.label}
-        </a>
-      `
+        </a>`
         )
         .join(", "),
     ],
@@ -78,16 +77,11 @@ module.exports = async ({ req }) => {
             title: "",
             details: [
               {
-                title: "Year of origin",
-                items: [project.year],
-                hasArrow: false,
-              },
-              {
                 title: "School",
                 items: [
-                  `${education.institution}, ${education.type}, ${
+                  `${education.type}, ${
                     ["1st", "2nd", "3rd", "4th"][education.year - 1]
-                  } year`,
+                  } year, ${education.institution}`,
                 ],
                 hasArrow: false,
               },
@@ -99,7 +93,7 @@ module.exports = async ({ req }) => {
                   }
                 : {},
               {
-                title: "Mentors",
+                title: "Mentoring",
                 items: [project.teacher.join(", ")],
                 hasArrow: false,
               },
@@ -128,10 +122,10 @@ module.exports = async ({ req }) => {
                     image: {
                       classes: "projectImage",
                       src: `projects/${image}`,
-                      href: `${ENV.host}/media/projects/2021/lg/${image.replace(
-                        "__SIZE__",
-                        "lg"
-                      )}`,
+                      // href: `${ENV.host}/media/projects/2021/lg/${image.replace(
+                      //   "__SIZE__",
+                      //   "lg"
+                      // )}`,
                     },
                   };
                 }),
@@ -185,6 +179,10 @@ module.exports = async ({ req }) => {
     body.--size-lg .Project .Overview.box {
       gap: 0;
       grid-template-columns: 1fr;
+    }
+
+    .Project .OverviewItem .textButton {
+      display: inline-block;
     }
 
     .Project .gallery {
