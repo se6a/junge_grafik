@@ -92,11 +92,13 @@ module.exports = async ({ req }) => {
                     hasArrow: false,
                   }
                 : {},
-              {
-                title: "Mentoring",
-                items: [project.teacher.join(", ")],
-                hasArrow: false,
-              },
+              project.teacher.length
+                ? {
+                    title: "Mentoring",
+                    items: [project.teacher.join(", ")],
+                    hasArrow: false,
+                  }
+                : {},
               Link(
                 "Portfolio",
                 students.filter((st) => st.portfolio).map((st) => st.portfolio)
@@ -122,10 +124,6 @@ module.exports = async ({ req }) => {
                     image: {
                       classes: "projectImage",
                       src: `projects/${image}`,
-                      // href: `${ENV.host}/media/projects/2021/lg/${image.replace(
-                      //   "__SIZE__",
-                      //   "lg"
-                      // )}`,
                     },
                   };
                 }),
@@ -151,7 +149,7 @@ module.exports = async ({ req }) => {
       ${Button({
         classes: "BackToWinners",
         label: "&#8592 back to the winners",
-        href: `${ENV.host}/__winners-okt?winnersOrder=${prevWinnersOrder}&winnersFilter=${prevWinnersFilter}&from=${project.id}`,
+        href: `${ENV.host}/winners?winnersOrder=${prevWinnersOrder}&winnersFilter=${prevWinnersFilter}&from=${project.id}`,
         type: "link",
       })}
 
@@ -236,10 +234,6 @@ module.exports = async ({ req }) => {
 
     .Project .button.BackToWinners .label {
       font-size: var(--fontSize-L);
-    }
-
-    .Project .videoBox {
-      width: 75%;
     }
   `;
 

@@ -114,7 +114,7 @@ module.exports = ({
       border-color: var(--colorKey);
       display: flex;
       flex-wrap: wrap;
-      gap: var(--size-XS);
+      gap: 0;
       padding: var(--size-XS);
       padding-right: calc(var(--size-XS) + var(--iconSize-M))
     }

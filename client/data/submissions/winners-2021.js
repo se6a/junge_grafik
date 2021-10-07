@@ -372,7 +372,7 @@ module.exports = {
       year: "2020",
       teacher: ["Sidi Vanetti", "Michele Forzano"],
       description:
-        "In October 2020, we were asked to design the entire identity of the event for the CSIA exhibition I Manifesti del Museum für Gestal-tung: poster, caption, invitation cards and other media. The stylistic diversity that distinguishes the coordinated image of the Museum für Gestaltung made me opt for the creation of a neutral but extremely detailed identity. My visual communication consists in a complex, “layered”, “infographic” and above all neutral language. My project aims to contrast the posters presented in the exhibition: if the intention is usually to “summarize the contents”, the identity I have developed, on the contrary, deepens the context and the contents.",
+        "In October 2020, we were asked to design the entire identity of the event for the CSIA exhibition I Manifesti del Museum für Gestaltung: poster, caption, invitation cards and other media. The stylistic diversity that distinguishes the coordinated image of the Museum für Gestaltung made me opt for the creation of a neutral but extremely detailed identity. My visual communication consists in a complex, “layered”, “infographic” and above all neutral language. My project aims to contrast the posters presented in the exhibition: if the intention is usually to “summarize the contents”, the identity I have developed, on the contrary, deepens the context and the contents.",
       images: [
         "2021-128-monica-mueller-__SIZE__-lnd-01.jpg",
         "2021-128-monica-mueller-__SIZE__-prt-02.jpg",
@@ -567,7 +567,7 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
       year: "2019",
       teacher: ["Mitch Paone"],
       description:
-        "Animation cinétique pour P.A.G.E.S. Print & Art Book Fair, réalisée autour du thème de l’imprimé, de la page et des procédés d’impres-sion. Le concept visuel reflète le mouvement poétique des pages d’un livre s’ouvrant sous l’effet d’une rafale de vent de manière naturelle, et invite à venir explorer les ouvrages exposés.",
+        "Animation cinétique pour P.A.G.E.S. Print & Art Book Fair, réalisée autour du thème de l’imprimé, de la page et des procédés d’impression. Le concept visuel reflète le mouvement poétique des pages d’un livre s’ouvrant sous l’effet d’une rafale de vent de manière naturelle, et invite à venir explorer les ouvrages exposés.",
       images: [
         "2021-148-leo-monnet-__SIZE__-lnd-01.jpg",
         "2021-148-leo-monnet-__SIZE__-prt-02.jpg",
@@ -744,7 +744,7 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
     },
     project: {
       id: "170",
-      title: "Le « je  » est un autre",
+      title: "Le « je » est un autre",
       tags: ["editorial design"],
       year: "2021",
       teacher: ["Daniel Schmid", "Tim Meylan"],
@@ -1094,7 +1094,7 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
       title: "Nightline Barcelona",
       tags: ["corporate design", "animation design", "interaction design"],
       year: "2020",
-      teacher: [""],
+      teacher: [],
       description:
         "Nightline Barcelona vereint Schweizer Nüchternheit mit der verträumten und surrealen Atmosphäre der mediterranen Grossstadt. Das Branding erinnert an einen Horizont, über dem ein spannungsgeladener Nachthimmel thront. Die gelbe Nightline steht dabei für den Zug und die Route nach Barcelona. Der Nachthimmel ist grafisch reduziert auf Flächen und Linien, was in Kombination mit der Farbpalette einen hohen Wiedererkennungswert verspricht. Die App umfasst zum einen eine Booking Engine, zum anderen können die Reisenden wichtige Informationen zur Fahrt abrufen, das Ticket einsehen oder bei einer nächtlichen Hungerattacke Snacks bestellen. VISION 2025 ist der Name des Projekts für die neu konzipierte Nachtzuglinie nach Barcelona inklusive neuartiger Waggons mit Schlafkapsel-Unterkünften. Diese Arbeit entstand im Rahmen des Qualifikationsverfahrens 2020.",
       images: [
@@ -1142,7 +1142,7 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
       title: "DOPPELT HÄLT BESSER! – Das Redewende-Memory",
       tags: ["corporate design", "illustration", "animation design"],
       year: "2021",
-      teacher: [""],
+      teacher: [],
       description:
         "Die Aufgabe des Qualifikationsverfahrens 2021 bestand darin, eine Neuauflage eines Gesellschaftsspiels zu gestalten. Ich entschied mich für das Memory. Mein Ziel war es, einen Lernfaktor einzubauen und Jugendliche sowie junge Erwachsene anzusprechen. Aus diesen Intentionen entstand «DOPPELT HÄLT BESSER!», mit welchem deutsche Redewendungen spielerisch gelernt werden können. Zusätzlich entwickelte ich ein Nachschlagewerk in Form eines Kreuzbruch-Falzblattes, auf dessen Rückseite die Herleitungen der Ausdrücke aufgelistet sind sowie eine Spielanleitung. Als digitales Medium konzipierte ich eine Instagram-Seite und zwei animierte Werbe-Beiträge in Form eines Instagram-Posts und -Story.",
       images: [
@@ -1239,7 +1239,7 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
       year: "2020",
       teacher: ["Diego Bontognali"],
       description:
-        "Réinterprétation graphique du livre « Sexpowerment » de la journaliste française Camille Emmanuelle sous deux formes différentes. Le concept graphique de l’édition se base sur l’intensité et la diversité des sujets abordés dans le livre, en passant par le féminisme, le mouvement LGBTQIA+, le racisme, la religion ou encore la sexualité. L’aspect frontal de l’écriture de l’auteurice se reflète dans la mise en page par la proximité du texte et des images, qui rend visible la frontière poreuse entre les mots et les actes. Enfin, l’édition s’accompag-ne d’une série de posters inspirés du mouvement punk très présent dans les références de l’auteurice. Chaque poster représente un chapitre du livre et s’accompagne d’images créées par différentes photographes féministes.",
+        "Réinterprétation graphique du livre « Sexpowerment » de la journaliste française Camille Emmanuelle sous deux formes différentes. Le concept graphique de l’édition se base sur l’intensité et la diversité des sujets abordés dans le livre, en passant par le féminisme, le mouvement LGBTQIA+, le racisme, la religion ou encore la sexualité. L’aspect frontal de l’écriture de l’auteurice se reflète dans la mise en page par la proximité du texte et des images, qui rend visible la frontière poreuse entre les mots et les actes. Enfin, l’édition s’accompagne d’une série de posters inspirés du mouvement punk très présent dans les références de l’auteurice. Chaque poster représente un chapitre du livre et s’accompagne d’images créées par différentes photographes féministes.",
       images: [
         "2021-342-tania-praz-__SIZE__-lnd-01.jpg",
         "2021-342-tania-praz-__SIZE__-lnd-02.jpg",
@@ -1285,7 +1285,7 @@ Bildlabor: Auf einem Leuchttisch fotografierten wir chemische Reaktionen aus fl�
       title: "Nightline Berlin",
       tags: ["corporate design", "typography", "poster design"],
       year: "2020",
-      teacher: [""],
+      teacher: [],
       description:
         "Zum Qualifikationsverfahren 2020 wurde mir die Aufgabe gestellt, ein Corporate Design zu gestalten für einen Nachtzug nach Berlin. Ich entschied mich rasch, ein CD für einen Kapselzug zu gestalten, der junge Menschen möglichst schnell und günstig in die Metropole des Nachtlebens transportiert. Nach verschiedenen Experimenten bin ich durch analoge typografische Stempel auf die Übersetzung der Kapseln in die Typografie gestossen. Die Klammern, die wie eine Kapsel verschiedene Inhalte enthalten können, wurden zu meinen Hauptprotagonistinnen. Durch die Vervielfachung der Klammern und die sich zuspitzenden Schriftdicken wird der Aspekt des Tempos aufgenommen. Das typografische System bietet viel Spielraum für verschiedene Medien, Formate und Inhalte, die darin bespielt werden können.",
       images: [

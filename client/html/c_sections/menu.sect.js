@@ -10,13 +10,13 @@ module.exports = (crntView) => {
       size: "XL",
     },
 
-    // {
-    //   label: { all: "Award Winners" },
-    //   classes: "Winners",
-    //   type: "link",
-    //   href: "/winners",
-    //   size: "XL",
-    // },
+    {
+      label: { all: "Winners" },
+      classes: "Winners",
+      type: "link",
+      href: "/winners",
+      size: "XL",
+    },
 
     {
       label: { all: "Association" },

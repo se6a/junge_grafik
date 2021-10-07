@@ -9,6 +9,10 @@
           .filter((para) => para.startsWith("id"))
       : "";
 
+    const newQuery = originalQueryParamaters
+      ? "?" + originalQueryParamaters.replace("id=", "from=")
+      : "";
+
     history.pushState(
       null,
       "",
@@ -16,11 +20,11 @@
     );
 
     window.onpopstate = (e) => {
-      const goTo =
-        window.location.origin +
-        "/__winners-okt" +
-        (originalQueryParamaters.length ? `?${originalQueryParamaters}` : "");
+      const goTo = window.location.origin + "/winners" + newQuery;
       window.location.href = goTo;
     };
+
+    const $winnerButton = document.querySelector(".GoToWinner");
+    $winnerButton.href += newQuery;
   }
 })();

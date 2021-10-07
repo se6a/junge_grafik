@@ -18,7 +18,6 @@ module.exports = (tags) => {
     .CategoryBadges {
       display: flex;
       flex-direction: row;
-      gap: 2px 1px;
       flex-wrap: wrap;
     }
 

@@ -25,14 +25,12 @@ module.exports = () => {
         </span>
       </a>
 
-      ${
-        /* Button({
+      ${Button({
         classes: "GoToWinner",
         type: "link",
         label: "Winners",
         href: `${ENV.host}/winners`,
-      })*/ ""
-      }
+      })}
 
       ${$navigation()}
 
@@ -108,10 +106,14 @@ module.exports = () => {
       justify-content: center;
     }
 
-    .--size-sm .HEADER .button.GoToWinner,
-    .ViewWinners .button.GoToWinner,
-    .ViewProject .button.GoToWinner {
+    .--size-sm .HEADER .button.GoToWinner {
       display: none;
+    }
+
+    .ViewWinners .button.GoToWinner {
+      background-color: var(--darkViolet);
+      color: var(--white);
+      pointer-events: none;
     }
   `;
 

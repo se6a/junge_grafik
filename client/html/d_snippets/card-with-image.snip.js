@@ -29,9 +29,14 @@ module.exports = ({ classes = "", title, image, content, link = "" }) => {
   `;
 
   const css = /*css*/ `
+    .ImageCard.card {
+      z-index: 0;
+    }
+
     .ImageCard .imageWrapper,
     .ImageCard .contentWrapper {
       position: relative;
+      z-index: -1;
     }
     
     .ImageCard .imageWrapper .box {
@@ -77,8 +82,8 @@ module.exports = ({ classes = "", title, image, content, link = "" }) => {
     }
   
     .ImageCard.card > a:hover {
-      outline: calc(var(--borderHover) - var(--borderHalf)) solid black !important;
-      z-index: 100 !important;
+      outline: calc(var(--borderHover) - var(--borderHalf)) solid black;
+      outline-offset: calc(-1 * (var(--borderHover) - var(--borderHalf)));
     }
   `;
 

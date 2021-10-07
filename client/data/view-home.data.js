@@ -6,7 +6,7 @@ module.exports = {
     indexed: true,
   },
   header: {
-    image: "theme/waiting_V2.svg",
+    image: "theme/winners.svg",
     content: '<div class="HeaderColors"></div>',
   },
   sections: [
@@ -17,40 +17,13 @@ module.exports = {
           type: "text",
           size: "l",
           content:
-            "WOW! Thanks to all the students who have submitted more than 300 projects during the last couple of months. We are looking forward to announcing the winners at our award night on October 9.",
+            "This year’s winners are online! Check out the stunning projects of our new generation of swiss graphic designers. Big up to all the students and apprentices who submitted their works to the Junge Grafik Award 2021. Grazie! Merci! Danke!",
         },
       ],
     },
     {
       type: "columns",
       content: [
-        {
-          type: "overview",
-          title: "Awards event",
-          details: [
-            {
-              title: "Awards ceremony",
-              items: ["09.10.2021, 20:00", "Lucerne, Neubad"],
-              hasArrow: false,
-            },
-            {
-              title: "Junge Grafik + Weltformat party",
-              items: ["09.10.2021, 22:00", "Lucerne, Neubad"],
-              hasArrow: false,
-            },
-            {
-              title: "COVID-19 protection concept",
-              items: [
-                /*html*/ `
-                  <a class="textButton" href="media/covid-19/jg_protection_concept_210929.pdf" target="_blank">
-                    PDF
-                  </a>
-                `,
-              ],
-              hasArrow: false,
-            },
-          ],
-        },
         {
           type: "overview",
           title: "Travelling exhibition",
@@ -78,6 +51,24 @@ module.exports = {
               hasArrow: false,
             },
           ],
+        },
+        {
+          type: "text",
+          title: "Junge Grafik 2021 publication",
+          content: /*html*/ `
+            <a href="/media/publication/publication-preview-lg.jpg" target="_blank">
+              <figure>
+                <img class="image" src="/media/publication/publication-preview-lg.jpg">
+              </figure>
+            </a>
+            <p>
+              The Junge Grafik 2021 publication is a cross-section of the upcoming generation of Swiss graphic designers. On 128 pages, we present this year’s winning works, facts and figures about the submission process as well as interviews with the jury, a selection of patrons and various graphic designers.
+            </p>
+            <br>
+            <a class="textButton" href="https://checkoutpage.co/c/jungegrafik/junge-grafik-2021-publication" target="_blank">
+              Buy your copy – here and now!
+            </a>
+          `,
         },
       ],
     },

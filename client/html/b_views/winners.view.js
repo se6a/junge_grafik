@@ -195,5 +195,5 @@ module.exports = async (data) => {
     }
   `;
 
-  return ["__winners-okt.view", html, css];
+  return ["winners.view", html, css];
 };

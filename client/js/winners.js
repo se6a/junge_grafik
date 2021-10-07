@@ -82,6 +82,7 @@ function updateCardsATag() {
 }
 
 function updateGallery() {
+  visibleCards = 0;
   $projectCards.forEach(($card, i) => {
     const cardCategories = [...$card.classList].filter((c) =>
       c.startsWith("#")
