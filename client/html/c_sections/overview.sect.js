@@ -32,8 +32,8 @@ function Columns(details) {
   const columns = [];
   // range[0] = column 1
   // range[1] = column 2
-  const range =
-    details.length > 2
+  const range
+    = details.length > 2
       ? [Math.ceil(details.length / 2), details.length]
       : [details.length, null];
 
@@ -110,7 +110,8 @@ module.exports = ({ title = "", details }) => {
 
     .OverviewItem.content {
       font-size: var(--fontSize-S);
-      line-height: var(--lineHeight-S)
+      line-height: var(--listHeight-S);
+
     }
   `;
 
