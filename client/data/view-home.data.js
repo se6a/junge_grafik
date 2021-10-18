@@ -33,7 +33,7 @@ module.exports = {
               items: [
                 "Opening and introduction with Demian Conrad (jury) and Meret Fischli (Junge Grafik)",
                 "Kapelle, Rössligasse 12, 6004 Luzern",
-                "15.30pm",
+                "15:30",
               ],
               hasArrow: false,
             },
@@ -45,7 +45,7 @@ module.exports = {
                   Weltformat Graphic Design Festival, Luzern
                 </a>`,
                 "Kapelle, Rössligasse 12, 6004 Luzern",
-                "Mon–Sun 12–18pm"
+                "Mon–Sun 12:00–18:00"
               ],
               hasArrow: false,
             },
@@ -58,7 +58,8 @@ module.exports = {
                   F+F Schule für Kunst und Design Zürich
                 </a>`,
                 "Flurstrasse 89, 8047 Zürich",
-                "Mon–Fri 9am–17pm, Sat–Sun 14–18pm"
+                "Mon–Fri 9:00–17:00",
+                "Sat–Sun 14:00–18:00"
               ],
               hasArrow: false,
             },
