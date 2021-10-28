@@ -29,59 +29,71 @@ module.exports = {
           title: "Travelling exhibition",
           details: [
             {
-              title: "9.10.2021",
+              title: "Lucerne",
               items: [
-                "Opening and introduction with Demian Conrad (jury) and Meret Fischli (Junge Grafik)",
-                "Kapelle, Rössligasse 12, 6004 Luzern",
-                "15:30",
-              ],
-              hasArrow: false,
-            },
-            {
-              title: "9. – 17.10.2021",
-              items: [
-                /*html*/`
-                <a class="textButton" href="https://weltformat-festival.ch/2021/ausstellungen/junge-grafik">
-                  Weltformat Graphic Design Festival, Luzern
-                </a>`,
-                "Kapelle, Rössligasse 12, 6004 Luzern",
-                "Mon–Sun 12:00–18:00"
+                /*html*/ `
+                  <p>9.10.2021, 15:30</p>
+                  <p>Opening and introduction with Demian Conrad (jury) and Meret Fischli (Junge Grafik)</p>
+                `,
+                "</br>",
+                /* html */ `
+                  <p>9. – 17.10.2021</p>
+                  <p><a class="textButton" href="https://weltformat-festival.ch/2021/ausstellungen/junge-grafik" target="_blank">
+                    Weltformat Graphic Design Festival, Luzern
+                  </a></p>
+                  <p>Kapelle, Rössligasse 12, 6004 Luzern</p>
+                  <p>Mon–Sun 12:00–18:00</p>
+                `,
               ],
               hasArrow: false,
             },
 
             {
-              title: "30.10. – 7.11.2021",
+              title: "Zurich",
               items: [
-                /*html*/`
-                <a class="textButton" href="https://ffzh.ch/Hoi" target="_blank">
-                  F+F Schule für Kunst und Design Zürich
-                </a>`,
-                "Flurstrasse 89, 8047 Zürich",
-                "Mon–Fri 9:00–17:00",
-                "Sat–Sun 14:00–18:00"
+                /*html*/ `
+                  <p>29.10.2021, 17:00</p>
+                  <p>Opening and introduction with Yannic Cserhati (winner), Ladina Dörig (winner), Audrey Fleur Ljubenovic (jury) and Remo Stahl (Junge Grafik)</p>
+                  <p>Flurstrasse 89, 8047 Zurich</p>
+                `,
+                "</br>",
+                /*html*/ `
+                  <p>30.10. – 7.11.2021</p>
+                  <p><a class="textButton" href="https://ffzh.ch/Ausstellung/?EventId=2758" target="blank">
+                    F+F Schule für Kunst und Design Zürich
+                  </a></p>
+                  <p>Flurstrasse 89, 8047 Zurich</p>
+                  <p>Mon–Fri 9:00–18:00, Sat–Sun 14:00–18:00</p>
+                `,
               ],
               hasArrow: false,
             },
+
             {
-              title: "27.11. – 4.12.2021",
+              title: "Sierre",
               items: [
-                /*html*/`
-                <a class="textButton" href="https://www.edhea.ch/" target="_blank">
-                  EDHEA – Ecole de design et haute école d’art du Valais, Sierre
-                </a>`,
-                "Route de la Bonne-Eau 16, 3960 Sierre"
+                /*html*/ `
+                  <p>27.11. – 4.12.2021</p>
+                  <p><a class="textButton" href="https://edhea.ch/evenements/jeune-graphisme" target="blank">
+                    EDHEA – Ecole de design et haute école d’art du Valais, Sierre
+                  </a></p>
+                  <p>Route de la Bonne-Eau 16, 3960 Sierre</p>
+                  <p>Mon–Fri 9:00–18:00, Sat 10:00–18:00</p>
+                `,
               ],
               hasArrow: false,
             },
+
             {
-              title: "13. – 17.12.2021",
+              title: "Geneva",
               items: [
-                /*html*/`
-                <a class="textButton" href=" https://cfparts.ch/event/exposition-junge-grafik/" target="_blank">
-                  CFP Arts Genève
-                </a>`,
-                "Rue Necker 2, 1201 Genève"
+                /*html*/ `
+                  <p>13. – 17.12.2021</p>
+                  <p><a class="textButton" href="https://cfparts.ch/event/exposition-junge-grafik/" target="blank">
+                    CFP Arts Genève
+                  </a></p>
+                  <p>Rue Necker 2, 1201 Genève</p>
+                `,
               ],
               hasArrow: false,
             },
