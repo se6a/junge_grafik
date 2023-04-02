@@ -1,67 +1,84 @@
 const contexts = {
-  general: {
-    sizes: {
-      sm: "max-width: 599px",
-      md: "min-width: 600px",
-      lg: "min-width: 1200px",
+    general: {
+        sizes: {
+            sm: "max-width: 599px",
+            md: "min-width: 600px",
+            lg: "min-width: 1200px",
+        },
+        path: "/media/__CONTEXT__/__SIZE__/__FILENAME__",
     },
-    path: "/media/__CONTEXT__/__SIZE__/__FILENAME__",
-  },
-  projects: {
-    sizes: {
-      md: "max-width: 1000px",
-      lg: "min-width: 1001px",
+    slideshow: {
+        sizes: {
+            sm: "max-width: 599px",
+            md: "min-width: 600px",
+        },
+        path: "/media/__CONTEXT__/__SIZE__/__FILENAME__",
     },
-    path: "/media/projects/2021/__SIZE__/__FILENAME__",
-  },
-  logos: {
-    sizes: { all: "min-width: 1px" },
-    path: "/media/logos/__FILENAME__",
-  },
+    projects: {
+        sizes: {
+            md: "max-width: 1000px",
+            lg: "min-width: 1001px",
+        },
+        path: "/media/projects/2021/__SIZE__/__FILENAME__",
+    },
+    logos: {
+        sizes: { all: "min-width: 1px" },
+        path: "/media/logos/__FILENAME__",
+    },
 };
 
 const SourceList = (filename, context) => {
-  let source = "";
+    let source = "";
 
-  const props = contexts?.[context] ? contexts[context] : contexts.general;
+    const props = contexts?.[context] ? contexts[context] : contexts.general;
 
-  for (const size in props.sizes) {
-    const path = props.path
-      .replace("__CONTEXT__", context)
-      .replace("__SIZE__", size)
-      .replace("__FILENAME__", filename.replace("__SIZE__", size));
+    for (const size in props.sizes) {
+        const path = props.path
+            .replace("__CONTEXT__", context)
+            .replace("__SIZE__", size)
+            .replace("__FILENAME__", filename.replace("__SIZE__", size));
 
-    const media = props.sizes[size];
+        const media = props.sizes[size];
 
-    source += `<source media="(${media})" srcset="${path}">`;
-  }
+        source += `<source media="(${media})" srcset="${path}">`;
+    }
 
-  return source;
+    return source;
 };
 
-module.exports = ({ src = "", alt = "No Description." }) => {
-  const isSvg = src.endsWith(".svg");
-  const parts = src.match(/^(\w+)\/(.+)/);
-  let context = "";
-  let filename = "";
+module.exports = (
+    { src = "", alt = "No Description.", defaultSize = "md" },
+    { classes = "" } = {}
+) => {
+    const isSvg = src.endsWith(".svg");
+    const parts = src.match(/^(\w+)\/(.+)/);
+    let context = "";
+    let filename = "";
 
-  if (Array.isArray(parts)) {
-    filename = parts[2];
-    context = parts[1];
-  }
+    if (Array.isArray(parts)) {
+        filename = parts[2];
+        context = parts[1];
+    }
 
-  const html = /*html*/ `
-    <picture>
+    const html = /*html*/ `
+    <picture class="${classes ? ` ${classes}` : ""}">
       ${!isSvg ? SourceList(filename, context) : ""}
       <img
         class="image"
         alt="${alt}"
-        src="${isSvg ? `media/${src}` : ""}"
+        src="${
+            isSvg
+                ? `media/${src}`
+                : `media/${context}/${defaultSize}/${filename.replace(
+                      "__SIZE__",
+                      defaultSize
+                  )}`
+        }"
       >
     </picture>
   `;
 
-  const css = /*css*/ `
+    const css = /*css*/ `
     picture {
       width: 100%;
       height: 100%;
@@ -77,5 +94,5 @@ module.exports = ({ src = "", alt = "No Description." }) => {
     }
   `;
 
-  return ["picture.snip", html, css];
+    return ["picture.snip", html, css];
 };

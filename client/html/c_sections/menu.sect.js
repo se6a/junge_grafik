@@ -1,74 +1,75 @@
 const ButtonUnderlined = getSnippet("button-underlined");
 
 module.exports = (crntView) => {
-  const MenuItems = [
-    {
-      label: { all: "Award" },
-      classes: "Award",
-      type: "link",
-      href: "/award",
-      size: "XL",
-    },
+    const MenuItems = [
+        {
+            label: { all: "Award" },
+            classes: "Award",
+            type: "link",
+            href: "/award",
+            size: "XL",
+        },
 
-    {
-      label: { all: "Winners" },
-      classes: "Winners",
-      type: "link",
-      href: "/winners",
-      size: "XL",
-    },
+        {
+            label: { all: "Winners" },
+            classes: "Winners",
+            type: "link",
+            href: "/winners",
+            size: "XL",
+        },
 
-    {
-      label: { all: "Association" },
-      classes: "Association",
-      type: "link",
-      href: "/association",
-      size: "XL",
-    },
+        {
+            label: { all: "Association" },
+            classes: "Association",
+            type: "link",
+            href: "/association",
+            size: "XL",
+        },
 
-    {
-      label: { all: "Contact" },
-      classes: "Contact",
-      type: "link",
-      href: "/contact",
-      size: "XL",
-    },
+        {
+            label: { all: "Contact" },
+            classes: "Contact",
+            type: "link",
+            href: "/contact",
+            size: "XL",
+        },
 
-    // {
-    //   label: { all: "Shop" },
-    //   classes: "Shop",
-    //   type: "link",
-    //   href: "/shop",
-    //   size: "XL",
-    // },
+        // {
+        //   label: { all: "Shop" },
+        //   classes: "Shop",
+        //   type: "link",
+        //   href: "/shop",
+        //   size: "XL",
+        // },
 
-    {
-      label: { all: "Follow us!" },
-      classes: "Follow-us",
-      type: "link",
-      href: "/follow-us",
-      size: "XL",
-    },
+        // {
+        //   label: { all: "Follow us!" },
+        //   classes: "Follow-us",
+        //   type: "link",
+        //   href: "/follow-us",
+        //   size: "XL",
+        // },
 
-    {
-      label: { all: "Support us!" },
-      classes: "Support-us",
-      type: "link",
-      href: "/support-us",
-      size: "XL",
-    },
-  ];
+        // {
+        //   label: { all: "Support us!" },
+        //   classes: "Support-us",
+        //   type: "link",
+        //   href: "/support-us",
+        //   size: "XL",
+        // },
+    ];
 
-  const html = [
-    '<section class="MENU box">',
-    ...MenuItems.map((item) => {
-      if (item.classes === crntView) item.classes = item.classes + " --current";
-      return ButtonUnderlined(item);
-    }),
-    "</section>",
-  ];
+    const html = [
+        '<section class="MENU box">',
+        ...MenuItems.map((item) => {
+            if (item.classes === crntView)
+                item.classes = item.classes + " --current";
+            return ButtonUnderlined(item);
+        }),
+        "</section>",
+    ];
 
-  const css = /*css*/ `
+    const css = /*css*/ `
     .MENU {
       background-color: var(--violetBright);
       height: 100vh;
@@ -120,5 +121,5 @@ module.exports = (crntView) => {
     }
   `;
 
-  return ["menu.sect", html, css];
+    return ["menu.sect", html, css];
 };

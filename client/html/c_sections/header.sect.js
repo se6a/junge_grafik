@@ -2,34 +2,34 @@ const Underlined = getSnippet("text-underlined");
 const Button = getSnippet("button");
 
 module.exports = () => {
-  const $navigation = require("./navigation.sect.js");
+    const $navigation = require("./navigation.sect.js");
 
-  const html = splitTemp/*html*/ `
+    const html = splitTemp/*html*/ `
     <header class="HEADER">
 
       <a class="logo" href="/home">
         <span>
           ${Underlined(
-            `<span class="first">Junge</span><span class="second">Grafik</span>`
+              `<span class="first">Junge</span><span class="second">Grafik</span>`
           )}
         </span>
         <span>
           ${Underlined(
-            `<span class="first">Jeune</span><span class="second">Graphisme</span>`
+              `<span class="first">Jeune</span><span class="second">Graphisme</span>`
           )}
         </span>
         <span>
           ${Underlined(
-            `<span class="first">Giovane</span><span class="second">Grafica</span>`
+              `<span class="first">Giovane</span><span class="second">Grafica</span>`
           )}
         </span>
       </a>
 
       ${Button({
-        classes: "GoToWinner",
-        type: "link",
-        label: "Winners",
-        href: `${ENV.host}/winners`,
+          classes: "BigButton",
+          type: "link",
+          label: "Submit!",
+          href: `${ENV.host}/submit`,
       })}
 
       ${$navigation()}
@@ -37,7 +37,7 @@ module.exports = () => {
     </header>
   `;
 
-  const css = /*css*/ `
+    const css = /*css*/ `
     .HEADER {
       height: var(--headerHeight);
       width: 100%;
@@ -99,23 +99,23 @@ module.exports = () => {
       margin-bottom: -1px;
     }
 
-    .HEADER .button.GoToWinner {
+    .HEADER .button.BigButton {
       background-color: var(--yellow);
       border-width: var(--borderHalf);
       width: calc(var(--headerHeight) * 3);
       justify-content: center;
     }
 
-    .--size-sm .HEADER .button.GoToWinner {
+    .--size-sm .HEADER .button.BigButton {
       display: none;
     }
 
-    .ViewWinners .button.GoToWinner {
+    .ViewWinners .button.BigButton {
       background-color: var(--darkViolet);
       color: var(--white);
       pointer-events: none;
     }
   `;
 
-  return ["header.sect", html, css];
+    return ["header.sect", html, css];
 };

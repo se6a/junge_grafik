@@ -25,54 +25,77 @@ module.exports = {
             type: "columns",
             content: [
                 {
-                    type: "text",
-                    title: "Award",
-                    content:
-                        "Anyone studying graphic design in Switzerland is welcome to apply. Thirty prizes will be awarded. The award ceremony will take place every two years at the Neubad in Lucerne.",
-                },
-
-                {
                     type: "overview",
-                    title: "",
+                    title: "Travelling exhibition",
                     details: [
                         {
-                            title: "Submission deadline",
-                            hasArrow: false,
+                            title: "Lucerne",
                             items: [
                                 /*html*/ `
-                                            <p>19.06.2023</p>
-                                        `,
+                  <p>9.10.2021, 15:30</p>
+                  <p>Opening and introduction with Demian Conrad (jury) and Meret Fischli (Junge Grafik)</p>
+                `,
+                                "</br>",
+                                /* html */ `
+                  <p>9. – 17.10.2021</p>
+                  <p><a class="textButton" href="https://weltformat-festival.ch/2021/ausstellungen/junge-grafik" target="_blank">
+                    Weltformat Graphic Design Festival, Luzern
+                  </a></p>
+                  <p>Kapelle, Rössligasse 12, 6004 Luzern</p>
+                  <p>Mon–Sun 12:00–18:00</p>
+                `,
                             ],
+                            hasArrow: false,
                         },
+
                         {
-                            title: "Awards ceremony",
-                            hasArrow: false,
+                            title: "Zurich",
                             items: [
                                 /*html*/ `
-                                            <p>18.11.2023</p>
-                                        `,
+                  <p>29.10.2021, 17:00</p>
+                  <p>Opening and introduction with Yannic Cserhati (winner), Ladina Dörig (winner), Audrey Fleur Ljubenovic (jury) and Remo Stahl (Junge Grafik)</p>
+                  <p>Flurstrasse 89, 8047 Zurich</p>
+                `,
+                                "</br>",
                                 /*html*/ `
-                                            <p>20:15</p>
-                                        `,
-                                /*html*/ `
-                                            <p>Neubad, Lucerne</p>
-                                        `,
+                  <p>30.10. – 7.11.2021</p>
+                  <p><a class="textButton" href="https://ffzh.ch/Ausstellung/?EventId=2758" target="blank">
+                    F+F Schule für Kunst und Design Zürich
+                  </a></p>
+                  <p>Flurstrasse 89, 8047 Zurich</p>
+                  <p>Mon–Fri 9:00–18:00, Sat–Sun 14:00–18:00</p>
+                `,
                             ],
+                            hasArrow: false,
                         },
+
                         {
-                            title: "Afterparty",
-                            hasArrow: false,
+                            title: "Sierre",
                             items: [
                                 /*html*/ `
-                                            <p>18.11.2023</p>
-                                        `,
-                                /*html*/ `
-                                            <p>22:00</p>
-                                        `,
-                                /*html*/ `
-                                            <p>Neubad, Lucerne</p>
-                                        `,
+                  <p>27.11. – 4.12.2021</p>
+                  <p><a class="textButton" href="https://edhea.ch/evenements/jeune-graphisme" target="blank">
+                    EDHEA – Ecole de design et haute école d’art du Valais, Sierre
+                  </a></p>
+                  <p>Route de la Bonne-Eau 16, 3960 Sierre</p>
+                  <p>Mon–Fri 9:00–18:00, Sat 10:00–18:00</p>
+                `,
                             ],
+                            hasArrow: false,
+                        },
+
+                        {
+                            title: "Geneva",
+                            items: [
+                                /*html*/ `
+                  <p>13. – 17.12.2021</p>
+                  <p><a class="textButton" href="https://cfparts.ch/event/exposition-junge-grafik/" target="blank">
+                    CFP Arts Genève
+                  </a></p>
+                  <p>Rue Necker 2, 1201 Genève</p>
+                `,
+                            ],
+                            hasArrow: false,
                         },
                     ],
                 },
@@ -82,34 +105,22 @@ module.exports = {
             type: "columns",
             content: [
                 {
-                    type: "slideshow",
-                    title: "Award Cermenoy 2021",
-                    images: [
-                        {
-                            src: "slideshow/2021-award-ceremony-impressions-__SIZE__-lnd-01.jpg",
-                            alt: "",
-                        },
-                        {
-                            src: "slideshow/2021-award-ceremony-impressions-__SIZE__-lnd-02.jpg",
-                            alt: "",
-                        },
-                        {
-                            src: "slideshow/2021-award-ceremony-impressions-__SIZE__-lnd-03.jpg",
-                            alt: "",
-                        },
-                        {
-                            src: "slideshow/2021-award-ceremony-impressions-__SIZE__-lnd-04.jpg",
-                            alt: "",
-                        },
-                        {
-                            src: "slideshow/2021-award-ceremony-impressions-__SIZE__-lnd-05.jpg",
-                            alt: "",
-                        },
-                        {
-                            src: "slideshow/2021-award-ceremony-impressions-__SIZE__-lnd-06.jpg",
-                            alt: "",
-                        },
-                    ],
+                    type: "text",
+                    title: "Junge Grafik 2021 publication",
+                    content: /*html*/ `
+            <a href="/media/publication/publication-preview-lg.jpg" target="_blank">
+              <figure>
+                <img class="image" src="/media/publication/publication-preview-lg.jpg">
+              </figure>
+            </a>
+            <p>
+              The Junge Grafik 2021 publication is a cross-section of the upcoming generation of Swiss graphic designers. On 128 pages, we present this year’s winning works, facts and figures about the submission process as well as interviews with the jury, a selection of patrons and various graphic designers.
+            </p>
+            <br>
+            <a class="textButton" href="https://checkoutpage.co/c/jungegrafik/junge-grafik-2021-publication" target="_blank">
+              Buy your copy – here and now!
+            </a>
+          `,
                 },
             ],
         },
