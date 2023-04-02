@@ -69,6 +69,9 @@ module.exports = [
             min: 1983,
             max: 2013,
             step: 1,
+            tooltip: {
+                all: "1983–2013",
+            },
             required: true,
         },
     ],
