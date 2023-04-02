@@ -1,15 +1,16 @@
-const HeaderView       = getSection("header-view");
-const LanguageForm     = getSection("form-language");
-const ProjectForm      = getSection("form-submit-project");
+const HeaderView = getSection("header-view");
+const LanguageForm = getSection("form-language");
+const ProjectForm = getSection("form-submit-project");
 const ButtonUnderlined = getSnippet("button-underlined");
 
 module.exports = (data) => {
-  const html = splitTemp/*html*/`
+    const html = splitTemp/*html*/ `
     <main id="Submit" class="VIEW Submit" lang="">
 
       ${HeaderView({
-        title: "Project registration",
-        content: "Register to take part in the competition and submit your graphic work. Get started here."
+          title: "Project registration",
+          content:
+              "RRRegister to take part in the competition and submit your graphic work. Get started here.",
       })}
 
       <article class="mainSection fullpage SelectLanguage">
@@ -47,10 +48,10 @@ module.exports = (data) => {
             <span class="langOption it">Contattaci:</span>
             <span>
               ${ButtonUnderlined({
-                classes: "Contact contactLink",
-                attr: `data-contact="${easyEncode("info@jungegrafik.ch")}"`,
-                label: "contact",
-                size: "L"
+                  classes: "Contact contactLink",
+                  attr: `data-contact="${easyEncode("info@jungegrafik.ch")}"`,
+                  label: "contact",
+                  size: "L",
               })}
             </span>
           </div>
@@ -62,7 +63,7 @@ module.exports = (data) => {
     </main>
   `;
 
-  const css = /*css*/`
+    const css = /*css*/ `
     body {
       --colorTheme: var(--yellow);
     }
@@ -136,5 +137,5 @@ module.exports = (data) => {
     }
   `;
 
-  return ["submit.view", html, css];
+    return ["submit.view", html, css];
 };
