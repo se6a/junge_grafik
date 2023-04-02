@@ -10,7 +10,7 @@ module.exports = (data) => {
       ${HeaderView({
           title: "Project registration",
           content:
-              "RRRegister to take part in the competition and submit your graphic work. Get started here.",
+              "Register to take part in the competition and submit your graphic work. Get started here.",
       })}
 
       <article class="mainSection fullpage SelectLanguage">
