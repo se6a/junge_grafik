@@ -46,369 +46,544 @@
 */
 
 module.exports = [
-
-/*  Allgemeines
+    /*  Allgemeines
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
-  [
-    // Projekttitel
-    {
-      name: "projekttitel",
-      label: {
-        de: "Projekttitel",
-        fr: "Titre du projet",
-        it: "Titolo del progetto"
-      },
-      type: "text-short",
-      required: true,
-      tooltip: {
-        de: `
+    [
+        // Projekttitel
+        {
+            name: "projekttitel",
+            label: {
+                de: "Projekttitel",
+                fr: "Titre du projet",
+                it: "Titolo del progetto",
+            },
+            type: "text-short",
+            required: true,
+            tooltip: {
+                de: `
           <ul>
             <li class="dash">Gib deinem Projekt einen Titel. Falls deine Arbeit ausgezeichnet wird, so wird der Projekttitel auf der Website als auch in der Publikation erscheinen.</li>
           </ul>
         `,
-        fr: `
+                fr: `
           <ul>
             <li class="dash">Donnez un titre à ton projet. Si ton travail est récompensé, le titre du projet apparaîtra sur notre site web ainsi que dans la publication.</li>
           </ul>
         `,
-        it: `
+                it: `
           <ul>
             <li class="dash">Dai un titolo al tuo progetto. Se il tuo lavoro viene premiato, il titolo del progetto apparirà sul sito web e nella pubblicazione.</li>
           </ul>
-        `
-      }
-    },
-    // Enstehungsjahr
-    {
-      name: "entstehungsjahr",
-      label: {
-        de: "Entstehungsjahr des Projekts",
-        fr: "Année de réalisation du projet",
-        it: "Anno del progetto"
-      },
-      type: "select-1",
-      options: [
-        { id: "2021", all: "2021" },
-        { id: "2020", all: "2020" },
-        { id: "2019", all: "2019" }
-      ],
-      required: true
-    }
-  ],
+        `,
+            },
+        },
+        // Enstehungsjahr
+        {
+            name: "entstehungsjahr",
+            label: {
+                de: "Entstehungsjahr des Projekts",
+                fr: "Année de réalisation du projet",
+                it: "Anno del progetto",
+            },
+            type: "select-1",
+            options: [
+                { id: "2023", all: "2023" },
+                { id: "2022", all: "2022" },
+                { id: "2021", all: "2021" },
+            ],
+            required: true,
+        },
+    ],
 
-/*  Tags
+    /*  Tags
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
-  [
-    // Tag #1
-    {
-      name: "tag-1",
-      label: { all: "Tag #1" },
-      type: "select-1",
-      options: [
-        { id: "Animation design", all: "Animation design" },
-        { id: "Corporate design", all: "Corporate design" },
-        { id: "Editorial design", all: "Editorial design" },
-        { id: "Environmental design", all: "Environmental design" },
-        { id: "Exhibition design", all: "Exhibition design" },
-        { id: "Photography", all: "Photography" },
-        { id: "Illustration", all: "Illustration" },
-        { id: "Interaction design", all: "Interaction design" },
-        { id: "Infographic design", all: "Infographic design" },
-        { id: "Packaging design", all: "Packaging design" },
-        { id: "Poster design", all: "Poster design" },
-        { id: "Signage design", all: "Signage design" },
-        { id: "Typeface design", all: "Typeface design" },
-        { id: "Typography", all: "Typography" },
-        { id: "Web design", all: "Web design" }
-      ],
-      required: true,
-      tooltip: {
-        de: `
+    [
+        // Tag #1
+        {
+            name: "tag-1",
+            label: { all: "Tag #1" },
+            type: "select-1",
+            options: [
+                { id: "Animation design", all: "Animation design" },
+                { id: "Corporate design", all: "Corporate design" },
+                { id: "Editorial design", all: "Editorial design" },
+                { id: "Environmental design", all: "Environmental design" },
+                { id: "Exhibition design", all: "Exhibition design" },
+                { id: "Photography", all: "Photography" },
+                { id: "Illustration", all: "Illustration" },
+                { id: "Interaction design", all: "Interaction design" },
+                { id: "Infographic design", all: "Infographic design" },
+                { id: "Packaging design", all: "Packaging design" },
+                { id: "Poster design", all: "Poster design" },
+                { id: "Signage design", all: "Signage design" },
+                { id: "Typeface design", all: "Typeface design" },
+                { id: "Typography", all: "Typography" },
+                { id: "Web design", all: "Web design" },
+            ],
+            required: true,
+            tooltip: {
+                de: `
           <ul>
             <li class="dash">Wähle 1 bis 3 Tags, die zu deinem Projekt passen.</li>
           </ul>
         `,
-        fr: `
+                fr: `
           <ul>
             <li class="dash">Choisis 1 à 3 tags (mots-clés) qui correspondent à ton projet</li>
           </ul>
         `,
-        it: `
+                it: `
           <ul>
             <li class="dash">Scegli da 1 a 3 tag che si adattano al tuo progetto.</li>
           </ul>
-        `
-      }
-    },
-    // Tag #2
-    {
-      name: "tag-2",
-      label: { all: "Tag #2" },
-      type: "select-1",
-      options: [
-        { id: "Animation design", all: "Animation design" },
-        { id: "Corporate design", all: "Corporate design" },
-        { id: "Editorial design", all: "Editorial design" },
-        { id: "Environmental design", all: "Environmental design" },
-        { id: "Exhibition design", all: "Exhibition design" },
-        { id: "Photography", all: "Photography" },
-        { id: "Illustration", all: "Illustration" },
-        { id: "Interaction design", all: "Interaction design" },
-        { id: "Infographic design", all: "Infographic design" },
-        { id: "Packaging design", all: "Packaging design" },
-        { id: "Poster design", all: "Poster design" },
-        { id: "Signage design", all: "Signage design" },
-        { id: "Typeface design", all: "Typeface design" },
-        { id: "Typography", all: "Typography" },
-        { id: "Web design", all: "Web design" }
-      ]
-    },
-    // Tag #3
-    {
-      name: "tag-3",
-      label: { all: "Tag #3" },
-      type: "select-1",
-      options: [
-        { id: "Animation design", all: "Animation design" },
-        { id: "Corporate design", all: "Corporate design" },
-        { id: "Editorial design", all: "Editorial design" },
-        { id: "Environmental design", all: "Environmental design" },
-        { id: "Exhibition design", all: "Exhibition design" },
-        { id: "Photography", all: "Photography" },
-        { id: "Illustration", all: "Illustration" },
-        { id: "Interaction design", all: "Interaction design" },
-        { id: "Infographic design", all: "Infographic design" },
-        { id: "Packaging design", all: "Packaging design" },
-        { id: "Poster design", all: "Poster design" },
-        { id: "Signage design", all: "Signage design" },
-        { id: "Typeface design", all: "Typeface design" },
-        { id: "Typography", all: "Typography" },
-        { id: "Web design", all: "Web design" }
-      ]
-    }
-  ],
+        `,
+            },
+        },
+        // Tag #2
+        {
+            name: "tag-2",
+            label: { all: "Tag #2" },
+            type: "select-1",
+            options: [
+                { id: "Animation design", all: "Animation design" },
+                { id: "Corporate design", all: "Corporate design" },
+                { id: "Editorial design", all: "Editorial design" },
+                { id: "Environmental design", all: "Environmental design" },
+                { id: "Exhibition design", all: "Exhibition design" },
+                { id: "Photography", all: "Photography" },
+                { id: "Illustration", all: "Illustration" },
+                { id: "Interaction design", all: "Interaction design" },
+                { id: "Infographic design", all: "Infographic design" },
+                { id: "Packaging design", all: "Packaging design" },
+                { id: "Poster design", all: "Poster design" },
+                { id: "Signage design", all: "Signage design" },
+                { id: "Typeface design", all: "Typeface design" },
+                { id: "Typography", all: "Typography" },
+                { id: "Web design", all: "Web design" },
+            ],
+        },
+        // Tag #3
+        {
+            name: "tag-3",
+            label: { all: "Tag #3" },
+            type: "select-1",
+            options: [
+                { id: "Animation design", all: "Animation design" },
+                { id: "Corporate design", all: "Corporate design" },
+                { id: "Editorial design", all: "Editorial design" },
+                { id: "Environmental design", all: "Environmental design" },
+                { id: "Exhibition design", all: "Exhibition design" },
+                { id: "Photography", all: "Photography" },
+                { id: "Illustration", all: "Illustration" },
+                { id: "Interaction design", all: "Interaction design" },
+                { id: "Infographic design", all: "Infographic design" },
+                { id: "Packaging design", all: "Packaging design" },
+                { id: "Poster design", all: "Poster design" },
+                { id: "Signage design", all: "Signage design" },
+                { id: "Typeface design", all: "Typeface design" },
+                { id: "Typography", all: "Typography" },
+                { id: "Web design", all: "Web design" },
+            ],
+        },
+    ],
 
-/*  Projektbeschreibung
+    /*  Projektbeschreibung
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
-  [
-    {
-      id: "ProjectDescription",
-      name: "projektbeschrieb",
-      label: {
-        de: "Projektbeschrieb",
-        fr: "Description du projet",
-        it: "Descrizione del progetto"
-      },
-      type: "text",
-      maxlength: "800",
-      required: true,
-      tooltip: {
-        de: `
+    [
+        {
+            id: "ProjectDescription",
+            name: "projektbeschrieb",
+            label: {
+                de: "Projektbeschrieb",
+                fr: "Description du projet",
+                it: "Descrizione del progetto",
+            },
+            type: "text",
+            maxlength: "800",
+            required: true,
+            tooltip: {
+                de: `
           <ul>
             <li class="dash">Nutze den Projektbeschrieb, um uns interessante Aspekte über die Aufgabenstellung, den Prozess und die Idee zu erzählen.</li>
           </ul>
         `,
-        fr: `
+                fr: `
           <ul>
             <li class="dash">Utilise cette description pour nous faire part d’aspects intéressants dans la donnée de base, le processus et l'idée de ton projet.</li>
           </ul>
         `,
-        it: `
+                it: `
           <ul>
             <li class="dash">Descrivi il progetto per raccontarci aspetti interessanti sul compito, il processo e l'idea.</li>
           </ul>
-        `
-      }
-    }
-  ],
+        `,
+                all: `Please write your project description in German, Italian or French.`,
+            },
+        },
+    ],
 
-/*  Ausbildung
+    /*  Ausbildung
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
-  [
-    {
-      name: "ausbildungsniveau",
-      label: {
-        de: "Ausbildungsniveau",
-        fr: "Niveau de formation",
-        it: "Livello della formazione"
-      },
-      type: "select-1",
-      options: [
-        { id: "683", de: "EFZ", fr: "CFC", it: "AFC" },
-        { id: "684", de: "FH", fr: "Bachelor Hes-So", it: "SUP" },
-        { id: "685", de: "HF", fr: "ES", it: "SSS" }
-      ],
-      required: true
-    },
-    {
-      name: "ausbildungsjahr",
-      label: {
-        de: "Ausbildungsjahr (zum Zeitpunkt des Projektes)", fr: "Année de formation (au moment du projet)", it: "Anno di formazione (al momento del progetto)"
-      },
-      type: "select-1",
-      options: [
-        { id: "1", de: "1. Ausbildungsjahr", fr: "1ère année de formation", it: "1. Anno di formazione" },
-        { id: "2", de: "2. Ausbildungsjahr", fr: "2ème année de formation", it: "2. Anno di formazione" },
-        { id: "3", de: "3. Ausbildungsjahr", fr: "3ème année de formation", it: "3. Anno di formazione" },
-        { id: "4", de: "4. Ausbildungsjahr", fr: "4ème année de formation", it: "4. Anno di formazione" }
-      ],
-      required: true
-    },
-    {
-      name: "name-ausbildungsinstitution-lehrbetrieb",
-      type: "text-short",
-      label: {
-        de: "Name Ausbildungsinstitution / Lehrbetrieb",
-        fr: "Nom de l'établissement de formation / de l'entreprise de formation",
-        it: "Nome dell’istituto di formazione / Azienda formatrice"
-      },
-      tooltip: {
-        de: `
+    [
+        {
+            name: "ausbildungsniveau",
+            label: {
+                de: "Ausbildungsniveau",
+                fr: "Niveau de formation",
+                it: "Livello della formazione",
+            },
+            type: "select-1",
+            options: [
+                { id: "683", de: "EFZ", fr: "CFC", it: "AFC" },
+                { id: "684", de: "FH", fr: "Bachelor Hes-So", it: "SUP" },
+                { id: "685", de: "HF", fr: "ES", it: "SSS" },
+            ],
+            required: true,
+        },
+        {
+            name: "ausbildungsjahr",
+            label: {
+                de: "Ausbildungsjahr (zum Zeitpunkt des Projektes)",
+                fr: "Année de formation (au moment du projet)",
+                it: "Anno di formazione (al momento del progetto)",
+            },
+            type: "select-1",
+            options: [
+                {
+                    id: "1",
+                    de: "1. Ausbildungsjahr",
+                    fr: "1ère année de formation",
+                    it: "1. Anno di formazione",
+                },
+                {
+                    id: "2",
+                    de: "2. Ausbildungsjahr",
+                    fr: "2ème année de formation",
+                    it: "2. Anno di formazione",
+                },
+                {
+                    id: "3",
+                    de: "3. Ausbildungsjahr",
+                    fr: "3ème année de formation",
+                    it: "3. Anno di formazione",
+                },
+                {
+                    id: "4",
+                    de: "4. Ausbildungsjahr",
+                    fr: "4ème année de formation",
+                    it: "4. Anno di formazione",
+                },
+            ],
+            required: true,
+        },
+        {
+            name: "name-ausbildungsinstitution",
+            type: "select-1",
+            label: {
+                de: "Name Ausbildungsinstitution",
+                fr: "Nom de l'établissement de formation",
+                it: "Nome dell’istituto di formazione",
+            },
+            options: [
+                {
+                    id: "cfparts-cv",
+                    all: "CFP Arts, Centre de Formation Professionnelle Arts, Genève, ES Communication visuelle",
+                },
+
+                {
+                    id: "csia-g",
+                    all: "CSIA, Centro scolastico per le industrie artistiche, Lugano, Grafico",
+                },
+
+                {
+                    id: "eaa-g",
+                    all: "EAA, L’école d’arts appliqués, La Chaux-de-Fonds, Graphisme",
+                },
+
+                {
+                    id: "ecal-g",
+                    all: "ECAL, École cantonale d’art de Lausanne, Graphic Design",
+                },
+
+                {
+                    id: "edhea-gcfc",
+                    all: "EDHEA, École de design et haute école d’art du Valais, Sierre, Graphiste CFC",
+                },
+
+                {
+                    id: "eracom-g",
+                    all: "éracom, École romande d’arts et communication, Lausanne, Graphiste",
+                },
+
+                {
+                    id: "ff-fg",
+                    all: "F+F, Schule für Kunst und Design, Zürich, Fachklasse Grafik",
+                },
+
+                {
+                    id: "ff-hfvg",
+                    all: "F+F, Schule für Kunst und Design, Zürich, HF Visuelle Gestaltung",
+                },
+
+                {
+                    id: "fhnw-vk",
+                    all: "FHNW, Fachhochschule Nordwestschweiz, Visuelle Kommunikation",
+                },
+                {
+                    id: "fmz-fg",
+                    all: "FMZ, Fach- und Wirtschaftsmittelschulzentrum, Luzern, Fachklasse Grafik",
+                },
+                {
+                    id: "gbs-fg",
+                    all: "GBS, Gewerbliches Berufs- und Weiterbildungszentrum, St. Gallen, Fachklasse Grafik",
+                },
+                {
+                    id: "gbs-hfvg",
+                    all: "GBS, Gewerbliches Berufs- und Weiterbildungszentrum, St. Gallen, HF Visuelle Gestaltung",
+                },
+
+                {
+                    id: "head-cv",
+                    all: "HEAD, Haute école d’art et de design, Genève, Communication visuelle",
+                },
+                {
+                    id: "hkb-vk",
+                    all: "HKB, Hochschule der Künste, Bern, Visuelle Kommunikation",
+                },
+                {
+                    id: "hslu-gd",
+                    all: "HSLU, Hochschule Luzern – Design & Kunst, Graphic Design",
+                },
+                {
+                    id: "sfgb-fg",
+                    all: "SfGB, Schule für Gestaltung, Basel, Fachklasse für Grafik",
+                },
+                {
+                    id: "sfgb-hfvg",
+                    all: "SfGB, Schule für Gestaltung, Basel, HF Visuelle Gestaltung",
+                },
+                {
+                    id: "sfgbb-efz",
+                    all: "SfG BB, Schule für Gestaltung, Bern und Biel, Berufsfachschule, duale Grundbildung Grafiker:in EFZ (Bern)",
+                },
+                {
+                    id: "sfgbb-hfvg",
+                    all: "SfG BB, Schule für Gestaltung, Bern und Biel, HF Visuelle Gestaltung",
+                },
+                {
+                    id: "sfgbb-fg",
+                    all: "SfG BB, Schule für Gestaltung Bern und Biel, Grafik Fachklasse (Biel)",
+                },
+                {
+                    id: "sfgz-fg",
+                    all: "SfGZ, Schule für Gestaltung, Zürich, Fachbereich Grafik",
+                },
+                {
+                    id: "sfgz-hfvg",
+                    all: "SfGZ, Schule für Gestaltung, Zürich, HF Visuelle Gestaltung",
+                },
+                {
+                    id: "supsi",
+                    all: "SUPSI, Scuola universitaria professionale della Svizzera italiana, Mendrisio, Dipartimento ambiente costruzioni e design, Comunicazione visiva",
+                },
+                {
+                    id: "zhdk-vc",
+                    all: "ZHdK, Zürcher Hochschule der Künste, Visual Communication",
+                },
+            ],
+            tooltip: {
+                de: `
           <ul>
             <li class="dash">In welcher Ausbildungsinstitution oder in welchem Lehrbetrieb ist dein Projekt entstanden?</li>
           </ul>
         `,
-        fr: `
+                fr: `
           <ul>
             <li class="dash">Dans quel établissement d'enseignement ou entreprise d’apprentissage ton projet a-t-il vu le jour ?</li>
           </ul>
         `,
-        it: `
+                it: `
           <ul>
             <li class="dash">In quale scuola o azienda formatrice è stato realizzato il tuo progetto?</li>
           </ul>
-        `
-      },
-      required: true
-    },
-    {
-      name: "kanton-des-ausbildungsortes",
-      label: {
-        de: "Kanton des Ausbildungsorts",
-        fr: "Canton du lieu de formation",
-        it: "Cantone del luogo di formazione"
-      },
-      type: "select-1",
-      options: [
-        { id: "414", de: "Aargau", fr: "Argovie", it: "Argovia" },
-        { id: "415", de: "Appenzell Ausserrhoden", fr: "Appenzell Rhodes-Extérieures", it: "Appenzello esterno" },
-        { id: "416", de: "Appenzell Innerrhoden", fr: "Appenzell Rhodes-Intérieures", it: "Appenzello interno" },
-        { id: "417", de: "Basel-Landschaft", fr: "Bâle-Campagne", it: "Basilea campagna" },
-        { id: "418", de: "Basel-Stadt", fr: "Bâle-Ville", it: "Basilea città" },
-        { id: "419", de: "Bern", fr: "Berne", it: "Barna" },
-        { id: "420", de: "Freiburg", fr: "Fribourg", it: "Friburgo" },
-        { id: "421", de: "Genf", fr: "Genève", it: "Ginevra" },
-        { id: "422", de: "Glarus", fr: "Glarus", it: "Glarona" },
-        { id: "423", de: "Graubünden", fr: "Grisons", it: "Grigioni" },
-        { id: "424", de: "Jura", fr: "Jura", it: "Giura" },
-        { id: "425", de: "Luzern", fr: "Lucerne", it: "Lucerna" },
-        { id: "426", de: "Neuenburg", fr: "Neuchâtel", it: "Neuchatel" },
-        { id: "427", de: "Nidwalden", fr: "Nidwald", it: "Nidvaldo" },
-        { id: "428", de: "Obwalden", fr: "Obwald", it: "Obvaldo" },
-        { id: "429", de: "Schaffhausen", fr: "Schaffhouse", it: "Sciaffusa" },
-        { id: "430", de: "Schwyz", fr: "Schwyz", it: "Svitto" },
-        { id: "431", de: "Solothurn", fr: "Soleure", it: "Soletta" },
-        { id: "432", de: "St. Gallen", fr: "Saint-Gall", it: "San Gallo" },
-        { id: "433", de: "Tessin", fr: "Tessin", it: "Ticino" },
-        { id: "434", de: "Thurgau", fr: "Thurgovie", it: "Turgovia" },
-        { id: "435", de: "Uri", fr: "Uri", it: "Uri" },
-        { id: "436", de: "Waadt", fr: "Vaud", it: "Vaud" },
-        { id: "437", de: "Wallis", fr: "Valais", it: "Vallese" },
-        { id: "439", de: "Zürich", fr: "Zurich", it: "Zurigo" },
-        { id: "438", de: "Zug", fr: "Zug", it: "Zugo" }
-      ],
-      required: true
-     }
-  ],
+        `,
+            },
+        },
+        {
+            name: "name-lehrbetrieb",
+            type: "text-short",
+            label: {
+                de: "Name des Lehrbetriebs",
+                fr: "Nom de l'entreprise de formation",
+                it: "Nome azienda formatrice",
+            },
+            tooltip: {
+                all: "Only if you are working in an agency",
+            },
+        },
+        {
+            name: "kanton-des-ausbildungsortes",
+            label: {
+                de: "Kanton des Ausbildungsorts",
+                fr: "Canton du lieu de formation",
+                it: "Cantone del luogo di formazione",
+            },
+            type: "select-1",
+            options: [
+                { id: "414", de: "Aargau", fr: "Argovie", it: "Argovia" },
+                {
+                    id: "415",
+                    de: "Appenzell Ausserrhoden",
+                    fr: "Appenzell Rhodes-Extérieures",
+                    it: "Appenzello esterno",
+                },
+                {
+                    id: "416",
+                    de: "Appenzell Innerrhoden",
+                    fr: "Appenzell Rhodes-Intérieures",
+                    it: "Appenzello interno",
+                },
+                {
+                    id: "417",
+                    de: "Basel-Landschaft",
+                    fr: "Bâle-Campagne",
+                    it: "Basilea campagna",
+                },
+                {
+                    id: "418",
+                    de: "Basel-Stadt",
+                    fr: "Bâle-Ville",
+                    it: "Basilea città",
+                },
+                { id: "419", de: "Bern", fr: "Berne", it: "Barna" },
+                { id: "420", de: "Freiburg", fr: "Fribourg", it: "Friburgo" },
+                { id: "421", de: "Genf", fr: "Genève", it: "Ginevra" },
+                { id: "422", de: "Glarus", fr: "Glarus", it: "Glarona" },
+                { id: "423", de: "Graubünden", fr: "Grisons", it: "Grigioni" },
+                { id: "424", de: "Jura", fr: "Jura", it: "Giura" },
+                { id: "425", de: "Luzern", fr: "Lucerne", it: "Lucerna" },
+                {
+                    id: "426",
+                    de: "Neuenburg",
+                    fr: "Neuchâtel",
+                    it: "Neuchatel",
+                },
+                { id: "427", de: "Nidwalden", fr: "Nidwald", it: "Nidvaldo" },
+                { id: "428", de: "Obwalden", fr: "Obwald", it: "Obvaldo" },
+                {
+                    id: "429",
+                    de: "Schaffhausen",
+                    fr: "Schaffhouse",
+                    it: "Sciaffusa",
+                },
+                { id: "430", de: "Schwyz", fr: "Schwyz", it: "Svitto" },
+                { id: "431", de: "Solothurn", fr: "Soleure", it: "Soletta" },
+                {
+                    id: "432",
+                    de: "St. Gallen",
+                    fr: "Saint-Gall",
+                    it: "San Gallo",
+                },
+                { id: "433", de: "Tessin", fr: "Tessin", it: "Ticino" },
+                { id: "434", de: "Thurgau", fr: "Thurgovie", it: "Turgovia" },
+                { id: "435", de: "Uri", fr: "Uri", it: "Uri" },
+                { id: "436", de: "Waadt", fr: "Vaud", it: "Vaud" },
+                { id: "437", de: "Wallis", fr: "Valais", it: "Vallese" },
+                { id: "439", de: "Zürich", fr: "Zurich", it: "Zurigo" },
+                { id: "438", de: "Zug", fr: "Zug", it: "Zugo" },
+            ],
+            required: true,
+        },
+    ],
 
-/*  Dozenten
+    /*  Dozenten
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
-  [
-    {
-      name: "dozenten",
-      type: "text-short",
-      label: {
-        de: "Dozenten*innen / Ausbildner*innen",
-        fr: "Enseignant·e·s, formateurs/formatrices",
-        it: "Docenti / Formatori"
-      },
-      required: true,
-      tooltip: {
-        de: `
+    [
+        {
+            name: "dozenten",
+            type: "text-short",
+            label: {
+                de: "Dozenten*innen / Ausbildner*innen",
+                fr: "Enseignant·e·s, formateurs/formatrices",
+                it: "Docenti / Formatori",
+            },
+            required: true,
+            tooltip: {
+                de: `
           <ul>
             <li class="dash">Wer hat dich bei deinem Projekt begleitet? Es sind mehrere Nennungen möglich.</li>          
             <li class="dash">Gib die Namen wie folgt an: Vorname Familienname, ...</li>
           </ul>
         `,
-        fr: `
+                fr: `
           <ul>
             <li class="dash">Qui t'a suivi pendant ton projet ? Plusieurs noms sont possibles.</li>          
             <li class="dash">Indique les noms comme suit : Prénom Nom, ...</li>
           </ul>
         `,
-        it: `
+                it: `
           <ul>
             <li class="dash">Chi ti ha accompagnato durante il progetto? Possono essere indicate più persone.</li>          
             <li class="dash">Indica i nomi come segue: Nome Cognome, ...</li>
           </ul>
-        `
-      }
-    }
-  ],
+        `,
+            },
+        },
+    ],
 
-/*  Weitere Gestalter
+    /*  Weitere Gestalter
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
-  [
-    {
-      name: "weitere-gestalter",
-      type: "text-short",
-      maxlength: "450",
-      label: {
-        de: "Weitere Gestalter*innen (bei Gruppenarbeiten)",
-        fr: "Autres graphistes dans le cadre d’un travail de groupe",
-        it: "Altri membri del gruppo in caso di progetto realizzato da un gruppo"
-      },
-      tooltip: {
-        de: `
+    [
+        {
+            name: "weitere-gestalter",
+            type: "text-short",
+            maxlength: "450",
+            label: {
+                de: "Weitere Gestalter*innen (bei Gruppenarbeiten)",
+                fr: "Autres graphistes dans le cadre d’un travail de groupe",
+                it: "Altri membri del gruppo in caso di progetto realizzato da un gruppo",
+            },
+            tooltip: {
+                de: `
           <ul>
             <li class="dash">Reichst du eine Gruppenarbeit ein? Nenne hier alle Namen deines Teams.</li>
             <li class="dash">Gib die Namen wie folgt an: Vorname Familienname, Vorname Familienname</li>
           </ul>
             `,
-        fr: `
+                fr: `
           <ul>
             <li class="dash">Vous soumettez un travail de groupe ? Listez ici tous les noms de votre équipe.</li>
             <li class="dash">Donnez les noms comme suit : Prénom Nom, ...</li>
           </ul>
             `,
-        it: `
+                it: `
           <ul>
             <li class="dash">Stai inoltrando un lavoro di gruppo? Elenca qui tutti i nomi dei membri del tuo gruppo.</li>
             <li class="dash">Indica i nomi come segue: Nome Cognome, ...</li>
           </ul>
-        `
-      }
-    }
-  ],
+        `,
+            },
+        },
+    ],
 
-/*  File Upload
+    /*  File Upload
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
-  [
-    {
-      id: "ProjectFileUpload",
-      name: "reprografien",
-      type: "file",
-      label: {
-        de: "Upload Reprografien / Mockups (3–6)",
-        fr: "Téléchargement de reproductions / mock-ups (3–6)",
-        it: "Upload Riproduzione / Mockup (3–6)"
-      },
-      minfiles: 3,
-      maxfiles: 6,
-      maxuploadsize: 30,
-      accept: "image/jpeg",
-      tooltip: {
-        fr: `
+    [
+        {
+            id: "ProjectFileUpload",
+            name: "reprografien",
+            type: "file",
+            label: {
+                de: "Upload Reprografien / Mockups (3–6)",
+                fr: "Téléchargement de reproductions / mock-ups (3–6)",
+                it: "Upload Riproduzione / Mockup (3–6)",
+            },
+            minfiles: 3,
+            maxfiles: 6,
+            maxuploadsize: 30,
+            accept: "image/jpeg",
+            tooltip: {
+                fr: `
           <ul>
             <li class="dash">3 à 6 photos ou mock-ups</li>
             <li class="dash">Format JPG</li>
@@ -420,7 +595,7 @@ module.exports = [
             <li class="dash">Puis-je envoyer des mock-ups au lieu des reproductions classiques ? Oui !</li>
           </ul>
         `,
-        de: `
+                de: `
           <ul>
             <li class="dash">3 bis 6 Reprografien oder Mockups</li>
             <li class="dash">JPG Format</li>
@@ -432,7 +607,7 @@ module.exports = [
             <li class="dash">Darf ich anstelle von klassischen Reprografien auch digitale Mockups einsenden? Ja.</li>
           </ul>
         `,
-        it: `
+                it: `
           <ul>
             <li class="dash">da 3 a 6 immagni o Mockup</li>
             <li class="dash">Formato JPG</li>
@@ -443,77 +618,77 @@ module.exports = [
             <li class="dash">Posso mettere in scena (contestualizzare) il mio progetto? Sì!</li>
             <li class="dash">Posso inviare mockup digitali invece di riproduzioni? Sì!</li>
           </ul>
-        `
-      },
-      required: true
-    }
-  ],
+        `,
+            },
+            required: true,
+        },
+    ],
 
-  /*  Projektwebseite
+    /*  Projektwebseite
   ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
-  [
-    {
-      name: "link-videomaterial",
-      type: "url",
-      label: {
-        de: "Youtube- oder Vimeolink zu einem Video- oder Animationsprojekt",
-        fr: "Lien Youtube ou Vimeo vers un projet de vidéo ou d’animation",
-        it: "Link di un tuo video o animazione a Youtube o Vimeo"
-      },
-      tooltip: {
-        de: `
+    [
+        {
+            name: "link-videomaterial",
+            type: "url",
+            label: {
+                de: "Youtube- oder Vimeolink zu einem Video- oder Animationsprojekt",
+                fr: "Lien Youtube ou Vimeo vers un projet de vidéo ou d’animation",
+                it: "Link di un tuo video o animazione a Youtube o Vimeo",
+            },
+            tooltip: {
+                de: `
           <p>– Video- und Animations-Projekte müssen einen Video-Link einreichen. Gib uns hier die URL an.</p>
           <ul>
             <li class="dash">Beispiel Youtube: https://www.youtube.com/watch?v=a3RGv-w99Cg</li>
             <li class="dash">Beispiel Vimeo: https://vimeo.com/183907133</li>
           </ul>
         `,
-        fr: `
+                fr: `
           <ul>
             <li class="dash">Exemple Youtube : https://www.youtube.com/watch?v=a3RGv-w99Cg</li>
             <li class="dash">Exemple Vimeo : https://vimeo.com/183907133</li>
           </ul>
         `,
-        it: `
+                it: `
           <ul>
             <li class="dash">Esempio Youtube: https://www.youtube.com/watch?v=a3RGv-w99Cg</li>
             <li class="dash">Esempio Vimeo: https://vimeo.com/183907133</li>
           </ul>
-        `
-      }
-    },
+        `,
+            },
+        },
 
-  /*  Projektwebseite
+        /*  Projektwebseite
   ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
-    {
-      name: "link-projektwebsite-prototyp",
-      type: "url",
-      label: {
-        de: "Link Prototyp oder Projekt-Website",
-        fr: "Lien vers le site du projet ou prototype.",
-        it: "Link al prototipo o sito web del progetto"
-      },
-      tooltip: {
-        de:`      
+        {
+            name: "link-projektwebsite-prototyp",
+            type: "url",
+            label: {
+                de: "Link Prototyp oder Projekt-Website",
+                fr: "Lien vers le site du projet ou prototype.",
+                it: "Link al prototipo o sito web del progetto",
+            },
+            tooltip: {
+                de: `      
             <ul>
                 <li class="dash">Gibt es einen Link zu einer Projekt-Website oder zu einem Prototypen deines Projekts? Dann gib uns hier die URL an (optional).</li>
                 <li class="dash">Beispiel: https://jungegrafik.ch/</li>
             </ul>
            `,
-        fr:`      
+                fr: `      
             <ul>
                 <li class="dash">Existe-t-il un lien vers un site web ou vers un prototype de ton projet ? Donne-nous ici l'URL (facultatif).</li>
                 <li class="dash">Exemple : https://jungegrafik.ch/</li>
             </ul>
            `,
 
-        it:`      
+                it: `      
             <ul>
                 <li class="dash">C'è un link a un sito web del progetto o a un prototipo del tuo progetto? Poi indicaci l’URL qui (opzionale).</li>
                 <li class="dash">Esempio: https://jungegrafik.ch/</li>
             </ul>
-           `
-      }
-    }
-  ]
+           `,
+            },
+        },
+    ],
 ];
