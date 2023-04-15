@@ -23,6 +23,7 @@ module.exports = ({ classes = "", title, images = [] }) => {
 
         .SlideShow {
             padding: 0;
+            flex-direction: row;
         }
 
         .slideShowImages {
