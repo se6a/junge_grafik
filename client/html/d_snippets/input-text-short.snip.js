@@ -1,33 +1,28 @@
 const Tooltip = getSnippet("tooltip");
 
 module.exports = (data) => {
-  let {
-    name,
-    id = makeId(),
-    label,
-    required,
-    tooltip,
-    type,
-    subType,
-    attr = "",
-    maxlength = "150"
-  } = data;
+    let {
+        name,
+        id = makeId(),
+        label,
+        required,
+        tooltip,
+        type,
+        subType,
+        placeholder,
+        attr = "",
+        maxlength = "150",
+    } = data;
 
-  type = type
-       ? `type="${type}"`
-       : `type="text"`;
+    type = type ? `type="${type}"` : `type="text"`;
 
-  subType = subType
-          ? subType[0].toUpperCase() + subType.slice(1)
-          : "";
+    subType = subType ? subType[0].toUpperCase() + subType.slice(1) : "";
 
-  maxlength = maxlength
-            ? `maxlength="${maxlength}"`
-            : "";
+    maxlength = maxlength ? `maxlength="${maxlength}"` : "";
 
-  required = required ? "--required" : "";
+    required = required ? "--required" : "";
 
-  const html = splitTemp/*html*/`
+    const html = splitTemp/*html*/ `
     <div class="formField TextShort ${subType} ${required}">
 
       <header class="header">
@@ -47,18 +42,19 @@ module.exports = (data) => {
           ${attr}
           ${maxlength}
           ${required ? "required" : ""}
+          ${placeholder ? `placeholder="${placeholder}"` : ""}
         />
       </div>
 
     </div>
   `;
 
-  const css = /*css*/`
+    const css = /*css*/ `
     .formField textarea {
       min-height: calc(5 * var(--size-M));
       resize: vertical;
     }
   `;
 
-  return ["input-text-short.snip", html, css];
+    return ["input-text-short.snip", html, css];
 };
