@@ -27,16 +27,19 @@ module.exports = ({ classes = "", title, images = [] }) => {
 
         .slideShowImages {
             position: relative;
-            height: 80vh;
             overflow: hidden;
+            display: grid;
+            max-height: 80vh;
+            grid-template-columns: 1fr;
+            grid-template-rows: 100%;
         }
 
+
         .slideShowImage {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            grid-row: 1;
+            grid-column: 1;
+            position: relative;
+            display: flex;
         }
 
         .slideShowImage img {
