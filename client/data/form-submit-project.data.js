@@ -483,17 +483,17 @@ module.exports = [
             tooltip: {
                 de: `
           <ul>
-            <li class="dash">In welcher Ausbildungsinstitution oder in welchem Lehrbetrieb ist dein Projekt entstanden?</li>
+            <li class="dash">In welcher Ausbildungsinstitution ist dein Projekt entstanden?</li>
           </ul>
         `,
                 fr: `
           <ul>
-            <li class="dash">Dans quel établissement d'enseignement ou entreprise d’apprentissage ton projet a-t-il vu le jour ?</li>
+            <li class="dash">Dans quel établissement d'enseignement ton projet a-t-il été développé ?</li>
           </ul>
         `,
                 it: `
           <ul>
-            <li class="dash">In quale scuola o azienda formatrice è stato realizzato il tuo progetto?</li>
+            <li class="dash">In quale scuola è stato realizzato il tuo progetto?</li>
           </ul>
         `,
             },
@@ -507,9 +507,9 @@ module.exports = [
                 it: "Nome azienda formatrice",
             },
             tooltip: {
-                de: "Diese Angabe musst du nur machen, falls du deine Ausbildung in einem Lehrbetrieb machst.",
-                fr: "Devi fornire questa informazione solo se stai facendo la tua formazione in un'azienda di formazione professionale.",
-                it: "Tu ne dois fournir cette information que si tu effectues ta formation dans une entreprise de formation professionnelle.",
+                de: `<ul><li class="dash">Diese Angabe musst du nur machen, falls du deine Ausbildung in einem Lehrbetrieb machst.</li></ul>`,
+                fr: `<ul><li class="dash">Devi fornire questa informazione solo se stai facendo la tua formazione in un'azienda di formazione professionale.</li></ul>`,
+                it: `<ul><li class="dash">Tu ne dois fournir cette information que si tu effectues ta formation dans une entreprise de formation professionnelle.</li></ul>`,
             },
         },
         {
