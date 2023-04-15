@@ -36,7 +36,8 @@ module.exports = ({ classes = "", title, image = {}, content, link = "" }) => {
         display: none;
     }
 
-    .useImage > .imageWrapper {
+    .useImage > .imageWrapper,
+    .useImage > a > .imageWrapper {
         display: block;
     }
 
