@@ -55,11 +55,8 @@ module.exports = (data) => {
               })}
             </span>
           </div>
-
         </div>
-
       </article>
-
     </main>
   `;
 
