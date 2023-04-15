@@ -1,0 +1,80 @@
+[2023-04-15T18:17:55.198] [ERROR] submitErrors - [Object: null prototype] {
+  fields: [Object: null prototype] {
+    geschlecht: '682',
+    geburtsjahr: '2010',
+    vorname: 'Sebastian',
+    familienname: 'Wyss',
+    'strasse-nummer': 'Offenburger 35',
+    'postleitzahl-ort': '4057 Basel',
+    'e-mail': 'wyss.sebastian@gmail.com',
+    mobile: '0774641842',
+    'link-portfolio': '',
+    'link-instagram-profil': '',
+    projekttitel: 'Test',
+    entstehungsjahr: '21/22',
+    'tag-1': 'Corporate design',
+    'tag-2': 'Corporate design',
+    'tag-3': 'Animation design',
+    projektbeschrieb: 'Test',
+    ausbildungsniveau: '684',
+    ausbildungsjahr: '3',
+    'name-ausbildungsinstitution': '4100',
+    'name-lehrbetrieb': '',
+    'kanton-des-ausbildungsortes': '416',
+    dozenten: 'Test Test',
+    'weitere-gestalter': '',
+    'link-videomaterial': '',
+    'link-projektwebsite-prototyp': '',
+    sprache: '697'
+  },
+  action: [Object: null prototype] { einreichung: 'submit' }
+} [
+  {
+    fieldname: 'files',
+    originalname: 'test1.jpg',
+    encoding: '7bit',
+    mimetype: 'image/jpeg',
+    buffer: <Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 01 01 2c 01 2c 00 00 ff e1 00 a0 45 78 69 66 00 00 4d 4d 00 2a 00 00 00 08 00 05 01 1a 00 05 00 00 00 01 00 00 ... 57053 more bytes>,
+    size: 57103
+  },
+  {
+    fieldname: 'files',
+    originalname: 'test2.jpg',
+    encoding: '7bit',
+    mimetype: 'image/jpeg',
+    buffer: <Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 01 01 2c 01 2c 00 00 ff e1 00 a0 45 78 69 66 00 00 4d 4d 00 2a 00 00 00 08 00 05 01 1a 00 05 00 00 00 01 00 00 ... 57053 more bytes>,
+    size: 57103
+  },
+  {
+    fieldname: 'files',
+    originalname: 'test3.jpg',
+    encoding: '7bit',
+    mimetype: 'image/jpeg',
+    buffer: <Buffer ff d8 ff e0 00 10 4a 46 49 46 00 01 01 01 01 2c 01 2c 00 00 ff e1 00 a0 45 78 69 66 00 00 4d 4d 00 2a 00 00 00 08 00 05 01 1a 00 05 00 00 00 01 00 00 ... 57053 more bytes>,
+    size: 57103
+  }
+] Error: Beim Speichern des Eintrags sind Fehler aufgetreten.
+
+{
+    "fields[einreichedatum][start][]": "now",
+    "fields[geburtsjahr]": "2010",
+    "fields[familienname]": "Wyss",
+    "fields[postleitzahl-ort]": "4057 Basel",
+    "fields[mobile]": "0774641842",
+    "fields[link-instagram-profil]": "",
+    "fields[tag-1]": "Corporate design",
+    "fields[tag-3]": "Animation design",
+    "fields[ausbildungsniveau]": "684",
+    "fields[name-ausbildungsinstitution]": "4100",
+    "fields[kanton-des-ausbildungsortes]": "416",
+    "fields[weitere-gestalter]": "",
+    "fields[link-projektwebsite-prototyp]": "",
+    "action[einreichung]": "submit"
+}
+    at C:\Users\sebaaa\Aktuelle Projekte\junge-grafik\router\router-api.js:166:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async sendEntryForm (C:\Users\sebaaa\Aktuelle Projekte\junge-grafik\router\router-api.js:151:5) 
+
+
+
+

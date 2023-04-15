@@ -6,7 +6,7 @@ module.exports = ({ classes = "", title, images = [] }) => {
 
     const html = [
         /*html*/ `
-            <section class="SLIDESHOW box">
+            <section class="SlideShow box">
                 <div class="slideShowImages">`,
         ...images.map((image, i) =>
             Picture(image, {
@@ -21,7 +21,7 @@ module.exports = ({ classes = "", title, images = [] }) => {
 
     const css = /*css*/ `
 
-        .SLIDESHOW {
+        .SlideShow {
             padding: 0;
         }
 
