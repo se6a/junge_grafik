@@ -4,9 +4,8 @@ const fetch = require("node-fetch");
 const FormData = require("form-data");
 const log4js = require("log4js");
 
-const apiUrl = "https://2023.jungegrafik.ch/symphony/api";
 const token = "440e38e8";
-
+const apiUrl = "https://2023.jungegrafik.ch/symphony/api";
 log4js.configure({
     appenders: {
         submitErrors: {
@@ -30,8 +29,8 @@ Router.post(
     "/email",
     FormParser.single("e-mail"),
     prepareSubscriber,
-    rebuildForm,
-    sendNewsletterForm
+    rebuildForm
+    // sendNewsletterForm
 );
 
 async function prepareSubscriber(req, res, next) {
@@ -40,23 +39,23 @@ async function prepareSubscriber(req, res, next) {
     next();
 }
 
-async function sendNewsletterForm(req, res, next) {
-    await fetch("https://api.jungegrafik.ch/newsletter/opt-in/", {
-        method: "POST",
-        body: res.locals.newForm,
-    })
-        .then(async (rawRes) => {
-            const symphonyRes = await rawRes.json();
+// async function sendNewsletterForm(req, res, next) {
+//     await fetch(`${apiUrl}/newsletter/opt-in/`, {
+//         method: "POST",
+//         body: res.locals.newForm,
+//     })
+//         .then(async (rawRes) => {
+//             const symphonyRes = await rawRes.json();
 
-            if (symphonyRes.ergebnis === "success") res.sendStatus(200);
-            else throw Error("Something went wrong.");
-        })
+//             if (symphonyRes.ergebnis === "success") res.sendStatus(200);
+//             else throw Error("Something went wrong.");
+//         })
 
-        .catch((error) => {
-            console.log(error);
-            res.sendStatus(400);
-        });
-}
+//         .catch((error) => {
+//             console.log(error);
+//             res.sendStatus(400);
+//         });
+// }
 
 /* Project Entry
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
@@ -92,70 +91,68 @@ function rebuildForm(req, res, next) {
     const formdata = res.locals.originalForm;
     const newForm = new FormData();
 
-    const test = {};
+    newForm.append("fields[einreichedatum][start][]", "now");
 
-    // for (const _key in formdata) {
-    //     const _content = formdata[_key];
+    for (const _key in formdata) {
+        const _content = formdata[_key];
+        if (_key.includes("entstehungsjahr")) continue;
 
-    //     if (_content !== null && typeof _content === "object") {
-    //         for (const __key in _content) {
-    //             if (__key.includes("entstehungsjahr")) continue;
-    //             const __content = _content[__key];
-    //             const _newkey = `${_key}[${__key}]`;
-    //             newForm.append(_newkey, `${__content}`);
-    //             test[_newkey] = __content;
-    //         }
-    //     } else {
-    //         if (_key.includes("entstehungsjahr")) continue;
+        if (_content !== null && typeof _content === "object") {
+            for (const __key in _content) {
+                if (__key.includes("entstehungsjahr")) continue;
 
-    //         newForm.append(_key, _content);
-    //         test[_key] = _content;
-    //     }
-    // }
-
-    // console.log(test);
-
-    // newForm.append("fields[einreichedatum][start][]", "now");
-    newForm.append("einreichedatum", new Date().toISOString());
-    newForm.append("geschlecht", "440");
-    newForm.append("geburtsjahr", "1990");
-    newForm.append("vorname", "TEST");
-    newForm.append("familienname", "TEST");
-    newForm.append("strasse-nummer", "TEST");
-    newForm.append("postleitzahl-ort", "TEST");
-    newForm.append("e-mail", "wyss.sebastian@gmail.com");
-    newForm.append("mobile", "0774641842");
-    newForm.append("link-portfolio", "");
-    newForm.append("link-instagram-profil", "");
-    newForm.append("projekttitel", "sdgfsdfsadf");
-    newForm.append("entstehungsjahr", "2023");
-    newForm.append("tag-1", "Editorial design");
-    newForm.append("tag-2", "");
-    newForm.append("tag-3", "");
-    newForm.append("entstehungsort", "3950");
-    newForm.append("projektbeschrieb", "sadfsadfsadfsadf");
-    newForm.append("ausbildungsniveau", "685");
-    newForm.append("ausbildungsjahr", "3");
-    newForm.append("name-ausbildungsinstitution", "4093");
-    newForm.append("name-lehrbetrieb", "");
-    newForm.append("kanton-des-ausbildungsortes", "416");
-    newForm.append("dozenten", "sdafsadfsadfsa");
-    newForm.append("weitere-gestalter", "");
-    newForm.append("link-videomaterial", "");
-    newForm.append("link-projektwebsite-prototyp", "");
-    newForm.append("sprache", "699");
+                const __content = _content[__key];
+                const _newkey = `${_key}[${__key}]`;
+                newForm.append(_newkey, `${__content}`);
+            }
+        } else {
+            newForm.append(_key, _content);
+        }
+    }
 
     res.locals.newForm = newForm;
 
     next();
 }
 
+function getFormDataFields(formData) {
+    const fields = {};
+
+    // Iterate through the internal "_streams" array of the FormData instance
+    for (let i = 0; i < formData._streams.length; i += 2) {
+        const keyValuePair = formData._streams[i];
+
+        // Check if the current element is a string (key-value pairs are stored as strings)
+        if (typeof keyValuePair === "string") {
+            const keyMatch = keyValuePair.match(/name="(.+?)"/);
+
+            // If a key is found in the string, extract it and get the corresponding value
+            if (keyMatch) {
+                const key = keyMatch[1];
+                const value = formData._streams[i + 1];
+
+                // If the value is a function, call it to get the string representation
+                if (typeof value === "function") {
+                    fields[key] = value.toString();
+                } else {
+                    fields[key] = value;
+                }
+            }
+        }
+    }
+
+    return fields;
+}
+
 async function sendEntryForm(req, res, next) {
+    const newForm = res.locals.newForm;
+    const fields = getFormDataFields(newForm);
+
     await fetch(
         `${apiUrl}/entries/einreichungen/?auth-token=${token}&format=json`,
         {
             method: "POST",
-            body: res.locals.newForm,
+            body: newForm,
         }
     )
         .then(async (rawRes) => {
@@ -165,15 +162,17 @@ async function sendEntryForm(req, res, next) {
                 res.locals.entry.id = body.response._id;
                 next();
             } else {
-                throw Error(body.response.message.value);
+                const fieldsAsStr = JSON.stringify(fields, null, 4);
+                throw Error(body.response.message.value + "\n\n" + fieldsAsStr);
             }
         })
 
         .catch((error) => failed(res, req, "sendEntryForm", error));
 }
+
 async function getProjectId(req, res, next) {
     await fetch(
-        `${api}/entries/einreichungen/${res.locals.entry.id}/?fields=projekt-id&auth-token=${token}&format=json`,
+        `${apiUrl}/entries/einreichungen/${res.locals.entry.id}/?fields=projekt-id&auth-token=${token}&format=json`,
         {
             method: "GET",
         }
