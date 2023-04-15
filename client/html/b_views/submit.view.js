@@ -17,8 +17,8 @@ module.exports = (data) => {
         ${LanguageForm()}
       </article>
 
-      <article class="mainSection fullpage ProjectRegistration">
-        ${ProjectForm()}
+      <article class="mainSection ProjectRegistration">
+        ${ProjectForm(data?.form || {})}
       </article>
 
       <article class="mainSection fullpage Support">
@@ -88,7 +88,7 @@ module.exports = (data) => {
     }
 
     .mainSection.ProjectRegistration {
-      padding-top: calc(var(--headerHeight) + var(--size-S));
+      padding-top: calc(var(--headerHeight) - 3px);
     }
 
     .VIEW.Submit[lang=""] .mainSection.SelectLanguage,

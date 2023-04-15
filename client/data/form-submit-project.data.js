@@ -87,9 +87,19 @@ module.exports = [
             },
             type: "select-1",
             options: [
-                { id: "2023", all: "2023" },
-                { id: "2022", all: "2022" },
-                { id: "2021", all: "2021" },
+                {
+                    id: "21/22",
+                    de: "Ausbildungsjahr 2021/22",
+                    fr: "Année de formation 2021/22",
+                    it: "Anno di formazione 2021/22",
+                },
+
+                {
+                    id: "22/23",
+                    de: "Ausbildungsjahr 2022/23",
+                    fr: "Année de formation 2022/23",
+                    it: "Anno di formazione 2022/23",
+                },
             ],
             required: true,
         },
@@ -205,19 +215,21 @@ module.exports = [
                 de: `
           <ul>
             <li class="dash">Nutze den Projektbeschrieb, um uns interessante Aspekte über die Aufgabenstellung, den Prozess und die Idee zu erzählen.</li>
+            <li class="dash">Du kannst den Projektbeschrieb auf Deutsch, Französisch, Italienisch oder Englisch verfassen.</li>
           </ul>
         `,
                 fr: `
           <ul>
             <li class="dash">Utilise cette description pour nous faire part d’aspects intéressants dans la donnée de base, le processus et l'idée de ton projet.</li>
+            <li class="dash">Vous pouvez rédiger la description du projet en allemand, français, italien ou anglais.</li>
           </ul>
         `,
                 it: `
           <ul>
             <li class="dash">Descrivi il progetto per raccontarci aspetti interessanti sul compito, il processo e l'idea.</li>
+            <li class="dash">Puoi scrivere la descrizione del progetto in tedesco, francese, italiano o inglese.</li>
           </ul>
         `,
-                all: `Please write your project description in German, Italian or French.`,
             },
         },
     ],
@@ -279,6 +291,7 @@ module.exports = [
         {
             name: "name-ausbildungsinstitution",
             type: "select-1",
+            required: true,
             label: {
                 de: "Name Ausbildungsinstitution",
                 fr: "Nom de l'établissement de formation",
@@ -286,110 +299,186 @@ module.exports = [
             },
             options: [
                 {
-                    id: "cfparts-cv",
-                    all: "CFP Arts, Centre de Formation Professionnelle Arts, Genève, ES Communication visuelle",
-                },
-
-                {
-                    id: "csia-g",
-                    all: "CSIA, Centro scolastico per le industrie artistiche, Lugano, Grafico",
-                },
-
-                {
-                    id: "eaa-g",
-                    all: "EAA, L’école d’arts appliqués, La Chaux-de-Fonds, Graphisme",
-                },
-
-                {
-                    id: "ecal-g",
-                    all: "ECAL, École cantonale d’art de Lausanne, Graphic Design",
-                },
-
-                {
-                    id: "edhea-gcfc",
-                    all: "EDHEA, École de design et haute école d’art du Valais, Sierre, Graphiste CFC",
-                },
-
-                {
-                    id: "eracom-g",
-                    all: "éracom, École romande d’arts et communication, Lausanne, Graphiste",
-                },
-
-                {
-                    id: "ff-fg",
-                    all: "F+F, Schule für Kunst und Design, Zürich, Fachklasse Grafik",
-                },
-
-                {
-                    id: "ff-hfvg",
-                    all: "F+F, Schule für Kunst und Design, Zürich, HF Visuelle Gestaltung",
-                },
-
-                {
-                    id: "fhnw-vk",
-                    all: "FHNW, Fachhochschule Nordwestschweiz, Visuelle Kommunikation",
+                    id: "4108",
+                    all: "ZHdK, Zürcher Hochschule der Künste, Visual Communication",
                 },
                 {
-                    id: "fmz-fg",
-                    all: "FMZ, Fach- und Wirtschaftsmittelschulzentrum, Luzern, Fachklasse Grafik",
-                },
-                {
-                    id: "gbs-fg",
-                    all: "GBS, Gewerbliches Berufs- und Weiterbildungszentrum, St. Gallen, Fachklasse Grafik",
-                },
-                {
-                    id: "gbs-hfvg",
-                    all: "GBS, Gewerbliches Berufs- und Weiterbildungszentrum, St. Gallen, HF Visuelle Gestaltung",
-                },
-
-                {
-                    id: "head-cv",
-                    all: "HEAD, Haute école d’art et de design, Genève, Communication visuelle",
-                },
-                {
-                    id: "hkb-vk",
-                    all: "HKB, Hochschule der Künste, Bern, Visuelle Kommunikation",
-                },
-                {
-                    id: "hslu-gd",
-                    all: "HSLU, Hochschule Luzern – Design & Kunst, Graphic Design",
-                },
-                {
-                    id: "sfgb-fg",
-                    all: "SfGB, Schule für Gestaltung, Basel, Fachklasse für Grafik",
-                },
-                {
-                    id: "sfgb-hfvg",
-                    all: "SfGB, Schule für Gestaltung, Basel, HF Visuelle Gestaltung",
-                },
-                {
-                    id: "sfgbb-efz",
-                    all: "SfG BB, Schule für Gestaltung, Bern und Biel, Berufsfachschule, duale Grundbildung Grafiker:in EFZ (Bern)",
-                },
-                {
-                    id: "sfgbb-hfvg",
-                    all: "SfG BB, Schule für Gestaltung, Bern und Biel, HF Visuelle Gestaltung",
-                },
-                {
-                    id: "sfgbb-fg",
-                    all: "SfG BB, Schule für Gestaltung Bern und Biel, Grafik Fachklasse (Biel)",
-                },
-                {
-                    id: "sfgz-fg",
-                    all: "SfGZ, Schule für Gestaltung, Zürich, Fachbereich Grafik",
-                },
-                {
-                    id: "sfgz-hfvg",
-                    all: "SfGZ, Schule für Gestaltung, Zürich, HF Visuelle Gestaltung",
-                },
-                {
-                    id: "supsi",
+                    id: "4107",
                     all: "SUPSI, Scuola universitaria professionale della Svizzera italiana, Mendrisio, Dipartimento ambiente costruzioni e design, Comunicazione visiva",
                 },
                 {
-                    id: "zhdk-vc",
-                    all: "ZHdK, Zürcher Hochschule der Künste, Visual Communication",
+                    id: "4106",
+                    all: "SfGZ, Schule für Gestaltung, Zürich, HF Visuelle Gestaltung",
                 },
+                {
+                    id: "4105",
+                    all: "SfGZ, Schule für Gestaltung, Zürich, Fachbereich Grafik",
+                },
+                {
+                    id: "4104",
+                    all: "SfG BB, Schule für Gestaltung Bern und Biel, Grafik Fachklasse (Biel)",
+                },
+                {
+                    id: "4103",
+                    all: "SfG BB, Schule für Gestaltung, Bern und Biel, HF Visuelle Gestaltung",
+                },
+                {
+                    id: "4102",
+                    all: "SfG BB, Schule für Gestaltung, Bern und Biel, Berufsfachschule, duale Grundbildung Grafiker:in EFZ (Bern)",
+                },
+                {
+                    id: "4101",
+                    all: "SfGB, Schule für Gestaltung, Basel, HF Visuelle Gestaltung",
+                },
+                {
+                    id: "4100",
+                    all: "SfGB, Schule für Gestaltung, Basel, Fachklasse für Grafik",
+                },
+                {
+                    id: "4099",
+                    all: "HSLU, Hochschule Luzern – Design & Kunst, Graphic Design",
+                },
+                {
+                    id: "4098",
+                    all: "HKB, Hochschule der Künste, Bern, Visuelle Kommunikation",
+                },
+                {
+                    id: "4097",
+                    all: "HEAD, Haute école d’art et de design, Genève, Communication visuelle",
+                },
+                {
+                    id: "4096",
+                    all: "GBS, Gewerbliches Berufs- und Weiterbildungszentrum, St. Gallen, HF Visuelle Gestaltung",
+                },
+                {
+                    id: "4095",
+                    all: "GBS, Gewerbliches Berufs- und Weiterbildungszentrum, St. Gallen, Fachklasse Grafik",
+                },
+                {
+                    id: "4094",
+                    all: "FMZ, Fach- und Wirtschaftsmittelschulzentrum, Luzern, Fachklasse Grafik",
+                },
+                {
+                    id: "4093",
+                    all: "FHNW, Fachhochschule Nordwestschweiz, Visuelle Kommunikation",
+                },
+                {
+                    id: "4092",
+                    all: "F+F, Schule für Kunst und Design, Zürich, HF Visuelle Gestaltung",
+                },
+                {
+                    id: "4091",
+                    all: "F+F, Schule für Kunst und Design, Zürich, Fachklasse Grafik",
+                },
+                {
+                    id: "4090",
+                    all: "éracom, École romande d’arts et communication, Lausanne, Graphiste",
+                },
+                // {
+                //     id: "cfparts-cv",
+                //     all: "CFP Arts, Centre de Formation Professionnelle Arts, Genève, ES Communication visuelle",
+                // },
+
+                // {
+                //     id: "csia-g",
+                //     all: "CSIA, Centro scolastico per le industrie artistiche, Lugano, Grafico",
+                // },
+
+                // {
+                //     id: "eaa-g",
+                //     all: "EAA, L’école d’arts appliqués, La Chaux-de-Fonds, Graphisme",
+                // },
+
+                // {
+                //     id: "ecal-g",
+                //     all: "ECAL, École cantonale d’art de Lausanne, Graphic Design",
+                // },
+
+                // {
+                //     id: "edhea-gcfc",
+                //     all: "EDHEA, École de design et haute école d’art du Valais, Sierre, Graphiste CFC",
+                // },
+
+                // {
+                //     id: "eracom-g",
+                //     all: "éracom, École romande d’arts et communication, Lausanne, Graphiste",
+                // },
+
+                // {
+                //     id: "ff-fg",
+                //     all: "F+F, Schule für Kunst und Design, Zürich, Fachklasse Grafik",
+                // },
+
+                // {
+                //     id: "ff-hfvg",
+                //     all: "F+F, Schule für Kunst und Design, Zürich, HF Visuelle Gestaltung",
+                // },
+
+                // {
+                //     id: "fhnw-vk",
+                //     all: "FHNW, Fachhochschule Nordwestschweiz, Visuelle Kommunikation",
+                // },
+                // {
+                //     id: "fmz-fg",
+                //     all: "FMZ, Fach- und Wirtschaftsmittelschulzentrum, Luzern, Fachklasse Grafik",
+                // },
+                // {
+                //     id: "gbs-fg",
+                //     all: "GBS, Gewerbliches Berufs- und Weiterbildungszentrum, St. Gallen, Fachklasse Grafik",
+                // },
+                // {
+                //     id: "gbs-hfvg",
+                //     all: "GBS, Gewerbliches Berufs- und Weiterbildungszentrum, St. Gallen, HF Visuelle Gestaltung",
+                // },
+
+                // {
+                //     id: "head-cv",
+                //     all: "HEAD, Haute école d’art et de design, Genève, Communication visuelle",
+                // },
+                // {
+                //     id: "hkb-vk",
+                //     all: "HKB, Hochschule der Künste, Bern, Visuelle Kommunikation",
+                // },
+                // {
+                //     id: "hslu-gd",
+                //     all: "HSLU, Hochschule Luzern – Design & Kunst, Graphic Design",
+                // },
+                // {
+                //     id: "sfgb-fg",
+                //     all: "SfGB, Schule für Gestaltung, Basel, Fachklasse für Grafik",
+                // },
+                // {
+                //     id: "sfgb-hfvg",
+                //     all: "SfGB, Schule für Gestaltung, Basel, HF Visuelle Gestaltung",
+                // },
+                // {
+                //     id: "sfgbb-efz",
+                //     all: "SfG BB, Schule für Gestaltung, Bern und Biel, Berufsfachschule, duale Grundbildung Grafiker:in EFZ (Bern)",
+                // },
+                // {
+                //     id: "sfgbb-hfvg",
+                //     all: "SfG BB, Schule für Gestaltung, Bern und Biel, HF Visuelle Gestaltung",
+                // },
+                // {
+                //     id: "sfgbb-fg",
+                //     all: "SfG BB, Schule für Gestaltung Bern und Biel, Grafik Fachklasse (Biel)",
+                // },
+                // {
+                //     id: "sfgz-fg",
+                //     all: "SfGZ, Schule für Gestaltung, Zürich, Fachbereich Grafik",
+                // },
+                // {
+                //     id: "sfgz-hfvg",
+                //     all: "SfGZ, Schule für Gestaltung, Zürich, HF Visuelle Gestaltung",
+                // },
+                // {
+                //     id: "supsi",
+                //     all: "SUPSI, Scuola universitaria professionale della Svizzera italiana, Mendrisio, Dipartimento ambiente costruzioni e design, Comunicazione visiva",
+                // },
+                // {
+                //     id: "zhdk-vc",
+                //     all: "ZHdK, Zürcher Hochschule der Künste, Visual Communication",
+                // },
             ],
             tooltip: {
                 de: `
@@ -418,7 +507,9 @@ module.exports = [
                 it: "Nome azienda formatrice",
             },
             tooltip: {
-                all: "Only if you are working in an agency",
+                de: "Diese Angabe musst du nur machen, falls du deine Ausbildung in einem Lehrbetrieb machst.",
+                fr: "Devi fornire questa informazione solo se stai facendo la tua formazione in un'azienda di formazione professionale.",
+                it: "Tu ne dois fournir cette information que si tu effectues ta formation dans une entreprise de formation professionnelle.",
             },
         },
         {

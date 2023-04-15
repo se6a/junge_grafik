@@ -1,19 +1,18 @@
-const Icon    = getSnippet("icon-circle-m");
-const e       = getJs("event-handler");
+const Icon = getSnippet("icon-circle-m");
+const e = getJs("event-handler");
 
 module.exports = ({
-  id = makeId(),
-  name,
-  label,
-  required,
-  callback,
-  zindex
-
+    id = makeId(),
+    name,
+    label,
+    required,
+    callback,
+    zindex,
 }) => {
-  required = required ? "--required" : "";
-  zindex = zindex ? `style="z-index: ${zindex}"` : "";
+    required = required ? "--required" : "";
+    zindex = zindex ? `style="z-index: ${zindex}"` : "";
 
-  const html = splitTemp/*html*/`
+    const html = splitTemp/*html*/ `
     <div
       class="formField Checkbox ${required}"
       ${zindex}
@@ -51,15 +50,15 @@ module.exports = ({
     </div>
   `;
 
-  const css = /*css*/`
+    const css = /*css*/ `
     .Checkbox .hiddenInput {
       bottom: 0;
     }
 
     .Checkbox.formField {
       display: flex;
-      align-items: center;
-      margin-bottom: var(--size-XS);
+      align-items: flex-start;
+      margin-bottom: var(--size-S);
     }
 
     .Checkbox .inputBox {
@@ -124,5 +123,5 @@ module.exports = ({
     }
   `;
 
-  return ["input-checkbox.snip", html, css];
+    return ["input-checkbox.snip", html, css];
 };

@@ -1,15 +1,15 @@
-const Checkbox   = getSnippet("input-checkbox");
+const Checkbox = getSnippet("input-checkbox");
 const EmailInput = getSnippet("input-email");
-const IconNext   = getSnippet("icon-next");
+const IconNext = getSnippet("icon-next");
 
-module.exports = ({ name = "", title, image, content }) => {
-  let displayTitle = "";
+module.exports = ({ name = "", title, content }) => {
+    let displayTitle = "";
 
-  if (! title) {
-    displayTitle = ` style="display: none"`;
-  }
+    if (!title) {
+        displayTitle = ` style="display: none"`;
+    }
 
-  const html = splitTemp/*html*/`
+    const html = splitTemp/*html*/ `
     <article class="SimpleCard card ${name}">
 
       <header class="SimbleCard box title"${displayTitle}>
@@ -25,8 +25,8 @@ module.exports = ({ name = "", title, image, content }) => {
     </article>
   `;
 
-  const css = /*css*/`
+    const css = /*css*/ `
   `;
 
-  return ["card-simple.snip", html, css];
+    return ["card-simple.snip", html, css];
 };

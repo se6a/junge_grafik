@@ -1,13 +1,15 @@
 const ImageBox = getSnippet("image-box");
 
-module.exports = ({ classes = "", title, image, content, link = "" }) => {
-  const html = splitTemp/*html*/ `
-  <article class="${classes} card ImageCard">
+module.exports = ({ classes = "", title, image = {}, content, link = "" }) => {
+    const maybeUseImage = image?.src ? "useImage" : "";
+    const html = splitTemp/*html*/ `
+  <article class="${classes} ${maybeUseImage} card ImageCard">
   ${link ? `<a href="${link}">` : ""}
-      <div class="ImageCard imageWrapper">
+
+    <div class="ImageCard imageWrapper">
         ${ImageBox({ image })}
         <div class="pushHeight"></div>
-      </div>
+    </div>      
 
       <div class="ImageCard contentWrapper">
         <div class="box">
@@ -28,7 +30,16 @@ module.exports = ({ classes = "", title, image, content, link = "" }) => {
     </article>
   `;
 
-  const css = /*css*/ `
+    const css = /*css*/ `
+
+    .imageWrapper {
+        display: none;
+    }
+
+    .useImage > .imageWrapper {
+        display: block;
+    }
+
     .ImageCard.card {
       z-index: 0;
     }
@@ -87,5 +98,5 @@ module.exports = ({ classes = "", title, image, content, link = "" }) => {
     }
   `;
 
-  return ["card-with-image.snip", html, css];
+    return ["card-with-image.snip", html, css];
 };

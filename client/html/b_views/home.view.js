@@ -1,7 +1,7 @@
 const HeaderView = getSection("header-view");
 
 module.exports = (data) => {
-  const html = splitTemp/*html*/ `
+    const html = splitTemp/*html*/ `
     <main class="VIEW Home">
 
       ${HeaderView(data.header)}
@@ -12,7 +12,7 @@ module.exports = (data) => {
     </main>
   `;
 
-  const css = /*css*/ `
+    const css = /*css*/ `
     body {
       --colorTheme: transparent;
     }
@@ -63,13 +63,12 @@ module.exports = (data) => {
     }
 
     @keyframes colors {
-      0%   {background-color: var(--blue);}
-      25%  {background-color: var(--red);}
-      50%  {background-color: var(--yellow);}
-      75%  {background-color: var(--green);}
-      100% {background-color: var(--blue);}
+      0%   {background-color: var(--red);}
+      33%  {background-color: var(--green);}
+      66%  {background-color: var(--yellow);}
+      100% {background-color: var(--red);}
     }
   `;
 
-  return ["home.view", html, css];
+    return ["home.view", html, css];
 };

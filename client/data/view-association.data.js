@@ -326,50 +326,48 @@ module.exports = {
                 //         },
             ],
         },
-        {
-            type: "rows",
-            length: 8,
-            content: [
-                // //////////////////////////////////////
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-cfpa_arts_geneve.png",
-                        alt: "Logo of CFPA Arts Genève",
-                        classes: "logo",
-                        href: "https://cfparts.ch",
-                    },
-                },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-edhea.png",
-                        alt: "Logo of edhea",
-                        classes: "logo",
-                        href: "https://edhea.ch",
-                    },
-                },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-fachklasse_grafik_luzern.png",
-                        alt: "Logo of Fachklasse Grafik Luzern",
-                        classes: "logo",
-                        href: "https://fachklassegrafik.ch",
-                    },
-                },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-ff_schule_fuer_kunst_und_design.png",
-                        alt: "Logo of F+F Schule für Kunst und Design",
-                        classes: "logo",
-                        href: "https://ffzh.ch",
-                    },
-                },
-            ],
-        },
-        // //////////////////////////////////////
+        // {
+        //     type: "rows",
+        //     length: 8,
+        //     content: [
+        //         {
+        //             type: "image-box",
+        //             image: {
+        //                 src: "logos/logo-cfpa_arts_geneve.png",
+        //                 alt: "Logo of CFPA Arts Genève",
+        //                 classes: "logo",
+        //                 href: "https://cfparts.ch",
+        //             },
+        //         },
+        //         {
+        //             type: "image-box",
+        //             image: {
+        //                 src: "logos/logo-edhea.png",
+        //                 alt: "Logo of edhea",
+        //                 classes: "logo",
+        //                 href: "https://edhea.ch",
+        //             },
+        //         },
+        //         {
+        //             type: "image-box",
+        //             image: {
+        //                 src: "logos/logo-fachklasse_grafik_luzern.png",
+        //                 alt: "Logo of Fachklasse Grafik Luzern",
+        //                 classes: "logo",
+        //                 href: "https://fachklassegrafik.ch",
+        //             },
+        //         },
+        //         {
+        //             type: "image-box",
+        //             image: {
+        //                 src: "logos/logo-ff_schule_fuer_kunst_und_design.png",
+        //                 alt: "Logo of F+F Schule für Kunst und Design",
+        //                 classes: "logo",
+        //                 href: "https://ffzh.ch",
+        //             },
+        //         },
+        //     ],
+        // },
         {
             type: "rows",
             title: "Many thanks to our sponsors",
@@ -394,67 +392,67 @@ module.exports = {
                 //         href: "https://wetalents.net",
                 //     },
                 // },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-grafikmagazin.png",
-                        alt: "Logo of Grafikmagazin",
-                        classes: "logo",
-                        href: "https://grafikmagazin.de",
-                    },
-                },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-extraset.png",
-                        alt: "Logo of Extraset",
-                        classes: "logo",
-                        href: "https://extraset.ch",
-                    },
-                },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-mockup_maison.png",
-                        alt: "Logo of Mockup.Maison",
-                        classes: "logo",
-                        href: "https://www.mockup.maison",
-                    },
-                },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-grafikmagazin.png",
+                //         alt: "Logo of Grafikmagazin",
+                //         classes: "logo",
+                //         href: "https://grafikmagazin.de",
+                //     },
+                // },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-extraset.png",
+                //         alt: "Logo of Extraset",
+                //         classes: "logo",
+                //         href: "https://extraset.ch",
+                //     },
+                // },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-mockup_maison.png",
+                //         alt: "Logo of Mockup.Maison",
+                //         classes: "logo",
+                //         href: "https://www.mockup.maison",
+                //     },
+                // },
             ],
         },
 
-        {
-            type: "rows",
-            subtitle: "Regular sponsors",
-            length: 6,
-            content: [
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-dinamo.png",
-                        alt: "Logo of Dinamo",
-                        classes: "logo",
-                        href: "https://abcdinamo.com",
-                    },
-                },
-            ],
-        },
+        // {
+        //     type: "rows",
+        //     subtitle: "Regular sponsors",
+        //     length: 6,
+        //     content: [
+        //         {
+        //             type: "image-box",
+        //             image: {
+        //                 src: "logos/logo-dinamo.png",
+        //                 alt: "Logo of Dinamo",
+        //                 classes: "logo",
+        //                 href: "https://abcdinamo.com",
+        //             },
+        //         },
+        //     ],
+        // },
 
         {
             type: "rows",
             length: 8,
             subtitle: "Light sponsors",
             content: [
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-an_der_reuss.png",
-                        alt: "Logo of Sponsor An Der Reuss",
-                        classes: "logo",
-                        href: "https://www.anderreuss.ch/",
-                    },
-                },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-an_der_reuss.png",
+                //         alt: "Logo of Sponsor An Der Reuss",
+                //         classes: "logo",
+                //         href: "https://www.anderreuss.ch/",
+                //     },
+                // },
                 {
                     type: "image-box",
                     image: {
@@ -473,158 +471,158 @@ module.exports = {
                         href: "https://www.sonderegger.ch/",
                     },
                 },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-ast_beschriftet.png",
-                        alt: "Logo of AST Beschriftet",
-                        classes: "logo",
-                        href: "https://www.ast-beschriftet.ch/",
-                    },
-                },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-luzi_type.png",
-                        alt: "Logo of Luzi type",
-                        classes: "logo",
-                        href: "https://www.luzi-type.ch/",
-                    },
-                },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-swiss_typefaces.png",
-                        alt: "Logo of Swiss Typefaces",
-                        classes: "logo",
-                        href: "https://www.swisstypefaces.com/",
-                    },
-                },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-ast_beschriftet.png",
+                //         alt: "Logo of AST Beschriftet",
+                //         classes: "logo",
+                //         href: "https://www.ast-beschriftet.ch/",
+                //     },
+                // },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-luzi_type.png",
+                //         alt: "Logo of Luzi type",
+                //         classes: "logo",
+                //         href: "https://www.luzi-type.ch/",
+                //     },
+                // },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-swiss_typefaces.png",
+                //         alt: "Logo of Swiss Typefaces",
+                //         classes: "logo",
+                //         href: "https://www.swisstypefaces.com/",
+                //     },
+                // },
 
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-h+m.png",
-                        alt: "Logo of H+M",
-                        classes: "logo",
-                        href: "https://www.hinderer-muehlich.de/eng/start/about-us/about-us/kurz-group.html",
-                    },
-                },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-h+m.png",
+                //         alt: "Logo of H+M",
+                //         classes: "logo",
+                //         href: "https://www.hinderer-muehlich.de/eng/start/about-us/about-us/kurz-group.html",
+                //     },
+                // },
 
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-welti_furrer.png",
-                        alt: "Logo of Welti Furrer",
-                        classes: "logo",
-                        href: "https://www.welti-furrer.ch/",
-                    },
-                },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-welti_furrer.png",
+                //         alt: "Logo of Welti Furrer",
+                //         classes: "logo",
+                //         href: "https://www.welti-furrer.ch/",
+                //     },
+                // },
             ],
         },
 
-        {
-            type: "rows",
-            length: 8,
-            subtitle: "Thin sponsors",
-            content: [
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-snac.png",
-                        alt: "Logo of SNAC Grafik Design und Typografie",
-                        classes: "logo",
-                        href: "https://www.snac.ch/",
-                    },
-                },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-einfach_siebdruck.png",
-                        alt: "Logo of Einfach Siebdruck",
-                        classes: "logo",
-                        href: "https://www.einfachsiebdruck.ch/ueber-uns",
-                    },
-                },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-museum_fuer_gestaltung.png",
-                        alt: "Logo of Museum Für Gestaltung Zürich",
-                        classes: "logo",
-                        href: "https://museum-gestaltung.ch/de/",
-                    },
-                },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-papeterie_zumstein_ag.png",
-                        alt: "Logo of Papeterie Zumstein AG",
-                        classes: "logo",
-                        href: "https://www.zumstein.ch/",
-                    },
-                },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-niggli_verlag.png",
-                        alt: "Logo of Niggli Verlag",
-                        classes: "logo",
-                        href: "https://www.niggli.ch/",
-                    },
-                },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-richard_frick.png",
-                        alt: "Logo of Richard Frick",
-                        classes: "logo",
-                    },
-                },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-leuchtturm1917.png",
-                        alt: "Logo of Leuchturm 1917",
-                        classes: "logo",
-                        href: "https://www.leuchtturm1917.ch/",
-                    },
-                },
-            ],
-        },
+        // {
+        //     type: "rows",
+        //     length: 8,
+        //     subtitle: "Thin sponsors",
+        //     content: [
+        //         {
+        //             type: "image-box",
+        //             image: {
+        //                 src: "logos/logo-snac.png",
+        //                 alt: "Logo of SNAC Grafik Design und Typografie",
+        //                 classes: "logo",
+        //                 href: "https://www.snac.ch/",
+        //             },
+        //         },
+        //         {
+        //             type: "image-box",
+        //             image: {
+        //                 src: "logos/logo-einfach_siebdruck.png",
+        //                 alt: "Logo of Einfach Siebdruck",
+        //                 classes: "logo",
+        //                 href: "https://www.einfachsiebdruck.ch/ueber-uns",
+        //             },
+        //         },
+        //         {
+        //             type: "image-box",
+        //             image: {
+        //                 src: "logos/logo-museum_fuer_gestaltung.png",
+        //                 alt: "Logo of Museum Für Gestaltung Zürich",
+        //                 classes: "logo",
+        //                 href: "https://museum-gestaltung.ch/de/",
+        //             },
+        //         },
+        //         {
+        //             type: "image-box",
+        //             image: {
+        //                 src: "logos/logo-papeterie_zumstein_ag.png",
+        //                 alt: "Logo of Papeterie Zumstein AG",
+        //                 classes: "logo",
+        //                 href: "https://www.zumstein.ch/",
+        //             },
+        //         },
+        //         {
+        //             type: "image-box",
+        //             image: {
+        //                 src: "logos/logo-niggli_verlag.png",
+        //                 alt: "Logo of Niggli Verlag",
+        //                 classes: "logo",
+        //                 href: "https://www.niggli.ch/",
+        //             },
+        //         },
+        //         {
+        //             type: "image-box",
+        //             image: {
+        //                 src: "logos/logo-richard_frick.png",
+        //                 alt: "Logo of Richard Frick",
+        //                 classes: "logo",
+        //             },
+        //         },
+        //         {
+        //             type: "image-box",
+        //             image: {
+        //                 src: "logos/logo-leuchtturm1917.png",
+        //                 alt: "Logo of Leuchturm 1917",
+        //                 classes: "logo",
+        //                 href: "https://www.leuchtturm1917.ch/",
+        //             },
+        //         },
+        //     ],
+        // },
 
         {
             type: "rows",
             title: "Many thanks to the following foundations",
             length: 4,
             content: [
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-arthur_waser_foundation.png",
-                        alt: "Logo of the Arthur Waser Foundation",
-                        classes: "logo",
-                        href: "https://www.arthur-waser-foundation.ch/",
-                    },
-                },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-ggl.png",
-                        alt: "Logo of the Gemeinnützige Gesellschaft der Stadt Luzern",
-                        classes: "logo",
-                        href: "https://ggl-luzern.ch/",
-                    },
-                },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-p_herzog_stiftung.png",
-                        alt: "Logo of the P. Herzog Foundation",
-                        classes: "logo",
-                        href: "http://herzog-stiftung.ch/",
-                    },
-                },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-arthur_waser_foundation.png",
+                //         alt: "Logo of the Arthur Waser Foundation",
+                //         classes: "logo",
+                //         href: "https://www.arthur-waser-foundation.ch/",
+                //     },
+                // },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-ggl.png",
+                //         alt: "Logo of the Gemeinnützige Gesellschaft der Stadt Luzern",
+                //         classes: "logo",
+                //         href: "https://ggl-luzern.ch/",
+                //     },
+                // },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-p_herzog_stiftung.png",
+                //         alt: "Logo of the P. Herzog Foundation",
+                //         classes: "logo",
+                //         href: "http://herzog-stiftung.ch/",
+                //     },
+                // },
                 {
                     type: "image-box",
                     image: {
@@ -642,14 +640,14 @@ module.exports = {
                         classes: "logo",
                     },
                 },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-casimir_eigensatz_stiftung.png",
-                        alt: "Logo of the Casimir Eigensatz Foundation",
-                        classes: "logo",
-                    },
-                },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-casimir_eigensatz_stiftung.png",
+                //         alt: "Logo of the Casimir Eigensatz Foundation",
+                //         classes: "logo",
+                //     },
+                // },
             ],
         },
     ],

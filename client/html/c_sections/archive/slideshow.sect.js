@@ -6,7 +6,13 @@ module.exports = ({ classes = "", title, images = [] }) => {
 
     const html = [
         /*html*/ `
-            <section class="SLIDESHOW box">
+            <section class="SlideShow box">
+                <header class="slideShow title ${useTitle}">
+                    <h2>`,
+        ...(title ? [Underlined(title)] : []),
+        /*html*/ `
+                    </h2>
+                </header>
                 <div class="slideShowImages">`,
         ...images.map((image, i) =>
             Picture(image, {
@@ -20,10 +26,6 @@ module.exports = ({ classes = "", title, images = [] }) => {
     ];
 
     const css = /*css*/ `
-
-        .SLIDESHOW {
-            padding: 0;
-        }
 
         .slideShowImages {
             position: relative;

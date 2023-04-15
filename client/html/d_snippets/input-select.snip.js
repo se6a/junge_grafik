@@ -2,39 +2,40 @@ const DropDownIcon = getSnippet("icon-dropdown");
 const Tooltip = getSnippet("tooltip");
 
 function SelectOptions(options = []) {
-  return options.reduce(
-    (list, _option) => list + /*html*/`
+    return options.reduce(
+        (list, _option) =>
+            list +
+            /*html*/ `
       <li class="option" role="option" data-id="${_option.id}">
         ${lang`<span>${_option}</span>`}
       </li>
       `,
-      ""
+        ""
     );
 }
 
 module.exports = ({
-  id = makeId(),
-  name,
-  label,
-  placeholder = "",
-  required,
-  options = [],
-  tooltip,
-  zindex
-
+    id = makeId(),
+    name,
+    label,
+    placeholder = "",
+    required,
+    options = [],
+    tooltip,
+    zindex,
 }) => {
-  zindex = zindex ? `style="z-index: ${zindex}"` : "";
-  required = required ? "--required" : "";
+    zindex = zindex ? `style="z-index: ${zindex}"` : "";
+    required = required ? "--required" : "";
 
-  const noneOption = required
-                   ? ""
-                   : /*html*/`
+    const noneOption = required
+        ? ""
+        : /*html*/ `
                     <li class="option" role="option" data-id="">
                       none
                     </li>
                   `;
 
-  const html = splitTemp/*html*/`
+    const html = splitTemp/*html*/ `
     <div class="formField Select ${required}" ${zindex}>
       <div class="header">
         <label class="label" for="${id}">
@@ -85,7 +86,7 @@ module.exports = ({
     </div>
   `;
 
-  const css = /*css*/`
+    const css = /*css*/ `
     .formField.Select {
       position: relative;
       z-index: 100;
@@ -127,8 +128,7 @@ module.exports = ({
     }
 
     .Select > .option {
-      padding: 0 var(--size-S);
-      height: var(--fieldSize-M);
+      padding: var(--size-S) var(--size-S);
       display: flex;
       align-items: center;
     }
@@ -162,5 +162,5 @@ module.exports = ({
     }
   `;
 
-  return ["input-select.snip", html, css];
+    return ["input-select.snip", html, css];
 };

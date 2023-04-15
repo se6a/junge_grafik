@@ -85,6 +85,54 @@ module.exports = {
                 },
             ],
         },
+        {
+            type: "rows",
+            title: "Jury 2023",
+            length: 4,
+            content: [
+                {
+                    type: "card-with-image",
+                    title: `<div>Alice Franchetti</div>`,
+                    content: `<a class="textButton" href="https://alicefranchetti.ch" target="_blank">alicefranchetti.ch</a>`,
+                },
+
+                {
+                    type: "card-with-image",
+                    title: `<div>Cédric Oppliger</div>`,
+                    content: `<a class="textButton" href="https://roli-deluxe.ch" target="_blank">roli-deluxe.ch</a>`,
+                },
+                {
+                    type: "card-with-image",
+                    title: `<div>Erich Brechbühl</div>`,
+                    content: `<a class="textButton" href="https://erichbrechbuhl.ch" target="_blank">erichbrechbuhl.ch</a>`,
+                },
+                {
+                    type: "card-with-image",
+                    title: `<div>Giliane Cachin</div>`,
+                    content: `<a class="textButton" href="https://gilianecachin.ch" target="_blank">gilianecachin.ch</a>`,
+                },
+                {
+                    type: "card-with-image",
+                    title: `<div>Leonardo Angelucci</div>`,
+                    content: `<a class="textButton" href="https://leonardo-angelucci.ch" target="_blank">leonardo-angelucci.ch</a>`,
+                },
+                {
+                    type: "card-with-image",
+                    title: `<div>Léo Monet</div>`,
+                    content: ``,
+                },
+                {
+                    type: "card-with-image",
+                    title: `<div>Priscilla Balmer</div>`,
+                    content: `<a class="textButton" href="https://balmerhahlen.ch" target="_blank">balmerhahlen.ch</a>`,
+                },
+                {
+                    type: "card-with-image",
+                    title: `<div>Sarah Owens</div>`,
+                    content: `<a class="textButton" href="https://visualcommunication.zhdk.ch/personen/team/sarah-owens" target="_blank">visualcommunication.zhdk.ch</a>`,
+                },
+            ],
+        },
     ],
     footer: true,
 };

@@ -6,7 +6,7 @@ module.exports = {
         indexed: true,
     },
     header: {
-        image: "theme/winners.svg",
+        image: "theme/excited.svg",
         content: '<div class="HeaderColors"></div>',
     },
     sections: [
@@ -17,7 +17,7 @@ module.exports = {
                     type: "text",
                     size: "l",
                     content:
-                        "Yes, we’re back! The next awards are just around the corner. So get ready to submit your work for the second edition of the Junge Grafik – Jeune Graphisme – Giovane Grafica Awards. We look forward to seeing your projects, to a new jury and another great night to celebrate the new generation of swiss graphic designers.",
+                        "Yes, we’re back! So get ready to submit your work for the second edition of Junge Grafik – Jeune Graphisme – Giovane Grafica. We look forward to seeing your projects, to a new jury and another great night to celebrate the new generation of swiss graphic designers.",
                 },
             ],
         },
@@ -37,7 +37,7 @@ module.exports = {
                     details: [
                         {
                             title: "Submission deadline",
-                            hasArrow: false,
+                            hasArrow: true,
                             items: [
                                 /*html*/ `
                                             <p>19.06.2023</p>
@@ -46,13 +46,13 @@ module.exports = {
                         },
                         {
                             title: "Awards ceremony",
-                            hasArrow: false,
+                            hasArrow: true,
                             items: [
                                 /*html*/ `
                                             <p>18.11.2023</p>
                                         `,
                                 /*html*/ `
-                                            <p>20:15</p>
+                                            <p>20:00</p>
                                         `,
                                 /*html*/ `
                                             <p>Neubad, Lucerne</p>
@@ -61,7 +61,7 @@ module.exports = {
                         },
                         {
                             title: "Afterparty",
-                            hasArrow: false,
+                            hasArrow: true,
                             items: [
                                 /*html*/ `
                                             <p>18.11.2023</p>
@@ -83,12 +83,8 @@ module.exports = {
             content: [
                 {
                     type: "slideshow",
-                    title: "Award Cermenoy 2021",
+                    title: "Impressions: Award Cermenoy 2021",
                     images: [
-                        {
-                            src: "slideshow/2021-award-ceremony-impressions-__SIZE__-lnd-01.jpg",
-                            alt: "",
-                        },
                         {
                             src: "slideshow/2021-award-ceremony-impressions-__SIZE__-lnd-02.jpg",
                             alt: "",
@@ -144,42 +140,42 @@ module.exports = {
                         href: "https://engelbergerdruck.ch",
                     },
                 },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-wetalents.png",
-                        alt: "Logo of We-Talents",
-                        classes: "logo",
-                        href: "https://wetalents.net/",
-                    },
-                },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-grafikmagazin.png",
-                        alt: "Logo of Grafikmagazin",
-                        classes: "logo",
-                        href: "https://grafikmagazin.de/",
-                    },
-                },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-extraset.png",
-                        alt: "Logo of Extraset",
-                        classes: "logo",
-                        href: "https://extraset.ch/",
-                    },
-                },
-                {
-                    type: "image-box",
-                    image: {
-                        src: "logos/logo-mockup_maison.png",
-                        alt: "Logo of Mockup.Maison",
-                        classes: "logo",
-                        href: "https://www.mockup.maison",
-                    },
-                },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-wetalents.png",
+                //         alt: "Logo of We-Talents",
+                //         classes: "logo",
+                //         href: "https://wetalents.net/",
+                //     },
+                // },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-grafikmagazin.png",
+                //         alt: "Logo of Grafikmagazin",
+                //         classes: "logo",
+                //         href: "https://grafikmagazin.de/",
+                //     },
+                // },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-extraset.png",
+                //         alt: "Logo of Extraset",
+                //         classes: "logo",
+                //         href: "https://extraset.ch/",
+                //     },
+                // },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-mockup_maison.png",
+                //         alt: "Logo of Mockup.Maison",
+                //         classes: "logo",
+                //         href: "https://www.mockup.maison",
+                //     },
+                // },
             ],
         },
     ],

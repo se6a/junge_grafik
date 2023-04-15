@@ -23,7 +23,7 @@ module.exports = (data) => {
               {
                   type: "card-simple",
                   content: `
-                <span>General matters / questions about project registration</span>
+                <span>→ General matters / questions about project registration</span>
                 <span>
                   <a class="textButton contactLink" data-contact="${easyEncode(
                       "info@jungegrafik.ch"
@@ -36,7 +36,7 @@ module.exports = (data) => {
               {
                   type: "card-simple",
                   content: `
-                <span>Sponsorship</span>
+                <span>→ Sponsorship</span>
                 <span>
                   <a class="textButton contactLink" data-contact="${easyEncode(
                       "tobias.klauser@jungegrafik.ch"
@@ -49,7 +49,7 @@ module.exports = (data) => {
               {
                   type: "card-simple",
                   content: `
-                <span>Foundations</span>
+                <span>→ Foundations</span>
                 <span>
                   <a class="textButton contactLink" data-contact="${easyEncode(
                       "tobias.klauser@jungegrafik.ch"
@@ -62,7 +62,7 @@ module.exports = (data) => {
               {
                   type: "card-simple",
                   content: `
-                <span>Patrons</span>
+                <span>→ Patrons</span>
                 <span>
                   <a class="textButton contactLink" data-contact="${easyEncode(
                       "tobias.klauser@jungegrafik.ch"
