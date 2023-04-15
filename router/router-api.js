@@ -113,10 +113,10 @@ function rebuildForm(req, res, next) {
     //     }
     // }
 
-    // newForm.append("fields[einreichedatum][start][]", "now");
     // console.log(test);
 
-    newForm.append("fields[einreichedatum][start][]", "now");
+    // newForm.append("fields[einreichedatum][start][]", "now");
+    newForm.append("einreichedatum", new Date().toISOString());
     newForm.append("geschlecht", "440");
     newForm.append("geburtsjahr", "1990");
     newForm.append("vorname", "TEST");
