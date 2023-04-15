@@ -81,9 +81,9 @@ module.exports = async (data) => {
       </head>
 
       <body class="View${viewName}" data-view="${viewName}" data-lang="${language}">
-        ${Header()}
-        ${Menu(viewName)}
-        ${await View(data)}
+      ${/*Header()*/ ""}
+      ${Menu(viewName)}
+      ${await View(data)}
         ${Footer()}
         <span class="BottomLine line"></span>
 
