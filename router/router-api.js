@@ -92,21 +92,58 @@ function rebuildForm(req, res, next) {
     const formdata = res.locals.originalForm;
     const newForm = new FormData();
 
-    for (const _key in formdata) {
-        const _content = formdata[_key];
+    const test = {};
 
-        if (_content !== null && typeof _content === "object") {
-            for (const __key in _content) {
-                const __content = _content[__key];
-                const _newkey = `${_key}[${__key}]`;
-                newForm.append(_newkey, `${__content}`);
-            }
-        } else {
-            newForm.append(_key, _content);
-        }
-    }
+    // for (const _key in formdata) {
+    //     const _content = formdata[_key];
+
+    //     if (_content !== null && typeof _content === "object") {
+    //         for (const __key in _content) {
+    //             if (__key.includes("entstehungsjahr")) continue;
+    //             const __content = _content[__key];
+    //             const _newkey = `${_key}[${__key}]`;
+    //             newForm.append(_newkey, `${__content}`);
+    //             test[_newkey] = __content;
+    //         }
+    //     } else {
+    //         if (_key.includes("entstehungsjahr")) continue;
+
+    //         newForm.append(_key, _content);
+    //         test[_key] = _content;
+    //     }
+    // }
+
+    // newForm.append("fields[einreichedatum][start][]", "now");
+    // console.log(test);
 
     newForm.append("fields[einreichedatum][start][]", "now");
+    newForm.append("geschlecht", "440");
+    newForm.append("geburtsjahr", "1990");
+    newForm.append("vorname", "TEST");
+    newForm.append("familienname", "TEST");
+    newForm.append("strasse-nummer", "TEST");
+    newForm.append("postleitzahl-ort", "TEST");
+    newForm.append("e-mail", "wyss.sebastian@gmail.com");
+    newForm.append("mobile", "0774641842");
+    newForm.append("link-portfolio", "");
+    newForm.append("link-instagram-profil", "");
+    newForm.append("projekttitel", "sdgfsdfsadf");
+    newForm.append("entstehungsjahr", "2023");
+    newForm.append("tag-1", "Editorial design");
+    newForm.append("tag-2", "");
+    newForm.append("tag-3", "");
+    newForm.append("entstehungsort", "3950");
+    newForm.append("projektbeschrieb", "sadfsadfsadfsadf");
+    newForm.append("ausbildungsniveau", "685");
+    newForm.append("ausbildungsjahr", "3");
+    newForm.append("name-ausbildungsinstitution", "4093");
+    newForm.append("name-lehrbetrieb", "");
+    newForm.append("kanton-des-ausbildungsortes", "416");
+    newForm.append("dozenten", "sdafsadfsadfsa");
+    newForm.append("weitere-gestalter", "");
+    newForm.append("link-videomaterial", "");
+    newForm.append("link-projektwebsite-prototyp", "");
+    newForm.append("sprache", "699");
 
     res.locals.newForm = newForm;
 
@@ -114,10 +151,13 @@ function rebuildForm(req, res, next) {
 }
 
 async function sendEntryForm(req, res, next) {
-    await fetch(`${apiUrl}/einreichungen/?auth-token=${token}&format=json`, {
-        method: "POST",
-        body: res.locals.newForm,
-    })
+    await fetch(
+        `${apiUrl}/entries/einreichungen/?auth-token=${token}&format=json`,
+        {
+            method: "POST",
+            body: res.locals.newForm,
+        }
+    )
         .then(async (rawRes) => {
             const body = await rawRes.json();
 
@@ -131,7 +171,6 @@ async function sendEntryForm(req, res, next) {
 
         .catch((error) => failed(res, req, "sendEntryForm", error));
 }
-
 async function getProjectId(req, res, next) {
     await fetch(
         `${api}/entries/einreichungen/${res.locals.entry.id}/?fields=projekt-id&auth-token=${token}&format=json`,

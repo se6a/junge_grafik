@@ -55,6 +55,16 @@ const ProjectForm = function () {
             this.appendAction(formdata);
             this.formatLinks(formdata);
 
+            const formDataObj = Array.from(formdata.entries()).reduce(
+                (obj, [key, value]) => {
+                    obj[key] = value;
+                    return obj;
+                },
+                {}
+            );
+
+            console.log(formDataObj);
+
             postRequest("newproject", formdata)
                 .then((res) => {
                     if (res.status === 200) {
