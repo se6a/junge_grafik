@@ -110,40 +110,40 @@ function closeDropdown($dropdown) {
 //     });
 //   }
 
-async function subscribeNewsletter($form) {
-    const email = $form.querySelector(".input.Email").value;
-    const formdata = new FormData();
+// async function subscribeNewsletter($form) {
+//     const email = $form.querySelector(".input.Email").value;
+//     const formdata = new FormData();
 
-    formdata.set("EMAIL", email);
-    formdata.set("FNAME", "-");
-    formdata.set("LNAME", "-");
+//     formdata.set("EMAIL", email);
+//     formdata.set("FNAME", "-");
+//     formdata.set("LNAME", "-");
 
-    fetch(
-        new Request(
-            "https://jungegrafik.us12.list-manage.com/subscribe/post?u=1b116b67c6aa316931ff78114&amp;id=14e5482c54&amp;f_id=00b343e0f0",
-            {
-                method: "POST",
-                body: formdata,
-            }
-        )
-    )
-        .then(async (res) => {
-            console.log(res);
-            if (res.ok === false) {
-                throw Error(res);
-            } else {
-                return res;
-            }
-        })
-        .then(() => {
-            $form.classList.add("--subscribed");
-        })
+//     fetch(
+//         new Request(
+//             "https://jungegrafik.us12.list-manage.com/subscribe/post?u=1b116b67c6aa316931ff78114&amp;id=14e5482c54&amp;f_id=00b343e0f0",
+//             {
+//                 method: "POST",
+//                 body: formdata,
+//             }
+//         )
+//     )
+//         .then(async (res) => {
+//             console.log(res);
+//             if (res.ok === false) {
+//                 throw Error(res);
+//             } else {
+//                 return res;
+//             }
+//         })
+//         .then(() => {
+//             $form.classList.add("--subscribed");
+//         })
 
-        .catch((err) => {
-            console.log(err);
-            $form.classList.add("--failed");
-        });
-}
+//         .catch((err) => {
+//             console.log(err);
+//             $form.classList.add("--failed");
+//         });
+// }
 
 function toggleMenu($menuButton) {
     $menuButton.classList.toggle("--open");
