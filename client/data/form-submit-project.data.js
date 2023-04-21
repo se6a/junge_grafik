@@ -88,14 +88,14 @@ module.exports = [
             type: "select-1",
             options: [
                 {
-                    id: "21/22",
+                    id: "2021/22",
                     de: "Ausbildungsjahr 2021/22",
                     fr: "Année de formation 2021/22",
                     it: "Anno di formazione 2021/22",
                 },
 
                 {
-                    id: "22/23",
+                    id: "2022/23",
                     de: "Ausbildungsjahr 2022/23",
                     fr: "Année de formation 2022/23",
                     it: "Anno di formazione 2022/23",

@@ -48,6 +48,7 @@ module.exports = (data) => {
       <section class="formSegment Submit">
         <fieldset class="formFieldGroup checkboxGroup twoColumns">
           ${InputCheckbox({
+              name: "condition-1",
               label: {
                   fr: "J’ai rempli tous les champs avec exactitude et j’ai vérifié mes renseignements.",
                   de: "Ich habe alle Felder wahrheitsgetreu ausgefüllt und meine Angaben überprüft.",
@@ -57,6 +58,7 @@ module.exports = (data) => {
           })}
 
           ${InputCheckbox({
+              name: "condition-2",
               label: {
                   fr: `
                 Je déclare avoir lu, compris et accepté les
@@ -88,6 +90,7 @@ module.exports = (data) => {
           })}
 
           ${InputCheckbox({
+              name: "condition-3",
               label: {
                   fr: "Je suis conscient que le texte de mon projet ainsi que les informations qui y sont liées ont une importance pour l'évaluation et j'ai donc veillé à les rédiger de manière aussi impeccable et de haute qualité que possible.",
                   de: "Ich bin mir bewusst, dass der Text meines Projekts sowie die damit verbundenen Angaben von Bedeutung für die Bewertung sind und habe daher Wert darauf gelegt, diese möglichst fehlerfrei und in guter Qualität zu verfassen.",
@@ -97,6 +100,7 @@ module.exports = (data) => {
           })}
 
           ${InputCheckbox({
+              name: "condition-4",
               label: {
                   fr: "Si mon projet est récompensé, je suis disponible pour une entrevue de 20 minutes par appel vidéo. Les entrevues auront lieu en octobre 2023. Je confirme que je peux prendre un rendez-vous pendant cette période.",
                   de: "Falls mein Projekt ausgezeichnet wird, stehe ich für ein 20-minütiges Interview per Videoanruf zur Verfügung. Die Interviews finden im Oktober 2023 statt. Ich bestätige, dass ich in diesem Zeitraum einen Termin vereinbaren kann.",
@@ -170,11 +174,14 @@ module.exports = (data) => {
                 },
             })}
           </div>
+
         </fieldset>
       </section>
 
     </form>
 
+    
+    
     <section>
     </section>
   `;

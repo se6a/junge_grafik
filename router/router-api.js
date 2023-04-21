@@ -4,8 +4,10 @@ const fetch = require("node-fetch");
 const FormData = require("form-data");
 const log4js = require("log4js");
 
+const hostUrl = "https://2023.jungegrafik.ch";
+const apiUrl = `${hostUrl}/symphony/api`;
 const token = "440e38e8";
-const apiUrl = "https://2023.jungegrafik.ch/symphony/api";
+
 log4js.configure({
     appenders: {
         submitErrors: {
@@ -22,40 +24,6 @@ log4js.configure({
 });
 
 const logger = log4js.getLogger("submitErrors");
-
-/* Newsletter Subscriber
-´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
-Router.post(
-    "/email",
-    FormParser.single("e-mail"),
-    prepareSubscriber,
-    rebuildForm
-    // sendNewsletterForm
-);
-
-async function prepareSubscriber(req, res, next) {
-    res.locals.originalForm = req.body;
-
-    next();
-}
-
-// async function sendNewsletterForm(req, res, next) {
-//     await fetch(`${apiUrl}/newsletter/opt-in/`, {
-//         method: "POST",
-//         body: res.locals.newForm,
-//     })
-//         .then(async (rawRes) => {
-//             const symphonyRes = await rawRes.json();
-
-//             if (symphonyRes.ergebnis === "success") res.sendStatus(200);
-//             else throw Error("Something went wrong.");
-//         })
-
-//         .catch((error) => {
-//             console.log(error);
-//             res.sendStatus(400);
-//         });
-// }
 
 /* Project Entry
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
@@ -91,62 +59,42 @@ function rebuildForm(req, res, next) {
     const formdata = res.locals.originalForm;
     const newForm = new FormData();
 
-    newForm.append("fields[einreichedatum][start][]", "now");
+    const enstehungsOrtIds = {
+        schule: 3949,
+        betrieb: 3950,
+    };
+
+    let entstehungsort = enstehungsOrtIds.schule;
 
     for (const _key in formdata) {
         const _content = formdata[_key];
-        if (_key.includes("entstehungsjahr")) continue;
-
         if (_content !== null && typeof _content === "object") {
             for (const __key in _content) {
-                if (__key.includes("entstehungsjahr")) continue;
-
                 const __content = _content[__key];
                 const _newkey = `${_key}[${__key}]`;
+
+                if (__key === "name-lehrbetrieb" && __content) {
+                    const chars = __content.match(/[a-z]/gi);
+                    if (chars.length > 3)
+                        entstehungsort = entstehungsOrtId.betrieb;
+                }
+
                 newForm.append(_newkey, `${__content}`);
             }
-        } else {
-            newForm.append(_key, _content);
         }
     }
+
+    newForm.append("fields[entstehungsort]", entstehungsort);
+    newForm.append("fields[einreichedatum][start][]", "now");
 
     res.locals.newForm = newForm;
 
     next();
 }
 
-function getFormDataFields(formData) {
-    const fields = {};
-
-    // Iterate through the internal "_streams" array of the FormData instance
-    for (let i = 0; i < formData._streams.length; i += 2) {
-        const keyValuePair = formData._streams[i];
-
-        // Check if the current element is a string (key-value pairs are stored as strings)
-        if (typeof keyValuePair === "string") {
-            const keyMatch = keyValuePair.match(/name="(.+?)"/);
-
-            // If a key is found in the string, extract it and get the corresponding value
-            if (keyMatch) {
-                const key = keyMatch[1];
-                const value = formData._streams[i + 1];
-
-                // If the value is a function, call it to get the string representation
-                if (typeof value === "function") {
-                    fields[key] = value.toString();
-                } else {
-                    fields[key] = value;
-                }
-            }
-        }
-    }
-
-    return fields;
-}
-
 async function sendEntryForm(req, res, next) {
     const newForm = res.locals.newForm;
-    const fields = getFormDataFields(newForm);
+    debugLog(newForm);
 
     await fetch(
         `${apiUrl}/entries/einreichungen/?auth-token=${token}&format=json`,
@@ -162,8 +110,7 @@ async function sendEntryForm(req, res, next) {
                 res.locals.entry.id = body.response._id;
                 next();
             } else {
-                const fieldsAsStr = JSON.stringify(fields, null, 4);
-                throw Error(body.response.message.value + "\n\n" + fieldsAsStr);
+                throw Error(body.response.message.value);
             }
         })
 
@@ -249,19 +196,29 @@ async function sendFiles(req, res, next) {
 async function triggerConfirmationEmail(req, res, next) {
     const formdata = new FormData();
     formdata.append("id", res.locals.entry.id);
-    formdata.append("action[einreichung-bestaetigung]", "Abschicken");
+    formdata.append("action[einreichung-bestaetigung]", "submit");
 
-    await fetch(`${apiUrl}/mailings/einreichung-bestaetigung/`, {
+    await fetch(`${hostUrl}/mailings/einreichung-bestaetigung/`, {
         method: "POST",
         body: formdata,
     })
         .then(async (rawRes) => {
-            const body = await rawRes.json();
+            try {
+                const body = rawRes?.json
+                    ? await rawRes.json()
+                    : rawRes?.text
+                    ? await rawRes.text()
+                    : rawRes;
 
-            if (body.mailversand && body.mailversand === "passed") {
+                if (rawRes.status > 400 || body.mailversand !== "passed") {
+                    throw body;
+                }
+
                 fullfilled(res);
-            } else {
-                throw Error(body);
+            } catch (err) {
+                throw Error(
+                    JSON.stringify({ error: err, res: rawRes }, null, 4)
+                );
             }
         })
 
@@ -274,7 +231,7 @@ function fullfilled(res) {
 }
 
 function failed(res, req, position, error) {
-    console.log(position, error);
+    console.error(position, error);
     logger.error(req.body, req.files, error, "\n\n\n\n");
     res.status(500).send(position);
 }
@@ -289,6 +246,20 @@ function renameFile(file, i, entry) {
         `${i + 1}.${ext}`;
 
     return newName;
+}
+
+function debugLog(form) {
+    const fields = {};
+    const streams = [...form._streams];
+
+    for (let i = 0; i < streams.length; i += 3) {
+        const entry = streams[i];
+        const key = entry.match(/name="([^"]*)/)?.[1] || null;
+        const value = streams?.[i + 1];
+        if (value === null || key === null) continue;
+        fields[key] = value;
+    }
+    console.log({ fields });
 }
 
 module.exports = Router;

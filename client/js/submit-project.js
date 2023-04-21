@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const path = this.location.pathname;
 
-    if (path.startsWith("/submit")) {
+    if (path.startsWith("/submit") || path.startsWith("/__submit")) {
         preselectLanguage("ProjectRegistrationLang");
         window.projectForm = new ProjectForm();
     }
@@ -55,20 +55,10 @@ const ProjectForm = function () {
             this.appendAction(formdata);
             this.formatLinks(formdata);
 
-            const formDataObj = Array.from(formdata.entries()).reduce(
-                (obj, [key, value]) => {
-                    obj[key] = value;
-                    return obj;
-                },
-                {}
-            );
-
-            console.log(formDataObj);
-
             postRequest("newproject", formdata)
                 .then((res) => {
                     if (res.status === 200) {
-                        this.reset();
+                        // this.reset();
                         this.feedbackSuccess();
                     } else {
                         this.feedbackError();
@@ -154,6 +144,12 @@ const ProjectForm = function () {
     };
 
     instance.$form.addEventListener("submit", (e) => instance.submit(e));
+
+    // Prevent hitting enter to trigger a submit,
+    // as this is mostly not the intention
+    instance.$form.addEventListener("keydown", (e) => {
+        if (e.key?.toLowerCase() === "enter") e.preventDefault(e);
+    });
 
     return instance;
 };

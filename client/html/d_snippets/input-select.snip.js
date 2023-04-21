@@ -36,7 +36,7 @@ module.exports = ({
                   `;
 
     const html = splitTemp/*html*/ `
-    <div class="formField Select ${required}" ${zindex}>
+    <div class="formField Select ${required}" ${zindex} onDOMContentLoaded="() => console.log('hello')">
       <div class="header">
         <label class="label" for="${id}">
           ${lang`<span>${label}</span>`}
@@ -112,10 +112,18 @@ module.exports = ({
     }
 
     .Select.input {
-      align-items: center;
-      cursor: pointer;
-      background-color: var(--white);
-      border-color: var(--colorKey);
+        align-items: center;
+        cursor: pointer;
+        background-color: var(--white);
+        border-color: var(--colorKey);
+        padding-right: calc(var(--iconSize-M) + var(--size-S));
+        height: 100%;
+    }
+    
+    .Select.input > span {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 
     .Select.options {
