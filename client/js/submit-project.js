@@ -58,7 +58,7 @@ const ProjectForm = function () {
             postRequest("newproject", formdata)
                 .then((res) => {
                     if (res.status === 200) {
-                        // this.reset();
+                        this.reset();
                         this.feedbackSuccess();
                     } else {
                         this.feedbackError();
