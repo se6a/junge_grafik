@@ -3,6 +3,14 @@ const ButtonUnderlined = getSnippet("button-underlined");
 module.exports = (crntView) => {
     const MenuItems = [
         {
+            label: { all: "Submit!" },
+            classes: "Submit",
+            type: "link",
+            href: "/submit",
+            size: "XL",
+        },
+
+        {
             label: { all: "Award" },
             classes: "Award",
             type: "link",
@@ -33,14 +41,6 @@ module.exports = (crntView) => {
             href: "/contact",
             size: "XL",
         },
-
-        // {
-        //   label: { all: "Shop" },
-        //   classes: "Shop",
-        //   type: "link",
-        //   href: "/shop",
-        //   size: "XL",
-        // },
 
         // {
         //   label: { all: "Follow us!" },
@@ -85,6 +85,10 @@ module.exports = (crntView) => {
       padding-left: 0;
       padding-right: 0;
     }
+
+    .MENU .UnderlinedButton.Submit {
+        background-color: var(--yellow);
+      }
 
     .MENU .button.UnderlinedButton {
       display: block;
