@@ -85,10 +85,16 @@ module.exports = (crntView) => {
       padding-left: 0;
       padding-right: 0;
     }
+    
+    .--size-md .MENU .UnderlinedButton.Submit,
+    .--size-lg .MENU .UnderlinedButton.Submit {
+        display: none;
+    }
 
-    .MENU .UnderlinedButton.Submit {
+    .--size-sm .MENU .UnderlinedButton.Submit {
         background-color: var(--yellow);
-      }
+        display: block;
+    }
 
     .MENU .button.UnderlinedButton {
       display: block;
