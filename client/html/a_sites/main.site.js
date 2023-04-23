@@ -50,6 +50,7 @@ module.exports = async (data) => {
         <meta char="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="${data.meta.description}">
+        <link rel="icon" href="/media/theme/favicon.svg">
 
         <!-- Preview -->
         <meta property="og:url" content="https://jungegrafik.ch">
