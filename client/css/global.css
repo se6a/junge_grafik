@@ -339,6 +339,7 @@ ul > .dash::before {
 
 ul > .arrow::before {
     content: "\2192";
+    padding-right: 0.5em;
 }
 
 ul > .dash::before {
