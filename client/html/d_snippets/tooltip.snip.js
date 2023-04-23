@@ -1,9 +1,9 @@
 const IconSmall = getSnippet("icon-circle-s");
 
 module.exports = (tooltip) => {
-  if (! tooltip) return "";
+    if (!tooltip) return "";
 
-  const html = splitTemp/*html*/`
+    const html = splitTemp/*html*/ `
     <div
       class="Tooltip"
       tabindex="0"
@@ -11,8 +11,8 @@ module.exports = (tooltip) => {
       onblur="closeTooltip(this)"
     >
       ${IconSmall({
-        symbol: "?",
-        classes: "Tooltip"
+          symbol: "?",
+          classes: "Tooltip",
       })}
       <div class="content">
         ${lang`<span>${tooltip}</span>`}
@@ -20,7 +20,7 @@ module.exports = (tooltip) => {
     </div>
   `;
 
-  const css = /*css*/`
+    const css = /*css*/ `
     .Tooltip {
       margin-left: var(--size-S);
       cursor: pointer;
@@ -64,7 +64,17 @@ module.exports = (tooltip) => {
       border-color: var(--colorKey);
       color: var(--white);
     }
+
+    .--size-md .Tooltip,
+    .--size-sm .Tooltip {
+        margin-left: auto;
+    }
+
+    .--size-md .Tooltip .icon,
+    .--size-sm .Tooltip .icon {
+        margin-left: var(--size-S);
+    }
   `;
 
-  return ["tooltip.snip", html, css];
+    return ["tooltip.snip", html, css];
 };

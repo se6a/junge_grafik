@@ -495,9 +495,19 @@ ul > .dash::before {
     display: flex;
 }
 
+.--size-md .formField .label,
+.--size-sm .formField .label {
+    width: 100%;
+}
+
 .formField.--required .label::after {
     content: "*";
     padding-left: var(--size-XS);
+}
+
+.--size-md .formField.--required .label::after,
+.--size-sm .formField.--required .label::after {
+    margin-left: auto;
 }
 
 .hiddenInput {

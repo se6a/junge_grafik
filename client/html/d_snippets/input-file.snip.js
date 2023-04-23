@@ -2,21 +2,19 @@ const IconPlus = getSnippet("icon-plus");
 const Tooltip = getSnippet("tooltip");
 
 module.exports = ({
-  id = makeId(),
-  label,
-  required,
-  tooltip,
-  maxfiles = 1,
-  minfiles = 1,
-  maxuploadsize = 50,
-  accept
+    id = makeId(),
+    label,
+    required,
+    tooltip,
+    maxfiles = 1,
+    minfiles = 1,
+    maxuploadsize = 50,
+    accept,
 }) => {
-  required = required ? "--required" : "";
-  accept = accept
-         ? `accept="${accept}"`
-         : "";
+    required = required ? "--required" : "";
+    accept = accept ? `accept="${accept}"` : "";
 
-  const html = splitTemp/*html*/`
+    const html = splitTemp/*html*/ `
     <div
       class="formField Upload ${required}"
       onclick="instanciateFileInput(this)"
@@ -55,9 +53,9 @@ module.exports = ({
           ${lang`
             <span>
               ${{
-                de: "Du hast mehr als sechs Dateien für den Upload ausgewählt.</br>Bitte überprüfe, welche Dateien hochgeladen werden.",
-                fr: "Vous avez choisi plus de six éléments pour le transfert.</br>Veuillez sélectionner lesquels doivent être téléchargés.",
-                it: "Hai selezionato un numero di file maggiore di quanti consentiti.</br>Il numero massimo di file è sei.</br>Verifica quali dati sono stati caricati."
+                  de: "Du hast mehr als sechs Dateien für den Upload ausgewählt.</br>Bitte überprüfe, welche Dateien hochgeladen werden.",
+                  fr: "Vous avez choisi plus de six éléments pour le transfert.</br>Veuillez sélectionner lesquels doivent être téléchargés.",
+                  it: "Hai selezionato un numero di file maggiore di quanti consentiti.</br>Il numero massimo di file è sei.</br>Verifica quali dati sono stati caricati.",
               }}
             </span>
           `}
@@ -67,9 +65,9 @@ module.exports = ({
           ${lang`
             <span>
               ${{
-                de: "Du hast die maximale Datenmenge überschritten.</br>Dabei wurde mindestens ein Bild ignoriert.</br>Bitte überprüfe, welche Dateien hochgeladen werden.",
-                fr: "Vous avez dépassé la taille maximale de 30 mb pour le transfert des données.</br>Au moins une image n’a pas été téléchargée.</br>Veuillez contrôler quels éléments doivent être téléchargés.",
-                it: "Hai superato la quota massima consentita di 30 mb.</br>Uno o più file sono stati ignorati.</br>Verifica quali dati sono stati caricati."
+                  de: "Du hast die maximale Datenmenge überschritten.</br>Dabei wurde mindestens ein Bild ignoriert.</br>Bitte überprüfe, welche Dateien hochgeladen werden.",
+                  fr: "Vous avez dépassé la taille maximale de 30 mb pour le transfert des données.</br>Au moins une image n’a pas été téléchargée.</br>Veuillez contrôler quels éléments doivent être téléchargés.",
+                  it: "Hai superato la quota massima consentita di 30 mb.</br>Uno o più file sono stati ignorati.</br>Verifica quali dati sono stati caricati.",
               }}
             </span>
           `}
@@ -84,13 +82,14 @@ module.exports = ({
     </div>
   `;
 
-  const css = /*css*/`
+    const css = /*css*/ `
     .formField.Upload {
       grid-column: 1/3;
     }
 
     .formField.Upload .selected {
       margin-left: auto;
+      padding-left: var(--size-S);
       display: flex;
     }
 
@@ -181,5 +180,5 @@ module.exports = ({
     }
   `;
 
-  return ["input-upload.snip", html, css];
+    return ["input-upload.snip", html, css];
 };
