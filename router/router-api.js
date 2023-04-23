@@ -59,12 +59,12 @@ function rebuildForm(req, res, next) {
     const formdata = res.locals.originalForm;
     const newForm = new FormData();
 
-    const enstehungsOrtIds = {
+    const entstehungsOrtIds = {
         schule: 3949,
         betrieb: 3950,
     };
 
-    let entstehungsort = enstehungsOrtIds.schule;
+    let entstehungsOrt = entstehungsOrtIds.schule;
 
     for (const _key in formdata) {
         const _content = formdata[_key];
@@ -76,7 +76,7 @@ function rebuildForm(req, res, next) {
                 if (__key === "name-lehrbetrieb" && __content) {
                     const chars = __content.match(/[a-z]/gi);
                     if (chars.length > 3)
-                        entstehungsort = entstehungsOrtId.betrieb;
+                        entstehungsOrt = entstehungsOrtIds.betrieb;
                 }
 
                 newForm.append(_newkey, `${__content}`);
@@ -84,7 +84,7 @@ function rebuildForm(req, res, next) {
         }
     }
 
-    newForm.append("fields[entstehungsort]", entstehungsort);
+    newForm.append("fields[entstehungsort]", entstehungsOrt);
     newForm.append("fields[einreichedatum][start][]", "now");
 
     res.locals.newForm = newForm;
