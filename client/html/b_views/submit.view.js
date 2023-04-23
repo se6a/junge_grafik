@@ -85,7 +85,7 @@ module.exports = (data) => {
     }
 
     .mainSection.ProjectRegistration {
-      padding-top: calc(var(--headerHeight) - 3px);
+      padding-top: calc(var(--headerHeight) - 2px);
     }
 
     .VIEW.Submit[lang=""] .mainSection.SelectLanguage,
