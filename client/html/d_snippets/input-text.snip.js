@@ -1,17 +1,17 @@
 const Tooltip = getSnippet("tooltip");
 
 module.exports = ({
-  id = makeId(),
-  name,
-  label,
-  required,
-  tooltip,
-  minlength = 1,
-  maxlength = 500
+    id = makeId(),
+    name,
+    label,
+    required,
+    tooltip,
+    minlength = 1,
+    maxlength = 500,
 }) => {
-  required = required ? "--required" : "";
+    required = required ? "--required" : "";
 
-  const html = splitTemp/*html*/`
+    const html = splitTemp/*html*/ `
     <div class="formField Text ${required}" onclick="instanciateTextInput(this)">
 
       <header class="header">
@@ -41,7 +41,7 @@ module.exports = ({
     </div>
   `;
 
-  const css = /*css*/`
+    const css = /*css*/ `
     .formField.Text {
       grid-column: 1/3;
     }
@@ -49,6 +49,7 @@ module.exports = ({
     .formField.Text .selected {
       margin-left: auto;
       display: flex;
+      padding-left: var(--size-S);
     }
 
     .formField.Text .textarea {
@@ -64,5 +65,5 @@ module.exports = ({
     }
   `;
 
-  return ["input-text.snip", html, css];
+    return ["input-text.snip", html, css];
 };
