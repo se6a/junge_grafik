@@ -28,8 +28,8 @@ module.exports = () => {
       ${Button({
           classes: "BigButton",
           type: "link",
-          label: "Winners",
-          href: `${ENV.host}/winners`,
+          label: "Submit!",
+          href: `${ENV.host}/submit`,
       })}
 
       ${$navigation()}
