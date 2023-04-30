@@ -51,7 +51,7 @@ module.exports = {
                         title: "Step 4",
                         content: `
 <ul>
-    <li class="dash">On November 18th, the award ceremony for Young Graphic Design will take place, followed by a party at Neubad Luzern. Reserve the date now so you don't miss the event.</li>
+    <li class="dash">On November 18th 2023, the awards ceremony Junge Grafik – Jeune Graphisme – Giovane Grafica will take place, followed by a party at Neubad Luzern. Reserve the date now so you don’t miss the event.</li>
 </ul>
                             `,
                     },

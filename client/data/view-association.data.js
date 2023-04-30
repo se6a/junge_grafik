@@ -47,10 +47,6 @@ module.exports = {
                                 "Swiss vocational colleges (graphic design), higher technical colleges and universities of applied sciences",
                             ],
                         },
-                        {
-                            title: "Event partner",
-                            items: ["Weltformat Graphic Design Festival"],
-                        },
                     ],
                 },
             ],
