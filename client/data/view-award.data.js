@@ -118,7 +118,7 @@ module.exports = {
                 },
                 {
                     type: "card-with-image",
-                    title: `<div>Léo Monet</div>`,
+                    title: `<div>Léo Monnet</div>`,
                     content: `<a class="textButton" href="https://www.instagram.com/monnet_leo/" target="_blank">@monnet_leo</a>`,
                 },
                 {
