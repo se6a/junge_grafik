@@ -3,7 +3,7 @@ const EmailInput = getSnippet("input-email");
 const IconNext = getSnippet("icon-next");
 
 module.exports = () => {
-  const html = /*html*/ `
+    const html = /*html*/ `
     <form
       class="NewsletterForm"
       id="Newsletter"
@@ -12,23 +12,23 @@ module.exports = () => {
 
       <div class="formField Checkbox">
         ${Checkbox({
-          name: "terms",
-          label: /*html*/ `
+            name: "terms",
+            label: /*html*/ `
             <label for="footer-newsletter-agree">
               I accept <a class="link">all the stuff</a>.
             </label>`,
-          required: true,
+            required: true,
         })}
       </div>
 
       <fieldset class="group">
         ${EmailInput({
-          label: { de: "Email" },
-          required: true,
+            label: { de: "Email" },
+            required: true,
         })}
 
         <div class="formField Submit">
-          <button id="footer-newsletter-submit" class="button" onclick="console.log('clicked')">
+          <button id="footer-newsletter-submit" class="button">
             ${IconNext()}
           </button>
         </div>
@@ -37,7 +37,7 @@ module.exports = () => {
     </form>
   `;
 
-  const css = /*css*/ `
+    const css = /*css*/ `
     .NewsletterForm .formField.Checkbox,
     .NewsletterForm .group {
       margin-bottom: var(--spacing-S);
@@ -69,5 +69,5 @@ module.exports = () => {
     }
   `;
 
-  return ["form-newsletter.sect", html, css];
+    return ["form-newsletter.sect", html, css];
 };

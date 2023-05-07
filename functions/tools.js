@@ -310,7 +310,7 @@ g_.getBlob_ = async function (src) {
         const response = await fetch(src);
         theBlob = await response.blob();
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 
     return theBlob;
@@ -327,7 +327,7 @@ g_.getImage_ = async function (src) {
         const blob = await getBlob_(src);
         theBitmap = await createImageBitmap(blob);
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 
     return theBitmap;

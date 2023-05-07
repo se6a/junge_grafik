@@ -297,6 +297,8 @@ module.exports = [
                 fr: "Nom de l'établissement de formation",
                 it: "Nome dell’istituto di formazione",
             },
+            sort: (options) =>
+                options.sort((a, b) => a.all.localeCompare(b.all)),
             options: [
                 {
                     id: "4108",
@@ -374,111 +376,30 @@ module.exports = [
                     id: "4090",
                     all: "éracom, École romande d’arts et communication, Lausanne, Graphiste",
                 },
-                // {
-                //     id: "cfparts-cv",
-                //     all: "CFP Arts, Centre de Formation Professionnelle Arts, Genève, ES Communication visuelle",
-                // },
-
-                // {
-                //     id: "csia-g",
-                //     all: "CSIA, Centro scolastico per le industrie artistiche, Lugano, Grafico",
-                // },
-
-                // {
-                //     id: "eaa-g",
-                //     all: "EAA, L’école d’arts appliqués, La Chaux-de-Fonds, Graphisme",
-                // },
-
-                // {
-                //     id: "ecal-g",
-                //     all: "ECAL, École cantonale d’art de Lausanne, Graphic Design",
-                // },
-
-                // {
-                //     id: "edhea-gcfc",
-                //     all: "EDHEA, École de design et haute école d’art du Valais, Sierre, Graphiste CFC",
-                // },
-
-                // {
-                //     id: "eracom-g",
-                //     all: "éracom, École romande d’arts et communication, Lausanne, Graphiste",
-                // },
-
-                // {
-                //     id: "ff-fg",
-                //     all: "F+F, Schule für Kunst und Design, Zürich, Fachklasse Grafik",
-                // },
-
-                // {
-                //     id: "ff-hfvg",
-                //     all: "F+F, Schule für Kunst und Design, Zürich, HF Visuelle Gestaltung",
-                // },
-
-                // {
-                //     id: "fhnw-vk",
-                //     all: "FHNW, Fachhochschule Nordwestschweiz, Visuelle Kommunikation",
-                // },
-                // {
-                //     id: "fmz-fg",
-                //     all: "FMZ, Fach- und Wirtschaftsmittelschulzentrum, Luzern, Fachklasse Grafik",
-                // },
-                // {
-                //     id: "gbs-fg",
-                //     all: "GBS, Gewerbliches Berufs- und Weiterbildungszentrum, St. Gallen, Fachklasse Grafik",
-                // },
-                // {
-                //     id: "gbs-hfvg",
-                //     all: "GBS, Gewerbliches Berufs- und Weiterbildungszentrum, St. Gallen, HF Visuelle Gestaltung",
-                // },
-
-                // {
-                //     id: "head-cv",
-                //     all: "HEAD, Haute école d’art et de design, Genève, Communication visuelle",
-                // },
-                // {
-                //     id: "hkb-vk",
-                //     all: "HKB, Hochschule der Künste, Bern, Visuelle Kommunikation",
-                // },
-                // {
-                //     id: "hslu-gd",
-                //     all: "HSLU, Hochschule Luzern – Design & Kunst, Graphic Design",
-                // },
-                // {
-                //     id: "sfgb-fg",
-                //     all: "SfGB, Schule für Gestaltung, Basel, Fachklasse für Grafik",
-                // },
-                // {
-                //     id: "sfgb-hfvg",
-                //     all: "SfGB, Schule für Gestaltung, Basel, HF Visuelle Gestaltung",
-                // },
-                // {
-                //     id: "sfgbb-efz",
-                //     all: "SfG BB, Schule für Gestaltung, Bern und Biel, Berufsfachschule, duale Grundbildung Grafiker:in EFZ (Bern)",
-                // },
-                // {
-                //     id: "sfgbb-hfvg",
-                //     all: "SfG BB, Schule für Gestaltung, Bern und Biel, HF Visuelle Gestaltung",
-                // },
-                // {
-                //     id: "sfgbb-fg",
-                //     all: "SfG BB, Schule für Gestaltung Bern und Biel, Grafik Fachklasse (Biel)",
-                // },
-                // {
-                //     id: "sfgz-fg",
-                //     all: "SfGZ, Schule für Gestaltung, Zürich, Fachbereich Grafik",
-                // },
-                // {
-                //     id: "sfgz-hfvg",
-                //     all: "SfGZ, Schule für Gestaltung, Zürich, HF Visuelle Gestaltung",
-                // },
-                // {
-                //     id: "supsi",
-                //     all: "SUPSI, Scuola universitaria professionale della Svizzera italiana, Mendrisio, Dipartimento ambiente costruzioni e design, Comunicazione visiva",
-                // },
-                // {
-                //     id: "zhdk-vc",
-                //     all: "ZHdK, Zürcher Hochschule der Künste, Visual Communication",
-                // },
+                {
+                    id: "4089",
+                    all: "EDHEA, École de design et haute école d’art du Valais, Sierre, Graphiste CFC",
+                },
+                {
+                    id: "4088",
+                    all: "ECAL, École cantonale d’art de Lausanne, Graphic Design",
+                },
+                {
+                    id: "4087",
+                    all: "EAA, L’école d’arts appliqués, La Chaux-de-Fonds, Graphisme",
+                },
+                {
+                    id: "4086",
+                    all: "CSIA, Centro scolastico per le industrie artistiche, Lugano, Grafico",
+                },
+                {
+                    id: "4085",
+                    all: "CFP Arts, Centre de Formation Professionnelle Arts, Genève, ES Communication visuelle",
+                },
+                {
+                    id: "4084",
+                    all: "CFP Arts, Centre de Formation Professionnelle Arts, Genève, Graphisme",
+                },
             ],
             tooltip: {
                 de: `

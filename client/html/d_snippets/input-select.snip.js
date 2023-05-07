@@ -23,9 +23,12 @@ module.exports = ({
     options = [],
     tooltip,
     zindex,
+    sort = null, // sort function
 }) => {
     zindex = zindex ? `style="z-index: ${zindex}"` : "";
     required = required ? "--required" : "";
+
+    const ops_sorted = sort ? sort(options) : options;
 
     const noneOption = required
         ? ""
@@ -36,7 +39,7 @@ module.exports = ({
                   `;
 
     const html = splitTemp/*html*/ `
-    <div class="formField Select ${required}" ${zindex} onDOMContentLoaded="() => console.log('hello')">
+    <div class="formField Select ${required}" ${zindex}>
       <div class="header">
         <label class="label" for="${id}">
           ${lang`<span>${label}</span>`}
@@ -66,7 +69,6 @@ module.exports = ({
             value=""
             name="fields[${name}]"
             tabindex="-1"
-            onchange="() => console.log('change')"
             ${required ? 'required="required"' : ""}
           />
 
@@ -77,7 +79,7 @@ module.exports = ({
             role="listbox"
           >
             ${noneOption}
-            ${SelectOptions(options)}
+            ${SelectOptions(ops_sorted)}
           </ul>
 
         </div>
