@@ -9,7 +9,6 @@
 //     })
 //   ).json();
 
-//   console.log("");
 // };
 const fs = require("fs");
 // const data = require("./projects-original");
@@ -177,7 +176,6 @@ const fs = require("fs");
 
 // fs.writeFile("here.json", JSON.stringify(dataFiltered), (err) => {
 //   if (err) throw err;
-//   console.log("DONE");
 // });
 
 // const projects2 = require("../client/data/projects/projects-2");
@@ -209,11 +207,8 @@ const fs = require("fs");
 //   "module.exports = " + JSON.stringify(projects3) + ";",
 //   (err) => {
 //     if (err) throw err;
-//     console.log("DONE");
 //   }
 // );
-
-// console.log(projects3);
 
 const targetFolder = "../client/media/projects/2021/large";
 
@@ -222,27 +217,26 @@ const images = {};
 const projects = require("./projects-3");
 
 fs.readdir(targetFolder, (err, files) => {
-  if (err) throw err;
-  files = files.filter((file) => file !== "__MACOSX");
+    if (err) throw err;
+    files = files.filter((file) => file !== "__MACOSX");
 
-  files.forEach((file) => {
-    const id = parseInt(file.match(/2021-(\d+)/)[1]);
+    files.forEach((file) => {
+        const id = parseInt(file.match(/2021-(\d+)/)[1]);
 
-    if (Array.isArray(projects[id].project.images) === false) {
-      projects[id].project.images = [];
-    }
+        if (Array.isArray(projects[id].project.images) === false) {
+            projects[id].project.images = [];
+        }
 
-    projects[id].project.images.push(file.replace(/-\d{4}px-/, "-__SIZE__-"));
-  });
+        projects[id].project.images.push(
+            file.replace(/-\d{4}px-/, "-__SIZE__-")
+        );
+    });
 
-  fs.writeFile(
-    "projects-4.js",
-    "module.exports = " + JSON.stringify(projects) + ";",
-    (err) => {
-      if (err) throw err;
-      console.log("DONE");
-    }
-  );
-
-  // console.log();
+    fs.writeFile(
+        "projects-4.js",
+        "module.exports = " + JSON.stringify(projects) + ";",
+        (err) => {
+            if (err) throw err;
+        }
+    );
 });
