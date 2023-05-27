@@ -140,6 +140,15 @@ module.exports = {
                         href: "https://engelbergerdruck.ch",
                     },
                 },
+                {
+                    type: "image-box",
+                    image: {
+                        src: "logos/logo-egon_und_ingrid_hug_stiftung.png",
+                        alt: "Logo of Egon und Ingrid Hug Stiftung",
+                        classes: "logo",
+                        href: "https://stiftungen.stiftungschweiz.ch/organisation/egon-und-ingrid-hug-stiftung",
+                    },
+                },
                 // {
                 //     type: "image-box",
                 //     image: {

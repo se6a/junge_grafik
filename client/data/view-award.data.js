@@ -37,7 +37,7 @@ module.exports = {
                     <p class="langOption it" lang="it">Apprendisti grafici AFC presso un’azienda o presso una scuola di arte applicata; studenti di una scuola universitaria professionale (corso BA in comunicazione visiva / graphic design) o in una formazione professionale superiore (designer dipl. SSS).</p>
                   </span>
                 `,
-                                `– All levels of education`,
+                                `– All levels of education (except master’s degree)`,
                                 `– All years of study and training`,
                                 `– Students from across Switzerland`,
                                 `– Both group and individual work`,

@@ -259,6 +259,8 @@ function debugLog(form) {
         if (value === null || key === null) continue;
         fields[key] = value;
     }
+
+    console.log({ fields });
 }
 
 module.exports = Router;
