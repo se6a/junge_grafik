@@ -7,7 +7,7 @@ module.exports = {
     },
     header: {
         title: "Award",
-        content: /*html*/ `Is your graphic design work more than just a project? Then we’d love to see it. You can submit any work you’ve created as part of your studies during the last two years. Submissions will be accepted from 24.04.–19.06.2023.`,
+        content: /*html*/ `Is your graphic design work more than just a project? Then we’d love to see it. You can submit any work you’ve created as part of your studies during the last two years. Submissions will be accepted from 24.04.–03.07.2023.`,
     },
     sections: [
         {
@@ -48,7 +48,7 @@ module.exports = {
                         {
                             title: "Submission",
                             items: [
-                                "– Submissions will be accepted from 24.04.–19.06.2023.",
+                                "– Submissions will be accepted from 24.04.–03.07.2023.",
                             ],
                         },
                         {
