@@ -1,6 +1,13 @@
 const Underlined = getSnippet("text-underlined");
 const Button = getSnippet("button");
 
+// ${Button({
+//     classes: "BigButton",
+//     type: "link",
+//     label: "Submit!",
+//     href: `${ENV.host}/submit`,
+// })}
+
 module.exports = () => {
     const $navigation = require("./navigation.sect.js");
 
@@ -24,13 +31,6 @@ module.exports = () => {
           )}
         </span>
       </a>
-
-      ${Button({
-          classes: "BigButton",
-          type: "link",
-          label: "Submit!",
-          href: `${ENV.host}/submit`,
-      })}
 
       ${$navigation()}
 

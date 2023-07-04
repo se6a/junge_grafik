@@ -17,7 +17,7 @@ module.exports = {
                     type: "text",
                     size: "l",
                     content:
-                        "Yes, we’re back! So get ready to submit your work for the second edition of Junge Grafik – Jeune Graphisme – Giovane Grafica. We look forward to seeing your projects, to a new jury and another great night to celebrate the new generation of swiss graphic designers.",
+                        "Yes, we’re back! So get ready for the second edition of Junge Grafik – Jeune Graphisme – Giovane Grafica. We look forward to seeing your projects, to a new jury and another great night to celebrate the new generation of swiss graphic designers.",
                 },
             ],
         },
@@ -40,7 +40,7 @@ module.exports = {
                             hasArrow: true,
                             items: [
                                 /*html*/ `
-                                            <p>03.07.2023</p>
+                                            <p>This year’s submission closed on 03.07.2023</p>
                                         `,
                             ],
                         },
