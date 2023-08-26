@@ -289,24 +289,6 @@ module.exports = {
                 //         {
                 //             type: "card-with-image",
                 //             image: {
-                //                 src: "logos/logo-weltformat.png",
-                //                 alt: "Logo of Weltformat",
-                //                 classes: "logo",
-                //                 href: "https://weltformat-festival.ch",
-                //             },
-                //             title: `
-                //       <span>Partner:</span>
-                //       <span>Weltformat Graphic Design Festival</span>
-                //   `,
-                //             content: `
-                //     <a class="textButton" href="https://weltformat-festival.ch" target="_blank">
-                //       weltformat-festival.ch
-                //     </a>
-                //   `,
-                //         },
-                //         {
-                //             type: "card-with-image",
-                //             image: {
                 //                 src: "logos/logo-ronorp.png",
                 //                 alt: "Logo of Ronorp",
                 //                 classes: "logo",
@@ -379,6 +361,24 @@ module.exports = {
                         href: "https://engelbergerdruck.ch",
                     },
                 },
+                {
+                    type: "image-box",
+                    image: {
+                        src: "logos/logo-luzi_type.png",
+                        alt: "Logo of Luzi type",
+                        classes: "logo",
+                        href: "https://www.luzi-type.ch/",
+                    },
+                },
+                {
+                    type: "image-box",
+                    image: {
+                        src: "logos/logo-mockup_maison.png",
+                        alt: "Logo of Mockup.Maison",
+                        classes: "logo",
+                        href: "https://www.mockup.maison",
+                    },
+                },
                 // {
                 //     type: "image-box",
                 //     image: {
@@ -406,34 +406,25 @@ module.exports = {
                 //         href: "https://extraset.ch",
                 //     },
                 // },
-                // {
-                //     type: "image-box",
-                //     image: {
-                //         src: "logos/logo-mockup_maison.png",
-                //         alt: "Logo of Mockup.Maison",
-                //         classes: "logo",
-                //         href: "https://www.mockup.maison",
-                //     },
-                // },
             ],
         },
 
-        // {
-        //     type: "rows",
-        //     subtitle: "Regular sponsors",
-        //     length: 6,
-        //     content: [
-        //         {
-        //             type: "image-box",
-        //             image: {
-        //                 src: "logos/logo-dinamo.png",
-        //                 alt: "Logo of Dinamo",
-        //                 classes: "logo",
-        //                 href: "https://abcdinamo.com",
-        //             },
-        //         },
-        //     ],
-        // },
+        {
+            type: "rows",
+            subtitle: "Regular sponsors",
+            length: 6,
+            content: [
+                {
+                    type: "image-box",
+                    image: {
+                        src: "logos/logo-dinamo.png",
+                        alt: "Logo of Dinamo",
+                        classes: "logo",
+                        href: "https://abcdinamo.com",
+                    },
+                },
+            ],
+        },
 
         {
             type: "rows",
@@ -476,15 +467,7 @@ module.exports = {
                 //         href: "https://www.ast-beschriftet.ch/",
                 //     },
                 // },
-                // {
-                //     type: "image-box",
-                //     image: {
-                //         src: "logos/logo-luzi_type.png",
-                //         alt: "Logo of Luzi type",
-                //         classes: "logo",
-                //         href: "https://www.luzi-type.ch/",
-                //     },
-                // },
+
                 // {
                 //     type: "image-box",
                 //     image: {
@@ -517,75 +500,85 @@ module.exports = {
             ],
         },
 
-        // {
-        //     type: "rows",
-        //     length: 8,
-        //     subtitle: "Thin sponsors",
-        //     content: [
-        //         {
-        //             type: "image-box",
-        //             image: {
-        //                 src: "logos/logo-snac.png",
-        //                 alt: "Logo of SNAC Grafik Design und Typografie",
-        //                 classes: "logo",
-        //                 href: "https://www.snac.ch/",
-        //             },
-        //         },
-        //         {
-        //             type: "image-box",
-        //             image: {
-        //                 src: "logos/logo-einfach_siebdruck.png",
-        //                 alt: "Logo of Einfach Siebdruck",
-        //                 classes: "logo",
-        //                 href: "https://www.einfachsiebdruck.ch/ueber-uns",
-        //             },
-        //         },
-        //         {
-        //             type: "image-box",
-        //             image: {
-        //                 src: "logos/logo-museum_fuer_gestaltung.png",
-        //                 alt: "Logo of Museum Für Gestaltung Zürich",
-        //                 classes: "logo",
-        //                 href: "https://museum-gestaltung.ch/de/",
-        //             },
-        //         },
-        //         {
-        //             type: "image-box",
-        //             image: {
-        //                 src: "logos/logo-papeterie_zumstein_ag.png",
-        //                 alt: "Logo of Papeterie Zumstein AG",
-        //                 classes: "logo",
-        //                 href: "https://www.zumstein.ch/",
-        //             },
-        //         },
-        //         {
-        //             type: "image-box",
-        //             image: {
-        //                 src: "logos/logo-niggli_verlag.png",
-        //                 alt: "Logo of Niggli Verlag",
-        //                 classes: "logo",
-        //                 href: "https://www.niggli.ch/",
-        //             },
-        //         },
-        //         {
-        //             type: "image-box",
-        //             image: {
-        //                 src: "logos/logo-richard_frick.png",
-        //                 alt: "Logo of Richard Frick",
-        //                 classes: "logo",
-        //             },
-        //         },
-        //         {
-        //             type: "image-box",
-        //             image: {
-        //                 src: "logos/logo-leuchtturm1917.png",
-        //                 alt: "Logo of Leuchturm 1917",
-        //                 classes: "logo",
-        //                 href: "https://www.leuchtturm1917.ch/",
-        //             },
-        //         },
-        //     ],
-        // },
+        {
+            type: "rows",
+            length: 8,
+            subtitle: "Thin sponsors",
+            content: [
+                {
+                    type: "image-box",
+                    image: {
+                        src: "logos/logo-einfach_siebdruck.png",
+                        alt: "Logo of Einfach Siebdruck",
+                        classes: "logo",
+                        href: "https://www.einfachsiebdruck.ch/ueber-uns",
+                    },
+                },
+                {
+                    type: "image-box",
+                    image: {
+                        src: "logos/logo-museum_fuer_gestaltung.png",
+                        alt: "Logo of Museum Für Gestaltung Zürich",
+                        classes: "logo",
+                        href: "https://museum-gestaltung.ch/de/",
+                    },
+                },
+                {
+                    type: "image-box",
+                    image: {
+                        src: "logos/logo-weltformat.png",
+                        alt: "Logo of Weltformat",
+                        classes: "logo",
+                        href: "https://weltformat-festival.ch",
+                    },
+                },
+
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-snac.png",
+                //         alt: "Logo of SNAC Grafik Design und Typografie",
+                //         classes: "logo",
+                //         href: "https://www.snac.ch/",
+                //     },
+                // },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-papeterie_zumstein_ag.png",
+                //         alt: "Logo of Papeterie Zumstein AG",
+                //         classes: "logo",
+                //         href: "https://www.zumstein.ch/",
+                //     },
+                // },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-niggli_verlag.png",
+                //         alt: "Logo of Niggli Verlag",
+                //         classes: "logo",
+                //         href: "https://www.niggli.ch/",
+                //     },
+                // },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-richard_frick.png",
+                //         alt: "Logo of Richard Frick",
+                //         classes: "logo",
+                //     },
+                // },
+                // {
+                //     type: "image-box",
+                //     image: {
+                //         src: "logos/logo-leuchtturm1917.png",
+                //         alt: "Logo of Leuchturm 1917",
+                //         classes: "logo",
+                //         href: "https://www.leuchtturm1917.ch/",
+                //     },
+                // },
+            ],
+        },
 
         {
             type: "rows",

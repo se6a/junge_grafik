@@ -140,6 +140,24 @@ module.exports = {
                         href: "https://engelbergerdruck.ch",
                     },
                 },
+                {
+                    type: "image-box",
+                    image: {
+                        src: "logos/logo-luzi_type.png",
+                        alt: "Logo of Luzi type",
+                        classes: "logo",
+                        href: "https://www.luzi-type.ch/",
+                    },
+                },
+                {
+                    type: "image-box",
+                    image: {
+                        src: "logos/logo-mockup_maison.png",
+                        alt: "Logo of Mockup.Maison",
+                        classes: "logo",
+                        href: "https://www.mockup.maison",
+                    },
+                },
                 // {
                 //     type: "image-box",
                 //     image: {
@@ -174,15 +192,6 @@ module.exports = {
                 //         alt: "Logo of Extraset",
                 //         classes: "logo",
                 //         href: "https://extraset.ch/",
-                //     },
-                // },
-                // {
-                //     type: "image-box",
-                //     image: {
-                //         src: "logos/logo-mockup_maison.png",
-                //         alt: "Logo of Mockup.Maison",
-                //         classes: "logo",
-                //         href: "https://www.mockup.maison",
                 //     },
                 // },
             ],
