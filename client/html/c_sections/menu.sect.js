@@ -2,13 +2,13 @@ const ButtonUnderlined = getSnippet("button-underlined");
 
 module.exports = (crntView) => {
     const MenuItems = [
-        {
-            label: { all: "Submit!" },
-            classes: "Submit",
-            type: "link",
-            href: "/submit",
-            size: "XL",
-        },
+        // {
+        //     label: { all: "Submit!" },
+        //     classes: "Submit",
+        //     type: "link",
+        //     href: "/submit",
+        //     size: "XL",
+        // },
 
         {
             label: { all: "Award" },

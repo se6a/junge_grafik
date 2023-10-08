@@ -2,22 +2,20 @@ const MenuIcon = getSnippet("icon-menu");
 const Button = getSnippet("button");
 
 module.exports = () => {
-  const html = splitTemp/*html*/`
+    const html = splitTemp/*html*/ `
     <nav class="NAVIGATION">
-
-      ${Button({
-        label: "",
-        id: "navigation-menu",
-        classes: "Menu",
-        href: "/submit",
-        icon : MenuIcon(),
-        onclick: "toggleMenu(this)"
-      })}
-
+        ${Button({
+            label: "",
+            id: "navigation-menu",
+            classes: "Menu",
+            href: "/submit",
+            icon: MenuIcon(),
+            onclick: "toggleMenu(this)",
+        })}
     </nav>
-  `;
+`;
 
-  const css = /*css*/`
+    const css = /*css*/ `
     .NAVIGATION {
       height: 100%;
       display: flex;
@@ -48,5 +46,5 @@ module.exports = () => {
     }
   `;
 
-  return ["navigation.sect", html, css];
+    return ["navigation.sect", html, css];
 };

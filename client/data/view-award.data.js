@@ -95,7 +95,6 @@ module.exports = {
                     title: `<div>Alice Franchetti</div>`,
                     content: `<a class="textButton" href="https://alicefranchetti.ch" target="_blank">alicefranchetti.ch</a>`,
                 },
-
                 {
                     type: "card-with-image",
                     title: `<div>Cédric Oppliger</div>`,
@@ -110,6 +109,11 @@ module.exports = {
                     type: "card-with-image",
                     title: `<div>Giliane Cachin</div>`,
                     content: `<a class="textButton" href="https://gilianecachin.ch" target="_blank">gilianecachin.ch</a>`,
+                },
+                {
+                    type: "card-with-image",
+                    title: `<div>Ladina Döring</div>`,
+                    content: `<a class="textButton" href="https://www.ladinadoerig.ch/" target="_blank">ladinadoerig.ch</a>`,
                 },
                 {
                     type: "card-with-image",
