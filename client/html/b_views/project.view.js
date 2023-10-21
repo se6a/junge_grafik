@@ -12,8 +12,6 @@ module.exports = async ({ req }) => {
     const [year, projectNumber] =
         parts.length === 2 ? parts : ["2021", projectId];
 
-    console.log("project", year, projectNumber);
-
     const submission = submissions?.[year]?.[projectNumber];
     const { project, students, education } = submission || {};
 

@@ -9,16 +9,7 @@ const buildResponse = require("../functions/templating");
 /*  Routes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 // Redirect /index to home
-Router.get(
-    /^\/(index\/?)?$/,
-    (req, res, next) => {
-        console.log("index route");
-        next();
-    },
-    resetUrl,
-    buildResponse,
-    send
-);
+Router.get(/^\/(index\/?)?$/, resetUrl, buildResponse, send);
 
 //Winners
 Router.get(
@@ -43,7 +34,6 @@ Router.get(
 Router.get(
     /^\/(2021-\d+)$/,
     ({ params, query, ...req }, res, next) => {
-        console.log("here");
         const projectId = params[0];
         req.url = `/project?id=${projectId}`;
         query.id = projectId;
@@ -62,15 +52,7 @@ Router.get(
 
 function buildRoutes() {
     Server.cache.viewsByName.forEach((_view) => {
-        Router.get(
-            `/${_view}*`,
-            (req, res, next) => {
-                console.log("route: ", _view);
-                next();
-            },
-            buildResponse,
-            send
-        );
+        Router.get(`/${_view}*`, buildResponse, send);
     });
 }
 

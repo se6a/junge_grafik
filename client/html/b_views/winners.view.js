@@ -30,7 +30,6 @@ const options = [
 module.exports = async ({ req, ...data }) => {
     const { locals = {} } = req || {};
     const year = parseInt(req?.locals?.year) || 2023;
-    console.log("year", year);
 
     const selectedSubmissions = submissions?.[year];
 

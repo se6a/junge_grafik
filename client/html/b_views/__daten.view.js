@@ -6,7 +6,6 @@ const ButtonUnderlined = getSnippet("button-underlined");
 const winners23 = require("../../data/submissions/winners-2023");
 
 module.exports = (data) => {
-    console.log(winners23);
     const ids = Object.keys(winners23);
 
     const winner = ids.map((id, index) => {
