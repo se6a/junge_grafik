@@ -670,11 +670,10 @@ module.exports = {
             },
         ],
         education: {
-            institution:
-                "HKB, Hochschule der Künste, Bern, Visuelle Kommunikation",
-            type: "",
-            year: 0,
-            canton: "",
+            institution: "HKB Bern",
+            type: "HKB",
+            year: 3,
+            canton: "be",
         },
         project: {
             id: 41,
