@@ -51,6 +51,7 @@ body {
     --buttonSize-S: calc(var(--size-S) * 1.4);
     --buttonSize-M: calc(var(--size-M) * 0.9);
     --buttonSize-L: calc(var(--size-L) * 0.9);
+    --buttonSize-XL: calc(var(--size-XL) * 1);
 
     --iconSize-XS: calc(var(--size-M) * 0.6);
     --iconSize-S: calc(var(--size-M) * 0.75);

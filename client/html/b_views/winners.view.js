@@ -2,124 +2,110 @@ const HeaderView = getSection("header-view");
 const Rows = getSection("rows");
 const SelectMulti = getSnippet("input-select-multi");
 const CategoryBadges = getSnippet("category-badges");
-const submissions = require("../../data/submissions/winners-2021");
+const ButtonRounded = getSnippet("button-rounded");
+const submissions = require("../../data/submissions");
+const error404 = require("./error-404.view");
 
 const options = [
-  { id: "Animation design", all: "Animation design" },
-  { id: "Corporate design", all: "Corporate design" },
-  { id: "Editorial design", all: "Editorial design" },
-  // { id: "Environmental design", all: "Environmental design" },
-  { id: "Exhibition design", all: "Exhibition design" },
-  { id: "Illustration", all: "Illustration" },
-  { id: "Infographic design", all: "Infographic design" },
-  { id: "Interaction design", all: "Interaction design" },
-  // { id: "Packaging design", all: "Packaging design" },
-  { id: "Photography", all: "Photography" },
-  { id: "Poster design", all: "Poster design" },
-  // { id: "Signage design", all: "Signage design" },
-  { id: "Typeface design", all: "Typeface design" },
-  { id: "Typography", all: "Typography" },
-  { id: "Web design", all: "Web design" },
+    { id: "Animation design", all: "Animation design" },
+    { id: "Corporate design", all: "Corporate design" },
+    { id: "Editorial design", all: "Editorial design" },
+    // { id: "Environmental design", all: "Environmental design" },
+    { id: "Exhibition design", all: "Exhibition design" },
+    { id: "Illustration", all: "Illustration" },
+    { id: "Infographic design", all: "Infographic design" },
+    { id: "Interaction design", all: "Interaction design" },
+    // { id: "Packaging design", all: "Packaging design" },
+    { id: "Photography", all: "Photography" },
+    { id: "Poster design", all: "Poster design" },
+    // { id: "Signage design", all: "Signage design" },
+    { id: "Typeface design", all: "Typeface design" },
+    { id: "Typography", all: "Typography" },
+    { id: "Web design", all: "Web design" },
 ].map(({ all }) => ({
-  id: "#" + all.replace(" design", "").toLowerCase(),
-  all: "#" + all.replace(" design", "").toLowerCase(),
+    id: "#" + all.replace(" design", "").toLowerCase(),
+    all: "#" + all.replace(" design", "").toLowerCase(),
 }));
 
-function CardContent(project) {
-  const html = [
-    /*html*/ `
-      <p class="Description"></p>
-      <div class="Categories">
-    `,
-    CategoryBadges(project.tags),
-    `</div>`,
-  ];
+module.exports = async ({ req, ...data }) => {
+    const { locals = {} } = req || {};
+    const year = parseInt(req?.locals?.year) || 2023;
+    console.log("year", year);
 
-  const css = splitTemp/*html*/ ``;
+    const selectedSubmissions = submissions?.[year];
 
-  return ["project-card.fn", html, css];
-}
+    if (!selectedSubmissions) return error404();
 
-function categoryClasses(project) {
-  const categories = project.tags.map(
-    (tag) => `#${tag.replace(" design", "")}`
-  );
+    const useOrder = req?.query?.winnersOrder || false;
+    const [shuffledSubmissions, shuffledSubmissionsIds] = shuffleSubmissions(
+        selectedSubmissions,
+        useOrder
+    );
 
-  return categories.join(" ");
-}
-
-function shuffleSubmissions(submissions, useOrder) {
-  const shuffled = [];
-  let shuffledIds = [];
-
-  if (useOrder && useOrder !== "false") {
-    // Use defined order:
-    shuffledIds = useOrder.split(",");
-    shuffledIds.forEach((id) => shuffled.push(submissions[id]));
-  } else {
-    // Make new order:
-    submissions = Object.values(submissions);
-    do {
-      randomIndex = Math.floor(Math.random() * submissions.length);
-      const submission = submissions.splice(randomIndex, 1)[0];
-      shuffled.push(submission);
-      shuffledIds.push(submission.project.id);
-    } while (submissions.length);
-  }
-
-  return [shuffled, shuffledIds];
-}
-
-module.exports = async (data) => {
-  const useOrder = data.req.query.winnersOrder || false;
-  const [shuffledSubmissions, shuffledSubmissionsIds] = shuffleSubmissions(
-    submissions,
-    useOrder
-  );
-
-  const html = splitTemp/*html*/ `
+    const html = splitTemp/*html*/ `
     <script defer type="text/javascript" src="/js/winners.js"></script>
 
     <main class="VIEW Winners">
       ${HeaderView({
-        title: "Winners 2021",
+          title: "Winners",
       })}
+
+      <div class="layoutSection box YearSelector" style="border-top: unset; border-bottom: unset;">
+        ${ButtonRounded({
+            label: "2023",
+            classes: `select2023 ${year === 2023 ? "--selected" : ""}`,
+            type: "link",
+            size: "XL",
+            href: "/winners",
+        })}
+        ${ButtonRounded({
+            label: "2021",
+            classes: `select2021 ${year === 2021 ? "--selected" : ""}`,
+            type: "link",
+            size: "XL",
+            href: "/winners/2021",
+        })}
+      </div>
+
+
+
+
 
       <section style="z-index: 10; overflow: visible;" class="layoutSection fullpage box ProjectFilter">
         ${SelectMulti({ label: { all: "Filter" }, options })}
       </section>
 
       ${Rows({
-        length: 4,
-        classes: "ProjectGallery",
-        content: shuffledSubmissions.map(({ project, students }) => ({
-          type: "card-with-image",
-          classes: `Project P-${project.id} ${categoryClasses(project)}`,
-          attr: `role="button" aria-pressed="false"`,
-          image: {
-            src: "projects/" + project.images?.[0] || "",
-          },
-          title: `
+          length: 4,
+          classes: "ProjectGallery",
+          content: shuffledSubmissions.map(({ project, students }) => ({
+              type: "card-with-image",
+              classes: `Project P-${project.id} ${categoryClasses(project)}`,
+              attr: `role="button" aria-pressed="false"`,
+              image: {
+                  src: "projects/" + project.images?.[0] || "",
+              },
+              title: `
             <p class="students">
               ${students
-                .map((st) => `${st.firstname} ${st.lastname}`)
-                .join(", ")}
+                  .map((st) => `${st.firstname} ${st.lastname}`)
+                  .join(", ")}
             </p>
             <p class="project">${project.title}</p>
           `,
-          content: CardContent(project),
-          link: `${ENV.host}/project?id=${
-            project.id
-          }&winnersOrder=${shuffledSubmissionsIds.join(
-            ","
-          )}&winnersFilter=false`,
-        })),
+              content: CardContent(project),
+              link: `${ENV.host}/project?id=${
+                  project.id
+              }&winnersOrder=${shuffledSubmissionsIds.join(
+                  ","
+              )}&winnersFilter=false`,
+          })),
       })}
 
     </main> 
   `;
 
-  const css = splitTemp/*css*/ `
+    const css = splitTemp/*css*/ `
     body {
       --colorTheme: var(--white);
     }
@@ -193,7 +179,68 @@ module.exports = async (data) => {
     .Winners .selectedItem:hover {
       background-color: inherit;
     }
+
+    .YearSelector {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .YearSelector .button .label {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+    .YearSelector .button.--selected {
+        background-color: var(--colorKey);
+        color: var(--white);    
+    }
+
   `;
 
-  return ["winners.view", html, css];
+    return ["winners.view", html, css];
 };
+
+function CardContent(project) {
+    const html = [
+        /*html*/ `
+      <p class="Description"></p>
+      <div class="Categories">
+    `,
+        CategoryBadges(project.tags),
+        `</div>`,
+    ];
+
+    const css = splitTemp/*html*/ ``;
+
+    return ["project-card.fn", html, css];
+}
+
+function categoryClasses(project) {
+    const categories = project.tags.map(
+        (tag) => `#${tag.replace(" design", "")}`
+    );
+
+    return categories.join(" ");
+}
+
+function shuffleSubmissions(submissions, useOrder) {
+    const shuffled = [];
+    let shuffledIds = [];
+
+    if (useOrder && useOrder !== "false") {
+        // Use defined order:
+        shuffledIds = useOrder.split(",");
+        shuffledIds.forEach((id) => shuffled.push(submissions[id]));
+    } else {
+        // Make new order:
+        submissions = Object.values(submissions);
+        do {
+            randomIndex = Math.floor(Math.random() * submissions.length);
+            const submission = submissions.splice(randomIndex, 1)[0];
+            shuffled.push(submission);
+            shuffledIds.push(submission.project.id);
+        } while (submissions.length);
+    }
+
+    return [shuffled, shuffledIds];
+}

@@ -1,46 +1,24 @@
 const HeaderView = getSection("header-view");
 const Rows = getSection("rows");
 const CategoryBadges = getSnippet("category-badges");
-const submissions = require("../../data/submissions/winners-2021");
+const submissions = require("../../data/submissions");
 const Button = getSnippet("button");
-
-function linkToLabel(link) {
-    return link
-        .toLowerCase()
-        .replace(/^(https?:\/\/)?(www\.)?/, "")
-        .replace(/\/$/, "");
-}
-
-function Link(title, links) {
-    if (!links || links.length < 1) return {};
-    if (Array.isArray(links) === false) links = [links];
-    const isInsta = title === "Instagram";
-
-    links = links.map((link) => ({
-        href: isInsta ? "https://instagram.com/" + link : link,
-        label: linkToLabel(link),
-    }));
-
-    return {
-        title: title,
-        items: [
-            links
-                .map(
-                    (link) => /*html*/ `<a class="textButton"
-          href="${link.href}"
-          target="_blank"
-        >
-          ${link.label}
-        </a>`
-                )
-                .join(", "),
-        ],
-        hasArrow: false,
-    };
-}
+const error404 = require("./error-404.view");
 
 module.exports = async ({ req }) => {
-    const { project, students, education } = submissions[req.query.id];
+    const projectId = req?.query?.id;
+
+    const parts = projectId.split("-");
+    const [year, projectNumber] =
+        parts.length === 2 ? parts : ["2021", projectId];
+
+    console.log("project", year, projectNumber);
+
+    const submission = submissions?.[year]?.[projectNumber];
+    const { project, students, education } = submission || {};
+
+    if (!submission || !project) return error404();
+
     const prevWinnersOrder = req.query.winnersOrder || false;
     const prevWinnersFilter = req.query.winnersFilter || false;
 
@@ -244,3 +222,38 @@ module.exports = async ({ req }) => {
 
     return ["project.view", html, css];
 };
+
+function linkToLabel(link) {
+    return link
+        .toLowerCase()
+        .replace(/^(https?:\/\/)?(www\.)?/, "")
+        .replace(/\/$/, "");
+}
+
+function Link(title, links) {
+    if (!links || links.length < 1) return {};
+    if (Array.isArray(links) === false) links = [links];
+    const isInsta = title === "Instagram";
+
+    links = links.map((link) => ({
+        href: isInsta ? "https://instagram.com/" + link : link,
+        label: linkToLabel(link),
+    }));
+
+    return {
+        title: title,
+        items: [
+            links
+                .map(
+                    (link) => /*html*/ `<a class="textButton"
+          href="${link.href}"
+          target="_blank"
+        >
+          ${link.label}
+        </a>`
+                )
+                .join(", "),
+        ],
+        hasArrow: false,
+    };
+}

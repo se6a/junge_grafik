@@ -1,18 +1,18 @@
 const BareButton = getSnippet("button-bare");
 
 module.exports = (button) => {
-  const label =
-    button.label instanceof Object
-      ? lang`<span>${button.label}</span>`
-      : button.label;
-  button.label = `<label class="label">${label}</label>`;
-  button.classes = button.classes
-    ? button.classes + " RoundedButton"
-    : "RoundedButton";
+    const label =
+        button.label instanceof Object
+            ? lang`<span>${button.label}</span>`
+            : button.label;
+    button.label = `<label class="label">${label}</label>`;
+    button.classes = button.classes
+        ? button.classes + " RoundedButton"
+        : "RoundedButton";
 
-  const html = ["", BareButton(button), ""];
+    const html = ["", BareButton(button), ""];
 
-  const css = /*css*/ `
+    const css = /*css*/ `
     .button.RoundedButton {
       width: auto;
       background-color: white;
@@ -31,6 +31,12 @@ module.exports = (button) => {
     .--L.button.RoundedButton {
       border-radius: calc(var(--buttonSize-L) / 2);
       height: var(--buttonSize-L);
+      font-size: var(--fontSize-L);
+    }
+
+    .--XL.button.RoundedButton {
+        border-radius: calc(var(--buttonSize-XL) / 2);
+        height: var(--buttonSize-XL);
     }
 
     .button.RoundedButton:hover {
@@ -39,5 +45,5 @@ module.exports = (button) => {
     }
   `;
 
-  return ["button-rounded.snip", html, css];
+    return ["button-rounded.snip", html, css];
 };

@@ -1,0 +1,36 @@
+// CHAT GPT TEMPLATE
+
+//     *ID*: {
+//         general: {
+//             groupWork: *Gruppenarbeit === "Gruppenarbeit"*,
+//         },
+//         students: [
+//             {
+//                 firstname: *Vorname*,
+//                 lastname: *Familienname*,
+//                 portfolio: *LinkPortfolio || ""*,
+//                 instagram: *LinkInstagram-Profil || ""*,
+//             },
+//             *
+//                 if (WeitereGestalter) WeitereGestalter.split(", ").map((name) => {  return { firstname: name.split(" ")[0], lastname: name.split(" ")[1], portfolio: "", instagram: "" }  })
+//             *
+//         ],
+//         education: {
+//             institution: *Ausbildungsinstitution*,
+//             type: "",
+//             year: "",
+//             canton: "",
+//         },
+//         project: {
+//             id: *ID*,
+//             title: *Projekttitel*,
+//             tags: [*Tag1*, ...*Tag2 ! === null ? [Tag2] : []*, ...*Tag3 ! === null ? [Tag3] : []*],
+//             year: "",
+//             teacher: [
+//                 *Dozenten.split(", ")*
+//             ],
+//             description: "",
+//             images: [],
+//             protoSite: "",
+//         },
+//     }

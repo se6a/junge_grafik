@@ -1,28 +1,28 @@
 const e = getJs("event-handler");
 
 module.exports = ({
-  type = "button",
-  id,
-  classes,
-  label,
-  onclick,
-  href,
-  onsubmit,
-  icon,
-  attr,
-  size = "M",
+    type = "button",
+    id,
+    classes,
+    label,
+    onclick,
+    href,
+    onsubmit,
+    icon,
+    attr,
+    size = "M",
 }) => {
-  const tag = type === "link" ? "a" : "button";
+    const tag = type === "link" ? "a" : "button";
 
-  size = `--${size}`;
-  id = id ? `id="${id}"` : "";
-  classes = (`${classes} ` || "") + size;
-  icon = icon || "";
-  href = href ? `href="${href}"` : "";
-  onclick = onclick ? e.onclick(onclick) : "";
-  onsubmit = onsubmit ? e.onsubmit(onsubmit) : "";
+    size = `--${size}`;
+    id = id ? `id="${id}"` : "";
+    classes = (`${classes} ` || "") + size;
+    icon = icon || "";
+    href = href ? `href="${href}"` : "";
+    onclick = onclick ? e.onclick(onclick) : "";
+    onsubmit = onsubmit ? e.onsubmit(onsubmit) : "";
 
-  const html = splitTemp/*html*/ `
+    const html = splitTemp/*html*/ `
     <${tag}
       ${id}
       class="${classes} button"
@@ -37,7 +37,7 @@ module.exports = ({
     </${tag}>
   `;
 
-  const css = /*css*/ `
+    const css = /*css*/ `
     .button:not(.unstyled) {
       font-family: FeixenSansEdgy;
       position: relative;
@@ -61,6 +61,10 @@ module.exports = ({
       font-size: var(--fontSize-S);
     }
 
+    .button:not(.unstyled).--XL .label {
+        font-size: var(--fontSize-L);
+      }
+
     .button .label {
       pointer-events: none;
       white-space: nowrap;
@@ -78,5 +82,5 @@ module.exports = ({
     }
   `;
 
-  return ["button-bare.snip", html, css];
+    return ["button-bare.snip", html, css];
 };
