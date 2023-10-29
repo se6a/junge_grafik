@@ -66,7 +66,21 @@ module.exports = (data) => {
                             (key) => `
                                 <li>
                                     <div>${key}</div>
-                                    <div>${project[key]}</div>
+                                    <div class="${
+                                        key === "images" ? "images" : "normal"
+                                    }">${
+                                key === "images"
+                                    ? project[key]
+                                          .map(
+                                              (img) =>
+                                                  `<img class="imagePreview" src="media/projects/2023/md/${img.replace(
+                                                      "__SIZE__",
+                                                      "md"
+                                                  )}" />`
+                                          )
+                                          .join("")
+                                    : project[key]
+                            }</div>
                                 </li>`
                         )
                         .join("")}
@@ -147,6 +161,18 @@ module.exports = (data) => {
 
         .VIEW.Data .dataGroup.students ul + ul {
             margin-top: 1em;
+        }
+
+        .VIEW.Data .dataGroup.project .images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5em;
+        }
+
+        .VIEW.Data .dataGroup.project .imagePreview {
+            width: 74px;
+            height: 74px;
+            object-fit: cover;
         }
 
         .VIEW.Data ul {

@@ -29,9 +29,10 @@ const options = [
 
 module.exports = async ({ req, ...data }) => {
     const { locals = {} } = req || {};
-    const year = parseInt(req?.locals?.year) || 2023;
+    const year = parseInt(locals?.year) || 2023;
 
     const selectedSubmissions = submissions?.[year];
+    // console.log({ selectedSubmissions });
 
     if (!selectedSubmissions) return error404();
 
@@ -82,7 +83,7 @@ module.exports = async ({ req, ...data }) => {
               classes: `Project P-${project.id} ${categoryClasses(project)}`,
               attr: `role="button" aria-pressed="false"`,
               image: {
-                  src: "projects/" + project.images?.[0] || "",
+                  src: `projects${year}/` + project.images?.[0] || "",
               },
               title: `
             <p class="students">
@@ -93,7 +94,7 @@ module.exports = async ({ req, ...data }) => {
             <p class="project">${project.title}</p>
           `,
               content: CardContent(project),
-              link: `${ENV.host}/project?id=${
+              link: `${ENV.host}/project?id=${year}-${
                   project.id
               }&winnersOrder=${shuffledSubmissionsIds.join(
                   ","
@@ -216,7 +217,7 @@ function CardContent(project) {
 
 function categoryClasses(project) {
     const categories = project.tags.map(
-        (tag) => `#${tag.replace(" design", "")}`
+        (tag) => `#${tag.toLowerCase().replace(" design", "")}`
     );
 
     return categories.join(" ");

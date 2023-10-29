@@ -25,7 +25,7 @@ module.exports = async ({ req }) => {
 
     <main class="VIEW Project">
       ${HeaderView({
-          image: `projects/${project.images[0]}`,
+          image: `projects${year}/${project.images[0]}`,
           content: [
               "projectHeader",
               splitTemp/*html*/ `
@@ -104,7 +104,7 @@ module.exports = async ({ req }) => {
                               type: "image-box",
                               image: {
                                   classes: "projectImage",
-                                  src: `projects/${image}`,
+                                  src: `projects${year}/${image}`,
                               },
                           };
                       }),

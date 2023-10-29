@@ -14,12 +14,19 @@ const contexts = {
         },
         path: "/media/__CONTEXT__/__SIZE__/__FILENAME__",
     },
-    projects: {
+    projects2021: {
         sizes: {
             md: "max-width: 1000px",
             lg: "min-width: 1001px",
         },
         path: "/media/projects/2021/__SIZE__/__FILENAME__",
+    },
+    projects2023: {
+        sizes: {
+            md: "max-width: 1000px",
+            lg: "min-width: 1001px",
+        },
+        path: "/media/projects/2023/__SIZE__/__FILENAME__",
     },
     logos: {
         sizes: { all: "min-width: 1px" },
@@ -54,6 +61,7 @@ module.exports = (
     const parts = src.match(/^(\w+)\/(.+)/);
     let context = "";
     let filename = "";
+    console.log(src);
 
     if (Array.isArray(parts)) {
         filename = parts[2];

@@ -131,68 +131,69 @@
 /*  Build
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
 async function build(req) {
-  const raw = await _assembleRaw(req);
-  let [html, cssList] = _flatten_rc(raw);
-  const css = _stringifyCss(cssList);
-  html = _injectCss(html, css);
-  html = removeWhitespaceNew4_(html);
-  return { raw, cssList, css, html };
+    const raw = await _assembleRaw(req);
+    let [html, cssList] = _flatten_rc(raw);
+    const css = _stringifyCss(cssList);
+    html = _injectCss(html, css);
+    html = removeWhitespaceNew4_(html);
+    return { raw, cssList, css, html };
 }
 
 function _assembleRaw(req) {
-  const viewName = req.url.split("/")[1].split("?")[0];
-  const data = {
-    ...getData(`view-${viewName}`),
-    viewName,
-    req,
-  };
+    const viewName = req.url.split("/")[1].split("?")[0];
+    const data = {
+        ...getData(`view-${viewName}`),
+        viewName,
+        req,
+    };
 
-  const $site = getSite("main");
-  const raw = $site(data);
+    const $site = getSite("main");
+    const raw = $site(data);
 
-  return raw;
+    return raw;
 }
 
 function _flatten_rc(raw, css = {}) {
-  const _name = raw[0];
-  const _temp = raw[1];
-  const _css = raw[2] || "";
+    const _name = raw[0];
+    const _temp = raw[1];
+    const _css = raw[2] || "";
 
-  let flatHtml = "";
-  css[_name] = _css;
+    let flatHtml = "";
+    css[_name] = _css;
 
-  if (Array.isArray(_temp))
-    for (let i = 0; i < _temp.length; i++) {
-      const _tempPart = _temp[i];
-      if (Array.isArray(_tempPart)) flatHtml += _flatten_rc(_tempPart, css)[0];
-      else flatHtml += _tempPart;
-    }
-  else flatHtml = _temp;
+    if (Array.isArray(_temp))
+        for (let i = 0; i < _temp.length; i++) {
+            const _tempPart = _temp[i];
+            if (Array.isArray(_tempPart))
+                flatHtml += _flatten_rc(_tempPart, css)[0];
+            else flatHtml += _tempPart;
+        }
+    else flatHtml = _temp;
 
-  return [flatHtml, css];
+    return [flatHtml, css];
 }
 
 function _stringifyCss(cssList) {
-  return Object.keys(cssList).reduce(
-    (total, _key) => (total += cssList[_key]),
-    ""
-  );
+    return Object.keys(cssList).reduce(
+        (total, _key) => (total += cssList[_key]),
+        ""
+    );
 }
 
 function _injectCss(html, css) {
-  return html.replace("<inject-css />", `<style>${css}</style>`);
+    return html.replace("<inject-css />", `<style>${css}</style>`);
 }
 
 function _getTemplate(path) {
-  let $temp;
+    let $temp;
 
-  try {
-    $temp = require(`${__basedir}/client/html/${path}`);
-  } catch (error) {
-    throw Error("not found");
-  }
+    try {
+        $temp = require(`${__basedir}/client/html/${path}`);
+    } catch (error) {
+        throw Error(`TEMPLATE NOT FOUND: ${__basedir}/client/html/${path}`);
+    }
 
-  return $temp;
+    return $temp;
 }
 
 /******************************************************************************
@@ -204,79 +205,79 @@ function _getTemplate(path) {
 /*  Global Functions
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
 global.splitTemp = (strings, ...variables) => {
-  const splitted = [];
+    const splitted = [];
 
-  for (let i = 0; i < strings.length; i++) {
-    if (strings[i] !== "") splitted.push(strings[i]);
-    if (variables[i]) splitted.push(variables[i]);
-  }
+    for (let i = 0; i < strings.length; i++) {
+        if (strings[i] !== "") splitted.push(strings[i]);
+        if (variables[i]) splitted.push(variables[i]);
+    }
 
-  return splitted;
+    return splitted;
 };
 
 global.$attr = (data) => {
-  const attr = [];
+    const attr = [];
 
-  if (data.class) attr.push(`class="${data.class}"`);
+    if (data.class) attr.push(`class="${data.class}"`);
 
-  if (data.style) attr.push(`style="${data.style}"`);
+    if (data.style) attr.push(`style="${data.style}"`);
 
-  if (data.attr) {
-    if (Array.isArray(data.attr)) data.attr = data.attr.join(" ");
-    attr.push(data.attr);
-  }
+    if (data.attr) {
+        if (Array.isArray(data.attr)) data.attr = data.attr.join(" ");
+        attr.push(data.attr);
+    }
 
-  if (attr.length > 0) attr.unshift("");
+    if (attr.length > 0) attr.unshift("");
 
-  return attr.join(" ");
+    return attr.join(" ");
 };
 
 global.lang = (tag, texts) => {
-  let html = "";
+    let html = "";
 
-  if (texts) {
-    const languages = Object.keys(texts);
-    const tag_0 = tag[0].split(">")[0];
-    // if tag[0] = <li>, then tag_0 = <li
+    if (texts) {
+        const languages = Object.keys(texts);
+        const tag_0 = tag[0].split(">")[0];
+        // if tag[0] = <li>, then tag_0 = <li
 
-    languages.forEach((_lang) => {
-      if (["fr", "de", "it", "all"].includes(_lang)) {
-        html += `
+        languages.forEach((_lang) => {
+            if (["fr", "de", "it", "all"].includes(_lang)) {
+                html += `
           ${tag_0} class="langOption ${_lang}" lang="${_lang}">
             ${texts[_lang]}
           ${tag[1]}
         `;
-      }
-    });
-  } else {
-    html = tag;
-  }
+            }
+        });
+    } else {
+        html = tag;
+    }
 
-  return html;
+    return html;
 };
 
 global.buildSections = (sections) => {
-  const built = [];
+    const built = [];
 
-  sections.forEach((_section) => {
-    let sectTemp;
+    sections.forEach((_section) => {
+        let sectTemp;
 
-    try {
-      sectTemp = getSection(_section.type);
-    } catch (e) {
-      sectTemp = getSnippet(_section.type);
-    } finally {
-      if (typeof sectTemp === "function") {
-        built.push("", sectTemp(_section));
-      } else {
-        built.push("", "--template not found--");
-      }
-    }
-  });
+        try {
+            sectTemp = getSection(_section.type);
+        } catch (e) {
+            sectTemp = getSnippet(_section.type);
+        } finally {
+            if (typeof sectTemp === "function") {
+                built.push("", sectTemp(_section));
+            } else {
+                built.push("", "--template not found--");
+            }
+        }
+    });
 
-  const builtDone = ["buildSections.fn", [...built, ""]];
+    const builtDone = ["buildSections.fn", [...built, ""]];
 
-  return builtDone;
+    return builtDone;
 };
 
 global.getSite = (name) => _getTemplate(`a_sites/${name}.site.js`);
@@ -285,17 +286,19 @@ global.getSection = (name) => _getTemplate(`c_sections/${name}.sect.js`);
 global.getSnippet = (name) => _getTemplate(`d_snippets/${name}.snip.js`);
 global.getJs = (name) => require(`${__basedir}/functions/${name}.js`);
 global.getData = (name) =>
-  Object.deepCopy_(require(`${__basedir}/client/data/${name}.data`));
+    Object.deepCopy_(require(`${__basedir}/client/data/${name}.data`));
 
 global.makeId = () => {
-  return new Date().getTime().toString(16) + Math.floor(Math.random() * 100000);
+    return (
+        new Date().getTime().toString(16) + Math.floor(Math.random() * 100000)
+    );
 };
 
 /*  Modules
 ´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´*/
 async function buildResponse(req, res, next) {
-  res.locals.built = await build(req);
-  next();
+    res.locals.built = await build(req);
+    next();
 }
 
 module.exports = buildResponse;
