@@ -425,6 +425,16 @@ module.exports = {
                         href: "https://bubu.ch/",
                     },
                 },
+
+                {
+                    type: "image-box",
+                    image: {
+                        src: "logos/logo-swiss_print_award_2024.png",
+                        alt: "Logo of Swiss Print Award",
+                        classes: "logo",
+                        href: "https://swiss-print-award.ch",
+                    },
+                },
             ],
         },
 
@@ -449,6 +459,26 @@ module.exports = {
                         alt: "Logo of Sponsor Foilco",
                         classes: "logo",
                         href: "https://www.foilco.com/",
+                    },
+                },
+
+                {
+                    type: "image-box",
+                    image: {
+                        src: "logos/logo-graphic_design_workflow.png",
+                        alt: "Logo of Sponsor Graphic Design Workflow",
+                        classes: "logo",
+                        href: "https://graphicdesignworkflow.ch",
+                    },
+                },
+
+                {
+                    type: "image-box",
+                    image: {
+                        src: "logos/logo-h+m.png",
+                        alt: "Logo of Sponsor Hinderer Mühlich",
+                        classes: "logo",
+                        href: "https://hinderer-muehlich.com/de",
                     },
                 },
             ],
