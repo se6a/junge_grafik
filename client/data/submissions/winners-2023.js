@@ -1034,7 +1034,7 @@ module.exports = {
                 firstname: "Anaïs",
                 lastname: "Vidal",
                 portfolio: "https://anaisvidal.ch/",
-                instagram: "anaisvidalgraphisme",
+                instagram: "anaisvidal.ch",
             },
             {
                 firstname: "Irini",
