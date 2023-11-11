@@ -38,7 +38,7 @@ module.exports = (data) => {
                                                     key === "portfolio"
                                                         ? `<a href="${student[key]}" target="_blanc">${student[key]}</a>`
                                                         : key === "instagram"
-                                                        ? `<a href="https://instagram.com/${student[key]}">${student[key]}</a>`
+                                                        ? `<a href="https://instagram.com/${student[key]}" target="_blanc">${student[key]}</a>`
                                                         : student[key]
                                                 }
                                             </div>

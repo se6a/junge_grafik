@@ -885,7 +885,7 @@ module.exports = {
                 firstname: "Antoine",
                 lastname: "Pasi",
                 portfolio: "",
-                instagram: "antoine_pasi/?hl=e",
+                instagram: "antoine_pasi",
             },
         ],
         education: {
@@ -920,7 +920,7 @@ module.exports = {
                 firstname: "Lisa",
                 lastname: "Potocnik",
                 portfolio: "http://lisapotocnik.ch",
-                instagram: "http://potoc.nik",
+                instagram: "potoc.nik",
             },
         ],
         education: {
