@@ -386,7 +386,7 @@ module.exports = [
                 },
                 {
                     id: "4087",
-                    all: "EAA, L’école d’arts appliqués, La Chaux-de-Fonds, Graphisme",
+                    all: "CPNE, Centre de formation professionnelle neuchâtelois, arts appliqués",
                 },
                 {
                     id: "4086",

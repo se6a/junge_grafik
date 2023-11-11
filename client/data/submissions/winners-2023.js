@@ -24,7 +24,7 @@ module.exports = {
             year: 0,
             teacher: ["Jonas Berhod"],
             description:
-                "Descendante d’une famille juive, Ba’Aretz est un projet autour de mes questionnements par rapport à ma culture israëlienne et comment je me situe entre ce qui me fait me sentir à la fois proche et en décalage par rapport à celle-ci. Des images tirées d’albums photos de mes grandsparents et des diapositives de voyage de mon père lorsqu’il avait le même âge que moi aujourd’hui viennent se mêler à mes propres souvenirs et traduisent une quête d’identité qui tourne autour de l’héritage, mais également un hommage à la beauté de ce pays. La cohabitation de l’arabe et de l’hébreu sur les panneaux de routes et dans les rues ne reflète pas la situation politique du pays. Des articles de journaux viennent le souligner en parallèle à des street views.",
+                "Descendante d’une famille juive, Ba'Aretz est un projet autour de mes questionnements par rapport à ma culture israëlienne et comment je me situe entre ce qui me fait me sentir à la fois proche et en décalage par rapport à celle-ci. Des images tirées d’albums photos de mes grandsparents et des diapositives de voyage de mon père lorsqu’il avait le même âge que moi aujourd’hui viennent se mêler à mes propres souvenirs et traduisent une quête d’identité qui tourne autour de l’héritage, mais également un hommage à la beauté de ce pays. La cohabitation de l’arabe et de l’hébreu sur les panneaux de routes et dans les rues ne reflète pas la situation politique du pays. Des articles de journaux viennent le souligner en parallèle à des street views.",
             images: [
                 "2023-098-rebecca-alfandary-__SIZE__-lnd-02.jpg",
                 "2023-098-rebecca-alfandary-__SIZE__-lnd-03.jpg",
@@ -78,7 +78,7 @@ module.exports = {
                 firstname: "Orlando",
                 lastname: "Brunner",
                 portfolio: "http://orlandobrunner.com",
-                instagram: "",
+                instagram: "orlandobrunner",
             },
         ],
         education: {
@@ -459,19 +459,19 @@ module.exports = {
                 firstname: "Dimitris",
                 lastname: "Giannoulas",
                 portfolio: "",
-                instagram: "http://dimitris.giannoulas",
+                instagram: "dimitris.giannoulas",
             },
             {
                 firstname: "Orlando",
                 lastname: "Brunner",
-                portfolio: "",
-                instagram: "",
+                portfolio: "http://orlandobrunner.com",
+                instagram: "orlandobrunner",
             },
             {
                 firstname: "Nathan",
                 lastname: "Meyer",
                 portfolio: "",
-                instagram: "",
+                instagram: "meyergrafik",
             },
         ],
         education: {
@@ -622,7 +622,7 @@ module.exports = {
             },
         ],
         education: {
-            institution: "EAA La Chaux-de-Fonds",
+            institution: "CPNE La Chaux-de-Fonds",
             type: "CFC",
             year: 4,
             canton: "ne",
@@ -659,7 +659,7 @@ module.exports = {
             },
         ],
         education: {
-            institution: "EAA La Chaux-de-Fonds",
+            institution: "CPNE La Chaux-de-Fonds",
             type: "CFC",
             year: 4,
             canton: "ne",
@@ -966,7 +966,7 @@ module.exports = {
             },
         ],
         education: {
-            institution: "EAA La Chaux-de-Fonds",
+            institution: "CPNE La Chaux-de-Fonds",
             type: "CFC",
             year: 4,
             canton: "ne",
@@ -1039,8 +1039,8 @@ module.exports = {
             {
                 firstname: "Irini",
                 lastname: "Gleglakou",
-                portfolio: "",
-                instagram: "",
+                portfolio: "https://irinigleglakou.ch/",
+                instagram: "irini.gleglakou",
             },
         ],
         education: {
@@ -1081,14 +1081,14 @@ module.exports = {
             {
                 firstname: "Tanja",
                 lastname: "Vogt",
-                portfolio: "",
-                instagram: "",
+                portfolio: "https://tanjavogt.ch/",
+                instagram: "tanjabailiff",
             },
             {
                 firstname: "Armando",
                 lastname: "Guetg",
-                portfolio: "",
-                instagram: "",
+                portfolio: "https://armandoguetg.ch/",
+                instagram: "funkyguegini",
             },
         ],
         education: {

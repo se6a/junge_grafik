@@ -17,7 +17,7 @@ module.exports = {
                     type: "text",
                     size: "l",
                     content:
-                        "Yes, we’re back! So get ready for the second edition of Junge Grafik – Jeune Graphisme – Giovane Grafica. We look forward to seeing your projects, to a new jury and another great night to celebrate the new generation of swiss graphic designers.",
+                        "The winning projects are online! Check out the stunning works of the next generation of swiss graphic designers. Big up to all the students and apprentices who submitted their works to the Junge Grafik Award 2023. Grazie! Merci! Danke!",
                 },
             ],
         },
@@ -32,47 +32,25 @@ module.exports = {
                 },
 
                 {
-                    type: "overview",
-                    title: "",
-                    details: [
+                    type: "columns",
+                    content: [
                         {
-                            title: "Submission deadline",
-                            hasArrow: true,
-                            items: [
-                                /*html*/ `
-                                            <p>This year’s submission closed on 03.07.2023</p>
-                                        `,
-                            ],
-                        },
-                        {
-                            title: "Awards ceremony",
-                            hasArrow: true,
-                            items: [
-                                /*html*/ `
-                                            <p>18.11.2023</p>
-                                        `,
-                                /*html*/ `
-                                            <p>20:00</p>
-                                        `,
-                                /*html*/ `
-                                            <p>Neubad, Lucerne</p>
-                                        `,
-                            ],
-                        },
-                        {
-                            title: "Afterparty",
-                            hasArrow: true,
-                            items: [
-                                /*html*/ `
-                                            <p>18.11.2023</p>
-                                        `,
-                                /*html*/ `
-                                            <p>22:00</p>
-                                        `,
-                                /*html*/ `
-                                            <p>Neubad, Lucerne</p>
-                                        `,
-                            ],
+                            type: "text",
+                            title: "Junge Grafik 2023 publication",
+                            content: /*html*/ `
+                    <a href="/media/publication/publication-preview-lg.jpg" target="_blank">
+                      <figure>
+                        <img class="image" src="/media/publication/publication-preview-lg.jpg">
+                      </figure>
+                    </a>
+                    <p>
+                        The 2023 Junge Grafik publication offers a behind-the-scenes glimpse into this years edition, the works of the 30 winners and the meticulous selection process. Across 120 visible pages (and a few discreetly hidden ones), the publication unfolds in 4 acts, narrating a curated story that features some of the project’s most important actresses and actors such as the jury, the celebrated winners and a selection of esteemed patrons and sponsors.
+                    </p>
+                    <br>
+                    <a class="textButton" href="mailTo:info@jungegrafik.ch" target="_blank">
+                        Order your copy – here and now!
+                    </a>
+                  `,
                         },
                     ],
                 },

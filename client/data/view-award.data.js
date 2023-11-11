@@ -7,7 +7,7 @@ module.exports = {
     },
     header: {
         title: "Award",
-        content: /*html*/ `Is your graphic design work more than just a project? Then we’d love to see it. You can submit any work you’ve created as part of your studies during the last two years. This year’s submission closed on 03.07.2023`,
+        content: /*html*/ `Submissions will open again in 2025! In the meantime you can check out the winning projects on our <a class="textButton" href="/winners">winner page</a>.`,
     },
     sections: [
         {
@@ -48,7 +48,7 @@ module.exports = {
                         {
                             title: "Submission",
                             items: [
-                                "– This year’s submission closed on 03.07.2023",
+                                "– Our biennial award opens submission again in 2025.",
                             ],
                         },
                         {
@@ -71,7 +71,11 @@ module.exports = {
                             title: "Publication",
                             items: [
                                 /*html*/ `
-                  <p>The Junge Grafik publication is a cross-section of the upcoming generation of Swiss graphic designers. On 128 pages, we present each year’s winning works, facts and figures about the submission process as well as a lot of information around the award itself.</p>
+                  <p>
+                    The 2023 Junge Grafik publication offers a behind-the-scenes glimpse into this years edition, the works of the 30 winners and the meticulous selection process. Across 120 visible pages (and a few discreetly hidden ones), the publication unfolds in 4 acts, narrating a curated story that features some of the project’s most important actresses and actors such as the jury, the celebrated winners and a selection of esteemed patrons and sponsors.
+                  </p>
+                  <br />
+                  <a class="textButton" href="mailto:info@jungegrafik.ch">Order your copy – here and now!</a>
                 `,
                             ],
                         },
