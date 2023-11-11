@@ -1144,8 +1144,8 @@ module.exports = {
             images: [
                 "2023-008-elina-zenhaeusern-__SIZE__-lnd-01.jpg",
                 "2023-008-elina-zenhaeusern-__SIZE__-lnd-02.jpg",
-                "2023-008-elina-zenhaeusern-__SIZE__-lnd-03.jpg",
                 "2023-008-elina-zenhaeusern-__SIZE__-lnd-04.jpg",
+                "2023-008-elina-zenhaeusern-__SIZE__-lnd-03.jpg",
             ],
             protoSite: "",
         },
