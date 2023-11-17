@@ -6,7 +6,7 @@ module.exports = {
         indexed: true,
     },
     header: {
-        image: "theme/excited.svg",
+        image: "theme/winners.svg",
         content: '<div class="HeaderColors"></div>',
     },
     sections: [
@@ -36,7 +36,7 @@ module.exports = {
                     content: [
                         {
                             type: "text",
-                            title: "Junge Grafik 2023 publication",
+                            title: "2023 Junge Grafik publication",
                             content: /*html*/ `
                     <a href="/media/publication/publication-preview-lg.jpg" target="_blank">
                       <figure>
@@ -47,7 +47,7 @@ module.exports = {
                         The 2023 Junge Grafik publication offers a behind-the-scenes glimpse into this years edition, the works of the 30 winners and the meticulous selection process. Across 120 visible pages (and a few discreetly hidden ones), the publication unfolds in 4 acts, narrating a curated story that features some of the project’s most important actresses and actors such as the jury, the celebrated winners and a selection of esteemed patrons and sponsors.
                     </p>
                     <br>
-                    <a class="textButton" href="mailTo:info@jungegrafik.ch" target="_blank">
+                    <a class="textButton" href="/shop" target="_blank">
                         Order your copy – here and now!
                     </a>
                   `,

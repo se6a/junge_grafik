@@ -75,7 +75,7 @@ module.exports = {
                     The 2023 Junge Grafik publication offers a behind-the-scenes glimpse into this years edition, the works of the 30 winners and the meticulous selection process. Across 120 visible pages (and a few discreetly hidden ones), the publication unfolds in 4 acts, narrating a curated story that features some of the project’s most important actresses and actors such as the jury, the celebrated winners and a selection of esteemed patrons and sponsors.
                   </p>
                   <br />
-                  <a class="textButton" href="mailto:info@jungegrafik.ch">Order your copy – here and now!</a>
+                  <a class="textButton" href="/shop">Order your copy – here and now!</a>
                 `,
                             ],
                         },
