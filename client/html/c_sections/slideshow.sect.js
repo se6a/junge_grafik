@@ -27,14 +27,8 @@ module.exports = ({ classes = "", title, images = [] }) => {
     const css = /*css*/ `
 
         .SlideShow {
-            padding: 0;
             flex-direction: column;
             height: 80vh;
-        }
-
-        .SlideShow header {
-            padding: var(--size-S);
-            padding-bottom: 0;
         }
 
         .slideShowImages {
