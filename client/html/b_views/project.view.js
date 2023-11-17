@@ -12,7 +12,7 @@ module.exports = async ({ req }) => {
     const [year, projectNumber] =
         parts.length === 2 ? parts : ["2021", projectId];
 
-    const submission = submissions?.[year]?.[projectNumber];
+    const submission = submissions?.[year]?.[parseInt(projectNumber)];
     const { project, students, education } = submission || {};
 
     if (!submission || !project) return error404();
