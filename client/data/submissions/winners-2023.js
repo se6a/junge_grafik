@@ -19,12 +19,12 @@ module.exports = {
         },
         project: {
             id: 98,
-            title: "Ba'Aretz",
+            title: "Ba’Aretz",
             tags: ["Editorial design"],
             year: 0,
             teacher: ["Jonas Berhod"],
             description:
-                "Descendante d’une famille juive, Ba'Aretz est un projet autour de mes questionnements par rapport à ma culture israëlienne et comment je me situe entre ce qui me fait me sentir à la fois proche et en décalage par rapport à celle-ci. Des images tirées d’albums photos de mes grandsparents et des diapositives de voyage de mon père lorsqu’il avait le même âge que moi aujourd’hui viennent se mêler à mes propres souvenirs et traduisent une quête d’identité qui tourne autour de l’héritage, mais également un hommage à la beauté de ce pays. La cohabitation de l’arabe et de l’hébreu sur les panneaux de routes et dans les rues ne reflète pas la situation politique du pays. Des articles de journaux viennent le souligner en parallèle à des street views.",
+                "Descendante d’une famille juive, Ba’Aretz est un projet autour de mes questionnements par rapport à ma culture israëlienne et comment je me situe entre ce qui me fait me sentir à la fois proche et en décalage par rapport à celle-ci. Des images tirées d’albums photos de mes grandsparents et des diapositives de voyage de mon père lorsqu’il avait le même âge que moi aujourd’hui viennent se mêler à mes propres souvenirs et traduisent une quête d’identité qui tourne autour de l’héritage, mais également un hommage à la beauté de ce pays. La cohabitation de l’arabe et de l’hébreu sur les panneaux de routes et dans les rues ne reflète pas la situation politique du pays. Des articles de journaux viennent le souligner en parallèle à des street views.",
             images: [
                 "2023-098-rebecca-alfandary-__SIZE__-lnd-02.jpg",
                 "2023-098-rebecca-alfandary-__SIZE__-lnd-03.jpg",
@@ -434,7 +434,7 @@ module.exports = {
         },
         project: {
             id: 67,
-            title: "We don't go back to normality",
+            title: "We don’t go back to normality",
             tags: ["Editorial design"],
             year: 0,
             teacher: ["Diego Bontognali"],
@@ -540,8 +540,8 @@ module.exports = {
         },
         students: [
             {
-                firstname: "Christian Paul",
-                lastname: "Guerrero Bustamante",
+                firstname: "Paul",
+                lastname: "Guerrero",
                 portfolio: "http://www.paulguerrero.ch",
                 instagram: "paul______gr",
             },
@@ -554,7 +554,7 @@ module.exports = {
         },
         project: {
             id: 252,
-            title: "AUTONOW Magazine - Un nouveau regard sur les magazines automobiles",
+            title: "AUTONOW Magazine – Un nouveau regard sur les magazines automobiles",
             tags: ["Editorial design", "Typography"],
             year: 0,
             teacher: [
@@ -634,7 +634,7 @@ module.exports = {
             year: 0,
             teacher: ["Vincent Devaud", "Thibaud Tissot"],
             description:
-                "Varg Vikernes, musicien norvégien de Black Metal, est connu pour sa révolution dans ce genre musical. Cependant, il est aussi associé à des crimes. Dans les 90s, Varg a in-cendié des églises en Norvège et a commis le meurtre d’Euronymous, leader du groupe Mayhem. Ce livre est une enquête approfondie sur sa vie, en explorant ses composi-tions musicales, proposant une entrevue et en examinant sa représentation dans les médias, le tout dans le but de comprendre les raisons qui l’ont poussé à commettre ces actes. Concluant cette enquête, un glossaire de 666 mots re-cueillis à partir des sources documentées et utilisées dans l’ouvrage. Ce glossaire reflète la personnalité de Varg et son univers. Pour documenter ce livre, j’ai décidé de me rendre en Norvège pour créer une vidéo, sur ses traces.",
+                "Varg Vikernes, musicien norvégien de Black Metal, est connu pour sa révolution dans ce genre musical. Cependant, il est aussi associé à des crimes. Dans les 90s, Varg a incendié des églises en Norvège et a commis le meurtre d’Euronymous, leader du groupe Mayhem. Ce livre est une enquête approfondie sur sa vie, en explorant ses compositions musicales, proposant une entrevue et en examinant sa représentation dans les médias, le tout dans le but de comprendre les raisons qui l’ont poussé à commettre ces actes. Concluant cette enquête, un glossaire de 666 mots recueillis à partir des sources documentées et utilisées dans l’ouvrage. Ce glossaire reflète la personnalité de Varg et son univers. Pour documenter ce livre, j’ai décidé de me rendre en Norvège pour créer une vidéo, sur ses traces.",
             images: [
                 "2023-073-clara-hoya-__SIZE__-lnd-01.jpg",
                 "2023-073-clara-hoya-__SIZE__-lnd-02.jpg",
@@ -718,7 +718,7 @@ module.exports = {
             year: 0,
             teacher: ["Angelo Benedetto", "Vincent Jacquier", "Pauline Saglio"],
             description:
-                "The coral rescue project est un projet qui prend en charge les questions concernant la vie aquatique. Nous avons dé-cidé de nous pencher sur l’extinction des coraux, qui s’est accélérée au cours des dernières décennies. Ce journal décrit 14 solutions pour aider à les sauver, seul ou à plusieurs. Pliable, il se présente sous forme de mini af-fiches informatives illustrées et des QR codes pour en savoir plus sur la cause. L’édition est guidée par une page instagram composée de GIFs, qui nous aide à comprendre et à toucher une plus grande partie de la population.",
+                "The coral rescue project est un projet qui prend en charge les questions concernant la vie aquatique. Nous avons dé-cidé de nous pencher sur l’extinction des coraux, qui s’est accélérée au cours des dernières décennies. Ce journal décrit 14 solutions pour aider à les sauver, seul ou à plusieurs. Pliable, il se présente sous forme de mini affiches informatives illustrées et des QR codes pour en savoir plus sur la cause. L’édition est guidée par une page instagram composée de GIFs, qui nous aide à comprendre et à toucher une plus grande partie de la population.",
             images: [
                 "2023-011-aurore-huberty-__SIZE__-lnd-01.jpg",
                 "2023-011-aurore-huberty-__SIZE__-lnd-02.jpg",
@@ -754,7 +754,7 @@ module.exports = {
             year: 0,
             teacher: ["Diego Bontognali"],
             description:
-                "Le projet se focalise sur la guerre du Viêt Nam, qui est marquée par des périodes d’intensité extrême ainsi que des moments de calme. Les pauses, également connues sous le nom de « stand down », symbolisent l’importance cruciale de la musique en tant que moyen d’évasion pour les soldats, leur permettant ainsi de s’éloigner de la réalité acca-blante de la guerre et des moments de tension qui sont qualifiés de « gear up ». Stand Down/Broadsheet 350 x 500 Gear Up/Book 138 x 200",
+                "Le projet se focalise sur la guerre du Viêt Nam, qui est marquée par des périodes d’intensité extrême ainsi que des moments de calme. Les pauses, également connues sous le nom de « stand down », symbolisent l’importance cruciale de la musique en tant que moyen d’évasion pour les soldats, leur permettant ainsi de s’éloigner de la réalité accablante de la guerre et des moments de tension qui sont qualifiés de « gear up ». Stand Down/Broadsheet 350 × 500 Gear Up/Book 138 × 200",
             images: [
                 "2023-237-flaurant-kadrija-__SIZE__-lnd-01.jpg",
                 "2023-237-flaurant-kadrija-__SIZE__-lnd-02.jpg",
@@ -788,7 +788,7 @@ module.exports = {
             year: 0,
             teacher: ["Dimitri Jeannottat"],
             description:
-                "In December 2022, I stumbled upon a perplexing earthquake that not only affected my entire family, but also be-came the catalyst for their migration to Switzerland. In my quest for understanding, I delved into archives, examined images and conducted three enlightening interviews with my mother, a village rescuer and a historian. The profound impact of this event on my family and the broader re-gion of Southern Italy will now be unraveled through this book, which serves as my diploma project. Within its covers, you will have the opportunity to relive this traumatic occurrence through an array of compelling content, including archival documents, evocative pictures, gripping interviews, insights into the present condition of the villages and statistics.",
+                "In December 2022, I stumbled upon a perplexing earthquake that not only affected my entire family, but also became the catalyst for their migration to Switzerland. In my quest for understanding, I delved into archives, examined images and conducted three enlightening interviews with my mother, a village rescuer and a historian. The profound impact of this event on my family and the broader region of Southern Italy will now be unraveled through this book, which serves as my diploma project. Within its covers, you will have the opportunity to relive this traumatic occurrence through an array of compelling content, including archival documents, evocative pictures, gripping interviews, insights into the present condition of the villages and statistics.",
             images: [
                 "2023-041-mattia-marchese-__SIZE__-lnd-01.jpg",
                 "2023-041-mattia-marchese-__SIZE__-lnd-02.jpg",
@@ -865,7 +865,7 @@ module.exports = {
             year: 0,
             teacher: ["Nicole Udry"],
             description:
-                "Le livre intitulé « Le Radeau » est un hommage à l’institu-tion du même nom, qui accueille des personnes en lutte contre l’addiction. Il offre une rencontre entre ces individus et l’institution, mettant en évidence le contraste entre force et fragilité. À travers une série de témoignages, ce livre dévoile des histoires de vie profondément marquées par la dualité, oscillant entre une réalité brutale et l’espoir d’un avenir meilleur. En donnant une voix à ceux qui sont marginalisés dans notre société, ces récits révèlent leurs luttes contre leurs démons intérieurs et leurs dépendances. Malgré les épreuves, cette édition illu-mine les étincelles de résilience et de bravoure, invitant à la compassion et à la compréhension envers ceux qui aspirent à une vie plus épanouissante.",
+                "Le livre intitulé « Le Radeau » est un hommage à l’institution du même nom, qui accueille des personnes en lutte contre l’addiction. Il offre une rencontre entre ces individus et l’institution, mettant en évidence le contraste entre force et fragilité. À travers une série de témoignages, ce livre dévoile des histoires de vie profondément marquées par la dualité, oscillant entre une réalité brutale et l’espoir d’un avenir meilleur. En donnant une voix à ceux qui sont marginalisés dans notre société, ces récits révèlent leurs luttes contre leurs démons intérieurs et leurs dépendances. Malgré les épreuves, cette édition illumine les étincelles de résilience et de bravoure, invitant à la compassion et à la compréhension envers ceux qui aspirent à une vie plus épanouissante.",
             images: [
                 "2023-092-delphine-moennat-__SIZE__-lnd-01.jpg",
                 "2023-092-delphine-moennat-__SIZE__-prt-02.jpg",
@@ -901,7 +901,7 @@ module.exports = {
             year: 0,
             teacher: ["Laurent Kuhni", "Demian Conrad"],
             description:
-                "Le WarnunGrotesk est un caractère grotesque condensé trouvant ses inspirations dans plusieurs sources. Tout d’abord le vernaculaire à travers des panneaux de signalisation ferroviaire français visant à prévenir du danger des fils électriques. Mais également d’un spécimen de la Flinsch Type Foundry de Frankfort datant de 1866, présentant des ca-ractères similaire. Le WarnunGrotesk tente de retrans-crire l’aspect organique et humain du dessin manuel lié à la source (peinture en lettre/plomb), à travers un dessin présentant des détails allant à l’encontre d’un tracé numé-rique lisse. Ce caractère se narre autour de la seconde révolution industrielle, période dans laquelle travailler en industrie était un travail dangereux. Sa communication reprend les codes de ce contexte et son histoire graphique.",
+                "Le WarnunGrotesk est un caractère grotesque condensé trouvant ses inspirations dans plusieurs sources. Tout d’abord le vernaculaire à travers des panneaux de signalisation ferroviaire français visant à prévenir du danger des fils électriques. Mais également d’un spécimen de la Flinsch Type Foundry de Frankfort datant de 1866, présentant des caractères similaire. Le WarnunGrotesk tente de retranscrire l’aspect organique et humain du dessin manuel lié à la source (peinture en lettre/plomb), à travers un dessin présentant des détails allant à l’encontre d’un tracé numé-rique lisse. Ce caractère se narre autour de la seconde révolution industrielle, période dans laquelle travailler en industrie était un travail dangereux. Sa communication reprend les codes de ce contexte et son histoire graphique.",
             images: [
                 "2023-044-antoine-pasi-__SIZE__-lnd-01.jpg",
                 "2023-044-antoine-pasi-__SIZE__-lnd-02.jpg",
@@ -942,7 +942,7 @@ module.exports = {
                 "Corinne Riedener",
             ],
             description:
-                "Illustrierte Kuriositäten und Antworten auf Fragen, die du dir nicht gestellt hast. Unterhaltsame Fakten, misslun-gene Verbrechen und seltsame Berichte, verbildlicht in einer Zeitung gesammelt. Um dem bereits lange bestehenden In-formationsmedium Zeitung eine neue Dimension zu geben, sind einige dieser Illustrationen beim Einscannen der Bilder mit «Artivive» in animierter Version betrachtbar. Die Arbeit wollte ich dazu nutzen, mich in Bezug auf das Thema Illus-tration weiterzuentwickeln und herauszufordern. Somit war es mein Ziel, eine grosse Bandbreite an unterschiedlichen Techniken, Stilen und Sujets anzuwenden.",
+                "Illustrierte Kuriositäten und Antworten auf Fragen, die du dir nicht gestellt hast. Unterhaltsame Fakten, misslungene Verbrechen und seltsame Berichte, verbildlicht in einer Zeitung gesammelt. Um dem bereits lange bestehenden Informationsmedium Zeitung eine neue Dimension zu geben, sind einige dieser Illustrationen beim Einscannen der Bilder mit «Artivive» in animierter Version betrachtbar. Die Arbeit wollte ich dazu nutzen, mich in Bezug auf das Thema Illustration weiterzuentwickeln und herauszufordern. Somit war es mein Ziel, eine grosse Bandbreite an unterschiedlichen Techniken, Stilen und Sujets anzuwenden.",
             images: [
                 "2023-213-lisa-potocnik-__SIZE__-lnd-01.jpg",
                 "2023-213-lisa-potocnik-__SIZE__-lnd-02.jpg",
@@ -978,7 +978,7 @@ module.exports = {
             year: 0,
             teacher: ["Thibaud Tissot", "Vincent Devaud"],
             description:
-                "Dans cet ouvrage j’ai voulu, à travers le concours Miss Univers (concours visant à élire chaque année la femme la plus belle de l’univers) montrer tous les standards de beau-té dits « parfaits ». Dans cet ouvrage, on peut voir ces standards à travers 50 ans de concours, on peut donc se rendre compte à quel point les codes de la femme soit-disant parfaite ont évolués. Dans un second temps, j’ai voulu calculer la moyenne de toutes ces mensurations pour créer la « miss parfaite ». Au début, on y trouve des photos d’archives du concours pour introduire le thème et à la fin il y a un catalogue de photos « détails » des tenues, du dé-filé, du couronnement des miss afin de comprendre tout cet univers.",
+                "Dans cet ouvrage j’ai voulu, à travers le concours Miss Univers (concours visant à élire chaque année la femme la plus belle de l’univers) montrer tous les standards de beauté dits « parfaits ». Dans cet ouvrage, on peut voir ces standards à travers 50 ans de concours, on peut donc se rendre compte à quel point les codes de la femme soit-disant parfaite ont évolués. Dans un second temps, j’ai voulu calculer la moyenne de toutes ces mensurations pour créer la « miss parfaite ». Au début, on y trouve des photos d’archives du concours pour introduire le thème et à la fin il y a un catalogue de photos « détails » des tenues, du dé-filé, du couronnement des miss afin de comprendre tout cet univers.",
             images: [
                 "2023-156-caroline-romao-__SIZE__-lnd-01.jpg",
                 "2023-156-caroline-romao-__SIZE__-lnd-02.jpg",
@@ -1009,12 +1009,12 @@ module.exports = {
         },
         project: {
             id: 111,
-            title: "re–poster – tradizione e innovazione dei manifesto svizzero",
+            title: "re-poster – tradizione e innovazione dei manifesto svizzero",
             tags: ["Poster design", "Interaction design", "Editorial design"],
             year: 0,
             teacher: ["Leonardo Angelucci"],
             description:
-                "Il manifesto è stato il primo supporto di comunicazione tradizionale, un medium ancora oggi molto presente nel no-stro territorio elvetico. Con l’avanzare degli anni siamo sempre più immersi in un mondo digitale dove i progres-si tecnologici rivoluzionano velocemente la società: l’AI è già utilizzata nel nostro quotidiano. Come si presume che possano integrarsi le nuove tecnologie nel manifesto del futuro quindi? re-poster risponde a questa domanda e la mette in pratica: un progetto che dimostra, attraverso una selezione di 6 manifesti storici culturali della scuola svizzera, come l’inclusione dell’interattività nel medium del manifesto possa enfatizzare la comunicazione del suo contenuto. Un progetto dove la tradizione del buon design svizzero incontra l’innovazione delle nuove tec-nologie.",
+                "Il manifesto è stato il primo supporto di comunicazione tradizionale, un medium ancora oggi molto presente nel nostro territorio elvetico. Con l’avanzare degli anni siamo sempre più immersi in un mondo digitale dove i progressi tecnologici rivoluzionano velocemente la società: l’AI è già utilizzata nel nostro quotidiano. Come si presume che possano integrarsi le nuove tecnologie nel manifesto del futuro quindi? re-poster risponde a questa domanda e la mette in pratica: un progetto che dimostra, attraverso una selezione di 6 manifesti storici culturali della scuola svizzera, come l’inclusione dell’interattività nel medium del manifesto possa enfatizzare la comunicazione del suo contenuto. Un progetto dove la tradizione del buon design svizzero incontra l’innovazione delle nuove tecnologie.",
             images: [
                 "2023-111-giorgia-tomasi-__SIZE__-lnd-01.jpg",
                 "2023-111-giorgia-tomasi-__SIZE__-lnd-02.jpg",
@@ -1104,7 +1104,7 @@ module.exports = {
             year: 0,
             teacher: ["Lea Michel", "Rebecca Morganti-Pfaffhauser"],
             description:
-                "Der Nachhaltigkeitsbericht 2020-21 der Zürcher Hochschule der Künste befasst sich mit der vergangenen Entwicklung der Institution sowie deren Potential zur Optimierung. Dabei werden nicht nur die Nachhaltigkeit im Sinne klimatischer Verhältnisse untersucht, sondern auch die sozialen Wechselwirkungen im Betrieb. Neben der textlichen Ebene wurden zudem die komplexen Daten und Zeiträume in Infografiken übersetzt, welche den Sachverhalt vereinfachen sollten. Die Thematik wurde ebenfalls in der Gestaltung und der Produktion aufgegriffen. Das Konzept der Kompression von Information auf wenigen Seiten führte dazu, dass weniger Ressourcen für den Druck verwendet werden mussten und so Energie gespart werden konnte.",
+                "Der Nachhaltigkeitsbericht 2020–21 der Zürcher Hochschule der Künste befasst sich mit der vergangenen Entwicklung der Institution sowie deren Potential zur Optimierung. Dabei werden nicht nur die Nachhaltigkeit im Sinne klimatischer Verhältnisse untersucht, sondern auch die sozialen Wechselwirkungen im Betrieb. Neben der textlichen Ebene wurden zudem die komplexen Daten und Zeiträume in Infografiken übersetzt, welche den Sachverhalt vereinfachen sollten. Die Thematik wurde ebenfalls in der Gestaltung und der Produktion aufgegriffen. Das Konzept der Kompression von Information auf wenigen Seiten führte dazu, dass weniger Ressourcen für den Druck verwendet werden mussten und so Energie gespart werden konnte.",
             images: [
                 "2023-026-severin-weber-__SIZE__-lnd-01.jpg",
                 "2023-026-severin-weber-__SIZE__-lnd-02.jpg",
@@ -1140,7 +1140,7 @@ module.exports = {
             year: 0,
             teacher: ["Daniel Schmid"],
             description:
-                "AI.KE est un projet de livre d’archives présenté dans une exposition. Le livre interroge la capacité d’une IA à remplacer la créativité humaine. De vrais meubles Ikea ont été introduits dans une IA (DALL-E 2) pour en créer de nouveaux. Créant une nouvelle collection de meubles ensuite rassemblée dans un livre inspiré des catalogues de la chaine de magasins suédois. Les meubles disposés aléatoire-ment sur les pages amènent le public à essaye avec l’objet avec lequel un jeu est créé. Le public essayé alors de trouver quel objet est l’original et lequel est celui créé par IA.",
+                "AI.KE est un projet de livre d’archives présenté dans une exposition. Le livre interroge la capacité d’une IA à remplacer la créativité humaine. De vrais meubles Ikea ont été introduits dans une IA (DALL-E 2) pour en créer de nouveaux. Créant une nouvelle collection de meubles ensuite rassemblée dans un livre inspiré des catalogues de la chaine de magasins suédois. Les meubles disposés aléatoirement sur les pages amènent le public à essaye avec l’objet avec lequel un jeu est créé. Le public essayé alors de trouver quel objet est l’original et lequel est celui créé par IA.",
             images: [
                 "2023-008-elina-zenhaeusern-__SIZE__-lnd-01.jpg",
                 "2023-008-elina-zenhaeusern-__SIZE__-lnd-02.jpg",
@@ -1176,7 +1176,7 @@ module.exports = {
             year: 0,
             teacher: ["Mauro Paolozzi", "Martin Woodtli"],
             description:
-                "Zwei Kulturen in einer Bento-Box. Seit vier Jahren sammle ich allerlei Verpackungen aus Japan und habe bis jetzt über 200 Stück gesammelt. Mit dem Ziel, meine zwei Kulturen zu verbinden, gestaltete ich ein Memory aus 30 Schwei-zer Plakaten. Das Gegenstück ist jeweils eine Collage, die formale Ähnlichkeiten hat. Alles zusammen befindet sich in einer traditionellen japanischen Bento-(Lunch)-Box, die selbst gebaut wurde.",
+                "Zwei Kulturen in einer Bento-Box. Seit vier Jahren sammle ich allerlei Verpackungen aus Japan und habe bis jetzt über 200 Stück gesammelt. Mit dem Ziel, meine zwei Kulturen zu verbinden, gestaltete ich ein Memory aus 30 Schweizer Plakaten. Das Gegenstück ist jeweils eine Collage, die formale Ähnlichkeiten hat. Alles zusammen befindet sich in einer traditionellen japanischen Bento-(Lunch)-Box, die selbst gebaut wurde.",
             images: [
                 "2023-168-nadia-hikaru-zerzawy-__SIZE__-lnd-01.jpg",
                 "2023-168-nadia-hikaru-zerzawy-__SIZE__-lnd-02.jpg",
