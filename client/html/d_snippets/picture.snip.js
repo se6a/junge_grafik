@@ -61,7 +61,6 @@ module.exports = (
     const parts = src.match(/^(\w+)\/(.+)/);
     let context = "";
     let filename = "";
-    console.log(src);
 
     if (Array.isArray(parts)) {
         filename = parts[2];
