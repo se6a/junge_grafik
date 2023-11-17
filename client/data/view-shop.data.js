@@ -6,7 +6,7 @@ module.exports = {
         indexed: true,
     },
     header: {
-        image: "publication/publication-preview-__SIZE__.jpg",
+        image: "publication/publication-preview-2023-__SIZE__-lnd-01.jpg",
         content: '<div class="HeaderColors"></div>',
     },
     sections: [

@@ -6,25 +6,35 @@ module.exports = ({ classes = "", title, images = [] }) => {
 
     const html = [
         /*html*/ `
-            <section class="SlideShow box">
-                <div class="slideShowImages">`,
+    <section class="SlideShow box ${classes}">
+        <header class="${useTitle}">
+            <h2>`,
+        Underlined(title),
+        `   </h2>
+        </header>
+
+        <div class="slideShowImages">`,
         ...images.map((image, i) =>
             Picture(image, {
                 classes: `slideShowImage${i === 0 ? " isActive" : ""}`,
             })
         ),
-        /*html*/ `
-                </div>
-            </section>
-      `,
+        `</div>
+    </section>
+`,
     ];
 
     const css = /*css*/ `
 
         .SlideShow {
             padding: 0;
-            flex-direction: row;
+            flex-direction: column;
             height: 80vh;
+        }
+
+        .SlideShow header {
+            padding: var(--size-S);
+            padding-bottom: 0;
         }
 
         .slideShowImages {

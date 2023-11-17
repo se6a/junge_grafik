@@ -40,7 +40,7 @@ module.exports = {
                             content: /*html*/ `
                     <a href="/media/publication/publication-preview-lg.jpg" target="_blank">
                       <figure>
-                        <img class="image" src="/media/publication/publication-preview-lg.jpg">
+                        <img class="image" src="/media/publication/md/publication-preview-2023-md-lnd-01.jpg">
                       </figure>
                     </a>
                     <p>
@@ -61,7 +61,7 @@ module.exports = {
             content: [
                 {
                     type: "slideshow",
-                    title: "Impressions: Award Cermenoy 2021",
+                    title: "2021 Junge Grafik award ceremony",
                     images: [
                         {
                             src: "slideshow/2021-award-ceremony-impressions-__SIZE__-lnd-02.jpg",

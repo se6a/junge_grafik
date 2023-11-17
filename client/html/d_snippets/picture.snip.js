@@ -28,6 +28,13 @@ const contexts = {
         },
         path: "/media/projects/2023/__SIZE__/__FILENAME__",
     },
+    publication: {
+        sizes: {
+            md: "max-width: 1000px",
+            lg: "min-width: 1001px",
+        },
+        path: "/media/publication/__SIZE__/__FILENAME__",
+    },
     logos: {
         sizes: { all: "min-width: 1px" },
         path: "/media/logos/__FILENAME__",
