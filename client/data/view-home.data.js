@@ -38,9 +38,9 @@ module.exports = {
                             type: "text",
                             title: "2023 Junge Grafik publication",
                             content: /*html*/ `
-                    <a href="/media/publication/publication-preview-lg.jpg" target="_blank">
+                    <a href="/shop" title="Go to the Shop" >
                       <figure>
-                        <img class="image" src="/media/publication/md/publication-preview-2023-md-lnd-01.jpg">
+                        <img class="image" alt="Preview of 2023 Junge Grafik publication " src="/media/publication/md/publication-preview-2023-md-lnd-01.jpg">
                       </figure>
                     </a>
                     <p>
