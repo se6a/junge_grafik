@@ -5,6 +5,12 @@ module.exports = () => {
     const html = splitTemp/*html*/ `
     <nav class="NAVIGATION">
         ${Button({
+            label: "Winners 2023",
+            classes: "Highlighted",
+            href: "/winners/2023",
+            type: "link",
+        })}
+        ${Button({
             label: "",
             id: "navigation-menu",
             classes: "Menu",
@@ -32,12 +38,12 @@ module.exports = () => {
       justify-content: center;
     }
 
-    .NAVIGATION > .button.Submit {
+    .NAVIGATION > .button.Highlighted {
       background-color: var(--yellow);
       width: auto;
     }
 
-    .NAVIGATION > .button.Submit:hover {
+    .NAVIGATION > .button.Highlighted:hover {
       background-color: var(--darkViolet);
     }
 
