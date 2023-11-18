@@ -50,6 +50,7 @@ module.exports = ({ classes = "", title, images = [] }) => {
 
         .slideShowImage img {
             object-fit: contain;
+            object-position: left;
             max-height: 100%;
             max-width: 100%;
             opacity: 0;
