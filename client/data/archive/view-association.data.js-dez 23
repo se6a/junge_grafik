@@ -51,156 +51,198 @@ module.exports = {
                 },
             ],
         },
-        // ////////////////////////////////////////////
         {
             type: "rows",
-            title: "Organisation Team",
+            title: "Executive board of Junge Grafik",
             length: 4,
             content: [
                 {
-                    type: "card-simple",
+                    type: "card-with-image",
                     title: `
             <div>Loana Boppart</div>
-            <div>Project manager</div>
+            <div>Project manager, Board member</div>
             <div>Remit: Coordination, Communication</div>
           `,
-                    noContent: true,
+                    image: {
+                        src: "assoc/jg_board-loana_boppart-__SIZE__.jpg",
+                        alt: "Portrait of Loana Boppart",
+                    },
+                    content: `<a class="textButton" href="http://studiolametta.ch" target="_blank">studiolametta.ch</a>`,
                 },
                 {
-                    type: "card-simple",
+                    type: "card-with-image",
                     title: `
             <div>Meret Fischli</div>
-            <div>Project manager</div>
+            <div>Project manager, Board member</div>
             <div>Remit: Jury, Communication</div>
           `,
-                    noContent: true,
+                    image: {
+                        src: "assoc/jg_board-meret_fischli-__SIZE__.jpg",
+                        alt: "Portrait of Meret Fischli",
+                    },
+                    content: `<a class="textButton" href="https://meretfischli.ch" target="_blank">meretfischli.ch</a>`,
                 },
                 {
-                    type: "card-simple",
+                    type: "card-with-image",
                     title: `
             <div>Tobias Klauser</div>
-            <div>Project manager</div>
+            <div>Project manager, Board member</div>
             <div>Remit: Foundations, Sponsorship</div>
           `,
-                    noContent: true,
+                    image: {
+                        src: "assoc/jg_board-tobias_klauser-__SIZE__.jpg",
+                        alt: "Portrait of Tobias Klauser",
+                    },
+                    content: `<a class="textButton" href="https://fachklassegrafik.ch" target="_blank">fachklassegrafik.ch</a>`,
                 },
                 {
-                    type: "card-simple",
+                    type: "card-with-image",
                     title: `
             <div>Jonas Keusch</div>
-            <div>Project manager</div>
+            <div>Project manager, Board member</div>
             <div>Remit: Event, Website</div>
           `,
-                    noContent: true,
+                    image: {
+                        src: "assoc/jg_board-jonas_keusch-__SIZE__.jpg",
+                        alt: "Portrait of Jonas Keusch",
+                    },
+                    content: `<a class="textButton" href="https://lequipe-visuelle.ch" target="_blank">lequipe-visuelle.ch</a>`,
                 },
 
                 {
-                    type: "card-simple",
+                    type: "card-with-image",
+                    title: `
+            <div>Thomas Steiner</div>
+            <div>Board member</div>
+          `,
+                    image: {
+                        src: "assoc/jg_board-thomas_steiner-__SIZE__.jpg",
+                        alt: "Portrait of Thomas Steiner",
+                    },
+                    content: `<a class="textButton" href="https://steiner-grafik.ch" target="_blank">steiner-grafik.ch</a>`,
+                },
+                {
+                    type: "card-with-image",
+                    title: `
+            <div>Nina Ruppen</div>
+            <div>Board member</div>
+          `,
+                    image: {
+                        src: "assoc/jg_board-nina_ruppen-__SIZE__.jpg",
+                        alt: "Portrait of Nina Ruppen",
+                    },
+                    content: `<a class="textButton" href="https://ninaruppen.ch" target="_blank">ninaruppen.ch</a>`,
+                },
+                {
+                    type: "card-with-image",
                     title: `
             <div>Bettina Klauser</div>
+            <div>Board member</div>
           `,
-                    noContent: true,
+                    image: {
+                        src: "assoc/jg_board-bettina_klauser-__SIZE__.jpg",
+                        alt: "Portrait of Bettina Klauser",
+                    },
+                    content: ``,
+                },
+                {
+                    type: "card-with-image",
+                    title: `
+            <div>Philipp Schubiger</div>
+            <div>Board member</div>
+          `,
+                    image: {
+                        src: "assoc/jg_board-philipp_schubiger-__SIZE__.jpg",
+                        alt: "Portrait of Philipp Schubiger",
+                    },
+                    content: `<a class="textButton" href="https://philipp-schubiger.ch" target="_blank">philipp-schubiger.ch</a>`,
                 },
             ],
         },
-        /*
 
-
-
-
-
-
-        */
         {
             type: "rows",
-            title: "Board Members",
+            title: "Honorary Members",
             length: 4,
             content: [
                 {
                     type: "card-simple",
-                    content: `<div>Loana Boppart</div>`,
+                    content: `
+            <div>Philippe Desarzens</div>
+            <div>Translator: French</div>
+          `,
                 },
                 {
                     type: "card-simple",
-                    content: `<div>Jonas Keusch</div>`,
+                    content: `
+            <div>Sebastian Wyss</div>
+            <div>Programmer</div>
+          `,
                 },
                 {
                     type: "card-simple",
-                    content: `<div>Meret Fischli</div>`,
+                    content: `
+            <div>Jakob Roduner</div>
+            <div>Translator: Italian</div>
+          `,
                 },
                 {
                     type: "card-simple",
-                    content: `<div>Bettina Klauser</div>`,
+                    content: `
+            <div>Benjamin Ramsauer</div>
+            <div>Translator: English</div>
+          `,
                 },
                 {
                     type: "card-simple",
-                    content: `<div>Tobias Klauser</div>`,
+                    content: `
+            <div>Sandro Egger</div>
+            <div>Former board member</div>
+          `,
                 },
                 {
                     type: "card-simple",
-                    content: `<div>Nina Ruppen</div>`,
+                    content: `
+            <div>Luis Hartl</div>
+            <div>Photographer</div>
+          `,
+                },
+
+                {
+                    type: "card-simple",
+                    content: `
+            <div>Remo Stahl</div>
+            <div>Former board member</div>
+          `,
                 },
                 {
                     type: "card-simple",
-                    content: `<div>Philipp Schubiger</div>`,
+                    content: `
+            <div>Moritz Profitlich</div>
+            <div>Former board member</div>
+          `,
                 },
                 {
                     type: "card-simple",
-                    content: `<div>Thomas Steiner</div>`,
+                    content: `
+            <div>Rainer Brenner</div>
+            <div>Former board member</div>
+          `,
                 },
             ],
         },
-        /*
-
-
-
-
-
-
-
-
-        */
 
         {
             type: "rows",
-            title: "Collaborators",
+            title: "Many thanks to our volunteer workers",
             length: 4,
             content: [
                 {
                     type: "card-simple",
-                    content: `Eleonora Bonarva`,
-                },
-                {
-                    type: "card-simple",
-                    content: "Mattia Dellamora",
-                },
-                {
-                    type: "card-simple",
-                    content: `Max Fingerhuth`,
-                },
-                {
-                    type: "card-simple",
-                    content: "Moritz Profitlich",
-                },
-                {
-                    type: "card-simple",
-                    content: `Milena Soubiran`,
-                },
-                {
-                    type: "card-simple",
-                    content: "Marco Spörri",
-                },
-                {
-                    type: "card-simple",
-                    content: `Baptiste Torrent`,
-                },
-                {
-                    type: "card-simple",
-                    content: "Anna Tuena",
-                },
-                {
-                    type: "card-simple",
-                    content: `Sebastian Wyss`,
+                    content: `
+            <div>Laura Robinson</div>
+            <div>Translator: English</div>
+          `,
                 },
             ],
         },

@@ -58,30 +58,105 @@ module.exports = {
         },
         {
             type: "columns",
+            length: 1,
             content: [
+                {
+                    type: "slideshow",
+                    title: "2023 Junge Grafik award ceremony",
+                    images: [
+                        {
+                            src: "ceremony2023/jg-ceremony-2023-__SIZE__-lnd-01.jpg",
+                            alt: "2023 award ceremony impression",
+                        },
+                        {
+                            src: "ceremony2023/jg-ceremony-2023-__SIZE__-lnd-02.jpg",
+                            alt: "2023 award ceremony impression",
+                        },
+                        {
+                            src: "ceremony2023/jg-ceremony-2023-__SIZE__-lnd-03.jpg",
+                            alt: "2023 award ceremony impression",
+                        },
+                        {
+                            src: "ceremony2023/jg-ceremony-2023-__SIZE__-lnd-04.jpg",
+                            alt: "2023 award ceremony impression",
+                        },
+                        {
+                            src: "ceremony2023/jg-ceremony-2023-__SIZE__-lnd-05.jpg",
+                            alt: "2023 award ceremony impression",
+                        },
+                        {
+                            src: "ceremony2023/jg-ceremony-2023-__SIZE__-lnd-06.jpg",
+                            alt: "2023 award ceremony impression",
+                        },
+                        {
+                            src: "ceremony2023/jg-ceremony-2023-__SIZE__-lnd-07.jpg",
+                            alt: "2023 award ceremony impression",
+                        },
+                        {
+                            src: "ceremony2023/jg-ceremony-2023-__SIZE__-lnd-08.jpg",
+                            alt: "2023 award ceremony impression",
+                        },
+                        {
+                            src: "ceremony2023/jg-ceremony-2023-__SIZE__-lnd-09.jpg",
+                            alt: "2023 award ceremony impression",
+                        },
+                        {
+                            src: "ceremony2023/jg-ceremony-2023-__SIZE__-lnd-10.jpg",
+                            alt: "2023 award ceremony impression",
+                        },
+                        {
+                            src: "ceremony2023/jg-ceremony-2023-__SIZE__-lnd-11.jpg",
+                            alt: "2023 award ceremony impression",
+                        },
+                        {
+                            src: "ceremony2023/jg-ceremony-2023-__SIZE__-lnd-12.jpg",
+                            alt: "2023 award ceremony impression",
+                        },
+                        {
+                            src: "ceremony2023/jg-ceremony-2023-__SIZE__-lnd-13.jpg",
+                            alt: "2023 award ceremony impression",
+                        },
+                        {
+                            src: "ceremony2023/jg-ceremony-2023-__SIZE__-lnd-14.jpg",
+                            alt: "2023 award ceremony impression",
+                        },
+                        {
+                            src: "ceremony2023/jg-ceremony-2023-__SIZE__-lnd-15.jpg",
+                            alt: "2023 award ceremony impression",
+                        },
+                        {
+                            src: "ceremony2023/jg-ceremony-2023-__SIZE__-lnd-16.jpg",
+                            alt: "2023 award ceremony impression",
+                        },
+                        {
+                            src: "ceremony2023/jg-ceremony-2023-__SIZE__-lnd-17.jpg",
+                            alt: "2023 award ceremony impression",
+                        },
+                    ],
+                },
                 {
                     type: "slideshow",
                     title: "2021 Junge Grafik award ceremony",
                     images: [
                         {
-                            src: "slideshow/2021-award-ceremony-impressions-__SIZE__-lnd-02.jpg",
-                            alt: "",
+                            src: "ceremony2021/jg-ceremony-2021-__SIZE__-lnd-02.jpg",
+                            alt: "2021 award ceremony impression",
                         },
                         {
-                            src: "slideshow/2021-award-ceremony-impressions-__SIZE__-lnd-03.jpg",
-                            alt: "",
+                            src: "ceremony2021/jg-ceremony-2021-__SIZE__-lnd-03.jpg",
+                            alt: "2021 award ceremony impression",
                         },
                         {
-                            src: "slideshow/2021-award-ceremony-impressions-__SIZE__-lnd-04.jpg",
-                            alt: "",
+                            src: "ceremony2021/jg-ceremony-2021-__SIZE__-lnd-04.jpg",
+                            alt: "2021 award ceremony impression",
                         },
                         {
-                            src: "slideshow/2021-award-ceremony-impressions-__SIZE__-lnd-05.jpg",
-                            alt: "",
+                            src: "ceremony2021/jg-ceremony-2021-__SIZE__-lnd-05.jpg",
+                            alt: "2021 award ceremony impression",
                         },
                         {
-                            src: "slideshow/2021-award-ceremony-impressions-__SIZE__-lnd-06.jpg",
-                            alt: "",
+                            src: "ceremony2021/jg-ceremony-2021-__SIZE__-lnd-06.jpg",
+                            alt: "2021 award ceremony impression",
                         },
                     ],
                 },

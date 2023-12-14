@@ -2,7 +2,7 @@ const Checkbox = getSnippet("input-checkbox");
 const EmailInput = getSnippet("input-email");
 const IconNext = getSnippet("icon-next");
 
-module.exports = ({ name = "", title, content }) => {
+module.exports = ({ name = "", title, content, noContent = false }) => {
     let displayTitle = "";
 
     if (!title) {
@@ -18,14 +18,16 @@ module.exports = ({ name = "", title, content }) => {
         </h3>
       </header>
 
-      <div class="SimpleCard box content">
+      <div class="SimpleCard box content ${noContent ? "isHidden" : ""}">
         ${content}
       </div>
-
     </article>
   `;
 
     const css = /*css*/ `
+    .SimpleCard.content.isHidden {
+        display: none;
+    }
   `;
 
     return ["card-simple.snip", html, css];

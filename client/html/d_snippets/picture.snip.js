@@ -7,13 +7,23 @@ const contexts = {
         },
         path: "/media/__CONTEXT__/__SIZE__/__FILENAME__",
     },
-    slideshow: {
+
+    ceremony2021: {
         sizes: {
             sm: "max-width: 599px",
             md: "min-width: 600px",
         },
         path: "/media/__CONTEXT__/__SIZE__/__FILENAME__",
     },
+
+    ceremony2023: {
+        sizes: {
+            md: "max-width: 1000px",
+            lg: "min-width: 1001px",
+        },
+        path: "/media/__CONTEXT__/__SIZE__/__FILENAME__",
+    },
+
     projects2021: {
         sizes: {
             md: "max-width: 1000px",
@@ -73,6 +83,7 @@ module.exports = (
         filename = parts[2];
         context = parts[1];
     }
+    console.log({ src, context, parts });
 
     const html = /*html*/ `
     <picture class="${classes ? ` ${classes}` : ""}">
