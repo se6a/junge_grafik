@@ -29,6 +29,7 @@ module.exports = ({ classes = "", title, images = [] }) => {
         .SlideShow {
             flex-direction: column;
             height: 80vh;
+            cursor: pointer;
         }
 
         .slideShowImages {

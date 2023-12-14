@@ -96,13 +96,13 @@ module.exports = {
             content: [
                 {
                     type: "card-with-image",
-                    title: `<div>Alice Franchetti</div>`,
-                    content: `<a class="textButton" href="https://alicefranchetti.ch" target="_blank">alicefranchetti.ch</a>`,
+                    title: `<div>Leonardo Angelucci</div>`,
+                    content: `<a class="textButton" href="https://leonardo-angelucci.ch" target="_blank">leonardo-angelucci.ch</a>`,
                 },
                 {
                     type: "card-with-image",
-                    title: `<div>Cédric Oppliger</div>`,
-                    content: `<a class="textButton" href="https://roli-deluxe.ch" target="_blank">roli-deluxe.ch</a>`,
+                    title: `<div>Priscilla Balmer</div>`,
+                    content: `<a class="textButton" href="https://balmerhahlen.ch" target="_blank">balmerhahlen.ch</a>`,
                 },
                 {
                     type: "card-with-image",
@@ -121,8 +121,13 @@ module.exports = {
                 },
                 {
                     type: "card-with-image",
-                    title: `<div>Leonardo Angelucci</div>`,
-                    content: `<a class="textButton" href="https://leonardo-angelucci.ch" target="_blank">leonardo-angelucci.ch</a>`,
+                    title: `<div>Alice Franchetti</div>`,
+                    content: `<a class="textButton" href="https://alicefranchetti.ch" target="_blank">alicefranchetti.ch</a>`,
+                },
+                {
+                    type: "card-with-image",
+                    title: `<div>Sarah Owens</div>`,
+                    content: `<a class="textButton" href="https://visualcommunication.zhdk.ch/personen/team/sarah-owens" target="_blank">visualcommunication.zhdk.ch</a>`,
                 },
                 {
                     type: "card-with-image",
@@ -131,13 +136,8 @@ module.exports = {
                 },
                 {
                     type: "card-with-image",
-                    title: `<div>Priscilla Balmer</div>`,
-                    content: `<a class="textButton" href="https://balmerhahlen.ch" target="_blank">balmerhahlen.ch</a>`,
-                },
-                {
-                    type: "card-with-image",
-                    title: `<div>Sarah Owens</div>`,
-                    content: `<a class="textButton" href="https://visualcommunication.zhdk.ch/personen/team/sarah-owens" target="_blank">visualcommunication.zhdk.ch</a>`,
+                    title: `<div>Cédric Oppliger</div>`,
+                    content: `<a class="textButton" href="https://roli-deluxe.ch" target="_blank">roli-deluxe.ch</a>`,
                 },
             ],
         },

@@ -189,30 +189,6 @@ module.exports = {
         },
         students: [
             {
-                firstname: "Malin",
-                lastname: "Ettlin",
-                portfolio: "",
-                instagram: "",
-            },
-            {
-                firstname: "Chiara",
-                lastname: "Bammert",
-                portfolio: "",
-                instagram: "",
-            },
-            {
-                firstname: "Fiona",
-                lastname: "Wolfisberg",
-                portfolio: "",
-                instagram: "",
-            },
-            {
-                firstname: "Lien",
-                lastname: "Grossmann",
-                portfolio: "",
-                instagram: "",
-            },
-            {
                 firstname: "Paula",
                 lastname: "Almes",
                 portfolio: "",
@@ -225,14 +201,26 @@ module.exports = {
                 instagram: "",
             },
             {
-                firstname: "Moira",
-                lastname: "Zurkirchen",
+                firstname: "Chiara",
+                lastname: "Bammert",
                 portfolio: "",
                 instagram: "",
             },
             {
-                firstname: "Nurel",
-                lastname: "Özdemir",
+                firstname: "Malin",
+                lastname: "Ettlin",
+                portfolio: "",
+                instagram: "",
+            },
+            {
+                firstname: "Lien",
+                lastname: "Grossmann",
+                portfolio: "",
+                instagram: "",
+            },
+            {
+                firstname: "Mascha",
+                lastname: "Hermann",
                 portfolio: "",
                 instagram: "",
             },
@@ -243,8 +231,20 @@ module.exports = {
                 instagram: "",
             },
             {
-                firstname: "Mascha",
-                lastname: "Hermann",
+                firstname: "Nurel",
+                lastname: "Özdemir",
+                portfolio: "",
+                instagram: "",
+            },
+            {
+                firstname: "Fiona",
+                lastname: "Wolfisberg",
+                portfolio: "",
+                instagram: "",
+            },
+            {
+                firstname: "Moira",
+                lastname: "Zurkirchen",
                 portfolio: "",
                 instagram: "",
             },
@@ -279,8 +279,8 @@ module.exports = {
             {
                 firstname: "Stanislas",
                 lastname: "Favre",
-                portfolio: "",
-                instagram: "",
+                portfolio: "https://stanislasfavre.com/",
+                instagram: "@stanislas.favre",
             },
         ],
         education: {
@@ -456,16 +456,16 @@ module.exports = {
         },
         students: [
             {
-                firstname: "Dimitris",
-                lastname: "Giannoulas",
-                portfolio: "",
-                instagram: "dimitris.giannoulas",
-            },
-            {
                 firstname: "Orlando",
                 lastname: "Brunner",
                 portfolio: "http://orlandobrunner.com",
                 instagram: "orlandobrunner",
+            },
+            {
+                firstname: "Dimitris",
+                lastname: "Giannoulas",
+                portfolio: "",
+                instagram: "dimitris.giannoulas",
             },
             {
                 firstname: "Nathan",
@@ -597,7 +597,7 @@ module.exports = {
             title: "The Glass Ceiling",
             tags: ["Editorial design", "Typography"],
             year: 0,
-            teacher: ["Giliane Cachin", "Marietta Engster", "David Keshavjee"],
+            teacher: ["Giliane Cachin", "Marietta Eugster", "David Keshavjee"],
             description:
                 "Frauen werden seltener in Führungspositionen befördert als Männer. Um Aufmerksamkeit darauf zu lenken, informiert «The Glass Ceiling» über die Chancenungleichheit in 29 Ländern. Die Zeitung gibt 40 Stimmen eine Plattform. Jede Art von Stimme (Fakten, Erfahrungen, Zitate, Statistiken) wird durch eine eigene visuelle Sprache vermittelt. Je besser ein Land abschneidet, desto mehr Raum nehmen die Stimmen ein und desto mehr wird das traditionelle Layout aufgebrochen. Das Ergebnis ist ein komplexes typografisches System, welches das Endziel, nämlich das Aufbrechen der gläsernen Decke, gestalterisch vorweggreift. Das Plakat visualisiert meine Sicht auf das Thema und ist eine Hommage an April Greimans gestalterisches Werk. Sie war eine Pionierin des feministischen Designs.",
             images: [
@@ -693,16 +693,16 @@ module.exports = {
                 instagram: "aur.h.h",
             },
             {
-                firstname: "Iris",
-                lastname: "Moine",
-                portfolio: "https://irismoine.ch",
-                instagram: "iris.moine",
-            },
-            {
                 firstname: "Anaelle",
                 lastname: "Iglesias Caballo",
                 portfolio: "",
                 instagram: "anaelle.iglesias",
+            },
+            {
+                firstname: "Iris",
+                lastname: "Moine",
+                portfolio: "https://irismoine.ch",
+                instagram: "iris.moine",
             },
         ],
         education: {
@@ -1009,7 +1009,7 @@ module.exports = {
         },
         project: {
             id: 111,
-            title: "re-poster – tradizione e innovazione dei manifesto svizzero",
+            title: "re-poster – tradizione e innovazione del manifesto svizzero",
             tags: ["Poster design", "Interaction design", "Editorial design"],
             year: 0,
             teacher: ["Leonardo Angelucci"],
@@ -1031,16 +1031,16 @@ module.exports = {
         },
         students: [
             {
-                firstname: "Anaïs",
-                lastname: "Vidal",
-                portfolio: "https://anaisvidal.ch/",
-                instagram: "anaisvidal.ch",
-            },
-            {
                 firstname: "Irini",
                 lastname: "Gleglakou",
                 portfolio: "https://irinigleglakou.ch/",
                 instagram: "irini.gleglakou",
+            },
+            {
+                firstname: "Anaïs",
+                lastname: "Vidal",
+                portfolio: "https://anaisvidal.ch/",
+                instagram: "anaisvidal.ch",
             },
         ],
         education: {
@@ -1073,10 +1073,10 @@ module.exports = {
         },
         students: [
             {
-                firstname: "Severin",
-                lastname: "Weber",
-                portfolio: "http://severinweber.ch",
-                instagram: "severinweber_",
+                firstname: "Armando",
+                lastname: "Guetg",
+                portfolio: "https://armandoguetg.ch/",
+                instagram: "funkyguegini",
             },
             {
                 firstname: "Tanja",
@@ -1085,10 +1085,10 @@ module.exports = {
                 instagram: "tanjabailiff",
             },
             {
-                firstname: "Armando",
-                lastname: "Guetg",
-                portfolio: "https://armandoguetg.ch/",
-                instagram: "funkyguegini",
+                firstname: "Severin",
+                lastname: "Weber",
+                portfolio: "http://severinweber.ch",
+                instagram: "severinweber_",
             },
         ],
         education: {
