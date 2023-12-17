@@ -51,7 +51,6 @@ module.exports = {
                 },
             ],
         },
-        // ////////////////////////////////////////////
         {
             type: "rows",
             title: "Organisation Team",
@@ -78,6 +77,15 @@ module.exports = {
                 {
                     type: "card-simple",
                     title: `
+            <div>Jonas Keusch</div>
+            <div>Project manager</div>
+            <div>Remit: Event, Website</div>
+          `,
+                    noContent: true,
+                },
+                {
+                    type: "card-simple",
+                    title: `
             <div>Tobias Klauser</div>
             <div>Project manager</div>
             <div>Remit: Foundations, Sponsorship</div>
@@ -87,30 +95,12 @@ module.exports = {
                 {
                     type: "card-simple",
                     title: `
-            <div>Jonas Keusch</div>
-            <div>Project manager</div>
-            <div>Remit: Event, Website</div>
-          `,
-                    noContent: true,
-                },
-
-                {
-                    type: "card-simple",
-                    title: `
             <div>Bettina Klauser</div>
           `,
                     noContent: true,
                 },
             ],
         },
-        /*
-
-
-
-
-
-
-        */
         {
             type: "rows",
             title: "Board Members",
@@ -122,11 +112,11 @@ module.exports = {
                 },
                 {
                     type: "card-simple",
-                    content: `<div>Jonas Keusch</div>`,
+                    content: `<div>Meret Fischli</div>`,
                 },
                 {
                     type: "card-simple",
-                    content: `<div>Meret Fischli</div>`,
+                    content: `<div>Jonas Keusch</div>`,
                 },
                 {
                     type: "card-simple",
@@ -150,16 +140,6 @@ module.exports = {
                 },
             ],
         },
-        /*
-
-
-
-
-
-
-
-
-        */
 
         {
             type: "rows",

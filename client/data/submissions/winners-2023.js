@@ -198,19 +198,19 @@ module.exports = {
                 firstname: "Pascal",
                 lastname: "Bässler",
                 portfolio: "",
-                instagram: "",
+                instagram: "pascal_bae",
             },
             {
                 firstname: "Chiara",
                 lastname: "Bammert",
                 portfolio: "",
-                instagram: "",
+                instagram: "punkt.ch",
             },
             {
                 firstname: "Malin",
                 lastname: "Ettlin",
                 portfolio: "",
-                instagram: "",
+                instagram: "mal.indiskret",
             },
             {
                 firstname: "Lien",
@@ -222,7 +222,7 @@ module.exports = {
                 firstname: "Mascha",
                 lastname: "Hermann",
                 portfolio: "",
-                instagram: "",
+                instagram: "mascha.44",
             },
             {
                 firstname: "Colin",
@@ -240,13 +240,13 @@ module.exports = {
                 firstname: "Fiona",
                 lastname: "Wolfisberg",
                 portfolio: "",
-                instagram: "",
+                instagram: "graphic_the_sign",
             },
             {
                 firstname: "Moira",
                 lastname: "Zurkirchen",
                 portfolio: "",
-                instagram: "",
+                instagram: "moi.zu",
             },
         ],
         education: {
@@ -280,7 +280,7 @@ module.exports = {
                 firstname: "Stanislas",
                 lastname: "Favre",
                 portfolio: "https://stanislasfavre.com/",
-                instagram: "@stanislas.favre",
+                instagram: "stanislas.favre",
             },
         ],
         education: {

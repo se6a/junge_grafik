@@ -17,7 +17,7 @@ module.exports = {
                     type: "text",
                     size: "l",
                     content:
-                        "TTTThe winning projects are online! Check out the stunning works of the next generation of swiss graphic designers. Big up to all the students and apprentices who submitted their works to the Junge Grafik Award 2023. Grazie! Merci! Danke!",
+                        "The winning projects are online! Check out the stunning works of the next generation of swiss graphic designers. Big up to all the students and apprentices who submitted their works to the Junge Grafik Award 2023. Grazie! Merci! Danke!",
                 },
             ],
         },
@@ -57,7 +57,7 @@ module.exports = {
             ],
         },
         {
-            type: "columns",
+            type: "rows",
             length: 1,
             content: [
                 {
