@@ -32,7 +32,6 @@ module.exports = async ({ req, ...data }) => {
     const year = parseInt(locals?.year) || 2023;
 
     const selectedSubmissions = submissions?.[year];
-    // console.log({ selectedSubmissions });
 
     if (!selectedSubmissions) return error404();
 

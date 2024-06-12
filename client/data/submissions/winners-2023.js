@@ -23,6 +23,8 @@ module.exports = {
             tags: ["Editorial design"],
             year: 0,
             teacher: ["Jonas Berhod"],
+            interview:
+                "https://www.youtube.com/watch?v=mRoxzGMcipg&list=PLkWFCUkuvoL1eiczzAisPdW15Dfl2lSrZ&index=16",
             description:
                 "Descendante d’une famille juive, Ba’Aretz est un projet autour de mes questionnements par rapport à ma culture israëlienne et comment je me situe entre ce qui me fait me sentir à la fois proche et en décalage par rapport à celle-ci. Des images tirées d’albums photos de mes grandsparents et des diapositives de voyage de mon père lorsqu’il avait le même âge que moi aujourd’hui viennent se mêler à mes propres souvenirs et traduisent une quête d’identité qui tourne autour de l’héritage, mais également un hommage à la beauté de ce pays. La cohabitation de l’arabe et de l’hébreu sur les panneaux de routes et dans les rues ne reflète pas la situation politique du pays. Des articles de journaux viennent le souligner en parallèle à des street views.",
             images: [
@@ -58,6 +60,8 @@ module.exports = {
             tags: ["Animation design", "Poster design", "Editorial design"],
             year: 0,
             teacher: ["David Mamie", "Rémy Bender"],
+            interview:
+                "https://www.youtube.com/watch?v=MTrLXs0_Nso&list=PLkWFCUkuvoL1eiczzAisPdW15Dfl2lSrZ&index=19",
             description:
                 "Les caves de la Muette, centre d’art vivant situé à Pully, dans les caves de la maison de Charles-Ferdinand Ramuz, offre une programmation variée. Théâtre, projections de films classiques et underground, ainsi que des artistes musicaux émergents sont mis en avant. Les caves du 16ème siècle, anciennement utilisées par un vigneron, offrent un cadre vouté aux murs effrités. Les visuels représentent un mur se détachant, symbole de l’ouverture à la culture. Pour l’affiche, la typographie Ruder Plakat est choisie, évoquant la force, les poutres en bois et un hommage à la culture graphique suisse. Quant au texte du journal, la typographie Face de chez Extraset est utilisée, représentant la transition entre le journalisme papier et numérique, en accord avec l’esprit des caves de la Muette.",
             images: [
@@ -136,6 +140,8 @@ module.exports = {
                 "Alexandru Balgiu",
                 "Angelo Benedetto",
             ],
+            interview:
+                "https://www.youtube.com/watch?v=FLcB3E8Lc1g&list=PLkWFCUkuvoL1eiczzAisPdW15Dfl2lSrZ&index=12",
             description:
                 "Pratiquant le Krump, j’ai constaté le manque de contenu éditorial dédié à cette danse. Originaire des quartiers défavorisés de South Central à Los Angeles, dans les années 1990, le Krump est un moyen pour les danseurs d’exprimer leur colère, leur agressivité, leur frustration et leur douleur de manière positive. Ce magazine met en lumière l’esprit de cette danse à travers ses codes : son esprit communautaire, son vocabulaire, sa musique ou encore ses compétitions. En allant à la rencontre des acteurs de cette scène en Suisse, je souhaite offrir une perspective authentique de ce mouvement. Ce projet est réalisé dans le cadre d’un travail de diplôme et je désire continuer ce projet pour ainsi promouvoir et participer au développement de cette culture.",
             images: [
@@ -172,6 +178,8 @@ module.exports = {
             tags: ["Editorial design"],
             year: 0,
             teacher: ["Nicole Udry"],
+            interview:
+                "https://www.youtube.com/watch?v=CnQA1pS9IP4&list=PLkWFCUkuvoL1eiczzAisPdW15Dfl2lSrZ&index=17",
             description:
                 "DSE est un livre qui parle de la prison, un des milieux les plus controversés de notre système de justice. Elles sont censées être des lieux où les gens sont punis et réhabilités, mais elles sont souvent critiquées pour leur surpopulation, leur manque de ressources et leurs conditions de detention inhumaines. Ce travail n’est pas seulement graphique mais également, dans un certain sens, journalistique. Tous les textes et archives ont été un travail d’interview et de recherche. Ce livre propose à travers ce que j’ai appris, une introduction à ce qu’est réellement la prison et tous ses enjeux selon ses différents angles. Cette édition est répartie en cinq chapitres qui traitent chacun d’un aspect spécifique de mes recherches.",
             images: [
@@ -295,6 +303,8 @@ module.exports = {
             tags: ["Animation design", "Photography"],
             year: 0,
             teacher: ["Markus Käch", "Samuel Weidmann"],
+            interview:
+                "https://www.youtube.com/watch?v=Mpne28zCjAc&list=PLkWFCUkuvoL1eiczzAisPdW15Dfl2lSrZ&index=18",
             description:
                 "L’animation « Two Constructivist Manifestos » est une mise en mouvement des concepts fondateurs du constructivisme décrits dans les années 1920 par A. Rodchenko et V. Stepanova. Dans cette perspective, une dizaine de personnes ont été invitées à bâtir leur structure idéale, à la décrire, puis la détruire. Dans un ballet géométrique aux couleurs éclatantes s’ouvre une réflexion visuelle sur la puissance et la fragilité des idéaux, sur notre besoin de structure et les risques de glissements totalitaires que ceux-ci impliquent.",
             images: [
@@ -331,6 +341,8 @@ module.exports = {
             tags: ["Poster design", "Animation design"],
             year: 0,
             teacher: ["Martin Woodtli", "Felix Pfäffli", "Melchior Imboden"],
+            interview:
+                "https://www.youtube.com/watch?v=8zWybjfntaw&list=PLkWFCUkuvoL1kQ7r5uKKCaTVP7eBuqge5&index=3",
             description:
                 "Ist die Atomenergie eine sinnvolle und nachhaltige Energiequelle oder doch nur zum Scheitern verurteilt? Die Atomenergie spaltet nicht nur Kerne, sondern auch die Bevölkerung. Für mein Plakat, welches zum Thema Energie entstand, habe ich mich mit der Atomenergie auseinandergesetzt. Da das so ein umstrittenes Thema ist, habe ich das Ganze ironisch aufgefasst und dieser Energie einen kulturell wichtigen Platz gegeben, nämlich auf einer Briefmarke – und habe es so dargestellt, als wäre sie ein Aushängeschild für die Schweiz. Doch wenn man genauer hinschaut und das Erscheinungsjahr, den Absender und die angehängte Marke betrachtet, erkennt man, dass der Schein trügt und doch nicht alles so schön und einfach ist wie erhofft.",
             images: [
@@ -438,6 +450,8 @@ module.exports = {
             tags: ["Editorial design"],
             year: 0,
             teacher: ["Diego Bontognali"],
+            interview:
+                "https://www.youtube.com/watch?v=W7uXmg3JDW0&list=PLkWFCUkuvoL1kQ7r5uKKCaTVP7eBuqge5&index=2",
             description:
                 "The subjects of the book “We don’t go back to normality” are politics and music in Santiago de Chile. The content, editing and design had to be found and implemented accordingly. It is related to the political history of Chile and, more specifically, to the events that occurred in Santiago de Chile after Pinochet, from dictatorship towards democracy, the uprising of 2019, and the role of music in political events. The book’s aim is to provide encyclopaedic content that could serve as a guide book for someone who is visiting Santiago for the first time and is interested in these topics.",
             images: [
@@ -522,6 +536,8 @@ module.exports = {
             tags: ["Editorial design", "Photography"],
             year: 0,
             teacher: ["Nicole Udry"],
+            interview:
+                "https://www.youtube.com/watch?v=FdXY5q6hH7s&list=PLkWFCUkuvoL1eiczzAisPdW15Dfl2lSrZ&index=13",
             description:
                 "Velvet flowers remet en question les différents sentiments que les lieux abandonnés peuvent nous évoquer. À la lecture de l’ouvrage, une nostalgie s’installe, puis c’est au tour de l’inquiétude et du malaise. Nous pouvons sentir différentes traces et empreintes laissées par des entités, humaines ou non. L’expérience est retranscrite à travers des photographies en argentique, des pages de textes denses et des fragments du lieu. Le sentiment de déjàvu nous soumet à une question de temporalité qui ne peut être définie et nous interroge sur le fait que nous ne nous trouvons jamais dans les bonnes traces.",
             images: [
@@ -598,6 +614,8 @@ module.exports = {
             tags: ["Editorial design", "Typography"],
             year: 0,
             teacher: ["Giliane Cachin", "Marietta Eugster", "David Keshavjee"],
+            interview:
+                "https://www.youtube.com/watch?v=My5b6MTogPw&list=PLkWFCUkuvoL1eiczzAisPdW15Dfl2lSrZ&index=4",
             description:
                 "Frauen werden seltener in Führungspositionen befördert als Männer. Um Aufmerksamkeit darauf zu lenken, informiert «The Glass Ceiling» über die Chancenungleichheit in 29 Ländern. Die Zeitung gibt 40 Stimmen eine Plattform. Jede Art von Stimme (Fakten, Erfahrungen, Zitate, Statistiken) wird durch eine eigene visuelle Sprache vermittelt. Je besser ein Land abschneidet, desto mehr Raum nehmen die Stimmen ein und desto mehr wird das traditionelle Layout aufgebrochen. Das Ergebnis ist ein komplexes typografisches System, welches das Endziel, nämlich das Aufbrechen der gläsernen Decke, gestalterisch vorweggreift. Das Plakat visualisiert meine Sicht auf das Thema und ist eine Hommage an April Greimans gestalterisches Werk. Sie war eine Pionierin des feministischen Designs.",
             images: [
@@ -633,6 +651,8 @@ module.exports = {
             tags: ["Editorial design"],
             year: 0,
             teacher: ["Vincent Devaud", "Thibaud Tissot"],
+            interview:
+                "https://www.youtube.com/watch?v=9InJd9VJo34&list=PLkWFCUkuvoL1eiczzAisPdW15Dfl2lSrZ&index=9",
             description:
                 "Varg Vikernes, musicien norvégien de Black Metal, est connu pour sa révolution dans ce genre musical. Cependant, il est aussi associé à des crimes. Dans les 90s, Varg a incendié des églises en Norvège et a commis le meurtre d’Euronymous, leader du groupe Mayhem. Ce livre est une enquête approfondie sur sa vie, en explorant ses compositions musicales, proposant une entrevue et en examinant sa représentation dans les médias, le tout dans le but de comprendre les raisons qui l’ont poussé à commettre ces actes. Concluant cette enquête, un glossaire de 666 mots recueillis à partir des sources documentées et utilisées dans l’ouvrage. Ce glossaire reflète la personnalité de Varg et son univers. Pour documenter ce livre, j’ai décidé de me rendre en Norvège pour créer une vidéo, sur ses traces.",
             images: [
@@ -670,6 +690,8 @@ module.exports = {
             tags: ["Poster design", "Corporate design", "Web design"],
             year: 0,
             teacher: ["Thibaud Tissot", "Dimitri Jeannottat"],
+            interview:
+                "https://www.youtube.com/watch?v=9InJd9VJo34&list=PLkWFCUkuvoL1eiczzAisPdW15Dfl2lSrZ&index=9",
             description:
                 "Identité visuelle réalisée pour les 150 ans de l’École des arts appliqués de la Chaux-de-Fonds (EAA) en 2022. L’identité se base sur l’aspect visuel informatif des journaux anciens comme modernes, en s’inspirant de la typographie des journaux et à l’équilibre du noir et blanc. Ce projet fut développé sous forme d’affiches et de flyers jusqu’à la cérémonie et au défilé de l’École aux anciens abattoirs de la Chaux-de-Fonds. Le concept se base sur des modules regroupant les informations, qui peuvent bouger dans la structure et donc s’adapter au support. Le but étant de raconter la riche histoire de l’École ainsi que son impact culturel de l’époque à aujourd’hui, ceci se ressens particulièrement sur le site, à travers une timeline interactive retraçant l’historique de l’École.",
             images: [
@@ -717,6 +739,8 @@ module.exports = {
             tags: ["Editorial design", "Illustration", "Animation design"],
             year: 0,
             teacher: ["Angelo Benedetto", "Vincent Jacquier", "Pauline Saglio"],
+            interview:
+                "https://www.youtube.com/watch?v=Nt-hlw2MIJQ&list=PLkWFCUkuvoL1eiczzAisPdW15Dfl2lSrZ&index=7",
             description:
                 "The coral rescue project est un projet qui prend en charge les questions concernant la vie aquatique. Nous avons dé-cidé de nous pencher sur l’extinction des coraux, qui s’est accélérée au cours des dernières décennies. Ce journal décrit 14 solutions pour aider à les sauver, seul ou à plusieurs. Pliable, il se présente sous forme de mini affiches informatives illustrées et des QR codes pour en savoir plus sur la cause. L’édition est guidée par une page instagram composée de GIFs, qui nous aide à comprendre et à toucher une plus grande partie de la population.",
             images: [
@@ -753,6 +777,8 @@ module.exports = {
             tags: ["Editorial design", "Photography"],
             year: 0,
             teacher: ["Diego Bontognali"],
+            interview:
+                "https://www.youtube.com/watch?v=7cPcyDwYmnI&list=PLkWFCUkuvoL1kQ7r5uKKCaTVP7eBuqge5&index=4",
             description:
                 "Le projet se focalise sur la guerre du Viêt Nam, qui est marquée par des périodes d’intensité extrême ainsi que des moments de calme. Les pauses, également connues sous le nom de « stand down », symbolisent l’importance cruciale de la musique en tant que moyen d’évasion pour les soldats, leur permettant ainsi de s’éloigner de la réalité accablante de la guerre et des moments de tension qui sont qualifiés de « gear up ». Stand Down/Broadsheet 350 × 500 Gear Up/Book 138 × 200",
             images: [
@@ -787,6 +813,8 @@ module.exports = {
             tags: ["Editorial design", "Typography", "Photography"],
             year: 0,
             teacher: ["Dimitri Jeannottat"],
+            interview:
+                "https://www.youtube.com/watch?v=V2VSGz6BIzc&list=PLkWFCUkuvoL1eiczzAisPdW15Dfl2lSrZ&index=14",
             description:
                 "In December 2022, I stumbled upon a perplexing earthquake that not only affected my entire family, but also became the catalyst for their migration to Switzerland. In my quest for understanding, I delved into archives, examined images and conducted three enlightening interviews with my mother, a village rescuer and a historian. The profound impact of this event on my family and the broader region of Southern Italy will now be unraveled through this book, which serves as my diploma project. Within its covers, you will have the opportunity to relive this traumatic occurrence through an array of compelling content, including archival documents, evocative pictures, gripping interviews, insights into the present condition of the villages and statistics.",
             images: [
@@ -827,6 +855,8 @@ module.exports = {
             ],
             year: 0,
             teacher: ["Giliane Cachin", "Marietta Eugster", "David Keshavjee"],
+            interview:
+                "https://www.youtube.com/watch?v=KfW24lkMhnU&list=PLkWFCUkuvoL1eiczzAisPdW15Dfl2lSrZ&index=15",
             description:
                 "How can music be represented visually? “Canvas” is a project that examines this question in a systematic way through the use of graphic tools. A formal language is generated by six songs, broken down into a multitude of notes that each have their own visual code. The results are then presented as audio-visual experiments through animations, which are then sequenced in a publication with the aim of rep-resenting the rhythm and melody in print and reinterpreting the musical score. The pieces come from six musicians: I analysed and reworked them with several musical software programs in order to extract the maximum number of notes and separate these into several tracks, so that each note could be designed separately.",
             images: [
@@ -864,6 +894,8 @@ module.exports = {
             tags: ["Editorial design"],
             year: 0,
             teacher: ["Nicole Udry"],
+            interview:
+                "https://www.youtube.com/watch?v=HZVIZFX6e1w&list=PLkWFCUkuvoL1eiczzAisPdW15Dfl2lSrZ&index=10",
             description:
                 "Le livre intitulé « Le Radeau » est un hommage à l’institution du même nom, qui accueille des personnes en lutte contre l’addiction. Il offre une rencontre entre ces individus et l’institution, mettant en évidence le contraste entre force et fragilité. À travers une série de témoignages, ce livre dévoile des histoires de vie profondément marquées par la dualité, oscillant entre une réalité brutale et l’espoir d’un avenir meilleur. En donnant une voix à ceux qui sont marginalisés dans notre société, ces récits révèlent leurs luttes contre leurs démons intérieurs et leurs dépendances. Malgré les épreuves, cette édition illumine les étincelles de résilience et de bravoure, invitant à la compassion et à la compréhension envers ceux qui aspirent à une vie plus épanouissante.",
             images: [
@@ -900,6 +932,8 @@ module.exports = {
             tags: ["Typeface design", "Typography", "Signage design"],
             year: 0,
             teacher: ["Laurent Kuhni", "Demian Conrad"],
+            interview:
+                "https://www.youtube.com/watch?v=yYFsBLcGIGE&list=PLkWFCUkuvoL1eiczzAisPdW15Dfl2lSrZ&index=6",
             description:
                 "Le WarnunGrotesk est un caractère grotesque condensé trouvant ses inspirations dans plusieurs sources. Tout d’abord le vernaculaire à travers des panneaux de signalisation ferroviaire français visant à prévenir du danger des fils électriques. Mais également d’un spécimen de la Flinsch Type Foundry de Frankfort datant de 1866, présentant des caractères similaire. Le WarnunGrotesk tente de retranscrire l’aspect organique et humain du dessin manuel lié à la source (peinture en lettre/plomb), à travers un dessin présentant des détails allant à l’encontre d’un tracé numé-rique lisse. Ce caractère se narre autour de la seconde révolution industrielle, période dans laquelle travailler en industrie était un travail dangereux. Sa communication reprend les codes de ce contexte et son histoire graphique.",
             images: [
@@ -941,6 +975,7 @@ module.exports = {
                 "Sylvia Geel",
                 "Corinne Riedener",
             ],
+            interview: "https://www.youtube.com/watch?v=bWF5eNUnkLM",
             description:
                 "Illustrierte Kuriositäten und Antworten auf Fragen, die du dir nicht gestellt hast. Unterhaltsame Fakten, misslungene Verbrechen und seltsame Berichte, verbildlicht in einer Zeitung gesammelt. Um dem bereits lange bestehenden Informationsmedium Zeitung eine neue Dimension zu geben, sind einige dieser Illustrationen beim Einscannen der Bilder mit «Artivive» in animierter Version betrachtbar. Die Arbeit wollte ich dazu nutzen, mich in Bezug auf das Thema Illustration weiterzuentwickeln und herauszufordern. Somit war es mein Ziel, eine grosse Bandbreite an unterschiedlichen Techniken, Stilen und Sujets anzuwenden.",
             images: [
@@ -977,6 +1012,8 @@ module.exports = {
             tags: ["Editorial design", "Infographic design"],
             year: 0,
             teacher: ["Thibaud Tissot", "Vincent Devaud"],
+            interview:
+                "https://www.youtube.com/watch?v=PEyJmh5d5S4&list=PLkWFCUkuvoL1eiczzAisPdW15Dfl2lSrZ&index=8",
             description:
                 "Dans cet ouvrage j’ai voulu, à travers le concours Miss Univers (concours visant à élire chaque année la femme la plus belle de l’univers) montrer tous les standards de beauté dits « parfaits ». Dans cet ouvrage, on peut voir ces standards à travers 50 ans de concours, on peut donc se rendre compte à quel point les codes de la femme soit-disant parfaite ont évolués. Dans un second temps, j’ai voulu calculer la moyenne de toutes ces mensurations pour créer la « miss parfaite ». Au début, on y trouve des photos d’archives du concours pour introduire le thème et à la fin il y a un catalogue de photos « détails » des tenues, du dé-filé, du couronnement des miss afin de comprendre tout cet univers.",
             images: [
@@ -1013,6 +1050,8 @@ module.exports = {
             tags: ["Poster design", "Interaction design", "Editorial design"],
             year: 0,
             teacher: ["Leonardo Angelucci"],
+            interview:
+                "https://www.youtube.com/watch?v=vEUfTIY_AJQ&list=PLkWFCUkuvoL1kQ7r5uKKCaTVP7eBuqge5&index=5",
             description:
                 "Il manifesto è stato il primo supporto di comunicazione tradizionale, un medium ancora oggi molto presente nel nostro territorio elvetico. Con l’avanzare degli anni siamo sempre più immersi in un mondo digitale dove i progressi tecnologici rivoluzionano velocemente la società: l’AI è già utilizzata nel nostro quotidiano. Come si presume che possano integrarsi le nuove tecnologie nel manifesto del futuro quindi? re-poster risponde a questa domanda e la mette in pratica: un progetto che dimostra, attraverso una selezione di 6 manifesti storici culturali della scuola svizzera, come l’inclusione dell’interattività nel medium del manifesto possa enfatizzare la comunicazione del suo contenuto. Un progetto dove la tradizione del buon design svizzero incontra l’innovazione delle nuove tecnologie.",
             images: [
@@ -1055,6 +1094,8 @@ module.exports = {
             tags: ["Web Design"],
             year: 0,
             teacher: ["Alice Franchetti", "Vera van de Seyp"],
+            interview:
+                "https://www.youtube.com/watch?v=nOc_ayGj64M&list=PLkWFCUkuvoL1eiczzAisPdW15Dfl2lSrZ&index=5",
             description:
                 "Loading Culture is a digital collaborative platform that aims to showcase creative works while fostering transparency within the creative industry. It was created in collaboration with Irini Gleglakou. The platform offers a wide range of assets, including articles and live broadcasts, as well as a large database of information, such as applications, businesses, events, studies and resources relating to the Swiss creative field. By giving everyone a chance to express themselves in whichever form they choose, the platform’s main purpose is to help make the creative industry more transparent and accessible.",
             images: [
@@ -1139,6 +1180,8 @@ module.exports = {
             tags: ["Editorial design"],
             year: 0,
             teacher: ["Daniel Schmid"],
+            interview:
+                "https://www.youtube.com/watch?v=x_aABI2LKK0&list=PLkWFCUkuvoL1eiczzAisPdW15Dfl2lSrZ&index=11",
             description:
                 "AI.KE est un projet de livre d’archives présenté dans une exposition. Le livre interroge la capacité d’une IA à remplacer la créativité humaine. De vrais meubles Ikea ont été introduits dans une IA (DALL-E 2) pour en créer de nouveaux. Créant une nouvelle collection de meubles ensuite rassemblée dans un livre inspiré des catalogues de la chaine de magasins suédois. Les meubles disposés aléatoirement sur les pages amènent le public à essaye avec l’objet avec lequel un jeu est créé. Le public essayé alors de trouver quel objet est l’original et lequel est celui créé par IA.",
             images: [

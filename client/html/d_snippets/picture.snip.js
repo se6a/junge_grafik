@@ -83,10 +83,9 @@ module.exports = (
         filename = parts[2];
         context = parts[1];
     }
-    console.log({ src, context, parts });
 
     const html = /*html*/ `
-    <picture class="${classes ? ` ${classes}` : ""}">
+    <picture class="${classes ? ` ${classes}` : ``}">
       ${!isSvg ? SourceList(filename, context) : ""}
       <img
         class="image"

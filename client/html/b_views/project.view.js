@@ -3,6 +3,7 @@ const Rows = getSection("rows");
 const CategoryBadges = getSnippet("category-badges");
 const submissions = require("../../data/submissions");
 const Button = getSnippet("button");
+const Video = getSnippet("video-box");
 const error404 = require("./error-404.view");
 
 module.exports = async ({ req }) => {
@@ -19,6 +20,8 @@ module.exports = async ({ req }) => {
 
     const prevWinnersOrder = req.query.winnersOrder || false;
     const prevWinnersFilter = req.query.winnersFilter || false;
+
+    const interview = project?.interview || false;
 
     const html = splitTemp/*html*/ `
   <script defer type="text/javascript" src="/js/project.js"></script>
@@ -93,6 +96,11 @@ module.exports = async ({ req }) => {
           ],
       })}
 
+      <div class="interview box ${interview ? `isVisible` : ``}">
+        ${interview ? Video({ src: interview }) : ""}
+      </div>
+
+
       <div class="gallery box">
         ${
             project?.images?.length
@@ -162,6 +170,20 @@ module.exports = async ({ req }) => {
 
     .Project .OverviewItem .textButton {
       display: inline-block;
+    }
+
+    .Project .interview {
+      display: none;
+      padding: 0;
+    }
+
+    .Project .interview .VideoBox {
+      width: auto;
+      height: auto;
+    }
+
+    .Project .interview.isVisible {
+      display: block; 
     }
 
     .Project .gallery {
