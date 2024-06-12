@@ -96,8 +96,6 @@ module.exports = async ({ req }) => {
           ],
       })}
 
-      INTERVIEW!
-
       <div class="interview box ${interview ? `isVisible` : ``}">
         ${interview ? Video({ src: interview }) : ""}
       </div>
