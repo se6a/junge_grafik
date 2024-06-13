@@ -21,7 +21,7 @@ module.exports = async ({ req }) => {
     const prevWinnersOrder = req.query.winnersOrder || false;
     const prevWinnersFilter = req.query.winnersFilter || false;
 
-    const interview = project?.interview || false;
+    const interview = project?.interview?.youtubeId || false;
 
     const html = splitTemp/*html*/ `
   <script defer type="text/javascript" src="/js/project.js"></script>
